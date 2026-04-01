@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cost of Commitment — USNow</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#070709;--off-black:#0d0d12;--border:#1e1e2a;--red:#e03030;--amber:#f0a500;--blue:#3b82f6;--white:#f2f2f2;--muted:#52526a;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;min-height:100vh;}
+.site-nav{width:100%;background:var(--off-black);border-bottom:2px solid var(--red);padding:0 32px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:500;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:4px;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--red);}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--amber);}
+@media(max-width:600px){.nav-links .hide-mobile{display:none;}}
+
+.page-header{background:var(--off-black);border-bottom:1px solid var(--border);padding:32px 48px 28px;}
+.breadcrumb{font-size:11px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
+.breadcrumb a{color:var(--amber);text-decoration:none;}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,52px);letter-spacing:3px;line-height:1;margin-bottom:6px;}
+.page-title .blue{color:var(--blue);}
+.page-title .red{color:var(--red);}
+.page-meta{font-size:12px;color:var(--muted);letter-spacing:2px;}
+.page-meta span{color:var(--blue);}
+@media(max-width:600px){.page-header{padding:20px 16px;}}
+
+.stat-strip{display:flex;border-bottom:1px solid var(--border);background:var(--off-black);overflow-x:auto;}
+.sc{flex:1;min-width:120px;padding:18px 14px;text-align:center;border-right:1px solid var(--border);}
+.sc:last-child{border-right:none;}
+.sn{font-family:'Space Mono',monospace;font-size:clamp(18px,3vw,28px);line-height:1;}
+.sl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:5px;line-height:1.4;}
+
+/* CHART */
+.chart-section{padding:40px 48px 20px;}
+.chart-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:var(--muted);margin-bottom:20px;}
+#chart{width:100%;}
+
+/* Tooltip */
+.bar-tooltip{position:fixed;background:#0a0a12;border:1px solid var(--border);border-left:3px solid var(--blue);padding:10px 14px;pointer-events:none;opacity:0;transition:opacity 0.15s;z-index:999;}
+.bt-year{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--white);}
+.bt-amt{font-family:'Space Mono',monospace;font-size:14px;color:var(--blue);margin-top:3px;}
+.bt-note{font-size:11px;color:var(--muted);margin-top:5px;max-width:180px;line-height:1.4;}
+
+.cumulative-bar{margin:0 48px 12px;background:var(--off-black);border:1px solid var(--border);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.cb-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+.cb-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--amber);letter-spacing:3px;}
+
+.share-bar{display:flex;gap:12px;align-items:center;padding:16px 48px 20px;}
+.share-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+.share-btn{font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:'Barlow Condensed',sans-serif;}
+.share-btn:hover{border-color:var(--amber);color:var(--amber);}
+@media(max-width:600px){.share-bar{padding:12px 16px 16px;}.chart-section{padding:24px 16px 16px;}.cumulative-bar{margin:0 16px 12px;}}
+
+.context-section{padding:0 48px 40px;}
+.cb-ctx{background:var(--off-black);border:1px solid var(--border);border-left:3px solid var(--blue);padding:22px 26px;}
+.cb-ctx h3{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:var(--blue);margin-bottom:10px;}
+.cb-ctx p{font-size:15px;line-height:1.7;color:#9090a8;font-weight:300;}
+.cb-ctx p+p{margin-top:10px;}
+@media(max-width:600px){.context-section{padding:0 16px 32px;}}
+
+.site-footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify-content:space-between;align-items:center;background:var(--off-black);flex-wrap:wrap;gap:14px;}
+.fl{font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:1px;}
+.fl a{color:var(--amber);text-decoration:none;}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+.footer-links a:hover{color:var(--white);}
+@media(max-width:600px){.site-footer{padding:20px 16px;}.footer-links{gap:14px;}}
+</style>
+</head>
+<body>
+
+<div class="bar-tooltip" id="bar-tooltip">
+  <div class="bt-year" id="bt-year"></div>
+  <div class="bt-amt" id="bt-amt"></div>
+  <div class="bt-note" id="bt-note"></div>
+</div>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo">US<span>NOW</span></a>
+  <div class="nav-links">
+    <a href="/#graphics" class="active">Graphics</a>
+    <a href="/#submit" class="hide-mobile">Request</a>
+    <a href="https://ratemyrep.app" target="_blank" class="hide-mobile">RateMyRep</a>
+    <a href="https://atjon.substack.com" target="_blank" class="hide-mobile">Substack</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="/">USNow</a> / <a href="/#graphics">Graphics</a> / Israel Aid Timeline</div>
+  <div class="page-title">THE <span class="blue">COST</span> OF <span class="red">COMMITMENT</span></div>
+  <div class="page-meta">U.S. Military Aid to Israel · <span>55-Year Record · 1970–2025</span> · Billions USD</div>
+</div>
+
+<div class="stat-strip">
+  <div class="sc"><div class="sn" style="color:var(--blue)">$3.8B</div><div class="sl">Annual Baseline<br>(MOU) Since 2016</div></div>
+  <div class="sc"><div class="sn" style="color:var(--red)">$21.7B+</div><div class="sl">Since Oct. 7<br>2023 Alone</div></div>
+  <div class="sc"><div class="sn" style="color:var(--amber)">$330B</div><div class="sl">Total Cumulative<br>Inflation-Adj.</div></div>
+  <div class="sc"><div class="sn" style="color:var(--white)">$244B</div><div class="sl">Military Portion<br>of Cumulative</div></div>
+</div>
+
+<div class="chart-section">
+  <div class="chart-title">Annual Military Assistance · Billions USD · Hover / Tap Bars for Detail</div>
+  <svg id="chart"></svg>
+</div>
+
+<div class="cumulative-bar">
+  <div>
+    <div class="cb-label">Cumulative Total Since 1948 (Inflation-Adjusted 2024 Dollars)</div>
+  </div>
+  <div class="cb-num">$330 Billion</div>
+</div>
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn" href="https://twitter.com/intent/tweet?text=55+years+of+U.S.+military+aid+to+Israel+%E2%80%94+%24330B+cumulative.+usnow.app%2Fgraphics%2Fisrael-aid-timeline" target="_blank">X / Twitter</a>
+  <a class="share-btn" href="#">Copy Link</a>
+</div>
+
+<div class="context-section">
+  <div class="cb-ctx">
+    <h3>55 Years of Commitment</h3>
+    <p>U.S. military assistance to Israel began in earnest after the 1973 Yom Kippur War and has never stopped. The 2016 Memorandum of Understanding locked in $3.8 billion per year through 2028 — the largest military aid package the U.S. has ever provided to any country. After October 7, 2023, Congress approved an additional $14.1 billion emergency package on top of the baseline, bringing the post-Oct. 7 total to over $21.7 billion in roughly 18 months.</p>
+    <p>The $330 billion inflation-adjusted cumulative figure covers all U.S. assistance since Israeli statehood in 1948. Of that, $244 billion is military. No other bilateral relationship in American foreign policy history has this financial profile — sustained, bipartisan, and almost entirely exempt from the conditions attached to other foreign aid.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="fl">
+    USNOW.APP — Civic Data Platform<br>
+    Data: public record · Structure &amp; design: ATJon + AI · Free reuse with attribution<br>
+    Sources: CFR · Quincy Institute · Costs of War (Brown Univ.) · CRS · Congressional Appropriations
+  </div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#graphics">Graphics</a>
+    <a href="https://ratemyrep.app" target="_blank">RateMyRep</a>
+    <a href="https://atjon.substack.com" target="_blank">Substack</a>
+  </div>
+</footer>
+
+<script>
+// Annual military aid data (billions USD, nominal)
+const data = [
+  {year:1970,amt:0.03,note:"Early assistance — pre-major commitment"},
+  {year:1971,amt:0.05,note:""},
+  {year:1972,amt:0.30,note:"Buildup begins"},
+  {year:1973,amt:2.60,note:"Yom Kippur War — emergency airlift and resupply"},
+  {year:1974,amt:2.50,note:"Post-war continuation"},
+  {year:1975,amt:0.70,note:""},
+  {year:1976,amt:1.50,note:"Sinai Interim Agreement support"},
+  {year:1977,amt:1.00,note:""},
+  {year:1978,amt:1.00,note:"Camp David negotiations begin"},
+  {year:1979,amt:1.30,note:"Camp David Accords — aid institutionalized"},
+  {year:1980,amt:1.50,note:""},
+  {year:1981,amt:1.40,note:""},
+  {year:1982,amt:1.40,note:"Lebanon War — U.S. aid continues"},
+  {year:1983,amt:1.70,note:""},
+  {year:1984,amt:1.40,note:""},
+  {year:1985,amt:1.40,note:"Aid converted to all-grant (no repayment required)"},
+  {year:1986,amt:1.80,note:""},
+  {year:1987,amt:1.80,note:"First Intifada begins"},
+  {year:1988,amt:1.80,note:""},
+  {year:1989,amt:1.80,note:""},
+  {year:1990,amt:1.80,note:""},
+  {year:1991,amt:1.80,note:"Gulf War — Israel attacked by Iraqi Scuds"},
+  {year:1992,amt:1.80,note:"Arrow missile defense program begins"},
+  {year:1993,amt:1.80,note:"Oslo Accords"},
+  {year:1994,amt:1.80,note:""},
+  {year:1995,amt:1.80,note:""},
+  {year:1996,amt:1.80,note:""},
+  {year:1997,amt:1.80,note:""},
+  {year:1998,amt:1.80,note:"Wye River — additional aid agreed"},
+  {year:1999,amt:1.86,note:""},
+  {year:2000,amt:3.12,note:"Camp David Summit fails. Second Intifada begins"},
+  {year:2001,amt:2.88,note:"Post-9/11 — security cooperation deepens"},
+  {year:2002,amt:2.76,note:""},
+  {year:2003,amt:3.09,note:"Iraq War — regional alliance solidified"},
+  {year:2004,amt:2.69,note:""},
+  {year:2005,amt:2.61,note:"Gaza disengagement"},
+  {year:2006,amt:2.53,note:"Lebanon War (Hezbollah)"},
+  {year:2007,amt:2.47,note:"New 10-year MOU signed — $3B/yr baseline"},
+  {year:2008,amt:2.38,note:""},
+  {year:2009,amt:2.55,note:"Gaza War (Cast Lead)"},
+  {year:2010,amt:2.78,note:"Iron Dome co-development funding added"},
+  {year:2011,amt:3.00,note:"Arab Spring — strategic value elevated"},
+  {year:2012,amt:3.10,note:"Gaza escalation (Pillar of Defense)"},
+  {year:2013,amt:3.10,note:""},
+  {year:2014,amt:3.10,note:"Gaza War (Protective Edge) — emergency replenishment"},
+  {year:2015,amt:3.10,note:""},
+  {year:2016,amt:3.10,note:"New MOU: $3.8B/yr locked in through 2028"},
+  {year:2017,amt:3.80,note:"New baseline begins"},
+  {year:2018,amt:3.80,note:""},
+  {year:2019,amt:3.80,note:""},
+  {year:2020,amt:3.80,note:"Abraham Accords"},
+  {year:2021,amt:3.80,note:"Gaza escalation (Guardian of the Walls)"},
+  {year:2022,amt:3.80,note:""},
+  {year:2023,amt:3.80,note:"Oct. 7 attack — emergency packages follow"},
+  {year:2024,amt:12.50,note:"Post-Oct.7 emergency: $14.1B approved on top of $3.8B baseline"},
+  {year:2025,amt:3.80,note:"Baseline continues. Additional packages under discussion"},
+];
+
+function buildChart(){
+  const container = document.getElementById('chart');
+  const W = container.parentElement.clientWidth - 0;
+  const H = Math.min(Math.max(W * 0.42, 240), 420);
+  const margin = {top:30, right:20, bottom:40, left:50};
+  const iW = W - margin.left - margin.right;
+  const iH = H - margin.top - margin.bottom;
+
+  d3.select('#chart').selectAll('*').remove();
+  const svg = d3.select('#chart').attr('width',W).attr('height',H);
+  const g = svg.append('g').attr('transform',`translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleBand().domain(data.map(d=>d.year)).range([0,iW]).padding(0.15);
+  const y = d3.scaleLinear().domain([0, d3.max(data,d=>d.amt)*1.1]).range([iH,0]);
+
+  // Gridlines
+  g.append('g').attr('class','grid')
+    .call(d3.axisLeft(y).tickSize(-iW).tickFormat('').ticks(5))
+    .call(g=>g.select('.domain').remove())
+    .call(g=>g.selectAll('line').attr('stroke','#0f0f1f').attr('stroke-dasharray','3,3'));
+
+  // MOU baseline line
+  g.append('line')
+    .attr('x1',0).attr('x2',iW)
+    .attr('y1',y(3.8)).attr('y2',y(3.8))
+    .attr('stroke','#3b82f6').attr('stroke-width',1)
+    .attr('stroke-dasharray','4,4').attr('opacity',0.5);
+  g.append('text')
+    .attr('x',4).attr('y',y(3.8)-5)
+    .attr('fill','#3b82f6').attr('font-size',9)
+    .attr('font-family','Barlow Condensed').attr('letter-spacing',2)
+    .text('$3.8B MOU BASELINE (2016)');
+
+  // Bars
+  const tt = document.getElementById('bar-tooltip');
+
+  g.selectAll('.bar')
+    .data(data).enter().append('rect')
+    .attr('class','bar')
+    .attr('x', d=>x(d.year))
+    .attr('width', x.bandwidth())
+    .attr('y', iH)
+    .attr('height', 0)
+    .attr('fill', d => d.year >= 2024 ? '#e03030' : d.year >= 2016 ? '#3b82f6' : '#2060a0')
+    .attr('fill-opacity', d => d.year >= 2024 ? 1 : 0.7)
+    .attr('rx', 1)
+    .transition().duration(600).delay((d,i)=>i*12)
+    .attr('y', d=>y(d.amt))
+    .attr('height', d=>iH - y(d.amt));
+
+  // Invisible hit areas for tooltip
+  g.selectAll('.bar-hit')
+    .data(data).enter().append('rect')
+    .attr('x', d=>x(d.year))
+    .attr('width', x.bandwidth())
+    .attr('y', 0).attr('height', iH)
+    .attr('fill','transparent')
+    .style('cursor','pointer')
+    .on('mousemove touchmove', function(event, d){
+      const e = event.touches ? event.touches[0] : event;
+      document.getElementById('bt-year').textContent = d.year;
+      document.getElementById('bt-amt').textContent = '$' + d.amt.toFixed(2) + 'B';
+      document.getElementById('bt-note').textContent = d.note || 'Annual military assistance';
+      const col = d.year >= 2024 ? '#e03030' : '#3b82f6';
+      tt.style.borderLeftColor = col;
+      document.getElementById('bt-amt').style.color = col;
+      tt.style.opacity='1';
+      tt.style.left = Math.min(e.clientX+14, window.innerWidth-220)+'px';
+      tt.style.top = Math.max(e.clientY-60,60)+'px';
+    })
+    .on('mouseleave', ()=>tt.style.opacity='0')
+    .on('touchend',()=>setTimeout(()=>tt.style.opacity='0',2000));
+
+  // X axis — every 5 years
+  const xAxis = d3.axisBottom(x)
+    .tickValues(data.map(d=>d.year).filter(y=>y%5===0))
+    .tickSize(4);
+  g.append('g').attr('transform',`translate(0,${iH})`).call(xAxis)
+    .call(g=>g.select('.domain').attr('stroke','#1e1e2a'))
+    .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',10).attr('font-family','Space Mono'))
+    .call(g=>g.selectAll('line').attr('stroke','#1e1e2a'));
+
+  // Y axis
+  const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>'$'+d+'B');
+  g.append('g').call(yAxis)
+    .call(g=>g.select('.domain').remove())
+    .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',9).attr('font-family','Space Mono'))
+    .call(g=>g.selectAll('line').remove());
+
+  // Oct 7 annotation
+  const oct7x = x(2024) + x.bandwidth()/2;
+  g.append('line')
+    .attr('x1',oct7x).attr('x2',oct7x)
+    .attr('y1',y(12.5)-8).attr('y2',y(12.5)-30)
+    .attr('stroke','#e03030').attr('stroke-width',1);
+  g.append('text')
+    .attr('x',oct7x).attr('y',y(12.5)-34)
+    .attr('text-anchor','middle')
+    .attr('fill','#e03030').attr('font-size',9)
+    .attr('font-family','Barlow Condensed').attr('letter-spacing',1)
+    .text('$12.5B — POST-OCT.7 SPIKE');
+}
+
+buildChart();
+window.addEventListener('resize', buildChart);
+</script>
+</body>
+</html>
