@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Rules the World — USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --border: #1e1e2a;
+  --red: #e03030;
+  --amber: #f0a500;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --gold: #c9973a;
+  --gold-light: #e8c56a;
+  --gold-pale: #f5e099;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  min-height: 100vh;
+}
+
+/* NAV */
+.site-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 2px solid var(--red);
+  padding: 0 48px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: var(--white);
+  text-decoration: none;
+}
+.nav-logo span { color: var(--red); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a.active { color: var(--amber); }
+
+/* PAGE HEADER */
+.page-header {
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 60px 28px;
+}
+.breadcrumb {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.breadcrumb a { color: var(--amber); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.page-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.page-meta {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 2px;
+}
+.page-meta span { color: var(--amber); }
+
+/* GRAPHIC AREA */
+.graphic-wrap {
+  max-width: 920px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+/* SHARE BAR */
+.share-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.share-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.share-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.share-btn:hover { border-color: var(--amber); color: var(--amber); }
+
+/* THE PYRAMID */
+.pyramid-frame {
+  background: #08070f;
+  border: 1px solid #1e1e2a;
+  padding: 44px 30px 50px;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.eyebrow { text-align:center; font-size:11px; letter-spacing:5px; color:var(--gold); text-transform:uppercase; margin-bottom:10px; opacity:0.75; }
+.pyr-h1 { text-align:center; font-size:38px; font-weight:bold; color:var(--gold-light); text-shadow:0 0 40px rgba(201,151,58,0.6); letter-spacing:3px; margin-bottom:6px; font-variant:small-caps; }
+.pyr-sub { text-align:center; font-size:13px; color:var(--gold); letter-spacing:3px; font-style:italic; opacity:0.7; margin-bottom:4px; }
+.hiero { text-align:center; color:var(--gold); opacity:0.28; font-size:18px; letter-spacing:10px; margin:14px 0 22px; }
+
+.pyramid { display:flex; flex-direction:column; align-items:center; width:100%; }
+.prow { display:flex; justify-content:center; width:100%; }
+
+.prow:nth-child(1) .pcell { width:17%; background:linear-gradient(180deg,#3a1e00,#1e0e00); border-left:2px solid var(--gold); border-right:2px solid var(--gold); border-top:2px solid var(--gold-light); box-shadow:0 0 28px rgba(201,151,58,0.3) inset; }
+.prow:nth-child(2) .pcell { width:32%; background:linear-gradient(180deg,#281500,#160b00); border-left:2px solid rgba(201,151,58,0.7); border-right:2px solid rgba(201,151,58,0.7); }
+.prow:nth-child(3) .pcell { width:50%; background:linear-gradient(180deg,#1c1400,#100c00); border-left:2px solid rgba(201,151,58,0.52); border-right:2px solid rgba(201,151,58,0.52); }
+.prow:nth-child(4) .pcell { width:67%; background:linear-gradient(180deg,#161410,#0e0c08); border-left:2px solid rgba(201,151,58,0.35); border-right:2px solid rgba(201,151,58,0.35); }
+.prow:nth-child(5) .pcell { width:83%; background:linear-gradient(180deg,#121110,#0b0a09); border-left:2px solid rgba(201,151,58,0.22); border-right:2px solid rgba(201,151,58,0.22); }
+.prow:nth-child(6) .pcell { width:99%; background:linear-gradient(180deg,#1a1710,#0f0d08); border-left:2px solid rgba(201,151,58,0.18); border-right:2px solid rgba(201,151,58,0.18); }
+
+.pcell { padding:13px 12px 11px; text-align:center; border-bottom:1px solid rgba(201,151,58,0.2); }
+.tlabel { font-size:9px; letter-spacing:3.5px; color:var(--gold); text-transform:uppercase; opacity:0.6; margin-bottom:7px; font-variant:small-caps; }
+.names { display:flex; flex-wrap:wrap; gap:5px; justify-content:center; margin-bottom:6px; }
+.chip { border-radius:2px; padding:3px 9px; font-size:11px; font-variant:small-caps; letter-spacing:0.5px; white-space:nowrap; font-weight:bold; }
+.c1 { background:rgba(201,151,58,0.14); border:1px solid var(--gold-light); color:var(--gold-pale); font-size:13px; text-shadow:0 0 10px rgba(232,197,106,0.7); padding:4px 12px; }
+.c2 { background:rgba(180,120,40,0.1); border:1px solid rgba(201,151,58,0.65); color:#ddb870; font-size:11.5px; }
+.c3 { background:rgba(150,100,35,0.1); border:1px solid rgba(180,130,55,0.45); color:#c9a058; font-size:11px; }
+.c4 { background:rgba(110,85,35,0.09); border:1px solid rgba(160,115,45,0.32); color:#b08845; font-size:10.5px; }
+.c5 { background:rgba(85,65,30,0.09); border:1px solid rgba(130,95,38,0.24); color:#967038; font-size:10px; }
+.c6 { background:rgba(100,75,30,0.18); border:1px solid rgba(180,130,50,0.4); color:#c9a050; font-size:11px; font-weight:bold; }
+.desc { font-style:italic; font-size:10px; color:#c9a058; opacity:0.55; letter-spacing:0.4px; }
+.desc-bright { font-style:italic; font-size:11px; color:#c9a050; opacity:0.75; letter-spacing:0.4px; }
+.base-line { width:99%; margin:0 auto; height:3px; background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent); box-shadow:0 0 14px rgba(201,151,58,0.5); }
+.pyr-footer { text-align:center; margin-top:18px; font-style:italic; font-size:12px; color:var(--gold); opacity:0.5; letter-spacing:2px; font-family: Georgia, serif; }
+
+/* CONTEXT BLOCK */
+.context-block {
+  margin-top: 40px;
+  padding: 28px 32px;
+  background: var(--off-black);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+}
+.context-block h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+.context-block p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #a0a0b8;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+}
+.context-block p + p { margin-top: 10px; }
+
+/* FOOTER */
+.site-footer {
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+  padding: 28px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--off-black);
+}
+.footer-left { font-size: 12px; color: var(--muted); line-height: 1.8; letter-spacing: 1px; }
+.footer-left a { color: var(--amber); text-decoration: none; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--white); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="/" class="nav-logo">US<span>NOW</span></a>
+  <div class="nav-links">
+    <a href="/#graphics" class="active">Graphics</a>
+    <a href="/#submit">Request</a>
+    <a href="https://ratemyrep.app" target="_blank">RateMyRep</a>
+    <a href="https://atjon.substack.com" target="_blank">Substack</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="breadcrumb"><a href="/">USNow</a> &nbsp;/&nbsp; <a href="/#graphics">Graphics</a> &nbsp;/&nbsp; Who Rules the World</div>
+  <div class="page-title">Who Rules the World</div>
+  <div class="page-meta">Power Structure &nbsp;·&nbsp; <span>Published April 2026</span> &nbsp;·&nbsp; USNow.app</div>
+</div>
+
+<!-- MAIN -->
+<div class="graphic-wrap">
+
+  <div class="share-bar">
+    <span class="share-label">Share</span>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Who+Rules+the+World+%E2%80%94+a+power+pyramid+%C2%B7+usnow.app/graphics/who-rules-the-world" target="_blank">X / Twitter</a>
+    <a class="share-btn" href="https://usnow.app/graphics/who-rules-the-world">Copy Link</a>
+  </div>
+
+  <!-- PYRAMID -->
+  <div class="pyramid-frame">
+    <div class="eyebrow">A Political Cartography · 2026</div>
+    <div class="pyr-h1">Who Rules the World</div>
+    <div class="pyr-sub">The Architecture of Power</div>
+    <div class="hiero">𓂀 &nbsp; 𓆣 &nbsp; 𓇯 &nbsp; 𓆣 &nbsp; 𓂀</div>
+
+    <div class="pyramid">
+
+      <div class="prow"><div class="pcell">
+        <div class="tlabel">I · The Apex — Beyond Accountability</div>
+        <div class="names">
+          <span class="chip c1">Netanyahu</span>
+          <span class="chip c1">Trump</span>
+          <span class="chip c1">Xi</span>
+          <span class="chip c1">Musk</span>
+        </div>
+        <div class="desc">Unilateral civilizational weight · Operate outside all accountability architecture</div>
+      </div></div>
+
+      <div class="prow"><div class="pcell">
+        <div class="tlabel">II · The Oligarchy</div>
+        <div class="names">
+          <span class="chip c2">Putin</span>
+          <span class="chip c2">Altman</span>
+          <span class="chip c2">Bezos</span>
+          <span class="chip c2">MBS</span>
+          <span class="chip c2">Zuckerberg</span>
+          <span class="chip c2">Modi</span>
+          <span class="chip c2">Larry Fink</span>
+        </div>
+        <div class="desc">Tech sovereigns · Gulf capital · Nuclear states · Index fund lords</div>
+      </div></div>
+
+      <div class="prow"><div class="pcell">
+        <div class="tlabel">III · The Machinery</div>
+        <div class="names">
+          <span class="chip c3">Congressional Leadership</span>
+          <span class="chip c3">Page / Brin</span>
+          <span class="chip c3">The Fed</span>
+          <span class="chip c3">ECB / Lagarde</span>
+          <span class="chip c3">Jamie Dimon</span>
+          <span class="chip c3">Koch Network</span>
+          <span class="chip c3">AIPAC</span>
+        </div>
+        <div class="desc">Central banks · Major capital · Institutional lobbying · Legislative gatekeepers</div>
+      </div></div>
+
+      <div class="prow"><div class="pcell">
+        <div class="tlabel">IV · The Operators & Puppets</div>
+        <div class="names">
+          <span class="chip c4">Most of Congress</span>
+          <span class="chip c4">EU Commission</span>
+          <span class="chip c4">Media Proprietors</span>
+          <span class="chip c4">Sovereign Wealth Funds</span>
+          <span class="chip c4">Pentagon Contractors</span>
+          <span class="chip c4">Rating Agencies</span>
+          <span class="chip c4">Supranational Courts</span>
+        </div>
+        <div class="desc">Performing democracy · Executing the enclosure · Providing institutional cover</div>
+      </div></div>
+
+      <div class="prow"><div class="pcell">
+        <div class="tlabel">V · The Infrastructure</div>
+        <div class="names">
+          <span class="chip c5">Revolving Door Class</span>
+          <span class="chip c5">Think Tank Network</span>
+          <span class="chip c5">Major Law Firms</span>
+          <span class="chip c5">Intelligence Apparatus</span>
+          <span class="chip c5">Corporate Media</span>
+          <span class="chip c5">Regulatory Capture Layer</span>
+          <span class="chip c5">Lobbying Shops</span>
+          <span class="chip c5">Academic Gatekeepers</span>
+        </div>
+        <div class="desc">Translating power into policy · Maintaining the architecture · Laundering legitimacy</div>
+      </div></div>
+
+      <div class="prow"><div class="pcell">
+        <div class="tlabel">VI · The Aware & The Managed</div>
+        <div class="names">
+          <span class="chip c6">~30,000 Civic Voices</span>
+          <span class="chip c6">Independent Press</span>
+          <span class="chip c6">Organized Labor (weakened)</span>
+          <span class="chip c6">NGO Ecosystem</span>
+          <span class="chip c6">Professional Class</span>
+          <span class="chip c6">300M+ Occasionally Consulted</span>
+          <span class="chip c6">The 80% With No Lobby</span>
+        </div>
+        <div class="desc-bright">Seeing clearly · Producing signal · Minimal leverage · The unrepresented majority</div>
+      </div></div>
+
+    </div>
+    <div class="base-line"></div>
+    <div class="hiero" style="margin:16px 0 10px;">𓂀 &nbsp; 𓆣 &nbsp; 𓇯 &nbsp; 𓆣 &nbsp; 𓂀</div>
+    <div class="pyr-footer">"The pyramid was a monument before it was a metaphor." · USNow.app</div>
+  </div>
+
+  <!-- CONTEXT -->
+  <div class="context-block">
+    <h3>About This Graphic</h3>
+    <p>This is a structural map of global power — not a conspiracy theory, but a cartography. The people and institutions at the top don't necessarily coordinate consciously. They don't need to. Aligned self-interest under concentrated infrastructure produces the same result as a conspiracy, without the instability of one.</p>
+    <p>The bottom tier is not powerless — it is the majority. The asymmetry between the apex and the base is the central problem of democratic accountability in 2026. That asymmetry is what USNow exists to make visible.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-left">
+    USNOW.APP — Civic Data Platform<br>
+    A project of <a href="https://usnow.app">USNow</a> · Built by <a href="https://atjon.substack.com">Jon Tatun</a><br>
+    Public records. Free reuse with attribution.
+  </div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#graphics">Graphics</a>
+    <a href="https://ratemyrep.app" target="_blank">RateMyRep</a>
+    <a href="https://atjon.substack.com" target="_blank">Substack</a>
+  </div>
+</footer>
+
+</body>
+</html>
