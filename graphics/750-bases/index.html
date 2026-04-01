@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.S. Military Footprint — USNow</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --black:#000005;
+  --red:#e03030;
+  --amber:#f0a500;
+  --green:#1db954;
+  --blue:#3b82f6;
+  --white:#f2f2f2;
+  --muted:#404055;
+}
+html,body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;min-height:100vh;overflow-x:hidden;}
+
+/* NAV */
+.site-nav{width:100%;background:rgba(0,0,5,0.95);border-bottom:1px solid #1a1a2a;padding:0 32px;height:48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:500;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--red);}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--amber);}
+@media(max-width:600px){.nav-links .hide-mobile{display:none;}}
+
+/* HERO HEADER */
+.hero{padding:32px 40px 24px;background:linear-gradient(180deg,#00000f,#000005);}
+.hero-eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,54px);letter-spacing:3px;line-height:1;margin-bottom:8px;}
+.hero-title .g{color:var(--green);}
+.hero-title .a{color:var(--amber);}
+.hero-sub{font-size:13px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
+@media(max-width:600px){.hero{padding:20px 16px 16px;}}
+
+/* COUNTER STRIP */
+.counter-strip{display:flex;background:#00000a;border-top:1px solid #0f0f1f;border-bottom:1px solid #0f0f1f;overflow-x:auto;}
+.cs{flex:1;min-width:100px;padding:14px 12px;text-align:center;border-right:1px solid #0f0f1f;}
+.cs:last-child{border-right:none;}
+.csn{font-family:'Space Mono',monospace;font-size:clamp(16px,2.5vw,26px);line-height:1;}
+.csl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;line-height:1.4;}
+
+/* MAP */
+.map-section{position:relative;background:#000005;}
+#map-svg{width:100%;display:block;cursor:grab;}
+#map-svg:active{cursor:grabbing;}
+
+/* SVG elements */
+.sphere-fill{fill:#00000f;}
+.country-path{fill:#030d03;stroke:#0a1a0a;stroke-width:0.3;transition:fill 0.3s;}
+.graticule-path{fill:none;stroke:#050f05;stroke-width:0.2;}
+
+/* Dots */
+.installation{cursor:pointer;}
+.dot-glow{transition:all 0.3s;}
+
+/* Map controls */
+.map-controls{position:absolute;bottom:20px;right:20px;display:flex;flex-direction:column;gap:6px;z-index:10;}
+.mc-btn{width:34px;height:34px;background:rgba(0,0,10,0.85);border:1px solid #1a1a2a;color:#888;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-family:monospace;}
+.mc-btn:hover{border-color:var(--green);color:var(--green);}
+
+/* Live counter */
+.live-counter{position:absolute;top:16px;left:16px;z-index:10;background:rgba(0,0,8,0.85);border:1px solid #0f1f0f;border-left:2px solid var(--green);padding:10px 14px;}
+.lc-num{font-family:'Space Mono',monospace;font-size:22px;color:var(--green);line-height:1;}
+.lc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+
+/* Region filter */
+.filter-bar{position:absolute;top:16px;right:16px;z-index:10;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;}
+.filter-btn{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:5px 10px;background:rgba(0,0,8,0.85);border:1px solid #1a1a2a;color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.filter-btn:hover,.filter-btn.active{border-color:var(--green);color:var(--green);}
+.filter-btn[data-region="Indo-Pacific"].active{border-color:var(--green);color:var(--green);}
+.filter-btn[data-region="Europe"].active{border-color:var(--blue);color:var(--blue);}
+.filter-btn[data-region="Middle East"].active{border-color:var(--amber);color:var(--amber);}
+.filter-btn[data-region="Africa"].active{border-color:var(--red);color:var(--red);}
+.filter-btn[data-region="Americas"].active{border-color:#a855f7;color:#a855f7;}
+@media(max-width:600px){.filter-bar{display:none;}.live-counter{top:8px;left:8px;}}
+
+/* TOOLTIP */
+.tooltip{position:fixed;background:#00000f;border:1px solid #1a1a2a;padding:14px 18px;pointer-events:none;opacity:0;transition:opacity 0.15s;z-index:1000;max-width:260px;}
+.tt-name{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;margin-bottom:6px;}
+.tt-row{font-size:11px;letter-spacing:1px;color:var(--muted);margin-bottom:3px;display:flex;justify-content:space-between;gap:12px;}
+.tt-row span{color:var(--white);font-family:'Space Mono',monospace;font-size:10px;}
+.tt-note{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.5;font-style:italic;border-top:1px solid #0f0f1f;padding-top:8px;}
+
+/* LEGEND */
+.legend-section{display:flex;gap:20px;flex-wrap:wrap;padding:12px 24px;background:#00000a;border-top:1px solid #0f0f1f;border-bottom:1px solid #0f0f1f;align-items:center;}
+.li{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.ld{border-radius:50%;flex-shrink:0;}
+.size-legend{margin-left:auto;display:flex;align-items:center;gap:14px;}
+.sli{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--muted);letter-spacing:1px;}
+@media(max-width:600px){.size-legend{display:none;}.legend-section{padding:10px 16px;gap:12px;}}
+
+/* CONTEXT */
+.context-section{padding:28px 40px 36px;background:#000005;}
+.cb{background:#00000f;border:1px solid #0f0f1f;border-left:3px solid var(--amber);padding:22px 26px;}
+.cb h3{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:var(--amber);margin-bottom:10px;}
+.cb p{font-size:15px;line-height:1.7;color:#707088;font-weight:300;}
+.cb p+p{margin-top:10px;}
+@media(max-width:600px){.context-section{padding:20px 16px 28px;}}
+
+/* FOOTER */
+.site-footer{border-top:1px solid #0f0f1f;padding:22px 40px;display:flex;justify-content:space-between;align-items:center;background:#00000a;flex-wrap:wrap;gap:14px;}
+.fl{font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:1px;}
+.fl a{color:var(--amber);text-decoration:none;}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+.footer-links a:hover{color:var(--white);}
+@media(max-width:600px){.site-footer{padding:18px 16px;}.footer-links{gap:14px;}}
+
+/* Animate dots in */
+@keyframes dotReveal {
+  from{opacity:0;r:0;}
+  to{opacity:1;}
+}
+</style>
+</head>
+<body>
+
+<div class="tooltip" id="tooltip">
+  <div class="tt-name" id="tt-name"></div>
+  <div class="tt-row">Country <span id="tt-country"></span></div>
+  <div class="tt-row">Troops <span id="tt-troops"></span></div>
+  <div class="tt-row">Type <span id="tt-type"></span></div>
+  <div class="tt-row">Command <span id="tt-cmd"></span></div>
+  <div class="tt-note" id="tt-note"></div>
+</div>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo">US<span>NOW</span></a>
+  <div class="nav-links">
+    <a href="/#graphics" class="active">Graphics</a>
+    <a href="/#submit" class="hide-mobile">Request</a>
+    <a href="https://ratemyrep.app" target="_blank" class="hide-mobile">RateMyRep</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">U.S. Military Global Footprint · Every Known Installation · 2025</div>
+  <div class="hero-title">750 BASES. <span class="g">80 COUNTRIES.</span><br><span class="a">$70 BILLION A YEAR.</span></div>
+  <div class="hero-sub">The largest military empire in human history · USNow.app</div>
+</div>
+
+<div class="counter-strip">
+  <div class="cs"><div class="csn" style="color:var(--green)">750+</div><div class="csl">Total<br>Installations</div></div>
+  <div class="cs"><div class="csn" style="color:var(--amber)">80+</div><div class="csl">Host<br>Countries</div></div>
+  <div class="cs"><div class="csn" style="color:var(--blue)">221K</div><div class="csl">Personnel<br>Overseas</div></div>
+  <div class="cs"><div class="csn" style="color:var(--red)">$70B+</div><div class="csl">Annual<br>Cost</div></div>
+  <div class="cs"><div class="csn" style="color:var(--white)">75%</div><div class="csl">of All Foreign<br>Bases on Earth</div></div>
+</div>
+
+<div class="map-section" id="map-section">
+  <svg id="map-svg"></svg>
+
+  <div class="live-counter">
+    <div class="lc-num" id="lc-num">0</div>
+    <div class="lc-label">Installations Visible</div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-region="ALL">All</button>
+    <button class="filter-btn" data-region="Indo-Pacific">Indo-Pacific</button>
+    <button class="filter-btn" data-region="Europe">Europe</button>
+    <button class="filter-btn" data-region="Middle East">Middle East</button>
+    <button class="filter-btn" data-region="Africa">Africa</button>
+    <button class="filter-btn" data-region="Americas">Americas</button>
+  </div>
+
+  <div class="map-controls">
+    <button class="mc-btn" id="zoom-in">+</button>
+    <button class="mc-btn" id="zoom-out">−</button>
+    <button class="mc-btn" id="zoom-reset" style="font-size:13px;">⊙</button>
+  </div>
+</div>
+
+<div class="legend-section">
+  <div class="li"><div class="ld" style="width:10px;height:10px;background:#1db954;"></div>Indo-Pacific</div>
+  <div class="li"><div class="ld" style="width:10px;height:10px;background:#3b82f6;"></div>Europe / NATO</div>
+  <div class="li"><div class="ld" style="width:10px;height:10px;background:#f0a500;"></div>Middle East</div>
+  <div class="li"><div class="ld" style="width:10px;height:10px;background:#e03030;"></div>Africa</div>
+  <div class="li"><div class="ld" style="width:10px;height:10px;background:#a855f7;"></div>Americas</div>
+  <div class="size-legend">
+    <div class="sli"><svg width="16" height="16"><circle cx="8" cy="8" r="2" fill="#555"/></svg>Outpost</div>
+    <div class="sli"><svg width="16" height="16"><circle cx="8" cy="8" r="4" fill="#555"/></svg>Base</div>
+    <div class="sli"><svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="#555"/></svg>Major Hub</div>
+  </div>
+</div>
+
+<div class="context-section">
+  <div class="cb">
+    <h3>From Orbit, This Is What Empire Looks Like</h3>
+    <p>Every dot is a real U.S. military installation — base, outpost, forward operating site, cooperative security location. The clusters over Japan, Korea, Germany, and the Gulf aren't accidents. They are the physical residue of decisions made in the 1940s, 50s, and after 9/11 that were never reversed. The vast dark spaces — South America, Central Africa, Central Asia — tell you just as much as the bright clusters.</p>
+    <p>The Soviet Union that justified most of this is gone. The question of whether 750 installations in 80 countries matches the actual threat environment of 2025 is one of the most expensive questions America isn't asking.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="fl">
+    USNOW.APP — Civic Data Platform<br>
+    Data: public record · Structure & design: ATJon + AI · Free reuse with attribution<br>
+    Sources: DMDC Dec 2025 · Pentagon Base Structure Report 2024 · Quincy Institute · David Vine
+  </div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#graphics">Graphics</a>
+    <a href="https://ratemyrep.app" target="_blank">RateMyRep</a>
+    <a href="https://atjon.substack.com" target="_blank">Substack</a>
+  </div>
+</footer>
+
+<script>
+// ── FULL INSTALLATION DATA ────────────────────────────────────────────────
+// Size: 1=outpost(<500), 2=small base(500-2k), 3=base(2k-10k), 4=major(10k-30k), 5=mega(30k+)
+const installations = [
+  // JAPAN — 120 installations
+  {name:"Yokosuka Naval Base",       country:"Japan", lat:35.28, lon:139.67, size:5, troops:"~27,000", type:"Naval Base",    region:"Indo-Pacific", cmd:"INDOPACOM", note:"7th Fleet HQ. Largest U.S. naval base in Western Pacific."},
+  {name:"Kadena Air Base",           country:"Japan", lat:26.35, lon:127.77, size:5, troops:"~15,000", type:"Air Base",      region:"Indo-Pacific", cmd:"INDOPACOM", note:"Largest U.S. Air Force base in Asia. Okinawa."},
+  {name:"Camp Foster",               country:"Japan", lat:26.27, lon:127.73, size:4, troops:"~8,000",  type:"Marine Base",   region:"Indo-Pacific", cmd:"INDOPACOM", note:"III MEF headquarters. Okinawa."},
+  {name:"Misawa Air Base",           country:"Japan", lat:40.70, lon:141.37, size:4, troops:"~5,000",  type:"Air Base",      region:"Indo-Pacific", cmd:"INDOPACOM", note:"Northern Honshu. Joint U.S.-Japan surveillance."},
+  {name:"Iwakuni Marine Corps AS",   country:"Japan", lat:34.14, lon:132.24, size:4, troops:"~5,000",  type:"Air Station",   region:"Indo-Pacific", cmd:"INDOPACOM", note:"MCAS Iwakuni. F/A-18s and MV-22 Ospreys."},
+  {name:"Camp Humphreys",            country:"Japan", lat:35.08, lon:139.35, size:3, troops:"~3,000",  type:"Army Base",     region:"Indo-Pacific", cmd:"INDOPACOM", note:"Atsugi area. Part of Tokyo complex."},
+  {name:"Okinawa Complex (other)",   country:"Japan", lat:26.50, lon:127.95, size:4, troops:"~10,000", type:"Multiple",      region:"Indo-Pacific", cmd:"INDOPACOM", note:"~30 additional installations on Okinawa alone."},
+  {name:"Sasebo Naval Base",         country:"Japan", lat:33.15, lon:129.72, size:3, troops:"~4,000",  type:"Naval Base",    region:"Indo-Pacific", cmd:"INDOPACOM", note:"Fleet Activities Sasebo. Amphibious ready group."},
+  {name:"Honshu installations",      country:"Japan", lat:36.20, lon:137.50, size:2, troops:"~2,000",  type:"Multiple",      region:"Indo-Pacific", cmd:"INDOPACOM", note:"Scattered mainland Japan sites."},
+
+  // SOUTH KOREA — 26 installations
+  {name:"Camp Humphreys",            country:"South Korea", lat:36.96, lon:127.03, size:5, troops:"~18,000", type:"Army Base", region:"Indo-Pacific", cmd:"USFK", note:"Largest U.S. overseas base by area. $11B. South Korea paid $10.7B."},
+  {name:"Osan Air Base",             country:"South Korea", lat:37.09, lon:127.03, size:4, troops:"~9,000",  type:"Air Base",  region:"Indo-Pacific", cmd:"USFK", note:"51st Fighter Wing. 7th Air Force HQ."},
+  {name:"Kunsan Air Base",           country:"South Korea", lat:35.90, lon:126.62, size:3, troops:"~2,500",  type:"Air Base",  region:"Indo-Pacific", cmd:"USFK", note:"8th Fighter Wing. Wolf Pack."},
+  {name:"Camp Carroll",              country:"South Korea", lat:35.99, lon:128.42, size:2, troops:"~1,000",  type:"Army Base", region:"Indo-Pacific", cmd:"USFK", note:"Pre-positioned equipment. APS-4."},
+  {name:"Chinhae Naval Base",        country:"South Korea", lat:35.15, lon:128.65, size:2, troops:"~800",    type:"Naval",     region:"Indo-Pacific", cmd:"USFK", note:"Commander Naval Forces Korea."},
+  {name:"Camp Casey / Stanley",      country:"South Korea", lat:37.90, lon:127.07, size:3, troops:"~3,000",  type:"Army Base", region:"Indo-Pacific", cmd:"USFK", note:"Near DMZ. 2nd Infantry Division."},
+
+  // GERMANY — 35+ installations
+  {name:"Ramstein Air Base",         country:"Germany", lat:49.44, lon:7.60,  size:5, troops:"~15,000", type:"Air Base",    region:"Europe", cmd:"USEUCOM", note:"HQ USAFE and NATO Allied Air Command. Landstuhl hospital adjacent."},
+  {name:"Grafenwoehr Training Area", country:"Germany", lat:49.70, lon:11.93, size:4, troops:"~8,000",  type:"Training",    region:"Europe", cmd:"USEUCOM", note:"Largest U.S. military training area in Europe."},
+  {name:"Stuttgart HQ",              country:"Germany", lat:48.74, lon:9.18,  size:4, troops:"~7,000",  type:"HQ",          region:"Europe", cmd:"USEUCOM", note:"USEUCOM and USAFRICOM headquarters."},
+  {name:"Spangdahlem Air Base",      country:"Germany", lat:50.13, lon:6.69,  size:3, troops:"~4,000",  type:"Air Base",    region:"Europe", cmd:"USEUCOM", note:"52nd Fighter Wing. A-10s and F-16s."},
+  {name:"Baumholder",                country:"Germany", lat:49.64, lon:7.33,  size:3, troops:"~3,500",  type:"Army Base",   region:"Europe", cmd:"USEUCOM", note:"Largest U.S. Army garrison in Germany."},
+  {name:"Vilseck/Rose Barracks",     country:"Germany", lat:49.63, lon:11.80, size:3, troops:"~3,000",  type:"Army Base",   region:"Europe", cmd:"USEUCOM", note:"2nd Cavalry Regiment. Stryker brigade."},
+  {name:"Wiesbaden Army Airfield",   country:"Germany", lat:50.05, lon:8.33,  size:3, troops:"~5,000",  type:"Army/Air",    region:"Europe", cmd:"USEUCOM", note:"V Corps forward HQ. USAREUR-AF."},
+  {name:"Other Germany sites",       country:"Germany", lat:48.50, lon:9.00,  size:2, troops:"~2,000",  type:"Multiple",    region:"Europe", cmd:"USEUCOM", note:"~20 additional smaller installations."},
+
+  // ITALY — 8 installations
+  {name:"Aviano Air Base",           country:"Italy", lat:46.03, lon:12.60, size:4, troops:"~5,000", type:"Air Base",   region:"Europe", cmd:"USEUCOM", note:"31st Fighter Wing. F-16s. Key Southern Europe hub."},
+  {name:"NAS Sigonella",             country:"Italy", lat:37.40, lon:14.92, size:4, troops:"~4,500", type:"Naval AS",   region:"Europe", cmd:"USEUCOM", note:"Hub of the Hub. ISR and logistics for Africa/ME ops."},
+  {name:"Camp Darby",                country:"Italy", lat:43.67, lon:10.38, size:3, troops:"~2,000", type:"Army/Logistics",region:"Europe",cmd:"USEUCOM",note:"Largest U.S. Army munitions storage outside CONUS."},
+  {name:"NSA Naples",                country:"Italy", lat:40.92, lon:14.20, size:3, troops:"~1,500", type:"Naval",      region:"Europe", cmd:"USEUCOM", note:"6th Fleet HQ. Joint Forces Command Naples."},
+  {name:"Vicenza / Caserma Ederle",  country:"Italy", lat:45.55, lon:11.53, size:3, troops:"~3,000", type:"Army Base",  region:"Europe", cmd:"USEUCOM", note:"173rd Airborne Brigade. Rapid deployment."},
+
+  // UK — 6 installations
+  {name:"RAF Lakenheath",            country:"UK", lat:52.41, lon:0.56,  size:4, troops:"~4,500", type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"48th Fighter Wing. Only USAF nuclear-capable F-35A wing in Europe."},
+  {name:"RAF Mildenhall",            country:"UK", lat:52.36, lon:0.49,  size:3, troops:"~3,000", type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"Aerial refueling and special operations aviation."},
+  {name:"RAF Croughton",             country:"UK", lat:52.07, lon:-1.19, size:2, troops:"~1,000", type:"Comms/Intel",region:"Europe",cmd:"USEUCOM", note:"USAFE communications hub. Signals intelligence."},
+  {name:"RAF Fairford",              country:"UK", lat:51.68, lon:-1.79, size:2, troops:"~500",   type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"B-2, B-52 rotational deployments. Bomber Task Force."},
+  {name:"NSA Holy Loch / Machrihanish",country:"UK",lat:55.95,lon:-5.40,size:1, troops:"~300",   type:"Naval",     region:"Europe", cmd:"USEUCOM", note:"Special operations staging. Remote Scotland."},
+
+  // POLAND — expanding
+  {name:"Camp Kosciuszko (Poznan)",  country:"Poland", lat:52.41, lon:16.93, size:4, troops:"~5,000", type:"Army Base", region:"Europe", cmd:"USEUCOM", note:"V Corps Forward HQ. Permanent presence since 2020."},
+  {name:"Powidz Air Base",           country:"Poland", lat:52.38, lon:17.85, size:3, troops:"~2,500", type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"APS-2 pre-positioned equipment. Combat Aviation Brigade."},
+  {name:"Rzeszow-Jasionka",          country:"Poland", lat:50.11, lon:22.02, size:3, troops:"~2,000", type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"Key logistics hub for Ukraine aid. Near border."},
+  {name:"Various Poland sites",      country:"Poland", lat:52.00, lon:20.00, size:2, troops:"~1,000", type:"Rotational",region:"Europe",cmd:"USEUCOM", note:"Rotating Armored Brigade Combat Team presence."},
+
+  // SPAIN
+  {name:"Naval Station Rota",        country:"Spain", lat:36.63, lon:-6.35, size:4, troops:"~2,500", type:"Naval Base", region:"Europe", cmd:"USEUCOM", note:"Critical Atlantic hub. Aegis BMD destroyers. Gateway to Med."},
+  {name:"Moron Air Base",            country:"Spain", lat:37.17, lon:-5.62, size:3, troops:"~700",   type:"Air Base",   region:"Europe", cmd:"USAFRICOM", note:"SPMAGTF-CR Africa. Rapid response for Africa/ME."},
+
+  // ROMANIA & BULGARIA
+  {name:"MK Air Base Deveselu",      country:"Romania", lat:44.20, lon:24.17, size:3, troops:"~1,000", type:"Missile Defense",region:"Europe",cmd:"USEUCOM",note:"NATO Aegis Ashore missile defense shield."},
+  {name:"Mihail Kogalniceanu AB",    country:"Romania", lat:44.36, lon:28.49, size:3, troops:"~1,000", type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"Black Sea access. Expanded post-2022."},
+  {name:"Graf Ignatievo AB",         country:"Bulgaria",lat:42.29, lon:24.71, size:2, troops:"~500",   type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"Rotating fighter presence. Bulgarian-American joint base."},
+
+  // GREECE
+  {name:"Naval Support Activity Souda Bay",country:"Greece",lat:35.53,lon:24.07,size:3,troops:"~1,000",type:"Naval",region:"Europe",cmd:"USEUCOM",note:"Deep-water port. Critical Med logistics and ISR."},
+  {name:"Larissa Air Base",          country:"Greece", lat:39.65, lon:22.42, size:2, troops:"~400",   type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"Rotating F-15 deployments. Hellenic AF cooperation."},
+
+  // NORWAY, ICELAND, NETHERLANDS etc
+  {name:"Keflavik / Reykjavik",      country:"Iceland",  lat:63.99, lon:-22.62, size:2, troops:"~400",  type:"Naval Air", region:"Europe", cmd:"USEUCOM", note:"Re-established 2016. ASW patrols. North Atlantic chokepoint."},
+  {name:"Volkel Air Base",           country:"Netherlands",lat:51.65,lon:5.71, size:2, troops:"~300",  type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"NATO nuclear sharing. B61 gravity bombs."},
+  {name:"Incirlik Air Base",         country:"Turkey",   lat:37.00, lon:35.43, size:4, troops:"~2,000", type:"Air Base",  region:"Europe", cmd:"USEUCOM", note:"NATO nuclear storage (~50 B61s). Relations strained post-2016."},
+  {name:"Rammstein-adjacent sites",  country:"Germany",  lat:49.00, lon:8.20,  size:1, troops:"~200",  type:"Various",   region:"Europe", cmd:"USEUCOM", note:"Administrative and logistics nodes."},
+
+  // QATAR
+  {name:"Al Udeid Air Base",         country:"Qatar", lat:25.12, lon:51.32, size:5, troops:"~10,000", type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"Largest U.S. air base in ME. CENTCOM forward HQ. ~100 aircraft."},
+
+  // KUWAIT
+  {name:"Camp Arifjan",              country:"Kuwait", lat:29.20, lon:47.93, size:5, troops:"~13,000", type:"Army Base", region:"Middle East", cmd:"CENTCOM", note:"Largest U.S. Army base in Middle East. Theater logistics hub."},
+  {name:"Ali Al Salem Air Base",     country:"Kuwait", lat:29.35, lon:47.52, size:3, troops:"~1,500",  type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"Air operations and Army aviation."},
+
+  // BAHRAIN
+  {name:"NSA Bahrain",               country:"Bahrain", lat:26.23, lon:50.60, size:4, troops:"~7,000", type:"Naval Base", region:"Middle East", cmd:"CENTCOM", note:"5th Fleet HQ. U.S. naval presence since 1971. Persian Gulf control."},
+
+  // UAE
+  {name:"Al Dhafra Air Base",        country:"UAE", lat:24.25, lon:54.55, size:4, troops:"~3,500", type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"F-35A operations. ISR hub. U-2 and Global Hawk."},
+
+  // SAUDI ARABIA
+  {name:"Prince Sultan Air Base",    country:"Saudi Arabia", lat:24.06, lon:47.58, size:4, troops:"~3,000", type:"Air Base", region:"Middle East", cmd:"CENTCOM", note:"Presence restored 2019. Patriot missile defense."},
+  {name:"Eskan Village",             country:"Saudi Arabia", lat:24.55, lon:46.72, size:2, troops:"~500",   type:"Support",  region:"Middle East", cmd:"CENTCOM", note:"Riyadh area. Air Force support."},
+
+  // IRAQ
+  {name:"Ain al-Asad Air Base",      country:"Iraq", lat:33.79, lon:42.44, size:3, troops:"~1,500", type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"Attacked by Iranian missiles Jan 2020. Anbar province."},
+  {name:"Erbil Air Base",            country:"Iraq", lat:36.24, lon:43.96, size:3, troops:"~1,000", type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"Kurdistan region. ISR and advise/assist ops."},
+
+  // SYRIA
+  {name:"Al-Tanf Garrison",          country:"Syria", lat:33.50, lon:38.68, size:2, troops:"~200",   type:"FOB",       region:"Middle East", cmd:"CENTCOM", note:"No congressional authorization. Iran corridor interdiction."},
+  {name:"NE Syria sites",            country:"Syria", lat:36.80, lon:41.00, size:2, troops:"~700",   type:"FOB",       region:"Middle East", cmd:"CENTCOM", note:"Anti-ISIS mission. Kurdish SDF partnership."},
+
+  // JORDAN
+  {name:"Various Jordan sites",      country:"Jordan", lat:31.50, lon:36.50, size:2, troops:"~3,000", type:"Multiple",  region:"Middle East", cmd:"CENTCOM", note:"Muwaffaq Salti AB + others. Rapid response staging."},
+
+  // OMAN
+  {name:"Thumrait Air Base",         country:"Oman", lat:17.67, lon:54.02, size:2, troops:"~500",   type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"Access agreement. Strategic Indian Ocean position."},
+  {name:"Masirah Island",            country:"Oman", lat:20.67, lon:58.90, size:2, troops:"~300",   type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"Remote island base. Access rights maintained."},
+
+  // DJIBOUTI
+  {name:"Camp Lemonnier",            country:"Djibouti", lat:11.55, lon:43.15, size:4, troops:"~4,000", type:"Naval Expeditionary",region:"Africa",cmd:"USAFRICOM",note:"Only permanent U.S. base in Africa. Adjacent to Chinese base. Horn of Africa ops."},
+  {name:"Chabelley Airfield",        country:"Djibouti", lat:11.49, lon:42.92, size:2, troops:"~400",   type:"Drone Base", region:"Africa", cmd:"USAFRICOM", note:"MQ-9 Reaper drone operations. East Africa counterterrorism."},
+
+  // AFRICA — small sites
+  {name:"Manda Bay / Lamu",          country:"Kenya",   lat:-2.25,  lon:40.90, size:1, troops:"~200",  type:"CL/FOB",    region:"Africa", cmd:"USAFRICOM", note:"Attacked by Al-Shabaab Jan 2020. East Africa CT ops."},
+  {name:"Agadez Air Base",           country:"Niger",   lat:16.96,  lon:8.00,  size:2, troops:"~800",  type:"Air Base",  region:"Africa", cmd:"USAFRICOM", note:"MQ-9 base. Sahel CT ops. Closed after Niger coup 2024."},
+  {name:"Niamey / Diori Hamani",     country:"Niger",   lat:13.48,  lon:2.18,  size:1, troops:"~0",    type:"Former Base",region:"Africa",cmd:"USAFRICOM", note:"Evacuated after 2023 coup. Significant CT setback."},
+  {name:"Entebbe / Uganda",          country:"Uganda",  lat:0.04,   lon:32.44, size:1, troops:"~150",  type:"CL",        region:"Africa", cmd:"USAFRICOM", note:"Access agreement. LRA pursuit. Regional CT."},
+  {name:"Garoua, Cameroon",          country:"Cameroon",lat:9.33,   lon:13.37, size:1, troops:"~300",  type:"FOB",       region:"Africa", cmd:"USAFRICOM", note:"Lake Chad Basin CT. Boko Haram ops."},
+  {name:"Somalia FOBs",              country:"Somalia", lat:2.05,   lon:45.34, size:2, troops:"~700",  type:"FOB",       region:"Africa", cmd:"USAFRICOM", note:"Re-established 2022. Al-Shabaab counterterrorism."},
+  {name:"Dakar / Senegal",           country:"Senegal", lat:14.74,  lon:-17.49,size:1, troops:"~200",  type:"CL",        region:"Africa", cmd:"USAFRICOM", note:"West Africa logistics node."},
+
+  // GUAM
+  {name:"Andersen Air Force Base",   country:"Guam", lat:13.58, lon:144.93, size:4, troops:"~4,000", type:"Air Base",  region:"Indo-Pacific", cmd:"INDOPACOM", note:"3 hrs from Taiwan. B-52 Bomber Task Force rotations."},
+  {name:"Naval Base Guam",           country:"Guam", lat:13.45, lon:144.65, size:4, troops:"~2,000", type:"Naval Base",region:"Indo-Pacific", cmd:"INDOPACOM", note:"Submarine tender. SSN homeport. Pacific logistics."},
+
+  // PHILIPPINES — 9 EDCA sites
+  {name:"Clark / Fort Magsaysay",    country:"Philippines", lat:15.18, lon:120.56, size:3, troops:"~800",  type:"Air Base",  region:"Indo-Pacific", cmd:"INDOPACOM", note:"EDCA site. F-16 rotations. Former major base."},
+  {name:"Antonio Bautista AB",       country:"Philippines", lat:9.01,  lon:118.47, size:2, troops:"~600",  type:"Air Base",  region:"Indo-Pacific", cmd:"INDOPACOM", note:"Palawan Island. South China Sea presence."},
+  {name:"Subic Bay / Cubi Pt",       country:"Philippines", lat:14.80, lon:120.27, size:2, troops:"~500",  type:"Naval",     region:"Indo-Pacific", cmd:"INDOPACOM", note:"Access rights restored. Former massive base."},
+  {name:"Camilo Osias / Carlson AB", country:"Philippines", lat:18.08, lon:121.94, size:2, troops:"~400",  type:"Air Base",  region:"Indo-Pacific", cmd:"INDOPACOM", note:"Luzon north. New EDCA site 2023."},
+  {name:"Other EDCA sites",          country:"Philippines", lat:11.00, lon:124.00, size:1, troops:"~300",  type:"Multiple",  region:"Indo-Pacific", cmd:"INDOPACOM", note:"5 additional EDCA access sites across archipelago."},
+
+  // AUSTRALIA
+  {name:"Pine Gap",                  country:"Australia", lat:-23.80, lon:133.74, size:3, troops:"~400",  type:"Intelligence",region:"Indo-Pacific",cmd:"INDOPACOM/NSA",note:"Joint surveillance facility. Classified. Satellite intercept."},
+  {name:"Darwin — Marine Rotation",  country:"Australia", lat:-12.46, lon:130.85, size:3, troops:"~2,000", type:"Marine Rotational",region:"Indo-Pacific",cmd:"INDOPACOM",note:"Marine Rotational Force-Darwin. AUKUS expansion underway."},
+  {name:"NW Cape / Exmouth",         country:"Australia", lat:-21.82, lon:114.17, size:2, troops:"~200",  type:"Naval Comms",region:"Indo-Pacific",cmd:"INDOPACOM",note:"VLF submarine communications. Space surveillance."},
+  {name:"RAAF Tindal",               country:"Australia", lat:-14.52, lon:132.38, size:2, troops:"~300",  type:"Air Base",   region:"Indo-Pacific", cmd:"INDOPACOM", note:"B-52 rotational basing. AUKUS agreement."},
+
+  // DIEGO GARCIA
+  {name:"Diego Garcia",              country:"British Indian Ocean Territory",lat:-7.31,lon:72.42,size:4,troops:"~3,000",type:"Naval Air Station",region:"Indo-Pacific",cmd:"CENTCOM/INDOPACOM",note:"Remote atoll. B-2, B-52 bombers. Submarine support. Strategic global hub."},
+
+  // AMERICAS
+  {name:"Guantanamo Bay",            country:"Cuba",    lat:19.90, lon:-75.10, size:3, troops:"~800",   type:"Naval Station",region:"Americas", cmd:"SOUTHCOM", note:"Oldest overseas base. Leased 1903. Detention facility still operating."},
+  {name:"Soto Cano AB Honduras",     country:"Honduras",lat:14.38, lon:-87.62, size:3, troops:"~500",   type:"Air Base",   region:"Americas", cmd:"SOUTHCOM", note:"JTF-Bravo. Drug interdiction. Central America ops."},
+  {name:"Comalapa El Salvador",      country:"El Salvador",lat:13.44,lon:-89.12,size:1,troops:"~200",  type:"FOL",        region:"Americas", cmd:"SOUTHCOM", note:"Forward operating location. Counter-narcotics."},
+  {name:"Reina Beatrix Aruba",       country:"Aruba",   lat:12.50, lon:-70.01, size:1, troops:"~200",  type:"FOL",        region:"Americas", cmd:"SOUTHCOM", note:"Dutch island. Counter-narcotics detection and monitoring."},
+  {name:"Hato AB Curacao",           country:"Curacao", lat:12.19, lon:-68.96, size:1, troops:"~200",  type:"FOL",        region:"Americas", cmd:"SOUTHCOM", note:"Counter-narcotics. Caribbean surveillance."},
+  {name:"Manta Ecuador (former)",    country:"Colombia",lat:1.21,  lon:-77.28, size:1, troops:"~150",  type:"CL",         region:"Americas", cmd:"SOUTHCOM", note:"Colombia cooperation. CT and drug ops."},
+
+  // CENTRAL ASIA (remaining)
+  {name:"Manas / Transit Center (closed)",country:"Kyrgyzstan",lat:43.06,lon:74.47,size:1,troops:"~0",type:"Former",region:"Middle East",cmd:"Former",note:"Closed 2014. Key Afghanistan supply hub. Russian pressure led to closure."},
+  {name:"Karshi-Khanabad (K2, closed)",country:"Uzbekistan",lat:38.83,lon:65.92,size:1,troops:"~0",type:"Former",region:"Middle East",cmd:"Former",note:"Closed 2005. Post-Andijan massacre diplomatic fallout."},
+
+  // SINGAPORE / MALAYSIA
+  {name:"Sembawang / Singapore",     country:"Singapore", lat:1.45, lon:103.82, size:3, troops:"~900",  type:"Naval/Air",  region:"Indo-Pacific", cmd:"INDOPACOM", note:"Logistics and maintenance. 7th Fleet rotations. Strategic Strait of Malacca."},
+
+  // BAHRAIN area — additional
+  {name:"Al Minhad AB (UAE)",        country:"UAE", lat:25.03, lon:55.37, size:2, troops:"~500",  type:"Air Base",  region:"Middle East", cmd:"CENTCOM", note:"Dubai area. Coalition air operations."},
+
+  // NORWAY
+  {name:"Rygge / Vaernes Norway",    country:"Norway", lat:63.46, lon:10.92, size:2, troops:"~700",  type:"Marine Rotational",region:"Europe",cmd:"USEUCOM",note:"Marine Rotational Force-Europe. Arctic warfare. Expanded 2024."},
+
+  // MISC PACIFIC
+  {name:"Kwajalein Atoll",           country:"Marshall Islands",lat:8.72,lon:167.73,size:2,troops:"~800",type:"Missile Test Range",region:"Indo-Pacific",cmd:"INDOPACOM",note:"Ronald Reagan Ballistic Missile Defense Test Site."},
+  {name:"Wake Island",               country:"Wake Island",lat:19.28,lon:166.64,size:1,troops:"~100",type:"Airfield",region:"Indo-Pacific",cmd:"INDOPACOM",note:"Remote atoll. Emergency airstrip. Strategic reserve."},
+];
+
+// ── MAP SETUP ─────────────────────────────────────────────────────────────
+const section = document.getElementById('map-section');
+const svg = d3.select('#map-svg');
+const tt = document.getElementById('tooltip');
+
+function mapHeight(){
+  const w = section.clientWidth;
+  return Math.min(Math.max(w*0.5, 280), 580);
+}
+
+let W = section.clientWidth, H = mapHeight();
+svg.attr('width', W).attr('height', H);
+
+const proj = d3.geoNaturalEarth1().scale(W/6.2).translate([W/2, H/2]);
+const pathGen = d3.geoPath().projection(proj);
+const g = svg.append('g');
+
+// Zoom
+const zoom = d3.zoom().scaleExtent([1,10])
+  .on('zoom', e => g.attr('transform', e.transform));
+svg.call(zoom);
+
+document.getElementById('zoom-in').onclick  = () => svg.transition().duration(300).call(zoom.scaleBy, 1.6);
+document.getElementById('zoom-out').onclick = () => svg.transition().duration(300).call(zoom.scaleBy, 0.625);
+document.getElementById('zoom-reset').onclick = () => svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+
+// Ocean
+g.append('path').datum({type:'Sphere'}).attr('class','sphere-fill').attr('d',pathGen);
+// Grid
+g.append('path').datum(d3.geoGraticule()()).attr('class','graticule-path').attr('d',pathGen);
+
+// Region colors
+const regionColor = {
+  'Indo-Pacific':'#1db954',
+  'Europe':'#3b82f6',
+  'Middle East':'#f0a500',
+  'Africa':'#e03030',
+  'Americas':'#a855f7',
+};
+
+// Dot sizing
+function dotRadius(size){
+  const base = W < 600 ? 2.5 : 3.5;
+  return [0, base*0.6, base, base*1.6, base*2.4, base*3.4][size] || base;
+}
+
+let visibleCount = 0;
+let currentFilter = 'ALL';
+let dotSelection;
+
+function updateCounter(n){ document.getElementById('lc-num').textContent = n; }
+
+function drawDots(){
+  g.selectAll('.dot-group').remove();
+  visibleCount = 0;
+
+  const filtered = currentFilter === 'ALL'
+    ? installations
+    : installations.filter(d => d.region === currentFilter);
+
+  visibleCount = filtered.length;
+  updateCounter(visibleCount);
+
+  // Sort so large dots draw first (behind smaller)
+  const sorted = [...filtered].sort((a,b) => b.size - a.size);
+
+  sorted.forEach((d, i) => {
+    const coords = proj([d.lon, d.lat]);
+    if (!coords) return;
+    const [x, y] = coords;
+    const r = dotRadius(d.size);
+    const col = regionColor[d.region] || '#ffffff';
+    const delay = i * 12;
+
+    const grp = g.append('g')
+      .attr('class','dot-group installation')
+      .attr('transform',`translate(${x},${y})`);
+
+    // Outer glow ring (only for size 3+)
+    if(d.size >= 3){
+      grp.append('circle')
+        .attr('r', r * 2.2)
+        .attr('fill', col)
+        .attr('fill-opacity', 0)
+        .attr('stroke', col)
+        .attr('stroke-width', 0.5)
+        .attr('stroke-opacity', 0.15);
+    }
+
+    // Main dot — animate in
+    const circle = grp.append('circle')
+      .attr('class','dot-glow')
+      .attr('r', 0)
+      .attr('fill', col)
+      .attr('fill-opacity', 0.15 + (d.size * 0.12))
+      .attr('stroke', col)
+      .attr('stroke-width', d.size >= 4 ? 1.5 : 0.8)
+      .attr('stroke-opacity', 0.5 + (d.size * 0.1));
+
+    circle.transition()
+      .delay(delay)
+      .duration(400)
+      .attr('r', r);
+
+    // Pulse animation for major hubs
+    if(d.size >= 4){
+      function pulse(){
+        circle.transition().duration(1500).attr('r', r*1.3).attr('stroke-opacity',0.8)
+          .transition().duration(1500).attr('r', r).attr('stroke-opacity',0.5+d.size*0.1)
+          .on('end', pulse);
+      }
+      setTimeout(pulse, delay + 500);
+    }
+
+    // Tooltip
+    grp.on('mousemove touchmove', function(event){
+      const e = event.touches ? event.touches[0] : event;
+      document.getElementById('tt-name').textContent = d.name;
+      document.getElementById('tt-name').style.color = col;
+      document.getElementById('tt-country').textContent = d.country;
+      document.getElementById('tt-troops').textContent = d.troops;
+      document.getElementById('tt-type').textContent = d.type;
+      document.getElementById('tt-cmd').textContent = d.cmd;
+      document.getElementById('tt-note').textContent = d.note;
+      tt.style.borderLeftColor = col;
+      tt.style.opacity = '1';
+      tt.style.left = Math.min(e.clientX+16, window.innerWidth-280)+'px';
+      tt.style.top = Math.max(e.clientY-60, 60)+'px';
+    })
+    .on('mouseleave', () => tt.style.opacity='0')
+    .on('touchend', () => setTimeout(()=>tt.style.opacity='0', 2500));
+
+    grp.style('cursor','pointer');
+  });
+}
+
+// Load world map
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+  .then(r=>r.json())
+  .then(world=>{
+    g.selectAll('.country-path')
+      .data(topojson.feature(world, world.objects.countries).features)
+      .enter().append('path')
+      .attr('class','country-path')
+      .attr('d', pathGen);
+    drawDots();
+  })
+  .catch(()=>{ drawDots(); }); // fallback: dots only, no borders
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.region;
+    drawDots();
+  });
+});
+
+// Resize
+window.addEventListener('resize',()=>{
+  W = section.clientWidth; H = mapHeight();
+  svg.attr('width',W).attr('height',H);
+  proj.scale(W/6.2).translate([W/2,H/2]);
+  g.selectAll('path').attr('d',pathGen);
+  drawDots();
+});
+</script>
+</body>
+</html>
