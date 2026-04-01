@@ -36,7 +36,7 @@ body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',s
 .sl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:5px;line-height:1.4;}
 
 /* CHART */
-.chart-section{padding:40px 48px 20px;}
+.chart-section{padding:28px 48px 12px;}
 .chart-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:var(--muted);margin-bottom:20px;}
 #chart{width:100%;}
 
@@ -207,7 +207,7 @@ const data = [
 function buildChart(){
   const container = document.getElementById('chart');
   const W = container.parentElement.clientWidth - 0;
-  const H = Math.min(Math.max(W * 0.42, 240), 420);
+  const H = Math.min(Math.max(W * 0.65, 340), 580);
   const margin = {top:30, right:20, bottom:40, left:50};
   const iW = W - margin.left - margin.right;
   const iH = H - margin.top - margin.bottom;
@@ -216,7 +216,7 @@ function buildChart(){
   const svg = d3.select('#chart').attr('width',W).attr('height',H);
   const g = svg.append('g').attr('transform',`translate(${margin.left},${margin.top})`);
 
-  const x = d3.scaleBand().domain(data.map(d=>d.year)).range([0,iW]).padding(0.15);
+  const x = d3.scaleBand().domain(data.map(d=>d.year)).range([0,iW]).padding(0.08);
   const y = d3.scaleLinear().domain([0, d3.max(data,d=>d.amt)*1.1]).range([iH,0]);
 
   // Gridlines
