@@ -820,12 +820,12 @@ body {
       </div>
     </a>
 
-    <a class="resource-item" href="https://ratemyrep.app" target="_blank">
+    <a class="resource-item" href="https://usnow.app" target="_blank">
       <div class="resource-icon">⭐</div>
       <div>
         <div class="resource-name">RateMyRep</div>
-        <div class="resource-desc">Hold your representatives accountable — our platform</div>
-        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">USNOW</div>
+        <div class="resource-desc">Hold your representatives accountable — our sister platform</div>
+        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">PARTNER</div>
       </div>
     </a>
 
@@ -848,7 +848,7 @@ body {
       <div class="btn-row">
         <a href="#graphics" class="btn btn-red">What We're Looking At</a>
         <a href="#submit" class="btn btn-amber">Request a Graphic</a>
-        <a href="https://ratemyrep.app" target="_blank" class="btn btn-outline">Rate Your Rep</a>
+        <a href="/graphics/who-rules-the-world" class="btn btn-outline">Who Rules the World</a>
       </div>
     </section>
 
@@ -875,10 +875,10 @@ body {
     <!-- FEATURED GRAPHICS -->
     <div class="section-header" id="graphics">
       <div class="section-title">What We're Looking At</div>
-      <div class="section-sub">Vol. 1 · Military & Budget</div>
+      <div class="section-sub">Vol. 1 · Military & Budget · Power Structure</div>
     </div>
 
-    <div class="preview-strip" style="grid-template-columns:1fr 1fr 1fr;">
+    <div class="preview-strip" style="grid-template-columns:1fr 1fr 1fr 1fr;">
 
       <a href="/graphics/hidden-costs" class="preview-card">
         <div class="preview-thumb" style="background:linear-gradient(135deg,#100d00,#1a1400);">
@@ -918,6 +918,20 @@ body {
         </div>
         <div class="preview-meta">
           <div class="preview-meta-title">The largest military empire in human history.</div>
+          <div class="preview-meta-arrow">→</div>
+        </div>
+      </a>
+
+      <a href="/graphics/who-rules-the-world" class="preview-card">
+        <div class="preview-thumb" style="background:linear-gradient(135deg,#0e0900,#1c1200);">
+          <div class="preview-thumb-num" style="color:#c9973a; font-size:32px;">𓇯</div>
+          <div class="preview-thumb-label">
+            <div class="preview-thumb-tag" style="color:#c9973a;">Power Structure</div>
+            <div class="preview-thumb-title">Who Rules the World</div>
+          </div>
+        </div>
+        <div class="preview-meta">
+          <div class="preview-meta-title">The pyramid of global power — from the apex to the unrepresented majority.</div>
           <div class="preview-meta-arrow">→</div>
         </div>
       </a>
@@ -971,20 +985,20 @@ body {
     <footer class="footer">
       <div class="footer-left">
         USNOW.APP — Civic Data Platform<br>
-        A project of <a href="https://ratemyrep.app">RateMyRep</a> · Built by <a href="https://atjon.substack.com">Jon Tatun</a><br>
+        A project of <a href="https://usnow.app">USNow</a> · Built by <a href="https://atjon.substack.com">Jon Tatun</a><br>
         Public records. Free reuse with attribution.
       </div>
       <div class="footer-links">
-        <a href="https://ratemyrep.app" target="_blank" class="footer-link">RateMyRep</a>
+        <a href="https://usnow.app" target="_blank" class="footer-link">USNow</a>
         <a href="https://atjon.substack.com" target="_blank" class="footer-link">Substack</a>
-        <a href="mailto:jon@tatunlaw.com" class="footer-link">Contact</a>
+        <a href="/cdn-cgi/l/email-protection#9ff5f0f1dfebfeebeaf1f3fee8b1fcf0f2" class="footer-link">Contact</a>
       </div>
     </footer>
 
   </main>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const d = new Date();
   document.getElementById('live-date').textContent =
     d.toLocaleDateString('en-US',{weekday:'short',year:'numeric',month:'long',day:'numeric'}).toUpperCase();
@@ -1008,9 +1022,4 @@ body {
       fetch(SHEET_ENDPOINT, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
     }
     document.getElementById('form-success').style.display = 'block';
-    ['fname','ftopic','fwhy','fsources'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('ftopic').style.borderColor = '';
-  }
-</script>
-</body>
-</html>
+    ['fname','ftopic','fwhy','fsources'].
