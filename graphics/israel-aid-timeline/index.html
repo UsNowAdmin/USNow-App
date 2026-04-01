@@ -8,9 +8,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{--black:#070709;--off-black:#0d0d12;--border:#1e1e2a;--red:#e03030;--amber:#f0a500;--blue:#3b82f6;--white:#f2f2f2;--muted:#52526a;}
+:root{
+  --black:#070709;--off-black:#0d0d12;--border:#1e1e2a;
+  --red:#e03030;--amber:#f0a500;--blue:#3b82f6;
+  --white:#f2f2f2;--muted:#52526a;--green:#1db954;
+}
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;min-height:100vh;}
+
+/* NAV */
 .site-nav{width:100%;background:var(--off-black);border-bottom:2px solid var(--red);padding:0 32px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:500;}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:4px;color:var(--white);text-decoration:none;}
 .nav-logo span{color:var(--red);}
@@ -19,6 +25,7 @@ body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',s
 .nav-links a:hover,.nav-links a.active{color:var(--amber);}
 @media(max-width:600px){.nav-links .hide-mobile{display:none;}}
 
+/* HEADER */
 .page-header{background:var(--off-black);border-bottom:1px solid var(--border);padding:32px 48px 28px;}
 .breadcrumb{font-size:11px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
 .breadcrumb a{color:var(--amber);text-decoration:none;}
@@ -29,41 +36,65 @@ body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',s
 .page-meta span{color:var(--blue);}
 @media(max-width:600px){.page-header{padding:20px 16px;}}
 
+/* STAT STRIP */
 .stat-strip{display:flex;border-bottom:1px solid var(--border);background:var(--off-black);overflow-x:auto;}
-.sc{flex:1;min-width:120px;padding:18px 14px;text-align:center;border-right:1px solid var(--border);}
+.sc{flex:1;min-width:110px;padding:16px 12px;text-align:center;border-right:1px solid var(--border);}
 .sc:last-child{border-right:none;}
-.sn{font-family:'Space Mono',monospace;font-size:clamp(18px,3vw,28px);line-height:1;}
-.sl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:5px;line-height:1.4;}
+.sn{font-family:'Space Mono',monospace;font-size:clamp(15px,2.5vw,24px);line-height:1;}
+.sl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px;line-height:1.4;}
 
-/* CHART */
-.chart-section{padding:28px 48px 12px;}
-.chart-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:var(--muted);margin-bottom:20px;}
-#chart{width:100%;}
+/* MOUNTAIN SECTION */
+.mountain-section{padding:32px 40px 8px;background:var(--black);}
+.section-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.section-tag{padding:3px 8px;font-size:9px;letter-spacing:2px;background:var(--border);}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,3vw,28px);letter-spacing:3px;color:var(--white);margin-bottom:16px;}
+#mountain-svg{width:100%;display:block;}
+@media(max-width:600px){.mountain-section{padding:20px 16px 8px;}}
 
-/* Tooltip */
-.bar-tooltip{position:fixed;background:#0a0a12;border:1px solid var(--border);border-left:3px solid var(--blue);padding:10px 14px;pointer-events:none;opacity:0;transition:opacity 0.15s;z-index:999;}
-.bt-year{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--white);}
-.bt-amt{font-family:'Space Mono',monospace;font-size:14px;color:var(--blue);margin-top:3px;}
-.bt-note{font-size:11px;color:var(--muted);margin-top:5px;max-width:180px;line-height:1.4;}
+/* ERA LEGEND */
+.era-legend{display:flex;flex-wrap:wrap;gap:8px;padding:12px 40px 20px;}
+.era-chip{font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border:1px solid;opacity:0.8;}
+@media(max-width:600px){.era-legend{padding:10px 16px 16px;gap:6px;}}
 
-.cumulative-bar{margin:0 48px 12px;background:var(--off-black);border:1px solid var(--border);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
-.cb-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
-.cb-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--amber);letter-spacing:3px;}
+/* DIVIDER */
+.section-divider{margin:8px 40px 24px;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
+@media(max-width:600px){.section-divider{margin:8px 16px 20px;}}
 
-.share-bar{display:flex;gap:12px;align-items:center;padding:16px 48px 20px;}
+/* BAR CHART SECTION */
+.bar-section{padding:0 40px 8px;}
+@media(max-width:600px){.bar-section{padding:0 16px 8px;}}
+#bar-svg{width:100%;display:block;}
+
+/* TOOLTIP */
+.tip{position:fixed;background:#08080f;border:1px solid var(--border);padding:12px 16px;pointer-events:none;opacity:0;transition:opacity 0.15s;z-index:999;max-width:250px;}
+.tip-year{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;}
+.tip-amt{font-family:'Space Mono',monospace;font-size:14px;margin-top:3px;}
+.tip-era{font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:4px;}
+.tip-note{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.5;border-top:1px solid var(--border);padding-top:6px;}
+
+/* CUMULATIVE */
+.cumulative{margin:16px 40px;background:var(--off-black);border:1px solid var(--border);border-left:3px solid var(--amber);padding:16px 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.cum-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+.cum-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4vw,38px);color:var(--amber);letter-spacing:3px;}
+@media(max-width:600px){.cumulative{margin:16px 16px;}}
+
+/* SHARE */
+.share-bar{display:flex;gap:12px;align-items:center;padding:8px 40px 20px;}
 .share-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
 .share-btn{font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:'Barlow Condensed',sans-serif;}
 .share-btn:hover{border-color:var(--amber);color:var(--amber);}
-@media(max-width:600px){.share-bar{padding:12px 16px 16px;}.chart-section{padding:24px 16px 16px;}.cumulative-bar{margin:0 16px 12px;}}
+@media(max-width:600px){.share-bar{padding:8px 16px 16px;}}
 
-.context-section{padding:0 48px 40px;}
-.cb-ctx{background:var(--off-black);border:1px solid var(--border);border-left:3px solid var(--blue);padding:22px 26px;}
-.cb-ctx h3{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:var(--blue);margin-bottom:10px;}
-.cb-ctx p{font-size:15px;line-height:1.7;color:#9090a8;font-weight:300;}
-.cb-ctx p+p{margin-top:10px;}
+/* CONTEXT */
+.context-section{padding:0 40px 40px;}
+.cb{background:var(--off-black);border:1px solid var(--border);border-left:3px solid var(--blue);padding:22px 26px;}
+.cb h3{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:var(--blue);margin-bottom:10px;}
+.cb p{font-size:15px;line-height:1.7;color:#9090a8;font-weight:300;}
+.cb p+p{margin-top:10px;}
 @media(max-width:600px){.context-section{padding:0 16px 32px;}}
 
-.site-footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify-content:space-between;align-items:center;background:var(--off-black);flex-wrap:wrap;gap:14px;}
+/* FOOTER */
+.site-footer{border-top:1px solid var(--border);padding:24px 40px;display:flex;justify-content:space-between;align-items:center;background:var(--off-black);flex-wrap:wrap;gap:14px;}
 .fl{font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:1px;}
 .fl a{color:var(--amber);text-decoration:none;}
 .footer-links{display:flex;gap:20px;}
@@ -74,10 +105,11 @@ body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',s
 </head>
 <body>
 
-<div class="bar-tooltip" id="bar-tooltip">
-  <div class="bt-year" id="bt-year"></div>
-  <div class="bt-amt" id="bt-amt"></div>
-  <div class="bt-note" id="bt-note"></div>
+<div class="tip" id="tip">
+  <div class="tip-year" id="tip-year"></div>
+  <div class="tip-amt" id="tip-amt"></div>
+  <div class="tip-era" id="tip-era"></div>
+  <div class="tip-note" id="tip-note"></div>
 </div>
 
 <nav class="site-nav">
@@ -93,39 +125,59 @@ body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',s
 <div class="page-header">
   <div class="breadcrumb"><a href="/">USNow</a> / <a href="/#graphics">Graphics</a> / Israel Aid Timeline</div>
   <div class="page-title">THE <span class="blue">COST</span> OF <span class="red">COMMITMENT</span></div>
-  <div class="page-meta">U.S. Military Aid to Israel · <span>55-Year Record · 1970–2025</span> · Billions USD</div>
+  <div class="page-meta">U.S. Military Aid to Israel · <span>Full Record · 1948–2025</span> · Billions USD · 76 Years</div>
 </div>
 
 <div class="stat-strip">
-  <div class="sc"><div class="sn" style="color:var(--blue)">$3.8B</div><div class="sl">Annual Baseline<br>(MOU) Since 2016</div></div>
+  <div class="sc"><div class="sn" style="color:var(--blue)">$3.8B</div><div class="sl">Annual Baseline<br>MOU Since 2016</div></div>
   <div class="sc"><div class="sn" style="color:var(--red)">$21.7B+</div><div class="sl">Since Oct. 7<br>2023 Alone</div></div>
   <div class="sc"><div class="sn" style="color:var(--amber)">$330B</div><div class="sl">Total Cumulative<br>Inflation-Adj.</div></div>
   <div class="sc"><div class="sn" style="color:var(--white)">$244B</div><div class="sl">Military Portion<br>of Cumulative</div></div>
+  <div class="sc"><div class="sn" style="color:var(--red)">76</div><div class="sl">Years of<br>Commitment</div></div>
 </div>
 
-<div class="chart-section">
-  <div class="chart-title">Annual Military Assistance · Billions USD · Hover / Tap Bars for Detail</div>
-  <svg id="chart"></svg>
-</div>
-
-<div class="cumulative-bar">
-  <div>
-    <div class="cb-label">Cumulative Total Since 1948 (Inflation-Adjusted 2024 Dollars)</div>
+<!-- MOUNTAIN -->
+<div class="mountain-section">
+  <div class="section-eyebrow">
+    <span class="section-tag">THE MOUNTAIN</span>
+    1948–2025 · Each peak and valley shaped by war, diplomacy, and political shift
   </div>
-  <div class="cb-num">$330 Billion</div>
+  <div class="section-title">76 Years of U.S. Military Aid to Israel</div>
+  <svg id="mountain-svg"></svg>
+</div>
+
+<div class="era-legend" id="era-legend"></div>
+
+<div class="section-divider"></div>
+
+<!-- BAR CHART -->
+<div class="bar-section">
+  <div class="section-eyebrow">
+    <span class="section-tag" style="background:#0a0a1f;color:var(--blue);">DATA</span>
+    Annual breakdown · Hover / tap each bar for detail
+  </div>
+  <svg id="bar-svg"></svg>
+</div>
+
+<div class="cumulative">
+  <div>
+    <div class="cum-label">Cumulative Total Since 1948 (Inflation-Adjusted 2024 Dollars)</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:3px;letter-spacing:1px;">Military + Economic assistance combined · $244B military portion</div>
+  </div>
+  <div class="cum-num">$330 Billion</div>
 </div>
 
 <div class="share-bar">
   <span class="share-label">Share</span>
-  <a class="share-btn" href="https://twitter.com/intent/tweet?text=55+years+of+U.S.+military+aid+to+Israel+%E2%80%94+%24330B+cumulative.+usnow.app%2Fgraphics%2Fisrael-aid-timeline" target="_blank">X / Twitter</a>
+  <a class="share-btn" href="https://twitter.com/intent/tweet?text=76+years+of+U.S.+aid+to+Israel+%E2%80%94+%24330B+cumulative.+A+mountain+of+commitment.+usnow.app%2Fgraphics%2Fisrael-aid-timeline" target="_blank">X / Twitter</a>
   <a class="share-btn" href="#">Copy Link</a>
 </div>
 
 <div class="context-section">
-  <div class="cb-ctx">
-    <h3>55 Years of Commitment</h3>
-    <p>U.S. military assistance to Israel began in earnest after the 1973 Yom Kippur War and has never stopped. The 2016 Memorandum of Understanding locked in $3.8 billion per year through 2028 — the largest military aid package the U.S. has ever provided to any country. After October 7, 2023, Congress approved an additional $14.1 billion emergency package on top of the baseline, bringing the post-Oct. 7 total to over $21.7 billion in roughly 18 months.</p>
-    <p>The $330 billion inflation-adjusted cumulative figure covers all U.S. assistance since Israeli statehood in 1948. Of that, $244 billion is military. No other bilateral relationship in American foreign policy history has this financial profile — sustained, bipartisan, and almost entirely exempt from the conditions attached to other foreign aid.</p>
+  <div class="cb">
+    <h3>How the Mountain Was Built</h3>
+    <p>From 1948 to 1961 the U.S. provided economic aid only — deliberately avoiding military assistance to stay neutral with Arab oil states. France was Israel's arms supplier. The Six Day War in 1967 changed the calculation: France imposed an arms embargo and the U.S. stepped into the vacuum. By 1971 Congress had earmarked Israeli aid for the first time and military assistance jumped tenfold. The 1973 Yom Kippur War produced the first massive spike — an emergency $2.6B airlift.</p>
+    <p>Camp David in 1979 institutionalized the commitment. Aid became all-grant in 1985 — no repayment ever required. The 2016 MOU locked $3.8B per year through 2028, the largest military aid package the U.S. has ever given any country. Then October 7, 2023 produced the eruption at the summit — over $17B in a single fiscal year, more than any previous decade combined.</p>
   </div>
 </div>
 
@@ -133,7 +185,7 @@ body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',s
   <div class="fl">
     USNOW.APP — Civic Data Platform<br>
     Data: public record · Structure &amp; design: ATJon + AI · Free reuse with attribution<br>
-    Sources: CFR · Quincy Institute · Costs of War (Brown Univ.) · CRS · Congressional Appropriations
+    Sources: CRS · CFR · Quincy Institute · Costs of War (Brown Univ.) · MERIP · Congressional Appropriations
   </div>
   <div class="footer-links">
     <a href="/">Home</a>
@@ -144,171 +196,394 @@ body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',s
 </footer>
 
 <script>
-// Annual military aid data (billions USD, nominal)
+// ── FULL DATA 1948–2025 ───────────────────────────────────────────────────
 const data = [
-  {year:1970,amt:0.03,note:"Early assistance — pre-major commitment"},
-  {year:1971,amt:0.05,note:""},
-  {year:1972,amt:0.30,note:"Buildup begins"},
-  {year:1973,amt:2.60,note:"Yom Kippur War — emergency airlift and resupply"},
-  {year:1974,amt:2.50,note:"Post-war continuation"},
-  {year:1975,amt:0.70,note:""},
-  {year:1976,amt:1.50,note:"Sinai Interim Agreement support"},
-  {year:1977,amt:1.00,note:""},
-  {year:1978,amt:1.00,note:"Camp David negotiations begin"},
-  {year:1979,amt:1.30,note:"Camp David Accords — aid institutionalized"},
-  {year:1980,amt:1.50,note:""},
-  {year:1981,amt:1.40,note:""},
-  {year:1982,amt:1.40,note:"Lebanon War — U.S. aid continues"},
-  {year:1983,amt:1.70,note:""},
-  {year:1984,amt:1.40,note:""},
-  {year:1985,amt:1.40,note:"Aid converted to all-grant (no repayment required)"},
-  {year:1986,amt:1.80,note:""},
-  {year:1987,amt:1.80,note:"First Intifada begins"},
-  {year:1988,amt:1.80,note:""},
-  {year:1989,amt:1.80,note:""},
-  {year:1990,amt:1.80,note:""},
-  {year:1991,amt:1.80,note:"Gulf War — Israel attacked by Iraqi Scuds"},
-  {year:1992,amt:1.80,note:"Arrow missile defense program begins"},
-  {year:1993,amt:1.80,note:"Oslo Accords"},
-  {year:1994,amt:1.80,note:""},
-  {year:1995,amt:1.80,note:""},
-  {year:1996,amt:1.80,note:""},
-  {year:1997,amt:1.80,note:""},
-  {year:1998,amt:1.80,note:"Wye River — additional aid agreed"},
-  {year:1999,amt:1.86,note:""},
-  {year:2000,amt:3.12,note:"Camp David Summit fails. Second Intifada begins"},
-  {year:2001,amt:2.88,note:"Post-9/11 — security cooperation deepens"},
-  {year:2002,amt:2.76,note:""},
-  {year:2003,amt:3.09,note:"Iraq War — regional alliance solidified"},
-  {year:2004,amt:2.69,note:""},
-  {year:2005,amt:2.61,note:"Gaza disengagement"},
-  {year:2006,amt:2.53,note:"Lebanon War (Hezbollah)"},
-  {year:2007,amt:2.47,note:"New 10-year MOU signed — $3B/yr baseline"},
-  {year:2008,amt:2.38,note:""},
-  {year:2009,amt:2.55,note:"Gaza War (Cast Lead)"},
-  {year:2010,amt:2.78,note:"Iron Dome co-development funding added"},
-  {year:2011,amt:3.00,note:"Arab Spring — strategic value elevated"},
-  {year:2012,amt:3.10,note:"Gaza escalation (Pillar of Defense)"},
-  {year:2013,amt:3.10,note:""},
-  {year:2014,amt:3.10,note:"Gaza War (Protective Edge) — emergency replenishment"},
-  {year:2015,amt:3.10,note:""},
-  {year:2016,amt:3.10,note:"New MOU: $3.8B/yr locked in through 2028"},
-  {year:2017,amt:3.80,note:"New baseline begins"},
-  {year:2018,amt:3.80,note:""},
-  {year:2019,amt:3.80,note:""},
-  {year:2020,amt:3.80,note:"Abraham Accords"},
-  {year:2021,amt:3.80,note:"Gaza escalation (Guardian of the Walls)"},
-  {year:2022,amt:3.80,note:""},
-  {year:2023,amt:3.80,note:"Oct. 7 attack — emergency packages follow"},
-  {year:2024,amt:12.50,note:"Post-Oct.7 emergency: $14.1B approved on top of $3.8B baseline"},
-  {year:2025,amt:3.80,note:"Baseline continues. Additional packages under discussion"},
+  // ERA 1: Economic only — the flat plain
+  {year:1948,amt:0.10,mil:0,   era:1,note:"Economic aid only. U.S. first country to recognize Israel. Arms embargo maintained."},
+  {year:1949,amt:0.10,mil:0,   era:1,note:"Economic development and food aid. No military assistance."},
+  {year:1950,amt:0.00,mil:0,   era:1,note:"No aid recorded."},
+  {year:1951,amt:0.04,mil:0,   era:1,note:"Economic grants only."},
+  {year:1952,amt:0.09,mil:0,   era:1,note:"Economic aid. Israel dependent on private Jewish donations and German reparations."},
+  {year:1953,amt:0.07,mil:0,   era:1,note:"Eisenhower briefly suspends aid over Jordan River dispute — restores it within months."},
+  {year:1954,amt:0.07,mil:0,   era:1,note:""},
+  {year:1955,amt:0.05,mil:0,   era:1,note:"France becomes Israel's primary arms supplier."},
+  {year:1956,amt:0.05,mil:0,   era:1,note:"Suez Crisis. U.S. forces Israel to withdraw from Sinai. No military aid."},
+  {year:1957,amt:0.04,mil:0,   era:1,note:""},
+  {year:1958,amt:0.09,mil:0,   era:1,note:""},
+  {year:1959,amt:0.05,mil:0.0004,era:1,note:"First military loan: $400K. Tiny."},
+  {year:1960,amt:0.06,mil:0.0005,era:1,note:""},
+  // ERA 2: Kennedy opens the door
+  {year:1961,amt:0.08,mil:0.013,era:2,note:"Kennedy authorizes first direct arms sale: Hawk anti-aircraft missiles. Coins 'special relationship.'"},
+  {year:1962,amt:0.09,mil:0.013,era:2,note:"First formal military aid loans begin."},
+  {year:1963,amt:0.09,mil:0.013,era:2,note:""},
+  {year:1964,amt:0.04,mil:0,   era:2,note:""},
+  {year:1965,amt:0.07,mil:0.013,era:2,note:""},
+  // ERA 3: Six Day War — U.S. replaces France
+  {year:1966,amt:0.13,mil:0.09, era:3,note:"Military loans jump: $90M. Congress increases arms transfers."},
+  {year:1967,amt:0.02,mil:0.007,era:3,note:"Six Day War. France imposes arms embargo. U.S. agrees to sell Phantom jets."},
+  {year:1968,amt:0.11,mil:0.025,era:3,note:"Congress increases military aid 450%. U.S. formally replaces France as primary arms supplier."},
+  {year:1969,amt:0.16,mil:0.085,era:3,note:"$85M in military loans. War of Attrition ongoing along Suez Canal."},
+  {year:1970,amt:0.09,mil:0.030,era:3,note:"Jordan's Black September crisis. U.S. sees Israel as regional counterweight to Soviet influence."},
+  // ERA 4: Yom Kippur — the first spike
+  {year:1971,amt:0.63,mil:0.545,era:4,note:"Congress earmarks Israeli aid for first time. Military aid explodes: $545M. Tenfold jump in one year."},
+  {year:1972,amt:0.43,mil:0.300,era:4,note:"$300M in military loans. Pre-war buildup."},
+  {year:1973,amt:2.60,mil:0.308,era:4,note:"YOM KIPPUR WAR. Operation Nickel Grass: emergency airlift of 22,000 tons of weapons. $2.2B emergency package."},
+  {year:1974,amt:2.62,mil:1.500,era:4,note:"Post-war: first military GRANT aid (no repayment). $1.5B in grants. Congress adds $2B emergency package."},
+  {year:1975,amt:0.78,mil:0.200,era:4,note:"Sinai II Accord. U.S. increases aid as part of deal. Israel begins depending on U.S. for budget support."},
+  // ERA 5: Camp David — institutionalized
+  {year:1976,amt:1.80,mil:1.000,era:5,note:"Israel becomes largest annual recipient of U.S. foreign aid — a position it has held ever since."},
+  {year:1977,amt:1.80,mil:1.000,era:5,note:"Begin elected. Carter administration pushes for peace talks."},
+  {year:1978,amt:1.90,mil:1.000,era:5,note:"Camp David Accords negotiated. U.S. promises massive aid increases to both Israel and Egypt."},
+  {year:1979,amt:4.00,mil:2.200,era:5,note:"CAMP DAVID PEACE TREATY. Carter quadruples military aid to $4B. U.S. builds Israel new air bases worth $1.1B."},
+  {year:1980,amt:1.80,mil:1.000,era:5,note:"Reagan takes office. 'Special relationship' elevated to strategic partnership."},
+  {year:1981,amt:1.40,mil:0.900,era:5,note:"All U.S. economic assistance converted to grants. Israel bombs Iraqi nuclear reactor using U.S. F-16s."},
+  {year:1982,amt:1.40,mil:0.900,era:5,note:"Israel invades Lebanon. Secretary of State finds Israel 'may have violated' U.S. weapons restrictions. Aid increases anyway."},
+  {year:1983,amt:1.70,mil:1.000,era:5,note:"Reagan renews strategic cooperation agreement."},
+  {year:1984,amt:1.40,mil:0.900,era:5,note:""},
+  // ERA 6: All-grant era
+  {year:1985,amt:1.80,mil:1.400,era:6,note:"ALL MILITARY AID CONVERTED TO GRANTS. No repayment ever required from this point forward. $16.4B in prior loans quietly forgiven."},
+  {year:1986,amt:1.80,mil:1.800,era:6,note:"Israel granted status of major non-NATO ally."},
+  {year:1987,amt:1.80,mil:1.800,era:6,note:"First Intifada begins. U.S. aid continues uninterrupted."},
+  {year:1988,amt:1.80,mil:1.800,era:6,note:""},
+  {year:1989,amt:1.80,mil:1.800,era:6,note:""},
+  {year:1990,amt:1.80,mil:1.800,era:6,note:"Gulf War buildup."},
+  {year:1991,amt:1.80,mil:1.800,era:6,note:"Gulf War. Iraq fires Scud missiles at Israel. U.S. sends Patriot batteries. Aid continues."},
+  {year:1992,amt:1.80,mil:1.800,era:6,note:"Arrow missile defense co-development begins. $2B in additional loan guarantees."},
+  {year:1993,amt:1.80,mil:1.800,era:6,note:"Oslo Accords signed. Aid continues regardless of peace process status."},
+  {year:1994,amt:1.80,mil:1.800,era:6,note:""},
+  {year:1995,amt:1.80,mil:1.800,era:6,note:""},
+  {year:1996,amt:1.80,mil:1.800,era:6,note:"Netanyahu elected. Oslo process stalls."},
+  {year:1997,amt:1.80,mil:1.800,era:6,note:""},
+  {year:1998,amt:1.86,mil:1.800,era:6,note:"Wye River Memorandum. Additional aid promised."},
+  {year:1999,amt:1.86,mil:1.800,era:6,note:"New 10-year MOU: $2.67B/yr military baseline locked in."},
+  // ERA 7: Second Intifada through Iron Dome
+  {year:2000,amt:3.12,mil:1.980,era:7,note:"Camp David Summit fails. Second Intifada begins. Aid jumps significantly."},
+  {year:2001,amt:2.88,mil:1.976,era:7,note:"9/11. Security cooperation deepens. Extra loan guarantees."},
+  {year:2002,amt:2.76,mil:2.040,era:7,note:"Operation Defensive Shield. West Bank reoccupation."},
+  {year:2003,amt:3.09,mil:3.086,era:7,note:"Iraq War. Regional alliance solidified. Extra $1B military grant added."},
+  {year:2004,amt:2.69,mil:2.147,era:7,note:""},
+  {year:2005,amt:2.61,mil:2.280,era:7,note:"Gaza disengagement. Additional $500M for relocation costs."},
+  {year:2006,amt:2.53,mil:2.257,era:7,note:"Lebanon War vs. Hezbollah. 34-day conflict. Emergency resupply."},
+  {year:2007,amt:2.47,mil:2.340,era:7,note:"New 10-year MOU: $3B/yr military baseline. Largest to date at the time."},
+  {year:2008,amt:2.38,mil:2.380,era:7,note:""},
+  {year:2009,amt:2.55,mil:2.550,era:7,note:"Gaza War (Cast Lead). Iron Dome co-development funding added."},
+  {year:2010,amt:2.78,mil:2.775,era:7,note:"Iron Dome operational. Additional $205M for Iron Dome batteries."},
+  {year:2011,amt:3.00,mil:3.000,era:7,note:"Arab Spring. Israel's strategic value elevated. $3B baseline reached."},
+  {year:2012,amt:3.10,mil:3.100,era:7,note:"Gaza escalation (Pillar of Defense). Emergency Iron Dome replenishment: $70M."},
+  {year:2013,amt:3.10,mil:3.100,era:7,note:""},
+  {year:2014,amt:3.10,mil:3.100,era:7,note:"Gaza War (Protective Edge). Emergency $225M Iron Dome replenishment."},
+  {year:2015,amt:3.10,mil:3.100,era:7,note:""},
+  // ERA 8: MOU plateau
+  {year:2016,amt:3.10,mil:3.100,era:8,note:"NEW MOU SIGNED: $3.8B/yr locked in through 2028. Largest military aid commitment in U.S. history to any country."},
+  {year:2017,amt:3.80,mil:3.800,era:8,note:"New $3.8B baseline begins. Includes $500M/yr for missile defense."},
+  {year:2018,amt:3.80,mil:3.800,era:8,note:"Trump moves embassy to Jerusalem. Aid continues at baseline."},
+  {year:2019,amt:3.80,mil:3.800,era:8,note:""},
+  {year:2020,amt:3.80,mil:3.800,era:8,note:"Abraham Accords. Normalization with UAE, Bahrain, Sudan, Morocco."},
+  {year:2021,amt:3.80,mil:3.800,era:8,note:"Gaza escalation (Guardian of the Walls). Extra $1B Iron Dome replenishment added."},
+  {year:2022,amt:3.80,mil:3.800,era:8,note:""},
+  {year:2023,amt:3.80,mil:3.800,era:8,note:"OCT. 7 HAMAS ATTACK. Emergency packages begin immediately. This year's baseline only — supplementals follow in FY2024."},
+  // ERA 9: The eruption
+  {year:2024,amt:17.90,mil:17.900,era:9,note:"POST-OCT.7 ERUPTION: $3.8B baseline + $14.1B emergency package = $17.9B+ in FY2024. Single largest annual total in history."},
+  {year:2025,amt:3.80,mil:3.800,era:9,note:"$3.8B MOU baseline continues. Additional supplemental packages under active discussion in Congress."},
 ];
 
-function buildChart(){
-  const container = document.getElementById('chart');
-  const W = container.parentElement.clientWidth - 0;
-  const H = Math.min(Math.max(W * 0.65, 340), 580);
-  const margin = {top:30, right:20, bottom:40, left:50};
+// ── ERA DEFINITIONS ───────────────────────────────────────────────────────
+const eras = [
+  {id:1, label:"1948–60 · Economic Only",        color:"#1a2a1a", stroke:"#1db954", textColor:"#1db954"},
+  {id:2, label:"1961–65 · Kennedy Opens Door",   color:"#1a1a2a", stroke:"#3b82f6", textColor:"#3b82f6"},
+  {id:3, label:"1967–70 · Six Day War / France Exit", color:"#1a1a2a", stroke:"#60a0e0", textColor:"#60a0e0"},
+  {id:4, label:"1971–75 · Yom Kippur Spike",     color:"#1a1200", stroke:"#f0a500", textColor:"#f0a500"},
+  {id:5, label:"1976–84 · Camp David Era",        color:"#1a1500", stroke:"#d4920a", textColor:"#d4920a"},
+  {id:6, label:"1985–99 · All-Grant Plateau",     color:"#0f1a20", stroke:"#4a90b8", textColor:"#4a90b8"},
+  {id:7, label:"2000–15 · Intifada → Iron Dome",  color:"#1a1a0a", stroke:"#8ab020", textColor:"#8ab020"},
+  {id:8, label:"2016–23 · $3.8B MOU Locked",     color:"#0a0a1f", stroke:"#3b82f6", textColor:"#3b82f6"},
+  {id:9, label:"2024–25 · Post-Oct.7 Eruption",  color:"#1f0808", stroke:"#e03030", textColor:"#e03030"},
+];
+
+const eraMap = {};
+eras.forEach(e => eraMap[e.id] = e);
+
+// Era legend
+const legendEl = document.getElementById('era-legend');
+eras.forEach(e => {
+  const chip = document.createElement('div');
+  chip.className = 'era-chip';
+  chip.style.borderColor = e.stroke;
+  chip.style.color = e.textColor;
+  chip.style.background = e.color;
+  chip.textContent = e.label;
+  legendEl.appendChild(chip);
+});
+
+const tip = document.getElementById('tip');
+
+function showTip(event, d){
+  const e = event.touches ? event.touches[0] : event;
+  const era = eraMap[d.era];
+  document.getElementById('tip-year').textContent = d.year;
+  document.getElementById('tip-year').style.color = era.stroke;
+  document.getElementById('tip-amt').textContent = '$' + d.amt.toFixed(2) + 'B total · $' + d.mil.toFixed(2) + 'B military';
+  document.getElementById('tip-amt').style.color = era.stroke;
+  document.getElementById('tip-era').textContent = era.label;
+  document.getElementById('tip-era').style.color = era.stroke;
+  document.getElementById('tip-note').textContent = d.note || '';
+  tip.style.borderLeftColor = era.stroke;
+  tip.style.opacity = '1';
+  tip.style.left = Math.min(e.clientX+14, window.innerWidth-270)+'px';
+  tip.style.top = Math.max(e.clientY-80, 60)+'px';
+}
+function hideTip(){ tip.style.opacity='0'; }
+
+// ── MOUNTAIN CHART ────────────────────────────────────────────────────────
+function buildMountain(){
+  const wrap = document.getElementById('mountain-svg').parentElement;
+  const W = wrap.clientWidth - 80;
+  const H = Math.min(Math.max(W * 0.45, 220), 480);
+  const margin = {top:40, right:30, bottom:48, left:52};
   const iW = W - margin.left - margin.right;
   const iH = H - margin.top - margin.bottom;
 
-  d3.select('#chart').selectAll('*').remove();
-  const svg = d3.select('#chart').attr('width',W).attr('height',H);
+  const svg = d3.select('#mountain-svg').attr('width',W).attr('height',H);
+  svg.selectAll('*').remove();
   const g = svg.append('g').attr('transform',`translate(${margin.left},${margin.top})`);
 
-  const x = d3.scaleBand().domain(data.map(d=>d.year)).range([0,iW]).padding(0.08);
-  const y = d3.scaleLinear().domain([0, d3.max(data,d=>d.amt)*1.1]).range([iH,0]);
+  const x = d3.scaleLinear().domain([1948,2025]).range([0,iW]);
+  const y = d3.scaleLinear().domain([0, 19]).range([iH, 0]);
+
+  // Clip path
+  svg.append('defs').append('clipPath').attr('id','mountain-clip')
+    .append('rect').attr('width',iW).attr('height',iH);
+
+  // Era background bands
+  eras.forEach(era => {
+    const eraData = data.filter(d=>d.era===era.id);
+    if(!eraData.length) return;
+    const x1 = x(eraData[0].year - 0.5);
+    const x2 = x(eraData[eraData.length-1].year + 0.5);
+    g.append('rect')
+      .attr('x',x1).attr('y',0)
+      .attr('width',x2-x1).attr('height',iH)
+      .attr('fill',era.color).attr('opacity',0.9);
+  });
 
   // Gridlines
-  g.append('g').attr('class','grid')
-    .call(d3.axisLeft(y).tickSize(-iW).tickFormat('').ticks(5))
-    .call(g=>g.select('.domain').remove())
-    .call(g=>g.selectAll('line').attr('stroke','#0f0f1f').attr('stroke-dasharray','3,3'));
+  g.append('g').call(
+    d3.axisLeft(y).tickSize(-iW).tickFormat('').ticks(6)
+  ).call(g=>g.select('.domain').remove())
+   .call(g=>g.selectAll('line').attr('stroke','#0d0d1a').attr('stroke-dasharray','2,4'));
 
-  // MOU baseline line
+  // Area generator
+  const area = d3.area()
+    .x(d=>x(d.year))
+    .y0(iH)
+    .y1(d=>y(d.amt))
+    .curve(d3.curveCatmullRom.alpha(0.5));
+
+  // Line generator
+  const line = d3.line()
+    .x(d=>x(d.year))
+    .y(d=>y(d.amt))
+    .curve(d3.curveCatmullRom.alpha(0.5));
+
+  // Draw filled area per era with era color
+  eras.forEach(era => {
+    const eraData = data.filter(d=>d.era===era.id);
+    if(eraData.length < 2) return;
+
+    // Pad with zero endpoints for clean fill
+    const padded = [
+      {...eraData[0], amt:0},
+      ...eraData,
+      {...eraData[eraData.length-1], amt:0}
+    ];
+
+    g.append('path')
+      .datum(padded)
+      .attr('d', area)
+      .attr('fill', era.stroke)
+      .attr('fill-opacity', 0.18)
+      .attr('clip-path','url(#mountain-clip)');
+  });
+
+  // Main mountain outline — full data
+  g.append('path')
+    .datum(data)
+    .attr('d', line)
+    .attr('fill','none')
+    .attr('stroke','url(#mountain-gradient)')
+    .attr('stroke-width', 2)
+    .attr('clip-path','url(#mountain-clip)');
+
+  // Gradient for line
+  const grad = svg.select('defs').append('linearGradient')
+    .attr('id','mountain-gradient')
+    .attr('x1','0%').attr('x2','100%');
+  grad.append('stop').attr('offset','0%').attr('stop-color','#1db954');
+  grad.append('stop').attr('offset','40%').attr('stop-color','#3b82f6');
+  grad.append('stop').attr('offset','70%').attr('stop-color','#f0a500');
+  grad.append('stop').attr('offset','90%').attr('stop-color','#3b82f6');
+  grad.append('stop').attr('offset','100%').attr('stop-color','#e03030');
+
+  // Era label text on mountain
+  const eraLabels = [
+    {year:1954, label:'ECONOMIC ONLY', y:iH-12},
+    {year:1973, label:'YOM KIPPUR', y:null},
+    {year:1979, label:'CAMP DAVID', y:null},
+    {year:1993, label:'OSLO / PLATEAU', y:iH-12},
+    {year:2007, label:'IRON DOME ERA', y:null},
+    {year:2019, label:'MOU $3.8B', y:iH-12},
+    {year:2024, label:'OCT.7', y:null},
+  ];
+
+  eraLabels.forEach(el => {
+    const d = data.find(d=>d.year===el.year);
+    if(!d) return;
+    const px = x(el.year);
+    const py = el.y !== null ? el.y : y(d.amt) - 14;
+    g.append('text')
+      .attr('x',px).attr('y',py)
+      .attr('text-anchor','middle')
+      .attr('fill','#ffffff').attr('opacity',0.35)
+      .attr('font-size',8).attr('font-family','Barlow Condensed')
+      .attr('letter-spacing',2)
+      .text(el.label);
+  });
+
+  // Peak annotation — 2024
+  const peak2024x = x(2024);
+  const peak2024y = y(17.9);
   g.append('line')
-    .attr('x1',0).attr('x2',iW)
-    .attr('y1',y(3.8)).attr('y2',y(3.8))
-    .attr('stroke','#3b82f6').attr('stroke-width',1)
-    .attr('stroke-dasharray','4,4').attr('opacity',0.5);
+    .attr('x1',peak2024x).attr('x2',peak2024x)
+    .attr('y1',peak2024y-6).attr('y2',peak2024y-28)
+    .attr('stroke','#e03030').attr('stroke-width',1.5);
   g.append('text')
-    .attr('x',4).attr('y',y(3.8)-5)
-    .attr('fill','#3b82f6').attr('font-size',9)
-    .attr('font-family','Barlow Condensed').attr('letter-spacing',2)
-    .text('$3.8B MOU BASELINE (2016)');
+    .attr('x',peak2024x).attr('y',peak2024y-32)
+    .attr('text-anchor','middle')
+    .attr('fill','#e03030').attr('font-size',11)
+    .attr('font-family','Bebas Neue').attr('letter-spacing',2)
+    .text('$17.9B — POST-OCT.7');
 
-  // Bars
-  const tt = document.getElementById('bar-tooltip');
+  // 1973 annotation
+  const yom73x = x(1973);
+  const yom73y = y(2.6);
+  g.append('text')
+    .attr('x',yom73x+4).attr('y',yom73y-8)
+    .attr('fill','#f0a500').attr('font-size',9)
+    .attr('font-family','Bebas Neue').attr('letter-spacing',1)
+    .text('$2.6B · 1973');
 
-  g.selectAll('.bar')
-    .data(data).enter().append('rect')
-    .attr('class','bar')
-    .attr('x', d=>x(d.year))
-    .attr('width', x.bandwidth())
-    .attr('y', iH)
-    .attr('height', 0)
-    .attr('fill', d => d.year >= 2024 ? '#e03030' : d.year >= 2016 ? '#3b82f6' : '#2060a0')
-    .attr('fill-opacity', d => d.year >= 2024 ? 1 : 0.7)
-    .attr('rx', 1)
-    .transition().duration(600).delay((d,i)=>i*12)
-    .attr('y', d=>y(d.amt))
-    .attr('height', d=>iH - y(d.amt));
-
-  // Invisible hit areas for tooltip
-  g.selectAll('.bar-hit')
-    .data(data).enter().append('rect')
-    .attr('x', d=>x(d.year))
-    .attr('width', x.bandwidth())
-    .attr('y', 0).attr('height', iH)
+  // Hover overlay
+  g.append('rect')
+    .attr('width',iW).attr('height',iH)
     .attr('fill','transparent')
-    .style('cursor','pointer')
-    .on('mousemove touchmove', function(event, d){
-      const e = event.touches ? event.touches[0] : event;
-      document.getElementById('bt-year').textContent = d.year;
-      document.getElementById('bt-amt').textContent = '$' + d.amt.toFixed(2) + 'B';
-      document.getElementById('bt-note').textContent = d.note || 'Annual military assistance';
-      const col = d.year >= 2024 ? '#e03030' : '#3b82f6';
-      tt.style.borderLeftColor = col;
-      document.getElementById('bt-amt').style.color = col;
-      tt.style.opacity='1';
-      tt.style.left = Math.min(e.clientX+14, window.innerWidth-220)+'px';
-      tt.style.top = Math.max(e.clientY-60,60)+'px';
+    .style('cursor','crosshair')
+    .on('mousemove touchmove', function(event){
+      const e = event.touches?event.touches[0]:event;
+      const [mx] = d3.pointer(event, this);
+      const yr = Math.round(x.invert(mx));
+      const d = data.find(d=>d.year===yr);
+      if(d) showTip(event, d);
     })
-    .on('mouseleave', ()=>tt.style.opacity='0')
-    .on('touchend',()=>setTimeout(()=>tt.style.opacity='0',2000));
+    .on('mouseleave', hideTip)
+    .on('touchend', ()=>setTimeout(hideTip,2000));
 
-  // X axis — every 5 years
-  const xAxis = d3.axisBottom(x)
-    .tickValues(data.map(d=>d.year).filter(y=>y%5===0))
-    .tickSize(4);
-  g.append('g').attr('transform',`translate(0,${iH})`).call(xAxis)
+  // X axis
+  g.append('g').attr('transform',`translate(0,${iH})`)
+    .call(d3.axisBottom(x).tickFormat(d3.format('d')).tickValues(d3.range(1950,2026,5)).tickSize(4))
     .call(g=>g.select('.domain').attr('stroke','#1e1e2a'))
-    .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',10).attr('font-family','Space Mono'))
+    .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',9).attr('font-family','Space Mono'))
     .call(g=>g.selectAll('line').attr('stroke','#1e1e2a'));
 
   // Y axis
-  const yAxis = d3.axisLeft(y).ticks(5).tickFormat(d=>'$'+d+'B');
-  g.append('g').call(yAxis)
-    .call(g=>g.select('.domain').remove())
-    .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',9).attr('font-family','Space Mono'))
-    .call(g=>g.selectAll('line').remove());
-
-  // Oct 7 annotation
-  const oct7x = x(2024) + x.bandwidth()/2;
-  g.append('line')
-    .attr('x1',oct7x).attr('x2',oct7x)
-    .attr('y1',y(12.5)-8).attr('y2',y(12.5)-30)
-    .attr('stroke','#e03030').attr('stroke-width',1);
-  g.append('text')
-    .attr('x',oct7x).attr('y',y(12.5)-34)
-    .attr('text-anchor','middle')
-    .attr('fill','#e03030').attr('font-size',9)
-    .attr('font-family','Barlow Condensed').attr('letter-spacing',1)
-    .text('$12.5B — POST-OCT.7 SPIKE');
+  g.append('g').call(
+    d3.axisLeft(y).ticks(6).tickFormat(d=>'$'+d+'B')
+  ).call(g=>g.select('.domain').remove())
+   .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',9).attr('font-family','Space Mono'))
+   .call(g=>g.selectAll('line').remove());
 }
 
-buildChart();
-window.addEventListener('resize', buildChart);
+// ── BAR CHART ─────────────────────────────────────────────────────────────
+function buildBar(){
+  const wrap = document.getElementById('bar-svg').parentElement;
+  const W = wrap.clientWidth;
+  const H = Math.min(Math.max(W * 0.42, 200), 400);
+  const margin = {top:20, right:16, bottom:40, left:52};
+  const iW = W - margin.left - margin.right;
+  const iH = H - margin.top - margin.bottom;
+
+  const svg = d3.select('#bar-svg').attr('width',W).attr('height',H);
+  svg.selectAll('*').remove();
+  const g = svg.append('g').attr('transform',`translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleBand().domain(data.map(d=>d.year)).range([0,iW]).padding(0.12);
+  const y = d3.scaleLinear().domain([0,19]).range([iH,0]);
+
+  // Era backgrounds
+  eras.forEach(era=>{
+    const ed = data.filter(d=>d.era===era.id);
+    if(!ed.length) return;
+    const x1 = x(ed[0].year);
+    const x2 = (x(ed[ed.length-1].year)||0)+x.bandwidth();
+    g.append('rect').attr('x',x1).attr('y',0)
+      .attr('width',x2-x1).attr('height',iH)
+      .attr('fill',era.color).attr('opacity',0.7);
+  });
+
+  // Gridlines
+  g.append('g').call(
+    d3.axisLeft(y).tickSize(-iW).tickFormat('').ticks(5)
+  ).call(g=>g.select('.domain').remove())
+   .call(g=>g.selectAll('line').attr('stroke','#0d0d1a').attr('stroke-dasharray','2,4'));
+
+  // Bars
+  g.selectAll('.bar').data(data).enter().append('rect')
+    .attr('class','bar')
+    .attr('x',d=>x(d.year)).attr('width',x.bandwidth())
+    .attr('y',iH).attr('height',0)
+    .attr('fill',d=>eraMap[d.era].stroke)
+    .attr('fill-opacity',d=>d.era===9?1:0.7)
+    .attr('rx',1)
+    .transition().duration(600).delay((d,i)=>i*8)
+    .attr('y',d=>y(d.amt)).attr('height',d=>iH-y(d.amt));
+
+  // Hit rects
+  g.selectAll('.hit').data(data).enter().append('rect')
+    .attr('x',d=>x(d.year)).attr('width',x.bandwidth())
+    .attr('y',0).attr('height',iH)
+    .attr('fill','transparent').style('cursor','pointer')
+    .on('mousemove touchmove', showTip)
+    .on('mouseleave', hideTip)
+    .on('touchend',()=>setTimeout(hideTip,2000));
+
+  // X axis — every 5 years
+  g.append('g').attr('transform',`translate(0,${iH})`)
+    .call(d3.axisBottom(x)
+      .tickValues(data.map(d=>d.year).filter(y=>y%5===0))
+      .tickSize(3))
+    .call(g=>g.select('.domain').attr('stroke','#1e1e2a'))
+    .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',9).attr('font-family','Space Mono'))
+    .call(g=>g.selectAll('line').attr('stroke','#1e1e2a'));
+
+  // Y axis
+  g.append('g').call(
+    d3.axisLeft(y).ticks(5).tickFormat(d=>'$'+d+'B')
+  ).call(g=>g.select('.domain').remove())
+   .call(g=>g.selectAll('text').attr('fill','#52526a').attr('font-size',9).attr('font-family','Space Mono'))
+   .call(g=>g.selectAll('line').remove());
+
+  // 2024 label
+  const x2024 = x(2024)+x.bandwidth()/2;
+  g.append('text')
+    .attr('x',x2024).attr('y',y(17.9)-6)
+    .attr('text-anchor','middle')
+    .attr('fill','#e03030').attr('font-size',9)
+    .attr('font-family','Bebas Neue').attr('letter-spacing',1)
+    .text('$17.9B');
+}
+
+function buildAll(){ buildMountain(); buildBar(); }
+buildAll();
+window.addEventListener('resize', buildAll);
 </script>
 </body>
 </html>
