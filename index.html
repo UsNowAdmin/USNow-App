@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USNow — The Data Is the Argument</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* TICKER */
+.ticker-wrap {
+  width: 100%;
+  background: #0a0000;
+  border-bottom: 2px solid var(--red);
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.ticker-label {
+  background: var(--red);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 4px;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ticker-track {
+  display: flex;
+  animation: ticker 50s linear infinite;
+  white-space: nowrap;
+}
+
+.ticker-track span {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  padding: 0 48px;
+  opacity: 0.85;
+}
+
+.ticker-track span::before {
+  content: '◆  ';
+  color: var(--red);
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* MASTHEAD */
+.masthead {
+  width: 100%;
+  padding: 36px 48px 28px;
+  border-bottom: 1px solid var(--border);
+  background: var(--off-black);
+  position: relative;
+}
+
+.masthead::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red) 0%, var(--amber) 40%, transparent 100%);
+}
+
+.logo-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.logo-main {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 110px;
+  line-height: 0.85;
+  letter-spacing: 8px;
+  color: var(--white);
+}
+
+.logo-main .now {
+  color: var(--red);
+  text-shadow: 0 0 50px rgba(224,48,48,0.35);
+  animation: pulse-glow 5s ease-in-out infinite;
+}
+
+.logo-tagline {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { text-shadow: 0 0 30px rgba(224,48,48,0.3); }
+  50% { text-shadow: 0 0 70px rgba(224,48,48,0.55); }
+}
+
+/* MAIN LAYOUT */
+.main-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: calc(100vh - 170px);
+}
+
+/* LEFT RAIL */
+.left-rail {
+  border-right: 1px solid var(--border);
+  background: var(--panel);
+  position: sticky;
+  top: 40px;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.rail-header {
+  padding: 20px 22px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.resource-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 20px;
+  border-bottom: 1px solid var(--subtle);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.resource-item:hover {
+  background: var(--subtle);
+}
+
+.resource-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.resource-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #c8c8dc;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.resource-item:hover .resource-name {
+  color: var(--white);
+}
+
+.resource-desc {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.55;
+  letter-spacing: 0.3px;
+}
+
+.resource-tag {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  background: var(--black);
+}
+
+/* HERO */
+.hero {
+  padding: 64px 60px 56px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-word {
+  position: absolute;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 380px;
+  color: rgba(255,255,255,0.013);
+  letter-spacing: -15px;
+  top: -40px;
+  right: -30px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-kicker {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: fadeUp 0.7s ease both;
+}
+
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+.hero-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 96px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  max-width: 680px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.7s 0.1s ease both;
+}
+
+.hero-headline em {
+  color: var(--amber);
+  font-style: normal;
+}
+
+.hero-body {
+  font-family: 'DM Serif Display', serif;
+  font-size: 23px;
+  color: #72728a;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-bottom: 42px;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+
+.hero-body strong {
+  color: #a8a8c0;
+  font-weight: normal;
+}
+
+.btn-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.7s 0.3s ease both;
+}
+
+.btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  white-space: nowrap;
+}
+
+.btn::after { content: ' →'; }
+
+.btn-red {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+.btn-red:hover {
+  background: #c02020;
+  box-shadow: 0 0 40px rgba(224,48,48,0.25);
+}
+
+.btn-amber {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.btn-amber:hover {
+  background: rgba(240,165,0,0.08);
+}
+
+.btn-outline {
+  border-color: var(--border-bright);
+  color: var(--muted);
+}
+.btn-outline:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* STAT STRIP */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-cell {
+  padding: 26px 32px;
+  border-right: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.stat-cell:last-child { border-right: none; }
+.stat-cell:hover { background: var(--subtle); }
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 58px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* SECTION HEADER */
+.section-header {
+  padding: 24px 60px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  color: var(--white);
+}
+
+.section-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* PREVIEW STRIP - 2 featured graphics */
+.preview-strip {
+  padding: 36px 60px 40px;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.preview-card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.preview-card:hover {
+  border-color: var(--border-bright);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+.preview-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.preview-thumb-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px;
+  letter-spacing: 3px;
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.preview-thumb-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
+  background: linear-gradient(transparent 30%, rgba(0,0,0,0.85));
+}
+
+.preview-thumb-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.preview-thumb-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--white);
+  line-height: 1.0;
+}
+
+.preview-meta {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preview-meta-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #a8a8be;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.preview-meta-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.preview-card:hover .preview-meta-arrow {
+  color: var(--white);
+}
+
+/* SUBMIT SECTION */
+.submit-section {
+  padding: 50px 60px;
+  border-bottom: 1px solid var(--border);
+  background: var(--off-black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.submit-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  letter-spacing: 3px;
+  line-height: 0.9;
+  margin-bottom: 16px;
+}
+
+.submit-headline em {
+  color: var(--green);
+  font-style: normal;
+}
+
+.submit-body {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.form-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+  background: var(--black);
+  border: 1px solid var(--border);
+  color: var(--white);
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  padding: 13px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+.form-input:focus,
+.form-textarea:focus { border-color: var(--green); }
+
+.form-input::placeholder,
+.form-textarea::placeholder { color: #2a2a3a; }
+
+.form-textarea { resize: vertical; min-height: 85px; }
+
+.form-note {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.form-success {
+  display: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: 2px;
+  padding: 14px 16px;
+  border: 1px solid #0d4a22;
+  background: rgba(29,185,84,0.04);
+  margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+  padding: 26px 60px;
+  background: var(--off-black);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #2e2e40;
+  letter-spacing: 1.5px;
+  line-height: 1.9;
+}
+
+.footer-left a { color: #2e2e40; text-decoration: none; }
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #2e2e40;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.footer-link:hover { color: var(--muted); }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.live-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  margin-right: 7px;
+  animation: blink 2.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-label">USNOW</div>
+  <div class="ticker-track">
+    <span>$886B DoD Budget FY2025</span>
+    <span>$70B+ Annual Overseas Base Cost</span>
+    <span>$21.7B Military Aid to Israel Since Oct. 7</span>
+    <span>750 U.S. Bases in 80 Countries</span>
+    <span>Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span>
+    <span>$900B Annual Interest on National Debt</span>
+    <span>243,000 U.S. Troops Stationed Abroad</span>
+    <span>$330B Cumulative U.S. Aid to Israel Since 1948</span>
+    <span>$886B DoD Budget FY2025</span>
+    <span>$70B+ Annual Overseas Base Cost</span>
+    <span>$21.7B Military Aid to Israel Since Oct. 7</span>
+    <span>750 U.S. Bases in 80 Countries</span>
+    <span>Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span>
+    <span>$900B Annual Interest on National Debt</span>
+    <span>243,000 U.S. Troops Stationed Abroad</span>
+    <span>$330B Cumulative U.S. Aid to Israel Since 1948</span>
+  </div>
+</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="logo-eyebrow"><span class="live-dot"></span>Civic Data · Public Record · No Agenda · <span id="live-date"></span></div>
+  <div class="logo-main">US<span class="now">NOW</span></div>
+  <div class="logo-tagline">The data is the argument.</div>
+</header>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- LEFT RAIL -->
+  <aside class="left-rail">
+    <div class="rail-header">Essential Sources</div>
+
+    <a class="resource-item" href="https://www.opensecrets.org" target="_blank">
+      <div class="resource-icon">💰</div>
+      <div>
+        <div class="resource-name">OpenSecrets</div>
+        <div class="resource-desc">Campaign finance & dark money — the definitive tracker</div>
+        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">MONEY</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.followthemoney.org" target="_blank">
+      <div class="resource-icon">🧾</div>
+      <div>
+        <div class="resource-name">FollowTheMoney</div>
+        <div class="resource-desc">State-level campaign finance, all 50 states</div>
+        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">MONEY</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.propublica.org" target="_blank">
+      <div class="resource-icon">📰</div>
+      <div>
+        <div class="resource-name">ProPublica</div>
+        <div class="resource-desc">Investigative journalism in the public interest</div>
+        <div class="resource-tag" style="background:#0f1a10;color:#22c55e;">JOURNALISM</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.trackaipac.com" target="_blank">
+      <div class="resource-icon">🔍</div>
+      <div>
+        <div class="resource-name">TrackAIPAC</div>
+        <div class="resource-desc">Congressional donations from America's most powerful lobby</div>
+        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">LOBBYING</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.govtrack.us" target="_blank">
+      <div class="resource-icon">🏛️</div>
+      <div>
+        <div class="resource-name">GovTrack</div>
+        <div class="resource-desc">Congressional votes, bills, legislative records</div>
+        <div class="resource-tag" style="background:#0f0f2a;color:#3b82f6;">CONGRESS</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://ballotpedia.org" target="_blank">
+      <div class="resource-icon">🗳️</div>
+      <div>
+        <div class="resource-name">Ballotpedia</div>
+        <div class="resource-desc">Candidates, elections, ballot measures nationwide</div>
+        <div class="resource-tag" style="background:#0f0f2a;color:#3b82f6;">ELECTIONS</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.usaspending.gov" target="_blank">
+      <div class="resource-icon">📊</div>
+      <div>
+        <div class="resource-name">USASpending.gov</div>
+        <div class="resource-desc">Every federal dollar — contracts, grants, payments</div>
+        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">BUDGET</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://foreignassistance.gov" target="_blank">
+      <div class="resource-icon">🌍</div>
+      <div>
+        <div class="resource-name">ForeignAssistance.gov</div>
+        <div class="resource-desc">U.S. foreign aid by country, year, and category</div>
+        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">BUDGET</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://quincyinst.org" target="_blank">
+      <div class="resource-icon">🕊️</div>
+      <div>
+        <div class="resource-name">Quincy Institute</div>
+        <div class="resource-desc">Military spending, overseas bases, restraint research</div>
+        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">MILITARY</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://watson.brown.edu/costsofwar" target="_blank">
+      <div class="resource-icon">⚔️</div>
+      <div>
+        <div class="resource-name">Costs of War</div>
+        <div class="resource-desc">Brown University's definitive war spending research</div>
+        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">MILITARY</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.pewresearch.org" target="_blank">
+      <div class="resource-icon">📈</div>
+      <div>
+        <div class="resource-name">Pew Research</div>
+        <div class="resource-desc">Public opinion, demographics, policy attitudes</div>
+        <div class="resource-tag" style="background:#0f1a10;color:#22c55e;">DATA</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.congress.gov" target="_blank">
+      <div class="resource-icon">📜</div>
+      <div>
+        <div class="resource-name">Congress.gov</div>
+        <div class="resource-desc">Primary source — bills, votes, CRS reports</div>
+        <div class="resource-tag" style="background:#0f0f2a;color:#3b82f6;">PRIMARY</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://www.cbo.gov" target="_blank">
+      <div class="resource-icon">🔢</div>
+      <div>
+        <div class="resource-name">CBO</div>
+        <div class="resource-desc">Nonpartisan Congressional Budget Office scoring</div>
+        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">BUDGET</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="https://ratemyrep.app" target="_blank">
+      <div class="resource-icon">⭐</div>
+      <div>
+        <div class="resource-name">RateMyRep</div>
+        <div class="resource-desc">Hold your representatives accountable — our platform</div>
+        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">USNOW</div>
+      </div>
+    </a>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg-word">NOW</div>
+      <div class="hero-kicker">Civic Intelligence Platform</div>
+      <h1 class="hero-headline">
+        THE INFO IS THERE.<br><em>NOW YOU CAN SEE IT.</em>
+      </h1>
+      <p class="hero-body">
+        The information that shapes our lives is not always easy for <strong>US</strong> to understand — until <strong>NOW</strong>. The problem is no longer access to information. It's <strong>making sense of it</strong>. USNow makes it easy to see and easy to understand. From federal budgets and maps of foreign military bases to media bias and the scales of human behavior — now you can see things in ways that make sense.<br><br>
+        <strong>Also: Request your own infographic.</strong> Present your own question or problem and turn it into a visual that makes it clear.
+      </p>
+      <div class="btn-row">
+        <a href="#graphics" class="btn btn-red">What We're Looking At</a>
+        <a href="#submit" class="btn btn-amber">Request a Graphic</a>
+        <a href="https://ratemyrep.app" target="_blank" class="btn btn-outline">Rate Your Rep</a>
+      </div>
+    </section>
+
+    <!-- STAT STRIP -->
+    <div class="stat-strip">
+      <div class="stat-cell">
+        <div class="stat-num" style="color:var(--red);">$886B</div>
+        <div class="stat-label">DoD Budget<br>FY2025</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" style="color:var(--amber);">$2T+</div>
+        <div class="stat-label">Overseas Bases<br>Since 2001</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" style="color:var(--green);">1.2%</div>
+        <div class="stat-label">Actual Foreign<br>Aid Share</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" style="color:var(--blue);">750+</div>
+        <div class="stat-label">U.S. Bases<br>Worldwide</div>
+      </div>
+    </div>
+
+    <!-- FEATURED GRAPHICS -->
+    <div class="section-header" id="graphics">
+      <div class="section-title">What We're Looking At</div>
+      <div class="section-sub">Vol. 1 · Military & Budget</div>
+    </div>
+
+    <div class="preview-strip" style="grid-template-columns:1fr 1fr 1fr;">
+
+      <a href="/graphics/hidden-costs" class="preview-card">
+        <div class="preview-thumb" style="background:linear-gradient(135deg,#100d00,#1a1400);">
+          <div class="preview-thumb-num" style="color:var(--amber);">$2.3T</div>
+          <div class="preview-thumb-label">
+            <div class="preview-thumb-tag" style="color:var(--amber);">True Accounting</div>
+            <div class="preview-thumb-title">What's Hidden Inside the Number</div>
+          </div>
+        </div>
+        <div class="preview-meta">
+          <div class="preview-meta-title">The real cost of defense — what's buried across agencies.</div>
+          <div class="preview-meta-arrow">→</div>
+        </div>
+      </a>
+
+      <a href="/graphics/israel-aid-timeline" class="preview-card">
+        <div class="preview-thumb" style="background:linear-gradient(135deg,#00080d,#001a2a);">
+          <div class="preview-thumb-num" style="color:var(--blue);">$330B</div>
+          <div class="preview-thumb-label">
+            <div class="preview-thumb-tag" style="color:var(--blue);">55-Year Record</div>
+            <div class="preview-thumb-title">The Cost of Commitment</div>
+          </div>
+        </div>
+        <div class="preview-meta">
+          <div class="preview-meta-title">U.S. military aid to Israel — 1970 to 2025.</div>
+          <div class="preview-meta-arrow">→</div>
+        </div>
+      </a>
+
+      <a href="/graphics/750-bases" class="preview-card">
+        <div class="preview-thumb" style="background:linear-gradient(135deg,#00100a,#001a10);">
+          <div class="preview-thumb-num" style="color:var(--green);">750+</div>
+          <div class="preview-thumb-label">
+            <div class="preview-thumb-tag" style="color:var(--green);">Global Footprint</div>
+            <div class="preview-thumb-title">750 Bases · 80 Countries</div>
+          </div>
+        </div>
+        <div class="preview-meta">
+          <div class="preview-meta-title">The largest military empire in human history.</div>
+          <div class="preview-meta-arrow">→</div>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="padding: 20px 60px 36px; border-bottom: 1px solid var(--border); display:flex; gap:14px;">
+      <a href="/graphics" class="btn btn-outline">View All Graphics</a>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="section-header" id="submit">
+      <div class="section-title">Make a Request</div>
+      <div class="section-sub">Crowdsourced · All topics welcome</div>
+    </div>
+
+    <section class="submit-section">
+      <div>
+        <div class="submit-headline">PRESENT YOUR OWN QUESTION.<br><em>WE'LL MAKE IT VISIBLE.</em></div>
+        <p class="submit-body">
+          Request your own infographic. Present your own question or problem and turn it into a visual that makes it clear.<br><br>
+          No request is too local or too large. From spending patterns to voting records, media bias to human behavior — if it can be shown, we'll show it.<br><br>
+          Submit your question below.
+        </p>
+      </div>
+
+      <div>
+        <div class="form-field">
+          <label class="form-label">Your Name (optional)</label>
+          <input class="form-input" type="text" id="fname" placeholder="Anonymous is fine">
+        </div>
+        <div class="form-field">
+          <label class="form-label">Topic or Question *</label>
+          <input class="form-input" type="text" id="ftopic" placeholder="e.g. AIPAC spending by district">
+        </div>
+        <div class="form-field">
+          <label class="form-label">Why It Matters</label>
+          <textarea class="form-textarea" id="fwhy" placeholder="What would this reveal?"></textarea>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Sources You Know Of</label>
+          <input class="form-input" type="text" id="fsources" placeholder="URLs, databases, reports...">
+        </div>
+        <button class="btn btn-outline" onclick="submitRequest()">Submit Request</button>
+        <div class="form-note">Submissions go to a public queue. USNow builds what matters, not everything.</div>
+        <div class="form-success" id="form-success">✓ Received. Added to the queue.</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-left">
+        USNOW.APP — Civic Data Platform<br>
+        A project of <a href="https://ratemyrep.app">RateMyRep</a> · Built by <a href="https://atjon.substack.com">Jon Tatun</a><br>
+        Public records. Free reuse with attribution.
+      </div>
+      <div class="footer-links">
+        <a href="https://ratemyrep.app" target="_blank" class="footer-link">RateMyRep</a>
+        <a href="https://atjon.substack.com" target="_blank" class="footer-link">Substack</a>
+        <a href="mailto:jon@tatunlaw.com" class="footer-link">Contact</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  const d = new Date();
+  document.getElementById('live-date').textContent =
+    d.toLocaleDateString('en-US',{weekday:'short',year:'numeric',month:'long',day:'numeric'}).toUpperCase();
+
+  function submitRequest() {
+    const topic = document.getElementById('ftopic').value.trim();
+    if (!topic) {
+      document.getElementById('ftopic').style.borderColor = '#e03030';
+      document.getElementById('ftopic').focus();
+      return;
+    }
+    const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
+    const data = {
+      name: document.getElementById('fname').value,
+      topic,
+      why: document.getElementById('fwhy').value,
+      sources: document.getElementById('fsources').value,
+      submitted: new Date().toISOString()
+    };
+    if (SHEET_ENDPOINT !== 'YOUR_SHEET_ENDPOINT') {
+      fetch(SHEET_ENDPOINT, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
+    }
+    document.getElementById('form-success').style.display = 'block';
+    ['fname','ftopic','fwhy','fsources'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('ftopic').style.borderColor = '';
+  }
+</script>
+</body>
+</html>
