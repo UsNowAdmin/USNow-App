@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's Hidden Inside the Number — USNow</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--black:#070709;--off-black:#0d0d12;--border:#1e1e2a;--red:#e03030;--amber:#f0a500;--green:#1db954;--blue:#3b82f6;--purple:#a855f7;--white:#f2f2f2;--muted:#52526a;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Barlow Condensed',sans-serif;min-height:100vh;}
+.site-nav{width:100%;background:var(--off-black);border-bottom:2px solid var(--red);padding:0 32px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:500;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:4px;color:var(--white);text-decoration:none;}
+.nav-logo span{color:var(--red);}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--amber);}
+@media(max-width:600px){.nav-links .hide-mobile{display:none;}}
+.page-header{background:var(--off-black);border-bottom:1px solid var(--border);padding:32px 48px 28px;}
+.breadcrumb{font-size:11px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
+.breadcrumb a{color:var(--amber);text-decoration:none;}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,52px);letter-spacing:3px;line-height:1;margin-bottom:6px;}
+.page-title .amber{color:var(--amber);}
+.page-meta{font-size:12px;color:var(--muted);letter-spacing:2px;}
+.page-meta span{color:var(--amber);}
+@media(max-width:600px){.page-header{padding:20px 16px;}}
+
+/* TOTAL BANNER */
+.total-banner{background:linear-gradient(135deg,#0f0a00,#1a1200);border-bottom:2px solid var(--amber);padding:24px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.tb-label{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:4px;color:var(--muted);}
+.tb-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,64px);color:var(--amber);letter-spacing:4px;text-shadow:0 0 40px rgba(240,165,0,0.4);}
+.tb-vs{font-size:13px;color:var(--muted);letter-spacing:2px;margin-top:4px;}
+@media(max-width:600px){.total-banner{padding:20px 16px;}}
+
+/* GRID */
+.costs-section{padding:40px 48px;}
+.costs-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:700px){.costs-grid{grid-template-columns:1fr;}.costs-section{padding:24px 16px;}}
+
+.cost-card{background:var(--off-black);border:1px solid var(--border);padding:24px 26px;position:relative;overflow:hidden;transition:border-color 0.2s;}
+.cost-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;}
+.cost-card.amber::before{background:var(--amber);}
+.cost-card.green::before{background:var(--green);}
+.cost-card.red::before{background:var(--red);}
+.cost-card.blue::before{background:var(--blue);}
+.cost-card.purple::before{background:var(--purple);}
+.cost-card.white::before{background:#555;}
+.cost-card:hover{border-color:#2e2e3e;}
+
+.card-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.card-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,52px);letter-spacing:3px;line-height:1;margin-bottom:6px;}
+.card-label{font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:12px;}
+.card-detail{font-size:13px;line-height:1.6;color:var(--muted);font-weight:300;}
+.card-detail strong{color:#9090a8;}
+
+/* BOTTOM TOTAL */
+.bottom-total{margin:0 48px 40px;background:linear-gradient(135deg,#0f0c00,#141000);border:1px solid rgba(240,165,0,0.3);padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.bt-left h3{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--white);margin-bottom:6px;}
+.bt-left p{font-size:13px;color:var(--muted);letter-spacing:1px;}
+.bt-right{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,56px);color:var(--amber);letter-spacing:4px;text-align:right;line-height:1;}
+.bt-right small{display:block;font-size:13px;color:var(--muted);letter-spacing:2px;font-family:'Barlow Condensed',sans-serif;margin-top:4px;}
+@media(max-width:600px){.bottom-total{margin:0 16px 32px;}}
+
+.share-bar{display:flex;gap:12px;align-items:center;padding:0 48px 24px;}
+.share-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);}
+.share-btn{font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;text-decoration:none;transition:all 0.2s;font-family:'Barlow Condensed',sans-serif;}
+.share-btn:hover{border-color:var(--amber);color:var(--amber);}
+@media(max-width:600px){.share-bar{padding:0 16px 20px;}}
+
+.context-section{padding:0 48px 40px;}
+.cb{background:var(--off-black);border:1px solid var(--border);border-left:3px solid var(--amber);padding:22px 26px;}
+.cb h3{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:var(--amber);margin-bottom:10px;}
+.cb p{font-size:15px;line-height:1.7;color:#9090a8;font-weight:300;}
+.cb p+p{margin-top:10px;}
+@media(max-width:600px){.context-section{padding:0 16px 32px;}}
+
+.site-footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify-content:space-between;align-items:center;background:var(--off-black);flex-wrap:wrap;gap:14px;}
+.fl{font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:1px;}
+.fl a{color:var(--amber);text-decoration:none;}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+.footer-links a:hover{color:var(--white);}
+@media(max-width:600px){.site-footer{padding:20px 16px;}}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo">US<span>NOW</span></a>
+  <div class="nav-links">
+    <a href="/#graphics" class="active">Graphics</a>
+    <a href="/#submit" class="hide-mobile">Request</a>
+    <a href="https://ratemyrep.app" target="_blank" class="hide-mobile">RateMyRep</a>
+    <a href="https://atjon.substack.com" target="_blank" class="hide-mobile">Substack</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="/">USNow</a> / <a href="/#graphics">Graphics</a> / Hidden Costs</div>
+  <div class="page-title">WHAT'S HIDDEN <span class="amber">INSIDE</span> THE NUMBER</div>
+  <div class="page-meta">The True Cost of Defense · <span>FY2024–2025</span> · The official budget line vs. the full accounting</div>
+</div>
+
+<div class="total-banner">
+  <div>
+    <div class="tb-label">Official DoD Budget Line</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4vw,42px);color:#555;letter-spacing:3px;">$886B</div>
+  </div>
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4vw,42px);color:var(--muted);letter-spacing:4px;">→</div>
+  <div>
+    <div class="tb-label">What Defense Actually Costs</div>
+    <div class="tb-num">$2.3T+</div>
+    <div class="tb-vs">The lights-on price they don't advertise</div>
+  </div>
+</div>
+
+<div class="costs-section">
+  <div class="costs-grid">
+
+    <div class="cost-card amber">
+      <div class="card-tag">Official Budget</div>
+      <div class="card-num" style="color:var(--amber)">$886B</div>
+      <div class="card-label">DoD Budget</div>
+      <div class="card-detail">FY2025 request. Covers Army, Navy, Air Force, Space Force, Marines, Coast Guard. <strong>Salaries, equipment, operations, R&D.</strong> This is the number politicians cite. It is not the full number.</div>
+    </div>
+
+    <div class="cost-card red">
+      <div class="card-tag">Hidden — Dept. of Energy</div>
+      <div class="card-num" style="color:var(--red)">$95B</div>
+      <div class="card-label">Nuclear Forces</div>
+      <div class="card-detail">$94B projected over 2025–2034. <strong>Warheads maintained by the NNSA — not DoD.</strong> Obscured across two departments. The nuclear arsenal doesn't appear in the defense budget.</div>
+    </div>
+
+    <div class="cost-card green">
+      <div class="card-tag">Hidden — Overseas Operations</div>
+      <div class="card-num" style="color:var(--green)">$70B+</div>
+      <div class="card-label">Overseas Base Network</div>
+      <div class="card-detail">750 bases · 80 countries · 221K personnel abroad. <strong>$94B+ when personnel costs are fully included.</strong> $1.8–2.1T cumulative since 2001. Counted separately from base DoD figures.</div>
+    </div>
+
+    <div class="cost-card purple">
+      <div class="card-tag">Hidden — Dept. of Veterans Affairs</div>
+      <div class="card-num" style="color:var(--purple)">$369B</div>
+      <div class="card-label">Veterans Affairs</div>
+      <div class="card-detail">FY2024 VA budget. <strong>The true "end cost" of war</strong> — disability, healthcare, pensions for 19M veterans. Counted entirely separately from defense. The longest tail of every conflict.</div>
+    </div>
+
+    <div class="cost-card amber">
+      <div class="card-tag">Hidden — National Debt</div>
+      <div class="card-num" style="color:var(--amber)">$900B</div>
+      <div class="card-label">Interest on War Debt</div>
+      <div class="card-detail">Post-9/11 wars added $8T+ to the national debt. <strong>Interest payments now exceed total defense spending.</strong> The compound cost of wars already fought — paid every year, forever.</div>
+    </div>
+
+    <div class="cost-card blue">
+      <div class="card-tag">Hidden — State Dept. / Other</div>
+      <div class="card-num" style="color:var(--blue)">$82B</div>
+      <div class="card-label">Foreign Military Aid</div>
+      <div class="card-detail">FMF, IMET, security assistance. <strong>Not in the DoD budget.</strong> Israel: $3.8B baseline + $21.7B since Oct. 7. Ukraine: $60B+ since 2022. Flows through State Department.</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bottom-total">
+  <div class="bt-left">
+    <h3>Full Accounting — What Defense Actually Costs</h3>
+    <p>DoD + Nuclear + VA + Interest on War Debt + Foreign Military Aid</p>
+  </div>
+  <div class="bt-right">
+    $2.3T+
+    <small>vs. $886B official figure</small>
+  </div>
+</div>
+
+<div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn" href="https://twitter.com/intent/tweet?text=The+official+defense+budget+is+%24886B.+The+real+number+is+%242.3T%2B.+usnow.app%2Fgraphics%2Fhidden-costs" target="_blank">X / Twitter</a>
+  <a class="share-btn" href="#">Copy Link</a>
+</div>
+
+<div class="context-section">
+  <div class="cb">
+    <h3>Why the Number Is Always Wrong</h3>
+    <p>The $886B figure that appears in headlines is the Pentagon's discretionary budget request. It does not include the nuclear arsenal (managed by the Department of Energy), veterans' care (Department of Veterans Affairs), the interest accumulating on debt from past wars, or foreign military assistance flowing through the State Department.</p>
+    <p>When you add those numbers — all of which are direct consequences of military policy — the true annual cost of American defense posture exceeds $2.3 trillion. That is roughly 10 cents of every dollar the U.S. economy produces, every year. The gap between the advertised number and the real one is not an accident. It is a design.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="fl">
+    USNOW.APP — Civic Data Platform<br>
+    Data: public record · Structure &amp; design: ATJon + AI · Free reuse with attribution<br>
+    Sources: CBO · OMB · VA Budget FY2024 · Watson Institute Costs of War · Quincy Institute
+  </div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#graphics">Graphics</a>
+    <a href="https://ratemyrep.app" target="_blank">RateMyRep</a>
+    <a href="https://atjon.substack.com" target="_blank">Substack</a>
+  </div>
+</footer>
+</body>
+</html>
