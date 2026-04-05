@@ -47,6 +47,55 @@
   .progress-label {
     color: var(--gold-light);
     font-size: 11px;
+    letter-spacing: 3px;<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
+<title>The Great Easter Quest of 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f8f0d8;
+    --parchment-mid: #f0e4c0;
+    --parchment-dark: #e2d0a0;
+    --ink: #1c1208;
+    --ink-mid: #3a2a10;
+    --ink-light: #6b5030;
+    --red: #7a1515;
+    --gold: #9a7208;
+    --gold-light: #c8960a;
+    --rule: #b09050;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1008;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 16px 50px;
+    font-family: 'Courier Prime', monospace;
+    background-image:
+      radial-gradient(ellipse at 30% 20%, rgba(80,40,5,0.6) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 80%, rgba(50,20,0,0.5) 0%, transparent 50%);
+  }
+
+  /* ── progress bar ── */
+  .progress-wrap {
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .progress-label {
+    color: var(--gold-light);
+    font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
     white-space: nowrap;
@@ -660,11 +709,6 @@
     <div class="stop-collect">COLLECT: [ J ]</div>
   </div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">An egg. A journey of 1000 miles begins with a single step, and a Quest of 20 Stops similarly begins with a single. 'Cold' Cash!</div>
-  </div>
-  
   <div class="challenge-head">Your First Challenge — Warm-Up: IF/THEN Reasoning</div>
   <div class="challenge-body">
     <p>Welcome to The Great Quest.</p>
@@ -683,8 +727,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">It hums all day and never complains — unlike some people in this house when asked to take out the garbage. It keeps things cold without being asked. It does not negotiate. Look inside the 'right' one.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">An egg. A journey of 1000 miles begins with a single step, and a Quest of 20 Stops similarly begins with a single. 'Cold' Cash!</div>
+  </div>
 </div>
 
 <!-- STOP 2 -->
@@ -695,11 +741,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — AWESOME!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Another Egg! This one Might be more like an Oval Fortune Cookie, but it comes with "Moral Support" &amp; "Unconditional Love"</div>
-  </div>
-  
   <div class="challenge-head">Math + Science — The Cold Equations</div>
   <div class="challenge-body">
     <p>The refrigerator is set to 38°F. Water freezes at 32°F.</p>
@@ -717,8 +758,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Now Go colder. Colder than the refrigerator. Colder than the feeling you get when you forget there's a test you should have studied for. Find the place where water goes to become a solid. Look in the tray.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Egg! This one Might be more like an Oval Fortune Cookie, but it comes with "Moral Support" &amp; "Unconditional Love"</div>
+  </div>
 </div>
 
 <!-- STOP 3 -->
@@ -729,11 +772,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Didn't Miss A beat!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Speaking of Cold… This should help with the lingering cold days while Baseball Starts Up!</div>
-  </div>
-  
   <div class="challenge-head">Geometry — The Angle of Your Next Destination</div>
   <div class="challenge-body">
     <p>A triangle has three angles that always add up to 180°.</p>
@@ -754,8 +792,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Somewhere in this house there is a small device that everyone touches and no one agrees on. It controls the temperature of everything. It does not care about your opinions. It just is. Find it.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Speaking of Cold… This should help with the lingering cold days while Baseball Starts Up!</div>
+  </div>
 </div>
 
 <!-- STOP 4 -->
@@ -766,11 +806,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Now that's just Jacob!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Another Bill! Not the kind Mom Pays Online or the Kind Dad Should be Collecting… Your Very Own!</div>
-  </div>
-  
   <div class="challenge-head">Civics — The Three Branches</div>
   <div class="challenge-body">
     <p>The United States government has three branches.</p>
@@ -788,8 +823,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">The next spot spins wet into dry with a lot of hot air — and occasionally eats one sock for reasons that science cannot fully explain. Look inside.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Bill! Not the kind Mom Pays Online or the Kind Dad Should be Collecting… Your Very Own!</div>
+  </div>
 </div>
 
 <!-- STOP 5 -->
@@ -800,11 +837,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Without even trying!?</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">A LATE NIGHT SNACK PERHAPS? Oh what a great start this is… (Remember… The milk is the meal)</div>
-  </div>
-  
   <div class="challenge-head">Geometry — The Pythagorean Theorem</div>
   <div class="challenge-body">
     <p>A baseball diamond is a square. Each side is 90 feet.</p>
@@ -821,8 +853,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Find the ONE that comes BEFORE this one in this 'cleaning' process — the one that uses actual water and soap. Thanks Mom! I know it's a lot of Work! Check on top of it or inside.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">A LATE NIGHT SNACK PERHAPS? Oh what a great start this is… (Remember… The milk is the meal)</div>
+  </div>
 </div>
 
 <!-- STOP 6 -->
@@ -833,11 +867,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Nailed it, kid!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">It Wouldn't be Easter without Some Sweet Colorful Treats… Not Peeps… but these!</div>
-  </div>
-  
   <div class="challenge-head">Logic — The Laundry Syllogism</div>
   <div class="challenge-body">
     <p>IF dirty clothes go in the washer, THEN clean clothes come out.</p>
@@ -858,8 +887,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Something in this kitchen contains more sugar than anyone has officially admitted to. It lives in a box. It has some cartoon or logo on the front. It promised you a good morning and mostly delivered. But Remember, the Milk is the Meal. It's on one of them.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">It Wouldn't be Easter without Some Sweet Colorful Treats… Not Peeps… but these!</div>
+  </div>
 </div>
 
 <!-- STOP 7 -->
@@ -870,11 +901,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — No surprise there!!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">It had to be something that goes well on the outside of box… Bam! $ Add it up!</div>
-  </div>
-  
   <div class="challenge-head">Nutrition Math — Serving Size Reality Check</div>
   <div class="challenge-body">
     <p>Find the nutrition label on this box.</p>
@@ -892,8 +918,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">There is a creature in this house that cleans without being asked, never complains, never sleeps in, and asks for nothing but a charged battery. It is not Lucy. It is not you. Find it and look underneath. Gently.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">It had to be something that goes well on the outside of box… Bam! $ Add it up!</div>
+  </div>
 </div>
 
 <!-- STOP 8 -->
@@ -904,11 +932,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Very impressive!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Flat and Sweet, a sensible amount for some online Fun!</div>
-  </div>
-  
   <div class="challenge-head">Technology Logic — Conditional Programming</div>
   <div class="challenge-body">
     <p>The robot vacuum runs on a simple IF/THEN loop:</p>
@@ -929,8 +952,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Go to the dining room. Get on the floor. Look up. Your clue card may be taped underneath something.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Flat and Sweet, a sensible amount for some online Fun!</div>
+  </div>
 </div>
 
 <!-- STOP 9 -->
@@ -941,11 +966,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Sharp as ever!!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Unwrap at your own risk and convenience! Hope there's something cool in there!</div>
-  </div>
-  
   <div class="challenge-head">Math — Area and Perimeter</div>
   <div class="challenge-body">
     <p>The dining room table is approximately 6 feet long and 3 feet wide.</p>
@@ -964,8 +984,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Not the big one. The other one. It's seen more asses than a donkey convention. Your next clue is under there somewhere wondering when you'd show up.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Unwrap at your own risk and convenience! Hope there's something cool in there!</div>
+  </div>
 </div>
 
 <!-- STOP 10 -->
@@ -976,11 +998,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Made it look easy!?</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Another Egg! Maybe some Jelly Beans?</div>
-  </div>
-  
   <div class="challenge-head">Logic — The Knight and the Knave</div>
   <div class="challenge-body">
     <p>On an island, two types of people exist:</p>
@@ -1001,8 +1018,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">There is a room in this house that cleans itself approximately never — at least not by any knave or teenager currently residing here. (Thanks Again Mom!!) In that room sits a throne. Behind that throne's lid sits your next clue. It has been waiting patiently. Unlike us.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Egg! Maybe some Jelly Beans?</div>
+  </div>
 </div>
 
 <!-- STOP 11 -->
@@ -1013,11 +1032,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — RIGHT ON BRO!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Doubling up on a few prizes… 100% increase… add it to the other — you can open them together? (maybe too late?)</div>
-  </div>
-  
   <div class="challenge-head">Health + Math — The Brushing Problem</div>
   <div class="challenge-body">
     <p>Dentists recommend 2 minutes of brushing, twice a day.</p>
@@ -1037,8 +1051,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">In the cabinet under the bathroom sink where we can brush our teeth and wash our faces. Your clue card is in there somewhere. Be gentle — the pipes under here can move easily, and shouldn't.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Doubling up on a few prizes… 100% increase… add it to the other — you can open them together? (maybe too late?)</div>
+  </div>
 </div>
 
 <!-- STOP 12 -->
@@ -1049,11 +1065,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — That's showing some brainpower!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">A heavy Egg… it's better than a rotten egg.</div>
-  </div>
-  
   <div class="challenge-head">Economics — The Lucy Problem</div>
   <div class="challenge-body">
     <p>Lucy eats 2.5 cups of food per day.</p>
@@ -1070,8 +1081,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Find your textbook — the one probably still performing structural duties for your monitor. Carefully remove it. Your clue card is inside (one of them!?). Do not let the monitor fall. Maybe find something else to support it, so your books can support your schoolwork?</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">A heavy Egg… it's better than a rotten egg.</div>
+  </div>
 </div>
 
 <!-- STOP 13 -->
@@ -1082,11 +1095,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Proud of you!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Bam! $ If we paid you per pages you read… we'd be about even here…? These things are actually pretty cool… if you spend some time with them. Knowledge is power.</div>
-  </div>
-  
   <div class="challenge-head">Social Studies — The Amendment Round</div>
   <div class="challenge-body">
     <p>The U.S. Constitution currently has 27 amendments. The first 10 are called the Bill of Rights.</p>
@@ -1103,8 +1111,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Every journey in this house begins and ends at the same place. One step out. It is at your feet every single time you leave or arrive. It has probably said "welcome" more times than anyone in this family. Lift it.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Bam! $ If we paid you per pages you read… we'd be about even here…? These things are actually pretty cool… if you spend some time with them. Knowledge is power.</div>
+  </div>
 </div>
 
 <!-- STOP 14 -->
@@ -1115,11 +1125,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Just like that!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">2 in a row is like doubling your prize in one stop… 100% increase… add it to the other. Also: register to vote when you can!</div>
-  </div>
-  
   <div class="challenge-head">Civics — Local Government</div>
   <div class="challenge-body">
     <p>Suffolk County, New York has a County Executive form of government. Your town also has locally elected representatives.</p>
@@ -1139,8 +1144,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Somewhere in this house is a piece of patient leather, always ready for another season and a good game! It doesn't care if you win or lose, it's still excellent, and it'll do the best it can for you. Look inside the pocket.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">2 in a row is like doubling your prize in one stop… 100% increase… add it to the other. Also: register to vote when you can!</div>
+  </div>
 </div>
 
 <!-- STOP 15 -->
@@ -1151,11 +1158,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Didn't even break a Sweat!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">I always say, if a baseball was an egg, how would you field it?</div>
-  </div>
-  
   <div class="challenge-head">Sports + Math</div>
   <div class="challenge-body">
     <p>The FIFA World Cup is held every four years.</p>
@@ -1172,8 +1174,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Go outside. Yes, outside. The place with sky and air and everything. Find the large metal object that breathes fire in summer and sits quietly judging you in the winter. Open it up.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">I always say, if a baseball was an egg, how would you field it?</div>
+  </div>
 </div>
 
 <!-- STOP 16 -->
@@ -1184,11 +1188,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Would you look at that!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Barbeque Eggs Anyone? :) $ (ooops sorry wrong one) Barbeque these!</div>
-  </div>
-  
   <div class="challenge-head">Chemistry Logic — The Fire Triangle</div>
   <div class="challenge-body">
     <p>Fire requires three things to exist: Oxygen. Fuel. Heat.</p>
@@ -1207,8 +1206,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Back inside — you've earned it. Now find the closet where the clean things live. Towels. Sheets. Things that smell like they've been washed recently — a concept you may be vaguely familiar with. Your clue is on the door itself. Not inside. The door.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Barbeque Eggs Anyone? :) $ (ooops sorry wrong one) Barbeque these!</div>
+  </div>
 </div>
 
 <!-- STOP 17 -->
@@ -1219,11 +1220,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — There he goes!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Re$spectable. Tape-able.</div>
-  </div>
-  
   <div class="challenge-head">Algebra — Solve for X</div>
   <div class="challenge-body">
     <p><strong>3x + 7 = 25</strong></p>
@@ -1239,8 +1235,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Take your value of x. Go down. Way down. To the lower level. To the bed that isn't your bed in the room that isn't your room. Find the pillow. Lift it.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Re$spectable. Tape-able.</div>
+  </div>
 </div>
 
 <!-- STOP 18 -->
@@ -1251,11 +1249,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — Knew you could do it!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">These Again? Double up and $hare $ome with Dad!</div>
-  </div>
-  
   <div class="challenge-head">Logic — The Sleeping Argument</div>
   <div class="challenge-body">
     <p>Evaluate the following argument:</p>
@@ -1277,8 +1270,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">Almost there. Find the spot in this house that holds the boxes people are done with — recyclables. Not the plastics. Not the metals. On a bench. Not that Nice Work Out Bench in the corner… the Wood one… in your New Chore Spot… get to know it… and do it well.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">These Again? Double up and $hare $ome with Dad!</div>
+  </div>
 </div>
 
 <!-- STOP 19 -->
@@ -1289,11 +1284,6 @@
   </div>
   <div class="stop-nicework">NICE WORK — That's our kid!</div>
   <div class="rule"></div>
-  <div class="prize-box">
-    <div class="prize-box-head">Prize at This Stop</div>
-    <div class="prize-box-body">Least Perhaps but Not Quite Last… This Liquid Can Go a Long Way at the Right Time…</div>
-  </div>
-  
   <div class="challenge-head">Personal Finance — The Most Important Math in This Hunt</div>
   <div class="challenge-body">
     <p>You are about to pick up $100. Before you do — complete this:</p>
@@ -1317,8 +1307,10 @@
     <div class="clue-box-head">Where to Find Your Next Clue Card</div>
     <div class="clue-box-body">There is a room in this house where someone spends too much time staring at screens, writing things nobody asked for, and thinking about how the world could work better. It's not you and it is not your room — though the screen time hours might be comparable. Find the office. Look on the wall.</div>
   </div>
-  
-    
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Least Perhaps but Not Quite Last… This Liquid Can Go a Long Way at the Right Time…</div>
+  </div>
 </div>
 
 <!-- STOP 20 -->
@@ -1480,15 +1472,6 @@
     // Simpler rule: grey if going that many puts us at or past last page
     document.getElementById('btnSkip3').disabled = nearEnd3;
     document.getElementById('btnSkip5').disabled = nearEnd5;
-
-    document.getElementById('progLabel').textContent = labels[cur] || ('Page ' + (cur + 1));
-    document.getElementById('progFill').style.width = ((cur + 1) / total * 100) + '%';
-  }
-
-  update();
-</script>
-</body>
-</html>
 
     document.getElementById('progLabel').textContent = labels[cur] || ('Page ' + (cur + 1));
     document.getElementById('progFill').style.width = ((cur + 1) / total * 100) + '%';
