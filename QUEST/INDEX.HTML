@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
+<title>The Great Easter Quest of 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f8f0d8;
+    --parchment-mid: #f0e4c0;
+    --parchment-dark: #e2d0a0;
+    --ink: #1c1208;
+    --ink-mid: #3a2a10;
+    --ink-light: #6b5030;
+    --red: #7a1515;
+    --gold: #9a7208;
+    --gold-light: #c8960a;
+    --rule: #b09050;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1008;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 16px 50px;
+    font-family: 'Courier Prime', monospace;
+    background-image:
+      radial-gradient(ellipse at 30% 20%, rgba(80,40,5,0.6) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 80%, rgba(50,20,0,0.5) 0%, transparent 50%);
+  }
+
+  /* ── progress bar ── */
+  .progress-wrap {
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .progress-label {
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    min-width: 90px;
+  }
+  .progress-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+
+  /* ── document ── */
+  .doc {
+    background: var(--parchment);
+    width: 100%;
+    max-width: 720px;
+    padding: 52px 60px 48px;
+    position: relative;
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,0.25),
+      3px 3px 0 rgba(0,0,0,0.12),
+      7px 7px 0 rgba(0,0,0,0.07),
+      0 24px 60px rgba(0,0,0,0.55);
+    display: none;
+    animation: pageIn 0.35s ease;
+  }
+  .doc.active { display: block; }
+
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* subtle vignette on pages */
+  .doc::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right,  rgba(0,0,0,0.035) 0%, transparent 5%),
+      linear-gradient(to left,   rgba(0,0,0,0.035) 0%, transparent 5%),
+      linear-gradient(to bottom, rgba(0,0,0,0.025) 0%, transparent 6%),
+      linear-gradient(to top,    rgba(0,0,0,0.045) 0%, transparent 8%);
+    pointer-events: none;
+  }
+
+  /* ── nav ── */
+  .nav {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    gap: 12px;
+  }
+  .btn {
+    font-family: 'Courier Prime', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 11px 28px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold-light);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn:hover { background: var(--gold); color: #1a1008; }
+  .btn:disabled { opacity: 0.2; cursor: default; }
+  .btn:disabled:hover { background: transparent; color: var(--gold-light); }
+  .btn-continue {
+    background: var(--gold);
+    color: #1a1008;
+  }
+  .btn-continue:hover { background: var(--gold-light); }
+  .btn-skip {
+    font-size: 11px;
+    padding: 11px 14px;
+    letter-spacing: 2px;
+  }
+  .page-indicator {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(200,150,10,0.5);
+    text-transform: uppercase;
+  }
+
+  /* ── typography ── */
+  .rule {
+    border: none;
+    border-top: 2px solid var(--rule);
+    margin: 18px 0;
+  }
+  .rule-double {
+    border: none;
+    border-top: 3px double var(--rule);
+    margin: 22px 0;
+  }
+  .small-ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 18px;
+    margin: 8px 0;
+    letter-spacing: 8px;
+  }
+
+  /* ── COVER ── */
+  .cover-eyebrow {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 6px;
+  }
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+  .cover-subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-mid);
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 14px 0 20px;
+  }
+  .cover-presented {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+  }
+  .cover-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .cover-by {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+  .cover-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 24px;
+    border: 1px solid var(--rule);
+    background: var(--parchment-mid);
+    margin: 0 auto;
+    max-width: 340px;
+  }
+  .cover-badge-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--ink);
+    text-align: center;
+  }
+  .cover-badge-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-light);
+    text-align: center;
+  }
+
+  /* ── T&C page ── */
+  .tc-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .tc-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .tc-section-head {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 14px 0 4px;
+  }
+  .tc-body {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+  .tc-agree {
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    color: var(--ink);
+    margin: 18px 0 10px;
+    letter-spacing: 1px;
+  }
+  .tc-go {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mid);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  /* ── STOP pages ── */
+  .stop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+  .stop-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--ink);
+    letter-spacing: 2px;
+  }
+  .stop-collect {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 3px 10px;
+  }
+  .stop-nicework {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 14px;
+  }
+  .challenge-head {
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .challenge-body {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+    margin-bottom: 20px;
+  }
+  .challenge-body p { margin-bottom: 5px; }
+
+  .clue-box {
+    background: var(--parchment-mid);
+    border-left: 3px solid var(--gold);
+    padding: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .clue-box-head {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .clue-box-body {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+
+  .prize-box {
+    background: var(--parchment-dark);
+    border: 1px solid var(--rule);
+    padding: 12px 18px;
+  }
+  .prize-box-head {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 6px;
+  }
+  .prize-box-body {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink-mid);
+    font-weight: 700;
+  }
+
+  /* ── DECODER page ── */
+  .decoder-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .decoder-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .decoder-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 3px;
+    margin-bottom: 6px;
+  }
+  .decoder-cell {
+    border: 1px solid var(--rule);
+    height: 36px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .decoder-num {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 3px;
+    margin-bottom: 20px;
+  }
+  .decoder-num-cell {
+    text-align: center;
+    font-size: 9px;
+    color: var(--ink-light);
+    letter-spacing: 0;
+  }
+  .decoder-answer {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 8px;
+    color: var(--ink);
+    margin: 6px 0 4px;
+  }
+  .decoder-duh {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 18px;
+  }
+  .sig-line {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 20px 0 10px;
+  }
+  .sig-block {
+    text-align: center;
+  }
+  .sig-blank {
+    border-bottom: 1px solid var(--ink-mid);
+    width: 180px;
+    height: 28px;
+    margin-bottom: 4px;
+  }
+  .sig-label {
+    font-size: 11px;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+  .confirm-line {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--ink);
+    text-align: center;
+    margin: 10px 0;
+  }
+  .date-line {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 12px;
+    color: var(--ink-mid);
+    margin-top: 6px;
+  }
+  .date-blank {
+    display: inline-block;
+    border-bottom: 1px solid var(--ink-mid);
+    width: 160px;
+    margin-left: 8px;
+  }
+
+  /* ── cert page ── */
+  .cert-outer {
+    border: 2px solid var(--gold);
+    padding: 30px 36px;
+    position: relative;
+  }
+  .cert-outer::before {
+    content: '✦';
+    position: absolute;
+    top: -10px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--parchment);
+    padding: 0 12px;
+    color: var(--gold);
+    font-size: 16px;
+  }
+  .cert-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .cert-certifies {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+    color: var(--ink-mid);
+    margin-bottom: 6px;
+  }
+  .cert-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .cert-body {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .cert-prize {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .cert-clause {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-light);
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .cert-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+  .cert-finance {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--ink-light);
+    text-align: center;
+    line-height: 1.75;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 600px) {
+    .doc { padding: 32px 24px 36px; }
+    .cover-name { font-size: 34px; }
+    .decoder-grid, .decoder-num { grid-template-columns: repeat(10, 1fr); }
+    .decoder-grid .decoder-cell:nth-child(n+11),
+    .decoder-num .decoder-num-cell:nth-child(n+11) { display: none; }
+    .sig-line { gap: 24px; }
+    .sig-blank { width: 120px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-wrap">
+  <span class="progress-label" id="progLabel">Page 1 of 23</span>
+  <div class="progress-bar"><div class="progress-fill" id="progFill" style="width:4%"></div></div>
+</div>
+
+<!-- ══════════════════ PAGE 0 — COVER ══════════════════ -->
+<div class="doc active" id="p0">
+  <div class="cover-eyebrow">Official Document · Easter 2026</div>
+  <div class="rule-double"></div>
+  <div class="cover-title">The Great<br>Easter Quest<br>of 2026</div>
+  <div class="cover-subtitle">
+    A Scavenger Hunt of Math, Social Studies,<br>
+    Common Sense, and Mild Physical Effort
+  </div>
+  <div class="rule"></div>
+  <div class="cover-presented">Presented To</div>
+  <div class="cover-name">Jacob</div>
+  <div class="cover-by">
+    by Mom &amp; Dad<br>
+    <em>with moral support from Lucy who also Loves your Love!</em>
+  </div>
+  <div class="rule"></div>
+  <div class="cover-badge">
+    <div class="cover-badge-main">20 STOPS · PRIZES AT EVERY STOP</div>
+    <div class="cover-badge-main" style="color:var(--red)">FINAL PRIZE: ?$?</div>
+    <div class="cover-badge-sub">subject to the Spending Wisely Clause<br>— see Terms &amp; Conditions</div>
+  </div>
+  <div class="rule-double"></div>
+  <div class="small-ornament">✦ ✦ ✦</div>
+</div>
+
+<!-- ══════════════════ PAGE 1 — T&C ══════════════════ -->
+<div class="doc" id="p1">
+  <div class="tc-header">Official Terms &amp; Conditions</div>
+  <div class="tc-sub">The Great Quest — Quest Registration Agreement</div>
+  <div class="rule-double"></div>
+
+  <div class="tc-section-head">Preamble</div>
+  <div class="tc-body">By picking up this document and reading beyond this sentence, the Participant — hereinafter referred to as 'Jacob,' 'The Seeker,' 'That Kid Who Sets his Alarm not to Wake Up but to Negotiate,' or simply 'You' — hereby agrees to all terms below. These terms are binding under the Tatun Family Accord and the ancient laws of common sense.</div>
+
+  <div class="tc-section-head">Section 1 — Eligibility</div>
+  <div class="tc-body">This Quest is open to one (1) teenager currently residing in this household who owns a gaming setup, maintains a Twitch account, has a complicated relationship with mornings, and whose approach to playing with the dog is what veterinarians would describe as 'enthusiastic.' If this does not describe you, please return this document and back away slowly.</div>
+
+  <div class="tc-section-head">Section 2 — Video Documentation (Mandatory)</div>
+  <div class="tc-body">The Participant MUST video-record at least one clue being solved. The recording must show: (a) the Participant reading the clue aloud, (b) showing actual work — not just the answer, and (c) a genuine human reaction upon finding each prize. Going Live on Twitch for any portion of this Quest is permitted, encouraged, and will be noted in the official record. Failure to document on video shall result in forfeiture of the Final Prize Certificate and a conversation about it at family dinners for approximately one calendar year.</div>
+
+  <div class="tc-section-head">Section 3 — Hygiene Advisory</div>
+  <div class="tc-body">Teeth Brushing and a quick Face Wash prior to beginning The Quest is strongly recommended. The Quest Authority reserves the right to comment on this in the future regardless of outcome. This provision was not added arbitrarily.</div>
+
+  <div class="tc-section-head">Section 4 — Academic Honesty</div>
+  <div class="tc-body">The Participant agrees to: (a) show all math work, (b) genuinely think through logic problems rather than Googling them, and (c) refrain from complaining that this is 'too much school stuff.' Use of AI to solve puzzles must be disclosed and results in a 50% prize deduction. Asking Lucy for help is permitted but statistically unlikely to be productive. You may be able to find the next spot without solving a clue, but all clues must be completed to receive the Final Bonus Prize.</div>
+
+  <div class="tc-section-head">Section 5 — The Spending Wisely Clause</div>
+  <div class="tc-body">Upon successful completion, the Participant receives the Bonus Prize. This prize carries one condition: it must be spent wisely. The definition of 'wisely' belongs to the Participant. However, the Participant hereby acknowledges that if the funds are spent unwisely, they are morally obligated — under the Tatun Family Accord — to repay themselves using real income earned through real effort. This is not a punishment. This is the beginning of financial literacy.</div>
+
+  <div class="tc-section-head">Section 6 — Force Majeure</div>
+  <div class="tc-body">The Quest Authority is not responsible for clues disturbed, relocated, or partially consumed by Lucy. Any clue found in an unusual state of dampness should be handled with care and minimal drama.</div>
+
+  <div class="rule-double"></div>
+  <div class="tc-agree">BY PROCEEDING, THE PARTICIPANT ACCEPTS THESE TERMS IN FULL.</div>
+  <div class="tc-go">Now go. Stop #1 is under the place where your fingers fly the most —<br>and occasionally do so at 4 or 6 in the morning when you think no one knows.<br><br>** All Clues Must Be Answered to Collect Final Prize</div>
+</div>
+
+<!-- ══════════════════ STOPS 1–20 ══════════════════ -->
+
+<!-- STOP 1 -->
+<div class="doc" id="p2">
+  <div class="stop-header">
+    <div class="stop-number">STOP #1</div>
+    <div class="stop-collect">COLLECT: [ J ]</div>
+  </div>
+  <div class="rule"></div>
+  <div class="challenge-head">Your First Challenge — Warm-Up: IF/THEN Reasoning</div>
+  <div class="challenge-body">
+    <p>Welcome to The Great Quest.</p>
+    <p>Before you go anywhere — You Should have read the Terms and Conditions. Seriously. There's a video requirement. It is binding.</p>
+    <br>
+    <p>IF all squares are rectangles,</p>
+    <p>AND all rectangles have four sides,</p>
+    <p>THEN does a square have four sides?</p>
+    <br>
+    <p>Answer YES or NO and write one sentence explaining why.</p>
+    <p>What is this type of reasoning called — moving from a general rule to a specific conclusion?</p>
+    <p>It rhymes with 'deductive.'</p>
+    <p><strong>YOUR ANSWER: ____________________</strong></p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">It hums all day and never complains — unlike some people in this house when asked to take out the garbage. It keeps things cold without being asked. It does not negotiate. Look inside the 'right' one.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">An egg. A journey of 1000 miles begins with a single step, and a Quest of 20 Stops similarly begins with a single. 'Cold' Cash!</div>
+  </div>
+</div>
+
+<!-- STOP 2 -->
+<div class="doc" id="p3">
+  <div class="stop-header">
+    <div class="stop-number">STOP #2</div>
+    <div class="stop-collect">COLLECT: [ A ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — AWESOME!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Math + Science — The Cold Equations</div>
+  <div class="challenge-body">
+    <p>The refrigerator is set to 38°F. Water freezes at 32°F.</p>
+    <br>
+    <p>1. How many degrees above freezing is this fridge? _______________</p>
+    <p>2. IF the power goes out and temperature rises 3°F per hour,</p>
+    <p>how long until it reaches 50°F — the temp at which leftovers</p>
+    <p>become a biology experiment?</p>
+    <p>Show your work.</p>
+    <br>
+    <p>Lucy has been fed today. She will tell you otherwise.</p>
+    <p>She is a Knave. More on that later.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Now Go colder. Colder than the refrigerator. Colder than the feeling you get when you forget there's a test you should have studied for. Find the place where water goes to become a solid. Look in the tray.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Egg! This one Might be more like an Oval Fortune Cookie, but it comes with "Moral Support" &amp; "Unconditional Love"</div>
+  </div>
+</div>
+
+<!-- STOP 3 -->
+<div class="doc" id="p4">
+  <div class="stop-header">
+    <div class="stop-number">STOP #3</div>
+    <div class="stop-collect">COLLECT: [ C ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Didn't Miss A beat!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Geometry — The Angle of Your Next Destination</div>
+  <div class="challenge-body">
+    <p>A triangle has three angles that always add up to 180°.</p>
+    <p>Triangle A has angles of 90° and 22°.</p>
+    <p><strong>What is the third angle? _________ degrees</strong></p>
+    <br>
+    <p>Show Off Bonus: IF all right triangles have one 90° angle,</p>
+    <p>THEN what must always be true about the other two angles?</p>
+    <p>What do we call two angles that sum to 90°  They are _______ angles.</p>
+    <br>
+    <p>Your answer to the first question is a number of degrees.</p>
+    <p>That number is also a temperature in Fahrenheit.</p>
+    <p>It is the exact temperature your next destination is designed to maintain for this entire house (even though we usually go a bit higher).</p>
+    <p>Hint: It is not a room. It is a device. On a wall.</p>
+    <p>Everyone adjusts it. No one agrees on it.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Somewhere in this house there is a small device that everyone touches and no one agrees on. It controls the temperature of everything. It does not care about your opinions. It just is. Find it.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Speaking of Cold… This should help with the lingering cold days while Baseball Starts Up!</div>
+  </div>
+</div>
+
+<!-- STOP 4 -->
+<div class="doc" id="p5">
+  <div class="stop-header">
+    <div class="stop-number">STOP #4</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Now that's just Jacob!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Civics — The Three Branches</div>
+  <div class="challenge-body">
+    <p>The United States government has three branches.</p>
+    <p><strong>Name all three.</strong></p>
+    <br>
+    <p>IF the President vetoes a bill passed by Congress,</p>
+    <p>THEN what must Congress do to override it?</p>
+    <p>What fraction of each chamber must agree to override?</p>
+    <p>Express that fraction as a decimal rounded to two places.</p>
+    <p>Multiply by 100. That can also be a temperature in Fahrenheit!</p>
+    <br>
+    <p>Bonus thought: The three branches exist so no single person holds all the power. But they give and take a little over time. The balance is not always the same.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">The next spot spins wet into dry with a lot of hot air — and occasionally eats one sock for reasons that science cannot fully explain. Look inside.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Bill! Not the kind Mom Pays Online or the Kind Dad Should be Collecting… Your Very Own!</div>
+  </div>
+</div>
+
+<!-- STOP 5 -->
+<div class="doc" id="p6">
+  <div class="stop-header">
+    <div class="stop-number">STOP #5</div>
+    <div class="stop-collect">COLLECT: [ B ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Without even trying!?</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Geometry — The Pythagorean Theorem</div>
+  <div class="challenge-body">
+    <p>A baseball diamond is a square. Each side is 90 feet.</p>
+    <p>IF you draw a line from home plate directly to second base,</p>
+    <p>you have split the square into two right triangles.</p>
+    <br>
+    <p>Using a² + b² = c², where a = 90 and b = 90:</p>
+    <p><strong>What is the distance from home plate to second base?</strong></p>
+    <p>Round to the nearest foot.</p>
+    <br>
+    <p>That's approximately half how far Jacob can throw on a good day —</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Find the ONE that comes BEFORE this one in this 'cleaning' process — the one that uses actual water and soap. Thanks Mom! I know it's a lot of Work! Check on top of it or inside.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">A LATE NIGHT SNACK PERHAPS? Oh what a great start this is… (Remember… The milk is the meal)</div>
+  </div>
+</div>
+
+<!-- STOP 6 -->
+<div class="doc" id="p7">
+  <div class="stop-header">
+    <div class="stop-number">STOP #6</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Nailed it, kid!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Logic — The Laundry Syllogism</div>
+  <div class="challenge-body">
+    <p>IF dirty clothes go in the washer, THEN clean clothes come out.</p>
+    <p>IF clean clothes go in the dryer, THEN dry clean clothes come out.</p>
+    <p>IF dirty clothes go directly into the dryer —</p>
+    <p>skipping the washer entirely —</p>
+    <p>THEN what comes out?</p>
+    <p><strong>Think carefully. Write your answer. ——————————————————</strong></p>
+    <br>
+    <p>Follow-up question. Purely hypothetical. Not directed at anyone in particular:</p>
+    <p>IF a teenager's hamper is overflowing,</p>
+    <p>AND said teenager walks past it fourteen times without touching it,</p>
+    <p>THEN what is the teenager communicating about his priorities?</p>
+    <br>
+    <p>You don't have to answer that one out loud. We already know.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Something in this kitchen contains more sugar than anyone has officially admitted to. It lives in a box. It has some cartoon or logo on the front. It promised you a good morning and mostly delivered. But Remember, the Milk is the Meal. It's on one of them.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">It Wouldn't be Easter without Some Sweet Colorful Treats… Not Peeps… but these!</div>
+  </div>
+</div>
+
+<!-- STOP 7 -->
+<div class="doc" id="p8">
+  <div class="stop-header">
+    <div class="stop-number">STOP #7</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — No surprise there!!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Nutrition Math — Serving Size Reality Check</div>
+  <div class="challenge-body">
+    <p>Find the nutrition label on this box.</p>
+    <p>1. What is the serving size?</p>
+    <p>2. How many servings are in the container?</p>
+    <p>3. Multiply them — total cereal in the box.</p>
+    <p>4. IF Jacob eats 2.5 times the serving size each morning (conservative estimate), how many days does this box actually last?</p>
+    <br>
+    <p>Now check sugar per serving. Multiply by your answer to #3.</p>
+    <p>That's total grams of sugar in the whole box.</p>
+    <p>IF there are 4 grams of sugar per teaspoon,</p>
+    <p>how many teaspoons of sugar are in this box?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">There is a creature in this house that cleans without being asked, never complains, never sleeps in, and asks for nothing but a charged battery. It is not Lucy. It is not you. Find it and look underneath. Gently.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">It had to be something that goes well on the outside of box… Bam! $ Add it up!</div>
+  </div>
+</div>
+
+<!-- STOP 8 -->
+<div class="doc" id="p9">
+  <div class="stop-header">
+    <div class="stop-number">STOP #8</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Very impressive!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Technology Logic — Conditional Programming</div>
+  <div class="challenge-body">
+    <p>The robot vacuum runs on a simple IF/THEN loop:</p>
+    <p>IF obstacle detected → THEN change direction</p>
+    <p>IF battery low → THEN return to dock</p>
+    <p>IF floor clean → THEN stop</p>
+    <br>
+    <p>IF the robot makes 4 direction changes per minute and runs a 50-minute cycle, how many total direction changes does it make?</p>
+    <br>
+    <p>Now the real question:</p>
+    <p>IF the robot cleans every day without being asked,</p>
+    <p>AND a certain teenager does not clean without being asked at least three times —</p>
+    <p>THEN which one has better programming?</p>
+    <br>
+    <p>This is not a trick question. The robot is winning.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Go to the dining room. Get on the floor. Look up. Your clue card may be taped underneath something.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Flat and Sweet, a sensible amount for some online Fun!</div>
+  </div>
+</div>
+
+<!-- STOP 9 -->
+<div class="doc" id="p10">
+  <div class="stop-header">
+    <div class="stop-number">STOP #9</div>
+    <div class="stop-collect">COLLECT: [ G ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Sharp as ever!!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Math — Area and Perimeter</div>
+  <div class="challenge-body">
+    <p>The dining room table is approximately 6 feet long and 3 feet wide.</p>
+    <p>1. What is its perimeter?</p>
+    <p>2. What is its area in square feet?</p>
+    <p>3. IF each chair takes up 2.5 square feet of floor space and there are 6 chairs (not overlapping or under the table), what is the total floor space used by table AND chairs combined?</p>
+    <br>
+    <p>This table — and the one before it — have had a lot of meals.</p>
+    <p>Some with Ma and Papa. Some with the cousins — Jack, Bella, and the whole crew.</p>
+    <p>Every single one of them louder than medically advisable.</p>
+    <br>
+    <p>IF this table could talk, what is the probability it would ask you to sit up straight?</p>
+    <p>Answer: 100%. That's not math. That's just family.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Not the big one. The other one. It's seen more asses than a donkey convention. Your next clue is under there somewhere wondering when you'd show up.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Unwrap at your own risk and convenience! Hope there's something cool in there!</div>
+  </div>
+</div>
+
+<!-- STOP 10 -->
+<div class="doc" id="p11">
+  <div class="stop-header">
+    <div class="stop-number">STOP #10</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Made it look easy!?</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Logic — The Knight and the Knave</div>
+  <div class="challenge-body">
+    <p>On an island, two types of people exist:</p>
+    <p>Knights — who always tell the truth.</p>
+    <p>Knaves — who always lie.</p>
+    <br>
+    <p>You meet one of each:</p>
+    <p>Person A says: <strong>'At least one of us is a Knave.'</strong></p>
+    <p>Person B says: nothing.</p>
+    <br>
+    <p>So: which is Person A? And which is Person B?</p>
+    <br>
+    <p>A Knight is honest, reliable, clean and considerate.</p>
+    <p>A Knave avoids cleaning, leaves dishes, and is on his phone at the table.</p>
+    <p>We are not naming names, but we are in training.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">There is a room in this house that cleans itself approximately never — at least not by any knave or teenager currently residing here. (Thanks Again Mom!!) In that room sits a throne. Behind that throne's lid sits your next clue. It has been waiting patiently. Unlike us.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Egg! Maybe some Jelly Beans?</div>
+  </div>
+</div>
+
+<!-- STOP 11 -->
+<div class="doc" id="p12">
+  <div class="stop-header">
+    <div class="stop-number">STOP #11</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — RIGHT ON BRO!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Health + Math — The Brushing Problem</div>
+  <div class="challenge-body">
+    <p>Dentists recommend 2 minutes of brushing, twice a day.</p>
+    <p>IF a certain teenager brushes once a day for 40 seconds (and we are being generous):</p>
+    <br>
+    <p>1. How many seconds of brushing is he missing per day?</p>
+    <p>2. How many minutes per week?</p>
+    <p>3. Over a full year, how many hours has he skipped?</p>
+    <p>4. The average cavity costs $200 to fill. IF skipping causes 1 cavity per year, how much money is lost between age 15 and age 25?</p>
+    <br>
+    <p>IF you answered $2,000 — that is almost exactly the prize you are hunting for. Except the actual prize is real (and worth much less) but the cavities are preventable.</p>
+    <br>
+    <p><strong>Brush. Your. Teeth.</strong></p>
+    <p>This message brought to you by everyone who loves you and wants you to keep your mouth from looking like Dad's.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">In the cabinet under the bathroom sink where we can brush our teeth and wash our faces. Your clue card is in there somewhere. Be gentle — the pipes under here can move easily, and shouldn't.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Doubling up on a few prizes… 100% increase… add it to the other — you can open them together? (maybe too late?)</div>
+  </div>
+</div>
+
+<!-- STOP 12 -->
+<div class="doc" id="p13">
+  <div class="stop-header">
+    <div class="stop-number">STOP #12</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — That's showing some brainpower!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Economics — The Lucy Problem</div>
+  <div class="challenge-body">
+    <p>Lucy eats 2.5 cups of food per day.</p>
+    <p>A 30-pound bag contains approximately 120 cups.</p>
+    <br>
+    <p>1. How many days does one bag last?</p>
+    <p>2. IF one bag costs $45, what is Lucy's daily food cost?</p>
+    <p>3. IF Lucy lives 12 more years, what is her total food cost — assuming prices stay flat? Round to the nearest dollar.</p>
+    <br>
+    <p>Lucy has never once paid for her own food.</p>
+    <p>But she does pay in loyalty. A virtuous trait to find and to have!</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Find your textbook — the one probably still performing structural duties for your monitor. Carefully remove it. Your clue card is inside (one of them!?). Do not let the monitor fall. Maybe find something else to support it, so your books can support your schoolwork?</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">A heavy Egg… it's better than a rotten egg.</div>
+  </div>
+</div>
+
+<!-- STOP 13 -->
+<div class="doc" id="p14">
+  <div class="stop-header">
+    <div class="stop-number">STOP #13</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Proud of you!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Social Studies — The Amendment Round</div>
+  <div class="challenge-body">
+    <p>The U.S. Constitution currently has 27 amendments. The first 10 are called the Bill of Rights.</p>
+    <br>
+    <p>1. What does the First Amendment protect?</p>
+    <p>2. IF a student gives a speech at school criticizing the principal, is the school legally required to allow it? Yes or No — and explain your reasoning.</p>
+    <p>(Hint: It's more complicated than you think. Look up Tinker v. Des Moines someday.)</p>
+    <p>3. The 19th Amendment gave women the right to vote. What year was it ratified?</p>
+    <br>
+    <p>Take the LAST TWO digits of that year. Subtract 6.</p>
+    <p>That number is maybe how many paces you are from the front door towards where you'll find your next clue — except don't actually count. Just go to the front door.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Every journey in this house begins and ends at the same place. One step out. It is at your feet every single time you leave or arrive. It has probably said "welcome" more times than anyone in this family. Lift it.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Bam! $ If we paid you per pages you read… we'd be about even here…? These things are actually pretty cool… if you spend some time with them. Knowledge is power.</div>
+  </div>
+</div>
+
+<!-- STOP 14 -->
+<div class="doc" id="p15">
+  <div class="stop-header">
+    <div class="stop-number">STOP #14</div>
+    <div class="stop-collect">COLLECT: [ H ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Just like that!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Civics — Local Government</div>
+  <div class="challenge-body">
+    <p>Suffolk County, New York has a County Executive form of government. Your town also has locally elected representatives.</p>
+    <br>
+    <p>IF a law is passed that a resident believes is unfair, THEN what is the correct first step in a functioning representative democracy?</p>
+    <br>
+    <p>(A) Post about it online and hope someone important sees it</p>
+    <p>(B) Contact your elected representative directly</p>
+    <p>(C) Complain loudly at dinner until someone changes the subject</p>
+    <p>(D) Accept it and move on forever</p>
+    <br>
+    <p>The answer is not C. Option C, while emotionally valid, is not civic participation.</p>
+    <p>IF more people chose answers or actions that can lead to solutions, things would be different.</p>
+    <p>Try it if the issue moves you… and you don't have to be 18.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Somewhere in this house is a piece of patient leather, always ready for another season and a good game! It doesn't care if you win or lose, it's still excellent, and it'll do the best it can for you. Look inside the pocket.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">2 in a row is like doubling your prize in one stop… 100% increase… add it to the other. Also: register to vote when you can!</div>
+  </div>
+</div>
+
+<!-- STOP 15 -->
+<div class="doc" id="p16">
+  <div class="stop-header">
+    <div class="stop-number">STOP #15</div>
+    <div class="stop-collect">COLLECT: [ E ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Didn't even break a Sweat!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Sports + Math</div>
+  <div class="challenge-body">
+    <p>The FIFA World Cup is held every four years.</p>
+    <p>IF the last World Cup was in 2022, THEN when is the next one?</p>
+    <p>True or False: The 2026 World Cup is being co-hosted by the U.S., Canada, and Mexico.</p>
+    <br>
+    <p>Now baseball:</p>
+    <p>IF a pitcher throws 95 pitches over 6 innings, what is his average pitches per inning?</p>
+    <p>IF he maintains that pace for a full 9 innings, how many total pitches would he throw?</p>
+    <p>IF the league average is 15 pitches per inning, is this pitcher above or below average efficiency?</p>
+    <p>(Fewer pitches per inning = more efficient.)</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Go outside. Yes, outside. The place with sky and air and everything. Find the large metal object that breathes fire in summer and sits quietly judging you in the winter. Open it up.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">I always say, if a baseball was an egg, how would you field it?</div>
+  </div>
+</div>
+
+<!-- STOP 16 -->
+<div class="doc" id="p17">
+  <div class="stop-header">
+    <div class="stop-number">STOP #16</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Would you look at that!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Chemistry Logic — The Fire Triangle</div>
+  <div class="challenge-body">
+    <p>Fire requires three things to exist: Oxygen. Fuel. Heat.</p>
+    <p>Remove ANY one and the fire goes out.</p>
+    <br>
+    <p>IF you remove the fuel — what happens?</p>
+    <p>IF you remove the oxygen — what happens?</p>
+    <p>IF you remove the heat — what is the current state of this barbecue on a random day when no one has used it?</p>
+    <br>
+    <p>The grill is cold. The heat is already gone. You are safe. The clue is safe.</p>
+    <br>
+    <p>IF a loved one goes outside in the wind and rain to drop a clue inside a cold barbecue, THEN what does that tell you?</p>
+    <p>The answer is: a lot. Like… they couldn't think of more inside clues?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Back inside — you've earned it. Now find the closet where the clean things live. Towels. Sheets. Things that smell like they've been washed recently — a concept you may be vaguely familiar with. Your clue is on the door itself. Not inside. The door.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Barbeque Eggs Anyone? :) $ (ooops sorry wrong one) Barbeque these!</div>
+  </div>
+</div>
+
+<!-- STOP 17 -->
+<div class="doc" id="p18">
+  <div class="stop-header">
+    <div class="stop-number">STOP #17</div>
+    <div class="stop-collect">COLLECT: [ L ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — There he goes!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Algebra — Solve for X</div>
+  <div class="challenge-body">
+    <p><strong>3x + 7 = 25</strong></p>
+    <p>Show all your work.</p>
+    <br>
+    <p>IF x equals the number of minutes between 'I'll shower in a bit' and an actual shower — this equation is the most optimistic math problem ever written.</p>
+    <br>
+    <p>IF x equals the number of times someone must say 'time to get up' before Jacob appears on a school morning — we are going to need a bigger equation.</p>
+    <br>
+    <p>IF x equals the hour at which Jacob is still playing on his computer, is it a.m. or p.m.?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Take your value of x. Go down. Way down. To the lower level. To the bed that isn't your bed in the room that isn't your room. Find the pillow. Lift it.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Re$spectable. Tape-able.</div>
+  </div>
+</div>
+
+<!-- STOP 18 -->
+<div class="doc" id="p19">
+  <div class="stop-header">
+    <div class="stop-number">STOP #18</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Knew you could do it!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Logic — The Sleeping Argument</div>
+  <div class="challenge-body">
+    <p>Evaluate the following argument:</p>
+    <br>
+    <p>Premise 1: IF you are sleeping, THEN you are not doing homework.</p>
+    <p>Premise 2: IF you are not doing homework, THEN it is not due tomorrow.</p>
+    <p>Conclusion: Therefore, IF you are sleeping, THEN homework is not due tomorrow.</p>
+    <br>
+    <p>Is this argument <strong>VALID</strong>? (Does the conclusion follow logically from the premises?)</p>
+    <p>Is this argument <strong>TRUE</strong>? (Are the premises actually correct in real life?)</p>
+    <br>
+    <p>Important: An argument can be perfectly valid and still be completely false.</p>
+    <p>Valid logic + wrong premises = wrong answer.</p>
+    <p>This is one of the most important things they don't teach enough.</p>
+    <br>
+    <p>Also: Was the homework due before you did it?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Almost there. Find the spot in this house that holds the boxes people are done with — recyclables. Not the plastics. Not the metals. On a bench. Not that Nice Work Out Bench in the corner… the Wood one… in your New Chore Spot… get to know it… and do it well.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">These Again? Double up and $hare $ome with Dad!</div>
+  </div>
+</div>
+
+<!-- STOP 19 -->
+<div class="doc" id="p20">
+  <div class="stop-header">
+    <div class="stop-number">STOP #19</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — That's our kid!</div>
+  <div class="rule"></div>
+  <div class="challenge-head">Personal Finance — The Most Important Math in This Hunt</div>
+  <div class="challenge-body">
+    <p>You are about to pick up $100. Before you do — complete this:</p>
+    <br>
+    <p>IF you invest $100 at 7% average annual return (the historical average of a basic index fund), THEN using the formula $100 × (1.07)^years:</p>
+    <br>
+    <p>In 10 years: $100 × (1.07)¹⁰ = $ _______</p>
+    <p>In 20 years: $100 × (1.07)²⁰ = $ _______</p>
+    <p>In 30 years: $100 × (1.07)³⁰ = $ _______</p>
+    <br>
+    <p>Answers: ~$197. ~$387. ~$761.</p>
+    <br>
+    <p>IF you spend $100 on something that disappears — food, a game, whatever — it is worth $0 by tomorrow.</p>
+    <p>IF you keep it and let it grow, it becomes $761 before you're 50.</p>
+    <br>
+    <p>The choice is yours. That is the whole point.</p>
+    <p>Spend it wisely — or you owe it back to yourself. With real income. From real work.</p>
+    <p>That is not a threat. That's part of this agreement.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">There is a room in this house where someone spends too much time staring at screens, writing things nobody asked for, and thinking about how the world could work better. It's not you and it is not your room — though the screen time hours might be comparable. Find the office. Look on the wall.</div>
+  </div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Least Perhaps but Not Quite Last… This Liquid Can Go a Long Way at the Right Time…</div>
+  </div>
+</div>
+
+<!-- STOP 20 -->
+<div class="doc" id="p21">
+  <div class="stop-header">
+    <div class="stop-number">STOP #20</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Get it Done then Have Some Fun!</div>
+  <div class="rule"></div>
+  <div class="challenge-body" style="text-align:center; padding: 20px 0;">
+    <p><strong>Don't Sacrifice Accuracy for Speed, or Thoroughness for Anything.</strong></p>
+    <br>
+    <p><strong>Did you do a Little at a Time — or Save it All for Later?</strong></p>
+    <br>
+    <p><strong>It's all Good if you Get it Done!</strong></p>
+    <br>
+    <p><strong>NO MORE CLUES – BUT STILL MORE OBLIGATIONS!</strong></p>
+    <br>
+    <p style="font-family:'Playfair Display',serif; font-size:22px; font-weight:900; color:var(--ink);">LOVE YOU!</p>
+    <br>
+    <p>Read the Official Terms and Conditions if Needed for More Information.</p>
+    <p>They are Not on the Internet. Don't just click I Agree.</p>
+  </div>
+  <div class="rule-double"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">The Decoder and Final Prize 'VOUCHER'. Get it signed. Show someone the video. You choose which someone. You know which video. The rest takes care of itself.</div>
+  </div>
+</div>
+
+<!-- ══════════════════ PAGE 22 — DECODER ══════════════════ -->
+<div class="doc" id="p22">
+  <div class="decoder-title">The Decoder &amp; Final Prize Voucher</div>
+  <div class="decoder-sub">Write your collected letters below — one per stop. Leave blanks where you found no letter.</div>
+  <div class="rule-double"></div>
+
+  <div class="decoder-grid">
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div>
+  </div>
+  <div class="decoder-num">
+    <div class="decoder-num-cell">1</div><div class="decoder-num-cell">2</div><div class="decoder-num-cell">3</div>
+    <div class="decoder-num-cell">4</div><div class="decoder-num-cell">5</div><div class="decoder-num-cell">6</div>
+    <div class="decoder-num-cell">7</div><div class="decoder-num-cell">8</div><div class="decoder-num-cell">9</div>
+    <div class="decoder-num-cell">10</div><div class="decoder-num-cell">11</div><div class="decoder-num-cell">12</div>
+    <div class="decoder-num-cell">13</div><div class="decoder-num-cell">14</div><div class="decoder-num-cell">15</div>
+    <div class="decoder-num-cell">16</div><div class="decoder-num-cell">17</div><div class="decoder-num-cell">18</div>
+    <div class="decoder-num-cell">19</div><div class="decoder-num-cell">20</div>
+  </div>
+
+  <div style="text-align:center; font-size:13px; color:var(--ink-light); font-style:italic; margin-bottom:10px;">Read them left to right. What does it say?</div>
+  <div class="decoder-answer">_ _ _ _ _ _ _ _ _ _ _ _</div>
+  <div class="decoder-duh">Duh.<br>But You did it.<br>Now show this Voucher and Get Your Grand Prize and Certificate!</div>
+
+  <div class="rule"></div>
+
+  <div class="sig-line">
+    <div class="sig-block">
+      <div class="sig-blank"></div>
+      <div class="sig-label">Mom (Jaime)</div>
+    </div>
+    <div class="sig-block">
+      <div class="sig-blank"></div>
+      <div class="sig-label">Dad (Jonathan)</div>
+    </div>
+  </div>
+  <div style="text-align:center; font-size:11px; color:var(--ink-light); margin-bottom:8px; font-style:italic;">(Both Signatures Required)</div>
+
+  <div class="confirm-line">VIDEO DOCUMENTATION CONFIRMED: &nbsp; YES &nbsp;/&nbsp; NO &nbsp; (circle one)</div>
+  <div class="date-line">
+    <span>DATE COMPLETED: <span class="date-blank"></span></span>
+    <span>TIME: <span class="date-blank" style="width:80px"></span></span>
+  </div>
+</div>
+
+<!-- ══════════════════ PAGE 23 — CERTIFICATE ══════════════════ -->
+<div class="doc" id="p23">
+  <div class="small-ornament" style="margin-bottom:16px;">✦ ✦ ✦</div>
+  <div class="cert-outer">
+    <div class="cert-title">✦ Official Prize Certificate ✦</div>
+    <div class="rule"></div>
+    <div class="cert-certifies">This certifies that</div>
+    <div class="cert-name">JACOB TATUN</div>
+    <div class="cert-body">
+      has successfully completed The Great Quest<br>
+      demonstrating acrobatics in academic excellence,<br>
+      personal finance literacy, mild physical effort,<br>
+      and the kind of determination that makes people proud.
+    </div>
+    <div class="rule"></div>
+    <div class="cert-prize">PRIZE AWARDED: $100.00 USD</div>
+    <div class="cert-clause">Subject to the Spending Wisely Clause as agreed in the Terms &amp; Conditions.</div>
+    <div class="cert-tagline">Spend it on something that lasts, grows, or matters.</div>
+    <div style="text-align:center; font-size:13px; color:var(--ink-mid); margin-top:6px; font-style:italic;">If you don't — you owe it back to yourself. With real income and interest!</div>
+    <div style="text-align:center; font-size:12px; color:var(--ink-light); margin-top:4px;">That's not a threat. That's the whole point.</div>
+    <div class="rule-double"></div>
+    <div class="cert-tagline" style="font-size:20px; color:var(--red);">JACOB T GOT THE LOOT</div>
+    <div class="cert-finance">
+      IF you invest $100 at a 7% average annual return (like an index fund),<br>
+      THEN in 10 years it becomes approximately $197. In 20 years? About $387. In 30 years? Nearly $761.<br>
+      IF you spend it wisely, you keep it. IF you don't, you owe yourself — with real income you earn.<br><br>
+      This is not only the official condition of your prize —<br>
+      this is how money works. You can work for it, but it can work for you too!
+    </div>
+  </div>
+  <div class="small-ornament" style="margin-top:16px;">✦ ✦ ✦</div>
+</div>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<div class="nav">
+  <button class="btn" id="btnBack" onclick="go(-1)" disabled>← Back</button>
+  <div style="display:flex;gap:8px;">
+    <button class="btn btn-skip" id="btnSkip3" onclick="go(3)">Skip 3</button>
+    <button class="btn btn-skip" id="btnSkip5" onclick="go(5)">Skip 5</button>
+  </div>
+  <button class="btn btn-continue" id="btnNext" onclick="go(1)">Continue →</button>
+</div>
+
+<script>
+  const pages = document.querySelectorAll('.doc');
+  const total = pages.length;
+  let cur = 0;
+
+  const labels = ['Cover', 'Terms & Conditions',
+    'Stop #1','Stop #2','Stop #3','Stop #4','Stop #5',
+    'Stop #6','Stop #7','Stop #8','Stop #9','Stop #10',
+    'Stop #11','Stop #12','Stop #13','Stop #14','Stop #15',
+    'Stop #16','Stop #17','Stop #18','Stop #19','Stop #20',
+    'Decoder Voucher','Certificate'];
+
+  function go(dir) {
+    pages[cur].classList.remove('active');
+    let next = cur + dir;
+    // wrap to first if we go past last
+    if (next >= total) next = 0;
+    if (next < 0) next = 0;
+    cur = next;
+    pages[cur].classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    update();
+  }
+
+  function update() {
+    const atEnd = cur === total - 1;
+    const nearEnd3 = (cur + 3 >= total); // skip3 would wrap
+    const nearEnd5 = (cur + 5 >= total); // skip5 would wrap
+
+    document.getElementById('btnBack').disabled = cur === 0;
+    document.getElementById('btnNext').textContent = atEnd ? 'Done ✦' : 'Continue →';
+
+    // Grey out skip buttons if the skip before them would already wrap
+    // i.e. skip3 greys if cur+2 >= total (meaning skip3 wraps but skip before doesn't cover it)
+    // Simpler rule: grey if going that many puts us at or past last page
+    document.getElementById('btnSkip3').disabled = nearEnd3;
+    document.getElementById('btnSkip5').disabled = nearEnd5;
+
+    document.getElementById('progLabel').textContent = labels[cur] || ('Page ' + (cur + 1));
+    document.getElementById('progFill').style.width = ((cur + 1) / total * 100) + '%';
+  }
+
+  update();
+</script>
+</body>
+</html>
