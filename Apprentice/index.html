@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>The Apprentice: Washington Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Oswald:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #c9a84c;
+  --gold-light: #f0d472;
+  --gold-dim: rgba(201,168,76,0.2);
+  --blood: #8b0000;
+  --blood-bright: #cc2200;
+  --ink: #080506;
+  --dark: #0e0a08;
+  --ash: #9a9090;
+  --pale: #ddd8d0;
+  --s1-accent: rgba(201,168,76,0.35);
+  --s2-accent: rgba(139,0,0,0.35);
+}
+
+html, body {
+  background: var(--ink);
+  min-height: 100vh;
+  font-family: 'Oswald', sans-serif;
+  color: var(--pale);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  background: linear-gradient(180deg, #030101 0%, var(--ink) 100%);
+  border-bottom: 1px solid var(--gold-dim);
+  padding: 28px 20px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.masthead::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0, transparent 29px, rgba(201,168,76,0.03) 29px, rgba(201,168,76,0.03) 30px);
+}
+.nbc-bug { font-size: 9px; font-weight: 300; letter-spacing: 5px; color: var(--ash); text-transform: uppercase; display: block; margin-bottom: 6px; }
+.show-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(32px, 9vw, 52px); color: var(--gold); text-transform: uppercase; letter-spacing: 2px; line-height: 0.95; display: block; text-shadow: 0 0 60px rgba(201,168,76,0.25); }
+.show-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(13px, 3.5vw, 17px); color: var(--blood-bright); letter-spacing: 3px; display: block; margin-top: 6px; }
+.gold-rule { width: 60%; max-width: 280px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 12px auto; }
+.tap-hint { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 12px; color: var(--ash); letter-spacing: 1.5px; display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 4px; }
+.tap-hint::before, .tap-hint::after { content: '✦'; font-size: 8px; color: var(--gold); opacity: 0.5; }
+
+/* ── SEASON LABELS ── */
+.season-label {
+  text-align: center;
+  padding: 18px 20px 10px;
+  position: relative;
+}
+.season-label::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+}
+.season-text {
+  display: inline-block;
+  position: relative;
+  background: var(--ink);
+  padding: 0 16px;
+  font-family: 'Playfair Display', serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  z-index: 1;
+}
+.season-sub {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 11px;
+  color: var(--ash);
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+/* ── SEASON BREAK ── */
+.season-break {
+  margin: 8px 16px;
+  border: 1px solid rgba(139,0,0,0.3);
+  background: linear-gradient(180deg, rgba(139,0,0,0.06), transparent);
+  padding: 14px 16px;
+  text-align: center;
+}
+.break-label { font-size: 9px; letter-spacing: 4px; color: var(--blood-bright); text-transform: uppercase; display: block; margin-bottom: 6px; }
+.break-quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 13px; color: var(--ash); line-height: 1.6; }
+.break-attr { font-size: 9px; letter-spacing: 2px; color: rgba(201,168,76,0.4); text-transform: uppercase; display: block; margin-top: 6px; }
+
+/* ── BOARDROOM ── */
+.boardroom { position: relative; padding: 24px 16px 20px; background: linear-gradient(180deg, var(--ink) 0%, #0d0907 100%); }
+
+.chandelier-bar { display: flex; justify-content: center; align-items: flex-start; margin-bottom: 20px; position: relative; height: 50px; }
+.chain { width: 2px; height: 30px; background: linear-gradient(180deg, #6a5010, var(--gold), #6a5010); margin: 0 auto; }
+.light-row { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; gap: clamp(16px,5vw,30px); align-items: flex-end; }
+.candle-unit { display: flex; flex-direction: column; align-items: center; }
+.flame { width: 8px; height: 11px; background: radial-gradient(ellipse at 50% 80%, #ffaa00, #ff5500 60%, transparent); border-radius: 50% 50% 40% 40%; animation: flicker 1.8s ease-in-out infinite alternate; filter: blur(0.5px); }
+@keyframes flicker { 0%{transform:scaleX(1) scaleY(1) rotate(-2deg);opacity:.9} 40%{transform:scaleX(.8) scaleY(1.1) rotate(1deg);opacity:1} 70%{transform:scaleX(1.1) scaleY(.85) rotate(-1deg);opacity:.85} 100%{transform:scaleX(.9) scaleY(1.05) rotate(2deg);opacity:.95} }
+.candle-body { width: 5px; height: 14px; background: linear-gradient(180deg, #f0e8cc, #c8b888, #a09060); border-radius: 1px; }
+.candle-arm-line { position: absolute; top: 25px; left: 50%; transform: translateX(-50%); width: 70%; max-width: 260px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold-dim), var(--gold), var(--gold-dim), transparent); }
+
+/* ── HOST ROW ── */
+.host-row { display: flex; justify-content: center; margin-bottom: 20px; }
+
+/* ── TABLE ── */
+.table-surface { height: 14px; background: linear-gradient(180deg, #2a1a08, #1a1005); border-top: 2px solid var(--gold); border-bottom: 1px solid rgba(0,0,0,0.8); margin: 0 4px; box-shadow: 0 6px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(201,168,76,0.2); }
+
+/* ── GRID ── */
+.cabinet-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; max-width: 480px; margin: 16px auto 0; padding: 0 4px; }
+@media(min-width:600px){ .cabinet-grid{grid-template-columns:repeat(3,1fr);gap:14px;} }
+
+/* ── CARD ── */
+.char-card { position: relative; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; border: 1px solid rgba(201,168,76,0.12); background: linear-gradient(180deg, #130d09, #0a0705); transition: border-color .25s, transform .2s; animation: riseIn .7s ease both; }
+.char-card:active { transform: scale(0.97); }
+.char-card.active { border-color: var(--gold); }
+.char-card.host-card { max-width: 240px; width: 100%; border-color: rgba(201,168,76,0.3); }
+.char-card.host-card.active { border-color: var(--gold-light); }
+.char-card.s1-card { border-color: rgba(201,168,76,0.08); }
+.char-card.s1-card.active { border-color: rgba(201,168,76,0.6); }
+.char-card.fired { opacity: 0.85; }
+
+@keyframes riseIn { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+/* Stagger */
+.char-card:nth-child(1){animation-delay:.05s}
+.char-card:nth-child(2){animation-delay:.1s}
+.char-card:nth-child(3){animation-delay:.15s}
+.char-card:nth-child(4){animation-delay:.2s}
+.char-card:nth-child(5){animation-delay:.25s}
+.char-card:nth-child(6){animation-delay:.3s}
+
+.card-topbar { height: 3px; background: linear-gradient(90deg, transparent, var(--gold-dim), var(--gold), var(--gold-dim), transparent); }
+.host-card .card-topbar { background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent); height: 4px; }
+.s1-card .card-topbar { background: linear-gradient(90deg, transparent, rgba(201,168,76,0.15), rgba(201,168,76,0.4), rgba(201,168,76,0.15), transparent); }
+.narrator-card .card-topbar { background: linear-gradient(90deg, transparent, rgba(139,0,0,0.3), rgba(200,50,30,0.5), rgba(139,0,0,0.3), transparent); }
+
+/* FIRED STAMP on card */
+.fired-badge {
+  position: absolute;
+  top: 8px; right: 6px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--blood-bright);
+  border: 1px solid rgba(139,0,0,0.5);
+  padding: 2px 5px;
+  background: rgba(139,0,0,0.1);
+  transform: rotate(6deg);
+  z-index: 5;
+  text-transform: uppercase;
+}
+
+.card-figure { padding: 14px 10px 6px; display: flex; flex-direction: column; align-items: center; position: relative; }
+.host-card .card-figure { padding: 20px 16px 10px; }
+.figure-svg { width: 76px; height: 114px; }
+.host-card .figure-svg { width: 110px; height: 160px; }
+
+.card-nameplate { border-top: 1px solid rgba(201,168,76,0.15); padding: 7px 8px 9px; text-align: center; background: rgba(0,0,0,0.2); }
+.char-name { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: clamp(12px,3.2vw,15px); letter-spacing: 2px; color: var(--gold-light); text-transform: uppercase; display: block; line-height: 1; }
+.host-card .char-name { font-size: clamp(16px,4.5vw,22px); color: var(--gold); }
+.char-role { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(9px,2.5vw,11px); color: var(--ash); letter-spacing: 1px; display: block; margin-top: 2px; }
+.days-on-set { font-size: 8px; letter-spacing: 1px; color: rgba(139,0,0,0.7); display: block; margin-top: 1px; font-family: 'Oswald', sans-serif; }
+.tap-indicator { font-size: 8px; letter-spacing: 2px; color: rgba(201,168,76,0.35); text-transform: uppercase; margin-top: 4px; display: block; transition: color .2s; }
+.char-card.active .tap-indicator { color: var(--blood-bright); }
+
+/* ── DOSSIER ── */
+.dossier { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.4,0,.2,1); }
+.dossier.open { max-height: 600px; }
+.dossier-inner { border-top: 1px solid var(--gold-dim); background: linear-gradient(180deg, #180c06, #100806); padding: 12px 12px 14px; position: relative; }
+.dossier-inner::before { content: 'FILE UNSEALED'; position: absolute; top: 8px; right: 10px; font-size: 7px; letter-spacing: 3px; color: var(--blood-bright); opacity: 0.5; font-family: 'Oswald', sans-serif; }
+.dossier-headline { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(12px,3.2vw,15px); color: var(--gold-light); line-height: 1.3; margin-bottom: 8px; padding-right: 70px; }
+.dossier-body { font-family: 'Cormorant Garamond', serif; font-size: clamp(13px,3.6vw,15px); line-height: 1.7; color: var(--pale); }
+.dossier-source { display: block; margin-top: 10px; font-family: 'Oswald', sans-serif; font-size: 8px; letter-spacing: 2px; color: var(--ash); text-transform: uppercase; border-top: 1px solid rgba(201,168,76,0.1); padding-top: 8px; }
+.verdict { display: inline-block; margin-top: 8px; padding: 3px 9px; border: 1px solid var(--blood); font-family: 'Oswald', sans-serif; font-size: 9px; letter-spacing: 2px; color: var(--blood-bright); text-transform: uppercase; background: rgba(139,0,0,0.1); }
+
+/* ── FOOTER ── */
+.show-footer { background: var(--ink); border-top: 1px solid var(--gold-dim); padding: 20px 20px 36px; text-align: center; }
+.footer-quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(12px,3.5vw,14px); color: var(--ash); line-height: 1.7; max-width: 340px; margin: 0 auto 12px; }
+.narrator-credit { font-family: 'Oswald', sans-serif; font-size: 9px; letter-spacing: 3px; color: rgba(201,168,76,0.35); text-transform: uppercase; }
+
+/* FX */
+.fired-wm { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-20deg); font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(48px,18vw,100px); color: transparent; -webkit-text-stroke: 2px rgba(139,0,0,0.05); pointer-events: none; z-index: 0; white-space: nowrap; user-select: none; }
+@keyframes bolt { 0%,89%,93%,96%,100%{opacity:0} 90%{opacity:.025} 91%{opacity:0} 92%{opacity:.03} }
+.lightning-overlay { position: fixed; inset: 0; background: rgba(255,245,210,1); pointer-events: none; z-index: 999; animation: bolt 12s ease infinite; }
+
+::-webkit-scrollbar{width:4px} ::-webkit-scrollbar-track{background:var(--ink)} ::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="fired-wm">YOU'RE FIRED</div>
+<div class="lightning-overlay"></div>
+
+<header class="masthead">
+  <span class="nbc-bug">NBC · Washington Edition · All Seasons</span>
+  <span class="show-title">The Apprentice</span>
+  <div class="gold-rule"></div>
+  <span class="show-subtitle">Washington Edition</span>
+  <div class="gold-rule" style="margin-top:10px;"></div>
+  <p class="tap-hint">Tap any figure to unseal their file</p>
+</header>
+
+<main class="boardroom">
+  <!-- Chandelier -->
+  <div class="chandelier-bar">
+    <div class="chain"></div>
+    <div class="candle-arm-line"></div>
+    <div class="light-row">
+      <div class="candle-unit"><div class="flame"></div><div class="candle-body"></div></div>
+      <div class="candle-unit"><div class="flame" style="animation-delay:.3s"></div><div class="candle-body"></div></div>
+      <div class="candle-unit"><div class="flame" style="animation-delay:.7s"></div><div class="candle-body"></div></div>
+      <div class="candle-unit"><div class="flame" style="animation-delay:.15s"></div><div class="candle-body"></div></div>
+      <div class="candle-unit"><div class="flame" style="animation-delay:.5s"></div><div class="candle-body"></div></div>
+    </div>
+  </div>
+
+  <!-- HOST -->
+  <div class="host-row">
+    <div class="char-card host-card" onclick="toggleCard(this)">
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 110 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="55" cy="158" rx="42" ry="5" fill="rgba(0,0,0,0.5)"/>
+          <rect x="18" y="80" width="74" height="78" rx="4" fill="#1a1005"/>
+          <polygon points="55,90 38,82 38,115 55,105" fill="#2a1a08" opacity="0.8"/>
+          <polygon points="55,90 72,82 72,115 55,105" fill="#2a1a08" opacity="0.8"/>
+          <line x1="55" y1="90" x2="38" y2="82" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+          <line x1="55" y1="90" x2="72" y2="82" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+          <polygon points="51,86 59,86 62,130 55,138 48,130" fill="#8b0000"/>
+          <polygon points="52,88 58,88 60,120 55,128 50,120" fill="#aa1010"/>
+          <rect x="46" y="62" width="18" height="22" rx="4" fill="#d4a870"/>
+          <ellipse cx="55" cy="52" rx="28" ry="32" fill="#e8c090"/>
+          <ellipse cx="55" cy="24" rx="31" ry="16" fill="#d4a030"/>
+          <path d="M26 28 Q30 14 55 18 Q75 14 84 28 Q70 20 55 22 Q40 20 26 28Z" fill="#c09020"/>
+          <path d="M83 25 Q95 22 90 35 Q84 28 83 25Z" fill="#c09020"/>
+          <ellipse cx="44" cy="50" rx="5" ry="4" fill="#1a0a00"/>
+          <ellipse cx="66" cy="50" rx="5" ry="4" fill="#1a0a00"/>
+          <circle cx="46" cy="49" r="1.5" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="68" cy="49" r="1.5" fill="rgba(255,255,255,0.5)"/>
+          <path d="M39 43 Q44 40 49 43" stroke="#8b5a20" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M61 43 Q66 40 71 43" stroke="#8b5a20" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M46 67 Q55 72 64 67" stroke="#a06040" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <ellipse cx="37" cy="57" rx="8" ry="6" fill="rgba(220,120,50,0.15)"/>
+          <ellipse cx="73" cy="57" rx="8" ry="6" fill="rgba(220,120,50,0.15)"/>
+          <circle cx="55" cy="148" r="2" fill="rgba(201,168,76,0.3)"/>
+          <polygon points="22,90 30,90 28,80 20,83" fill="#c9a84c" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Donald Trump</span>
+        <span class="char-role">45th · 47th · The Host</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">"I could stand in the middle of Fifth Avenue and shoot somebody…"</p>
+          <p class="dossier-body">In 2016, Trump boasted his supporters were so loyal he could shoot someone on Fifth Avenue and not lose a vote. In 2024, a Manhattan jury agreed with a different premise — finding him guilty on 34 felony counts of falsifying business records. He was sentenced, then became President again anyway. The boardroom got bigger.</p>
+          <span class="verdict">STATUS: Convicted. Elected. Inaugurated.</span>
+          <span class="dossier-source">Source: Manhattan DA · Jan. 20, 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-surface"></div>
+
+  <!-- SEASON ONE -->
+  <div class="season-label">
+    <span class="season-text">Season One · The Fired</span>
+    <span class="season-sub">They believed the show was real.</span>
+  </div>
+
+  <div class="cabinet-grid">
+
+    <!-- FLYNN -->
+    <div class="char-card s1-card fired" onclick="toggleCard(this)">
+      <div class="fired-badge">24 Days</div>
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="12" y="61" width="56" height="57" rx="3" fill="#0a1218"/>
+          <rect x="12" y="61" width="56" height="4" fill="rgba(100,140,180,0.2)"/>
+          <circle cx="23" cy="74" r="4" fill="rgba(201,168,76,0.7)"/>
+          <circle cx="33" cy="74" r="4" fill="rgba(180,50,50,0.7)"/>
+          <circle cx="43" cy="74" r="4" fill="rgba(100,140,180,0.6)"/>
+          <rect x="21" y="67" width="4" height="5" fill="rgba(201,168,76,0.4)"/>
+          <rect x="31" y="67" width="4" height="5" fill="rgba(180,50,50,0.4)"/>
+          <rect x="41" y="67" width="4" height="5" fill="rgba(100,140,180,0.4)"/>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#c89868"/>
+          <ellipse cx="40" cy="36" rx="20" ry="23" fill="#d0a870"/>
+          <ellipse cx="40" cy="15" rx="21" ry="10" fill="#2a1a10"/>
+          <ellipse cx="33" cy="34" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="47" cy="34" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="34.5" cy="33" r="1.2" fill="rgba(255,255,255,0.45)"/>
+          <circle cx="48.5" cy="33" r="1.2" fill="rgba(255,255,255,0.45)"/>
+          <path d="M33 48 Q40 52 47 48" stroke="#903030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Whisper gesture - hand near mouth -->
+          <path d="M50 85 Q58 82 62 87" stroke="rgba(201,168,76,0.3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Flynn</span>
+        <span class="char-role">Nat'l Security Advisor</span>
+        <span class="days-on-set">◆ FIRED · Season 1</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Lied to the FBI about Russia. Then begged for a pardon. Then led "Lock Her Up" chants at the RNC anyway.</p>
+          <p class="dossier-body">Michael Flynn lasted 24 days as National Security Advisor — the shortest tenure in history. He lied to FBI agents about his conversations with Russian Ambassador Sergey Kislyak, pled guilty, flipped on Trump, then un-flipped, then begged for a pardon. He got it. He then went on to suggest the U.S. should have a single national religion and that Myanmar's military coup should be replicated in America. He said this at a QAnon conference. He brought his own microphone.</p>
+          <span class="verdict">FIRED: Day 24 · Pardoned: Dec. 2020</span>
+          <span class="dossier-source">Source: DOJ · FBI · 2017–2020</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNON -->
+    <div class="char-card s1-card fired" onclick="toggleCard(this)">
+      <div class="fired-badge">210 Days</div>
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="13" y="61" width="54" height="57" rx="3" fill="#100a06"/>
+          <!-- Rumpled look - layered shirts -->
+          <rect x="13" y="61" width="54" height="57" rx="3" fill="none" stroke="rgba(201,168,76,0.06)" stroke-width="1"/>
+          <polygon points="40,72 26,63 26,100 40,92" fill="#1a1008"/>
+          <polygon points="40,72 54,63 54,100 40,92" fill="#1a1008"/>
+          <!-- Polo collar under blazer -->
+          <rect x="35" y="63" width="10" height="8" fill="#2a1808" opacity="0.8"/>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#c8a080"/>
+          <ellipse cx="40" cy="35" rx="21" ry="24" fill="#d0a878"/>
+          <!-- Disheveled hair -->
+          <path d="M19 22 Q25 10 40 12 Q55 10 61 22 Q52 14 40 16 Q28 14 19 22Z" fill="#3a2810"/>
+          <path d="M19 22 Q17 30 19 38" stroke="#3a2810" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="32" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="48" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="33.5" cy="32" r="1.2" fill="rgba(255,255,255,0.4)"/>
+          <circle cx="49.5" cy="32" r="1.2" fill="rgba(255,255,255,0.4)"/>
+          <!-- Smirk -->
+          <path d="M33 46 Q42 52 48 46" stroke="#804020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Stubble -->
+          <ellipse cx="40" cy="50" rx="14" ry="6" fill="rgba(40,25,10,0.15)"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Bannon</span>
+        <span class="char-role">Chief Strategist</span>
+        <span class="days-on-set">◆ FIRED · Season 1</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Indicted for fraud. Went to prison. Got out. Immediately started another podcast.</p>
+          <p class="dossier-body">Steve Bannon, the architect of MAGA's political identity, was fired after giving an interview calling himself "the real president." He was then indicted for defrauding donors to a private "We Build the Wall" fundraiser — pocketing money meant for border security. He was convicted, sentenced to 4 months in federal prison, served it, and returned to his War Room podcast before the ink on his release papers was dry. He called prison "a resort." The other inmates were reportedly not consulted.</p>
+          <span class="verdict">FIRED: Aug. 2017 · Imprisoned: 2024</span>
+          <span class="dossier-source">Source: SDNY · FBI · War Room Podcast</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TILLERSON -->
+    <div class="char-card s1-card fired" onclick="toggleCard(this)">
+      <div class="fired-badge">405 Days</div>
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="13" y="61" width="54" height="57" rx="3" fill="#100c08"/>
+          <polygon points="40,72 26,63 26,100 40,92" fill="#1a1408"/>
+          <polygon points="40,72 54,63 54,100 40,92" fill="#1a1408"/>
+          <!-- Subtle striped tie -->
+          <polygon points="37,68 43,68 46,108 40,114 34,108" fill="#1a2840"/>
+          <polygon points="38,70 42,70 44,100 40,106 36,100" fill="#2a3850"/>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#d0b090"/>
+          <ellipse cx="40" cy="34" rx="21" ry="24" fill="#d8b888"/>
+          <!-- Silver/white hair -->
+          <ellipse cx="40" cy="13" rx="22" ry="11" fill="#a0a098"/>
+          <!-- Phone (being fired by tweet) -->
+          <rect x="13" y="92" width="8" height="14" rx="1" fill="rgba(100,160,220,0.2)" stroke="rgba(100,160,220,0.3)" stroke-width="0.5"/>
+          <rect x="15" y="94" width="4" height="8" fill="rgba(100,160,220,0.15)"/>
+          <ellipse cx="32" cy="32" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="48" cy="32" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="33.5" cy="31" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="49.5" cy="31" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <!-- Weary expression -->
+          <path d="M34 45 Q40 48 46 45" stroke="#806040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Brows slightly raised -->
+          <path d="M29 26 Q33 24 37 26" stroke="#6a5030" stroke-width="1.5" fill="none"/>
+          <path d="M43 26 Q47 24 51 26" stroke="#6a5030" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Tillerson</span>
+        <span class="char-role">Sec. of State</span>
+        <span class="days-on-set">◆ FIRED · Season 1</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Called Trump a "moron." Got fired by tweet. From a bathroom. In Kenya.</p>
+          <p class="dossier-body">Rex Tillerson, former ExxonMobil CEO and one-time Secretary of State, reportedly told colleagues that Trump was a "moron" after a Pentagon meeting. He never fully denied it. In March 2018, while on a diplomatic trip to Africa, he woke up to learn via Twitter that he had been fired — reportedly while in or near a bathroom at his hotel in Kenya. Trump announced his replacement had already been chosen. Tillerson later said Trump "acts on instinct" without being "fully informed." He was being diplomatic.</p>
+          <span class="verdict">FIRED: March 2018 · Via Tweet · From Kenya</span>
+          <span class="dossier-source">Source: NBC News · State Dept. · 2018</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SESSIONS -->
+    <div class="char-card s1-card fired" onclick="toggleCard(this)">
+      <div class="fired-badge">708 Days</div>
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="13" y="61" width="54" height="57" rx="3" fill="#0f0c08"/>
+          <polygon points="40,72 26,63 26,100 40,92" fill="#181208"/>
+          <polygon points="40,72 54,63 54,100 40,92" fill="#181208"/>
+          <polygon points="37,68 43,68 46,108 40,114 34,108" fill="#2a1a08"/>
+          <polygon points="38,70 42,70 44,100 40,106 36,100" fill="#3a2810"/>
+          <rect x="33" y="46" width="14" height="17" rx="3" fill="#d8c0a0"/>
+          <!-- Smaller, older looking head -->
+          <ellipse cx="40" cy="36" rx="19" ry="22" fill="#dcc8a8"/>
+          <!-- White fluffy hair -->
+          <ellipse cx="40" cy="16" rx="21" ry="12" fill="#d8d4cc"/>
+          <path d="M19 22 Q22 14 40 14 Q58 14 61 22" stroke="#d0ccc4" stroke-width="4" fill="none"/>
+          <!-- Jug ears -->
+          <ellipse cx="21" cy="36" rx="4" ry="5" fill="#dcc8a8"/>
+          <ellipse cx="59" cy="36" rx="4" ry="5" fill="#dcc8a8"/>
+          <ellipse cx="33" cy="34" rx="3" ry="2.5" fill="#1a0a00"/>
+          <ellipse cx="47" cy="34" rx="3" ry="2.5" fill="#1a0a00"/>
+          <circle cx="34" cy="33" r="1" fill="rgba(255,255,255,0.4)"/>
+          <circle cx="48" cy="33" r="1" fill="rgba(255,255,255,0.4)"/>
+          <!-- Thin lips pursed -->
+          <line x1="33" y1="47" x2="47" y2="47" stroke="#906050" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- RECUSED stamp idea: tiny paper in hand -->
+          <rect x="52" y="88" width="14" height="10" rx="1" fill="rgba(201,168,76,0.1)" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+          <text x="53.5" y="96" font-size="4" fill="rgba(201,168,76,0.5)" font-family="sans-serif">RECUSED</text>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Sessions</span>
+        <span class="char-role">Attorney General</span>
+        <span class="days-on-set">◆ FIRED · Season 1</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Was Trump's most loyal ally. Recused himself. Spent two years being publicly humiliated on Twitter.</p>
+          <p class="dossier-body">Jeff Sessions was the first senator to endorse Trump in 2016 — a risk that electrified the campaign. As Attorney General, he recused himself from the Russia investigation as legally required. Trump never forgave him. For nearly two years, Trump publicly attacked Sessions on Twitter — calling him "weak," "beleaguered," and "disgraceful." Sessions endured it all in silence. The day after the 2018 midterms, Trump fired him by letter. Sessions later ran for his old Senate seat. Trump destroyed him in the primary. He lost to Tommy Tuberville.</p>
+          <span class="verdict">FIRED: Nov. 7, 2018 · By letter · Day after midterms</span>
+          <span class="dossier-source">Source: DOJ · Twitter archive · 2017–2018</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KELLY -->
+    <div class="char-card s1-card fired" onclick="toggleCard(this)">
+      <div class="fired-badge">571 Days</div>
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="12" y="61" width="56" height="57" rx="3" fill="#0a1015"/>
+          <rect x="12" y="61" width="56" height="4" fill="rgba(80,120,160,0.2)"/>
+          <!-- More medals -->
+          <circle cx="22" cy="73" r="3.5" fill="rgba(201,168,76,0.65)"/>
+          <circle cx="30" cy="73" r="3.5" fill="rgba(180,50,50,0.65)"/>
+          <circle cx="38" cy="73" r="3.5" fill="rgba(100,140,180,0.65)"/>
+          <circle cx="46" cy="73" r="3.5" fill="rgba(201,168,76,0.5)"/>
+          <rect x="20" y="67" width="4" height="5" fill="rgba(201,168,76,0.35)"/>
+          <rect x="28" y="67" width="4" height="5" fill="rgba(180,50,50,0.35)"/>
+          <rect x="36" y="67" width="4" height="5" fill="rgba(100,140,180,0.35)"/>
+          <rect x="44" y="67" width="4" height="5" fill="rgba(201,168,76,0.25)"/>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#d0b090"/>
+          <ellipse cx="40" cy="34" rx="20" ry="24" fill="#d8b888"/>
+          <!-- Silver hair, close cropped -->
+          <ellipse cx="40" cy="13" rx="21" ry="10" fill="#9a9590"/>
+          <ellipse cx="32" cy="32" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="48" cy="32" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="33.5" cy="31" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="49.5" cy="31" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <!-- Stoic expression -->
+          <line x1="33" y1="46" x2="47" y2="46" stroke="#806040" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Facepalm hand gesture -->
+          <path d="M14 100 Q18 90 22 95" stroke="rgba(200,170,120,0.4)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="18" cy="96" rx="5" ry="4" fill="rgba(200,170,120,0.15)"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Kelly</span>
+        <span class="char-role">Chief of Staff</span>
+        <span class="days-on-set">◆ FIRED · Season 1</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Four-star general. Said Trump is "the most flawed human being I have ever met." Voted for him anyway.</p>
+          <p class="dossier-body">John Kelly, retired Marine general and Gold Star father, became Chief of Staff to bring discipline to chaos. He later described the White House as near-constant disorder and said Trump surrounded himself with "yes-men." In 2024, Kelly publicly called Trump "a fascist to the core" and said he was "the most flawed person" he'd ever encountered. Trump called Kelly "the dumbest of my military guys." Then, in November 2024, John Kelly voted for Donald Trump anyway. The general had his reasons. He kept them to himself.</p>
+          <span class="verdict">RESIGNED: Dec. 2018 · Voted for him: Nov. 2024</span>
+          <span class="dossier-source">Source: Atlantic · NYT · 2024 election</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MATTIS -->
+    <div class="char-card s1-card fired" onclick="toggleCard(this)">
+      <div class="fired-badge">688 Days</div>
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="12" y="61" width="56" height="57" rx="3" fill="#0a0e12"/>
+          <rect x="12" y="61" width="56" height="4" fill="rgba(60,100,140,0.2)"/>
+          <circle cx="23" cy="74" r="4" fill="rgba(201,168,76,0.7)"/>
+          <circle cx="33" cy="74" r="4" fill="rgba(180,50,50,0.7)"/>
+          <circle cx="43" cy="74" r="4" fill="rgba(100,140,200,0.7)"/>
+          <circle cx="53" cy="74" r="4" fill="rgba(201,168,76,0.5)"/>
+          <rect x="21" y="67" width="4" height="5" fill="rgba(201,168,76,0.4)"/>
+          <rect x="31" y="67" width="4" height="5" fill="rgba(180,50,50,0.4)"/>
+          <rect x="41" y="67" width="4" height="5" fill="rgba(100,140,200,0.4)"/>
+          <rect x="51" y="67" width="4" height="5" fill="rgba(201,168,76,0.3)"/>
+          <rect x="33" y="46" width="14" height="17" rx="3" fill="#c8a878"/>
+          <ellipse cx="40" cy="35" rx="21" ry="23" fill="#d0a870"/>
+          <!-- Bald/very short hair -->
+          <ellipse cx="40" cy="14" rx="22" ry="9" fill="#888078"/>
+          <!-- Intense eyes -->
+          <ellipse cx="32" cy="33" rx="4" ry="3.5" fill="#1a0a00"/>
+          <ellipse cx="48" cy="33" rx="4" ry="3.5" fill="#1a0a00"/>
+          <circle cx="33" cy="32" r="1.5" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="49" cy="32" r="1.5" fill="rgba(255,255,255,0.5)"/>
+          <!-- Book in hand (Warrior Monk) -->
+          <rect x="53" y="90" width="10" height="14" rx="1" fill="rgba(80,60,40,0.5)" stroke="rgba(120,100,60,0.4)" stroke-width="0.5"/>
+          <line x1="58" y1="90" x2="58" y2="104" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+          <!-- Flat mouth -->
+          <line x1="33" y1="46" x2="47" y2="46" stroke="#806040" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Mattis</span>
+        <span class="char-role">Sec. of Defense</span>
+        <span class="days-on-set">◆ RESIGNED · Season 1</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Resigned with a letter so brutal it was assigned reading in political science classes.</p>
+          <p class="dossier-body">General James "Mad Dog" Mattis — the Warrior Monk, the most decorated Marine of his generation — resigned as Secretary of Defense in December 2018 after Trump announced a sudden withdrawal from Syria without consulting him. His resignation letter was a methodical, devastating rebuke: allies must be treated with respect, adversaries must be held accountable, and the President deserved a Secretary of Defense whose views were "more aligned." Trump said Mattis was "essentially fired." Mattis did not respond. He went home and read Stoic philosophy. This is documented.</p>
+          <span class="verdict">RESIGNED: Dec. 20, 2018 · Letter still circulates</span>
+          <span class="dossier-source">Source: Pentagon · DOD · Resignation letter, 2018</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /season 1 grid -->
+
+  <!-- SEASON BREAK -->
+  <div class="season-break">
+    <span class="break-label">⚡ Season Break · Special Appearance</span>
+    <p class="break-quote">"I was there eleven days. I watched the rest of Season One from my couch. Somehow louder from out here."</p>
+    <span class="break-attr">— Anthony Scaramucci · Communications Director · Days on Set: 11</span>
+  </div>
+
+  <!-- SEASON TWO -->
+  <div class="season-label" style="padding-top:22px;">
+    <span class="season-text">Season Two · Still Running</span>
+    <span class="season-sub">They know the show is real. They perform anyway.</span>
+  </div>
+
+  <div class="cabinet-grid">
+
+    <!-- HEGSETH -->
+    <div class="char-card" onclick="toggleCard(this)">
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="12" y="60" width="56" height="58" rx="3" fill="#0a1218"/>
+          <rect x="12" y="60" width="56" height="4" fill="rgba(100,140,180,0.15)"/>
+          <circle cx="24" cy="74" r="4" fill="rgba(201,168,76,0.6)"/>
+          <circle cx="34" cy="74" r="4" fill="rgba(180,50,50,0.6)"/>
+          <circle cx="44" cy="74" r="4" fill="rgba(201,168,76,0.4)"/>
+          <rect x="22" y="67" width="4" height="5" fill="rgba(201,168,76,0.3)"/>
+          <rect x="32" y="67" width="4" height="5" fill="rgba(180,50,50,0.3)"/>
+          <rect x="42" y="67" width="4" height="5" fill="rgba(100,140,180,0.3)"/>
+          <!-- Signal icon hint -->
+          <circle cx="60" cy="90" r="7" fill="rgba(50,150,200,0.1)" stroke="rgba(50,150,200,0.2)" stroke-width="0.8"/>
+          <text x="57" y="94" font-size="7" fill="rgba(50,150,200,0.5)" font-family="sans-serif">✉</text>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#d0a878"/>
+          <ellipse cx="40" cy="37" rx="21" ry="24" fill="#d8b080"/>
+          <ellipse cx="40" cy="16" rx="21" ry="10" fill="#3a2a18"/>
+          <ellipse cx="33" cy="36" rx="4" ry="3.5" fill="#1a0a00"/>
+          <ellipse cx="47" cy="36" rx="4" ry="3.5" fill="#1a0a00"/>
+          <circle cx="34.5" cy="35" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="48.5" cy="35" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <path d="M33 49 Q40 53 47 49" stroke="#904030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Hegseth</span>
+        <span class="char-role">Sec. of Defense</span>
+        <span class="days-on-set">◇ SEASON 2 · ACTIVE</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Texted war plans to a Signal chat. His wife was in it. So was his personal lawyer.</p>
+          <p class="dossier-body">Secretary Hegseth shared classified operational details about upcoming strikes on Yemen in a Signal group chat — which included his wife, his brother, and his personal attorney. This was entirely separate from the already-infamous chat where a reporter was accidentally added. He called it "information sharing." Critics called it several federal statutes. The Pentagon called it "not ideal." He remains in office.</p>
+          <span class="verdict">STATUS: Confirmed · Somehow · Still texting</span>
+          <span class="dossier-source">Source: The Atlantic · March 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BONDI -->
+    <div class="char-card" onclick="toggleCard(this)">
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="14" y="62" width="52" height="56" rx="3" fill="#10100a"/>
+          <polygon points="40,72 26,64 26,98 40,90" fill="#1a1a28"/>
+          <polygon points="40,72 54,64 54,98 40,90" fill="#1a1a28"/>
+          <path d="M19 35 Q16 60 18 90 Q22 100 24 115" stroke="#c8a030" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.9"/>
+          <path d="M61 35 Q64 60 62 90 Q58 100 56 115" stroke="#c8a030" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.9"/>
+          <rect x="33" y="46" width="14" height="18" rx="3" fill="#e0b890"/>
+          <ellipse cx="40" cy="36" rx="21" ry="24" fill="#e8c098"/>
+          <ellipse cx="40" cy="14" rx="23" ry="12" fill="#c8a030"/>
+          <ellipse cx="33" cy="34" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="47" cy="34" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="34" cy="33" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="48" cy="33" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <path d="M33 47 Q40 52 47 47" stroke="#904030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="33" cy="58" r="2" fill="rgba(220,215,205,0.6)"/>
+          <circle cx="38" cy="57" r="2" fill="rgba(220,215,205,0.6)"/>
+          <circle cx="43" cy="57" r="2" fill="rgba(220,215,205,0.6)"/>
+          <circle cx="48" cy="58" r="2" fill="rgba(220,215,205,0.6)"/>
+          <!-- Stock ticker -->
+          <rect x="12" y="100" width="18" height="8" rx="1" fill="rgba(0,120,0,0.2)" stroke="rgba(0,180,0,0.2)" stroke-width="0.5"/>
+          <text x="13" y="107" font-size="4" fill="rgba(0,200,0,0.6)" font-family="sans-serif">↑ DOW</text>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Bondi</span>
+        <span class="char-role">Attorney General</span>
+        <span class="days-on-set">◇ SEASON 2 · ACTIVE</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">A mass shooting survivor asked about gun reform. She answered with the stock market.</p>
+          <p class="dossier-body">At a Senate hearing, Attorney General Bondi was questioned by a Parkland survivor's parent about gun violence policy. Her response wandered — inexplicably — to the performance of the stock market under Trump. The room went silent. The internet did not. The moment became shorthand for a certain genre of Washington non-answer. She was confirmed 54–45 and is now the nation's top law enforcement officer.</p>
+          <span class="verdict">STATUS: Confirmed 54–45 · Market up</span>
+          <span class="dossier-source">Source: Senate Judiciary Hearing · Feb. 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOEM -->
+    <div class="char-card" onclick="toggleCard(this)">
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="14" y="62" width="52" height="56" rx="3" fill="#0a1208"/>
+          <polygon points="40,72 26,64 26,98 40,90" fill="#0f2015"/>
+          <polygon points="40,72 54,64 54,98 40,90" fill="#0f2015"/>
+          <path d="M19 32 Q15 60 16 90 Q20 105 22 115" stroke="#2a1a10" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.95"/>
+          <path d="M61 32 Q65 60 64 90 Q60 105 58 115" stroke="#2a1a10" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.95"/>
+          <rect x="33" y="46" width="14" height="18" rx="3" fill="#ddb890"/>
+          <ellipse cx="40" cy="36" rx="21" ry="24" fill="#e0b888"/>
+          <ellipse cx="40" cy="14" rx="23" ry="12" fill="#2a1a10"/>
+          <ellipse cx="33" cy="34" rx="3.5" ry="3" fill="#1a3a5a"/>
+          <ellipse cx="47" cy="34" rx="3.5" ry="3" fill="#1a3a5a"/>
+          <circle cx="34" cy="33" r="1.5" fill="rgba(200,230,255,0.7)"/>
+          <circle cx="48" cy="33" r="1.5" fill="rgba(200,230,255,0.7)"/>
+          <path d="M31 47 Q40 54 49 47" stroke="#904030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <rect x="54" y="74" width="10" height="7" rx="1" fill="rgba(100,140,200,0.3)" stroke="rgba(100,140,200,0.4)" stroke-width="0.5"/>
+          <text x="57" y="80" font-size="4" fill="rgba(200,220,255,0.7)" font-family="sans-serif" font-weight="bold">ICE</text>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Noem</span>
+        <span class="char-role">Homeland Security</span>
+        <span class="days-on-set">◇ SEASON 2 · ACTIVE</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">"Ice Barbie" deported a U.S. resident to El Salvador. Also shot her dog. Wrote about it proudly.</p>
+          <p class="dossier-body">Secretary Noem presided over an immigration blitz that sent dozens to a Salvadoran mega-prison — including a man who turned out to be a legal U.S. resident. Critics dubbed her "Ice Barbie." Separately, Noem wrote in her 2024 memoir about shooting her family's 14-month-old dog because it was "untrainable." The memoir was intended to help her political career. It was published. She got the job anyway.</p>
+          <span class="verdict">STATUS: Still deporting · Dog still gone</span>
+          <span class="dossier-source">Source: AP · DHS Records · 2024 memoir</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GABBARD -->
+    <div class="char-card" onclick="toggleCard(this)">
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="14" y="62" width="52" height="56" rx="3" fill="#0c0c10"/>
+          <polygon points="40,72 26,64 26,98 40,90" fill="#141420"/>
+          <polygon points="40,72 54,64 54,98 40,90" fill="#141420"/>
+          <!-- Dark flowing hair -->
+          <path d="M19 32 Q14 58 15 88 Q18 105 20 115" stroke="#1a1010" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.95"/>
+          <path d="M61 32 Q66 58 65 88 Q62 105 60 115" stroke="#1a1010" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.95"/>
+          <rect x="33" y="46" width="14" height="18" rx="3" fill="#c8a070"/>
+          <ellipse cx="40" cy="36" rx="21" ry="24" fill="#d0a878"/>
+          <ellipse cx="40" cy="14" rx="23" ry="12" fill="#1a1010"/>
+          <ellipse cx="33" cy="34" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="47" cy="34" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="34" cy="33" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="48" cy="33" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <path d="M33 47 Q40 52 47 47" stroke="#904030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- DNI badge -->
+          <rect x="53" y="85" width="13" height="9" rx="1" fill="rgba(60,80,120,0.3)" stroke="rgba(80,120,180,0.35)" stroke-width="0.5"/>
+          <text x="54.5" y="92" font-size="4" fill="rgba(120,160,220,0.8)" font-family="sans-serif" font-weight="bold">D·N·I</text>
+          <!-- Russia flag colors hint — tiny -->
+          <rect x="14" y="105" width="5" height="2" fill="rgba(200,200,220,0.3)"/>
+          <rect x="14" y="107" width="5" height="2" fill="rgba(100,100,200,0.2)"/>
+          <rect x="14" y="109" width="5" height="2" fill="rgba(180,40,40,0.2)"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Gabbard</span>
+        <span class="char-role">Dir. of Nat'l Intel.</span>
+        <span class="days-on-set">◇ SEASON 2 · ACTIVE</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Ran for President as a progressive. Now runs the spy agencies she once called corrupt.</p>
+          <p class="dossier-body">Tulsi Gabbard spent her congressional career denouncing the surveillance state, calling U.S. intelligence agencies liars, and defending Bashar al-Assad's Syria on Fox News. She visited Assad personally. She introduced legislation to stop arming "terrorists." She ran for president as a Democrat in 2020. By 2024 she had switched parties entirely. She now serves as Director of National Intelligence — overseeing the very agencies she spent a decade calling corrupt, dishonest, and dangerous. The receipts are on C-SPAN. All of them. In HD.</p>
+          <span class="verdict">STATUS: Confirmed · In charge of the deep state</span>
+          <span class="dossier-source">Source: Congressional record · DNI confirmation Jan. 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATEL -->
+    <div class="char-card" onclick="toggleCard(this)">
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="13" y="61" width="54" height="57" rx="3" fill="#0e0a06"/>
+          <polygon points="40,72 26,63 26,100 40,92" fill="#181208"/>
+          <polygon points="40,72 54,63 54,100 40,92" fill="#181208"/>
+          <!-- American flag pin -->
+          <circle cx="27" cy="70" r="3" fill="rgba(180,40,40,0.5)"/>
+          <rect x="25" y="68" width="4" height="4" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="0.5"/>
+          <!-- FBI seal hint -->
+          <circle cx="57" cy="80" r="6" fill="rgba(40,60,100,0.2)" stroke="rgba(80,120,180,0.3)" stroke-width="0.7"/>
+          <text x="54" y="84" font-size="5" fill="rgba(120,160,220,0.6)" font-family="sans-serif" font-weight="bold">FBI</text>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#b88860"/>
+          <ellipse cx="40" cy="35" rx="20" ry="23" fill="#c09070"/>
+          <ellipse cx="40" cy="14" rx="21" ry="11" fill="#1a1008"/>
+          <ellipse cx="32" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="48" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="33.5" cy="32" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="49.5" cy="32" r="1.2" fill="rgba(255,255,255,0.5)"/>
+          <!-- Confident smirk -->
+          <path d="M34 46 Q42 52 47 46" stroke="#804020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Book: "Government Gangsters" -->
+          <rect x="13" y="92" width="10" height="14" rx="1" fill="rgba(80,50,20,0.5)" stroke="rgba(120,90,40,0.4)" stroke-width="0.5"/>
+          <line x1="18" y1="92" x2="18" y2="106" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">Patel</span>
+        <span class="char-role">FBI Director</span>
+        <span class="days-on-set">◇ SEASON 2 · ACTIVE</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Published a list of journalists and officials he called "enemies." Then became FBI Director.</p>
+          <p class="dossier-body">Kash Patel wrote a book called <em>Government Gangsters</em> that named specific journalists, intelligence officials, and political figures as enemies of the state — a list he said deserved to be "prosecuted." He is now Director of the FBI, which has jurisdiction over prosecuting people. He has also said he intends to "come after" the media. When asked about the Epstein client list — a document Bondi also claimed was on her desk — Patel's FBI has remained conspicuously quiet. Two desks. One file. Nobody home.</p>
+          <span class="verdict">STATUS: Confirmed · Enemies list: still published</span>
+          <span class="dossier-source">Source: <em>Government Gangsters</em> · Senate Judiciary, 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RFK JR. -->
+    <div class="char-card" onclick="toggleCard(this)">
+      <div class="card-topbar"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="13" y="61" width="54" height="57" rx="3" fill="#0a0e0a"/>
+          <polygon points="40,72 26,63 26,100 40,92" fill="#101a10"/>
+          <polygon points="40,72 54,63 54,100 40,92" fill="#101a10"/>
+          <!-- Outdoor/rugged look - no tie, open collar -->
+          <rect x="36" y="63" width="8" height="12" fill="#c8b890" opacity="0.2"/>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#c8a888"/>
+          <!-- Weathered, older face -->
+          <ellipse cx="40" cy="35" rx="21" ry="23" fill="#c8a880"/>
+          <!-- Silver hair, thick -->
+          <ellipse cx="40" cy="14" rx="22" ry="12" fill="#b0a898"/>
+          <path d="M18 22 Q22 12 40 12 Q58 12 62 22" stroke="#a09888" stroke-width="5" fill="none"/>
+          <!-- Distinctive raspy eyes -->
+          <ellipse cx="32" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="48" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="33.5" cy="32" r="1.2" fill="rgba(255,255,255,0.45)"/>
+          <circle cx="49.5" cy="32" r="1.2" fill="rgba(255,255,255,0.45)"/>
+          <!-- Raspy mouth -->
+          <path d="M33 46 Q40 50 47 46" stroke="#806040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Measles virus dots (subtle) -->
+          <circle cx="25" cy="55" r="1.5" fill="rgba(180,60,60,0.25)"/>
+          <circle cx="55" cy="58" r="1.5" fill="rgba(180,60,60,0.2)"/>
+          <circle cx="20" cy="70" r="1" fill="rgba(180,60,60,0.15)"/>
+          <!-- HHS seal -->
+          <circle cx="57" cy="90" r="6" fill="rgba(40,80,40,0.2)" stroke="rgba(60,120,60,0.3)" stroke-width="0.7"/>
+          <text x="54.5" y="93" font-size="4" fill="rgba(100,180,100,0.6)" font-family="sans-serif" font-weight="bold">HHS</text>
+          <!-- Worm jar (Dead worm in his brain, memoir) -->
+          <rect x="13" y="96" width="9" height="12" rx="2" fill="rgba(60,80,40,0.2)" stroke="rgba(80,120,60,0.2)" stroke-width="0.5"/>
+          <path d="M15 100 Q18 102 16 104 Q19 106 17 108" stroke="rgba(100,150,60,0.4)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name">RFK Jr.</span>
+        <span class="char-role">Sec. of HHS</span>
+        <span class="days-on-set">◇ SEASON 2 · ACTIVE</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Spent 30 years warning about vaccines. Now runs public health. Measles came back on his watch.</p>
+          <p class="dossier-body">Robert F. Kennedy Jr. built his entire public identity around vaccine skepticism, pharmaceutical distrust, and institutional health agency corruption. He sued the CDC. He wrote books warning about government health capture. He ran for president on those beliefs. He is now Secretary of Health and Human Services — head of the agencies he spent decades calling criminal. In the spring of 2025, measles outbreaks spread across multiple U.S. states for the first time in decades. He also disclosed in a legal filing that a worm had eaten part of his brain and died there. He described this as "not a concern." Doctors disagreed.</p>
+          <span class="verdict">STATUS: In office · Measles: also in office</span>
+          <span class="dossier-source">Source: HHS · CDC · Court filing, 2012 · 2025 outbreak data</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /season 2 grid -->
+
+  <!-- COHEN — NARRATOR ROW -->
+  <div class="season-label" style="padding-top:24px;">
+    <span class="season-text" style="color: rgba(200,100,80,0.9);">The Voice in the Dark</span>
+    <span class="season-sub">He was inside. Now he's watching. He knows how it ends.</span>
+  </div>
+
+  <div class="host-row">
+    <div class="char-card narrator-card" onclick="toggleCard(this)" style="max-width:260px;width:100%;border-color:rgba(139,0,0,0.3);">
+      <div class="card-topbar" style="background:linear-gradient(90deg,transparent,rgba(139,0,0,0.3),rgba(200,50,30,0.6),rgba(139,0,0,0.3),transparent);height:4px;"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 110 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:160px;">
+          <ellipse cx="55" cy="158" rx="42" ry="5" fill="rgba(0,0,0,0.5)"/>
+          <!-- Suit — very dark -->
+          <rect x="18" y="80" width="74" height="78" rx="4" fill="#080808"/>
+          <polygon points="55,90 38,82 38,115 55,105" fill="#121212"/>
+          <polygon points="55,90 72,82 72,115 55,105" fill="#121212"/>
+          <!-- Dark blood tie -->
+          <polygon points="51,86 59,86 62,130 55,138 48,130" fill="#1a0000"/>
+          <polygon points="52,88 58,88 60,120 55,128 50,120" fill="#2a0505"/>
+          <!-- Microphone — prominent -->
+          <rect x="68" y="95" width="7" height="28" rx="3" fill="rgba(160,160,160,0.35)"/>
+          <ellipse cx="71" cy="93" rx="6" ry="7" fill="rgba(140,140,140,0.25)" stroke="rgba(200,200,200,0.25)" stroke-width="1"/>
+          <!-- Cord -->
+          <path d="M68 122 Q62 132 65 140" stroke="rgba(100,100,100,0.3)" stroke-width="1.5" fill="none"/>
+          <!-- Neck -->
+          <rect x="46" y="62" width="18" height="22" rx="4" fill="#c8a878"/>
+          <!-- Head -->
+          <ellipse cx="55" cy="52" rx="26" ry="30" fill="#d0a870"/>
+          <!-- Receding hair -->
+          <path d="M30 32 Q38 18 55 20 Q72 18 80 32 Q68 22 55 24 Q42 22 30 32Z" fill="#2a1a10"/>
+          <path d="M30 32 Q28 42 30 52" stroke="#2a1a10" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- Knowing eyes -->
+          <ellipse cx="44" cy="50" rx="4.5" ry="4" fill="#1a0a00"/>
+          <ellipse cx="66" cy="50" rx="4.5" ry="4" fill="#1a0a00"/>
+          <circle cx="45.5" cy="49" r="1.8" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="67.5" cy="49" r="1.8" fill="rgba(255,255,255,0.5)"/>
+          <!-- Wry half-smile -->
+          <path d="M44 66 Q55 72 62 66" stroke="#804020" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <!-- NARRATOR badge -->
+          <rect x="20" y="148" width="38" height="10" rx="1" fill="rgba(139,0,0,0.35)" stroke="rgba(180,40,30,0.5)" stroke-width="0.8"/>
+          <text x="23" y="156" font-size="6" fill="rgba(220,100,80,0.95)" font-family="sans-serif" font-weight="bold">NARRATOR</text>
+          <!-- Stars of testimony — subtle -->
+          <circle cx="38" cy="90" r="1.5" fill="rgba(201,168,76,0.2)"/>
+          <circle cx="44" cy="88" r="1.5" fill="rgba(201,168,76,0.2)"/>
+          <circle cx="32" cy="88" r="1.5" fill="rgba(201,168,76,0.2)"/>
+        </svg>
+      </div>
+      <div class="card-nameplate" style="border-top-color:rgba(139,0,0,0.3);">
+        <span class="char-name" style="color:rgba(220,120,100,0.9);font-size:clamp(16px,4.5vw,22px);">Michael Cohen</span>
+        <span class="char-role">Narrator · Fixer · Witness</span>
+        <span class="days-on-set" style="color:rgba(200,80,60,0.7);">◆ DISBARRED · PODCASTING · THRIVING</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">"I know where the bodies are buried. I helped bury them."</p>
+          <p class="dossier-body">Michael Cohen served as Trump's personal fixer for a decade — arranging hush money payments, silencing journalists, and doing whatever was asked without question. He went to federal prison for it. Otisville. Three years. Upon release he launched a podcast, wrote two books, testified before Congress five times, and became the most informed critic Trump has ever produced. His memoir is called <em>Disloyal</em>. The irony remains un-lost on anyone. He narrates this entire program from a recording studio in New York. He does not need notes. He was there for all of it.</p>
+          <span class="verdict">STATUS: Disbarred · Podcasting · The man who knows</span>
+          <span class="dossier-source">Source: SDNY 2018 · Mea Culpa Podcast, ongoing · Congress, ×5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEASON 3 TEASER -->
+  <div class="season-break" style="margin-top:16px;border-color:rgba(201,168,76,0.2);background:linear-gradient(180deg,rgba(201,168,76,0.04),transparent);">
+    <span class="break-label" style="color:var(--gold);letter-spacing:5px;">⚠ Season Three · Casting Now</span>
+    <p class="break-quote" style="color:rgba(201,168,76,0.6);">The show always needs new contestants. Some are already warming up in the wings — rehearsing their audition, practicing their loyalty, wondering if this time will be different.</p>
+    <span class="break-attr" style="color:rgba(201,168,76,0.35);">It won't be. But the camera is already on.</span>
+  </div>
+
+  <div class="season-label" style="padding-top:18px;">
+    <span class="season-text" style="color:rgba(201,168,76,0.5);letter-spacing:5px;">Season Three · Rumored</span>
+    <span class="season-sub">Not confirmed. Not denied. Definitely watching.</span>
+  </div>
+
+  <div class="cabinet-grid" style="max-width:340px;">
+
+    <!-- MUSK — S3 candidate -->
+    <div class="char-card" onclick="toggleCard(this)" style="border-color:rgba(201,168,76,0.08);opacity:0.8;">
+      <div class="card-topbar" style="background:linear-gradient(90deg,transparent,rgba(201,168,76,0.08),rgba(201,168,76,0.2),rgba(201,168,76,0.08),transparent);"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="12" y="61" width="56" height="57" rx="4" fill="#0d0d0d"/>
+          <path d="M30 80 Q40 75 50 80" stroke="rgba(201,168,76,0.4)" stroke-width="2" fill="none"/>
+          <text x="33" y="96" font-size="14" fill="rgba(255,255,255,0.15)" font-family="sans-serif" font-weight="bold">𝕏</text>
+          <circle cx="58" cy="75" r="7" fill="rgba(201,168,76,0.2)" stroke="rgba(201,168,76,0.4)" stroke-width="0.8"/>
+          <text x="55" y="79" font-size="7" fill="rgba(201,168,76,0.7)" font-family="sans-serif" font-weight="bold">Ð</text>
+          <rect x="13" y="100" width="12" height="5" rx="1" fill="rgba(180,100,30,0.4)"/>
+          <rect x="10" y="101" width="4" height="3" rx="0.5" fill="rgba(180,100,30,0.3)"/>
+          <!-- Question mark overlay — uncertain status -->
+          <text x="28" y="48" font-size="28" fill="rgba(201,168,76,0.08)" font-family="serif" font-weight="bold">?</text>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#d0b090"/>
+          <ellipse cx="40" cy="34" rx="22" ry="25" fill="#d8b888"/>
+          <ellipse cx="40" cy="12" rx="22" ry="10" fill="#2a2018"/>
+          <ellipse cx="32" cy="32" rx="4.5" ry="4" fill="#1a0a00"/>
+          <ellipse cx="48" cy="32" rx="4.5" ry="4" fill="#1a0a00"/>
+          <circle cx="33" cy="31" r="1.8" fill="rgba(255,255,255,0.6)"/>
+          <circle cx="49" cy="31" r="1.8" fill="rgba(255,255,255,0.6)"/>
+          <path d="M27 26 Q32 24 37 26" stroke="#4a3020" stroke-width="2" fill="none"/>
+          <path d="M43 26 Q48 24 53 26" stroke="#4a3020" stroke-width="2" fill="none"/>
+          <path d="M33 48 Q40 53 47 48" stroke="#904030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name" style="color:rgba(201,168,76,0.6);">Musk</span>
+        <span class="char-role">D.O.G.E. · The Wildcard</span>
+        <span class="days-on-set" style="color:rgba(201,168,76,0.35);">◇ SEASON 3 · RUMORED</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Did a Nazi salute at the inauguration. Twice. Said it was "my heart." The relationship may have an expiration date.</p>
+          <p class="dossier-body">Elon Musk is not an elected official, holds no confirmed Senate position, and has more access to the federal government than most Cabinet members. He fired federal workers by spreadsheet, posted memes about it, and called it efficiency. His bromance with Trump has shown early cracks — Trump reportedly frustrated by Musk's independent media presence, Musk testing the boundaries of his unelected influence. Season Three casting question: does the host eventually tire of a contestant who thinks he's the co-host? The show has rules about that.</p>
+          <span class="verdict">STATUS: Unelected · Unaccountable · Clock ticking</span>
+          <span class="dossier-source">Source: Capitol One Arena · Jan. 20, 2025 · Axios, ongoing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUBIO — S3 candidate -->
+    <div class="char-card" onclick="toggleCard(this)" style="border-color:rgba(201,168,76,0.08);opacity:0.8;">
+      <div class="card-topbar" style="background:linear-gradient(90deg,transparent,rgba(201,168,76,0.08),rgba(201,168,76,0.2),rgba(201,168,76,0.08),transparent);"></div>
+      <div class="card-figure">
+        <svg class="figure-svg" viewBox="0 0 80 120" fill="none">
+          <ellipse cx="40" cy="118" rx="30" ry="4" fill="rgba(0,0,0,0.4)"/>
+          <rect x="13" y="61" width="54" height="57" rx="3" fill="#110d08"/>
+          <polygon points="40,72 26,63 26,100 40,92" fill="#1a1208"/>
+          <polygon points="40,72 54,63 54,100 40,92" fill="#1a1208"/>
+          <polygon points="37,68 43,68 46,108 40,114 34,108" fill="#6a0000"/>
+          <polygon points="38,70 42,70 44,100 40,106 36,100" fill="#8a1010"/>
+          <!-- Question mark overlay -->
+          <text x="28" y="48" font-size="28" fill="rgba(201,168,76,0.07)" font-family="serif" font-weight="bold">?</text>
+          <rect x="33" y="45" width="14" height="18" rx="3" fill="#c89868"/>
+          <ellipse cx="40" cy="35" rx="20" ry="23" fill="#d0a070"/>
+          <ellipse cx="40" cy="14" rx="21" ry="11" fill="#1a1008"/>
+          <ellipse cx="33" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <ellipse cx="47" cy="33" rx="3.5" ry="3" fill="#1a0a00"/>
+          <circle cx="34" cy="32" r="1.2" fill="rgba(255,255,255,0.4)"/>
+          <circle cx="48" cy="32" r="1.2" fill="rgba(255,255,255,0.4)"/>
+          <path d="M34 46 Q40 50 46 46" stroke="#904030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <rect x="58" y="90" width="6" height="14" rx="2" fill="rgba(100,160,200,0.3)" stroke="rgba(100,160,200,0.3)" stroke-width="0.5"/>
+          <rect x="59" y="88" width="4" height="4" rx="1" fill="rgba(100,160,200,0.2)"/>
+        </svg>
+      </div>
+      <div class="card-nameplate">
+        <span class="char-name" style="color:rgba(201,168,76,0.6);">Rubio</span>
+        <span class="char-role">Sec. of State · The Survivor</span>
+        <span class="days-on-set" style="color:rgba(201,168,76,0.35);">◇ SEASON 3 · RUMORED</span>
+        <span class="tap-indicator">▼ UNSEAL FILE</span>
+      </div>
+      <div class="dossier">
+        <div class="dossier-inner">
+          <p class="dossier-headline">Called Trump a "con artist." Became his Secretary of State. May be positioning for something larger.</p>
+          <p class="dossier-body">Marco Rubio completed the full arc faster than anyone: critic, rival, opponent, endorser, supporter, Cabinet secretary. He is now the nation's top diplomat. The question Season Three must answer: is Rubio auditioning for Secretary of State — or for something else? He is 53. He is constitutionally eligible. He has been fully rehabilitated in the MAGA ecosystem. The show has a history of promoting its most compliant contestants. Little Marco is paying very close attention to who gets the boardroom chair next.</p>
+          <span class="verdict">STATUS: Confirmed · Hydrated · Watching the clock</span>
+          <span class="dossier-source">Source: 2016 campaign · Senate confirmation Jan. 2025 · 2028 speculation</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /season 3 grid -->
+</main>
+
+<footer class="show-footer">
+  <div class="gold-rule"></div>
+  <p class="footer-quote">"Nobody gets fired in this building. They resign. They're pardoned. They get their own podcast. The show goes on."</p>
+  <div class="gold-rule"></div>
+  <p class="narrator-credit">Narrated by Michael Cohen · All Seasons · Still Airing</p>
+
+  <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(201,168,76,0.12);">
+    <p style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:4px;color:rgba(201,168,76,0.45);text-transform:uppercase;margin-bottom:14px;">Read the Full Series on Substack</p>
+
+    <a href="https://atjon.substack.com/p/the-apprentice-washington-edition?r=3gs28j" target="_blank" rel="noopener" style="display:block;text-decoration:none;margin:0 auto 10px;max-width:320px;border:1px solid rgba(201,168,76,0.25);background:linear-gradient(180deg,#1a1005,#100a03);padding:12px 16px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.6)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.25)'">
+      <span style="display:block;font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:3px;color:rgba(201,168,76,0.5);text-transform:uppercase;margin-bottom:4px;">Episode One</span>
+      <span style="display:block;font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(13px,3.5vw,15px);color:var(--gold);line-height:1.3;">The Apprentice: Washington Edition</span>
+      <span style="display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--ash);margin-top:4px;">The cold open. Where it all begins. →</span>
+    </a>
+
+    <a href="https://atjon.substack.com/p/section-four-the-rules?r=3gs28j" target="_blank" rel="noopener" style="display:block;text-decoration:none;margin:0 auto 0;max-width:320px;border:1px solid rgba(201,168,76,0.15);background:linear-gradient(180deg,#130d08,#0a0705);padding:12px 16px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)'" onmouseout="this.style.borderColor='rgba(201,168,76,0.15)'">
+      <span style="display:block;font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:3px;color:rgba(201,168,76,0.4);text-transform:uppercase;margin-bottom:4px;">Section Four</span>
+      <span style="display:block;font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(13px,3.5vw,15px);color:rgba(201,168,76,0.8);line-height:1.3;">The Rules</span>
+      <span style="display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--ash);margin-top:4px;">How the show actually works. Find the rest from here. →</span>
+    </a>
+
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:rgba(201,168,76,0.25);margin-top:16px;letter-spacing:1px;">atjon.substack.com</p>
+  </div>
+</footer>
+
+<script>
+  let activeCard = null;
+
+  function toggleCard(card) {
+    const dossier = card.querySelector('.dossier');
+    const indicator = card.querySelector('.tap-indicator');
+
+    if (activeCard && activeCard !== card) {
+      activeCard.querySelector('.dossier').classList.remove('open');
+      activeCard.classList.remove('active');
+      const prev = activeCard.querySelector('.tap-indicator');
+      if (prev) prev.textContent = '▼ UNSEAL FILE';
+    }
+
+    if (card.classList.contains('active')) {
+      dossier.classList.remove('open');
+      card.classList.remove('active');
+      if (indicator) indicator.textContent = '▼ UNSEAL FILE';
+      activeCard = null;
+    } else {
+      dossier.classList.add('open');
+      card.classList.add('active');
+      if (indicator) indicator.textContent = '▲ CLOSE FILE';
+      activeCard = card;
+      setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+    }
+  }
+</script>
+</body>
+</html>
