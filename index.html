@@ -973,12 +973,21 @@ body {
   .logo-eyebrow { font-size: 9px; letter-spacing: 3px; }
 
   /* Billboard */
-  .billboard-wrap { width: 100%; }
-  .billboard-img { width: 110px; height: 80px; }
-  .billboard-body { padding: 10px 14px; }
-  .billboard-title { font-size: 20px; }
+  .billboard-wrap { width: 100%; padding: 14px 16px; justify-content: center; }
+  .billboard { flex-direction: column; width: 100%; height: auto; }
+  .billboard-img { width: 100%; height: 140px; object-position: top; }
+  .billboard-body { 
+    padding: 12px 16px; 
+    border-left: none; 
+    border-top: 1px solid #2a1e08;
+    align-items: center;
+    text-align: center;
+  }
+  .billboard-title { font-size: 22px; }
   .billboard-sub { font-size: 11px; }
   .billboard-tagline { font-size: 11px; }
+  .masthead-body-row { flex-direction: column; }
+  .masthead { border-right: none; border-bottom: 1px solid #1e1a10; width: 100%; height: auto; }
 
   /* Layout — stack sidebar below content */
   .main-layout {
@@ -1066,6 +1075,14 @@ body {
   .btn { font-size: 9px; padding: 11px 14px; }
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPZHKNB3E9');
+</script>
 </head>
 <body>
 
@@ -1398,7 +1415,7 @@ body {
       <a href="/apprentice" class="journal-item">
         <div class="journal-item-num">01</div>
         <div class="journal-item-body">
-          <div class="journal-item-tag">Running Series · Parts 1–8 of 16+</div>
+          <div class="journal-item-tag">Join the Show Already in Progress · New Episodes Daily</div>
           <div class="journal-item-title">The Apprentice: Washington Edition</div>
           <div class="journal-item-sub">A real-life contemporaneous retrospective parody</div>
         </div>
