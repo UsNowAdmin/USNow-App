@@ -145,7 +145,7 @@
   /* CARDS GRID */
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin-bottom: 0.5rem;
   }
@@ -159,7 +159,8 @@
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease;
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: inherit;
   }
 
@@ -204,7 +205,7 @@
   }
 
   .card.landscape .card-image {
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
   }
 
   .card-image img {
@@ -254,10 +255,11 @@
 
   /* CARD BODY */
   .card-body {
-    padding: 0.85rem 1rem;
+    padding: 0 1rem 0.85rem;
   }
 
   .card-season-tag {
+    padding-top: 0.65rem;
     font-size: 0.5rem;
     letter-spacing: 0.2rem;
     color: var(--gold-dim);
@@ -620,10 +622,6 @@
     padding: 1.5rem 1.5rem 0.5rem;
   }
 
-  .card.landscape .card-image {
-    aspect-ratio: 16/9;
-  }
-
   /* PRINCIPALS ROW — two cards, portrait, matched to trading cards */
   .principals-row {
     display: grid;
@@ -854,7 +852,6 @@
       <div class="card-subtitle">Personal Attorney · Fixer · Convicted · Released · Podcasting</div>
       <div class="card-quote">"I came in through a different door. And I left through a different door than I expected too."</div>
       <div class="card-status status-break">● The folder is empty</div>
-      <a class="substack-btn" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">Read on Substack</a>
     </div>
   </a>
 
@@ -1128,9 +1125,6 @@ function revealAd(el) {
 
 <!-- PAULA WHITE — SECTION 12 — HER OWN SECTION -->
 <div class="paula-section">
-  <div class="paula-section-header">
-    <div class="paula-section-header-inner">★ Section Twelve ★</div>
-  </div>
   <div class="paula-card-wrap">
     <div class="card mystery card-no-link">
       <div class="card-image">
