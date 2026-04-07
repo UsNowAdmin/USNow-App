@@ -170,6 +170,7 @@ body {
   background: var(--off-black);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 24px 20px;
   position: relative;
   overflow: hidden;
@@ -181,7 +182,10 @@ body {
   position: absolute;
   inset: 24px 20px;
   pointer-events: none;
-  z-index: 2;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .billboard-marquee svg {
@@ -196,12 +200,29 @@ body {
   align-items: center;
   text-decoration: none;
   position: relative;
-  width: calc(100% - 28px);
+  width: auto;
   height: 105px;
   background: linear-gradient(135deg, #0e0900 0%, #1c1400 60%, #0e0900 100%);
   transition: background 0.3s;
-  margin: 0 14px;
+  margin: 0;
   z-index: 1;
+  overflow: visible;
+}
+
+/* Marquee hugs the billboard box */
+.billboard .billboard-marquee {
+  position: absolute;
+  inset: -8px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.billboard .billboard-marquee svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
 }
 
 .billboard:hover {
@@ -230,11 +251,12 @@ body {
 }
 
 .billboard-body {
-  flex: 1;
-  padding: 12px 20px;
+  padding: 12px 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 4px;
   border-left: 1px solid #2a1e08;
 }
@@ -1084,12 +1106,12 @@ body {
     </header>
 
     <div class="billboard-wrap">
-      <div class="billboard-marquee">
-        <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <rect class="marquee-path" x="1" y="1" width="98" height="98" rx="1"/>
-        </svg>
-      </div>
       <a href="/apprentice" class="billboard">
+        <div class="billboard-marquee">
+          <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect class="marquee-path" x="1" y="1" width="98" height="98" rx="1"/>
+          </svg>
+        </div>
         <img class="billboard-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/IMG_4833.PNG" alt="The Apprentice: Washington Edition">
         <div class="billboard-body">
           <div class="billboard-eyebrow">From The Journal · Featured Series</div>
