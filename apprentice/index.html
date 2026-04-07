@@ -610,10 +610,83 @@
   .cards-grid .card:nth-child(5) { animation-delay: 0.25s; }
   .cards-grid .card:nth-child(6) { animation-delay: 0.3s; }
 
-  @media (max-width: 600px) {
-    .ad-strip { grid-template-columns: repeat(2, 1fr); }
-    .season-break-image { width: 100px; }
-    .rumored-card.musk-card { grid-column: span 1; }
+  /* LANDSCAPE SECTION GRID — 2x2 at top */
+  .landscape-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 0.5rem;
+  }
+
+  .card.landscape .card-image {
+    aspect-ratio: 16/9;
+  }
+
+  /* PRINCIPALS ROW — two cards, portrait, matched to trading cards */
+  .principals-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 280px));
+    gap: 1.25rem;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 1.5rem auto 0.5rem;
+    padding: 0 1.5rem;
+  }
+
+  /* PAULA WHITE SECTION */
+  .paula-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem 1rem;
+  }
+
+  .paula-section-header {
+    text-align: center;
+    padding: 1.5rem 0 1rem;
+    position: relative;
+  }
+
+  .paula-section-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #3a1a3a, transparent);
+  }
+
+  .paula-section-header-inner {
+    display: inline-block;
+    background: var(--black);
+    padding: 0.4rem 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.75rem;
+    color: #6b3a6b;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    border: 1px solid #3a1a3a;
+    font-style: italic;
+  }
+
+  .paula-card-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .paula-card-wrap .card {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  @media (max-width: 700px) {
+    .landscape-grid { grid-template-columns: 1fr; }
+    .principals-row { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 480px) {
+    .principals-row { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -628,105 +701,99 @@
   <div class="header-disclaimer">None of this is real. It's just some nobody with an AI.</div>
 </header>
 
-<!-- PRINCIPALS ROW -->
-<div class="section-grid" style="padding-bottom:0">
-  <div class="principals-row">
+<!-- LANDSCAPE SECTION CARDS — 2x2 grid, top of page -->
+<div class="landscape-grid">
 
-    <!-- THE HOST -->
-    <div class="card principal card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump.PNG" alt="The Host">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Executive Producer</div>
-        <div class="card-title">The Host</div>
-        <div class="card-subtitle">Donald J. Trump · The Boardroom · Always</div>
-        <div class="card-quote">"You're fired." — The only line that matters.</div>
-        <div class="card-status status-running">● Still in the building</div>
-      </div>
+  <!-- COLD OPEN -->
+  <a class="card landscape" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
+    <div class="card-link-indicator">READ →</div>
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cold-open.PNG" alt="Cold Open">
     </div>
+    <div class="card-body">
+      <div class="card-season-tag">Section One</div>
+      <div class="card-title">Cold Open</div>
+      <div class="card-subtitle">The Show Begins Again</div>
+      <div class="card-quote">"This isn't The Apprentice you remember. The consequences are considerably less theoretical."</div>
+    </div>
+  </a>
 
-    <!-- THE NARRATOR -->
-    <a class="card principal" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
-      <div class="card-link-indicator">READ →</div>
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cohen.PNG" alt="Michael Cohen">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Narrator · Seasons One & Two</div>
-        <div class="card-title">The Narrator — Michael Cohen</div>
-        <div class="card-subtitle">Personal Attorney · Fixer · Convicted · Released · Podcasting</div>
-        <div class="card-quote">"I came in through a different door. And I left through a different door than I expected too."</div>
-        <div class="card-status status-break">● The folder is empty</div>
-      </div>
-    </a>
+  <!-- HIGHLIGHT REEL -->
+  <a class="card landscape" href="https://atjon.substack.com/p/section-three-previously-on-the-apprentice" target="_blank" rel="noopener">
+    <div class="card-link-indicator">READ →</div>
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/highlight-reel.PNG" alt="Highlight Reel">
+    </div>
+    <div class="card-body">
+      <div class="card-season-tag">Section Three</div>
+      <div class="card-title">Highlight Reel</div>
+      <div class="card-subtitle">Previously On…</div>
+      <div class="card-quote">"You remember all of that. Good. Let's go back to the beginning."</div>
+    </div>
+  </a>
 
+  <!-- THE RULES -->
+  <a class="card landscape" href="https://atjon.substack.com/p/section-four-the-rules" target="_blank" rel="noopener">
+    <div class="card-link-indicator">READ →</div>
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-rules.PNG" alt="The Rules">
+    </div>
+    <div class="card-body">
+      <div class="card-season-tag">Section Four</div>
+      <div class="card-title">The Rules</div>
+      <div class="card-subtitle">There Is Only One Judge</div>
+      <div class="card-quote">"RULE FIVE: There is no Rule Five. And all other rules are subject to Rule Five."</div>
+    </div>
+  </a>
 
+  <!-- THE BRIEFING -->
+  <a class="card landscape" href="https://atjon.substack.com/p/section-four-b" target="_blank" rel="noopener">
+    <div class="card-link-indicator">READ →</div>
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-briefing.PNG" alt="The Briefing">
+    </div>
+    <div class="card-body">
+      <div class="card-season-tag">Section Four-B</div>
+      <div class="card-title">A Brief Word From The White House</div>
+      <div class="card-subtitle">Karoline Leavitt · Press Secretary · @PressSec</div>
+      <div class="card-quote">"Is any of this real?" — This has always been the question.</div>
+    </div>
+  </a>
 
-  </div>
 </div>
 
-<!-- SETUP SECTIONS — before Season One label -->
-<div class="section-grid">
-  <div class="cards-grid">
+<!-- PRINCIPALS ROW — Host and Narrator -->
+<div class="principals-row">
 
-    <!-- S1E1 COLD OPEN -->
-    <a class="card landscape" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
-      <div class="card-link-indicator">READ →</div>
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cold-open.PNG" alt="Cold Open">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section One</div>
-        <div class="card-title">Cold Open</div>
-        <div class="card-subtitle">The Show Begins Again</div>
-        <div class="card-quote">"This isn't The Apprentice you remember. The consequences are considerably less theoretical."</div>
-      </div>
-    </a>
-
-    <!-- S1E3 HIGHLIGHT REEL -->
-    <a class="card landscape" href="https://atjon.substack.com/p/section-three-previously-on-the-apprentice" target="_blank" rel="noopener">
-      <div class="card-link-indicator">READ →</div>
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/highlight-reel.PNG" alt="Highlight Reel">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Three</div>
-        <div class="card-title">Highlight Reel</div>
-        <div class="card-subtitle">Previously On…</div>
-        <div class="card-quote">"You remember all of that. Good. Let's go back to the beginning."</div>
-      </div>
-    </a>
-
-    <!-- S1E4 THE RULES -->
-    <a class="card landscape" href="https://atjon.substack.com/p/section-four-the-rules" target="_blank" rel="noopener">
-      <div class="card-link-indicator">READ →</div>
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-rules.PNG" alt="The Rules">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Four</div>
-        <div class="card-title">The Rules</div>
-        <div class="card-subtitle">There Is Only One Judge</div>
-        <div class="card-quote">"RULE FIVE: There is no Rule Five. And all other rules are subject to Rule Five."</div>
-      </div>
-    </a>
-
-    <!-- S1E4B BRIEF WORD -->
-    <a class="card landscape" href="https://atjon.substack.com/p/section-four-b" target="_blank" rel="noopener">
-      <div class="card-link-indicator">READ →</div>
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-briefing.PNG" alt="The Briefing">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Four-B</div>
-        <div class="card-title">A Brief Word From The White House</div>
-        <div class="card-subtitle">Karoline Leavitt · Press Secretary · @PressSec</div>
-        <div class="card-quote">"Is any of this real?" — This has always been the question.</div>
-      </div>
-    </a>
-
+  <!-- THE HOST -->
+  <div class="card principal card-no-link">
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump.PNG" alt="The Host">
+    </div>
+    <div class="card-body">
+      <div class="card-season-tag">Executive Producer</div>
+      <div class="card-title">The Host</div>
+      <div class="card-subtitle">Donald J. Trump · The Boardroom · Always</div>
+      <div class="card-quote">"You're fired." — The only line that matters.</div>
+      <div class="card-status status-running">● Still in the building</div>
+    </div>
   </div>
+
+  <!-- THE NARRATOR -->
+  <a class="card principal" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
+    <div class="card-link-indicator">READ →</div>
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cohen.PNG" alt="Michael Cohen">
+    </div>
+    <div class="card-body">
+      <div class="card-season-tag">Narrator · Seasons One & Two</div>
+      <div class="card-title">The Narrator — Michael Cohen</div>
+      <div class="card-subtitle">Personal Attorney · Fixer · Convicted · Released · Podcasting</div>
+      <div class="card-quote">"I came in through a different door. And I left through a different door than I expected too."</div>
+      <div class="card-status status-break">● The folder is empty</div>
+    </div>
+  </a>
+
 </div>
 
 <!-- AD STRIP — nonchalant, no label, click once = link to article -->
@@ -962,20 +1029,26 @@
       </div>
     </div>
 
-    <!-- PAULA WHITE — SECTION 12 -->
+  </div>
+</div>
+
+<!-- PAULA WHITE — SECTION 12 — HER OWN SECTION -->
+<div class="paula-section">
+  <div class="paula-section-header">
+    <div class="paula-section-header-inner">★ Section Twelve ★</div>
+  </div>
+  <div class="paula-card-wrap">
     <div class="card mystery card-no-link">
       <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/white.PNG" alt="Section 12">
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/white.PNG" alt="Paula White">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Twelve · Special Divine Guest</div>
-        <div class="card-title">?</div>
-        <div class="card-subtitle">The Final Word · Coming</div>
-        <div class="card-quote" style="color:#3a2a3a; border-color:#2a1a2a;">Every show needs a closing.</div>
+        <div class="card-title">Paula White</div>
+        <div class="card-subtitle">Coming</div>
         <div class="card-status status-mystery">● Coming</div>
       </div>
     </div>
-
   </div>
 </div>
 
