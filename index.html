@@ -16,6 +16,7 @@
   --border-bright: #32323f;
   --red: #e03030;
   --amber: #f0a500;
+  --gold: #c9973a;
   --green: #1db954;
   --blue: #3b82f6;
   --white: #f2f2f2;
@@ -34,7 +35,7 @@ body {
   overflow-x: hidden;
 }
 
-/* TICKER */
+/* ── TICKER ── */
 .ticker-wrap {
   width: 100%;
   background: #0a0000;
@@ -87,21 +88,43 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* MASTHEAD */
-.masthead {
-  width: 100%;
-  padding: 36px 48px 28px;
-  border-bottom: 1px solid var(--border);
+/* ── MASTHEAD + BILLBOARD ROW ── */
+.masthead-row {
   background: var(--off-black);
+  border-bottom: 2px solid #1a1200;
   position: relative;
 }
 
-.masthead::after {
+.masthead-row::after {
   content: '';
   position: absolute;
   bottom: -2px; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--red) 0%, var(--amber) 40%, transparent 100%);
+  background: linear-gradient(90deg, var(--red) 0%, var(--amber) 30%, var(--gold) 60%, transparent 100%);
+}
+
+/* Top eyebrow spans full width */
+.masthead-eyebrow-row {
+  padding: 14px 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Bottom row: logo left, billboard right */
+.masthead-body-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.masthead {
+  padding: 16px 40px 20px;
+  background: var(--off-black);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #1e1a10;
+  min-width: 260px;
+  height: 160px;
 }
 
 .logo-eyebrow {
@@ -141,14 +164,153 @@ body {
   50% { text-shadow: 0 0 70px rgba(224,48,48,0.55); }
 }
 
-/* MAIN LAYOUT */
+/* ── BILLBOARD ── */
+.billboard-wrap {
+  flex: 1;
+  background: var(--off-black);
+  display: flex;
+  align-items: center;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+  align-self: stretch;
+}
+
+/* Marquee border container */
+.billboard-marquee {
+  position: absolute;
+  inset: 24px 20px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.billboard-marquee svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.billboard {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  width: calc(100% - 28px);
+  height: 105px;
+  background: linear-gradient(135deg, #0e0900 0%, #1c1400 60%, #0e0900 100%);
+  transition: background 0.3s;
+  margin: 0 14px;
+  z-index: 1;
+}
+
+.billboard:hover {
+  background: linear-gradient(135deg, #140e00 0%, #241a00 60%, #140e00 100%);
+}
+
+.billboard-img {
+  width: 200px;
+  height: 105px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.billboard-img-placeholder {
+  width: 150px;
+  flex-shrink: 0;
+  background: linear-gradient(160deg, #1a1200, #2a1a00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: rgba(201,151,58,0.15);
+}
+
+.billboard-body {
+  flex: 1;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  border-left: 1px solid #2a1e08;
+}
+
+.billboard-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #7a6030;
+  text-transform: uppercase;
+}
+
+.billboard-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #e8d080;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(201,151,58,0.3);
+}
+
+.billboard-sub {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: #6a5828;
+  letter-spacing: 0.3px;
+}
+
+.billboard-tagline {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #9a8040;
+  letter-spacing: 0.3px;
+  margin-top: 3px;
+}
+
+.billboard-bullet { color: #5a4010; margin: 0 6px; }
+
+.billboard-cta {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #7a6030;
+  text-transform: uppercase;
+  margin-top: 6px;
+  transition: color 0.2s;
+}
+
+.billboard:hover .billboard-cta { color: var(--gold); }
+
+/* Marquee running lights */
+@keyframes marquee-run {
+  0%   { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -40; }
+}
+
+.marquee-path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 10;
+  stroke-linecap: round;
+  opacity: 0.55;
+  animation: marquee-run 1.4s linear infinite;
+}
+
+/* ── MAIN LAYOUT ── */
 .main-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
   min-height: calc(100vh - 170px);
 }
 
-/* LEFT RAIL */
+/* ── LEFT RAIL ── */
 .left-rail {
   border-right: 1px solid var(--border);
   background: var(--panel);
@@ -180,9 +342,7 @@ body {
   transition: background 0.15s;
 }
 
-.resource-item:hover {
-  background: var(--subtle);
-}
+.resource-item:hover { background: var(--subtle); }
 
 .resource-icon {
   font-size: 18px;
@@ -201,9 +361,7 @@ body {
   line-height: 1.1;
 }
 
-.resource-item:hover .resource-name {
-  color: var(--white);
-}
+.resource-item:hover .resource-name { color: var(--white); }
 
 .resource-desc {
   font-family: 'Space Mono', monospace;
@@ -224,12 +382,82 @@ body {
   margin-top: 5px;
 }
 
-/* MAIN CONTENT */
-.main-content {
-  background: var(--black);
+/* Rail mini items (half-size) */
+.resource-item-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  border-bottom: 1px solid var(--subtle);
+  text-decoration: none;
+  transition: background 0.15s;
 }
 
-/* HERO */
+.resource-item-mini:hover { background: var(--subtle); }
+
+.resource-name-mini {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8888a0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.resource-item-mini:hover .resource-name-mini { color: #b0b0c8; }
+
+.resource-desc-mini {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: #38384a;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+.resource-tag-mini {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 1px;
+  padding: 1px 5px;
+  border-radius: 2px;
+  margin-top: 3px;
+}
+
+/* Coming soon — not a link */
+.resource-item-teaser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  border-bottom: 1px solid var(--subtle);
+  opacity: 0.5;
+}
+
+.resource-name-teaser {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #52526a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.resource-desc-teaser {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: #2a2a38;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  font-style: italic;
+}
+
+/* ── MAIN CONTENT ── */
+.main-content { background: var(--black); }
+
+/* ── HERO ── */
 .hero {
   padding: 64px 60px 56px;
   border-bottom: 1px solid var(--border);
@@ -329,34 +557,16 @@ body {
 
 .btn::after { content: ' →'; }
 
-.btn-red {
-  background: var(--red);
-  border-color: var(--red);
-  color: #fff;
-}
-.btn-red:hover {
-  background: #c02020;
-  box-shadow: 0 0 40px rgba(224,48,48,0.25);
-}
+.btn-red { background: var(--red); border-color: var(--red); color: #fff; }
+.btn-red:hover { background: #c02020; box-shadow: 0 0 40px rgba(224,48,48,0.25); }
 
-.btn-amber {
-  border-color: var(--amber);
-  color: var(--amber);
-}
-.btn-amber:hover {
-  background: rgba(240,165,0,0.08);
-}
+.btn-amber { border-color: var(--amber); color: var(--amber); }
+.btn-amber:hover { background: rgba(240,165,0,0.08); }
 
-.btn-outline {
-  border-color: var(--border-bright);
-  color: var(--muted);
-}
-.btn-outline:hover {
-  border-color: var(--green);
-  color: var(--green);
-}
+.btn-outline { border-color: var(--border-bright); color: var(--muted); }
+.btn-outline:hover { border-color: var(--green); color: var(--green); }
 
-/* STAT STRIP */
+/* ── STAT STRIP ── */
 .stat-strip {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -366,8 +576,6 @@ body {
 .stat-cell {
   padding: 26px 32px;
   border-right: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
   transition: background 0.2s;
 }
 
@@ -391,7 +599,7 @@ body {
   line-height: 1.6;
 }
 
-/* SECTION HEADER */
+/* ── SECTION HEADER ── */
 .section-header {
   padding: 24px 60px 18px;
   border-bottom: 1px solid var(--border);
@@ -415,12 +623,12 @@ body {
   text-transform: uppercase;
 }
 
-/* PREVIEW STRIP - 2 featured graphics */
+/* ── GRAPHIC INFO CARDS ── */
 .preview-strip {
   padding: 36px 60px 40px;
   border-bottom: 1px solid var(--border);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -451,9 +659,9 @@ body {
 
 .preview-thumb-num {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 100px;
-  letter-spacing: 3px;
-  opacity: 0.15;
+  font-size: 60px;
+  letter-spacing: 2px;
+  opacity: 0.2;
   line-height: 1;
 }
 
@@ -464,82 +672,160 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 20px;
+  padding: 14px;
   background: linear-gradient(transparent 30%, rgba(0,0,0,0.85));
 }
 
 .preview-thumb-tag {
   font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 3px;
+  font-size: 8px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .preview-thumb-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
   color: var(--white);
   line-height: 1.0;
 }
 
 .preview-meta {
-  padding: 16px 20px;
+  padding: 12px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .preview-meta-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 600;
-  color: #a8a8be;
-  letter-spacing: 1px;
+  color: #8888a0;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+  line-height: 1.3;
 }
 
 .preview-meta-arrow {
   font-family: 'Space Mono', monospace;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--muted);
+  flex-shrink: 0;
   transition: color 0.2s;
 }
 
-.preview-card:hover .preview-meta-arrow {
-  color: var(--white);
+.preview-card:hover .preview-meta-arrow { color: var(--white); }
+
+/* ── JOURNAL SECTION ── */
+.journal-list {
+  padding: 0 60px 36px;
+  border-bottom: 1px solid var(--border);
 }
 
-/* SUBMIT SECTION */
-.submit-section {
-  padding: 50px 60px;
+.journal-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-bottom: 1px solid var(--subtle);
+  text-decoration: none;
+  transition: background 0.15s;
+  padding: 0;
+  overflow: hidden;
+}
+
+.journal-item:last-child { border-bottom: none; }
+.journal-item:hover { background: var(--subtle); }
+
+.journal-item-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #2a2a3a;
+  padding: 18px 18px 18px 0;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.journal-item-body {
+  flex: 1;
+  padding: 18px 0;
+  border-left: 1px solid var(--subtle);
+  padding-left: 20px;
+}
+
+.journal-item-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.journal-item-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: #c8c8dc;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.journal-item:hover .journal-item-title { color: var(--white); }
+
+.journal-item-sub {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #52526a;
+  letter-spacing: 0.2px;
+}
+
+.journal-item-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #2a2a3a;
+  padding: 18px 24px;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.journal-item:hover .journal-item-arrow { color: var(--gold); }
+
+/* ── REQUEST SECTION (right-sized) ── */
+.request-section {
+  padding: 36px 60px;
   border-bottom: 1px solid var(--border);
   background: var(--off-black);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
   align-items: start;
 }
 
-.submit-headline {
+.request-headline {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 60px;
+  font-size: 38px;
   letter-spacing: 3px;
-  line-height: 0.9;
-  margin-bottom: 16px;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: var(--white);
 }
 
-.submit-headline em {
+.request-headline em {
   color: var(--green);
   font-style: normal;
 }
 
-.submit-body {
+.request-body {
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-size: 10px;
   color: var(--muted);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   line-height: 1.9;
 }
 
@@ -547,7 +833,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .form-label {
@@ -565,7 +851,7 @@ body {
   color: var(--white);
   font-family: 'Space Mono', monospace;
   font-size: 12px;
-  padding: 13px 16px;
+  padding: 11px 14px;
   outline: none;
   transition: border-color 0.2s;
   width: 100%;
@@ -578,7 +864,7 @@ body {
 .form-input::placeholder,
 .form-textarea::placeholder { color: #2a2a3a; }
 
-.form-textarea { resize: vertical; min-height: 85px; }
+.form-textarea { resize: vertical; min-height: 75px; }
 
 .form-note {
   font-family: 'Space Mono', monospace;
@@ -586,7 +872,7 @@ body {
   color: #28283a;
   letter-spacing: 0.5px;
   line-height: 1.7;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .form-success {
@@ -595,50 +881,38 @@ body {
   font-size: 11px;
   color: var(--green);
   letter-spacing: 2px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border: 1px solid #0d4a22;
   background: rgba(29,185,84,0.04);
   margin-top: 10px;
 }
 
-/* FOOTER */
+/* ── FOOTER ── */
 .footer {
-  padding: 26px 60px;
+  padding: 28px 60px;
   background: var(--off-black);
   border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
 }
 
-.footer-left {
+.footer-primary {
   font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  color: #2e2e40;
-  letter-spacing: 1.5px;
-  line-height: 1.9;
-}
-
-.footer-left a { color: #2e2e40; text-decoration: none; }
-
-.footer-links {
-  display: flex;
-  gap: 24px;
-}
-
-.footer-link {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  color: #2e2e40;
+  font-size: 10px;
+  color: #3a3a50;
   letter-spacing: 2px;
-  text-decoration: none;
   text-transform: uppercase;
-  transition: color 0.2s;
+  margin-bottom: 8px;
 }
 
-.footer-link:hover { color: var(--muted); }
+.footer-secondary {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
 
-/* ANIMATIONS */
+/* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -662,6 +936,113 @@ body {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* ══════════════════════════════════════════
+   MOBILE — full responsive overhaul
+   ══════════════════════════════════════════ */
+@media (max-width: 900px) {
+
+  /* Masthead + billboard row stack on mobile */
+  .masthead-eyebrow-row { padding: 10px 20px 0; }
+  .masthead-body-row { flex-direction: column; }
+  .masthead { padding: 12px 20px 16px; border-right: none; border-bottom: 1px solid #1e1a10; min-width: unset; width: 100%; }
+  .logo-main { font-size: 64px; letter-spacing: 4px; }
+  .logo-tagline { font-size: 15px; }
+  .logo-eyebrow { font-size: 9px; letter-spacing: 3px; }
+
+  /* Billboard */
+  .billboard-wrap { width: 100%; }
+  .billboard-img { width: 110px; height: 80px; }
+  .billboard-body { padding: 10px 14px; }
+  .billboard-title { font-size: 20px; }
+  .billboard-sub { font-size: 11px; }
+  .billboard-tagline { font-size: 11px; }
+
+  /* Layout — stack sidebar below content */
+  .main-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .left-rail {
+    position: static;
+    height: auto;
+    overflow-y: visible;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    order: 2;
+  }
+
+  /* Hero */
+  .hero { padding: 36px 20px 32px; }
+  .hero-headline { font-size: 52px; letter-spacing: 2px; }
+  .hero-body { font-size: 17px; }
+  .hero-bg-word { font-size: 160px; top: -10px; right: -10px; }
+
+  /* Buttons */
+  .btn { font-size: 10px; padding: 12px 18px; letter-spacing: 2px; }
+  .btn-row { gap: 10px; }
+
+  /* Stat strip */
+  .stat-strip { grid-template-columns: repeat(2,1fr); }
+  .stat-cell { padding: 18px 16px; }
+  .stat-num { font-size: 38px; }
+  .stat-label { font-size: 9px; }
+
+  /* Section headers */
+  .section-header { padding: 18px 20px 14px; flex-wrap: wrap; gap: 6px; }
+  .section-title { font-size: 28px; letter-spacing: 3px; }
+  .section-sub { font-size: 9px; }
+
+  /* Graphic cards — 2 column on tablet */
+  .preview-strip {
+    padding: 20px 20px 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .preview-thumb-title { font-size: 16px; }
+  .preview-thumb-num { font-size: 44px; }
+  .preview-meta-title { font-size: 11px; }
+
+  /* View all button */
+  div[style*="padding: 20px 60px"] ,
+  .view-all-row { padding: 16px 20px 24px !important; }
+
+  /* Journal */
+  .journal-list { padding: 0 20px 24px; }
+  .journal-item-title { font-size: 20px; }
+
+  /* Request section */
+  .request-section {
+    padding: 28px 20px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .request-headline { font-size: 28px; }
+
+  /* Footer */
+  .footer { padding: 22px 20px; }
+}
+
+@media (max-width: 500px) {
+
+  .logo-main { font-size: 48px; }
+  .hero-headline { font-size: 40px; }
+  .hero-body { font-size: 15px; }
+
+  /* Single column cards on small phones */
+  .preview-strip { grid-template-columns: 1fr; gap: 12px; }
+
+  .stat-strip { grid-template-columns: repeat(2,1fr); }
+  .stat-num { font-size: 32px; }
+
+  .masthead-row { flex-direction: column; }
+  .billboard-wrap { padding: 12px; }
+  .billboard { flex-direction: column; }
+  .billboard-img { width: 100%; height: 120px; }
+
+  .btn { font-size: 9px; padding: 11px 14px; }
+}
 </style>
 </head>
 <body>
@@ -689,12 +1070,38 @@ body {
   </div>
 </div>
 
-<!-- MASTHEAD -->
-<header class="masthead">
-  <div class="logo-eyebrow"><span class="live-dot"></span>Civic Data · Public Record · No Agenda · <span id="live-date"></span></div>
-  <div class="logo-main">US<span class="now">NOW</span></div>
-  <div class="logo-tagline">The data is the argument.</div>
-</header>
+<!-- MASTHEAD + BILLBOARD ROW -->
+<div class="masthead-row">
+  <!-- Eyebrow full width -->
+  <div class="masthead-eyebrow-row">
+    <div class="logo-eyebrow"><span class="live-dot"></span>Civic Data · Public Record · No Agenda · <span id="live-date"></span></div>
+  </div>
+  <!-- Logo + billboard side by side -->
+  <div class="masthead-body-row">
+    <header class="masthead">
+      <div class="logo-main">US<span class="now">NOW</span></div>
+      <div class="logo-tagline">The data is the argument.</div>
+    </header>
+
+    <div class="billboard-wrap">
+      <div class="billboard-marquee">
+        <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect class="marquee-path" x="1" y="1" width="98" height="98" rx="1"/>
+        </svg>
+      </div>
+      <a href="/apprentice" class="billboard">
+        <img class="billboard-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/IMG_4833.PNG" alt="The Apprentice: Washington Edition">
+        <div class="billboard-body">
+          <div class="billboard-eyebrow">From The Journal · Featured Series</div>
+          <div class="billboard-title">The Apprentice: Washington Edition</div>
+          <div class="billboard-sub">A real-life contemporaneous retrospective parody</div>
+          <div class="billboard-tagline">Join the Show Already in Progress<span class="billboard-bullet"> · </span>New Episodes Daily</div>
+          <div class="billboard-cta">Read the Series →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- MAIN LAYOUT -->
 <div class="main-layout">
@@ -702,6 +1109,15 @@ body {
   <!-- LEFT RAIL -->
   <aside class="left-rail">
     <div class="rail-header">Essential Sources</div>
+
+    <a class="resource-item" href="https://turbovote.org" target="_blank">
+      <div class="resource-icon">🗳️</div>
+      <div>
+        <div class="resource-name">TurboVote</div>
+        <div class="resource-desc">Voter registration, ballots & election reminders</div>
+        <div class="resource-tag" style="background:#0a0f1a;color:#60a5fa;">VOTE</div>
+      </div>
+    </a>
 
     <a class="resource-item" href="https://www.opensecrets.org" target="_blank">
       <div class="resource-icon">💰</div>
@@ -749,7 +1165,7 @@ body {
     </a>
 
     <a class="resource-item" href="https://ballotpedia.org" target="_blank">
-      <div class="resource-icon">🗳️</div>
+      <div class="resource-icon">📋</div>
       <div>
         <div class="resource-name">Ballotpedia</div>
         <div class="resource-desc">Candidates, elections, ballot measures nationwide</div>
@@ -820,14 +1236,24 @@ body {
       </div>
     </a>
 
-    <a class="resource-item" href="https://usnow.app" target="_blank">
-      <div class="resource-icon">⭐</div>
+    <!-- HALF-SIZE: RateMyRep -->
+    <a class="resource-item-mini" href="https://www.ratemyrep.app" target="_blank">
+      <div style="font-size:14px;flex-shrink:0;">⭐</div>
       <div>
-        <div class="resource-name">RateMyRep</div>
-        <div class="resource-desc">Hold your representatives accountable — our sister platform</div>
-        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">PARTNER</div>
+        <div class="resource-name-mini">RateMyRep</div>
+        <div class="resource-desc-mini">Hold your representatives accountable</div>
+        <div class="resource-tag-mini" style="background:#1a0a00;color:#c9973a;">DEMO</div>
       </div>
     </a>
+
+    <!-- HALF-SIZE: The Answer — not a link -->
+    <div class="resource-item-teaser">
+      <div style="font-size:14px;flex-shrink:0;opacity:0.4;">◎</div>
+      <div>
+        <div class="resource-name-teaser">The Answer</div>
+        <div class="resource-desc-teaser">Coming soon — connecting communities to governing themselves, from local on up.</div>
+      </div>
+    </div>
 
   </aside>
 
@@ -842,12 +1268,11 @@ body {
         THE INFO IS THERE.<br><em>NOW YOU CAN SEE IT.</em>
       </h1>
       <p class="hero-body">
-        The information that shapes our lives is not always easy for <strong>US</strong> to understand — until <strong>NOW</strong>. The problem is no longer access to information. It's <strong>making sense of it</strong>. USNow makes it easy to see and easy to understand. From federal budgets and maps of foreign military bases to media bias and the scales of human behavior — now you can see things in ways that make sense.<br><br>
-        <strong>Also: Request your own infographic.</strong> Present your own question or problem and turn it into a visual that makes it clear.
+        The information that shapes our lives is not always easy for <strong>US</strong> to understand — until <strong>NOW</strong>. The problem is no longer access to information. It's <strong>making sense of it</strong>. USNow makes it easy to see and easy to understand. From federal budgets and maps of foreign military bases to media bias and the scales of human behavior — now you can see things in ways that make sense.
       </p>
       <div class="btn-row">
-        <a href="#graphics" class="btn btn-red">What We're Looking At</a>
-        <a href="#submit" class="btn btn-amber">Request a Graphic</a>
+        <a href="#graphics" class="btn btn-red">Graphic Info</a>
+        <a href="#journal" class="btn btn-amber">The Journal</a>
         <a href="/graphics/who-rules-the-world" class="btn btn-outline">Who Rules the World</a>
       </div>
     </section>
@@ -872,13 +1297,12 @@ body {
       </div>
     </div>
 
-    <!-- FEATURED GRAPHICS -->
+    <!-- GRAPHIC INFO -->
     <div class="section-header" id="graphics">
-      <div class="section-title">What We're Looking At</div>
-      <div class="section-sub">Vol. 1 · Military & Budget · Power Structure</div>
+      <div class="section-title">Graphic Info — See It Plain and Clear</div>
     </div>
 
-    <div class="preview-strip" style="grid-template-columns:1fr 1fr 1fr 1fr;">
+    <div class="preview-strip">
 
       <a href="/graphics/hidden-costs" class="preview-card">
         <div class="preview-thumb" style="background:linear-gradient(135deg,#100d00,#1a1400);">
@@ -889,7 +1313,7 @@ body {
           </div>
         </div>
         <div class="preview-meta">
-          <div class="preview-meta-title">The real cost of defense — what's buried across agencies.</div>
+          <div class="preview-meta-title">The real cost of defense — buried across agencies.</div>
           <div class="preview-meta-arrow">→</div>
         </div>
       </a>
@@ -924,81 +1348,82 @@ body {
 
       <a href="/graphics/who-rules-the-world" class="preview-card">
         <div class="preview-thumb" style="background:linear-gradient(135deg,#0e0900,#1c1200);">
-          <div class="preview-thumb-num" style="color:#c9973a; font-size:32px;">𓇯</div>
+          <div class="preview-thumb-num" style="color:#c9973a; font-size:32px; opacity:0.3;">𓇯</div>
           <div class="preview-thumb-label">
             <div class="preview-thumb-tag" style="color:#c9973a;">Power Structure</div>
             <div class="preview-thumb-title">Who Rules the World</div>
           </div>
         </div>
         <div class="preview-meta">
-          <div class="preview-meta-title">The pyramid of global power — from the apex to the unrepresented majority.</div>
+          <div class="preview-meta-title">The pyramid of global power.</div>
           <div class="preview-meta-arrow">→</div>
         </div>
       </a>
 
     </div>
 
-    <div style="padding: 20px 60px 36px; border-bottom: 1px solid var(--border); display:flex; gap:14px;">
-      <a href="/graphics" class="btn btn-outline">View All Graphics</a>
+    <div class="view-all-row" style="padding: 16px 60px 28px; border-bottom: 1px solid var(--border); display:flex; gap:14px;">
+      <a href="/graphics" class="btn btn-outline">View All Graphic Info</a>
     </div>
 
-    <!-- SUBMIT -->
+    <!-- THE JOURNAL -->
+    <div class="section-header" id="journal">
+      <div class="section-title">The Journal</div>
+      <div class="section-sub">Writing · Series · Essays</div>
+    </div>
+
+    <div class="journal-list">
+      <a href="/apprentice" class="journal-item">
+        <div class="journal-item-num">01</div>
+        <div class="journal-item-body">
+          <div class="journal-item-tag">Running Series · Parts 1–8 of 16+</div>
+          <div class="journal-item-title">The Apprentice: Washington Edition</div>
+          <div class="journal-item-sub">A real-life contemporaneous retrospective parody</div>
+        </div>
+        <div class="journal-item-arrow">→</div>
+      </a>
+      <!-- Future journal entries go here -->
+    </div>
+
+    <!-- REQUEST A GRAPHIC -->
     <div class="section-header" id="submit">
       <div class="section-title">Make a Request</div>
-      <div class="section-sub">Crowdsourced · All topics welcome</div>
     </div>
 
-    <section class="submit-section">
+    <section class="request-section">
       <div>
-        <div class="submit-headline">PRESENT YOUR OWN QUESTION.<br><em>WE'LL MAKE IT VISIBLE.</em></div>
-        <p class="submit-body">
-          Request your own infographic. Present your own question or problem and turn it into a visual that makes it clear.<br><br>
-          No request is too local or too large. From spending patterns to voting records, media bias to human behavior — if it can be shown, we'll show it.<br><br>
-          Submit your question below.
+        <div class="request-headline">YOUR QUESTION.<br><em>MADE VISIBLE.</em></div>
+        <p class="request-body">
+          Have a question that data could answer? Submit it — we'll make it visible. No topic is too local or too large.
         </p>
       </div>
 
       <div>
         <div class="form-field">
-          <label class="form-label">Your Name (optional)</label>
-          <input class="form-input" type="text" id="fname" placeholder="Anonymous is fine">
+          <label class="form-label">Your Email</label>
+          <input class="form-input" type="email" id="femail" placeholder="your@email.com">
         </div>
         <div class="form-field">
-          <label class="form-label">Topic or Question *</label>
-          <input class="form-input" type="text" id="ftopic" placeholder="e.g. AIPAC spending by district">
+          <label class="form-label">Your Question or Topic *</label>
+          <textarea class="form-textarea" id="ftopic" placeholder="What would you like to see made visible?"></textarea>
         </div>
-        <div class="form-field">
-          <label class="form-label">Why It Matters</label>
-          <textarea class="form-textarea" id="fwhy" placeholder="What would this reveal?"></textarea>
-        </div>
-        <div class="form-field">
-          <label class="form-label">Sources You Know Of</label>
-          <input class="form-input" type="text" id="fsources" placeholder="URLs, databases, reports...">
-        </div>
-        <button class="btn btn-outline" onclick="submitRequest()">Submit Request</button>
-        <div class="form-note">Submissions go to a public queue. USNow builds what matters, not everything.</div>
-        <div class="form-success" id="form-success">✓ Received. Added to the queue.</div>
+        <button class="btn btn-outline" onclick="submitRequest()">Submit</button>
+        <div class="form-note">Submissions go to a public queue. USNow builds what matters.</div>
+        <div class="form-success" id="form-success">&#10003; Received. Added to the queue.</div>
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="footer-left">
-        USNOW.APP — Civic Data Platform<br>
-        USNOW.APP — Civic Data Platform<br>
-        Data: public record · Structure &amp; design: ATJon + AI · Free reuse with attribution
-      </div>
-      <div class="footer-links">
-        <a href="https://usnow.app" target="_blank" class="footer-link">USNow</a>
-        <a href="https://atjon.substack.com" target="_blank" class="footer-link">Substack</a>
-        <a href="/cdn-cgi/l/email-protection#9ff5f0f1dfebfeebeaf1f3fee8b1fcf0f2" class="footer-link">Contact</a>
-      </div>
+      <div class="footer-primary">Structure · Design · Concept &amp; Content by ATJon + AI</div>
+      <div class="footer-secondary">Copyrightable Content &#169; 2026 by Jonathan Tatun — All Rights Reserved</div>
     </footer>
 
   </main>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
   const d = new Date();
   document.getElementById('live-date').textContent =
     d.toLocaleDateString('en-US',{weekday:'short',year:'numeric',month:'long',day:'numeric'}).toUpperCase();
@@ -1012,14 +1437,18 @@ body {
     }
     const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
     const data = {
-      name: document.getElementById('fname').value,
+      name: document.getElementById('femail').value,
       topic,
-      why: document.getElementById('fwhy').value,
-      sources: document.getElementById('fsources').value,
+      why: '',
+      sources: '',
       submitted: new Date().toISOString()
     };
     if (SHEET_ENDPOINT !== 'YOUR_SHEET_ENDPOINT') {
       fetch(SHEET_ENDPOINT, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
     }
     document.getElementById('form-success').style.display = 'block';
-    ['fname','ftopic','fwhy','fsources'].
+    ['femail','ftopic'].forEach(id => document.getElementById(id).value = '');
+  }
+</script>
+</body>
+</html>
