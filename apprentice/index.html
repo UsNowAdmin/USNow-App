@@ -164,9 +164,9 @@
     color: inherit;
   }
 
-  .card:hover {
-    transform: translateY(-3px);
-    border-color: var(--gold);
+  a.card {
+    display: flex;
+    flex-direction: column;
   }
 
   .card::before {
@@ -202,10 +202,6 @@
 
   .card.principal .card-image {
     aspect-ratio: 2/3;
-  }
-
-  .card.landscape .card-image {
-    aspect-ratio: 4/3;
   }
 
   .card-image img {
@@ -612,7 +608,7 @@
   .cards-grid .card:nth-child(5) { animation-delay: 0.25s; }
   .cards-grid .card:nth-child(6) { animation-delay: 0.3s; }
 
-  /* LANDSCAPE SECTION GRID — 2x2 at top */
+  /* EPISODE CARDS — 2x2 grid, image on top, text underneath */
   .landscape-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -620,6 +616,32 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 1.5rem 1.5rem 0.5rem;
+  }
+
+  .landscape-grid .card {
+    display: grid !important;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .landscape-grid .card .card-image {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .landscape-grid .card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .landscape-grid .card .card-body {
+    grid-row: 2;
+    grid-column: 1;
+    padding: 0.75rem 1rem 0.85rem;
   }
 
   /* PRINCIPALS ROW — two cards, portrait, matched to trading cards */
