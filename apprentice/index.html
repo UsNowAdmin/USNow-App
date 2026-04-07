@@ -190,7 +190,7 @@
   /* IMAGE AREA */
   .card-image {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 2/3;
     background: var(--dark);
     overflow: hidden;
     position: relative;
@@ -200,7 +200,11 @@
   }
 
   .card.principal .card-image {
-    aspect-ratio: 3/2;
+    aspect-ratio: 2/3;
+  }
+
+  .card.landscape .card-image {
+    aspect-ratio: 16/9;
   }
 
   .card-image img {
@@ -631,11 +635,7 @@
     <!-- THE HOST -->
     <div class="card principal card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder">
-          <!-- REPLACE: img src="YOUR_TRUMP_IMAGE_URL" alt="The Host" -->
-          <div class="placeholder-icon">🎬</div>
-          <div class="placeholder-text">Host Image</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump.PNG" alt="The Host">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Executive Producer</div>
@@ -650,11 +650,7 @@
     <a class="card principal" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
       <div class="card-link-indicator">READ →</div>
       <div class="card-image">
-        <div class="card-image-placeholder">
-          <!-- REPLACE: img src="YOUR_COHEN_IMAGE_URL" alt="Michael Cohen" -->
-          <div class="placeholder-icon">📁</div>
-          <div class="placeholder-text">Narrator Image</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cohen.PNG" alt="Michael Cohen">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Narrator · Seasons One & Two</div>
@@ -675,7 +671,7 @@
   <div class="cards-grid">
 
     <!-- S1E1 COLD OPEN -->
-    <a class="card" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
+    <a class="card landscape" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
       <div class="card-link-indicator">READ →</div>
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cold-open.PNG" alt="Cold Open">
@@ -689,7 +685,7 @@
     </a>
 
     <!-- S1E3 HIGHLIGHT REEL -->
-    <a class="card" href="https://atjon.substack.com/p/section-three-previously-on-the-apprentice" target="_blank" rel="noopener">
+    <a class="card landscape" href="https://atjon.substack.com/p/section-three-previously-on-the-apprentice" target="_blank" rel="noopener">
       <div class="card-link-indicator">READ →</div>
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/highlight-reel.PNG" alt="Highlight Reel">
@@ -703,7 +699,7 @@
     </a>
 
     <!-- S1E4 THE RULES -->
-    <a class="card" href="https://atjon.substack.com/p/section-four-the-rules" target="_blank" rel="noopener">
+    <a class="card landscape" href="https://atjon.substack.com/p/section-four-the-rules" target="_blank" rel="noopener">
       <div class="card-link-indicator">READ →</div>
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-rules.PNG" alt="The Rules">
@@ -717,7 +713,7 @@
     </a>
 
     <!-- S1E4B BRIEF WORD -->
-    <a class="card" href="https://atjon.substack.com/p/section-four-b" target="_blank" rel="noopener">
+    <a class="card landscape" href="https://atjon.substack.com/p/section-four-b" target="_blank" rel="noopener">
       <div class="card-link-indicator">READ →</div>
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-briefing.PNG" alt="The Briefing">
@@ -760,10 +756,7 @@
     <!-- FLYNN -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #1a0d0d, #0d0808);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">🎖</div>
-          <div class="placeholder-text">Flynn</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/flynn.PNG" alt="Michael Flynn">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Five · The True Believers</div>
@@ -778,10 +771,7 @@
     <!-- BANNON -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #0d0d0d, #080808);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">📰</div>
-          <div class="placeholder-text">Bannon</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/bannon.PNG" alt="Steve Bannon">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Five · The True Believers</div>
@@ -796,10 +786,7 @@
     <!-- TILLERSON -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #0a1a0d, #051008);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">🛢</div>
-          <div class="placeholder-text">Tillerson</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/tillerson.PNG" alt="Rex Tillerson">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Six · The Institutionalists</div>
@@ -814,10 +801,7 @@
     <!-- SESSIONS -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #1a1a0a, #101005);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">⚖</div>
-          <div class="placeholder-text">Sessions</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sessions.PNG" alt="Jeff Sessions">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Six · The Institutionalists</div>
@@ -832,10 +816,7 @@
     <!-- MATTIS -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #0a0d1a, #050810);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">🎖</div>
-          <div class="placeholder-text">Mattis</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/mattis.PNG" alt="James Mattis">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Seven · The Generals</div>
@@ -850,10 +831,7 @@
     <!-- KELLY -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #0d0a1a, #080510);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">🎖</div>
-          <div class="placeholder-text">Kelly</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/kelly.PNG" alt="John Kelly">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Seven · The Generals</div>
@@ -876,7 +854,7 @@
 <div class="season-break-strip">
   <div class="season-break-card card-no-link">
     <div class="season-break-image">
-      <div class="season-break-image-placeholder">☕</div>
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/scaramucci.PNG" alt="Anthony Scaramucci" style="width:100%; height:100%; object-fit:cover;">
     </div>
     <div class="season-break-body">
       <div class="season-break-tag">Season Break · The Hallway</div>
@@ -897,10 +875,7 @@
     <!-- NOEM -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #1a0a0a, #100505);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">🤠</div>
-          <div class="placeholder-text">Noem</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/noem.PNG" alt="Kristi Noem">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Nine · The Loyalists</div>
@@ -915,10 +890,7 @@
     <!-- BONDI -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #0a0a1a, #050510);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">⚖</div>
-          <div class="placeholder-text">Bondi</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/bondi.PNG" alt="Pam Bondi">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Nine · The Loyalists</div>
@@ -933,10 +905,7 @@
     <!-- HEGSETH -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #0a1a0a, #051005);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">📱</div>
-          <div class="placeholder-text">Hegseth</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/hegseth.PNG" alt="Pete Hegseth">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Ten · Still Running</div>
@@ -951,10 +920,7 @@
     <!-- GABBARD -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #0a0a1a, #050510);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">👁</div>
-          <div class="placeholder-text">Gabbard</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/gabbard.PNG" alt="Tulsi Gabbard">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Ten · Still Running</div>
@@ -969,10 +935,7 @@
     <!-- PATEL -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #1a1005, #0d0803);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">📚</div>
-          <div class="placeholder-text">Patel</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/patel.PNG" alt="Kash Patel">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Eleven · The Institutional Damage</div>
@@ -987,10 +950,7 @@
     <!-- RFK -->
     <div class="card card-no-link">
       <div class="card-image">
-        <div class="card-image-placeholder" style="background: linear-gradient(135deg, #051a05, #031003);">
-          <div class="placeholder-icon" style="font-size:2.5rem; opacity:0.4;">🥛</div>
-          <div class="placeholder-text">RFK Jr.</div>
-        </div>
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/rfk.PNG" alt="Robert F. Kennedy Jr.">
       </div>
       <div class="card-body">
         <div class="card-season-tag">Section Eleven · The Institutional Damage</div>
@@ -1002,7 +962,19 @@
       </div>
     </div>
 
-
+    <!-- PAULA WHITE — SECTION 12 -->
+    <div class="card mystery card-no-link">
+      <div class="card-image">
+        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/white.PNG" alt="Section 12">
+      </div>
+      <div class="card-body">
+        <div class="card-season-tag">Section Twelve · Special Divine Guest</div>
+        <div class="card-title">?</div>
+        <div class="card-subtitle">The Final Word · Coming</div>
+        <div class="card-quote" style="color:#3a2a3a; border-color:#2a1a2a;">Every show needs a closing.</div>
+        <div class="card-status status-mystery">● Coming</div>
+      </div>
+    </div>
 
   </div>
 </div>
