@@ -687,7 +687,66 @@
 
   @media (max-width: 480px) {
     .principals-row { grid-template-columns: 1fr; }
+    .ad-strip { grid-template-columns: repeat(2, 1fr); }
   }
+
+  /* SUBSTACK BUTTON */
+  .substack-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.9rem;
+    background: #ff6719;
+    color: #fff;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .substack-btn:hover { background: #e55a0f; color: #fff; }
+
+  /* TWO-CLICK COMMERCIAL OVERLAY */
+  .ad-card { position: relative; overflow: hidden; }
+  .ad-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,8,5,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+    padding: 1rem;
+    text-align: center;
+  }
+  .ad-card.revealed .ad-overlay {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .ad-overlay-text {
+    color: var(--gold);
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    line-height: 1.8;
+  }
+  .ad-overlay-link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.35rem 0.8rem;
+    background: #ff6719;
+    color: #fff;
+    font-size: 0.55rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .ad-overlay-link:hover { background: #e55a0f; }
 </style>
 </head>
 <body>
@@ -715,6 +774,7 @@
       <div class="card-title">Cold Open</div>
       <div class="card-subtitle">The Show Begins Again</div>
       <div class="card-quote">"This isn't The Apprentice you remember. The consequences are considerably less theoretical."</div>
+      <a class="substack-btn" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">Read on Substack</a>
     </div>
   </a>
 
@@ -729,6 +789,7 @@
       <div class="card-title">Highlight Reel</div>
       <div class="card-subtitle">Previously On…</div>
       <div class="card-quote">"You remember all of that. Good. Let's go back to the beginning."</div>
+      <a class="substack-btn" href="https://atjon.substack.com/p/section-three-previously-on-the-apprentice" target="_blank" rel="noopener">Read on Substack</a>
     </div>
   </a>
 
@@ -743,6 +804,7 @@
       <div class="card-title">The Rules</div>
       <div class="card-subtitle">There Is Only One Judge</div>
       <div class="card-quote">"RULE FIVE: There is no Rule Five. And all other rules are subject to Rule Five."</div>
+      <a class="substack-btn" href="https://atjon.substack.com/p/section-four-the-rules" target="_blank" rel="noopener">Read on Substack</a>
     </div>
   </a>
 
@@ -757,6 +819,7 @@
       <div class="card-title">A Brief Word From The White House</div>
       <div class="card-subtitle">Karoline Leavitt · Press Secretary · @PressSec</div>
       <div class="card-quote">"Is any of this real?" — This has always been the question.</div>
+      <a class="substack-btn" href="https://atjon.substack.com/p/section-four-b" target="_blank" rel="noopener">Read on Substack</a>
     </div>
   </a>
 
@@ -791,26 +854,51 @@
       <div class="card-subtitle">Personal Attorney · Fixer · Convicted · Released · Podcasting</div>
       <div class="card-quote">"I came in through a different door. And I left through a different door than I expected too."</div>
       <div class="card-status status-break">● The folder is empty</div>
+      <a class="substack-btn" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">Read on Substack</a>
     </div>
   </a>
 
 </div>
 
-<!-- AD STRIP — nonchalant, no label, click once = link to article -->
+<!-- AD STRIP — two-click: first click reveals overlay, second click goes to Substack -->
 <div class="ad-strip">
-  <a class="ad-card" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">
+  <div class="ad-card" onclick="revealAd(this)">
     <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-steaks.PNG" alt="Trump Steaks">
-  </a>
-  <a class="ad-card" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">
+    <div class="ad-overlay">
+      <div class="ad-overlay-text">Trump Steaks</div>
+      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
+    </div>
+  </div>
+  <div class="ad-card" onclick="revealAd(this)">
     <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-university.PNG" alt="Trump University">
-  </a>
-  <a class="ad-card" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">
+    <div class="ad-overlay">
+      <div class="ad-overlay-text">Trump University</div>
+      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
+    </div>
+  </div>
+  <div class="ad-card" onclick="revealAd(this)">
     <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/mypillow.PNG" alt="MyPillow">
-  </a>
-  <a class="ad-card" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">
+    <div class="ad-overlay">
+      <div class="ad-overlay-text">MyPillow</div>
+      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
+    </div>
+  </div>
+  <div class="ad-card" onclick="revealAd(this)">
     <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-vodka.PNG" alt="Trump Vodka">
-  </a>
+    <div class="ad-overlay">
+      <div class="ad-overlay-text">Trump Vodka</div>
+      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
+    </div>
+  </div>
 </div>
+
+<script>
+function revealAd(el) {
+  if (!el.classList.contains('revealed')) {
+    el.classList.add('revealed');
+  }
+}
+</script>
 
 <!-- SEASON ONE — contestants below this line -->
 <div class="season-label">
@@ -821,7 +909,7 @@
   <div class="cards-grid">
 
     <!-- FLYNN -->
-    <div class="card card-no-link">
+    <div class="card">
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/flynn.PNG" alt="Michael Flynn">
       </div>
@@ -832,11 +920,12 @@
         <div class="card-quote">"The show doesn't reward belief. It uses belief. There's a difference."</div>
         <div class="card-status status-fired">● Fired · Pardoned · Podcasting</div>
         <div class="card-days">Days on set: 24</div>
+        <a class="substack-btn" href="https://atjon.substack.com/p/section-five-the-true-believers" target="_blank" rel="noopener">Read on Substack</a>
       </div>
     </div>
 
     <!-- BANNON -->
-    <div class="card card-no-link">
+    <div class="card">
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/bannon.PNG" alt="Steve Bannon">
       </div>
@@ -847,11 +936,12 @@
         <div class="card-quote">"The moment you become the story — you get the longest producer's note in the show's history."</div>
         <div class="card-status status-fired">● Fired · Pardoned · Podcasting</div>
         <div class="card-days">Days on set: 204</div>
+        <a class="substack-btn" href="https://atjon.substack.com/p/section-five-the-true-believers" target="_blank" rel="noopener">Read on Substack</a>
       </div>
     </div>
 
     <!-- TILLERSON -->
-    <div class="card card-no-link">
+    <div class="card">
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/tillerson.PNG" alt="Rex Tillerson">
       </div>
@@ -862,11 +952,12 @@
         <div class="card-quote">"Wrong room."</div>
         <div class="card-status status-fired">● Fired via Twitter · In Kenya · On the toilet</div>
         <div class="card-days">Days on set: 422</div>
+        <a class="substack-btn" href="https://atjon.substack.com/p/section-six-the-institutionalists" target="_blank" rel="noopener">Read on Substack</a>
       </div>
     </div>
 
     <!-- SESSIONS -->
-    <div class="card card-no-link">
+    <div class="card">
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sessions.PNG" alt="Jeff Sessions">
       </div>
@@ -877,11 +968,12 @@
         <div class="card-quote">"Both of them believed the institution they were serving was real. What was not real was the idea that the show cared about it."</div>
         <div class="card-status status-fired">● Resigned · Lost Senate seat · Hat retired</div>
         <div class="card-days">Days on set: 631</div>
+        <a class="substack-btn" href="https://atjon.substack.com/p/section-six-the-institutionalists" target="_blank" rel="noopener">Read on Substack</a>
       </div>
     </div>
 
     <!-- MATTIS -->
-    <div class="card card-no-link">
+    <div class="card">
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/mattis.PNG" alt="James Mattis">
       </div>
@@ -892,11 +984,12 @@
         <div class="card-quote">"The sequence was right."</div>
         <div class="card-status status-fired">● Resigned · Letter read on Senate floor · In Texas</div>
         <div class="card-days">Days on set: 739</div>
+        <a class="substack-btn" href="https://atjon.substack.com/p/section-7-the-generals" target="_blank" rel="noopener">Read on Substack</a>
       </div>
     </div>
 
     <!-- KELLY -->
-    <div class="card card-no-link">
+    <div class="card">
       <div class="card-image">
         <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/kelly.PNG" alt="John Kelly">
       </div>
@@ -907,6 +1000,7 @@
         <div class="card-quote">"Both of them were right about everything. Both of them were too late."</div>
         <div class="card-status status-fired">● Resigned · Spoke up after · Lives with the timing</div>
         <div class="card-days">Days on set: 571</div>
+        <a class="substack-btn" href="https://atjon.substack.com/p/section-7-the-generals" target="_blank" rel="noopener">Read on Substack</a>
       </div>
     </div>
 
