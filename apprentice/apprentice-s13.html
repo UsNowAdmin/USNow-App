@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Season Three — Rumored · Unconfirmed · The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #070709; --off-black: #0d0d12; --panel: #0b0b10;
+  --border: #1e1e2a; --red: #e03030; --amber: #f0a500; --gold: #c9973a;
+  --green: #1db954; --white: #f2f2f2; --muted: #52526a; --subtle: #14141c; --text: #c8c8d8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text); font-family: 'DM Serif Display', serif; min-height: 100vh; overflow-x: hidden; }
+
+.top-nav { width: 100%; background: var(--off-black); border-bottom: 1px solid var(--border); padding: 0 40px; height: 44px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 500; }
+.nav-home { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 5px; color: var(--white); text-decoration: none; }
+.nav-home span { color: var(--red); }
+.nav-series { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
+.nav-series:hover { color: var(--amber); }
+
+/* Header */
+.page-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+}
+.page-series { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 5px; color: var(--amber); text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+.page-series::before { content: ''; display: block; width: 28px; height: 1px; background: var(--amber); flex-shrink: 0; }
+.page-title { font-family: 'Bebas Neue', sans-serif; font-size: 72px; line-height: 0.88; letter-spacing: 4px; color: var(--white); margin-bottom: 12px; }
+.page-subtitle { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 5px; color: #3a3a52; text-transform: uppercase; margin-bottom: 8px; }
+.page-tagline { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 18px; color: var(--muted); }
+
+/* Warning banner */
+.warning-banner {
+  max-width: 780px;
+  margin: 40px auto 0;
+  padding: 0 40px;
+}
+.warning-inner {
+  border: 1px solid #2a2a1a;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #0a0a05;
+}
+.warning-star { color: #4a4a28; font-size: 14px; flex-shrink: 0; }
+.warning-text { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 4px; color: #5a5a30; text-transform: uppercase; font-style: italic; }
+
+/* Grid */
+.rumor-grid {
+  max-width: 780px;
+  margin: 40px auto 0;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rumor-card {
+  border: 1px solid #1a2010;
+  background: linear-gradient(135deg, #060a04 0%, #0a1008 100%);
+  padding: 20px 22px;
+}
+
+.rumor-card-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #3a4828;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.rumor-names {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.rumor-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #6a7850;
+  line-height: 1;
+}
+
+.rumor-divider {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #2a3018;
+  margin: 0 10px;
+  align-self: center;
+}
+
+.rumor-status {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #2a3018;
+  text-transform: uppercase;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rumor-status::before {
+  content: '●';
+  font-size: 6px;
+  color: #2a3018;
+}
+
+/* Elon special card */
+.special-card {
+  border: 1px solid #1a1a10;
+  background: linear-gradient(135deg, #080806 0%, #0e0e08 100%);
+  padding: 20px 22px;
+  grid-column: span 1;
+}
+
+.special-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #3a3820;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.special-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #706840;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.special-role {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #3a3820;
+  margin-bottom: 6px;
+}
+
+.special-status {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #2a2810;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.special-status::before { content: '●'; font-size: 6px; }
+
+/* Giuliani PSA */
+.giuliani-psa {
+  max-width: 780px;
+  margin: 16px auto 0;
+  padding: 0 40px;
+}
+
+.giuliani-inner {
+  border: 1px solid #2a1010;
+  background: linear-gradient(135deg, #0a0505 0%, #100808 100%);
+  padding: 24px 28px;
+  text-align: center;
+}
+
+.giuliani-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 5px;
+  color: #4a2020;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.giuliani-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 5px;
+  color: #6a3030;
+  margin-bottom: 8px;
+}
+
+.giuliani-sub {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #3a1818;
+  line-height: 1.6;
+}
+
+/* Stay tuned */
+.stay-tuned {
+  max-width: 780px;
+  margin: 40px auto 64px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.stay-tuned-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 8px;
+  color: #2a2a3a;
+}
+
+/* Nav */
+.nav-episode { max-width: 780px; margin: 0 auto; padding: 0 40px 64px; }
+.nav-label { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 4px; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
+.nav-link { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border: 1px solid var(--border); text-decoration: none; background: var(--panel); transition: all 0.2s; margin-bottom: 10px; }
+.nav-link:hover { border-color: var(--amber); background: var(--subtle); }
+.nav-link-title { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 3px; color: #8888a0; transition: color 0.2s; }
+.nav-link:hover .nav-link-title { color: var(--amber); }
+.nav-link-arrow { font-family: 'Space Mono', monospace; font-size: 16px; color: var(--muted); transition: color 0.2s; }
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+.nav-link-prev { opacity: 0.5; }
+
+.article-footer { border-top: 1px solid var(--border); padding: 22px 40px; text-align: center; background: var(--off-black); }
+.footer-text { font-family: 'Space Mono', monospace; font-size: 9px; color: #28283a; letter-spacing: 1px; line-height: 1.8; }
+
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .page-header { padding: 40px 20px 32px; }
+  .page-title { font-size: 48px; }
+  .warning-banner, .rumor-grid, .giuliani-psa, .stay-tuned, .nav-episode { padding-left: 20px; padding-right: 20px; }
+  .rumor-grid { grid-template-columns: 1fr; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<header class="page-header">
+  <div class="page-series">The Apprentice: Washington Edition</div>
+  <h1 class="page-title">SEASON THREE</h1>
+  <div class="page-subtitle">Rumored · Unconfirmed · Subject to Change</div>
+  <div class="page-tagline">The show, as always, continues.</div>
+</header>
+
+<div class="warning-banner">
+  <div class="warning-inner">
+    <span class="warning-star">★</span>
+    <span class="warning-text">Rumored Third Season · Unconfirmed · Subject to Change ★ Stay Tuned</span>
+    <span class="warning-star">★</span>
+  </div>
+</div>
+
+<div class="rumor-grid">
+
+  <div class="rumor-card">
+    <div class="rumor-card-label">Rumored · Season Three</div>
+    <div class="rumor-names">
+      <span class="rumor-name">Stephen Miller</span>
+      <span class="rumor-divider">·</span>
+      <span class="rumor-name">Todd Blanche</span>
+    </div>
+    <div class="rumor-status">Unconfirmed</div>
+  </div>
+
+  <div class="rumor-card">
+    <div class="rumor-card-label">Rumored · Season Three</div>
+    <div class="rumor-names">
+      <span class="rumor-name">Scott Bessent</span>
+      <span class="rumor-divider">·</span>
+      <span class="rumor-name">Marco Rubio</span>
+    </div>
+    <div class="rumor-status">Unconfirmed</div>
+  </div>
+
+  <div class="rumor-card">
+    <div class="rumor-card-label">Rumored · Season Three</div>
+    <div class="rumor-names">
+      <span class="rumor-name">Jared Kushner</span>
+      <span class="rumor-divider">·</span>
+      <span class="rumor-name">JD Vance</span>
+    </div>
+    <div class="rumor-status">Unconfirmed</div>
+  </div>
+
+  <div class="special-card">
+    <div class="special-label">Special · Post-Show Commentary</div>
+    <div class="special-name">ELON MUSK</div>
+    <div class="special-role">The Billionaire in the Production Truck</div>
+    <div class="special-status">Format TBD · Watching from Outside</div>
+  </div>
+
+</div>
+
+<div class="giuliani-psa">
+  <div class="giuliani-inner">
+    <div class="giuliani-label">Public Service Announcement</div>
+    <div class="giuliani-name">RUDY GIULIANI</div>
+    <div class="giuliani-sub">A message from America's Mayor.<br>Format and content to be determined.<br>He has thoughts. Many of them.</div>
+  </div>
+</div>
+
+<div class="stay-tuned">
+  <div class="stay-tuned-text">STAY TUNED</div>
+</div>
+
+<div class="nav-episode">
+  <div class="nav-label">Navigate</div>
+  <a href="/apprentice/section-12.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section Twelve — The Benediction</div>
+  </a>
+</div>
+
+<footer class="article-footer">
+  <div class="footer-text">Copyrightable elements © 2026 USNow.app · Created by ATJon + AI</div>
+</footer>
+</body>
+</html>

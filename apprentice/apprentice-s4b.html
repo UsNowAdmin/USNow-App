@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 4(b): A Brief Word From The White House — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  line-height: 0.9;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover { color: var(--amber); border-color: var(--amber); }
+
+/* ── BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 2px solid #1e1e2a;
+  font-style: normal;
+}
+
+/* Breaking label */
+.breaking {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 6px;
+  color: var(--red);
+  display: inline-block;
+  margin-bottom: 8px;
+  animation: breaking-flash 0.7s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(224,48,48,0.5);
+}
+
+@keyframes breaking-flash {
+  0%, 100% { opacity: 1; text-shadow: 0 0 20px rgba(224,48,48,0.5); }
+  50% { opacity: 0.3; text-shadow: none; }
+}
+
+/* Speaker — principal */
+.speaker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  margin: 36px 0 4px;
+  line-height: 1.2;
+}
+
+/* Speaker — reporter, smaller and dimmer */
+.speaker-reporter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #6a6a50;
+  margin: 28px 0 4px;
+  line-height: 1.2;
+}
+
+/* Dialogue */
+.dialogue {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Principal image — full size */
+.person-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 40px auto 36px;
+  border: 1px solid var(--border);
+}
+
+/* Reporter image — smaller, centered */
+.reporter-image {
+  display: block;
+  width: 35%;
+  height: auto;
+  margin: 32px auto 12px;
+  border: 1px solid var(--border);
+  opacity: 0.85;
+}
+
+/* Reporter name card below image */
+.reporter-card {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.reporter-card-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #4a4a5a;
+  text-transform: uppercase;
+}
+
+.reporter-card-outlet {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: #38384a;
+  margin-top: 3px;
+}
+
+/* Leavitt title card */
+.leavitt-card {
+  text-align: center;
+  margin: 0 0 40px;
+  padding: 20px;
+  border: 1px solid #2a1e08;
+  background: linear-gradient(135deg, #0e0900 0%, #1a1000 100%);
+}
+
+.leavitt-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 38px;
+  letter-spacing: 6px;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.leavitt-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #6a5020;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+
+.leavitt-handle {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3010;
+  margin-top: 6px;
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NAVIGATION ── */
+.nav-episode {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+.nav-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover { border-color: var(--amber); background: var(--subtle); }
+
+.nav-link-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-title { color: var(--amber); }
+
+.nav-link-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+.nav-link-prev { opacity: 0.5; }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* Reporter image pair — side by side */
+.reporter-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0 12px;
+}
+
+.reporter-pair-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reporter-pair-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  opacity: 0.85;
+  display: block;
+}
+
+.reporter-pair-item .reporter-card {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Nobody image */
+.nobody-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 28px auto 28px;
+  border: 1px solid var(--border);
+}
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; }
+  .article-title { font-size: 48px; }
+  .article-body { padding: 36px 20px 52px; }
+  .dialogue { font-size: 18px; }
+  .person-image { width: 75%; }
+  .reporter-image { width: 55%; }
+  .nav-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER — no image, title only -->
+<header class="article-header">
+  <div class="article-series">The Apprentice: Washington Edition</div>
+  <div class="article-section-label">Section 4(b)</div>
+  <h1 class="article-title">A BRIEF WORD FROM THE WHITE HOUSE</h1>
+  <div class="breaking">⚡ BREAKING</div>
+  <div class="article-subtitle">News Conference From the White House</div>
+  <div class="article-meta">
+    <span class="article-date">Apr 03, 2026</span>
+    <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+  </div>
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="stage-direction">[The boardroom. Cohen has just closed on the Rules. He looks at the camera. He is about to introduce the contestants.]</div>
+  <div class="stage-direction">[He doesn't get the chance.]</div>
+  <div class="stage-direction">[The door opens.]</div>
+  <div class="stage-direction">[A woman enters with the specific energy of someone who has somewhere else to be and would like to get this over with. She is carrying a padfolio. She is wearing a blazer. She walks to the end of the table — not the host's chair — and sets down the padfolio and looks at the camera with the expression of a person who has been asked to explain something that should not require explanation to people who should not require explaining to.]</div>
+  <div class="stage-direction">[Cohen steps aside.]<br>[He does not look surprised.]</div>
+
+  <!-- LEAVITT ENTRANCE -->
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-briefing.PNG" alt="The Briefing">
+
+  <div class="leavitt-card">
+    <div class="leavitt-name">KAROLINE LEAVITT</div>
+    <div class="leavitt-title">White House Press Secretary<br>United States of America</div>
+    <div class="leavitt-handle">@PressSec</div>
+  </div>
+
+  <div class="speaker">LEAVITT:</div>
+  <div class="dialogue">Good afternoon. Before we proceed I've been asked to make a brief statement on behalf of my Office — that of the Press Secretary of the President of the United States — regarding the content you are about to consume.</div>
+
+  <div class="stage-direction">[She opens the padfolio.]<br>[She looks at it.]<br>[She closes it.]<br>[She doesn't need it.]</div>
+
+  <div class="dialogue">What you are about to read — or watch, or experience, or whatever it is you're doing with this — is fake.</div>
+  <div class="dialogue">It is fake news.</div>
+  <div class="dialogue">It is, specifically, what is known in legal and also common parlance as a parody — which is a form of expression protected under the First Amendment of the United States Constitution, a document the administration fully supports except in the specific cases where it doesn't, which are being litigated separately.</div>
+  <div class="dialogue">A parody means it's not real.</div>
+  <div class="dialogue">The individuals portrayed in this production did not agree to be portrayed. They did not participate. They were not consulted. They do not endorse the content, the framing, the conclusions, the stage directions, or any of it and they have also not reviewed it.</div>
+
+  <div class="stage-direction">[She pauses.]</div>
+
+  <div class="dialogue">The situations depicted herein did not take place.</div>
+  <div class="dialogue">Except for the ones that did.</div>
+  <div class="dialogue">Those are a matter of public record and social media argument and are therefore not our problem.</div>
+
+  <div class="stage-direction">[She looks up from the padfolio she isn't reading.]</div>
+
+  <div class="dialogue">The facts contained in this production — to the extent that any facts are present, which we are not conceding — may appear to be real. They may feel real. They may have been reported by outlets that consider themselves to be real. However, it is the position of this office that facts, like most things, depend heavily on context, and that context, like most things, depends heavily on who is providing it, and that the people providing it in this particular case are —</div>
+
+  <div class="stage-direction">[She glances at the notes she doesn't have.]</div>
+
+  <div class="dialogue">— a nobody with an AI.</div>
+
+  <div class="stage-direction">[She says this without inflection.]<br>[This is the most devastating thing she will say today.]<br>[She means it as a dismissal.]<br>[It lands as a credential.]</div>
+
+  <img class="nobody-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/nobody.PNG" alt="A Nobody with an AI">
+
+  <div class="dialogue">Furthermore. The names and likenesses of the individuals portrayed herein may or may not resemble actual persons living or dead or currently serving in the cabinet pending the outcome of various congressional subpoenas. Any resemblance to actual persons is either coincidental or inevitable depending on how you feel about the whole thing.</div>
+  <div class="dialogue">The characters depicted here are not playing themselves. They did not agree to this portrayal. They are not even portrayed as the people we have come to know — which, frankly, given how we've come to know some of them, may be the nicest thing this presentation does for any of them.</div>
+
+  <div class="stage-direction">[Beat.]</div>
+
+  <div class="dialogue">The president of the United States is not aware of this production.</div>
+
+  <div class="stage-direction">[Beat.]<br>[We will not be elaborating on that statement.]</div>
+
+  <div class="stage-direction">[She looks at the assembled press corps.]</div>
+
+  <div class="dialogue">Questions.</div>
+
+  <div class="stage-direction">[She points.]</div>
+
+  <div class="speaker-reporter">ANDREW KISSINGLASSER, The New News:</div>
+  <div class="dialogue">Thank you Karoline, great briefing as always, really appreciate your accessibility and transparency, I think that's something the mainstream media doesn't give this administration enough credit for honestly —</div>
+
+  <div class="speaker">LEAVITT:</div>
+  <div class="dialogue">Thank you Andy.</div>
+
+  <div class="speaker-reporter">ANDREW KISSINGLASSER:</div>
+  <div class="dialogue">— and I just wanted to ask, given that this is obviously fake and clearly a partisan hit job by paid Democrat agitators who are threatened by the president's historic success, does the administration have any comment on the overwhelming public support for the president's cabinet picks and their incredible record of accomplishment?</div>
+
+  <div class="speaker">LEAVITT:</div>
+  <div class="dialogue">That really is a great question Andy. Yes.</div>
+
+  <div class="stage-direction">[She points.]</div>
+
+  <!-- GLASSER + COLLINS SIDE BY SIDE -->
+  <div class="reporter-pair">
+    <div class="reporter-pair-item">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/glasser.PNG" alt="Andrew Kissinglasser">
+      <div class="reporter-card">
+        <div class="reporter-card-name">Andrew Kissinglasser</div>
+        <div class="reporter-card-outlet">The New News</div>
+      </div>
+    </div>
+    <div class="reporter-pair-item">
+      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/collins.PNG" alt="Kaitlan Collins">
+      <div class="reporter-card">
+        <div class="reporter-card-name">Kaitlan Collins</div>
+        <div class="reporter-card-outlet">CNN</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="speaker-reporter">KAITLAN COLLINS, CNN:</div>
+  <div class="dialogue">Karoline — you said the situations depicted didn't take place except for the ones that did. Can you clarify which ones did take place? Specifically regarding the Signal chat, the Epstein files, and the —</div>
+
+  <div class="speaker">LEAVITT:</div>
+  <div class="dialogue">I said what I said Kaitlan.</div>
+
+  <div class="speaker-reporter">KAITLAN COLLINS:</div>
+  <div class="dialogue">You said facts depend on context. Whose context?</div>
+
+  <div class="speaker">LEAVITT:</div>
+  <div class="dialogue">The appropriate context.</div>
+
+  <div class="speaker-reporter">KAITLAN COLLINS:</div>
+  <div class="dialogue">And who determines —</div>
+
+  <div class="speaker">LEAVITT:</div>
+  <div class="dialogue">Next.</div>
+
+  <div class="stage-direction">[She points.]</div>
+
+  <!-- REPORTER 3: SEIKS — after "Is any of this real?" -->
+  <div class="speaker-reporter">CASSANDRA SEIKS, Channel 2:</div>
+  <div class="dialogue">Hi, Cassandra Seiks, Channel 2.</div>
+  <div class="stage-direction">[However you pronounce it is right and apropos.]</div>
+  <div class="dialogue">I just — I guess my question is — well</div>
+  <div class="stage-direction">[She looks at her notepad. She almost lipreads her question.]<br>[She looks up.]</div>
+  <div class="dialogue">Is any of this real?</div>
+
+  <!-- SEIKS IMAGE drops right here — after the question -->
+  <img class="reporter-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/seiks.PNG" alt="Cassandra Seiks">
+  <div class="reporter-card">
+    <div class="reporter-card-name">Cassandra Seiks</div>
+    <div class="reporter-card-outlet">Channel 2</div>
+  </div>
+
+  <div class="stage-direction">[The room goes quiet.]<br>[Leavitt looks at Cassandra Seiks.]<br>[Cassandra Seiks looks at Leavitt.]<br>[This is the question.]<br>[This has always been the question.]<br>[It is the question Cohen has been circling (for 12 sections — and one subsection).]<br>[It is the question the folder was built around.]<br>[It is the question the show has been running from since January 20th, 2017.]</div>
+
+  <div class="stage-direction">[Leavitt straightens her blazer.]</div>
+
+  <div class="speaker">LEAVITT:</div>
+  <div class="dialogue">This has been a White House press briefing.</div>
+
+  <div class="stage-direction">[She picks up the padfolio.]<br>[She walks toward the door.]<br>[She stops.]<br>[She turns back.]</div>
+
+  <div class="dialogue">The president's name will be known into perpetuity. There will be monuments airports and highways with his name. His businesses are doing very well. His properties are booming. His crypto ventures and worldwide partnerships are unmatched in history. His family is doing very well. The stock market —</div>
+
+  <div class="stage-direction">[She catches herself.]<br>[Something crosses her face.]<br>[She reassembles.]</div>
+
+  <div class="dialogue">— is doing what markets do.</div>
+  <div class="dialogue">Thank you all. God bless you and God bless the United States of America, and of course God Bless President Trump.</div>
+
+  <div class="stage-direction">[She exits.]<br>[The door closes.]<br>[Cohen steps back into frame.]<br>[He looks at the door.]<br>[He looks at the camera.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">Cassandra.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">Great question.</div>
+  <div class="stage-direction">[He sits.]</div>
+  <div class="dialogue">Now. The contestants.</div>
+
+  <div class="end-marker">End of Section Four-B</div>
+
+</article>
+
+<!-- NAVIGATION -->
+<div class="nav-episode">
+  <div class="nav-label">Continue Reading</div>
+  <a href="/apprentice/section-5.html" class="nav-link">
+    <div class="nav-link-title">Section Five — The True Believers: Flynn & Bannon</div>
+    <div class="nav-link-arrow">→</div>
+  </a>
+  <a href="/apprentice/section-4.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section Four — The Rules</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section Two: A Brief Word from Our Sponsors — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+  --text-dim: #72728a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV BAR ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.article-header-text { flex: 1; }
+
+.article-header-image {
+  width: 280px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+  max-width: 380px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+/* ── ARTICLE BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 2px solid #1e1e2a;
+}
+
+/* ── AD BLOCK ── */
+.ad-block {
+  margin: 0 0 56px 0;
+}
+
+.ad-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.ad-image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 32px;
+  border: 1px solid var(--border);
+}
+
+.ad-image-pair img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.ad-product-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.ad-prose p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 22px;
+  letter-spacing: 0.2px;
+}
+
+.ad-disclaimer {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #38384a;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #14141c;
+  font-style: italic;
+}
+
+/* Section divider between ads */
+.ad-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 48px 0;
+}
+
+.ad-divider::before,
+.ad-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.ad-divider-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NEXT EPISODE ── */
+.next-episode {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+.next-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.next-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+}
+
+.next-link:hover {
+  border-color: var(--amber);
+  background: var(--subtle);
+}
+
+.next-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.next-link:hover .next-title { color: var(--amber); }
+
+.next-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.next-link:hover .next-arrow { color: var(--amber); }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 48px; }
+  .article-body { padding: 36px 20px 52px; }
+  .ad-prose p { font-size: 17px; }
+  .ad-product-name { font-size: 32px; }
+  .next-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header">
+  <div class="article-header-text">
+    <div class="article-series">The Apprentice: Washington Edition</div>
+    <div class="article-section-label">Section Two</div>
+    <h1 class="article-title">A BRIEF WORD FROM OUR SPONSORS</h1>
+    <div class="article-subtitle">Disclaimer: AI generated advertisements for satirical parody — not real — although some would argue.</div>
+    <div class="article-meta">
+      <span class="article-date">Apr 03, 2026</span>
+      <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+    </div>
+  </div>
+  <img class="article-header-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/four-way-grid.PNG" alt="The Apprentice: Washington Edition">
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <!-- AD 1: TRUMP STEAKS -->
+  <div class="ad-block">
+    <img class="ad-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-steaks.PNG" alt="Trump Steaks">
+    <div class="ad-product-name">TRUMP STEAKS</div>
+    <div class="ad-prose">
+      <p>You know what separates a winner from a loser?</p>
+      <p>The cut.</p>
+      <p>Trump Steaks are the finest steaks ever produced in the history of beef. Aged to perfection. Seared at temperatures your doctor would describe as inadvisable. Served well done, because that's how winners eat, and if you have a problem with that you've already lost.</p>
+      <p>Trump Steaks. Because leadership should be well done.</p>
+      <p>Available exclusively on QVC.</p>
+      <p>While supplies last.</p>
+    </div>
+    <div class="ad-disclaimer">Supplies did not last.</div>
+  </div>
+
+  <div class="ad-divider"><div class="ad-divider-dot"></div><div class="ad-divider-dot"></div><div class="ad-divider-dot"></div></div>
+
+  <!-- AD 2: TRUMP UNIVERSITY -->
+  <div class="ad-block">
+    <img class="ad-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-university.PNG" alt="Trump University">
+    <div class="ad-product-name">TRUMP UNIVERSITY</div>
+    <div class="ad-prose">
+      <p>Are you tired of so-called "experts" with their so-called "credentials" and their so-called "decades of relevant experience?"</p>
+      <p>So are we.</p>
+      <p>At Trump University, we believe the most important thing you can bring to any job — any job at all, up to and including the management of the nation's nuclear arsenal — is enthusiasm. And a willingness to go on television.</p>
+      <p>Our graduates currently hold some of the most powerful positions in the United States government.</p>
+      <p>We're as surprised as you are.</p>
+      <p>Trump University. You'll learn. Eventually.</p>
+    </div>
+    <div class="ad-disclaimer">Trump University is not an accredited institution. Trump University is not an institution of any kind. Trump University settled a $25 million fraud lawsuit in 2016 and does not technically exist. Results may vary.</div>
+  </div>
+
+  <div class="ad-divider"><div class="ad-divider-dot"></div><div class="ad-divider-dot"></div><div class="ad-divider-dot"></div></div>
+
+  <!-- AD 3: MY PILLOW -->
+  <div class="ad-block">
+    <img class="ad-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/mypillow.PNG" alt="MyPillow">
+    <div class="ad-product-name">MY PILLOW</div>
+    <div class="ad-prose">
+      <p>Hi. Mike Lindell here.</p>
+      <p>You've had a long day. Maybe you watched a Senate confirmation hearing. Maybe you read about a Signal chat. Maybe you learned what the word "redacted" means for the fourteenth time this month.</p>
+      <p>You need sleep.</p>
+      <p>MyPillow is made from a patented interlocking fill that cradles your head while you try to remember what normal felt like. It's machine washable. It's American made. And unlike most things you've encountered recently, it does exactly what it says it does.</p>
+      <p>MyPillow. For when you need something to scream into.</p>
+    </div>
+    <div class="ad-disclaimer">Use promo code DEEPSTATE for 20% off.</div>
+  </div>
+
+  <div class="ad-divider"><div class="ad-divider-dot"></div><div class="ad-divider-dot"></div><div class="ad-divider-dot"></div></div>
+
+  <!-- AD 4: TRUMP VODKA -->
+  <div class="ad-block">
+    <img class="ad-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-vodka.PNG" alt="Trump Vodka">
+    <div class="ad-product-name">TRUMP VODKA</div>
+    <div class="ad-prose">
+      <p>Some moments call for reflection.</p>
+      <p>Some moments call for a stiff drink.</p>
+      <p>Trump Vodka was the finest vodka ever produced, bottled under the most prestigious name in spirits, and discontinued in 2011 after failing to meet the minimum sales requirements for import.</p>
+      <p>We're bringing it back.</p>
+      <p>Not because the rules changed. Because you have.</p>
+      <p>Trump Vodka. Because sometimes the only thing that ages well is the alcohol.</p>
+    </div>
+    <div class="ad-disclaimer">Trump Vodka is no longer available. It was never widely available. Failure never tasted so smooth.</div>
+  </div>
+
+  <!-- IMAGE 5: FOUR-WAY GRID -->
+  <img class="ad-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/four-way-grid.PNG" alt="The Apprentice: Washington Edition — Four Way Grid" style="margin-top: 8px;">
+
+  <div class="stage-direction">[We now return to The Apprentice: Washington Edition, already in progress.]</div>
+
+  <div class="end-marker">End of Section Two</div>
+
+</article>
+
+<!-- NEXT/PREV NAVIGATION -->
+<div class="next-episode">
+  <div class="next-label">Continue Reading</div>
+  <a href="/apprentice/section-3.html" class="next-link">
+    <div class="next-title">Section Three — Highlights</div>
+    <div class="next-arrow">→</div>
+  </a>
+  <a href="/apprentice/section-1.html" class="next-link" style="margin-top: 10px; opacity: 0.5;">
+    <div class="next-arrow">←</div>
+    <div class="next-title">Section One — Cold Open</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>

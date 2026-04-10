@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 11: THE INSTITUTIONAL DAMAGE — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #070709; --off-black: #0d0d12; --panel: #0b0b10;
+  --border: #1e1e2a; --border-bright: #32323f; --red: #e03030;
+  --amber: #f0a500; --gold: #c9973a; --green: #1db954;
+  --white: #f2f2f2; --muted: #52526a; --subtle: #14141c; --text: #c8c8d8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text); font-family: 'DM Serif Display', serif; min-height: 100vh; overflow-x: hidden; }
+.top-nav { width: 100%; background: var(--off-black); border-bottom: 1px solid var(--border); padding: 0 40px; height: 44px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 500; }
+.nav-home { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 5px; color: var(--white); text-decoration: none; }
+.nav-home span { color: var(--red); }
+.nav-series { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
+.nav-series:hover { color: var(--amber); }
+.article-header { max-width: 780px; margin: 0 auto; padding: 64px 40px 48px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 36px; }
+.article-header-text { flex: 1; }
+.article-header-image { width: 280px; flex-shrink: 0; height: auto; display: block; border: 1px solid var(--border); margin-top: 32px; }
+.article-series { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 5px; color: var(--amber); text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+.article-series::before { content: ''; display: block; width: 28px; height: 1px; background: var(--amber); flex-shrink: 0; }
+.article-section-label { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 4px; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
+.article-title { font-family: 'Bebas Neue', sans-serif; font-size: 86px; line-height: 0.88; letter-spacing: 4px; color: var(--white); margin-bottom: 10px; }
+.article-subtitle { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 20px; color: var(--muted); margin-bottom: 28px; }
+.article-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.article-date { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
+.article-substack { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 2px; color: #3a3a52; text-transform: uppercase; text-decoration: none; border: 1px solid #2a2a3a; padding: 4px 10px; transition: all 0.2s; }
+.article-substack:hover { color: var(--amber); border-color: var(--amber); }
+.article-body { max-width: 780px; margin: 0 auto; padding: 80px 40px 100px; text-align: center; }
+.coming-soon { font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 8px; color: #2a2a3a; margin-bottom: 20px; }
+.coming-soon-sub { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 4px; color: #28283a; text-transform: uppercase; line-height: 2; }
+.nav-episode { max-width: 780px; margin: 0 auto; padding: 0 40px 64px; }
+.nav-label { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 4px; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
+.nav-link { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border: 1px solid var(--border); text-decoration: none; background: var(--panel); transition: all 0.2s; margin-bottom: 10px; }
+.nav-link:hover { border-color: var(--amber); background: var(--subtle); }
+.nav-link-title { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 3px; color: #8888a0; transition: color 0.2s; }
+.nav-link:hover .nav-link-title { color: var(--amber); }
+.nav-link-arrow { font-family: 'Space Mono', monospace; font-size: 16px; color: var(--muted); transition: color 0.2s; }
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+.nav-link-prev { opacity: 0.5; }
+.article-footer { border-top: 1px solid var(--border); padding: 22px 40px; text-align: center; background: var(--off-black); }
+.footer-text { font-family: 'Space Mono', monospace; font-size: 9px; color: #28283a; letter-spacing: 1px; line-height: 1.8; }
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 52px; }
+  .article-body { padding: 52px 20px 72px; }
+  .nav-episode { padding: 0 20px 48px; }
+}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+<header class="article-header">
+  <div class="article-header-text">
+    <div class="article-series">The Apprentice: Washington Edition</div>
+    <div class="article-section-label">Section 11</div>
+    <h1 class="article-title">THE INSTITUTIONAL DAMAGE</h1>
+    <div class="article-subtitle">Kash Patel and RFK Jr.</div>
+    <div class="article-meta">
+      <span class="article-date">Coming Soon</span>
+      <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+    </div>
+  </div>
+  <img class="article-header-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-11.PNG" alt="THE INSTITUTIONAL DAMAGE">
+</header>
+<article class="article-body">
+  <div class="coming-soon">COMING SOON</div>
+  <div class="coming-soon-sub">This section is in production.<br>Check back soon.</div>
+</article>
+<div class="nav-episode">
+  <div class="nav-label">Navigate</div>
+  <a href="/apprentice/apprentice-s12.html" class="nav-link">
+    <div class="nav-link-title">Section Twelve — The Benediction</div>
+    <div class="nav-link-arrow">→</div>
+  </a>
+  <a href="/apprentice/apprentice-s10.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section Ten — Still Running</div>
+  </a>
+</div>
+<footer class="article-footer">
+  <div class="footer-text">Copyrightable elements © 2026 USNow.app · Created by ATJon + AI</div>
+</footer>
+</body>
+</html>

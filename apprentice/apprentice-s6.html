@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section Six: The Institutionalists — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.article-header-text { flex: 1; }
+
+.article-header-image {
+  width: 280px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 86px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover { color: var(--amber); border-color: var(--amber); }
+
+/* ── BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 2px solid #1e1e2a;
+  font-style: normal;
+}
+
+/* Prose */
+.prose p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: 0.2px;
+}
+
+/* Contestant header card */
+.contestant-card {
+  border: 1px solid #2a1e08;
+  background: linear-gradient(135deg, #0e0900 0%, #1a1000 100%);
+  padding: 24px 28px;
+  margin: 56px 0 0;
+}
+
+.contestant-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #6a5020;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contestant-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.contestant-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #7a6030;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contestant-days {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #4a3a18;
+  margin-top: 8px;
+}
+
+/* Person image */
+.person-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 32px auto 40px;
+  border: 1px solid var(--border);
+}
+
+/* Sub-section header */
+.subsection {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: #4a4a5a;
+  margin: 44px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Speaker */
+.speaker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  margin: 36px 0 4px;
+  line-height: 1.2;
+}
+
+/* Dialogue */
+.dialogue {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Producer's note block */
+.producers-note {
+  background: var(--subtle);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  padding: 20px 24px;
+  margin: 32px 0;
+}
+
+.producers-note-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 6px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.producers-note-text {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #8888a0;
+  margin-bottom: 12px;
+}
+
+.producers-note-sig {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #7a6a40;
+  margin-top: 14px;
+  line-height: 1.7;
+  border-top: 1px solid #2a2010;
+  padding-top: 12px;
+}
+
+/* Contestant divider */
+.contestant-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 64px 0 0;
+}
+
+.contestant-divider::before,
+.contestant-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.contestant-divider-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #2a2a3a;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NAVIGATION ── */
+.nav-episode {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+.nav-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover { border-color: var(--amber); background: var(--subtle); }
+
+.nav-link-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-title { color: var(--amber); }
+
+.nav-link-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+.nav-link-prev { opacity: 0.5; }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 52px; }
+  .article-body { padding: 36px 20px 52px; }
+  .prose p, .dialogue { font-size: 18px; }
+  .contestant-name { font-size: 36px; }
+  .person-image { width: 80%; }
+  .nav-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header">
+  <div class="article-header-text">
+    <div class="article-series">The Apprentice: Washington Edition</div>
+    <div class="article-section-label">Section Six</div>
+    <h1 class="article-title">THE INSTITUTIONALISTS</h1>
+    <div class="article-subtitle">Rex Tillerson and Jeff Sessions</div>
+    <div class="article-meta">
+      <span class="article-date">Apr 05, 2026</span>
+      <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+    </div>
+  </div>
+  <img class="article-header-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-6.PNG" alt="The Institutionalists">
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="stage-direction">[Cohen stands. Different energy from Act One. Less personal. More analytical. The way a man sounds when he's talking about people he respected from a distance — people who believed in something he had long since stopped believing in, which is the institution itself.]</div>
+
+  <div class="prose">
+    <p>Flynn believed in the movement.</p>
+    <p>Bannon believed in the theory.</p>
+    <p>The next two believed in something considerably more old-fashioned.</p>
+    <p>They believed in the job.</p>
+    <p>Rex Tillerson believed the Secretary of State was the Secretary of State — that the title meant what it said, that the role carried what it had always carried, that forty years of running the largest company on earth had prepared him for the largest diplomatic posting in the world.</p>
+    <p>Jeff Sessions believed the Attorney General was the Attorney General — that the law meant what it said, that the oath meant what it said, that the institution he had spent his career serving would function the way institutions are supposed to function when the right people are in them.</p>
+    <p>Both of them were wrong.</p>
+    <p>Not about their capabilities.</p>
+    <p>About what the job was.</p>
+  </div>
+
+  <div class="stage-direction">[Beat.]</div>
+
+  <div class="prose">
+    <p>The job was never the job.</p>
+    <p>The job was the show.</p>
+    <p>And the show had no use for people who confused the two.</p>
+  </div>
+
+  <!-- ── TILLERSON ── -->
+  <div class="contestant-card">
+    <div class="contestant-label">Contestant / Candidate Three</div>
+    <div class="contestant-name">REX TILLERSON</div>
+    <div class="contestant-role">Secretary of State</div>
+    <div class="contestant-days">Days on set: 422</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/tillerson.PNG" alt="Rex Tillerson">
+
+  <div class="stage-direction">[CUT TO: Confessional cam. Tillerson. Pre-show. The posture of a man who has run four hundred thousand employees and is therefore constitutionally incapable of appearing nervous, even when he probably should be.]</div>
+
+  <div class="speaker">TILLERSON (to camera):</div>
+  <div class="dialogue">I've negotiated with heads of state. I've closed deals in countries where the legal system is a suggestion and the handshake means more than the contract. I've managed operations on six continents simultaneously. I think I can handle Foggy Bottom.</div>
+
+  <div class="stage-direction">[He is wrong. Not about his capabilities. About what the job is.]<br>[The job is not Foggy Bottom. The job is the show. These are not the same thing.]</div>
+
+  <div class="subsection">THE PRE-SHOW</div>
+  <div class="prose">
+    <p>Rex Tillerson spent forty-one years at Exxon Mobil. He started as a production engineer in 1975 and became CEO in 2006. Under his leadership Exxon was, depending on the year, the largest or second largest company in the world by revenue — a privately held sovereign state in everything but name, operating across the globe with the quiet efficiency of a machine that has never once needed to hold a press conference about its feelings.</p>
+    <p>He had never held public office. He had never testified before Congress, navigated a Senate confirmation, or explained American foreign policy to an allied nation that was not also an oil customer.</p>
+    <p>None of this disqualified him.</p>
+    <p>In December 2016, Donald Trump named Rex Tillerson Secretary of State.</p>
+    <p>The qualifications cited were: he's a dealmaker, he knows the world, he's tough, he got along with Putin.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: Rex Tillerson receiving the Russian Order of Friendship from Vladimir Putin in 2013. It is a medal. It is real. It will be mentioned in his confirmation hearing. It will not be the most uncomfortable thing mentioned in his confirmation hearing.]</div>
+
+  <div class="subsection">THE AUDITION</div>
+  <div class="prose">
+    <p>Tillerson's audition was his biography.</p>
+    <p>He didn't campaign for the role. He was identified — through a network of Republican establishment figures that included Condoleezza Rice and Robert Gates, both of whom had consulting relationships with Exxon — and presented to Trump as the kind of man the job required.</p>
+    <p>Trump met him once.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: Trump Tower. December 2016. Two men in suits in a gold elevator. One of them has run a country's worth of oil. The other has his name on the elevator. They are assessing each other with the specific alertness of people who are very good at closing deals and are not yet sure who is closing this one.]</div>
+
+  <div class="prose">
+    <p>Trump offered him the job. Tillerson accepted.</p>
+    <p>In the history of this particular show, this remains one of the most consequential decisions ever made in a gold elevator.</p>
+  </div>
+
+  <div class="subsection">THE PERFORMANCE</div>
+  <div class="prose">
+    <p>Tillerson arrived at the State Department and immediately did something that surprised everyone who had been watching the transition with growing alarm.</p>
+    <p>He tried to do the job.</p>
+    <p>He reorganized the department. He pushed for diplomatic solutions. He maintained back channels with allies who were confused and alarmed by the new administration's rhetoric. He told the truth in congressional testimony even when the truth was inconvenient. He said, publicly, that America's commitment to its allies was not conditional — a statement that directly contradicted positions the host had taken on camera.</p>
+    <p>He also called the president a moron.</p>
+    <p>Not publicly. In a meeting of the National Security Council's cabinet members.</p>
+    <p>The specific quote, per subsequent reporting, was <em>fucking moron.</em></p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: A State Department podium. Tillerson, flanked by aides, addressing the press. He denies the report. He does not deny the quote. These are different things. The assembled press corps notices. Tillerson notices that they notice.]<br>[The room understands what has just happened.]<br>[The so-called moron, watching from the Oval Office, understands what has just happened.]</div>
+
+  <div class="prose">
+    <p>The clock, which had begun quietly in the background, gets louder.</p>
+  </div>
+
+  <div class="subsection">THE BOARDROOM</div>
+  <div class="prose">
+    <p>On March 13th, 2018, Rex Tillerson was in Nairobi, Kenya.</p>
+    <p>He was doing his job.</p>
+    <p>At 8:44am Washington time, Donald Trump posted on Twitter:</p>
+  </div>
+
+  <div class="dialogue">"Mike Pompeo, Director of the CIA, will become our new Secretary of State. He will do a fantastic job! Thank you to Rex Tillerson for his service!"</div>
+
+  <div class="prose">
+    <p>Tillerson learned he had been fired from Twitter.</p>
+    <p>He was on another continent.</p>
+    <p>He was on the toilet.</p>
+  </div>
+
+  <div class="stage-direction">[This is not a metaphor. This is what happened. Rex Tillerson, former CEO of the largest company on earth, learned via social media that he no longer had a job while he was in a bathroom in Kenya.]</div>
+
+  <div class="producers-note">
+    <div class="producers-note-label">The Producer's Note</div>
+    <div class="producers-note-text">"Mike Pompeo, Director of the CIA, will become our new Secretary of State. He will do a fantastic job! Thank you to Rex Tillerson for his service!"</div>
+    <div class="producers-note-sig">— Donald J. Trump, Producer. March 13, 2018.<br>Thirteen words of thanks for four hundred and twenty-two days of service. Tillerson did not call Trump a moron again. Publicly.</div>
+  </div>
+
+  <div class="subsection">THE AFTER SHOW</div>
+  <div class="prose">
+    <p>In a December 2018 interview, Tillerson said Trump was undisciplined, doesn't like to read, and refuses to read his intelligence briefings.</p>
+    <p>He said this calmly. In complete sentences.</p>
+    <p>He then returned to Texas.</p>
+    <p>He has not been back.</p>
+  </div>
+
+  <div class="stage-direction">[The moron comment has never been retracted.]<br>[Cohen briefly.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">I never met Rex Tillerson.</div>
+  <div class="dialogue">But I know the type.</div>
+  <div class="dialogue">The man who walks into a room and immediately calculates who's in charge and whether they're worth working with.</div>
+  <div class="dialogue">The problem with that skill set — and it's a genuine skill set — is that it assumes the person across the table is also rational. Also operating within a framework where the deal means something after you shake hands.</div>
+  <div class="dialogue">Rex Tillerson spent his whole career in rooms where the deal meant something.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">Wrong room.</div>
+  <div class="stage-direction">[He looks at the table.]</div>
+  <div class="dialogue">The next man spent his whole career in a room where the law meant something.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">Same problem.</div>
+  <div class="dialogue">Different consequences.</div>
+
+  <!-- ── SESSIONS ── -->
+  <div class="contestant-divider"><span class="contestant-divider-label">· · ·</span></div>
+
+  <div class="contestant-card">
+    <div class="contestant-label">Contestant / Candidate Four</div>
+    <div class="contestant-name">JEFF SESSIONS</div>
+    <div class="contestant-role">Attorney General of the United States</div>
+    <div class="contestant-days">Days on set: 631</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sessions.PNG" alt="Jeff Sessions">
+
+  <div class="stage-direction">[CUT TO: Confessional cam. Sessions. Pre-show. He is wearing a Make America Great Again hat. He is the first United States Senator to endorse Donald Trump for president. He is doing this in February 2016, when endorsing Trump still costs something.]</div>
+
+  <div class="speaker">SESSIONS (to camera):</div>
+  <div class="dialogue">I believe in this movement. I believe in what we're trying to do. The American people have been let down. The system has failed them. And I think Donald Trump is the man to fix it. I'm proud to stand with him.</div>
+
+  <div class="stage-direction">[He means it.]<br>[He will continue meaning it long after it stops being reciprocated.]</div>
+
+  <div class="subsection">THE PRE-SHOW</div>
+  <div class="prose">
+    <p>Jefferson Beauregard Sessions III was born in Selma, Alabama, in 1946, and entered public life as a federal prosecutor before becoming Attorney General of Alabama and then a United States Senator, a position he held for twenty years.</p>
+    <p>He was, in the Senate, reliably and specifically conservative on the issues that mattered most to the emerging Trump coalition — immigration restriction, trade skepticism, law and order — before those positions had a movement behind them. He was America First before America First had a name and a hat.</p>
+    <p>He was also, in 1986, rejected for a federal judgeship by a Republican-controlled Senate Judiciary Committee after testimony that he had made racially insensitive remarks as a prosecutor in Alabama.</p>
+    <p>This was noted at his confirmation hearing for Attorney General.</p>
+    <p>It was not enough to stop the confirmation.</p>
+    <p>He was confirmed 52-47.</p>
+  </div>
+
+  <div class="stage-direction">[He put on the MAGA hat at the rally and the crowd roared and Jeff Sessions, for one of the few times in his public life, looked genuinely happy.]<br>[He would not look that way again for quite some time.]</div>
+
+  <div class="subsection">THE AUDITION</div>
+  <div class="prose">
+    <p>Sessions didn't audition.</p>
+    <p>He invested.</p>
+    <p>The February 2016 endorsement was not a calculation. It was a conviction. He had been saying the things Trump was saying — on immigration, on trade, on the forgotten American worker — for twenty years in a Senate where nobody was listening. Trump was saying them to arenas of seventy thousand people.</p>
+    <p>Sessions recognized the moment. He climbed on the stage. He put on the hat.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: A Trump rally. February 28, 2016. Sessions on stage. Trump puts the MAGA hat on Sessions's head. The crowd roars. Sessions grins. Trump grins. Two men who have each, in their own way, been waiting for this exact moment.]<br>[One of them is about to get exactly what he wanted.]<br>[One of them is not.]</div>
+
+  <div class="subsection">THE PERFORMANCE</div>
+  <div class="prose">
+    <p>Sessions was confirmed as Attorney General on February 8th, 2017, and immediately set about doing what he had spent twenty years wanting to do.</p>
+    <p>Enforcing the law. Strictly. Consistently. Without apology.</p>
+    <p>Immigration enforcement tightened. Drug prosecution guidance shifted. The department's posture on criminal justice hardened. Sessions believed — and this belief was entirely consistent with everything he had ever said or done in public life — that the job of the Attorney General was to enforce the laws of the United States as written.</p>
+    <p>He was good at it.</p>
+    <p>The problem was not his performance.</p>
+    <p>The problem was a single decision made on March 2nd, 2017.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: A Senate hearing room. Sessions at the table. He is being asked, under oath, whether he had contact with Russian officials during the 2016 campaign. He says no. This is later revealed to be incomplete at best. The recusal is coming.]</div>
+
+  <div class="subsection">THE CRACK</div>
+  <div class="prose">
+    <p>On March 2nd, 2017, Jeff Sessions recused himself from all investigations related to the 2016 presidential campaign.</p>
+    <p>He did this because the Department of Justice's own ethics officials told him he had to.</p>
+    <p>He did this because the law required it.</p>
+    <p>He did this because he was, whatever else might be said about him, a lawyer who understood that the appearance of conflict required the reality of recusal.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: The Oval Office. A man watching television. The news is about Sessions. This is his guy. His first guy. The one who put on the hat before anyone else would touch the hat.]<br>[The man in the Oval Office does not care about ethics regulations.]<br>[He cares that his Attorney General will not be able to protect him from what is coming.]<br>[And what is coming is Robert Mueller.]</div>
+
+  <div class="prose">
+    <p>The recusal led directly to the appointment of Special Counsel Robert Mueller.</p>
+    <p>Mueller led directly to two years of investigation.</p>
+    <p>Two years of investigation led directly to the single longest public humiliation of a cabinet official in the history of American executive branch television.</p>
+    <p>Trump called Sessions "weak."</p>
+    <p>Trump called him "beleaguered."</p>
+    <p>Trump called him "Mr. Magoo."</p>
+  </div>
+
+  <div class="stage-direction">[For context: Mr. Magoo is a cartoon character defined by his inability to see what is directly in front of him, and leaving a trail of destruction behind.]<br>[The irony of this particular insult, deployed by this particular person, has been left as an exercise for the reader.]</div>
+
+  <div class="subsection">THE BOARDROOM</div>
+  <div class="prose">
+    <p>Sessions submitted his resignation on November 7th, 2018 — the day after the midterm elections.</p>
+    <p>At the request of the President.</p>
+    <p>He had survived six hundred and thirty-one days of public humiliation, private contempt, tweets, insults, nicknames, and the specific indignity of watching the man you gave your first endorsement to treat your loyalty as a character flaw.</p>
+    <p>He had enforced the law.</p>
+    <p>He had done the job.</p>
+    <p>He had recused himself when recusal was required.</p>
+  </div>
+
+  <div class="stage-direction">[None of this was the job the show had hired him for.]</div>
+
+  <div class="producers-note">
+    <div class="producers-note-label">The Producer's Note</div>
+    <div class="producers-note-text">"Thank you to Attorney General Jeff Sessions for his service, and to wish him well! A permanent replacement will be nominated at a later date."</div>
+    <div class="producers-note-sig">— Donald J. Trump, Producer. November 7, 2018.<br>Twenty words. Six hundred and thirty-one days. The math is not complicated.</div>
+  </div>
+
+  <div class="subsection">THE AFTER SHOW</div>
+  <div class="prose">
+    <p>Jeff Sessions returned to Alabama.</p>
+    <p>He ran for his old Senate seat in 2020.</p>
+    <p>Trump endorsed his opponent.</p>
+    <p>Sessions lost the primary.</p>
+    <p>He lost the seat he had held for twenty years — the seat he gave up to become Attorney General — because the man he endorsed before anyone else would touch him decided that loyalty had an expiration date and Sessions's had passed.</p>
+  </div>
+
+  <div class="stage-direction">[He has not held public office since.]<br>[He has not been seen wearing the hat.]<br>[Cohen. Quiet.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">Tillerson called the host a moron and was fired on Twitter while he was sick in Kenya.</div>
+  <div class="dialogue">Sessions followed the law and paid for it with his Senate seat.</div>
+  <div class="dialogue">Two different men. Two different 'mistakes'. Two different prices.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">But here's what they have in common.</div>
+  <div class="dialogue">Both of them believed the institution they were serving was real.</div>
+  <div class="dialogue">The State Department. The Justice Department. Two hundred and fifty years of accumulated weight and precedent and meaning.</div>
+  <div class="stage-direction">[He looks at the empty chair.]</div>
+  <div class="dialogue">The institution is real.</div>
+  <div class="dialogue">The institution was always real.</div>
+  <div class="dialogue">What was not real was the idea that the show cared about it.</div>
+  <div class="stage-direction">[He stands.]</div>
+  <div class="dialogue">The next two men understood this better than Tillerson and Sessions.</div>
+  <div class="dialogue">They were generals. They had spent their careers in the one American institution that has never fully belonged to any president — the military.</div>
+  <div class="dialogue">They thought that would protect them.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">It didn't.</div>
+  <div class="dialogue">But they left differently.</div>
+  <div class="dialogue">And that difference matters.</div>
+
+  <div class="end-marker">End of Section Six</div>
+
+</article>
+
+<!-- NAVIGATION -->
+<div class="nav-episode">
+  <div class="nav-label">Continue Reading</div>
+  <a href="/apprentice/section-7.html" class="nav-link">
+    <div class="nav-link-title">Section Seven — The Generals: Mattis & Kelly</div>
+    <div class="nav-link-arrow">→</div>
+  </a>
+  <a href="/apprentice/section-5.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section Five — The True Believers: Flynn & Bannon</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>

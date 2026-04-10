@@ -1,1235 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DPZHKNB3E9');
-</script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Apprentice: Washington Edition</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>The Apprentice: Washington Edition — USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --gold: #c9a84c;
-    --gold-light: #e8c96a;
-    --gold-dim: #6b5420;
-    --gold-faint: #2a1f0a;
-    --black: #080603;
-    --dark: #100d07;
-    --panel: #141009;
-    --panel-light: #1c160d;
-    --text: #c8b890;
-    --text-dim: #7a6b4e;
-    --red: #8b1a1a;
-    --red-dim: #4a0e0e;
-    --blue: #1a2a4a;
-    --season-break: #1a1a2e;
-    --rumored: #0d1a0d;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--black);
-    color: var(--text);
-    font-family: 'Courier Prime', monospace;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  /* Grain overlay */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1000;
-    opacity: 0.4;
-  }
-
-  /* HEADER */
-  header {
-    text-align: center;
-    padding: 3rem 1rem 2rem;
-    border-bottom: 1px solid var(--gold-dim);
-    position: relative;
-    background: linear-gradient(180deg, #0d0a05 0%, transparent 100%);
-  }
-
-  .header-eyebrow {
-    font-size: 0.6rem;
-    letter-spacing: 0.4rem;
-    color: var(--gold-dim);
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 6vw, 4.5rem);
-    font-weight: 900;
-    color: var(--gold);
-    letter-spacing: 0.03em;
-    line-height: 1;
-    text-shadow: 0 0 60px rgba(201,168,76,0.2);
-  }
-
-  h1 span {
-    display: block;
-    font-size: 0.45em;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--gold-dim);
-    letter-spacing: 0.15em;
-    margin-top: 0.4em;
-  }
-
-  .header-disclaimer {
-    margin-top: 1.25rem;
-    font-size: 0.6rem;
-    color: #3a3020;
-    font-style: italic;
-    letter-spacing: 0.05em;
-  }
-
-  .header-tagline {
-    margin-top: 0.5rem;
-    font-size: 0.65rem;
-    color: var(--gold-dim);
-    letter-spacing: 0.2rem;
-  }
-
-  /* SEASON LABELS */
-  .season-label {
-    text-align: center;
-    padding: 2rem 1rem 1rem;
-    position: relative;
-  }
-
-  .season-label::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 2rem;
-    right: 2rem;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
-  }
-
-  .season-label-inner {
-    display: inline-block;
-    background: var(--black);
-    padding: 0.4rem 1.5rem;
-    position: relative;
-    font-family: 'Playfair Display', serif;
-    font-size: 0.8rem;
-    color: var(--gold);
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    border: 1px solid var(--gold-dim);
-  }
-
-  /* MAIN GRID */
-  .section-grid {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem 2rem;
-  }
-
-  /* HOST/NARRATOR ROW */
-  .principals-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  /* CARDS GRID */
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  /* BASE CARD */
-  .card {
-    background: var(--panel);
-    border: 1px solid var(--gold-dim);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    color: inherit;
-  }
-
-  a.card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    opacity: 0.6;
-  }
-
-  /* PRINCIPAL CARD — larger */
-  .card.principal {
-    border-color: var(--gold);
-  }
-
-  .card.principal::before {
-    opacity: 1;
-    height: 3px;
-  }
-
-  /* IMAGE AREA */
-  .card-image {
-    width: 100%;
-    aspect-ratio: 2/3;
-    background: var(--dark);
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card.principal .card-image {
-    aspect-ratio: 2/3;
-  }
-
-  .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: sepia(0.2) contrast(1.05);
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover .card-image img {
-    transform: scale(1.03);
-  }
-
-  .card-image-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    background: linear-gradient(135deg, #0d0a05, #1a140a);
-  }
-
-  .placeholder-icon {
-    font-size: 2rem;
-    opacity: 0.2;
-  }
-
-  .placeholder-text {
-    font-size: 0.55rem;
-    color: #3a3020;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-  }
-
-  /* MYSTERY CARD */
-  .card.mystery .card-image {
-    background: radial-gradient(ellipse at center, #1a0a2e 0%, #080603 70%);
-  }
-
-  .card.mystery .card-image-placeholder {
-    background: radial-gradient(ellipse at center, #1a0a2e 0%, #080603 70%);
-  }
-
-  /* CARD BODY */
-  .card-body {
-    padding: 0 1rem 0.85rem;
-  }
-
-  .card-season-tag {
-    padding-top: 0.65rem;
-    font-size: 0.5rem;
-    letter-spacing: 0.2rem;
-    color: var(--gold-dim);
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
-  }
-
-  .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--gold-light);
-    line-height: 1.2;
-    margin-bottom: 0.2rem;
-  }
-
-  .card.principal .card-title {
-    font-size: 1.2rem;
-  }
-
-  .card-subtitle {
-    font-size: 0.6rem;
-    color: var(--text-dim);
-    font-style: italic;
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.05em;
-  }
-
-  .card-quote {
-    font-size: 0.65rem;
-    color: var(--text);
-    line-height: 1.6;
-    font-style: italic;
-    border-left: 2px solid var(--gold-dim);
-    padding-left: 0.6rem;
-    margin-top: 0.5rem;
-  }
-
-  .card-status {
-    margin-top: 0.6rem;
-    font-size: 0.5rem;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-  }
-
-  .status-fired { color: var(--red); }
-  .status-running { color: #6b8b4a; }
-  .status-break { color: #4a6b8b; }
-  .status-rumored { color: #3a4a2a; }
-  .status-mystery { color: #6b4a8b; }
-
-  .card-days {
-    font-size: 0.5rem;
-    color: var(--text-dim);
-    margin-top: 0.3rem;
-    letter-spacing: 0.1rem;
-  }
-
-  /* LINK INDICATOR */
-  .card-link-indicator {
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    font-size: 0.5rem;
-    color: var(--gold-dim);
-    letter-spacing: 0.1rem;
-    background: rgba(10,8,5,0.8);
-    padding: 0.2rem 0.4rem;
-    border: 1px solid var(--gold-dim);
-  }
-
-  .card-no-link .card-link-indicator {
-    display: none;
-  }
-
-  /* AD CARDS — nonchalant inline */
-  .ad-strip {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
-    margin: 0.5rem 0;
-    padding: 0 1.5rem;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .ad-card {
-    display: block;
-    cursor: pointer;
-    overflow: hidden;
-    border: 1px solid #1a1410;
-    transition: border-color 0.2s;
-    text-decoration: none;
-  }
-
-  .ad-card:hover {
-    border-color: var(--gold-dim);
-  }
-
-  .ad-card img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    display: block;
-    filter: sepia(0.1);
-  }
-
-  .ad-card-placeholder {
-    width: 100%;
-    aspect-ratio: 4/3;
-    background: #0d0a06;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.5rem;
-    color: #2a2215;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-  }
-
-  /* SEASON BREAK */
-  .season-break-strip {
-    max-width: 1400px;
-    margin: 0.5rem auto;
-    padding: 0 1.5rem;
-  }
-
-  .season-break-card {
-    background: var(--season-break);
-    border: 1px solid #2a2a4a;
-    display: flex;
-    align-items: stretch;
-    gap: 0;
-    overflow: hidden;
-    cursor: pointer;
-    transition: border-color 0.2s;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .season-break-card:hover {
-    border-color: #4a4a8b;
-  }
-
-  .season-break-image {
-    width: 200px;
-    flex-shrink: 0;
-    background: #0d0d1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .season-break-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .season-break-image-placeholder {
-    width: 100%;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    opacity: 0.2;
-  }
-
-  .season-break-body {
-    padding: 1rem 1.25rem;
-    flex: 1;
-  }
-
-  .season-break-tag {
-    font-size: 0.5rem;
-    letter-spacing: 0.3rem;
-    color: #4a4a8b;
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
-  }
-
-  .season-break-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    color: #8888cc;
-    margin-bottom: 0.5rem;
-  }
-
-  .season-break-quote {
-    font-size: 0.65rem;
-    color: #5a5a8a;
-    font-style: italic;
-    line-height: 1.6;
-    border-left: 2px solid #2a2a4a;
-    padding-left: 0.6rem;
-  }
-
-  /* RUMORED SECTION */
-  .rumored-section {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1.5rem 3rem;
-  }
-
-  .rumored-header {
-    text-align: center;
-    padding: 1.5rem 0 1rem;
-    position: relative;
-  }
-
-  .rumored-header::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #2a4a2a, transparent);
-  }
-
-  .rumored-header-inner {
-    display: inline-block;
-    background: var(--black);
-    padding: 0.4rem 1.5rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 0.75rem;
-    color: #4a8b4a;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    border: 1px solid #2a4a2a;
-    font-style: italic;
-  }
-
-  .rumored-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .rumored-card {
-    background: var(--rumored);
-    border: 1px solid #1a2a1a;
-    padding: 1rem 1.25rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .rumored-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #2a4a2a, transparent);
-  }
-
-  .rumored-card-tag {
-    font-size: 0.5rem;
-    letter-spacing: 0.2rem;
-    color: #2a4a2a;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-
-  .rumored-card-names {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .rumored-card-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    color: #4a6b4a;
-    flex: 1;
-  }
-
-  .rumored-card-name.secondary {
-    text-align: right;
-    color: #3a5a3a;
-  }
-
-  .rumored-card-divider {
-    color: #2a4a2a;
-    font-size: 0.8rem;
-    padding-top: 0.15rem;
-  }
-
-  .rumored-card-role {
-    font-size: 0.55rem;
-    color: #2a3a2a;
-    font-style: italic;
-  }
-
-  .rumored-card-status {
-    margin-top: 0.5rem;
-    font-size: 0.5rem;
-    color: #2a4a2a;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-  }
-
-  /* MUSK SPECIAL — same size as others now */
-  .rumored-card.musk-card {
-    border-color: #2a2a1a;
-    background: #0d0d08;
-  }
-
-  .rumored-card.musk-card .rumored-card-name {
-    color: #6b6b3a;
-    font-size: 1rem;
-  }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    border-top: 1px solid var(--gold-dim);
-    font-size: 0.55rem;
-    color: #2a2215;
-    letter-spacing: 0.1rem;
-    font-style: italic;
-    line-height: 2;
-  }
-
-  footer a {
-    color: var(--gold-dim);
-    text-decoration: none;
-  }
-
-  footer a:hover { color: var(--gold); }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .card, .ad-card, .season-break-card, .rumored-card {
-    animation: fadeUp 0.4s ease both;
-  }
-
-  .cards-grid .card:nth-child(1) { animation-delay: 0.05s; }
-  .cards-grid .card:nth-child(2) { animation-delay: 0.1s; }
-  .cards-grid .card:nth-child(3) { animation-delay: 0.15s; }
-  .cards-grid .card:nth-child(4) { animation-delay: 0.2s; }
-  .cards-grid .card:nth-child(5) { animation-delay: 0.25s; }
-  .cards-grid .card:nth-child(6) { animation-delay: 0.3s; }
-
-  /* EPISODE CARDS — 2x2 grid, image on top, text underneath */
-  .landscape-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1.5rem 1.5rem 0.5rem;
-  }
-
-  .landscape-grid .card {
-    display: grid !important;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr !important;
-  }
-
-  .landscape-grid .card .card-image {
-    grid-row: 1;
-    grid-column: 1;
-    width: 100%;
-    aspect-ratio: 16/9;
-  }
-
-  .landscape-grid .card .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .landscape-grid .card .card-body {
-    grid-row: 2;
-    grid-column: 1;
-    padding: 0.75rem 1rem 0.85rem;
-  }
-
-  /* PRINCIPALS ROW — two cards, portrait, matched to trading cards */
-  .principals-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 280px));
-    gap: 1.25rem;
-    justify-content: center;
-    max-width: 1400px;
-    margin: 1.5rem auto 0.5rem;
-    padding: 0 1.5rem;
-  }
-
-  /* PAULA WHITE SECTION */
-  .paula-section {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 1.5rem 1rem;
-  }
-
-  .paula-section-header {
-    text-align: center;
-    padding: 1.5rem 0 1rem;
-    position: relative;
-  }
-
-  .paula-section-header::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #3a1a3a, transparent);
-  }
-
-  .paula-section-header-inner {
-    display: inline-block;
-    background: var(--black);
-    padding: 0.4rem 1.5rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 0.75rem;
-    color: #6b3a6b;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    border: 1px solid #3a1a3a;
-    font-style: italic;
-  }
-
-  .paula-card-wrap {
-    display: flex;
-    justify-content: center;
-  }
-
-  .paula-card-wrap .card {
-    max-width: 280px;
-    width: 100%;
-  }
-
-  @media (max-width: 700px) {
-    .landscape-grid { grid-template-columns: 1fr; }
-    .principals-row { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (max-width: 480px) {
-    .principals-row { grid-template-columns: 1fr; }
-    .ad-strip { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  /* SUBSTACK BUTTON */
-  .substack-btn {
-    display: inline-block;
-    margin-top: 0.75rem;
-    padding: 0.4rem 0.9rem;
-    background: #ff6719;
-    color: #fff;
-    font-family: 'Courier Prime', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .substack-btn:hover { background: #e55a0f; color: #fff; }
-
-  /* TWO-CLICK COMMERCIAL OVERLAY */
-  .ad-card { position: relative; overflow: hidden; }
-  .ad-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(10,8,5,0.9);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.25s;
-    pointer-events: none;
-    padding: 1rem;
-    text-align: center;
-  }
-  .ad-card.revealed .ad-overlay {
-    opacity: 1;
-    pointer-events: all;
-  }
-  .ad-overlay-text {
-    color: var(--gold);
-    font-size: 0.6rem;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    line-height: 1.8;
-  }
-  .ad-overlay-link {
-    display: inline-block;
-    margin-top: 0.6rem;
-    padding: 0.35rem 0.8rem;
-    background: #ff6719;
-    color: #fff;
-    font-size: 0.55rem;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .ad-overlay-link:hover { background: #e55a0f; }
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text); font-family: 'Barlow Condensed', sans-serif; min-height: 100vh; overflow-x: hidden; }
+
+/* ── TOP NAV ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-right {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--off-black);
+  border-bottom: 2px solid #1a1200;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red) 0%, var(--amber) 40%, var(--gold) 70%, transparent 100%);
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 40px 52px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-text { flex: 1; }
+
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.hero-desc {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #42425a;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  max-width: 480px;
+}
+
+.hero-image {
+  width: 340px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+/* ── CAST STRIP ── */
+.cast-strip {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 40px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cast-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.cast-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #4a4a5a;
+}
+
+.cast-divider { color: #2a2a3a; font-size: 10px; }
+
+/* ── SECTION HEADER ── */
+.section-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 40px 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  letter-spacing: 5px;
+  color: var(--white);
+}
+
+.section-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ── EPISODE LIST ── */
+.episode-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.episode-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--subtle);
+  text-decoration: none;
+  transition: background 0.15s;
+  gap: 0;
+}
+
+.episode-row:hover { background: var(--subtle); }
+
+.episode-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #2a2a3a;
+  padding: 20px 20px 20px 0;
+  flex-shrink: 0;
+  width: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.episode-img {
+  width: 160px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border-right: 1px solid var(--subtle);
+  align-self: center;
+  padding: 8px 0;
+}
+
+.episode-body {
+  flex: 1;
+  padding: 18px 20px;
+  border-left: 1px solid var(--subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.episode-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.episode-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #c8c8dc;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.episode-row:hover .episode-title { color: var(--white); }
+
+.episode-sub {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #42425a;
+}
+
+.episode-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #2a2a3a;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.episode-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #2a2a3a;
+  padding: 20px 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.episode-row:hover .episode-arrow { color: var(--amber); }
+
+/* Coming soon row */
+.episode-row-soon { opacity: 0.4; pointer-events: none; }
+.episode-row-soon .episode-title { color: #4a4a5a; }
+
+/* Season break row */
+.episode-row-break {
+  background: var(--subtle);
+  border-bottom: 1px solid var(--border);
+}
+
+.episode-row-break .episode-title { color: var(--amber); }
+
+/* ── SEASON DIVIDER ── */
+.season-divider {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 40px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.season-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.season-divider-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 6px;
+  color: #2a2a3a;
+}
+
+/* ── RUMOR STRIP ── */
+.rumor-strip {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.rumor-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #3a4828;
+  text-transform: uppercase;
+  border: 1px solid #2a3018;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.rumor-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #4a5838;
+}
+
+.rumor-dot { color: #2a3018; font-size: 10px; }
+
+/* ── NARRATOR CARD ── */
+.narrator-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--off-black);
+}
+
+.narrator-img {
+  width: 100px;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.narrator-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.narrator-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 4px;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.narrator-role {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #52526a;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 40px;
+  text-align: center;
+  background: var(--off-black);
+  margin-top: 48px;
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  .top-nav { padding: 0 20px; }
+  .hero-inner { flex-direction: column; padding: 36px 20px 32px; gap: 24px; }
+  .hero-title { font-size: 52px; }
+  .hero-image { width: 100%; }
+  .cast-strip { padding: 20px; }
+  .section-header { padding: 24px 20px 16px; }
+  .episode-list { padding: 0 20px; }
+  .episode-img { display: none; }
+  .episode-title { font-size: 22px; }
+  .season-divider { padding: 20px; }
+  .rumor-strip { padding: 18px 20px; }
+  .narrator-card { padding: 24px 20px; }
+  .site-footer { padding: 18px 20px; }
+}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-eyebrow">★ A Satirical Production · ATJon · Substack ★</div>
-  <h1>THE APPRENTICE
-    <span>Washington Edition</span>
-  </h1>
-  <div class="header-tagline">Narrated by Michael Cohen · As Himself</div>
-  <div class="header-disclaimer">None of this is real. It's just some nobody with an AI.</div>
-</header>
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <span class="nav-right">The Journal</span>
+</nav>
 
-<!-- LANDSCAPE SECTION CARDS — 2x2 grid, top of page -->
-<div class="landscape-grid">
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">The Journal · Featured Series</div>
+      <h1 class="hero-title">THE APPRENTICE:<br>WASHINGTON EDITION</h1>
+      <div class="hero-subtitle">A real-life contemporaneous retrospective parody.</div>
+      <p class="hero-desc">
+        Twelve contestants. Two seasons. One chair at the end of the table.<br>
+        The show didn't stop in 2016. It just changed venues.<br>
+        Join the show already in progress.
+      </p>
+    </div>
+    <img class="hero-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/IMG_4833.PNG" alt="The Apprentice: Washington Edition">
+  </div>
+</div>
 
-  <!-- COLD OPEN -->
-  <a class="card landscape" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
-    <div class="card-link-indicator">READ →</div>
-    <div class="card-image">
-      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cold-open.PNG" alt="Cold Open">
+<!-- NARRATOR CARD -->
+<div class="narrator-card">
+  <img class="narrator-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cohen.PNG" alt="Michael Cohen">
+  <div>
+    <div class="narrator-label">Your Witness and Master of Ceremonies</div>
+    <div class="narrator-name">MICHAEL COHEN</div>
+  </div>
+</div>
+
+<!-- CAST STRIP -->
+<div class="cast-strip">
+  <div class="cast-label">Season One Cast</div>
+  <span class="cast-name">Flynn</span><span class="cast-divider">·</span>
+  <span class="cast-name">Bannon</span><span class="cast-divider">·</span>
+  <span class="cast-name">Tillerson</span><span class="cast-divider">·</span>
+  <span class="cast-name">Sessions</span><span class="cast-divider">·</span>
+  <span class="cast-name">Mattis</span><span class="cast-divider">·</span>
+  <span class="cast-name">Kelly</span>
+</div>
+
+<div class="cast-strip" style="border-top: none; padding-top: 0;">
+  <div class="cast-label">Season Two Cast</div>
+  <span class="cast-name">Noem</span><span class="cast-divider">·</span>
+  <span class="cast-name">Bondi</span><span class="cast-divider">·</span>
+  <span class="cast-name">Hegseth</span><span class="cast-divider">·</span>
+  <span class="cast-name">Gabbard</span><span class="cast-divider">·</span>
+  <span class="cast-name">Patel</span><span class="cast-divider">·</span>
+  <span class="cast-name">RFK Jr.</span>
+</div>
+
+<!-- SECTION HEADER -->
+<div class="section-header">
+  <div class="section-title">All Sections</div>
+  <div class="section-sub">New Episodes Daily</div>
+</div>
+
+<!-- EPISODE LIST -->
+<div class="episode-list">
+
+  <!-- S1 -->
+  <a href="/apprentice/apprentice-s1.html" class="episode-row">
+    <div class="episode-num">01</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/IMG_4833.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section One</div>
+      <div class="episode-title">COLD OPEN</div>
+      <div class="episode-sub">You're Fired.</div>
+      <div class="episode-meta">Apr 03, 2026</div>
     </div>
-    <div class="card-body">
-      <div class="card-season-tag">Section One</div>
-      <div class="card-title">Cold Open</div>
-      <div class="card-subtitle">The Show Begins Again</div>
-      <div class="card-quote">"This isn't The Apprentice you remember. The consequences are considerably less theoretical."</div>
-      <a class="substack-btn" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">Read on Substack</a>
-    </div>
+    <div class="episode-arrow">→</div>
   </a>
 
-  <!-- HIGHLIGHT REEL -->
-  <a class="card landscape" href="https://atjon.substack.com/p/section-three-previously-on-the-apprentice" target="_blank" rel="noopener">
-    <div class="card-link-indicator">READ →</div>
-    <div class="card-image">
-      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/highlight-reel.PNG" alt="Highlight Reel">
+  <!-- S2 -->
+  <a href="/apprentice/apprentice-s2.html" class="episode-row">
+    <div class="episode-num">02</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/four-way-grid.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Two</div>
+      <div class="episode-title">A BRIEF WORD FROM OUR SPONSORS</div>
+      <div class="episode-sub">AI-generated advertisements for satirical parody.</div>
+      <div class="episode-meta">Apr 03, 2026</div>
     </div>
-    <div class="card-body">
-      <div class="card-season-tag">Section Three</div>
-      <div class="card-title">Highlight Reel</div>
-      <div class="card-subtitle">Previously On…</div>
-      <div class="card-quote">"You remember all of that. Good. Let's go back to the beginning."</div>
-      <a class="substack-btn" href="https://atjon.substack.com/p/section-three-previously-on-the-apprentice" target="_blank" rel="noopener">Read on Substack</a>
-    </div>
+    <div class="episode-arrow">→</div>
   </a>
 
-  <!-- THE RULES -->
-  <a class="card landscape" href="https://atjon.substack.com/p/section-four-the-rules" target="_blank" rel="noopener">
-    <div class="card-link-indicator">READ →</div>
-    <div class="card-image">
-      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-rules.PNG" alt="The Rules">
+  <!-- S3 -->
+  <a href="/apprentice/apprentice-s3.html" class="episode-row">
+    <div class="episode-num">03</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/highlight-reel.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Three</div>
+      <div class="episode-title">HIGHLIGHTS</div>
+      <div class="episode-sub">Edited for time. And dignity. Mostly time.</div>
+      <div class="episode-meta">Apr 03, 2026</div>
     </div>
-    <div class="card-body">
-      <div class="card-season-tag">Section Four</div>
-      <div class="card-title">The Rules</div>
-      <div class="card-subtitle">There Is Only One Judge</div>
-      <div class="card-quote">"RULE FIVE: There is no Rule Five. And all other rules are subject to Rule Five."</div>
-      <a class="substack-btn" href="https://atjon.substack.com/p/section-four-the-rules" target="_blank" rel="noopener">Read on Substack</a>
-    </div>
+    <div class="episode-arrow">→</div>
   </a>
 
-  <!-- THE BRIEFING -->
-  <a class="card landscape" href="https://atjon.substack.com/p/section-four-b" target="_blank" rel="noopener">
-    <div class="card-link-indicator">READ →</div>
-    <div class="card-image">
-      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-briefing.PNG" alt="The Briefing">
+  <!-- S4 -->
+  <a href="/apprentice/apprentice-s4.html" class="episode-row">
+    <div class="episode-num">04</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-rules.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Four</div>
+      <div class="episode-title">THE RULES</div>
+      <div class="episode-sub">Just So Everyone Understands.</div>
+      <div class="episode-meta">Apr 03, 2026</div>
     </div>
-    <div class="card-body">
-      <div class="card-season-tag">Section Four-B</div>
-      <div class="card-title">A Brief Word From The White House</div>
-      <div class="card-subtitle">Karoline Leavitt · Press Secretary · @PressSec</div>
-      <div class="card-quote">"Is any of this real?" — This has always been the question.</div>
-      <a class="substack-btn" href="https://atjon.substack.com/p/section-four-b" target="_blank" rel="noopener">Read on Substack</a>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S4b -->
+  <a href="/apprentice/apprentice-s4b.html" class="episode-row">
+    <div class="episode-num">4b</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/the-briefing.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section 4(b)</div>
+      <div class="episode-title">A BRIEF WORD FROM THE WHITE HOUSE</div>
+      <div class="episode-sub">Breaking: News Conference from the White House.</div>
+      <div class="episode-meta">Apr 03, 2026</div>
     </div>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S5 -->
+  <a href="/apprentice/apprentice-s5.html" class="episode-row">
+    <div class="episode-num">05</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-5.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Five</div>
+      <div class="episode-title">THE TRUE BELIEVERS</div>
+      <div class="episode-sub">Michael Flynn and Steve Bannon.</div>
+      <div class="episode-meta">Apr 04, 2026</div>
+    </div>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S6 -->
+  <a href="/apprentice/apprentice-s6.html" class="episode-row">
+    <div class="episode-num">06</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-6.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Six</div>
+      <div class="episode-title">THE INSTITUTIONALISTS</div>
+      <div class="episode-sub">Rex Tillerson and Jeff Sessions.</div>
+      <div class="episode-meta">Apr 05, 2026</div>
+    </div>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S7 -->
+  <a href="/apprentice/apprentice-s7.html" class="episode-row">
+    <div class="episode-num">07</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-7.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Seven</div>
+      <div class="episode-title">THE GENERALS</div>
+      <div class="episode-sub">James Mattis and John Kelly.</div>
+      <div class="episode-meta">Apr 06, 2026</div>
+    </div>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S8 — Season Break -->
+  <a href="/apprentice/apprentice-s8.html" class="episode-row episode-row-break">
+    <div class="episode-num">08</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-8.jpg" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Eight · Season Break</div>
+      <div class="episode-title">THE SEASON BREAK</div>
+      <div class="episode-sub">A Brief Conversation with Anthony Scaramucci.</div>
+      <div class="episode-meta">Apr 07, 2026</div>
+    </div>
+    <div class="episode-arrow">→</div>
   </a>
 
 </div>
 
-<!-- PRINCIPALS ROW — Host and Narrator -->
-<div class="principals-row">
+<!-- SEASON TWO DIVIDER -->
+<div class="season-divider">
+  <div class="season-divider-line"></div>
+  <div class="season-divider-label">SEASON TWO</div>
+  <div class="season-divider-line"></div>
+</div>
 
-  <!-- THE HOST -->
-  <div class="card principal card-no-link">
-    <div class="card-image">
-      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump.PNG" alt="The Host">
-    </div>
-    <div class="card-body">
-      <div class="card-season-tag">Executive Producer</div>
-      <div class="card-title">The Host</div>
-      <div class="card-subtitle">Donald J. Trump · The Boardroom · Always</div>
-      <div class="card-quote">"You're fired." — The only line that matters.</div>
-      <div class="card-status status-running">● Still in the building</div>
-    </div>
-  </div>
+<div class="episode-list">
 
-  <!-- THE NARRATOR -->
-  <a class="card principal" href="https://atjon.substack.com/p/the-apprentice-washington-edition" target="_blank" rel="noopener">
-    <div class="card-link-indicator">READ →</div>
-    <div class="card-image">
-      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cohen.PNG" alt="Michael Cohen">
+  <!-- S9 -->
+  <a href="/apprentice/apprentice-s9.html" class="episode-row">
+    <div class="episode-num">09</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-9.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Nine · Coming Soon</div>
+      <div class="episode-title">THE LOYALISTS</div>
+      <div class="episode-sub">Kristi Noem and Pam Bondi.</div>
     </div>
-    <div class="card-body">
-      <div class="card-season-tag">Narrator · Seasons One & Two</div>
-      <div class="card-title">The Narrator — Michael Cohen</div>
-      <div class="card-subtitle">Personal Attorney · Fixer · Convicted · Released · Podcasting</div>
-      <div class="card-quote">"I came in through a different door. And I left through a different door than I expected too."</div>
-      <div class="card-status status-break">● The folder is empty</div>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S10 -->
+  <a href="/apprentice/apprentice-s10.html" class="episode-row">
+    <div class="episode-num">10</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-10.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Ten · Coming Soon</div>
+      <div class="episode-title">STILL RUNNING</div>
+      <div class="episode-sub">Pete Hegseth and Tulsi Gabbard.</div>
     </div>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S11 -->
+  <a href="/apprentice/apprentice-s11.html" class="episode-row">
+    <div class="episode-num">11</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-11.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Eleven · Coming Soon</div>
+      <div class="episode-title">THE INSTITUTIONAL DAMAGE</div>
+      <div class="episode-sub">Kash Patel and RFK Jr.</div>
+    </div>
+    <div class="episode-arrow">→</div>
+  </a>
+
+  <!-- S12 -->
+  <a href="/apprentice/apprentice-s12.html" class="episode-row">
+    <div class="episode-num">12</div>
+    <img class="episode-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/white.PNG" alt="">
+    <div class="episode-body">
+      <div class="episode-section-label">Section Twelve · Coming Soon</div>
+      <div class="episode-title">THE BENEDICTION</div>
+      <div class="episode-sub">with the Ethereally Effervescent Paula White, Personal Spiritual Advisor to the President.</div>
+    </div>
+    <div class="episode-arrow">→</div>
   </a>
 
 </div>
 
-<!-- AD STRIP — two-click: first click reveals overlay, second click goes to Substack -->
-<div class="ad-strip">
-  <div class="ad-card" onclick="revealAd(this)">
-    <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-steaks.PNG" alt="Trump Steaks">
-    <div class="ad-overlay">
-      <div class="ad-overlay-text">Trump Steaks</div>
-      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
-    </div>
-  </div>
-  <div class="ad-card" onclick="revealAd(this)">
-    <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-university.PNG" alt="Trump University">
-    <div class="ad-overlay">
-      <div class="ad-overlay-text">Trump University</div>
-      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
-    </div>
-  </div>
-  <div class="ad-card" onclick="revealAd(this)">
-    <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/mypillow.PNG" alt="MyPillow">
-    <div class="ad-overlay">
-      <div class="ad-overlay-text">MyPillow</div>
-      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
-    </div>
-  </div>
-  <div class="ad-card" onclick="revealAd(this)">
-    <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump-vodka.PNG" alt="Trump Vodka">
-    <div class="ad-overlay">
-      <div class="ad-overlay-text">Trump Vodka</div>
-      <a class="ad-overlay-link" href="https://atjon.substack.com/p/section-two-a-brief-word-from-our" target="_blank" rel="noopener">Read the Commercial →</a>
-    </div>
-  </div>
+<!-- SEASON THREE RUMOR STRIP -->
+<div class="season-divider">
+  <div class="season-divider-line"></div>
+  <div class="season-divider-label">SEASON THREE · RUMORED</div>
+  <div class="season-divider-line"></div>
 </div>
 
-<script>
-function revealAd(el) {
-  if (!el.classList.contains('revealed')) {
-    el.classList.add('revealed');
-  }
-}
-</script>
-
-<!-- SEASON ONE — contestants below this line -->
-<div class="season-label">
-  <div class="season-label-inner">Season One · 2017–2018</div>
+<div class="rumor-strip">
+  <div class="rumor-label">Unconfirmed</div>
+  <span class="rumor-name">Stephen Miller</span><span class="rumor-dot">·</span>
+  <span class="rumor-name">Todd Blanche</span><span class="rumor-dot">·</span>
+  <span class="rumor-name">Scott Bessent</span><span class="rumor-dot">·</span>
+  <span class="rumor-name">Marco Rubio</span><span class="rumor-dot">·</span>
+  <span class="rumor-name">Jared Kushner</span><span class="rumor-dot">·</span>
+  <span class="rumor-name">JD Vance</span><span class="rumor-dot">·</span>
+  <span class="rumor-name">Elon Musk</span><span class="rumor-dot">·</span>
+  <span class="rumor-name">Rudy Giuliani</span>
 </div>
 
-<div class="section-grid">
-  <div class="cards-grid">
-
-    <!-- FLYNN -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/flynn.PNG" alt="Michael Flynn">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Five · The True Believers</div>
-        <div class="card-title">Michael Flynn</div>
-        <div class="card-subtitle">National Security Advisor · 24 Days</div>
-        <div class="card-quote">"The show doesn't reward belief. It uses belief. There's a difference."</div>
-        <div class="card-status status-fired">● Fired · Pardoned · Podcasting</div>
-        <div class="card-days">Days on set: 24</div>
-        <a class="substack-btn" href="https://atjon.substack.com/p/section-five-the-true-believers" target="_blank" rel="noopener">Read on Substack</a>
-      </div>
-    </div>
-
-    <!-- BANNON -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/bannon.PNG" alt="Steve Bannon">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Five · The True Believers</div>
-        <div class="card-title">Steve Bannon</div>
-        <div class="card-subtitle">Chief Strategist · 204 Days</div>
-        <div class="card-quote">"The moment you become the story — you get the longest producer's note in the show's history."</div>
-        <div class="card-status status-fired">● Fired · Pardoned · Podcasting</div>
-        <div class="card-days">Days on set: 204</div>
-        <a class="substack-btn" href="https://atjon.substack.com/p/section-five-the-true-believers" target="_blank" rel="noopener">Read on Substack</a>
-      </div>
-    </div>
-
-    <!-- TILLERSON -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/tillerson.PNG" alt="Rex Tillerson">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Six · The Institutionalists</div>
-        <div class="card-title">Rex Tillerson</div>
-        <div class="card-subtitle">Secretary of State · 422 Days</div>
-        <div class="card-quote">"Wrong room."</div>
-        <div class="card-status status-fired">● Fired via Twitter · In Kenya · On the toilet</div>
-        <div class="card-days">Days on set: 422</div>
-        <a class="substack-btn" href="https://atjon.substack.com/p/section-six-the-institutionalists" target="_blank" rel="noopener">Read on Substack</a>
-      </div>
-    </div>
-
-    <!-- SESSIONS -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sessions.PNG" alt="Jeff Sessions">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Six · The Institutionalists</div>
-        <div class="card-title">Jeff Sessions</div>
-        <div class="card-subtitle">Attorney General · 631 Days</div>
-        <div class="card-quote">"Both of them believed the institution they were serving was real. What was not real was the idea that the show cared about it."</div>
-        <div class="card-status status-fired">● Resigned · Lost Senate seat · Hat retired</div>
-        <div class="card-days">Days on set: 631</div>
-        <a class="substack-btn" href="https://atjon.substack.com/p/section-six-the-institutionalists" target="_blank" rel="noopener">Read on Substack</a>
-      </div>
-    </div>
-
-    <!-- MATTIS -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/mattis.PNG" alt="James Mattis">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Seven · The Generals</div>
-        <div class="card-title">James Mattis</div>
-        <div class="card-subtitle">Secretary of Defense · 739 Days</div>
-        <div class="card-quote">"The sequence was right."</div>
-        <div class="card-status status-fired">● Resigned · Letter read on Senate floor · In Texas</div>
-        <div class="card-days">Days on set: 739</div>
-        <a class="substack-btn" href="https://atjon.substack.com/p/section-7-the-generals" target="_blank" rel="noopener">Read on Substack</a>
-      </div>
-    </div>
-
-    <!-- KELLY -->
-    <div class="card">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/kelly.PNG" alt="John Kelly">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Seven · The Generals</div>
-        <div class="card-title">John Kelly</div>
-        <div class="card-subtitle">Chief of Staff · 571 Days</div>
-        <div class="card-quote">"Both of them were right about everything. Both of them were too late."</div>
-        <div class="card-status status-fired">● Resigned · Spoke up after · Lives with the timing</div>
-        <div class="card-days">Days on set: 571</div>
-        <a class="substack-btn" href="https://atjon.substack.com/p/section-7-the-generals" target="_blank" rel="noopener">Read on Substack</a>
-      </div>
-    </div>
-
+<a href="/apprentice/apprentice-s13.html" style="display:block; max-width:1100px; margin: 0 auto; padding: 0 40px 48px; text-decoration:none;">
+  <div style="border: 1px solid #2a3018; padding: 14px 20px; display:flex; align-items:center; justify-content:space-between; background:#060a04; transition: background 0.2s;">
+    <span style="font-family:'Space Mono',monospace; font-size:10px; letter-spacing:4px; color:#3a4828; text-transform:uppercase;">View Season Three Rumor Board →</span>
   </div>
-</div>
+</a>
 
-<!-- SEASON BREAK -->
-<div class="season-label">
-  <div class="season-label-inner" style="color:#6666aa; border-color:#2a2a4a;">Season Break · A Hallway · A Coffee Urn</div>
-</div>
-
-<div class="season-break-strip">
-  <div class="season-break-card card-no-link">
-    <div class="season-break-image">
-      <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/scaramucci.PNG" alt="Anthony Scaramucci" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="season-break-body">
-      <div class="season-break-tag">Season Break · The Hallway</div>
-      <div class="season-break-title">A Brief Conversation — Cohen + Scaramucci</div>
-      <div class="season-break-quote">"I watched the rest of it from my couch. Bannon. Tillerson. Sessions. Mattis. All of it. Quieter than being inside. Also somehow louder." · Days on set: 11. Never officially sworn in. Still has opinions.</div>
-    </div>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
   </div>
-</div>
-
-<!-- SEASON TWO -->
-<div class="season-label">
-  <div class="season-label-inner">Season Two · 2025–Present</div>
-</div>
-
-<div class="section-grid">
-  <div class="cards-grid">
-
-    <!-- NOEM -->
-    <div class="card card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/noem.PNG" alt="Kristi Noem">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Nine · The Loyalists</div>
-        <div class="card-title">Kristi Noem</div>
-        <div class="card-subtitle">Secretary of Homeland Security · 421 Days · Ice Barbie</div>
-        <div class="card-quote">"She did everything the show asked. And discovered that everything was not enough."</div>
-        <div class="card-status status-fired">● Fired · Under investigation · Cricket unavailable for comment</div>
-        <div class="card-days">Days on set: 421</div>
-      </div>
-    </div>
-
-    <!-- BONDI -->
-    <div class="card card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/bondi.PNG" alt="Pam Bondi">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Nine · The Loyalists</div>
-        <div class="card-title">Pam Bondi</div>
-        <div class="card-subtitle">Attorney General · 437 Days</div>
-        <div class="card-quote">"The Dow is over 50,000. That's what we should be talking about." — Epstein survivors present.</div>
-        <div class="card-status status-fired">● Fired · Deposition pending · List still not on desk</div>
-        <div class="card-days">Days on set: 437</div>
-      </div>
-    </div>
-
-    <!-- HEGSETH -->
-    <div class="card card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/hegseth.PNG" alt="Pete Hegseth">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Ten · Still Running</div>
-        <div class="card-title">Pete Hegseth</div>
-        <div class="card-subtitle">Secretary of Defense · Still Counting</div>
-        <div class="card-quote">"There's a difference between having been in a war and understanding war."</div>
-        <div class="card-status status-running">● Still in the building · Signal chat archived</div>
-        <div class="card-days">Days on set: Still counting</div>
-      </div>
-    </div>
-
-    <!-- GABBARD -->
-    <div class="card card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/gabbard.PNG" alt="Tulsi Gabbard">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Ten · Still Running</div>
-        <div class="card-title">Tulsi Gabbard</div>
-        <div class="card-subtitle">Director of National Intelligence · Still Counting</div>
-        <div class="card-quote">"The before photos remain on YouTube. They always will."</div>
-        <div class="card-status status-running">● Still in the building · Nodding</div>
-        <div class="card-days">Days on set: Still counting</div>
-      </div>
-    </div>
-
-    <!-- PATEL -->
-    <div class="card card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/patel.PNG" alt="Kash Patel">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Eleven · The Institutional Damage</div>
-        <div class="card-title">Kash Patel</div>
-        <div class="card-subtitle">Director, FBI · Still Counting</div>
-        <div class="card-quote">"He didn't come to serve the show. He came to settle scores. And the show handed him the keys."</div>
-        <div class="card-status status-running">● Still in the building · Fuse lit</div>
-        <div class="card-days">Days on set: Still counting</div>
-      </div>
-    </div>
-
-    <!-- RFK -->
-    <div class="card card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/rfk.PNG" alt="Robert F. Kennedy Jr.">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Eleven · The Institutional Damage</div>
-        <div class="card-title">Robert F. Kennedy Jr.</div>
-        <div class="card-subtitle">Secretary of Health & Human Services · Still Counting</div>
-        <div class="card-quote">"A man with genuine concerns about genuine problems arrived carrying so much baggage from the wrong fights that the right fights got buried underneath."</div>
-        <div class="card-status status-running">● Still in the building · Measles contained · Raw milk archived</div>
-        <div class="card-days">Days on set: Still counting</div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- PAULA WHITE — SECTION 12 — HER OWN SECTION -->
-<div class="paula-section">
-  <div class="paula-card-wrap">
-    <div class="card mystery card-no-link">
-      <div class="card-image">
-        <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/white.PNG" alt="Paula White">
-      </div>
-      <div class="card-body">
-        <div class="card-season-tag">Section Twelve · Special Divine Guest</div>
-        <div class="card-title">Paula White</div>
-        <div class="card-subtitle">Coming</div>
-        <div class="card-status status-mystery">● Coming</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FOUR-WAY GRID — prominent, full width -->
-<div style="max-width:1400px; margin: 0 auto 0; padding: 0 1.5rem;">
-  <img src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/four-way-grid.PNG" alt="The Trump Brand Legacy" style="width:100%; display:block; border: 1px solid #6b5420;">
-</div>
-
-<!-- SEASON THREE RUMORED -->
-<div class="rumored-section">
-  <div class="rumored-header">
-    <div class="rumored-header-inner">★ Rumored Third Season · Unconfirmed · Subject to Change ★</div>
-  </div>
-
-  <div class="rumored-grid">
-
-    <div class="rumored-card">
-      <div class="rumored-card-tag">Rumored · Season Three</div>
-      <div class="rumored-card-names">
-        <div class="rumored-card-name">Stephen Miller</div>
-        <div class="rumored-card-divider">·</div>
-        <div class="rumored-card-name secondary">Todd Blanche</div>
-      </div>
-      <div class="rumored-card-status">● Unconfirmed</div>
-    </div>
-
-    <div class="rumored-card">
-      <div class="rumored-card-tag">Rumored · Season Three</div>
-      <div class="rumored-card-names">
-        <div class="rumored-card-name">Scott Bessent</div>
-        <div class="rumored-card-divider">·</div>
-        <div class="rumored-card-name secondary">Marco Rubio</div>
-      </div>
-      <div class="rumored-card-status">● Unconfirmed</div>
-    </div>
-
-    <div class="rumored-card">
-      <div class="rumored-card-tag">Rumored · Season Three</div>
-      <div class="rumored-card-names">
-        <div class="rumored-card-name">Jared Kushner</div>
-        <div class="rumored-card-divider">·</div>
-        <div class="rumored-card-name secondary">JD Vance</div>
-      </div>
-      <div class="rumored-card-status">● Unconfirmed</div>
-    </div>
-
-    <div class="rumored-card musk-card">
-      <div class="rumored-card-tag">Special · Post-Show Commentary</div>
-      <div class="rumored-card-names">
-        <div class="rumored-card-name">Elon Musk</div>
-      </div>
-      <div class="rumored-card-role">Post-Show Commentator · The Billionaire in the Production Truck</div>
-      <div class="rumored-card-status">● Format TBD · Watching from outside</div>
-    </div>
-
-  </div>
-</div>
-
-<footer>
-  The Apprentice: Washington Edition · <a href="https://atjon.substack.com" target="_blank">atjon.substack.com</a><br>
-  All images AI-generated · All characters portrayed for purposes of parody and political commentary · First Amendment applies<br>
-  The situations depicted herein did not take place. Except for the ones that did.<br>
-  Satire. Based on a true story. Created by ATJon and AI.
 </footer>
 
 </body>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section Seven: The Generals — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.article-header-text { flex: 1; }
+
+.article-header-image {
+  width: 280px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 86px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover { color: var(--amber); border-color: var(--amber); }
+
+/* ── BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 2px solid #1e1e2a;
+  font-style: normal;
+}
+
+/* Prose */
+.prose p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: 0.2px;
+}
+
+/* Contestant card */
+.contestant-card {
+  border: 1px solid #2a1e08;
+  background: linear-gradient(135deg, #0e0900 0%, #1a1000 100%);
+  padding: 24px 28px;
+  margin: 56px 0 0;
+}
+
+.contestant-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #6a5020;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contestant-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.contestant-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #7a6030;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contestant-days {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #4a3a18;
+  margin-top: 8px;
+}
+
+/* Person image */
+.person-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 32px auto 40px;
+  border: 1px solid var(--border);
+}
+
+/* Sub-section header */
+.subsection {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: #4a4a5a;
+  margin: 44px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Speaker */
+.speaker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  margin: 36px 0 4px;
+  line-height: 1.2;
+}
+
+/* Dialogue */
+.dialogue {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Producer's note */
+.producers-note {
+  background: var(--subtle);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  padding: 20px 24px;
+  margin: 32px 0;
+}
+
+.producers-note-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 6px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.producers-note-text {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #8888a0;
+  margin-bottom: 12px;
+}
+
+.producers-note-sig {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #7a6a40;
+  margin-top: 14px;
+  line-height: 1.7;
+  border-top: 1px solid #2a2010;
+  padding-top: 12px;
+}
+
+/* Contestant divider */
+.contestant-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 64px 0 0;
+}
+
+.contestant-divider::before,
+.contestant-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.contestant-divider-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #2a2a3a;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NAVIGATION ── */
+.nav-episode {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+.nav-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover { border-color: var(--amber); background: var(--subtle); }
+
+.nav-link-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-title { color: var(--amber); }
+
+.nav-link-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+.nav-link-prev { opacity: 0.5; }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 52px; }
+  .article-body { padding: 36px 20px 52px; }
+  .prose p, .dialogue { font-size: 18px; }
+  .contestant-name { font-size: 36px; }
+  .person-image { width: 80%; }
+  .nav-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header">
+  <div class="article-header-text">
+    <div class="article-series">The Apprentice: Washington Edition</div>
+    <div class="article-section-label">Section Seven</div>
+    <h1 class="article-title">THE GENERALS</h1>
+    <div class="article-subtitle">James Mattis and John Kelly</div>
+    <div class="article-meta">
+      <span class="article-date">Apr 06, 2026</span>
+      <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+    </div>
+  </div>
+  <img class="article-header-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-7.PNG" alt="The Generals">
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="stage-direction">[Cohen doesn't open with a speech. He sits. He looks at the table for a moment. When he speaks it's slower than before. The way a man sounds when he's about to say something true about people he actually respects.]</div>
+
+  <div class="prose">
+    <p>Every institution has people who believe in it more than it deserves.</p>
+    <p>The military has more of them than most.</p>
+    <p>Two of them walked into this building in 2017 believing that forty-plus years of service — of real service, the kind measured in deployments and casualties and decisions that cost lives and kept more — meant something inside these walls.</p>
+    <p>It meant something.</p>
+    <p>Just not what they thought it meant.</p>
+    <p>Mattis left clean.</p>
+    <p>Kelly left complicated.</p>
+    <p>Both of them – left right.</p>
+  </div>
+
+  <!-- ── MATTIS ── -->
+  <div class="contestant-card">
+    <div class="contestant-label">Contestant Five</div>
+    <div class="contestant-name">JAMES MATTIS</div>
+    <div class="contestant-role">Secretary of Defense</div>
+    <div class="contestant-days">Days on set: 739</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/mattis.PNG" alt="James Mattis">
+
+  <div class="stage-direction">[CUT TO: Confessional cam. Mattis. Pre-show. He is the only contestant in the history of this program who appears to have prepared for this interview by reading everything ever written about the office he is about to hold. He probably has.]</div>
+
+  <div class="speaker">MATTIS (to camera):</div>
+  <div class="dialogue">I've served this country for forty-four years. I've buried friends. I've made decisions that cost lives and I've lived with those decisions every day since. I'm not naive about what I'm walking into. But I also know that the men and women in uniform deserve a Secretary who will fight for them in that building the way they fight for us out there. That's why I said yes.</div>
+
+  <div class="stage-direction">[He means every word.]<br>[Every word will be tested.]</div>
+
+  <div class="subsection">THE PRE-SHOW</div>
+  <div class="prose">
+    <p>James Mattis spent forty-four years in the United States Marine Corps.</p>
+    <p>Four-star general. Every level of command. Gulf War. Iraq. Afghanistan. He ran Central Command overseeing military operations across the Middle East, Central Asia, and East Africa. His call sign was Chaos — not because he created it, because he understood it.</p>
+    <p>His reading list was distributed to subordinates. Marcus Aurelius. Thucydides. Clausewitz. Roughly nine hundred volumes covering military history, philosophy, and the nature of power. He had annotated copies of most of them.</p>
+    <p>Trump called him the closest thing to General George Patton that we have.</p>
+    <p>This is not an accurate comparison on any historical, tactical, or temperamental level.</p>
+    <p>It is the kind of thing that gets said when a man who learned about war from movies meets a man who learned about war from war.</p>
+    <p>Mattis accepted the nomination anyway.</p>
+  </div>
+
+  <div class="subsection">THE PERFORMANCE</div>
+  <div class="prose">
+    <p>Mattis ran the Pentagon methodically. Seriously. With an absolute insistence on process, on allied relationships, on the institutional frameworks that had kept American military power coherent for seventy years.</p>
+    <p>He pushed back. Quietly. In the room rather than in public. When Trump proposed withdrawing from NATO, Mattis explained. When Trump proposed military options that violated the laws of armed conflict, Mattis explained. When Trump wanted to use the military as a domestic political prop, Mattis resisted.</p>
+    <p>He won some of these arguments.</p>
+    <p>He lost more than he won.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: Confessional cam. A senior Pentagon official. Name withheld.]</div>
+
+  <div class="speaker">PENTAGON OFFICIAL (to camera):</div>
+  <div class="dialogue">The Secretary had a saying. His job was to give the president military options, not military advice the president didn't want. But there's a line between those two things. And we spent two years watching him walk that line very carefully.</div>
+  <div class="stage-direction">[A pause.]<br>[And then one day the line moved.]</div>
+
+  <div class="subsection">THE CRACK</div>
+  <div class="prose">
+    <p>December 19th, 2018.</p>
+    <p>Trump announced, via Twitter, the immediate withdrawal of all American troops from Syria. No consultation with allies. No consultation with military commanders. No consultation with the Secretary of Defense.</p>
+    <p>Mattis learned from Twitter.</p>
+    <p>He went to the Oval Office.</p>
+    <p>The meeting was short.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: The Pentagon. December 20th, 2018. Mattis at his desk. Writing. He writes the way he does everything — with complete concentration, total precision, no wasted words. He has been composing this letter in his head for months.]</div>
+
+  <div class="subsection">THE RESIGNATION LETTER</div>
+  <div class="prose">
+    <p>Mattis's resignation letter is two pages.</p>
+    <p>It is the most widely read resignation letter in American political history.</p>
+    <p>It does not mention Trump by name.</p>
+    <p>It does not need to.</p>
+    <p>It states that he is resigning because the President deserves a Secretary of Defense whose views are more aligned with his. It then lists what Mattis's views actually are — on alliances, on adversaries, on the men and women in uniform.</p>
+    <p>It was read aloud on the Senate floor by a Republican senator who was crying.</p>
+    <p>It was read aloud by a Democratic senator who was also crying.</p>
+  </div>
+
+  <div class="stage-direction">[This is the only moment in the show's history that produced bipartisan tears.]<br>[This will not happen again.]</div>
+
+  <div class="prose">
+    <p>Three months later, Trump reversed the Syria withdrawal decision.</p>
+    <p>American troops remained.</p>
+    <p>Mattis had been right.</p>
+    <p>This was not acknowledged.</p>
+  </div>
+
+  <div class="producers-note">
+    <div class="producers-note-label">The Producer's Note</div>
+    <div class="producers-note-text">"General James Mattis was not too good at his job. I gave him a new life. Everybody knows he wasn't working out."</div>
+    <div class="producers-note-sig">— Donald J. Trump, Producer. September 2019.<br>Nine months after the resignation. The letter, by this point, had been framed and hung in offices across the Department of Defense, the State Department, and approximately forty percent of the national security community's living rooms. The producer's note has not been similarly displayed.</div>
+  </div>
+
+  <div class="subsection">THE AFTER SHOW</div>
+  <div class="prose">
+    <p>In June 2020, when Trump threatened to invoke the Insurrection Act to deploy active duty military against American citizens protesting in American cities, Mattis broke his public silence.</p>
+    <p>He called it a naked assault on democracy.</p>
+    <p>He endorsed Biden.</p>
+    <p>He did not use the word moron.</p>
+    <p>He didn't need to.</p>
+  </div>
+
+  <div class="stage-direction">[The letter had already done the work.]<br>[Cohen. Quieter than he's been all night.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">Mattis is the one I don't have a complicated feeling about.</div>
+  <div class="dialogue">He came in knowing what he was doing. He stayed as long as he could justify staying. He left when he couldn't anymore. He said what he knew.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">The sequence was right.</div>
+  <div class="dialogue">The timing was maybe a conversation for another night.</div>
+  <div class="stage-direction">[He looks at the table.]</div>
+  <div class="dialogue">Kelly is harder.</div>
+
+  <!-- ── KELLY ── -->
+  <div class="contestant-divider"><span class="contestant-divider-label">· · ·</span></div>
+
+  <div class="contestant-card">
+    <div class="contestant-label">Contestant Six</div>
+    <div class="contestant-name">JOHN KELLY</div>
+    <div class="contestant-role">White House Chief of Staff</div>
+    <div class="contestant-days">Days on set: 571</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/kelly.PNG" alt="John Kelly">
+
+  <div class="stage-direction">[CUT TO: Confessional cam. Kelly. Pre-show. Very still. The stillness of a man who has spent forty-five years being the most prepared person in any room and knows that preparation, in this particular room, may not be sufficient.]</div>
+
+  <div class="speaker">KELLY (to camera):</div>
+  <div class="dialogue">I've commanded in combat. I've dealt with chaos. Real chaos. Not the Twitter kind. The kind where people die if you get it wrong. I think I can bring some order to this.</div>
+
+  <div class="stage-direction">[He can bring order to most things.]<br>[He has not yet met this thing.]</div>
+
+  <div class="subsection">THE PRE-SHOW</div>
+  <div class="prose">
+    <p>John Kelly spent forty-five years in the United States Marine Corps.</p>
+    <p>Four-star general. Gulf War. Iraq. The war on terror. He lost his son Robert in combat in Afghanistan in 2010 — First Lieutenant Robert Kelly, killed by a landmine at age twenty-nine.</p>
+    <p>The father attended the ceremony.</p>
+    <p>The father did not break.</p>
+    <p>The father went back to work.</p>
+    <p>This is the man Donald Trump hired to bring order to the West Wing.</p>
+  </div>
+
+  <div class="stage-direction">[The West Wing, at the time of Kelly's arrival in July 2017, had already consumed Reince Priebus, Sean Spicer, Michael Flynn, and Anthony Scaramucci, the last of whom lasted ten days and gave an interview so wild that it cannot be quoted in family publications — but was quoted all around Washington and Twitter.]</div>
+
+  <div class="subsection">THE PERFORMANCE</div>
+  <div class="prose">
+    <p>Kelly imposed order.</p>
+    <p>This is not in dispute. For approximately six months — autumn and winter of 2017 into 2018 — the West Wing ran with something approaching coherence. Access to the president was controlled. The schedule was honored. Staff knew who reported to whom.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: Confessional cam. A West Wing staffer. Name withheld.]</div>
+
+  <div class="speaker">WEST WING STAFFER (to camera):</div>
+  <div class="dialogue">There was about a month there where you could actually plan your day. It felt almost normal. Almost.</div>
+  <div class="stage-direction">[A pause.]<br>[And then the president started calling people directly. On his cell phone. At night. Without telling anyone.]<br>[And that was kind of the end of that.]</div>
+
+  <div class="prose">
+    <p>The fundamental problem with being Chief of Staff to Donald Trump is structural and has nothing to do with Kelly's capabilities.</p>
+    <p>The president did not want a Chief of Staff.</p>
+    <p>The president wanted a Chief of Staff the way a river wants a dam.</p>
+    <p>They cannot coexist.</p>
+    <p>One of them has to win.</p>
+  </div>
+
+  <div class="subsection">THE CRACK</div>
+  <div class="prose">
+    <p>Kelly lasted longer than almost anyone expected.</p>
+    <p>He also said things — privately, to colleagues, in conversations that eventually found their way to journalists — that were considerably more candid than his public posture.</p>
+    <p>He called Trump an idiot.</p>
+    <p>He said he was the most flawed person he had ever met.</p>
+    <p>He said Trump didn't understand alliances, the press, or the oath of office.</p>
+    <p>He said all of this after he left.</p>
+  </div>
+
+  <div class="stage-direction">[While he was there he said almost none of it publicly.]</div>
+
+  <div class="subsection">THE BOARDROOM</div>
+  <div class="prose">
+    <p>Kelly's departure in December 2018 was not a firing.</p>
+    <p>It was a resignation. Slow. Mutual. Exhausted.</p>
+    <p>Trump announced it on Twitter — naturally — saying Kelly had done a great job.</p>
+    <p>Kelly did not hold a press conference.</p>
+    <p>Kelly did not issue a statement.</p>
+    <p>Kelly walked out of the West Wing and did not look back.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: The West Wing door closing behind him.]<br>[It is a regular door.]<br>[It sounds like any other door.]<br>[It isn't.]</div>
+
+  <div class="producers-note">
+    <div class="producers-note-label">The Producer's Note</div>
+    <div class="producers-note-text">"John Kelly will be leaving — I appreciate his service!"</div>
+    <div class="producers-note-sig">— Donald J. Trump, Producer. December 8, 2018.<br>Six words. Five hundred and seventy-one days. One son buried in Afghanistan. Six words.</div>
+  </div>
+
+  <div class="subsection">THE AFTER SHOW</div>
+  <div class="prose">
+    <p>In 2020 Kelly said Trump was the most flawed person he had ever known.</p>
+    <p>This, coming from a four-star Marine general who spent decades dealing with warlords, insurgents, and hostile heads of state.</p>
+    <p>In 2024 he said Trump was a fascist — specifically, by the dictionary definition — and unfit for office.</p>
+    <p>He said this clearly. On the record. By name.</p>
+    <p>He also said that if Trump's former chiefs of staff had spoken up together before the 2020 election, it might have made a difference.</p>
+    <p>They did not speak up together before 2020 or since.</p>
+  </div>
+
+  <div class="stage-direction">[He knows this.]<br>[He lives with this.]<br>[Cohen stands.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">Mattis left clean. One letter. Two pages. Read on the Senate floor.</div>
+  <div class="dialogue">Kelly left complicated. Stayed until he was empty. Spoke up after. Wonders about the timing.</div>
+  <div class="dialogue">Both of them were right about everything.</div>
+  <div class="dialogue">Both of them were too late.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">That's not a judgment.</div>
+  <div class="dialogue">That's just what this building does to people who are right about everything.</div>
+  <div class="stage-direction">[He looks at the door.]</div>
+  <div class="dialogue">Season One is over.</div>
+  <div class="stage-direction">[He picks up the folder.]</div>
+  <div class="dialogue">I'm going to step out for a moment.</div>
+  <div class="stage-direction">[He walks toward the door.]<br>[He stops.]</div>
+  <div class="dialogue">When I come back we're in Season Two.</div>
+  <div class="dialogue">Same building.</div>
+  <div class="dialogue">Same chair at the end of the table.</div>
+  <div class="dialogue">Different cast.</div>
+  <div class="stage-direction">[He exits.]<br>[The room is empty.]<br>[The folder is on the table.]<br>[The bad lighting remains.]</div>
+
+  <div class="end-marker">End of Section Seven</div>
+
+</article>
+
+<!-- NAVIGATION -->
+<div class="nav-episode">
+  <div class="nav-label">Continue Reading</div>
+  <a href="/apprentice/section-8.html" class="nav-link">
+    <div class="nav-link-title">Section Eight — Season Break</div>
+    <div class="nav-link-arrow">→</div>
+  </a>
+  <a href="/apprentice/section-6.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section Six — The Institutionalists: Tillerson & Sessions</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>

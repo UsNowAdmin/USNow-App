@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section Five: The True Believers — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.article-header-text { flex: 1; }
+
+.article-header-image {
+  width: 280px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 86px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover { color: var(--amber); border-color: var(--amber); }
+
+/* ── BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 2px solid #1e1e2a;
+  font-style: normal;
+}
+
+/* Prose */
+.prose p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: 0.2px;
+}
+
+/* Contestant header card */
+.contestant-card {
+  border: 1px solid #2a1e08;
+  background: linear-gradient(135deg, #0e0900 0%, #1a1000 100%);
+  padding: 24px 28px;
+  margin: 56px 0 0;
+}
+
+.contestant-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #6a5020;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contestant-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.contestant-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #7a6030;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contestant-days {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #4a3a18;
+  margin-top: 8px;
+}
+
+/* Person image */
+.person-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 32px auto 40px;
+  border: 1px solid var(--border);
+}
+
+/* Sub-section header */
+.subsection {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: #4a4a5a;
+  margin: 44px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Speaker — principal */
+.speaker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  margin: 36px 0 4px;
+  line-height: 1.2;
+}
+
+/* Dialogue */
+.dialogue {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Producer's note block */
+.producers-note {
+  background: var(--subtle);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  padding: 20px 24px;
+  margin: 32px 0;
+}
+
+.producers-note-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 6px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.producers-note-text {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #8888a0;
+  margin-bottom: 12px;
+}
+
+.producers-note-sig {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: #7a6a40;
+  margin-top: 14px;
+  line-height: 1.7;
+  border-top: 1px solid #2a2010;
+  padding-top: 12px;
+}
+
+/* Section divider between contestants */
+.contestant-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 64px 0 0;
+}
+
+.contestant-divider::before,
+.contestant-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.contestant-divider-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #2a2a3a;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NAVIGATION ── */
+.nav-episode {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+.nav-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover { border-color: var(--amber); background: var(--subtle); }
+
+.nav-link-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-title { color: var(--amber); }
+
+.nav-link-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+.nav-link-prev { opacity: 0.5; }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 52px; }
+  .article-body { padding: 36px 20px 52px; }
+  .prose p, .dialogue { font-size: 18px; }
+  .contestant-name { font-size: 36px; }
+  .person-image { width: 80%; }
+  .nav-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header">
+  <div class="article-header-text">
+    <div class="article-series">The Apprentice: Washington Edition</div>
+    <div class="article-section-label">Section Five</div>
+    <h1 class="article-title">THE TRUE BELIEVERS</h1>
+    <div class="article-subtitle">Michael Flynn and Steve Bannon</div>
+    <div class="article-meta">
+      <span class="article-date">Apr 04, 2026</span>
+      <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+    </div>
+  </div>
+  <img class="article-header-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-5.PNG" alt="The True Believers">
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="stage-direction">[Cohen remains seated. He closes the folder. When he speaks now his voice is slightly different. Not softer exactly. More specific. The way a man sounds when he's talking about people he actually knew — or knew well enough to understand what was coming before it arrived.]</div>
+
+  <div class="prose">
+    <p>There is a category of contestant that every reality show eventually produces.</p>
+    <p>Not the ambitious one. Not the desperate one. Not the one who just wants the exposure and a career on TV.</p>
+    <p>The True Believer.</p>
+    <p>The one who arrives not because they want what the show is offering but because they genuinely think the show needs them. That without them the whole enterprise collapses.</p>
+    <p>That they are not competing — they are completing.</p>
+    <p>They were there first. They built the stage before anyone else knew there was going to be a performance.</p>
+    <p>The Apprentice: Washington Edition had two of them in its first season.</p>
+    <p>One lasted twenty-four days.</p>
+    <p>One lasted two hundred and four.</p>
+    <p>Between them they defined everything that followed — not because they succeeded, but because they failed in the two most instructive ways a person can fail in that building.</p>
+    <p>One believed too completely.</p>
+    <p>One understood too clearly.</p>
+    <p>Neither of them saw it coming.</p>
+    <p>Neither of them has entirely accepted it yet.</p>
+  </div>
+
+  <!-- ── FLYNN ── -->
+  <div class="contestant-card">
+    <div class="contestant-label">Contestant / Candidate</div>
+    <div class="contestant-name">MICHAEL FLYNN</div>
+    <div class="contestant-role">National Security Advisor</div>
+    <div class="contestant-days">Days on set: 24</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/flynn.PNG" alt="Michael Flynn">
+
+  <div class="stage-direction">[CUT TO: Confessional cam. Flynn. Pre-show. The energy of a man who has been waiting his whole career for this specific room.]</div>
+
+  <div class="speaker">FLYNN (to camera):</div>
+  <div class="dialogue">I've been inside these systems my whole life. I know where the bodies are buried. Metaphorically. Mostly metaphorically. The point is — nobody knows this apparatus better than I do. Nobody. And now we're going to take it apart and rebuild it the right way. That's what this is. That's what we're doing here.</div>
+
+  <div class="stage-direction">[He believes every word of this. That is not in question. What is in question is whether belief, however sincere, has ever once constituted a security clearance.]</div>
+
+  <div class="subsection">THE PRE-SHOW</div>
+  <div class="prose">
+    <p>Michael Flynn arrived in Washington the way a lot of dangerous things arrive — with impeccable credentials and a grievance.</p>
+    <p>Retired Lieutenant General. Former Director of the Defense Intelligence Agency. Three combat deployments. A genuinely distinguished military career that ended badly when the Obama administration pushed him out of the DIA in 2014 — officially for management issues, unofficially for a management style that colleagues described as, and this is a direct quote from multiple contemporaneous accounts, <em>Flynn facts.</em> Meaning things Michael Flynn stated as facts that were not, in the conventional sense, facts.</p>
+    <p>He landed at the Trump campaign in 2015 like a heat-seeking missile finding the only room in American politics that didn't require its facts to be facts.</p>
+    <p>He was home.</p>
+  </div>
+
+  <div class="subsection">THE AUDITION</div>
+  <div class="stage-direction">[CUT TO: Republican National Convention. Cleveland. July 2016. Flynn at the podium. The crowd hasn't found its moment yet. Flynn is about to give it one.]</div>
+  <div class="dialogue">"Lock her up!"</div>
+  <div class="stage-direction">[The crowd finds its moment.]<br>[Flynn grins. This is the grin of a man who has just discovered he can conduct an orchestra.]<br>[What nobody in that arena is thinking about — what nobody will think about for another six months — is that while Michael Flynn is leading chants about locking up political opponents for mishandling classified information, Michael Flynn is on the payroll of the Turkish government. Unregistered. As a foreign agent. Which is itself a crime. A fact-shaped fact, as opposed to a Flynn fact.]<br>[The crowd roars.]</div>
+
+  <div class="subsection">THE PERFORMANCE</div>
+  <div class="prose">
+    <p>Flynn was named National Security Advisor on November 18th, 2016.</p>
+    <p>He was warned.</p>
+    <p>Specifically, explicitly, formally warned.</p>
+    <p>Sally Yates — then Deputy Attorney General — went to the White House counsel in January 2017 and said, in terms that required no interpretation: Michael Flynn has been having conversations with Russian Ambassador Sergey Kislyak about sanctions. He is lying about those conversations to the Vice President. He is potentially compromised. This is a problem.</p>
+    <p>The White House sat on this information for eighteen days.</p>
+    <p>Flynn continued to serve as National Security Advisor for eighteen days.</p>
+    <p>On day nineteen he resigned.</p>
+  </div>
+
+  <div class="stage-direction">[CUT TO: Confessional cam. Flynn. Post-resignation. The energy is different now. The grievance has found a new address.]</div>
+  <div class="speaker">FLYNN (to camera):</div>
+  <div class="dialogue">This is what they do. This is exactly what they do. The deep state. The apparatus. The people who don't want this administration to succeed. I knew going in they'd come for me. I just didn't think it would be this fast. But this isn't over. Not even close. This is just the beginning.</div>
+  <div class="stage-direction">[He is right that it isn't over. He is wrong about almost everything else.]</div>
+
+  <div class="subsection">THE BOARDROOM</div>
+  <div class="prose">
+    <p>Flynn pleaded guilty to lying to the FBI in December 2017.</p>
+    <p>Then he tried to withdraw the plea.</p>
+    <p>Then he pleaded guilty again.</p>
+    <p>Then the Justice Department, in a move that produced a response from approximately every former federal prosecutor in the United States, moved to drop the charges.</p>
+    <p>Then the judge appointed an outside counsel to review the dismissal.</p>
+    <p>Then Flynn was pardoned by the President of the United States on November 25th, 2020. A full pardon. For all offenses. Known and unknown. Committed or that might be committed. The legal equivalent of a produce aisle where you pay for whatever might be in the bag without looking inside.</p>
+  </div>
+
+  <div class="producers-note">
+    <div class="producers-note-label">The Producer's Note</div>
+    <div class="producers-note-text">"General Flynn is a wonderful man. I think he's been treated very, very unfairly by the media, as I call it, the fake media in many cases. And I think it's a really sad situation when you look at what happened."</div>
+    <div class="producers-note-sig">— Donald J. Trump, Producer. February 15, 2017. Two days after the firing. The warmth, as always, arriving precisely on schedule.</div>
+  </div>
+
+  <div class="subsection">THE AFTER SHOW</div>
+  <div class="prose">
+    <p>Michael Flynn did not go quietly into that good night.</p>
+    <p>Michael Flynn went to Gettysburg, Pennsylvania, where he took a public oath — with a group of QAnon adherents — to a movement whose central belief was that a secret cabal of satanic cannibalistic pedophiles was running the American government and that Donald Trump had been chosen by God to destroy them.</p>
+    <p>He started a podcast.</p>
+    <p>He sells merchandise.</p>
+    <p>He speaks at conferences where the PowerPoint slides reference biblical prophecy and the seating chart looks like a fire code violation.</p>
+    <p>He has never stopped believing.</p>
+    <p>The belief, at this point, is doing a lot of work.</p>
+  </div>
+
+  <div class="stage-direction">[For younger viewers: this man was, briefly, the person responsible for coordinating all intelligence given to the President of the United States. Sleep well.]<br>[Cohen looks at the camera.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">Flynn believed in the movement before the movement had a name.</div>
+  <div class="dialogue">He was the first. The truest. The one who gave everything — his judgment, his plea agreement, eventually his grip on consensus reality — and was gone in twenty-four days.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">The show doesn't reward belief.</div>
+  <div class="dialogue">It uses belief.</div>
+  <div class="dialogue">There's a difference.</div>
+  <div class="stage-direction">[He opens the folder. Closes it.]</div>
+  <div class="dialogue">The next man understood that difference better than almost anyone in either season.</div>
+  <div class="dialogue">Which is exactly why he's not here anymore.</div>
+
+  <!-- ── BANNON ── -->
+  <div class="contestant-divider"><span class="contestant-divider-label">· · ·</span></div>
+
+  <div class="contestant-card">
+    <div class="contestant-label">Contestant / Candidate</div>
+    <div class="contestant-name">STEVE BANNON</div>
+    <div class="contestant-role">Chief Strategist and Senior Counselor to the President</div>
+    <div class="contestant-days">Days on set: 204</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/bannon.PNG" alt="Steve Bannon">
+
+  <div class="stage-direction">[CUT TO: Confessional cam. Bannon. Pre-show. He is not looking at the camera the way contestants usually look at the camera. He is looking at it the way a director looks at a camera. Assessing it. Deciding what it's for.]</div>
+
+  <div class="speaker">BANNON (to camera):</div>
+  <div class="dialogue">This isn't about him. People need to understand that. Trump is the vessel. The movement is the thing. The deconstruction of the administrative state — that's the project. That's what we're here to do. He's the right man at the right moment. But the moment was coming regardless.</div>
+  <div class="stage-direction">[A pause.]</div>
+  <div class="dialogue">He would not enjoy hearing me say that.</div>
+  <div class="stage-direction">[He says it anyway. This will become a pattern.]</div>
+
+  <div class="subsection">THE PRE-SHOW</div>
+  <div class="prose">
+    <p>Steve Bannon came to the Trump campaign in August 2016 from Breitbart News, which he had built into the internet's most reliable distributor of nationalist grievance, white identity politics, and headlines specifically engineered to provoke bursts of reverberating righteous indignation.</p>
+    <p>Before Breitbart he had been a Goldman Sachs banker. A Hollywood producer. A Navy officer. A man of remarkably varied appetites and a reading list that he deployed like a weapon — Guénon, Evola, Strauss and Howe — dropping names in interviews to signal that what looked like populist rage was actually a coherent civilizational theory.</p>
+    <p>Whether it was a coherent civilizational theory or extremely well-read populist rage was a question that journalists spent four years trying to answer and never quite did.</p>
+    <p>What was not in question: Steve Bannon knew exactly what he was doing.</p>
+    <p>Almost until the moment he didn't.</p>
+  </div>
+
+  <div class="subsection">THE AUDITION</div>
+  <div class="prose">
+    <p>Bannon didn't audition for the show.</p>
+    <p>He wrote the show.</p>
+    <p>The nationalist economic message that defined the 2016 campaign — trade wars, immigration restriction, America First, the forgotten working class as political constituency — that architecture was substantially Bannon's. He arrived at the campaign six months before the election and immediately understood something the professional political class had spent eighteen months missing:</p>
+    <p>The audience wasn't watching the same show everyone else thought was on.</p>
+  </div>
+  <div class="stage-direction">[CUT TO: Election night. November 8, 2016. A room that expected to lose is watching itself win. Bannon in the corner. He does not look surprised.]<br>[He has been preparing for this room for twenty years.]</div>
+
+  <div class="subsection">THE PERFORMANCE</div>
+  <div class="prose">
+    <p>Bannon arrived in the White House with a title — Chief Strategist — that had never existed before and was created specifically for him. He was placed on the National Security Council's Principals Committee, a move that produced the specific facial expression of horror in every career national security professional who heard about it.</p>
+    <p>The NSC Principals Committee is where the Secretary of Defense, the Secretary of State, the Director of National Intelligence, and the Chairman of the Joint Chiefs sit down to discuss existential threats to the United States.</p>
+    <p>Steve Bannon was now at that table.</p>
+    <p>Steve Bannon, who had most recently been running a website.</p>
+  </div>
+  <div class="stage-direction">[CUT TO: Confessional cam. A career NSC staffer. Name withheld. Face blurred.]</div>
+  <div class="speaker">NSC STAFFER (to camera):</div>
+  <div class="dialogue">I don't want to characterize it. I'll just say that there was a period where we were briefing the Principals and one of them kept referencing the Fourth Turning as a strategic framework and I had to decide whether to address that directly or just continue with the slide deck.</div>
+  <div class="stage-direction">[They continued with the slide deck.]</div>
+
+  <div class="subsection">THE CRACK</div>
+  <div class="prose">
+    <p>The show has a rule — we've established this — about visibility.</p>
+    <p>You can be effective. You can be powerful. You can be, in the estimation of serious people, the most influential figure in the building.</p>
+    <p>What you cannot be is the most famous figure in the building.</p>
+    <p>That position is taken.</p>
+    <p>Bannon appeared on the cover of Time magazine in February 2017 under the headline THE GREAT MANIPULATOR.</p>
+  </div>
+  <div class="stage-direction">[CUT TO: The Oval Office. A man reading Time magazine. His name is on the cover of Time magazine approximately one hundred times. This is not one of those times.]<br>[The clock, at this moment, begins.]</div>
+  <div class="prose">
+    <p>The leaks followed. Bannon briefed Michael Wolff for what became <em>Fire and Fury</em> — the book that described the Trump White House as a chaos factory staffed by people who privately believed the president was unfit for office. Bannon's quotes were vivid, specific, and career-ending.</p>
+    <p>On the Trump Tower meeting with Russian operatives he said, on the record, that it was <em>treasonous.</em></p>
+  </div>
+
+  <div class="subsection">THE BOARDROOM</div>
+  <div class="prose">
+    <p>Trump's statement on Bannon's departure did not use the phrase Great American Patriot.</p>
+    <p>It did not use the phrase loyal friend.</p>
+    <p>It said:</p>
+  </div>
+  <div class="dialogue">"Steve Bannon has nothing to do with me or my Presidency. When he was fired, he not only lost his job, he lost his mind."</div>
+  <div class="prose"><p>It was just the hammer, no wrap.</p></div>
+
+  <div class="producers-note">
+    <div class="producers-note-label">The Producer's Note</div>
+    <div class="producers-note-text">"Steve pretends to be at war with the media, which he calls the opposition party, yet he spent his time in the White House leaking false information to the media to make himself seem far more important than he was. Steve was rarely in a one-on-one meeting with me and only pretends to have had influence to fool a few people with no access and no clue, whom he helped write phony books."</div>
+    <div class="producers-note-sig">— Donald J. Trump, Producer. January 3, 2018. This is the longest producer's note in the show's history. Length, in this context, is not a compliment.</div>
+  </div>
+
+  <div class="subsection">THE AFTER SHOW</div>
+  <div class="prose">
+    <p>Steve Bannon was indicted in August 2020 for defrauding donors to a private border wall fundraiser called We Build The Wall, through which he and associates allegedly diverted hundreds of thousands of dollars for personal expenses.</p>
+    <p>He was pardoned on January 20th, 2021. Trump's last hours in office.</p>
+    <p>He now hosts a podcast called War Room which broadcasts daily to an audience of millions and which has been described, by people who study these things professionally, as one of the most influential vectors of right-wing political messaging in the United States.</p>
+    <p>He was also held in contempt of Congress for defying a January 6th subpoena.</p>
+    <p>He was convicted.</p>
+    <p>He reported to federal prison in July 2024.</p>
+    <p>He was released.</p>
+    <p>He is currently, as of this writing, podcasting.</p>
+    <p>The movement, it turns out, does not require a West Wing office.</p>
+    <p>It never did.</p>
+  </div>
+
+  <div class="stage-direction">[That was always the point.]<br>[Cohen sets down the folder.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">Flynn believed in the show.</div>
+  <div class="dialogue">Bannon understood the show.</div>
+  <div class="dialogue">Neither survived it.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">Flynn was gone in twenty-four days because he was compromised before he walked in the door.</div>
+  <div class="dialogue">Bannon lasted two hundred and four days because he was careful — until the moment he wasn't. Until Time magazine. Until Michael Wolff. Until the word <em>treasonous</em> said out loud on the record about a meeting in Trump Tower.</div>
+  <div class="dialogue">The show has one rule above all the rules we've already discussed.</div>
+  <div class="stage-direction">[He looks at the empty chair.]</div>
+  <div class="dialogue">The host is the story.</div>
+  <div class="dialogue">The host is always the story.</div>
+  <div class="dialogue">The moment you become the story —</div>
+  <div class="stage-direction">[He taps the folder.]</div>
+  <div class="dialogue">— you get the longest producer's note in the show's history.</div>
+  <div class="dialogue">And you go home.</div>
+  <div class="stage-direction">[Beat.]</div>
+  <div class="dialogue">The next two people I'm going to tell you about didn't make either of those mistakes.</div>
+  <div class="dialogue">They made a different one entirely.</div>
+  <div class="dialogue">They thought the job was the job.</div>
+
+  <div class="end-marker">End of Section Five</div>
+
+</article>
+
+<!-- NAVIGATION -->
+<div class="nav-episode">
+  <div class="nav-label">Continue Reading</div>
+  <a href="/apprentice/section-6.html" class="nav-link">
+    <div class="nav-link-title">Section Six — The Institutionalists: Tillerson & Sessions</div>
+    <div class="nav-link-arrow">→</div>
+  </a>
+  <a href="/apprentice/section-4b.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section 4(b) — A Brief Word From The White House</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section One: Cold Open — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+  --text-dim: #72728a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV BAR ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.article-header-text { flex: 1; }
+
+.article-header-image {
+  width: 280px;
+  flex-shrink: 0;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 86px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 38px;
+  letter-spacing: 3px;
+  color: var(--red);
+  margin-bottom: 28px;
+  line-height: 1;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+/* ── ARTICLE BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction / bracketed text */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 2px solid #1e1e2a;
+  font-style: normal;
+}
+
+/* Regular prose paragraphs */
+.prose p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+}
+
+.prose p:last-child { margin-bottom: 0; }
+
+/* Speaker label */
+.speaker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 6px;
+  color: var(--amber);
+  margin: 48px 0 6px;
+}
+
+/* Dialogue */
+.dialogue {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: 0.2px;
+}
+
+/* ── ARTICLE IMAGE ── */
+.article-image-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+}
+
+.article-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+/* Section break */
+.section-break {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 52px 0;
+}
+
+.section-break::before,
+.section-break::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-break-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #2a2a3a;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NEXT EPISODE ── */
+.next-episode {
+  max-width: 780px;
+  margin: 0 auto 0;
+  padding: 0 40px 64px;
+}
+
+.next-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.next-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+}
+
+.next-link:hover {
+  border-color: var(--amber);
+  background: var(--subtle);
+}
+
+.next-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.next-link:hover .next-title { color: var(--amber); }
+
+.next-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.next-link:hover .next-arrow { color: var(--amber); }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* Contestant card */
+.contestant-card {
+  border: 1px solid #2a1e08;
+  background: linear-gradient(135deg, #0e0900 0%, #1a1000 100%);
+  padding: 24px 28px;
+  margin: 32px 0 0;
+}
+
+.contestant-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #6a5020;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contestant-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.contestant-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #7a6030;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.contestant-days {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #4a3a18;
+  margin-top: 8px;
+}
+
+.person-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 40px auto 36px;
+  border: 1px solid var(--border);
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 52px; }
+  .article-subtitle { font-size: 26px; }
+  .article-body { padding: 36px 20px 52px; }
+  .prose p, .dialogue { font-size: 18px; }
+  .next-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header">
+  <div class="article-header-text">
+    <div class="article-series">The Apprentice: Washington Edition</div>
+    <div class="article-section-label">Section One</div>
+    <h1 class="article-title">COLD OPEN</h1>
+    <div class="article-subtitle">You're Fired.</div>
+    <div class="article-meta">
+      <span class="article-date">Apr 03, 2026</span>
+      <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+    </div>
+  </div>
+  <img class="article-header-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/IMG_4833.PNG" alt="The Apprentice: Washington Edition — Section One">
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="stage-direction">
+    [The following is best read in the voice of a man who has seen things. Crazy things. Impossible things. Things that, until recently, might have seemed like just the fever dream of an ambitious science fiction writer with a grudge against government and a weakness for irony.]
+  </div>
+
+  <div class="prose">
+    <p>There was a television program.</p>
+    <p>You remember it. Fourteen seasons. A Manhattan tower with a name on it in gold letters. A boardroom with a long table and bad lighting designed to make everyone look slightly guilty. A man in a suit who had perfected — across decades of carefully managed public appearances — the precise facial expression of someone who has just made a very important decision that you should feel lucky to witness.</p>
+    <p>The show was called The Apprentice.</p>
+    <p>He was the 'host' from 2004 to 2015.</p>
+    <p>Except it didn't stop in 2016.</p>
+    <p>It just changed venues.</p>
+  </div>
+
+  <div class="prose">
+    <p>Nuclear codes. Intelligence briefings. The kind of decisions that don't get a second episode to walk them back.</p>
+    <p>The format remained identical.</p>
+    <p>Contestants arrived with credentials, ambitions, and a willingness to perform competence in front of a man who valued the performance considerably more than the competence. They were given tasks. They executed them with varying degrees of success. They sat across the table from the host. And one by one, with a word that had become so familiar it felt almost friendly —</p>
+    <p>They were fired.</p>
+    <p>The show went off the air briefly. There was a gap. An interlude. The kind of thing networks call "a hiatus" when they're not sure if the audience is coming back.</p>
+    <p>The audience came back.</p>
+    <p>Season Two premiered January 20th, 2025.</p>
+    <p>This is what happens when the boardroom becomes the situation room.</p>
+  </div>
+
+  <div class="stage-direction">[Theme music. Slow fade. Resume normal lighting.]</div>
+
+  <div class="contestant-card" style="margin-top: 48px;">
+    <div class="contestant-label">The Host</div>
+    <div class="contestant-name">DONALD J. TRUMP</div>
+    <div class="contestant-role"><em>Builder</em> · Rich · Celebrity · Reality TV Host</div>
+    <div class="contestant-days">45th and 47th President of All Branches</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/trump.PNG" alt="The Host">
+
+  <div class="section-break">
+    <span class="section-break-label">The Host</span>
+  </div>
+
+  <div class="stage-direction">
+    [A set. Familiar but slightly wrong. The long boardroom table is there but the chairs are empty. The lighting is still bad.]<br><br>
+    [On the wall behind the empty host chair, where a corporate logo once hung, there is now The Great Seal of the United States of America.]<br><br>
+    [A man walks in from stage left. He is not who you expected.]<br><br>
+    [He sits down at the far end of the table. Not the host's chair. He knows better than that. He pulls his jacket straight, looks at the camera with the particular expression of someone who has rehearsed nonchalance, and begins.]
+  </div>
+
+  <div style="height:1px; background:var(--border); margin: 48px 0 0;"></div>
+
+  <div class="contestant-card" style="margin-top: 0; border-top: none;">
+    <div class="contestant-label">Your Narrator</div>
+    <div class="contestant-name">MICHAEL COHEN</div>
+    <div class="contestant-role">Personal Attorney · Executive Vice President · Fixer · Podcaster</div>
+    <div class="contestant-days">You Might Remember Me.</div>
+  </div>
+
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/cohen.PNG" alt="Michael Cohen">
+
+  <div class="speaker">MICHAEL COHEN:</div>
+
+  <div class="dialogue">Good evening.</div>
+  <div class="dialogue">I'm Michael Cohen.</div>
+  <div class="dialogue">You might remember me.</div>
+  <div class="dialogue">I used to work here. Not here exactly. A few blocks up. Twenty-sixth floor. Corner office. My job title changed depending on who was asking — personal attorney, executive vice president, fixer — but the actual job description was always the same: make the problem go away before the problem has a name.</div>
+  <div class="dialogue">I was good at it.</div>
+  <div class="dialogue">For a while.</div>
+
+  <div class="stage-direction">[He pauses. Looks at the empty host's chair at the far end of the table. Looks back at the camera.]</div>
+
+  <div class="dialogue">I'm not here to talk about that.</div>
+  <div class="dialogue">I'm here because somebody should explain what happened. What's still happening. And nobody alive has a better view of the whole board than I do. Not because I'm smart — though I am — but because I spent years in that building learning exactly one thing:</div>
+
+  <div class="dialogue">I've seen it up close in ways that most of these twelve people never did. Because most of them came in through the front door with a title and a confirmation hearing and a sense that the institution they were joining meant something.</div>
+  <div class="dialogue">I came in through a different door.</div>
+  <div class="dialogue">And I left through a different door than I expected too.</div>
+
+  <div class="stage-direction">[Beat.]</div>
+
+  <div class="dialogue">We'll get to that.</div>
+  <div class="dialogue">What you're about to see is a twelve-part contemporaneous retrospective. Two seasons. Twelve contestants. Each one arrived believing something. Each one discovered something else. And each one receives, at the moment of their departure, a producer's note — delivered via social media, because that's how this show works now — that tells them exactly what their service had meant.</div>
+  <div class="dialogue">The words were always warm.</div>
+  <div class="dialogue">The intent was never.</div>
+
+  <div class="stage-direction">[He straightens his jacket again.]</div>
+
+  <div class="dialogue">But before we meet the contestants, you need to understand the show.</div>
+  <div class="dialogue">Because this isn't The Apprentice you remember.</div>
+  <div class="dialogue">The challenges are different here.</div>
+  <div class="dialogue">The prizes are different.</div>
+  <div class="dialogue">And the consequences —</div>
+
+  <div class="stage-direction">[He looks directly at the camera.]</div>
+
+  <div class="dialogue">— are considerably less theoretical.</div>
+
+  <div class="stage-direction">[Beat. He opens a folder on the table in front of him. We cannot see what's inside.]</div>
+
+  <div class="dialogue">Let's start with the rules.</div>
+
+  <div class="end-marker">End of Section One</div>
+
+</article>
+
+<!-- NEXT EPISODE -->
+<div class="next-episode">
+  <div class="next-label">Continue Reading</div>
+  <a href="/apprentice/section-2.html" class="next-link">
+    <div class="next-title">Section Two — A Brief Word from Our Sponsors</div>
+    <div class="next-arrow">→</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>

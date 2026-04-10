@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section Three: Highlights — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+  --text-dim: #72728a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV BAR ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.article-header-text { flex: 1; }
+
+.article-header-image {
+  width: 280px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 86px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+/* ── ARTICLE BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 24px 0;
+  padding: 14px 22px;
+  border-left: 2px solid #1e1e2a;
+}
+
+/* Speaker label */
+.speaker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  margin: 28px 0 6px;
+  line-height: 1.2;
+}
+
+/* Dialogue */
+.dialogue {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Producer note */
+.producer-note {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #3a3a52;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  margin: 18px 0;
+  font-style: italic;
+}
+
+/* Person image — editorial, ~55% width, centered */
+.person-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 40px auto 36px;
+  border: 1px solid var(--border);
+}
+
+/* Section divider between people */
+.person-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 52px 0;
+}
+
+.person-divider::before,
+.person-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.person-divider-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #2a2a3a;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NAVIGATION ── */
+.nav-episode {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+.nav-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover {
+  border-color: var(--amber);
+  background: var(--subtle);
+}
+
+.nav-link-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-title { color: var(--amber); }
+
+.nav-link-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+
+.nav-link-prev { opacity: 0.5; }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 52px; }
+  .article-body { padding: 36px 20px 52px; }
+  .dialogue { font-size: 18px; }
+  .person-image { width: 80%; }
+  .nav-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header" style="display:block;">
+  <div class="article-series">The Apprentice: Washington Edition</div>
+  <div class="article-section-label">Section Three</div>
+  <h1 class="article-title">HIGHLIGHTS</h1>
+  <div class="article-meta">
+    <span class="article-date">Apr 03, 2026</span>
+    <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+  </div>
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="stage-direction">[The following highlight clips have been edited for time. And dignity. Mostly time.]</div>
+
+  <!-- PAM BONDI -->
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/bondi.PNG" alt="Pam Bondi">
+
+  <div class="stage-direction">[CUT TO: Fox News. February 2025. A woman in a red blazer sits across from a host who is already nodding before she finishes the sentence.]</div>
+
+  <div class="speaker">PAM BONDI, Attorney General of the United States:</div>
+  <div class="dialogue">It's sitting on my desk right now.</div>
+
+  <div class="stage-direction">[It was not on her desk.]</div>
+
+  <div class="stage-direction">[CUT TO: House Judiciary Committee. February 11, 2026. Epstein survivors in the room.]</div>
+
+  <div class="dialogue">The Dow is over 50,000 right now…. That's what we should be talking about.</div>
+
+  <div class="stage-direction">[The survivors are still standing.]</div>
+
+  <div class="stage-direction">[CUT TO: Same hearing.]</div>
+
+  <div class="dialogue">You're not even a liar —</div>
+
+  <div class="stage-direction">[She means lawyer.]<br>Or does she?</div>
+
+  <div class="stage-direction">[CUT TO: Truth Social. April 2, 2026.]</div>
+
+  <div class="speaker">DONALD J. TRUMP, Producer:</div>
+  <div class="dialogue">"Pam Bondi is a Great American Patriot and a loyal friend."</div>
+
+  <div class="producer-note">[The list was never on the desk.] [The Dow fell well below 50,000.] [The survivors are still waiting.] [The list could not be reached for comment.]</div>
+
+  <div class="person-divider"><span class="person-divider-label">· · ·</span></div>
+
+  <!-- PETE HEGSETH -->
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/hegseth.PNG" alt="Pete Hegseth">
+
+  <div class="stage-direction">[CUT TO: A group chat. March 2025. Fourteen people. One of them is a journalist. Nobody has noticed yet.]</div>
+
+  <div class="speaker">PETE HEGSETH, Secretary of Defense,<br>on the subject of imminent military strikes against Houthi targets in Yemen, in a Signal chat that will later be described by people paid to be diplomatic as "a serious lapse in judgment":</div>
+  <div class="dialogue">"We are moving to time on target for 1345 local. CENTCOM ready."</div>
+
+  <div class="stage-direction">[CUT TO: The journalist, reading.]<br>[CUT TO: Hegseth, not yet knowing.]</div>
+
+  <div class="stage-direction">[CUT TO: Truth Social. Date TBD.]</div>
+
+  <div class="speaker">DONALD J. TRUMP, Producer:</div>
+  <div class="producer-note">[This space reserved for future use.]</div>
+
+  <div class="person-divider"><span class="person-divider-label">· · ·</span></div>
+
+  <!-- KRISTI NOEM -->
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/noem.PNG" alt="Kristi Noem">
+
+  <div class="stage-direction">[CUT TO: A book. A memoir. Written by a person who wanted to be Vice President of the United States and decided the best way to demonstrate executive temperament was to describe, in her own words, shooting her fourteen month old puppy in a gravel pit because it was, quote, "untrainable."]</div>
+
+  <div class="speaker">KRISTI NOEM, ICE Barbie, Secretary of Homeland Security,<br>author, dog owner, former dog owner:</div>
+  <div class="dialogue">"I hated that dog."</div>
+
+  <div class="stage-direction">[CUT TO: The American public, reading that sentence.]</div>
+
+  <div class="stage-direction">[CUT TO: Truth Social. March 2026.]</div>
+
+  <div class="speaker">DONALD J. TRUMP, Producer:</div>
+  <div class="dialogue">"Kristi Noem has been a truly great Secretary of Homeland Security."</div>
+
+  <div class="producer-note">[The dog was unavailable for comment.]</div>
+
+  <div class="person-divider"><span class="person-divider-label">· · ·</span></div>
+
+  <!-- MICHAEL FLYNN -->
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/flynn.PNG" alt="Michael Flynn">
+
+  <div class="stage-direction">[CUT TO: A rally. 2016. The crowd is on its feet. A man in a suit is at the microphone, feeding the room something it very much wants to eat.]</div>
+
+  <div class="speaker">MICHAEL FLYNN, National Security Advisor,<br>thirty-four days before becoming National Security Advisor,<br>on the subject of political opponents and the American justice system:</div>
+  <div class="dialogue">"LOCK HER UP."</div>
+
+  <div class="stage-direction">[The crowd roars.]<br>[CUT TO: The same man. Twenty-four days into his tenure as National Security Advisor. A different room. Considerably quieter.]</div>
+
+  <div class="stage-direction">[CUT TO: Truth Social. February 13, 2017.]</div>
+
+  <div class="speaker">DONALD J. TRUMP, Producer:</div>
+  <div class="dialogue">"General Flynn is a wonderful man. I think he's been treated very, very unfairly by the media."</div>
+
+  <div class="producer-note">[Flynn would later plead guilty. Twice. Be pardoned. Once. And sell MyPillow-adjacent merchandise at a prophecy conference in Arizona.]<br>[The irony has never been charged with anything.]</div>
+
+  <div class="person-divider"><span class="person-divider-label">· · ·</span></div>
+
+  <div class="stage-direction">[The clips end. The screen holds for a moment on nothing.]<br><br>[Cohen steps back into frame. He sits. He looks at the camera with the expression of a man who has just watched something he already knew was coming and found it no less remarkable for that.]</div>
+
+  <div class="speaker">MICHAEL COHEN:</div>
+  <div class="dialogue">You remember all of that.</div>
+  <div class="dialogue">Good.</div>
+  <div class="dialogue">Let's go back to the beginning.</div>
+
+  <div class="end-marker">End of Section Three</div>
+
+</article>
+
+<!-- NAVIGATION -->
+<div class="nav-episode">
+  <div class="nav-label">Continue Reading</div>
+  <a href="/apprentice/section-4.html" class="nav-link">
+    <div class="nav-link-title">Section Four — The Rules</div>
+    <div class="nav-link-arrow">→</div>
+  </a>
+  <a href="/apprentice/section-2.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section Two — A Brief Word from Our Sponsors</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>

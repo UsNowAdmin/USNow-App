@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section Eight: The Season Break — The Apprentice: Washington Edition · USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #070709;
+  --off-black: #0d0d12;
+  --panel: #0b0b10;
+  --border: #1e1e2a;
+  --border-bright: #32323f;
+  --red: #e03030;
+  --amber: #f0a500;
+  --gold: #c9973a;
+  --green: #1db954;
+  --blue: #3b82f6;
+  --white: #f2f2f2;
+  --muted: #52526a;
+  --subtle: #14141c;
+  --text: #c8c8d8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  width: 100%;
+  background: var(--off-black);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-home {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-home span { color: var(--red); }
+
+.nav-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-series:hover { color: var(--amber); }
+
+/* ── ARTICLE HEADER ── */
+.article-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 40px 48px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.article-header-text { flex: 1; }
+
+.article-header-image {
+  width: 280px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.article-series {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-series::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.article-section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 86px;
+  line-height: 0.88;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.article-subtitle {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.article-substack {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #3a3a52;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #2a2a3a;
+  padding: 4px 10px;
+  transition: all 0.2s;
+}
+
+.article-substack:hover { color: var(--amber); border-color: var(--amber); }
+
+/* ── BODY ── */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 52px 40px 72px;
+}
+
+/* Stage direction */
+.stage-direction {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #7070a0;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 2px solid #1e1e2a;
+  font-style: normal;
+}
+
+/* Contestant card — Scaramucci special */
+.contestant-card {
+  border: 1px solid #2a1e08;
+  background: linear-gradient(135deg, #0e0900 0%, #1a1000 100%);
+  padding: 24px 28px;
+  margin: 56px 0 0;
+}
+
+.contestant-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #6a5020;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contestant-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.contestant-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #7a6030;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.contestant-days {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #4a3a18;
+  margin-top: 8px;
+  line-height: 1.8;
+}
+
+/* Person image */
+.person-image {
+  display: block;
+  width: 55%;
+  height: auto;
+  margin: 32px auto 40px;
+  border: 1px solid var(--border);
+}
+
+/* Body image — horizontal, full width */
+.body-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 36px 0;
+  border: 1px solid var(--border);
+}
+
+/* Speaker */
+.speaker {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: var(--amber);
+  margin: 36px 0 4px;
+  line-height: 1.2;
+}
+
+/* Dialogue */
+.dialogue {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* End marker */
+.end-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.end-marker::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── NAVIGATION ── */
+.nav-episode {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+.nav-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  background: var(--panel);
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover { border-color: var(--amber); background: var(--subtle); }
+
+.nav-link-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: #8888a0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-title { color: var(--amber); }
+
+.nav-link-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover .nav-link-arrow { color: var(--amber); }
+.nav-link-prev { opacity: 0.5; }
+
+/* ── FOOTER ── */
+.article-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 40px;
+  text-align: center;
+  background: var(--off-black);
+}
+
+.footer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #28283a;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .top-nav { padding: 0 20px; }
+  .article-header { padding: 40px 20px 32px; flex-direction: column; }
+  .article-header-image { width: 100%; margin-top: 20px; }
+  .article-title { font-size: 52px; }
+  .article-body { padding: 36px 20px 52px; }
+  .dialogue { font-size: 18px; }
+  .contestant-name { font-size: 36px; }
+  .person-image { width: 80%; }
+  .nav-episode { padding: 0 20px 48px; }
+  .article-footer { padding: 18px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <a href="/" class="nav-home">US<span>NOW</span></a>
+  <a href="/apprentice" class="nav-series">← The Apprentice: Washington Edition</a>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header">
+  <div class="article-header-text">
+    <div class="article-series">The Apprentice: Washington Edition</div>
+    <div class="article-section-label">Section Eight</div>
+    <h1 class="article-title">THE SEASON BREAK</h1>
+    <div class="article-subtitle">A Brief Conversation with Anthony Scaramucci</div>
+    <div class="article-meta">
+      <span class="article-date">Apr 07, 2026</span>
+      <a href="https://substack.com" class="article-substack" target="_blank">Also on Substack →</a>
+    </div>
+  </div>
+  <img class="article-header-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-8.jpg" alt="The Season Break">
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <div class="stage-direction">[A hallway behind the set. Fluorescent lighting. A folding table with a coffee urn that has been there since the first season and has not been cleaned since the first season. The kind of backstage space that exists in every production — functional, forgotten, fluorescent.]</div>
+
+  <div class="stage-direction">[Cohen enters from the stage door. He's loosened his tie. He's carrying the folder. He looks like a man who has just finished something and knows he has to start something else and is taking thirty seconds in between to be a human being.]</div>
+
+  <div class="stage-direction">[There is already someone in the hallway.]</div>
+  <div class="stage-direction">[Of course there is.]</div>
+  <div class="stage-direction">[Anthony Scaramucci is leaning against the wall with a coffee cup, looking like a man who has been waiting for exactly this conversation for approximately seven years and has strong opinions ready.]</div>
+
+  <!-- SCARAMUCCI CARD -->
+  <div class="contestant-card">
+    <div class="contestant-label">Former</div>
+    <div class="contestant-name">ANTHONY SCARAMUCCI</div>
+    <div class="contestant-role">White House Communications Director</div>
+    <div class="contestant-days">Days on set: 11<br>Never officially sworn in.<br>Still has opinions.<br>Many of them unprintable.</div>
+  </div>
+
+  <!-- SCARAMUCCI IMAGE -->
+  <img class="person-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/scaramucci.PNG" alt="Anthony Scaramucci">
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">Eleven days.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">I know.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">They didn't give me a section.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">You got a mention.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">A mention. I was White House Communications Director of the United States of America.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">For eleven days.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">Eleven very eventful days.</div>
+
+  <div class="stage-direction">[Cohen pours himself a coffee. Looks at the urn. Decides against it. Sets the cup down.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">You called Reince Priebus a paranoid schizophrenic.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">He was acting like one.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">On the record.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I thought it was off the record.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">It wasn't off the record.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I'm aware of that now.</div>
+
+  <div class="stage-direction">[Beat.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">You know what the worst part is?</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">The New Yorker.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">The New Yorker. Of all the outlets. Ryan Lizza. I gave the interview of a f***ing lifetime to Ryan Lizza at The New Yorker — the New Yorker — a magazine whose readers have at least three tote bags and opinions about sourdough — and I didn't even get to finish the job.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">What was the job?</div>
+
+  <div class="stage-direction">[He thinks about this for a moment.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I genuinely have no idea anymore.</div>
+
+  <div class="stage-direction">[Cohen almost smiles.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">How long were you actually there? Officially?</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">That's the thing. Technically? Never. The paperwork wasn't done. I was fired before I was sworn in. I was the Communications Director who never officially communicated anything. In eleven days I managed to become the most famous person in a building full of famous people and then get fired from a job I never technically started.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">That's actually impressive.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">It's a gift. What can I say.</div>
+
+  <div class="stage-direction">[Beat.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">How's Season Two?</div>
+
+  <div class="stage-direction">[He looks at the stage door.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">Different.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">Better or worse?</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">The original cast at least believed in something. Even when the something was wrong. Season Two is more —</div>
+
+  <div class="stage-direction">[He searches for the word.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">— transactional.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">They're all transactional.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">Season One had true believers. People who thought the movement meant something. Season Two is people who know exactly what it is and signed up anyway.</div>
+
+  <div class="stage-direction">[Scaramucci considers this.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">That's scarier.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">Yes.</div>
+
+  <div class="stage-direction">[Long beat.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">You know what I think about? My wife had the baby while I was in there. I missed it. Eleven days and I missed the birth of my kid for a job I never officially started.</div>
+
+  <div class="stage-direction">[Silence.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">I did 13 1/2 months in Otisville.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">Yeah – and then what? Home confinement during COVID – what a twist.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">We all paid something.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">Some of us more than others.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">Some of us more than others.</div>
+
+  <div class="stage-direction">[Beat.]</div>
+
+  <!-- SEC-8 IMAGE REPLACES [Then —] -->
+  <img class="body-image" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/apprentice/sec-8.jpg" alt="The Season Break">
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">You know Kelly fired me. First thing he did. Day one.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">I know.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">The f***ing guy hadn't even unpacked. Walked in, looked around, fired me. You know what? I actually respect that. That's efficiency. That's a man who knows what he's doing. Walk in the door, identify the loudest problem, eliminate it. Boom. I respect it. I hate it. But I respect it.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">He tried to bring order to the whole operation.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">How'd that work out?</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">December 2018. Gone.</div>
+
+  <div class="stage-direction">[Nodding slowly.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">See, that's the thing about that place. Kelly comes in thinking he's going to run a tight ship. Military man. Chain of command. Nobody tweets without authorization. Nobody tells him what to tweet. The whole thing is completely un-run-able and Kelly — God bless him — spent a year and a half learning that the hard way while I learned it in eleven days for free.</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">To be fair, you contributed to the un-run-able-ness.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I accelerated it. There's a difference. I'm like — you know when you add Mentos to a Diet Coke? The explosion was already going to happen. I just —</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">You were the Mentos.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I was very enthusiastic, yes.</div>
+
+  <div class="stage-direction">[Beat.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I watched the rest of it from television. Bannon. Tillerson. Sessions. Mattis. All of it. From my couch. It might as well have been a reality show.</div>
+
+  <div class="stage-direction">[Pause.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">You want to know the real thing? The thing that actually gets me?</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">[Carefully.] Do I?</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">Bannon lasted longer than me. Steve Bannon. The guy looked like he was cosplaying as a man who'd been living in a haunted lighthouse – and well – you know.... He lasted longer than me. Tillerson — Rex I-Was-Running-ExxonMobil Tillerson, who had negotiated with actual foreign governments and actual foreign dictators — couldn't handle it. Gone in fourteen months. Meanwhile I'm out in eleven days and everyone's acting like I'm the problem —</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">You did call Reince Priebus a paranoid schiz—</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I KNOW WHAT I CALLED HIM, MICHAEL.</div>
+
+  <div class="stage-direction">[Pause. He collects himself.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">Look. You want the real version? You want what I would have said if Ryan Lizza had been off the record?</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">[Long pause. Against his better judgment.] …Sure.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">These motherf***ers — and I use that word with the full technical precision it deserves — these absolute weapons-grade a**holes had the greatest opportunity in the history of American politics, okay? You've got the keys. You've got the house. You've got both chambers. And what do these c***s******s do? They spend the first six months leaking on each other like a bunch of broken fire hydrants! Priebus is leaking, Bannon is leaking, everybody's on background with every reporter in Washington telling them what a disaster everyone else is while the whole ship is taking on water and I — I — come in to fix the s**t, and Kelly — who I genuinely respect, let me be clear — walks in on day one and fires me like I'm the problem when the problem is that this whole f***ing operation was built on a foundation of pure, weaponized chaos and nobody — nobody — had the balls to say that out loud except me, and I said it to Ryan Lizza, who it turns out was very much on the record, and now here I am in a hallway next to a coffee urn that smells like 2017 talking to a man who went to prison for who knows what and somehow we're both the sane ones.</div>
+
+  <div class="stage-direction">[A long silence.]<br>[Cohen stares at him.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">[Quietly.] You've been waiting seven years to say that.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">[Straightening up. Smoothing his jacket.] Yeah, and I still restrained myself…believe me.</div>
+
+  <div class="stage-direction">[Cohen almost — almost — laughs.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">For what it's worth? You're not wrong.</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">I know I'm not wrong. I was never wrong. I was just early.</div>
+
+  <div class="stage-direction">[The stage door opens slightly. A production assistant leans in.]</div>
+
+  <div class="speaker">PA:</div>
+  <div class="dialogue">Mr. Cohen? They're ready for Season Two.</div>
+
+  <div class="stage-direction">[Cohen picks up the folder.]<br>[He looks at Scaramucci.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">You gonna keep watching?</div>
+
+  <div class="stage-direction">[Without hesitation.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">How can you not…it's all they let you see.</div>
+
+  <div class="stage-direction">[Cohen nods. That's the right answer.]</div>
+
+  <div class="speaker">COHEN:</div>
+  <div class="dialogue">[Quietly, almost to himself.] It certainly is a show.</div>
+
+  <div class="stage-direction">[He straightens his tie.]<br>[He walks back through the stage door.]<br>[Scaramucci finishes his coffee.]<br>[He looks at the door.]<br>[He looks at the coffee urn.]<br>[He pours another cup.]<br>[He looks at it.]</div>
+
+  <div class="speaker">SCARAMUCCI:</div>
+  <div class="dialogue">[To no one.] Eleven days.</div>
+
+  <div class="stage-direction">[He shakes his head. Not sad. Almost proud.]<br>[The fluorescent light hums.]<br>[Somewhere on the other side of that door, Season Two is about to begin.]<br>[It's TV and it's History – and the ratings are incredible]</div>
+
+  <div class="end-marker">End of Section Eight</div>
+
+</article>
+
+<!-- NAVIGATION -->
+<div class="nav-episode">
+  <div class="nav-label">Continue Reading</div>
+  <a href="/apprentice/section-9.html" class="nav-link">
+    <div class="nav-link-title">Section Nine — The Loyalists: Noem & Bondi</div>
+    <div class="nav-link-arrow">→</div>
+  </a>
+  <a href="/apprentice/section-7.html" class="nav-link nav-link-prev">
+    <div class="nav-link-arrow">←</div>
+    <div class="nav-link-title">Section Seven — The Generals: Mattis & Kelly</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="article-footer">
+  <div class="footer-text">
+    Copyrightable elements © 2026 USNow.app · Created by ATJon + AI
+  </div>
+</footer>
+
+</body>
+</html>
