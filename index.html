@@ -138,8 +138,8 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 <body>
 
 <div id="ticker"><div id="ticker-inner">
-<span>◎ $886B DoD Budget FY2025</span><span>◎ $70B+ Annual Overseas Base Cost</span><span>◎ $21.7B Military Aid to Israel Since Oct. 7</span><span>◎ 750 U.S. Bases in 80 Countries</span><span>◎ Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span><span>◎ $900B Annual Interest on National Debt</span><span>◎ 243,000 U.S. Troops Stationed Abroad</span><span>◎ $330B Cumulative U.S. Aid to Israel Since 1948</span><span>◎ The data is the argument · Civic Data · Public Record · No Agenda</span>
-<span>◎ $886B DoD Budget FY2025</span><span>◎ $70B+ Annual Overseas Base Cost</span><span>◎ $21.7B Military Aid to Israel Since Oct. 7</span><span>◎ 750 U.S. Bases in 80 Countries</span><span>◎ Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span><span>◎ $900B Annual Interest on National Debt</span><span>◎ 243,000 U.S. Troops Stationed Abroad</span><span>◎ $330B Cumulative U.S. Aid to Israel Since 1948</span><span>◎ The data is the argument · Civic Data · Public Record · No Agenda</span>
+<span>◎ The question is the answer. The data is the argument.</span><span>◎ $886B defense. $1.2% foreign aid. The gap is the policy.</span><span>◎ 750 U.S. bases. 80 countries. Right now.</span><span>◎ Follow the money. Name the names. See the record.</span><span>◎ Season Two of The Apprentice: Washington Edition — Coming Soon.</span><span>◎ The US in USNow is not one thing.</span><span>◎ Read AtJon on Substack · atjon.substack.com</span><span>◎ From self to cosmos — tap any layer to explore.</span>
+<span>◎ The question is the answer. The data is the argument.</span><span>◎ $886B defense. $1.2% foreign aid. The gap is the policy.</span><span>◎ 750 U.S. bases. 80 countries. Right now.</span><span>◎ Follow the money. Name the names. See the record.</span><span>◎ Season Two of The Apprentice: Washington Edition — Coming Soon.</span><span>◎ The US in USNow is not one thing.</span><span>◎ Read AtJon on Substack · atjon.substack.com</span><span>◎ From self to cosmos — tap any layer to explore.</span>
 </div></div>
 
 <nav>
@@ -155,8 +155,8 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <a href="#sources">Sources</a>
     <a href="#thoughts" class="nav-cta">Leave a Comment →</a>
   </div>
-  <div style="position:absolute;bottom:3px;left:50%;transform:translateX(-50%);pointer-events:none;">
-    <span style="font-size:7px;letter-spacing:0.45em;color:rgba(138,160,184,0.25);font-family:'Courier New',monospace;">THE SCALE OF BEING</span>
+  <div style="position:absolute;bottom:3px;left:18px;pointer-events:none;">
+    <span style="font-size:7px;letter-spacing:0.14em;color:rgba(201,168,76,0.32);font-family:'Courier New',monospace;">The question is the answer · The data is the argument.</span>
   </div>
 </nav>
 
@@ -400,7 +400,11 @@ function showModal(data){
   document.getElementById('modal-desc').textContent=data.desc;
   const box=document.getElementById('modal-box');box.style.border=`1px solid ${data.color}55`;box.style.boxShadow=`0 -6px 50px ${data.glow},0 0 120px rgba(0,0,0,0.97)`;
   const linksDiv=document.getElementById('modal-links');document.getElementById('modal-links-label').style.color=data.color;
-  if(data.links&&data.links.length>0){linksDiv.style.display='block';document.getElementById('modal-links-list').innerHTML=data.links.map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${data.color};border:1px solid ${data.color}33;" onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';"><span class="arrow">→</span>${l.label}</a>`).join('');}else{linksDiv.style.display='none';}
+  if(data.links&&data.links.length>0){linksDiv.style.display='block';document.getElementById('modal-links-list').innerHTML=data.links.map((l,i)=>{
+    const isTracker=l.url.includes('corruption_tracker');
+    if(isTracker){return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:#d4621a;border:1px solid #d4621a66;background:rgba(212,98,26,0.08);animation:pulseCorrupt 2.2s ease-in-out infinite;font-weight:700;letter-spacing:0.12em;" onmouseenter="this.style.background='rgba(212,98,26,0.18)';this.style.borderColor='#d4621aaa';" onmouseleave="this.style.background='rgba(212,98,26,0.08)';this.style.borderColor='#d4621a66';"><span style="opacity:1;">◆</span> ${l.label}</a>`;}
+    return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${data.color};border:1px solid ${data.color}33;" onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';"><span class="arrow">→</span>${l.label}</a>`;
+  }).join('');}else{linksDiv.style.display='none';}
   const beyondDiv=document.getElementById('modal-beyond');const beyondLabel=document.getElementById('modal-beyond-label');
   if(data.beyond&&data.beyond.length>0){beyondDiv.style.display='block';beyondLabel.style.color=data.color;document.getElementById('modal-beyond-list').innerHTML=data.beyond.map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${data.color};border:1px solid ${data.color}33;" onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';"><span class="arrow">→</span><span>${l.label}</span><span style="font-size:8px;opacity:0.45;margin-left:auto;letter-spacing:0.12em;">${l.tag||''}</span></a>`).join('');}else{beyondDiv.style.display='none';}
   const orbsSection=document.getElementById('modal-orbs-section');
