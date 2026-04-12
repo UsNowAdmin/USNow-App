@@ -1,1613 +1,900 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>USNow — The Data Is the Argument</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>USNow — The data is the argument.</title>
 <style>
-:root {
-  --black: #070709;
-  --off-black: #0d0d12;
-  --panel: #0b0b10;
-  --border: #1e1e2a;
-  --border-bright: #32323f;
-  --red: #e03030;
-  --amber: #f0a500;
-  --gold: #c9973a;
-  --green: #1db954;
-  --blue: #3b82f6;
-  --white: #f2f2f2;
-  --muted: #52526a;
-  --subtle: #14141c;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:#040810}
+::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+*{scrollbar-width:thin;scrollbar-color:#1e2a38 #040810;}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'Barlow Condensed', sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes tw{0%,100%{opacity:0.03}50%{opacity:0.4}}
+@keyframes orbf{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-4px)}}
+@keyframes pulseCore{
+  0%,100%{filter:drop-shadow(0 0 18px rgba(212,168,85,0.7)) drop-shadow(0 0 50px rgba(212,168,85,0.3))}
+  50%{filter:drop-shadow(0 0 32px rgba(212,168,85,1)) drop-shadow(0 0 80px rgba(212,168,85,0.55))}
 }
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@keyframes pulseCorrupt{
+  0%,100%{box-shadow:0 0 18px #d4621a99,0 0 40px #d4621a44,inset 0 0 12px rgba(255,255,255,0.1)}
+  50%{box-shadow:0 0 36px #d4621aee,0 0 80px #d4621a88,0 0 120px #d4621a33,inset 0 0 20px rgba(255,255,255,0.18)}
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── TICKER ── */
-.ticker-wrap {
-  width: 100%;
-  background: #0a0000;
-  border-bottom: 2px solid var(--red);
-  overflow: hidden;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 500;
+#ticker{
+  position:fixed;top:0;left:0;right:0;z-index:600;
+  background:#030609;border-bottom:1px solid rgba(122,96,48,0.44);
+  overflow:hidden;height:30px;display:flex;align-items:center;
+}
+#ticker-inner{display:flex;gap:56px;animation:ticker 52s linear infinite;white-space:nowrap;}
+#ticker-inner span{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;opacity:0.75;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:30px;left:0;right:0;z-index:500;
+  background:rgba(4,8,15,0.95);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(122,96,48,0.33);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 18px;height:44px;
+}
+.nav-logo{display:flex;align-items:baseline;gap:5px;}
+.nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-links{display:flex;gap:16px;align-items:center;}
+.nav-links a{font-size:9px;letter-spacing:0.22em;color:#8aa0b8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;}
+.nav-links a:hover{color:#c9a84c;opacity:1;}
+.nav-cta{font-size:9px;letter-spacing:0.15em;color:#04080f!important;background:#c9a84c;padding:5px 12px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;opacity:1!important;}
+.nav-cta:hover{background:#e0b860!important;}
+
+/* ── SCALE OF BEING ── */
+#scale{
+  position:relative;width:100%;height:100svh;min-height:580px;
+  overflow:hidden;background:#04080f;cursor:default;
+}
+.scale-title{
+  position:absolute;top:10px;left:0;right:0;
+  text-align:center;z-index:10;pointer-events:none;
+  font-size:9px;letter-spacing:0.5em;
+  color:rgba(138,160,184,0.38);
+  font-family:'Courier New',monospace;
+}
+#scale-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;}
+.star{position:absolute;border-radius:50%;background:white;}
+
+/* Layer hit areas */
+.layer-band{
+  position:absolute;left:0;right:0;cursor:pointer;
+  transition:filter 0.2s ease;
+}
+.layer-band:hover{filter:brightness(1.5);}
+.layer-label-wrap{
+  position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;pointer-events:none;z-index:5;
+}
+.layer-main-label{
+  font-weight:700;letter-spacing:0.3em;
+  font-family:'Courier New',monospace;
+  white-space:nowrap;
+  transition:text-shadow 0.2s;
+}
+.layer-sub-label{
+  font-size:8px;letter-spacing:0.15em;
+  font-family:'Courier New',monospace;
+  margin-top:4px;
+  opacity:0;transform:translateY(-3px);
+  transition:opacity 0.2s ease,transform 0.2s ease;
+  white-space:nowrap;
+}
+.layer-band:hover .layer-sub-label{opacity:0.7;transform:translateY(0);}
+
+/* Orb nodes */
+.orb-node{
+  position:absolute;border-radius:50%;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transform:translate(-50%,-50%);z-index:20;
+  transition:transform 0.18s ease,box-shadow 0.18s ease;
+}
+.orb-node:hover{transform:translate(-50%,-50%) scale(1.14)!important;}
+.orb-label{
+  color:rgba(255,255,255,0.92);
+  font-family:'Courier New',monospace;letter-spacing:0.03em;
+  text-align:center;line-height:1.15;padding:3px;
+  pointer-events:none;
+  text-shadow:0 1px 4px rgba(0,0,0,0.7);
 }
 
-.ticker-label {
-  background: var(--red);
-  color: #fff;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
-  letter-spacing: 4px;
-  padding: 0 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  flex-shrink: 0;
+/* Core (ME MYSELF & I) */
+#core-wrap{
+  position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+  z-index:300;display:flex;flex-direction:column;align-items:center;gap:4px;
 }
-
-.ticker-track {
-  display: flex;
-  animation: ticker 50s linear infinite;
-  white-space: nowrap;
+#core-orbs{position:relative;width:210px;height:62px;}
+.core-satellite{
+  position:absolute;border-radius:50%;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transform:translate(-50%,-50%);
+  transition:transform 0.18s,box-shadow 0.18s;z-index:299;
 }
-
-.ticker-track span {
-  font-family: 'Space Mono', monospace;
-  font-size: 13px;
-  letter-spacing: 2px;
-  color: #ffffff;
-  padding: 0 48px;
-  opacity: 0.85;
+.core-satellite:hover{transform:translate(-50%,-50%) scale(1.15)!important;}
+#core-btn{
+  width:92px;height:92px;border-radius:50%;
+  background:radial-gradient(circle at 37% 32%,#f8e8b0 0%,#d4a855 35%,#8a6020 65%,#3a2408 90%);
+  border:2px solid rgba(240,210,130,0.78);
+  animation:pulseCore 3.5s ease-in-out infinite;
+  cursor:pointer;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  transition:transform 0.2s;user-select:none;
 }
+#core-btn:hover{transform:scale(1.06);}
+#core-btn div{font-size:10px;font-weight:700;letter-spacing:0.22em;color:#1a0e02;font-family:'Courier New',monospace;line-height:1.4;text-align:center;}
 
-.ticker-track span::before {
-  content: '◆  ';
-  color: var(--red);
+/* Scroll hint */
+#scroll-hint{
+  position:absolute;bottom:118px;left:50%;transform:translateX(-50%);
+  z-index:301;text-align:center;pointer-events:none;
 }
+#scroll-hint div:first-child{font-size:8px;letter-spacing:0.22em;color:rgba(201,168,76,0.45);font-family:'Courier New',monospace;margin-bottom:5px;}
+#scroll-hint .arrow{font-size:14px;color:rgba(201,168,76,0.3);animation:bounce 2.1s ease-in-out infinite;}
 
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* ── MODAL ── */
+#modal-overlay{
+  display:none;
+  position:fixed;inset:0;z-index:3000;
+  background:rgba(2,4,10,0.94);backdrop-filter:blur(20px);
+  align-items:flex-end;justify-content:center;
+  padding:0 10px 16px;
 }
-
-/* ── MASTHEAD + BILLBOARD ROW ── */
-.masthead-row {
-  background: var(--off-black);
-  border-bottom: 2px solid #1a1200;
-  position: relative;
+#modal-overlay.open{display:flex;}
+#modal-box{
+  background:linear-gradient(160deg,#0c1422 0%,#070c1a 100%);
+  border-radius:20px;
+  padding:40px 26px 26px;
+  max-width:560px;width:100%;
+  position:relative;max-height:78vh;overflow-y:auto;
 }
-
-.masthead-row::after {
-  content: '';
-  position: absolute;
-  bottom: -2px; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--red) 0%, var(--amber) 30%, var(--gold) 60%, transparent 100%);
+.modal-drag{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34px;height:3px;border-radius:2px;}
+.modal-layer-tag{font-size:8px;letter-spacing:0.35em;font-family:'Courier New',monospace;opacity:0.5;margin-bottom:6px;}
+#modal-title{font-size:24px;font-weight:300;color:#f0ece4;margin:0 0 8px;font-family:'Georgia',serif;letter-spacing:0.03em;line-height:1.25;}
+#modal-sub{font-size:10px;font-family:'Courier New',monospace;letter-spacing:0.1em;margin-bottom:18px;}
+#modal-desc{font-size:14px;line-height:1.88;color:#8898b0;font-family:'Georgia',serif;margin:0;}
+#modal-links{margin-top:20px;padding-top:16px;}
+.modal-links-label{font-size:8px;letter-spacing:0.3em;font-family:'Courier New',monospace;margin-bottom:10px;opacity:0.45;}
+.modal-link{
+  font-size:11px;font-family:'Courier New',monospace;letter-spacing:0.08em;
+  text-decoration:none;display:flex;align-items:center;gap:8px;
+  padding:8px 12px;border-radius:8px;
+  transition:all 0.2s;margin-bottom:7px;
 }
-
-/* Top eyebrow spans full width */
-.masthead-eyebrow-row {
-  padding: 14px 40px 0;
-  border-bottom: 1px solid var(--border);
+.modal-link:hover{opacity:1;}
+.modal-link .arrow{opacity:0.4;}
+#modal-orbs-section{margin-top:18px;padding-top:16px;}
+.modal-orbs-label{font-size:8px;letter-spacing:0.3em;font-family:'Courier New',monospace;margin-bottom:10px;opacity:0.45;}
+.modal-orb-tag{font-size:9px;letter-spacing:0.1em;font-family:'Courier New',monospace;border-radius:10px;padding:4px 10px;display:inline-block;margin:0 5px 5px 0;}
+#modal-close{
+  margin-top:22px;background:transparent;
+  padding:10px 28px;border-radius:26px;cursor:pointer;
+  font-size:9px;letter-spacing:0.25em;font-family:'Courier New',monospace;transition:all 0.2s;
 }
-
-/* Bottom row: logo left, billboard right */
-.masthead-body-row {
-  display: flex;
-  align-items: stretch;
-}
-
-.masthead {
-  padding: 16px 40px 20px;
-  background: var(--off-black);
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-right: 1px solid #1e1a10;
-  min-width: 260px;
-  height: 160px;
-}
-
-.logo-eyebrow {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 5px;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.logo-main {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 110px;
-  line-height: 0.85;
-  letter-spacing: 8px;
-  color: var(--white);
-}
-
-.logo-main .now {
-  color: var(--red);
-  text-shadow: 0 0 50px rgba(224,48,48,0.35);
-  animation: pulse-glow 5s ease-in-out infinite;
-}
-
-.logo-tagline {
-  font-family: 'DM Serif Display', serif;
-  font-style: italic;
-  font-size: 20px;
-  color: var(--muted);
-  margin-top: 10px;
-  letter-spacing: 0.5px;
-}
-
-@keyframes pulse-glow {
-  0%, 100% { text-shadow: 0 0 30px rgba(224,48,48,0.3); }
-  50% { text-shadow: 0 0 70px rgba(224,48,48,0.55); }
-}
-
-/* ── BILLBOARD ── */
-.billboard-wrap {
-  flex: 1;
-  background: var(--off-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 20px;
-  position: relative;
-  overflow: hidden;
-  align-self: stretch;
-}
-
-/* Marquee border container */
-.billboard-marquee {
-  position: absolute;
-  inset: 24px 20px;
-  pointer-events: none;
-  z-index: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.billboard-marquee svg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-}
-
-.billboard {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  position: relative;
-  width: auto;
-  height: 105px;
-  background: linear-gradient(135deg, #0e0900 0%, #1c1400 60%, #0e0900 100%);
-  transition: background 0.3s;
-  margin: 0;
-  z-index: 1;
-  overflow: visible;
-}
-
-/* Marquee hugs the billboard box */
-.billboard .billboard-marquee {
-  position: absolute;
-  inset: -8px;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.billboard .billboard-marquee svg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  overflow: visible;
-}
-
-.billboard:hover {
-  background: linear-gradient(135deg, #140e00 0%, #241a00 60%, #140e00 100%);
-}
-
-.billboard-img {
-  width: 200px;
-  height: 105px;
-  flex-shrink: 0;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-
-.billboard-img-placeholder {
-  width: 150px;
-  flex-shrink: 0;
-  background: linear-gradient(160deg, #1a1200, #2a1a00);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 36px;
-  color: rgba(201,151,58,0.15);
-}
-
-.billboard-body {
-  padding: 12px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 4px;
-  border-left: 1px solid #2a1e08;
-}
-
-.billboard-eyebrow {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  letter-spacing: 4px;
-  color: #7a6030;
-  text-transform: uppercase;
-}
-
-.billboard-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 30px;
-  letter-spacing: 2px;
-  color: #e8d080;
-  line-height: 1;
-  text-shadow: 0 0 20px rgba(201,151,58,0.3);
-}
-
-.billboard-sub {
-  font-family: 'DM Serif Display', serif;
-  font-style: italic;
-  font-size: 12px;
-  color: #6a5828;
-  letter-spacing: 0.3px;
-}
-
-.billboard-tagline {
-  font-family: 'DM Serif Display', serif;
-  font-style: italic;
-  font-size: 13px;
-  color: #9a8040;
-  letter-spacing: 0.3px;
-  margin-top: 3px;
-}
-
-.billboard-bullet { color: #5a4010; margin: 0 6px; }
-
-.billboard-cta {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #7a6030;
-  text-transform: uppercase;
-  margin-top: 6px;
-  transition: color 0.2s;
-}
-
-.billboard:hover .billboard-cta { color: var(--gold); }
-
-/* Marquee running lights */
-@keyframes marquee-run {
-  0%   { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -40; }
-}
-
-.marquee-path {
-  fill: none;
-  stroke: var(--gold);
-  stroke-width: 1.5;
-  stroke-dasharray: 4 10;
-  stroke-linecap: round;
-  opacity: 0.55;
-  animation: marquee-run 1.4s linear infinite;
-}
-
-/* ── MAIN LAYOUT ── */
-.main-layout {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  min-height: calc(100vh - 170px);
-}
-
-/* ── LEFT RAIL ── */
-.left-rail {
-  border-right: 1px solid var(--border);
-  background: var(--panel);
-  position: sticky;
-  top: 40px;
-  height: calc(100vh - 40px);
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
-}
-
-.rail-header {
-  padding: 20px 22px 14px;
-  border-bottom: 1px solid var(--border);
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 4px;
-  color: var(--muted);
-  text-transform: uppercase;
-}
-
-.resource-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 13px 20px;
-  border-bottom: 1px solid var(--subtle);
-  text-decoration: none;
-  transition: background 0.15s;
-}
-
-.resource-item:hover { background: var(--subtle); }
-
-.resource-icon {
-  font-size: 18px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  line-height: 1;
-}
-
-.resource-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: #c8c8dc;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-.resource-item:hover .resource-name { color: var(--white); }
-
-.resource-desc {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  color: var(--muted);
-  margin-top: 4px;
-  line-height: 1.55;
-  letter-spacing: 0.3px;
-}
-
-.resource-tag {
-  display: inline-block;
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  letter-spacing: 1px;
-  padding: 2px 6px;
-  border-radius: 2px;
-  margin-top: 5px;
-}
-
-/* Rail mini items (half-size) */
-.resource-item-mini {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 20px;
-  border-bottom: 1px solid var(--subtle);
-  text-decoration: none;
-  transition: background 0.15s;
-}
-
-.resource-item-mini:hover { background: var(--subtle); }
-
-.resource-name-mini {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #8888a0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-.resource-item-mini:hover .resource-name-mini { color: #b0b0c8; }
-
-.resource-desc-mini {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  color: #38384a;
-  line-height: 1.5;
-  letter-spacing: 0.2px;
-}
-
-.resource-tag-mini {
-  display: inline-block;
-  font-family: 'Space Mono', monospace;
-  font-size: 7px;
-  letter-spacing: 1px;
-  padding: 1px 5px;
-  border-radius: 2px;
-  margin-top: 3px;
-}
-
-/* Coming soon — not a link */
-.resource-item-teaser {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 20px;
-  border-bottom: 1px solid var(--subtle);
-  opacity: 0.5;
-}
-
-.resource-name-teaser {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #52526a;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-.resource-desc-teaser {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  color: #2a2a38;
-  line-height: 1.5;
-  letter-spacing: 0.2px;
-  font-style: italic;
-}
-
-/* ── MAIN CONTENT ── */
-.main-content { background: var(--black); }
+#modal-close:hover{opacity:1;}
 
 /* ── HERO ── */
-.hero {
-  padding: 64px 60px 56px;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
+#hero{background:#04080f;padding:68px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);}
+#hero .inner{max-width:680px;margin:0 auto;text-align:center;}
+.hero-tap-hint{font-size:8px;letter-spacing:0.28em;color:rgba(201,168,76,0.35);font-family:'Courier New',monospace;margin-bottom:18px;}
+.hero-eyebrow{font-size:10px;letter-spacing:0.5em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:24px;}
+.hero-h1{font-size:clamp(28px,5vw,50px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.28;margin:0 0 30px;letter-spacing:0.02em;}
+.hero-h1 em{color:#c9a84c;font-style:normal;}
+.hero-items{display:flex;flex-direction:column;gap:14px;text-align:left;max-width:540px;margin:0 auto 32px;}
+.hero-item{display:flex;gap:13px;align-items:flex-start;}
+.hero-rule{width:1px;background:rgba(122,96,48,0.35);align-self:stretch;flex-shrink:0;margin-top:5px;}
+.hero-item p{font-size:15px;line-height:1.78;color:#7888a0;font-family:'Georgia',serif;margin:0;}
+.hero-item strong{color:#f0ece4;font-weight:400;}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.btn-gold{font-size:9px;letter-spacing:0.22em;color:#04080f;background:#c9a84c;padding:11px 24px;border-radius:24px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;}
+.btn-gold:hover{background:#e0b860;}
+.btn-outline{font-size:9px;letter-spacing:0.22em;color:#c9a84c;border:1px solid rgba(122,96,48,0.4);padding:11px 24px;border-radius:24px;font-family:'Courier New',monospace;text-decoration:none;}
+.btn-outline:hover{border-color:#c9a84c;}
+
+/* ── JOURNAL ── */
+#journal{background:#050a14;padding:68px 24px;border-top:1px solid rgba(122,96,48,0.13);}
+#journal .inner{max-width:740px;margin:0 auto;}
+.section-eyebrow{font-size:10px;letter-spacing:0.45em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:32px;text-align:center;}
+.journal-card{
+  border:1px solid rgba(122,96,48,0.4);border-radius:14px;overflow:hidden;
+  background:linear-gradient(155deg,#13100a 0%,rgba(9,7,4,0) 100%);
+  transition:all 0.25s;text-decoration:none;display:block;
 }
+.journal-card:hover{border-color:#c9a84c;box-shadow:0 0 40px rgba(122,96,48,0.27);}
+.journal-card-body{padding:30px 26px 20px;border-bottom:1px solid rgba(122,96,48,0.2);}
+.journal-tag{font-size:9px;letter-spacing:0.35em;color:#c9a84c;font-family:'Courier New',monospace;margin-bottom:12px;opacity:0.6;}
+.journal-title{font-size:clamp(20px,3.5vw,34px);font-weight:300;color:#e8d49a;font-family:'Georgia',serif;margin:0 0 10px;letter-spacing:0.03em;line-height:1.28;}
+.journal-sub{font-size:12px;color:rgba(201,168,76,0.53);font-family:'Courier New',monospace;letter-spacing:0.08em;margin:0 0 6px;line-height:1.6;}
+.journal-desc{font-size:12px;color:#4a5568;font-family:'Georgia',serif;margin:0;line-height:1.65;}
+.journal-footer{padding:14px 26px;display:flex;justify-content:space-between;align-items:center;}
+.journal-footer span:first-child{font-size:11px;color:#4a5568;font-family:'Georgia',serif;font-style:italic;}
+.journal-footer span:last-child{font-size:9px;color:#c9a84c;font-family:'Courier New',monospace;letter-spacing:0.2em;}
+.journal-more{margin-top:18px;text-align:center;}
+.journal-more a{font-size:9px;letter-spacing:0.2em;color:#4a5568;font-family:'Courier New',monospace;text-decoration:none;transition:color 0.2s;}
+.journal-more a:hover{color:#8aa0b8;}
 
-.hero-bg-word {
-  position: absolute;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 380px;
-  color: rgba(255,255,255,0.013);
-  letter-spacing: -15px;
-  top: -40px;
-  right: -30px;
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-}
+/* ── DATA ── */
+#data{background:#020508;padding:68px 24px;border-top:1px solid rgba(122,96,48,0.13);}
+#data .inner{max-width:880px;margin:0 auto;}
+.data-header{text-align:center;margin-bottom:40px;}
+.data-h2{font-size:clamp(20px,3.5vw,34px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;margin:0;letter-spacing:0.03em;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:rgba(122,96,48,0.13);}
+.stat-card{display:block;padding:24px 20px;background:#070c16;text-decoration:none;transition:background 0.2s;}
+.stat-card:hover{background:#0d1624;}
+.stat-num{font-size:clamp(22px,3vw,34px);font-weight:700;color:#c9a84c;font-family:'Courier New',monospace;margin-bottom:7px;}
+.stat-label{font-size:13px;color:#f0ece4;font-family:'Georgia',serif;margin-bottom:5px;}
+.stat-sub{font-size:10px;color:#4a5568;font-family:'Courier New',monospace;letter-spacing:0.04em;line-height:1.5;}
+.data-links{margin-top:26px;display:flex;gap:9px;flex-wrap:wrap;justify-content:center;}
+.data-pill{font-size:9px;letter-spacing:0.15em;color:#8aa0b8;border:1px solid #3a4a5a;padding:8px 16px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;transition:all 0.2s;}
+.data-pill:hover{color:#c9a84c;border-color:#7a6030;}
 
-.hero-kicker {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 5px;
-  color: var(--red);
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  animation: fadeUp 0.7s ease both;
-}
-
-.hero-kicker::before {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 2px;
-  background: var(--red);
-  flex-shrink: 0;
-}
-
-.hero-headline {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 96px;
-  line-height: 0.88;
-  letter-spacing: 4px;
-  color: var(--white);
-  max-width: 680px;
-  margin-bottom: 28px;
-  animation: fadeUp 0.7s 0.1s ease both;
-}
-
-.hero-headline em {
-  color: var(--amber);
-  font-style: normal;
-}
-
-.hero-body {
-  font-family: 'DM Serif Display', serif;
-  font-size: 23px;
-  color: #72728a;
-  line-height: 1.6;
-  max-width: 560px;
-  margin-bottom: 42px;
-  animation: fadeUp 0.7s 0.2s ease both;
-}
-
-.hero-body strong {
-  color: #a8a8c0;
-  font-weight: normal;
-}
-
-.btn-row {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  animation: fadeUp 0.7s 0.3s ease both;
-}
-
-.btn {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 30px;
-  border: 1px solid;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: none;
-  white-space: nowrap;
-}
-
-.btn::after { content: ' →'; }
-
-.btn-red { background: var(--red); border-color: var(--red); color: #fff; }
-.btn-red:hover { background: #c02020; box-shadow: 0 0 40px rgba(224,48,48,0.25); }
-
-.btn-amber { border-color: var(--amber); color: var(--amber); }
-.btn-amber:hover { background: rgba(240,165,0,0.08); }
-
-.btn-outline { border-color: var(--border-bright); color: var(--muted); }
-.btn-outline:hover { border-color: var(--green); color: var(--green); }
-
-/* ── STAT STRIP ── */
-.stat-strip {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  border-bottom: 1px solid var(--border);
-}
-
-.stat-cell {
-  padding: 26px 32px;
-  border-right: 1px solid var(--border);
-  transition: background 0.2s;
-}
-
-.stat-cell:last-child { border-right: none; }
-.stat-cell:hover { background: var(--subtle); }
-
-.stat-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 58px;
-  line-height: 1;
-  letter-spacing: 2px;
-}
-
-.stat-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-top: 6px;
-  line-height: 1.6;
-}
-
-/* ── SECTION HEADER ── */
-.section-header {
-  padding: 24px 60px 18px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 40px;
-  letter-spacing: 5px;
-  color: var(--white);
-}
-
-.section-sub {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--muted);
-  text-transform: uppercase;
-}
-
-/* ── GRAPHIC INFO CARDS ── */
-.preview-strip {
-  padding: 36px 60px 40px;
-  border-bottom: 1px solid var(--border);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.preview-card {
-  border: 1px solid var(--border);
-  background: var(--panel);
-  text-decoration: none;
-  display: block;
-  transition: all 0.2s;
-  overflow: hidden;
-}
-
-.preview-card:hover {
-  border-color: var(--border-bright);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-}
-
-.preview-thumb {
-  width: 100%;
-  aspect-ratio: 16/9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.preview-thumb-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 60px;
-  letter-spacing: 2px;
-  opacity: 0.2;
-  line-height: 1;
-}
-
-.preview-thumb-label {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 14px;
-  background: linear-gradient(transparent 30%, rgba(0,0,0,0.85));
-}
-
-.preview-thumb-tag {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-
-.preview-thumb-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  letter-spacing: 1.5px;
-  color: var(--white);
-  line-height: 1.0;
-}
-
-.preview-meta {
-  padding: 12px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.preview-meta-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #8888a0;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  line-height: 1.3;
-}
-
-.preview-meta-arrow {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  color: var(--muted);
-  flex-shrink: 0;
-  transition: color 0.2s;
-}
-
-.preview-card:hover .preview-meta-arrow { color: var(--white); }
-
-/* ── JOURNAL SECTION ── */
-.journal-list {
-  padding: 0 60px 36px;
-  border-bottom: 1px solid var(--border);
-}
-
-.journal-item {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  border-bottom: 1px solid var(--subtle);
-  text-decoration: none;
-  transition: background 0.15s;
-  padding: 0;
-  overflow: hidden;
-}
-
-.journal-item:last-child { border-bottom: none; }
-.journal-item:hover { background: var(--subtle); }
-
-.journal-item-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 13px;
-  letter-spacing: 2px;
-  color: #2a2a3a;
-  padding: 18px 18px 18px 0;
-  flex-shrink: 0;
-  width: 32px;
-}
-
-.journal-item-body {
-  flex: 1;
-  padding: 18px 0;
-  border-left: 1px solid var(--subtle);
-  padding-left: 20px;
-}
-
-.journal-item-tag {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  letter-spacing: 3px;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-
-.journal-item-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 26px;
-  letter-spacing: 2px;
-  color: #c8c8dc;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.journal-item:hover .journal-item-title { color: var(--white); }
-
-.journal-item-sub {
-  font-family: 'DM Serif Display', serif;
-  font-style: italic;
-  font-size: 13px;
-  color: #52526a;
-  letter-spacing: 0.2px;
-}
-
-.journal-item-arrow {
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  color: #2a2a3a;
-  padding: 18px 24px;
-  flex-shrink: 0;
-  transition: color 0.2s;
-}
-
-.journal-item:hover .journal-item-arrow { color: var(--gold); }
-
-/* ── REQUEST SECTION (right-sized) ── */
-.request-section {
-  padding: 36px 60px;
-  border-bottom: 1px solid var(--border);
-  background: var(--off-black);
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 48px;
-  align-items: start;
-}
-
-.request-headline {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 38px;
-  letter-spacing: 3px;
-  line-height: 1;
-  margin-bottom: 12px;
-  color: var(--white);
-}
-
-.request-headline em {
-  color: var(--green);
-  font-style: normal;
-}
-
-.request-body {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 0.4px;
-  line-height: 1.9;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.form-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: var(--muted);
-  text-transform: uppercase;
-}
-
-.form-input,
-.form-textarea {
-  background: var(--black);
-  border: 1px solid var(--border);
-  color: var(--white);
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  padding: 11px 14px;
-  outline: none;
-  transition: border-color 0.2s;
-  width: 100%;
-  letter-spacing: 0.5px;
-}
-
-.form-input:focus,
-.form-textarea:focus { border-color: var(--green); }
-
-.form-input::placeholder,
-.form-textarea::placeholder { color: #2a2a3a; }
-
-.form-textarea { resize: vertical; min-height: 75px; }
-
-.form-note {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  color: #28283a;
-  letter-spacing: 0.5px;
-  line-height: 1.7;
-  margin-top: 8px;
-}
-
-.form-success {
-  display: none;
-  font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  color: var(--green);
-  letter-spacing: 2px;
-  padding: 12px 14px;
-  border: 1px solid #0d4a22;
-  background: rgba(29,185,84,0.04);
-  margin-top: 10px;
-}
+/* ── SOURCES ── */
+#sources{background:#04080f;padding:68px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);}
+#sources .inner{max-width:840px;margin:0 auto;}
+.sources-intro{text-align:center;margin-bottom:32px;}
+.sources-intro p{font-size:13px;color:#4a5568;font-family:'Georgia',serif;margin:0;line-height:1.7;}
+.sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:1px;background:rgba(58,74,90,0.2);}
+.source-item{display:flex;align-items:center;gap:10px;padding:14px 15px;background:#060b18;text-decoration:none;transition:background 0.2s;}
+.source-item:hover{background:#0a1220;}
+.source-emoji{font-size:16px;}
+.source-name{font-size:11px;color:#f0ece4;font-family:'Georgia',serif;}
+.source-tag{font-size:8px;color:#3a4a5a;font-family:'Courier New',monospace;letter-spacing:0.16em;}
 
 /* ── FOOTER ── */
-.footer {
-  padding: 28px 60px;
-  background: var(--off-black);
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
+footer{background:#020508;padding:32px 22px;border-top:1px solid rgba(58,74,90,0.13);}
+footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-brand .name{font-size:14px;font-weight:700;letter-spacing:0.2em;color:#c9a84c;font-family:'Courier New',monospace;}
+.footer-brand .by{font-size:8px;color:#4a5568;font-family:'Courier New',monospace;letter-spacing:0.12em;margin-top:3px;}
+.footer-links{display:flex;gap:13px;flex-wrap:wrap;}
+.footer-links a{font-size:8px;color:#4a5568;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:#8aa0b8;}
+.footer-copy{font-size:8px;color:#4a5568;font-family:'Courier New',monospace;letter-spacing:0.1em;line-height:1.7;text-align:right;}
 
-.footer-primary {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  color: #3a3a50;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.footer-secondary {
-  font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  color: #28283a;
-  letter-spacing: 1px;
-  line-height: 1.6;
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.live-dot {
-  display: inline-block;
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 8px var(--green);
-  margin-right: 7px;
-  animation: blink 2.5s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
-}
-
-/* ── CORRUPTION TRACKER BANNER ── */
-.corruption-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  padding: 18px 32px;
-  background: linear-gradient(135deg, #0d0500 0%, #1a0800 50%, #0d0500 100%);
-  text-decoration: none;
-  border: 1px solid #3a1a00;
-  transition: background 0.3s, box-shadow 0.3s;
-  overflow: visible;
-}
-
-.corruption-banner:hover {
-  background: linear-gradient(135deg, #160800 0%, #240e00 50%, #160800 100%);
-  box-shadow: 0 0 40px rgba(224, 80, 0, 0.2);
-}
-
-.corruption-marquee {
-  position: absolute;
-  inset: -6px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.corruption-marquee svg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  overflow: visible;
-}
-
-@keyframes corruption-run {
-  0%   { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -8; }
-}
-
-.corruption-path {
-  fill: none;
-  stroke: #e05000;
-  stroke-width: 1.5;
-  stroke-dasharray: 2 4;
-  stroke-linecap: round;
-  opacity: 0.7;
-  animation: corruption-run 0.8s linear infinite;
-}
-
-.corruption-inner {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  position: relative;
-  z-index: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.corruption-alert {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #e05000;
-  text-transform: uppercase;
-  animation: blink 1.8s ease-in-out infinite;
-  white-space: nowrap;
-}
-
-.corruption-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 36px;
-  letter-spacing: 6px;
-  color: #ff7020;
-  text-shadow: 0 0 30px rgba(224,80,0,0.45);
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.corruption-sub {
-  font-family: 'DM Serif Display', serif;
-  font-style: italic;
-  font-size: 14px;
-  color: #7a4020;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-}
-
-.corruption-cta {
-  font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #a03010;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: color 0.2s;
-}
-
-.corruption-banner:hover .corruption-cta { color: #ff7020; }
-
-@media (max-width: 900px) {
-  .corruption-title { font-size: 26px; letter-spacing: 4px; }
-  .corruption-sub { display: none; }
-  .corruption-inner { gap: 14px; }
-}
-
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-/* ══════════════════════════════════════════
-   MOBILE — full responsive overhaul
-   ══════════════════════════════════════════ */
-@media (max-width: 900px) {
-
-  /* Masthead + billboard row stack on mobile */
-  .masthead-eyebrow-row { padding: 10px 20px 0; }
-  .masthead-body-row { flex-direction: column; }
-  .masthead { padding: 12px 20px 16px; border-right: none; border-bottom: 1px solid #1e1a10; min-width: unset; width: 100%; }
-  .logo-main { font-size: 64px; letter-spacing: 4px; }
-  .logo-tagline { font-size: 15px; }
-  .logo-eyebrow { font-size: 9px; letter-spacing: 3px; }
-
-  /* Billboard */
-  .billboard-wrap { width: 100%; padding: 14px 16px; justify-content: center; }
-  .billboard { flex-direction: column; width: 100%; height: auto; }
-  .billboard-img { width: 100%; height: 140px; object-position: top; }
-  .billboard-body { 
-    padding: 12px 16px; 
-    border-left: none; 
-    border-top: 1px solid #2a1e08;
-    align-items: center;
-    text-align: center;
-  }
-  .billboard-title { font-size: 22px; }
-  .billboard-sub { font-size: 11px; }
-  .billboard-tagline { font-size: 11px; }
-  .masthead-body-row { flex-direction: column; }
-  .masthead { border-right: none; border-bottom: 1px solid #1e1a10; width: 100%; height: auto; }
-
-  /* Layout — stack sidebar below content */
-  .main-layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .left-rail {
-    position: static;
-    height: auto;
-    overflow-y: visible;
-    border-right: none;
-    border-top: 1px solid var(--border);
-    order: 2;
-  }
-
-  /* Hero */
-  .hero { padding: 36px 20px 32px; }
-  .hero-headline { font-size: 52px; letter-spacing: 2px; }
-  .hero-body { font-size: 17px; }
-  .hero-bg-word { font-size: 160px; top: -10px; right: -10px; }
-
-  /* Buttons */
-  .btn { font-size: 10px; padding: 12px 18px; letter-spacing: 2px; }
-  .btn-row { gap: 10px; }
-
-  /* Stat strip */
-  .stat-strip { grid-template-columns: repeat(2,1fr); }
-  .stat-cell { padding: 18px 16px; }
-  .stat-num { font-size: 38px; }
-  .stat-label { font-size: 9px; }
-
-  /* Section headers */
-  .section-header { padding: 18px 20px 14px; flex-wrap: wrap; gap: 6px; }
-  .section-title { font-size: 28px; letter-spacing: 3px; }
-  .section-sub { font-size: 9px; }
-
-  /* Graphic cards — 2 column on tablet */
-  .preview-strip {
-    padding: 20px 20px 24px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-  .preview-thumb-title { font-size: 16px; }
-  .preview-thumb-num { font-size: 44px; }
-  .preview-meta-title { font-size: 11px; }
-
-  /* View all button */
-  div[style*="padding: 20px 60px"] ,
-  .view-all-row { padding: 16px 20px 24px !important; }
-
-  /* Journal */
-  .journal-list { padding: 0 20px 24px; }
-  .journal-item-title { font-size: 20px; }
-
-  /* Request section */
-  .request-section {
-    padding: 28px 20px;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .request-headline { font-size: 28px; }
-
-  /* Footer */
-  .footer { padding: 22px 20px; }
-}
-
-@media (max-width: 500px) {
-
-  .logo-main { font-size: 48px; }
-  .hero-headline { font-size: 40px; }
-  .hero-body { font-size: 15px; }
-
-  /* Single column cards on small phones */
-  .preview-strip { grid-template-columns: 1fr; gap: 12px; }
-
-  .stat-strip { grid-template-columns: repeat(2,1fr); }
-  .stat-num { font-size: 32px; }
-
-  .masthead-row { flex-direction: column; }
-  .billboard-wrap { padding: 12px; }
-  .billboard { flex-direction: column; }
-  .billboard-img { width: 100%; height: 120px; }
-
-  .btn { font-size: 9px; padding: 11px 14px; }
+/* ── MOBILE ── */
+@media(max-width:520px){
+  .nav-links a:not(.nav-cta){display:none;}
+  .layer-main-label{letter-spacing:0.15em!important;}
 }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DPZHKNB3E9');
-</script>
 </head>
 <body>
 
 <!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker-label">USNOW</div>
-  <div class="ticker-track">
-    <span>$886B DoD Budget FY2025</span>
-    <span>$70B+ Annual Overseas Base Cost</span>
-    <span>$21.7B Military Aid to Israel Since Oct. 7</span>
-    <span>750 U.S. Bases in 80 Countries</span>
-    <span>Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span>
-    <span>$900B Annual Interest on National Debt</span>
-    <span>243,000 U.S. Troops Stationed Abroad</span>
-    <span>$330B Cumulative U.S. Aid to Israel Since 1948</span>
-    <span>$886B DoD Budget FY2025</span>
-    <span>$70B+ Annual Overseas Base Cost</span>
-    <span>$21.7B Military Aid to Israel Since Oct. 7</span>
-    <span>750 U.S. Bases in 80 Countries</span>
-    <span>Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span>
-    <span>$900B Annual Interest on National Debt</span>
-    <span>243,000 U.S. Troops Stationed Abroad</span>
-    <span>$330B Cumulative U.S. Aid to Israel Since 1948</span>
+<div id="ticker">
+  <div id="ticker-inner">
+    <span>◎ $886B DoD Budget FY2025</span>
+    <span>◎ $70B+ Annual Overseas Base Cost</span>
+    <span>◎ $21.7B Military Aid to Israel Since Oct. 7</span>
+    <span>◎ 750 U.S. Bases in 80 Countries</span>
+    <span>◎ Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span>
+    <span>◎ $900B Annual Interest on National Debt</span>
+    <span>◎ 243,000 U.S. Troops Stationed Abroad</span>
+    <span>◎ $330B Cumulative U.S. Aid to Israel Since 1948</span>
+    <span>◎ The data is the argument · Civic Data · Public Record · No Agenda</span>
+    <!-- duplicate for seamless loop -->
+    <span>◎ $886B DoD Budget FY2025</span>
+    <span>◎ $70B+ Annual Overseas Base Cost</span>
+    <span>◎ $21.7B Military Aid to Israel Since Oct. 7</span>
+    <span>◎ 750 U.S. Bases in 80 Countries</span>
+    <span>◎ Americans Estimate 25% on Foreign Aid — Actual: 1.2%</span>
+    <span>◎ $900B Annual Interest on National Debt</span>
+    <span>◎ 243,000 U.S. Troops Stationed Abroad</span>
+    <span>◎ $330B Cumulative U.S. Aid to Israel Since 1948</span>
+    <span>◎ The data is the argument · Civic Data · Public Record · No Agenda</span>
   </div>
 </div>
 
-<!-- MASTHEAD + BILLBOARD ROW -->
-<div class="masthead-row">
-  <!-- Eyebrow full width -->
-  <div class="masthead-eyebrow-row">
-    <div class="logo-eyebrow"><span class="live-dot"></span>Civic Data · Public Record · No Agenda · <span id="live-date"></span></div>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span class="us">US</span>
+    <span class="now">NOW</span>
   </div>
-  <!-- Logo + billboard side by side -->
-  <div class="masthead-body-row">
-    <header class="masthead">
-      <div class="logo-main">US<span class="now">NOW</span></div>
-      <div class="logo-tagline">The data is the argument.</div>
-    </header>
+  <div class="nav-links">
+    <a href="#scale">Scale</a>
+    <a href="#data">Data</a>
+    <a href="#journal">Journal</a>
+    <a href="#sources">Sources</a>
+    <a href="https://www.usnow.app/apprentice/index.html" target="_blank" class="nav-cta">The Apprentice →</a>
+  </div>
+  <div style="position:absolute;bottom:3px;left:50%;transform:translateX(-50%);pointer-events:none;">
+    <span style="font-size:7px;letter-spacing:0.45em;color:rgba(138,160,184,0.25);font-family:'Courier New',monospace;">THE SCALE OF BEING</span>
+  </div>
+</nav>
 
-    <div class="billboard-wrap">
-      <a href="/apprentice/index.html" class="billboard">
-        <div class="billboard-marquee">
-          <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect class="marquee-path" x="1" y="1" width="98" height="98" rx="1"/>
-          </svg>
-        </div>
-        <img class="billboard-img" src="https://raw.githubusercontent.com/UsNowAdmin/USNow-App/main/IMG_4833.PNG" alt="The Apprentice: Washington Edition">
-        <div class="billboard-body">
-          <div class="billboard-eyebrow">From The Journal · Featured Series</div>
-          <div class="billboard-title">The Apprentice: Washington Edition</div>
-          <div class="billboard-sub">A real-life contemporaneous retrospective parody</div>
-          <div class="billboard-tagline">Join the Show Already in Progress<span class="billboard-bullet"> · </span>New Episodes Daily</div>
-          <div class="billboard-cta">Read the Series →</div>
-        </div>
-      </a>
+<!-- SCALE OF BEING -->
+<div style="padding-top:74px;">
+<section id="scale">
+  <div id="stars"></div>
+  <svg id="scale-svg" viewBox="0 0 1000 700" preserveAspectRatio="none"></svg>
+  <div id="layer-bands"></div>
+
+  <!-- Core -->
+  <div id="core-wrap">
+    <div id="core-orbs"></div>
+    <div id="core-btn" onclick="openLayer(0)">
+      <div>ME,<br>MYSELF<br>&amp; I</div>
     </div>
+  </div>
+
+  <div id="scroll-hint">
+    <div>scroll to explore</div>
+    <div class="arrow">↓</div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal-overlay" onclick="closeModal()">
+  <div id="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-drag" id="modal-drag"></div>
+    <div class="modal-layer-tag" id="modal-layer-tag"></div>
+    <h2 id="modal-title"></h2>
+    <div id="modal-sub" class="layer-sub-label" style="position:static;opacity:1;transform:none;"></div>
+    <p id="modal-desc"></p>
+    <div id="modal-links" style="border-top:1px solid rgba(128,128,128,0.1);">
+      <div class="modal-links-label" id="modal-links-label">LINKS &amp; SOURCES</div>
+      <div id="modal-links-list"></div>
+    </div>
+    <div id="modal-beyond" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;">
+      <div class="modal-links-label" id="modal-beyond-label">BEYOND BORDERS</div>
+      <div id="modal-beyond-list"></div>
+    </div>
+    <div id="modal-orbs-section" style="border-top:1px solid rgba(128,128,128,0.1);display:none;">
+      <div class="modal-orbs-label">FORCES IN THIS LAYER</div>
+      <div id="modal-orbs-list"></div>
+    </div>
+    <button id="modal-close" onclick="closeModal()">CLOSE</button>
   </div>
 </div>
 
-<!-- MAIN LAYOUT -->
-<div class="main-layout">
-
-  <!-- LEFT RAIL -->
-  <aside class="left-rail">
-    <div class="rail-header">Essential Sources</div>
-
-    <a class="resource-item" href="https://turbovote.org" target="_blank">
-      <div class="resource-icon">🗳️</div>
-      <div>
-        <div class="resource-name">TurboVote</div>
-        <div class="resource-desc">Voter registration, ballots & election reminders</div>
-        <div class="resource-tag" style="background:#0a0f1a;color:#60a5fa;">VOTE</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.opensecrets.org" target="_blank">
-      <div class="resource-icon">💰</div>
-      <div>
-        <div class="resource-name">OpenSecrets</div>
-        <div class="resource-desc">Campaign finance & dark money — the definitive tracker</div>
-        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">MONEY</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.followthemoney.org" target="_blank">
-      <div class="resource-icon">🧾</div>
-      <div>
-        <div class="resource-name">FollowTheMoney</div>
-        <div class="resource-desc">State-level campaign finance, all 50 states</div>
-        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">MONEY</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.propublica.org" target="_blank">
-      <div class="resource-icon">📰</div>
-      <div>
-        <div class="resource-name">ProPublica</div>
-        <div class="resource-desc">Investigative journalism in the public interest</div>
-        <div class="resource-tag" style="background:#0f1a10;color:#22c55e;">JOURNALISM</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.trackaipac.com" target="_blank">
-      <div class="resource-icon">🔍</div>
-      <div>
-        <div class="resource-name">TrackAIPAC</div>
-        <div class="resource-desc">Congressional donations from America's most powerful lobby</div>
-        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">LOBBYING</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.govtrack.us" target="_blank">
-      <div class="resource-icon">🏛️</div>
-      <div>
-        <div class="resource-name">GovTrack</div>
-        <div class="resource-desc">Congressional votes, bills, legislative records</div>
-        <div class="resource-tag" style="background:#0f0f2a;color:#3b82f6;">CONGRESS</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://ballotpedia.org" target="_blank">
-      <div class="resource-icon">📋</div>
-      <div>
-        <div class="resource-name">Ballotpedia</div>
-        <div class="resource-desc">Candidates, elections, ballot measures nationwide</div>
-        <div class="resource-tag" style="background:#0f0f2a;color:#3b82f6;">ELECTIONS</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.usaspending.gov" target="_blank">
-      <div class="resource-icon">📊</div>
-      <div>
-        <div class="resource-name">USASpending.gov</div>
-        <div class="resource-desc">Every federal dollar — contracts, grants, payments</div>
-        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">BUDGET</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://foreignassistance.gov" target="_blank">
-      <div class="resource-icon">🌍</div>
-      <div>
-        <div class="resource-name">ForeignAssistance.gov</div>
-        <div class="resource-desc">U.S. foreign aid by country, year, and category</div>
-        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">BUDGET</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://quincyinst.org" target="_blank">
-      <div class="resource-icon">🕊️</div>
-      <div>
-        <div class="resource-name">Quincy Institute</div>
-        <div class="resource-desc">Military spending, overseas bases, restraint research</div>
-        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">MILITARY</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://watson.brown.edu/costsofwar" target="_blank">
-      <div class="resource-icon">⚔️</div>
-      <div>
-        <div class="resource-name">Costs of War</div>
-        <div class="resource-desc">Brown University's definitive war spending research</div>
-        <div class="resource-tag" style="background:#1a0808;color:#ef4444;">MILITARY</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.pewresearch.org" target="_blank">
-      <div class="resource-icon">📈</div>
-      <div>
-        <div class="resource-name">Pew Research</div>
-        <div class="resource-desc">Public opinion, demographics, policy attitudes</div>
-        <div class="resource-tag" style="background:#0f1a10;color:#22c55e;">DATA</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.congress.gov" target="_blank">
-      <div class="resource-icon">📜</div>
-      <div>
-        <div class="resource-name">Congress.gov</div>
-        <div class="resource-desc">Primary source — bills, votes, CRS reports</div>
-        <div class="resource-tag" style="background:#0f0f2a;color:#3b82f6;">PRIMARY</div>
-      </div>
-    </a>
-
-    <a class="resource-item" href="https://www.cbo.gov" target="_blank">
-      <div class="resource-icon">🔢</div>
-      <div>
-        <div class="resource-name">CBO</div>
-        <div class="resource-desc">Nonpartisan Congressional Budget Office scoring</div>
-        <div class="resource-tag" style="background:#1a1000;color:#f59e0b;">BUDGET</div>
-      </div>
-    </a>
-
-    <!-- HALF-SIZE: RateMyRep -->
-    <a class="resource-item-mini" href="https://www.ratemyrep.app" target="_blank">
-      <div style="font-size:14px;flex-shrink:0;">⭐</div>
-      <div>
-        <div class="resource-name-mini">RateMyRep</div>
-        <div class="resource-desc-mini">Hold your representatives accountable</div>
-        <div class="resource-tag-mini" style="background:#1a0a00;color:#c9973a;">DEMO</div>
-      </div>
-    </a>
-
-    <!-- HALF-SIZE: The Answer — not a link -->
-    <div class="resource-item-teaser">
-      <div style="font-size:14px;flex-shrink:0;opacity:0.4;">◎</div>
-      <div>
-        <div class="resource-name-teaser">The Answer</div>
-        <div class="resource-desc-teaser">Coming soon — connecting communities to governing themselves, from local on up.</div>
-      </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="inner">
+    <div class="hero-tap-hint">↑ tap any layer or orb above to explore</div>
+    <div class="hero-eyebrow">WHAT IS US · NOW</div>
+    <h1 class="hero-h1">The <em>US</em> in USNow<br>is not one thing.</h1>
+    <div class="hero-items">
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The United States</strong> — its budgets, its bases, its power structures, its contradictions made visible.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>Us the people</strong> — our communities, our neighborhoods, our mutual obligations across difference.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>Us in relationship</strong> — the dyad, the family, the bond that is the first unit of every larger structure.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The us within the self</strong> — the observer and the observed — both alive inside the one who reads these words.</p></div>
     </div>
-
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-bg-word">NOW</div>
-      <div class="hero-kicker">Civic Intelligence Platform</div>
-      <h1 class="hero-headline">
-        THE INFO IS THERE.<br><em>NOW YOU CAN SEE IT.</em>
-      </h1>
-      <p class="hero-body">
-        The information that shapes our lives is not always easy for <strong>US</strong> to understand — until <strong>NOW</strong>. The problem is no longer access to information. It's <strong>making sense of it</strong>. USNow makes it easy to see and easy to understand. From federal budgets and maps of foreign military bases to media bias and the scales of human behavior — now you can see things in ways that make sense.
-      </p>
-      <div class="btn-row">
-        <a href="#graphics" class="btn btn-red">Graphic Info</a>
-        <a href="#journal" class="btn btn-amber">The Journal</a>
-        <a href="/graphics/who-rules-the-world" class="btn btn-outline">Who Rules the World</a>
-      </div>
-    </section>
-
-    <!-- STAT STRIP -->
-    <div class="stat-strip">
-      <div class="stat-cell">
-        <div class="stat-num" style="color:var(--red);">$886B</div>
-        <div class="stat-label">DoD Budget<br>FY2025</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num" style="color:var(--amber);">$2T+</div>
-        <div class="stat-label">Overseas Bases<br>Since 2001</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num" style="color:var(--green);">1.2%</div>
-        <div class="stat-label">Actual Foreign<br>Aid Share</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num" style="color:var(--blue);">750+</div>
-        <div class="stat-label">U.S. Bases<br>Worldwide</div>
-      </div>
+    <div class="hero-btns">
+      <a href="#scale" class="btn-gold">EXPLORE THE SCALE ↑</a>
+      <a href="#data" class="btn-outline">SEE THE DATA →</a>
     </div>
+  </div>
+</section>
 
-    <!-- GRAPHIC INFO -->
-    <div class="section-header" id="graphics">
-      <div class="section-title">Graphic Info — See It Plain and Clear</div>
+<!-- JOURNAL -->
+<section id="journal">
+  <div class="inner">
+    <div class="section-eyebrow">FROM THE JOURNAL</div>
+    <a href="https://www.usnow.app/apprentice/index.html" target="_blank" rel="noreferrer" class="journal-card">
+      <div class="journal-card-body">
+        <div class="journal-tag">FEATURED SERIES · NEW EPISODES DAILY</div>
+        <h3 class="journal-title">The Apprentice:<br>Washington Edition</h3>
+        <p class="journal-sub">A real-life contemporaneous retrospective parody</p>
+        <p class="journal-desc">Narrated by Michael Cohen · Reality TV reunion format · Written for the U.S. Semiquincentennial</p>
+      </div>
+      <div class="journal-footer">
+        <span>Join the Show Already in Progress</span>
+        <span>READ THE SERIES →</span>
+      </div>
+    </a>
+    <div class="journal-more">
+      <a href="https://atjon.substack.com" target="_blank" rel="noreferrer">All writing on Substack · atjon.substack.com →</a>
     </div>
+  </div>
+</section>
 
-    <div class="preview-strip">
-
-      <a href="/graphics/hidden-costs" class="preview-card">
-        <div class="preview-thumb" style="background:linear-gradient(135deg,#100d00,#1a1400);">
-          <div class="preview-thumb-num" style="color:var(--amber);">$2.3T</div>
-          <div class="preview-thumb-label">
-            <div class="preview-thumb-tag" style="color:var(--amber);">True Accounting</div>
-            <div class="preview-thumb-title">What's Hidden Inside the Number</div>
-          </div>
-        </div>
-        <div class="preview-meta">
-          <div class="preview-meta-title">The real cost of defense — buried across agencies.</div>
-          <div class="preview-meta-arrow">→</div>
-        </div>
-      </a>
-
-      <a href="/graphics/israel-aid-timeline" class="preview-card">
-        <div class="preview-thumb" style="background:linear-gradient(135deg,#00080d,#001a2a);">
-          <div class="preview-thumb-num" style="color:var(--blue);">$330B</div>
-          <div class="preview-thumb-label">
-            <div class="preview-thumb-tag" style="color:var(--blue);">55-Year Record</div>
-            <div class="preview-thumb-title">The Cost of Commitment</div>
-          </div>
-        </div>
-        <div class="preview-meta">
-          <div class="preview-meta-title">U.S. military aid to Israel — 1970 to 2025.</div>
-          <div class="preview-meta-arrow">→</div>
-        </div>
-      </a>
-
-      <a href="/graphics/750-bases" class="preview-card">
-        <div class="preview-thumb" style="background:linear-gradient(135deg,#00100a,#001a10);">
-          <div class="preview-thumb-num" style="color:var(--green);">750+</div>
-          <div class="preview-thumb-label">
-            <div class="preview-thumb-tag" style="color:var(--green);">Global Footprint</div>
-            <div class="preview-thumb-title">750 Bases · 80 Countries</div>
-          </div>
-        </div>
-        <div class="preview-meta">
-          <div class="preview-meta-title">The largest military empire in human history.</div>
-          <div class="preview-meta-arrow">→</div>
-        </div>
-      </a>
-
-      <a href="/graphics/who-rules-the-world" class="preview-card">
-        <div class="preview-thumb" style="background:linear-gradient(135deg,#0e0900,#1c1200);">
-          <div class="preview-thumb-num" style="color:#c9973a; font-size:32px; opacity:0.3;">𓇯</div>
-          <div class="preview-thumb-label">
-            <div class="preview-thumb-tag" style="color:#c9973a;">Power Structure</div>
-            <div class="preview-thumb-title">Who Rules the World</div>
-          </div>
-        </div>
-        <div class="preview-meta">
-          <div class="preview-meta-title">The pyramid of global power.</div>
-          <div class="preview-meta-arrow">→</div>
-        </div>
-      </a>
-
+<!-- DATA -->
+<section id="data">
+  <div class="inner">
+    <div class="data-header">
+      <div class="section-eyebrow">GRAPHIC INFO — SEE IT PLAIN AND CLEAR</div>
+      <h2 class="data-h2">The data is the argument.</h2>
     </div>
-
-    <!-- CORRUPTION TRACKER BANNER -->
-    <div style="padding: 16px 60px 28px; border-bottom: 1px solid var(--border);">
-      <a href="/graphics/corruption_tracker.html" class="corruption-banner">
-        <div class="corruption-marquee">
-          <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect class="corruption-path" x="1" y="1" width="98" height="98" rx="1"/>
-          </svg>
-        </div>
-        <div class="corruption-inner">
-          <span class="corruption-alert">⚠ TRACK IT NOW</span>
-          <span class="corruption-title">CORRUPTION TRACKER</span>
-          <span class="corruption-sub">Follow the money. Name the names. See the record.</span>
-          <span class="corruption-cta">OPEN TRACKER →</span>
-        </div>
+    <div class="stats-grid">
+      <a href="https://www.usnow.app/graphics/hidden-costs" target="_blank" class="stat-card">
+        <div class="stat-num">$886B</div>
+        <div class="stat-label">DoD Budget FY2025</div>
+        <div class="stat-sub">More than the next 10 nations combined</div>
+      </a>
+      <a href="https://www.usnow.app/graphics/750-bases" target="_blank" class="stat-card">
+        <div class="stat-num">750+</div>
+        <div class="stat-label">U.S. Bases Worldwide</div>
+        <div class="stat-sub">In 80 countries · the largest military footprint in history</div>
+      </a>
+      <a href="https://foreignassistance.gov" target="_blank" class="stat-card">
+        <div class="stat-num">1.2%</div>
+        <div class="stat-label">Actual Foreign Aid Share</div>
+        <div class="stat-sub">Americans guess 25% · the gap is the policy</div>
+      </a>
+      <a href="https://www.usnow.app/graphics/israel-aid-timeline" target="_blank" class="stat-card">
+        <div class="stat-num">$330B</div>
+        <div class="stat-label">U.S. Aid to Israel</div>
+        <div class="stat-sub">Since 1948 · 55-year cumulative record</div>
+      </a>
+      <a href="https://www.cbo.gov" target="_blank" class="stat-card">
+        <div class="stat-num">$900B</div>
+        <div class="stat-label">Annual Interest on Debt</div>
+        <div class="stat-sub">More than the entire defense budget</div>
+      </a>
+      <a href="https://www.usnow.app/graphics/750-bases" target="_blank" class="stat-card">
+        <div class="stat-num">243k</div>
+        <div class="stat-label">Troops Stationed Abroad</div>
+        <div class="stat-sub">At any given moment · in 80 countries</div>
       </a>
     </div>
-
-    <!-- THE JOURNAL -->
-    <div class="section-header" id="journal">
-      <div class="section-title">The Journal</div>
-      <div class="section-sub">Writing · Series · Essays</div>
+    <div class="data-links">
+      <a href="https://www.usnow.app/graphics/who-rules-the-world" target="_blank" class="data-pill">Who Rules the World →</a>
+      <a href="https://www.usnow.app/graphics/corruption_tracker.html" target="_blank" class="data-pill" style="color:#d4621a;border-color:#d4621a55;">Corruption Tracker →</a>
+      <a href="https://www.usnow.app/graphics/hidden-costs" target="_blank" class="data-pill">Hidden Costs of Defense →</a>
+      <a href="https://www.usnow.app/graphics/israel-aid-timeline" target="_blank" class="data-pill">Israel Aid Timeline →</a>
+      <a href="https://www.ratemyrep.app" target="_blank" class="data-pill" style="color:#c9a84c;border-color:#c9a84c55;">RateMyRep →</a>
     </div>
+  </div>
+</section>
 
-    <div class="journal-list">
-      <a href="/apprentice/index.html" class="journal-item">
-        <div class="journal-item-num">01</div>
-        <div class="journal-item-body">
-          <div class="journal-item-tag">Join the Show Already in Progress · New Episodes Daily</div>
-          <div class="journal-item-title">The Apprentice: Washington Edition</div>
-          <div class="journal-item-sub">A real-life contemporaneous retrospective parody</div>
-        </div>
-        <div class="journal-item-arrow">→</div>
-      </a>
-      <!-- Future journal entries go here -->
+<!-- SOURCES -->
+<section id="sources">
+  <div class="inner">
+    <div class="sources-intro">
+      <div class="section-eyebrow">ESSENTIAL SOURCES</div>
+      <p>The information is there. These are the doors.</p>
     </div>
-
-    <!-- REQUEST A GRAPHIC -->
-    <div class="section-header" id="submit">
-      <div class="section-title">Make a Request</div>
+    <div class="sources-grid">
+      <a href="https://turbovote.org" target="_blank" class="source-item"><span class="source-emoji">🗳️</span><div><div class="source-name">TurboVote</div><div class="source-tag">VOTE</div></div></a>
+      <a href="https://www.opensecrets.org" target="_blank" class="source-item"><span class="source-emoji">💰</span><div><div class="source-name">OpenSecrets</div><div class="source-tag">MONEY</div></div></a>
+      <a href="https://www.followthemoney.org" target="_blank" class="source-item"><span class="source-emoji">🧾</span><div><div class="source-name">FollowTheMoney</div><div class="source-tag">MONEY</div></div></a>
+      <a href="https://www.propublica.org" target="_blank" class="source-item"><span class="source-emoji">📰</span><div><div class="source-name">ProPublica</div><div class="source-tag">JOURNALISM</div></div></a>
+      <a href="https://www.trackaipac.com" target="_blank" class="source-item"><span class="source-emoji">🔍</span><div><div class="source-name">TrackAIPAC</div><div class="source-tag">LOBBYING</div></div></a>
+      <a href="https://foreignassistance.gov" target="_blank" class="source-item"><span class="source-emoji">🌍</span><div><div class="source-name">ForeignAssistance.gov</div><div class="source-tag">AID</div></div></a>
+      <a href="https://quincyinst.org" target="_blank" class="source-item"><span class="source-emoji">🕊️</span><div><div class="source-name">Quincy Institute</div><div class="source-tag">MILITARY</div></div></a>
+      <a href="https://watson.brown.edu/costsofwar" target="_blank" class="source-item"><span class="source-emoji">⚔️</span><div><div class="source-name">Costs of War</div><div class="source-tag">MILITARY</div></div></a>
+      <a href="https://www.pewresearch.org" target="_blank" class="source-item"><span class="source-emoji">📈</span><div><div class="source-name">Pew Research</div><div class="source-tag">DATA</div></div></a>
+      <a href="https://www.congress.gov" target="_blank" class="source-item"><span class="source-emoji">📜</span><div><div class="source-name">Congress.gov</div><div class="source-tag">PRIMARY</div></div></a>
+      <a href="https://www.cbo.gov" target="_blank" class="source-item"><span class="source-emoji">🔢</span><div><div class="source-name">CBO</div><div class="source-tag">BUDGET</div></div></a>
+      <a href="https://www.govtrack.us" target="_blank" class="source-item"><span class="source-emoji">🏛️</span><div><div class="source-name">GovTrack</div><div class="source-tag">CONGRESS</div></div></a>
+      <a href="https://ballotpedia.org" target="_blank" class="source-item"><span class="source-emoji">📋</span><div><div class="source-name">Ballotpedia</div><div class="source-tag">ELECTIONS</div></div></a>
+      <a href="https://www.usaspending.gov" target="_blank" class="source-item"><span class="source-emoji">📊</span><div><div class="source-name">USASpending.gov</div><div class="source-tag">BUDGET</div></div></a>
     </div>
+  </div>
+</section>
 
-    <section class="request-section">
-      <div>
-        <div class="request-headline">YOUR QUESTION.<br><em>MADE VISIBLE.</em></div>
-        <p class="request-body">
-          Have a question that data could answer? Submit it — we'll make it visible. No topic is too local or too large.
-        </p>
-      </div>
+<!-- FOOTER -->
+<footer>
+  <div class="inner">
+    <div class="footer-brand">
+      <div class="name">USNOW</div>
+      <div class="by">usnow.app · by ATJon</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.ratemyrep.app" target="_blank">RateMyRep</a>
+      <a href="https://atjon.substack.com" target="_blank">Substack</a>
+      <a href="https://www.usnow.app/apprentice/index.html" target="_blank">The Apprentice</a>
+    </div>
+    <div class="footer-copy">
+      Civic Data · Public Record · No Agenda<br>© 2026 Jonathan Tatun — All Rights Reserved
+    </div>
+  </div>
+</footer>
+</div><!-- end padding-top wrapper -->
 
-      <div>
-        <div class="form-field">
-          <label class="form-label">Your Email</label>
-          <input class="form-input" type="email" id="femail" placeholder="your@email.com">
-        </div>
-        <div class="form-field">
-          <label class="form-label">Your Question or Topic *</label>
-          <textarea class="form-textarea" id="ftopic" placeholder="What would you like to see made visible?"></textarea>
-        </div>
-        <button class="btn btn-outline" onclick="submitRequest()">Submit</button>
-        <div class="form-note">Submissions go to a public queue. USNow builds what matters.</div>
-        <div class="form-success" id="form-success">&#10003; Received. Added to the queue.</div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-primary">Structure · Design · Concept &amp; Content by ATJon + AI</div>
-      <div class="footer-secondary">Copyrightable Content &#169; 2026 by Jonathan Tatun — All Rights Reserved</div>
-    </footer>
-
-  </main>
-</div>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-  const d = new Date();
-  document.getElementById('live-date').textContent =
-    d.toLocaleDateString('en-US',{weekday:'short',year:'numeric',month:'long',day:'numeric'}).toUpperCase();
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const LAYERS = [
+  {
+    id:"self", label:"ME, MYSELF & I", sub:"the I · the observer · the present · right now",
+    color:"#d4a855", glow:"rgba(212,168,85,0.6)",
+    time:"this moment",
+    desc:"The biggest layer because it's where you live. You are the observer and the observed, both at once — the one reading these words and the one who exists before the words arrive. Everything else in the scale reaches you through this aperture. The self is not the most important thing. It is simply the most immediate.",
+    height:22,
+    beyond:[
+      {label:"NIH MedlinePlus — body, zero ads", url:"https://medlineplus.gov", tag:"BODY"},
+      {label:"Insight Timer — free meditation, 180k sessions", url:"https://insighttimer.com", tag:"SOUL"},
+      {label:"The Marginalian — ideas & meaning", url:"https://www.themarginalian.org", tag:"MIND"},
+    ],
+    orbs:[
+      {id:"s1",label:"Identity",size:64,x:18,y:38,color:"#c9903a",desc:"Who you think you are. Assembled from memory, projection, and stories others told you before you had language to argue back. Fluid. Constructed. Yours — and not entirely yours.",links:[]},
+      {id:"s2",label:"Body",size:52,x:72,y:52,color:"#b87830",desc:"Before thought, before language — sensation. The body knows things the mind claims to have decided. The oldest intelligence you carry.",links:[{label:"NIH MedlinePlus",url:"https://medlineplus.gov"},{label:"CDC WONDER — public health data",url:"https://wonder.cdc.gov"}]},
+      {id:"s3",label:"The Observer",size:58,x:48,y:70,color:"#e0a850",desc:"The part of you watching you. Who is that? The gap between the thinker and the thought is where every contemplative tradition in human history has planted its flag.",links:[{label:"On Being — Krista Tippett",url:"https://onbeing.org"},{label:"Aeon — philosophy & mind",url:"https://aeon.co"}]},
+      {id:"s4",label:"Memory",size:44,x:84,y:28,color:"#a06828",desc:"The edited archive. Selective, revisionist, emotionally weighted. The primary material from which you construct the story of being you.",links:[]},
+      {id:"s5",label:"Attention",size:50,x:32,y:26,color:"#d4902a",desc:"What you point your consciousness at becomes your world. Attention is the most powerful political act you perform — and you perform it thousands of times a day, mostly without deciding to.",links:[{label:"Insight Timer — free meditation",url:"https://insighttimer.com"}]},
+    ]
+  },
+  {
+    id:"family", label:"FAMILY & ORIGIN", sub:"where you came from · first formation · blood and chosen",
+    color:"#c87850", glow:"rgba(200,120,80,0.4)",
+    time:"your lifetime · generations back",
+    desc:"Your first civilization. Before you had words, you had them. The patterns laid down here run deeper than any philosophy you'll later choose. Family is the original politics, the original theology, the original wound — and the original wonder. You will spend the rest of your life in conversation with it, whether you mean to or not.",
+    height:16,
+    beyond:[
+      {label:"On Being — meaning, spirit, becoming", url:"https://onbeing.org", tag:"SOUL"},
+      {label:"The Marginalian — Maria Popova on living", url:"https://www.themarginalian.org", tag:"MIND"},
+    ],
+    orbs:[
+      {id:"f1",label:"Parents",size:62,x:24,y:45,color:"#b86030",desc:"They handed you a lens you didn't ask for. You may spend a lifetime learning to see through it — or around it. Either way, it shaped the prescription.",links:[]},
+      {id:"f2",label:"Ritual & Habit",size:46,x:64,y:50,color:"#a05020",desc:"Sunday dinners. Holidays. Repeated gestures that encoded belonging before you could name belonging. The body remembers ritual the way it remembers how to walk.",links:[]},
+      {id:"f3",label:"Inheritance",size:54,x:46,y:72,color:"#d07840",desc:"Not money. The silences, the rages, the tenderness, the unfinished business of people who never resolved their own. You carry it forward unless you decide to put it down.",links:[]},
+      {id:"f4",label:"Chosen Family",size:40,x:82,y:32,color:"#904828",desc:"The family you build. The people who see you clearly and stay anyway. Sometimes more durable than blood. Always a statement about who you've decided to become.",links:[]},
+    ]
+  },
+  {
+    id:"community", label:"COMMUNITY & PLACE", sub:"neighbor · belonging · where you actually live",
+    color:"#4a9a70", glow:"rgba(74,154,112,0.32)",
+    time:"your generation · decades",
+    desc:"The village that no longer knows it's a village. Community is the membrane between private life and public world — increasingly thin, increasingly engineered by forces with no stake in your neighborhood. This is where USNow operates: the space between the person and the system.",
+    height:14,
+    beyond:[
+      {label:"Longreads — best long-form journalism, free", url:"https://longreads.com", tag:"CULTURE"},
+      {label:"Rest of World — tech & power beyond the West", url:"https://restofworld.org", tag:"WORLD"},
+      {label:"TurboVote — register, ballots, reminders", url:"https://turbovote.org", tag:"VOTE"},
+      {label:"Ballotpedia — elections & candidates", url:"https://ballotpedia.org", tag:"ELECTIONS"},
+      {label:"ACLU — know your rights", url:"https://www.aclu.org/know-your-rights", tag:"RIGHTS"},
+    ],
+    orbs:[
+      {id:"c1",label:"Place",size:50,x:10,y:42,color:"#3a7a58",desc:"Geography is not neutral. Where you were born shapes what you believe is possible, what you believe is normal, and who you believe deserves what. ZIP code predicts life expectancy more reliably than almost any individual behavior.",links:[]},
+      {id:"c2",label:"Social Media",size:66,x:84,y:38,color:"#286048",desc:"The synthetic village. Engineered for engagement, which turned out to mean outrage. The loudest voices replace the wisest ones. The algorithms are not neutral — they are optimized for the emotion that keeps you scrolling, which is not joy.",links:[]},
+      {id:"c3",label:"Race & Class",size:56,x:28,y:76,color:"#6a3a28",desc:"Two forces so entangled in American life they function as one system. Race determines exposure. Class determines access. Together they determine outcome — and both are consistently presented as personal failure rather than structural design.",links:[{label:"Pew Research: Race & Inequality",url:"https://www.pewresearch.org"},{label:"OpenSecrets: Who Funds What",url:"https://www.opensecrets.org"}]},
+      {id:"c4",label:"Entertainment",size:54,x:70,y:76,color:"#2a6a50",desc:"The great pacifier and the great mirror. What a culture entertains itself with reveals what it actually values — not what it claims to value at the podium. The size of the industry is the size of the need it fills.",links:[]},
+      {id:"c5",label:"Rights &\nObligation",size:36,x:50,y:28,color:"#1a8a60",desc:"Rights without obligation are wishes. Obligation without rights is servitude. The tension between the two is the actual content of civic life — what you are owed, what you owe, and who decides. Every generation renegotiates this contract. Most do it badly.",links:[{label:"ACLU: Know Your Rights",url:"https://www.aclu.org/know-your-rights"},{label:"Ballotpedia",url:"https://ballotpedia.org"},{label:"Congress.gov",url:"https://www.congress.gov"}]},
+    ]
+  },
+  {
+    id:"education", label:"EDUCATION, LEARNING & FORMATION", sub:"knowledge · transmission · who decides what you know",
+    color:"#5878b8", glow:"rgba(88,120,184,0.28)",
+    time:"your lifetime · centuries of argument",
+    desc:"The organized attempt to pass something forward — always an argument about what matters and who gets to decide. The classroom is a political space dressed in neutral clothes. What gets taught becomes what gets remembered as true. The omissions shape the mind as much as the lessons.",
+    height:13,
+    beyond:[
+      {label:"Nautilus — science meets culture, beautifully written", url:"https://nautil.us", tag:"MIND"},
+      {label:"Aeon — philosophy, science & society, free", url:"https://aeon.co", tag:"IDEAS"},
+      {label:"Khan Academy — free world-class education", url:"https://www.khanacademy.org", tag:"LEARN"},
+      {label:"ProPublica — investigative journalism", url:"https://www.propublica.org", tag:"JOURNALISM"},
+      {label:"CBO — federal budget data", url:"https://www.cbo.gov", tag:"BUDGET"},
+      {label:"USASpending.gov — federal contracts & grants", url:"https://www.usaspending.gov", tag:"DATA"},
+    ],
+    orbs:[
+      {id:"e1",label:"Literacy",size:52,x:10,y:46,color:"#3858a8",desc:"Not just reading — the capacity to parse power. Who gave you this? Who withheld it from others on purpose? The gap between those two questions is policy.",links:[]},
+      {id:"e2",label:"Science",size:56,x:82,y:40,color:"#2848a0",desc:"The method that replaced revelation with replication. Still the best tool humans have for being less wrong, systematically. Currently under deliberate political pressure from multiple directions.",links:[{label:"Pew Research",url:"https://www.pewresearch.org"}]},
+      {id:"e3",label:"The Curriculum",size:44,x:28,y:76,color:"#4868b0",desc:"What gets taught is what gets remembered as true. Who writes the textbooks writes the national story. This is why curriculum battles are proxy wars for cultural control — and why they are so bitter.",links:[]},
+      {id:"e4",label:"Student Debt",size:58,x:72,y:76,color:"#183898",desc:"The financialization of learning. Knowledge behind a toll. The mechanism by which education became credential, credential became debt, and debt became a life sentence on the front end of adulthood.",links:[{label:"CBO Data",url:"https://www.cbo.gov"},{label:"ProPublica: Student Debt",url:"https://www.propublica.org"}]},
+      {id:"e5",label:"Public Schools",size:34,x:52,y:26,color:"#6888c8",desc:"The only institution designed to give every child a shared foundation and a common floor. Currently underfunded in poor districts, overstretched everywhere, and politically targeted from multiple directions simultaneously.",links:[{label:"ProPublica: Education",url:"https://www.propublica.org"},{label:"USASpending: Education Budget",url:"https://www.usaspending.gov"}]},
+    ]
+  },
+  {
+    id:"politics", label:"POWER, POLITICS, MEDIA & LAW", sub:"governance · force · narrative · money · who decides",
+    color:"#b05050", glow:"rgba(176,80,80,0.25)",
+    time:"living memory · millennia of structure",
+    desc:"The organized management of who gets what, who decides, and who pays the cost. Politics is not separate from life — it is the frame inside which all other life happens. Media is not separate from politics — it is the air politics breathes. Law is not separate from power — it is power's written memory.",
+    height:13,
+    beyond:[
+      {label:"Al Jazeera — global news outside the US lens", url:"https://www.aljazeera.com", tag:"GLOBAL"},
+      {label:"Rest of World — tech & power beyond the West", url:"https://restofworld.org", tag:"WORLD"},
+      {label:"Foreign Affairs — serious global analysis", url:"https://www.foreignaffairs.com", tag:"GEOPOLITICS"},
+      {label:"FollowTheMoney — state-level campaign finance", url:"https://www.followthemoney.org", tag:"MONEY"},
+      {label:"TrackAIPAC — congressional donations", url:"https://www.trackaipac.com", tag:"LOBBYING"},
+      {label:"GovTrack — bills, votes & records", url:"https://www.govtrack.us", tag:"CONGRESS"},
+      {label:"ForeignAssistance.gov — aid data", url:"https://foreignassistance.gov", tag:"AID"},
+      {label:"Quincy Institute — military policy", url:"https://quincyinst.org", tag:"MILITARY"},
+      {label:"Costs of War — Brown University", url:"https://watson.brown.edu/costsofwar", tag:"MILITARY"},
+    ],
+    orbs:[
+      {id:"p1",label:"Law",size:54,x:20,y:44,color:"#a03838",desc:"Codified power. The rules written by those who had the power to write rules. Sometimes just. Often not. Always contested by those the rules were not written for.",links:[{label:"Congress.gov",url:"https://congress.gov"},{label:"GovTrack",url:"https://govtrack.us"}]},
+      {id:"p2",label:"Economy",size:68,x:56,y:40,color:"#883030",desc:"The system for deciding who works, who owns, who starves, who thrives. Not natural law — a set of choices, repeated daily, enforced by every other orb in this layer.",links:[{label:"USASpending.gov",url:"https://www.usaspending.gov"},{label:"CBO",url:"https://www.cbo.gov"}]},
+      {id:"p3",label:"War & Force",size:52,x:34,y:70,color:"#c04848",desc:"The final argument. Where all political failures eventually arrive. 750 U.S. bases in 80 countries. $886B annual budget. The largest military empire in human history — right now, in the present tense.",links:[{label:"750 Bases Map",url:"https://www.usnow.app/graphics/750-bases"},{label:"Costs of War",url:"https://watson.brown.edu/costsofwar"}]},
+      {id:"p4",label:"Dark Money",size:60,x:75,y:55,color:"#904040",desc:"The operating system beneath the visible interface. Follow the money and you find the actual policy — not the speech, not the vote. The money.",links:[{label:"OpenSecrets",url:"https://www.opensecrets.org"},{label:"FollowTheMoney",url:"https://www.followthemoney.org"},{label:"TrackAIPAC",url:"https://www.trackaipac.com"}]},
+      {id:"p5",label:"Media",size:58,x:80,y:28,color:"#784040",desc:"Not just news — the management of reality at scale. Who owns the outlets? Who sets the agenda? What gets covered and what vanishes? Media is where power talks to itself and calls it information.",links:[{label:"ProPublica",url:"https://www.propublica.org"}]},
+      {id:"p6",label:"CORRUPTION\nTRACKER",size:52,x:10,y:35,color:"#d4621a",pulse:"corrupt",desc:"Follow the money. Name the names. See the record. Every conflict of interest, every self-enrichment play, every pay-to-play pattern — tracked, sourced, linked. The data is the argument.",links:[{label:"Open Corruption Tracker →",url:"https://www.usnow.app/graphics/corruption_tracker.html"},{label:"RateMyRep — hold your rep accountable",url:"https://www.ratemyrep.app"},{label:"OpenSecrets — follow the money",url:"https://www.opensecrets.org"},{label:"ProPublica — investigative journalism",url:"https://www.propublica.org"}]},
+    ]
+  },
+  {
+    id:"history", label:"HISTORY & CIVILIZATION", sub:"the long record · pattern · what keeps recurring",
+    color:"#7858b0", glow:"rgba(120,88,176,0.22)",
+    time:"centuries · ten thousand years",
+    desc:"The long record of what humans have tried, built, destroyed, and tried again. History is not a story of progress — it is a story of oscillation. The patterns repeat because the underlying animal changes very slowly. But cultures change fast. And cultures carry the code for empires.",
+    height:12,
+    beyond:[
+      {label:"Al Jazeera — history still happening", url:"https://www.aljazeera.com", tag:"GLOBAL"},
+      {label:"Longreads — long-form history journalism", url:"https://longreads.com", tag:"CULTURE"},
+      {label:"Foreign Affairs — geopolitics in depth", url:"https://www.foreignaffairs.com", tag:"ANALYSIS"},
+      {label:"Pew Research — data on society & trends", url:"https://www.pewresearch.org", tag:"DATA"},
+    ],
+    orbs:[
+      {id:"h1",label:"Empire",size:62,x:10,y:44,color:"#5838a0",desc:"The recurring dream of total organization. Always promising order. Always producing the conditions for its own collapse. The U.S. base footprint is this orb made visible in the present tense.",links:[{label:"Global Base Map",url:"https://www.usnow.app/graphics/750-bases"}]},
+      {id:"h2",label:"Language",size:50,x:80,y:42,color:"#6848b0",desc:"The oldest technology. Every language encodes a different theory of reality. To lose a language is to lose a way of seeing the world that will never exist again. There are roughly 7,000 languages alive today. Half will be gone by 2100.",links:[]},
+      {id:"h3",label:"Revolution",size:48,x:30,y:76,color:"#7858c0",desc:"The recurring reset. Sometimes violent, sometimes tidal. The moment when the accumulated weight of a structure becomes greater than the people's willingness to hold it up. Every ruling class believes it will be the last to face one.",links:[]},
+      {id:"h4",label:"Migration",size:54,x:68,y:76,color:"#4828a0",desc:"The original human act. Every border is a line drawn through a migration route. Every 'native' population arrived from somewhere else, earlier. The timeline just depends on where you start counting.",links:[]},
+      {id:"h5",label:"Geography",size:36,x:50,y:26,color:"#8868c0",desc:"Mountains, rivers, coastlines, and deserts have shaped every civilization more than any ideology. Geopolitics is mostly geography in a suit.",links:[{label:"Pew Research",url:"https://www.pewresearch.org"},{label:"Foreign Affairs",url:"https://www.foreignaffairs.com"}]},
+    ]
+  },
+  {
+    id:"cosmos", label:"THE LONG BEFORE", sub:"philosophy · spirit · origin · the question beneath the questions",
+    color:"#4888c8", glow:"rgba(72,136,200,0.16)",
+    time:"before memory · before language · before",
+    desc:"The oldest questions have no answers — only better ways of sitting with them. Here religion, philosophy, and physics converge on the same horizon line. This layer is thin not because it matters less but because it is farthest from the noise. The self, examined from this distance, becomes a question rather than a given. And the question turns out to be the point.",
+    height:10,
+    beyond:[
+      {label:"Aeon — philosophy & cosmology, free", url:"https://aeon.co", tag:"PHILOSOPHY"},
+      {label:"On Being — meaning, spirit, the ineffable", url:"https://onbeing.org", tag:"SPIRIT"},
+      {label:"Nautilus — science at the edge of knowing", url:"https://nautil.us", tag:"COSMOS"},
+      {label:"NASA Astronomy Picture of the Day", url:"https://apod.nasa.gov", tag:"COSMOS"},
+    ],
+    orbs:[
+      {id:"x1",label:"Myth",size:52,x:10,y:46,color:"#2868a8",desc:"Not falsehood — the story that carries what facts cannot hold. Every culture answers the same mystery differently. None is complete. None is entirely wrong. Myth is what you tell when truth isn't enough.",links:[]},
+      {id:"x2",label:"Death",size:48,x:80,y:42,color:"#185888",desc:"The organizing fact of human life. Every religion, philosophy, and political system is partly an answer to this. Mostly it is a sophisticated way of not answering it while building elaborate structures to avoid looking directly at it.",links:[]},
+      {id:"x3",label:"Time",size:54,x:28,y:74,color:"#3878b8",desc:"The medium everything happens inside. But what is it? Physics has made it stranger, not clearer. Relativity says it bends. Quantum mechanics barely acknowledges it. The self experiences time as the only real thing. The cosmos does not appear to notice.",links:[]},
+      {id:"x4",label:"Consciousness",size:46,x:66,y:74,color:"#487898",desc:"The hard problem. Why is there something it is like to be you? The universe watching itself through a temporary aperture, briefly convinced it matters. It does. It doesn't. Both are true from different distances.",links:[]},
+      {id:"x5",label:"Religion",size:34,x:48,y:26,color:"#60a0d8",desc:"The organized human attempt to answer the unanswerable — and to build community around the answering. At its best: a technology for meaning, solidarity, and moral formation. At its worst: a technology for control, exclusion, and the management of fear. Usually both simultaneously.",links:[{label:"Pew Research: Religion",url:"https://www.pewresearch.org/religion/"},{label:"On Being",url:"https://onbeing.org"}]},
+    ]
+  },
+];
 
-  function submitRequest() {
-    const topic = document.getElementById('ftopic').value.trim();
-    if (!topic) {
-      document.getElementById('ftopic').style.borderColor = '#e03030';
-      document.getElementById('ftopic').focus();
-      return;
-    }
-    const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
-    const data = {
-      name: document.getElementById('femail').value,
-      topic,
-      why: '',
-      sources: '',
-      submitted: new Date().toISOString()
-    };
-    if (SHEET_ENDPOINT !== 'YOUR_SHEET_ENDPOINT') {
-      fetch(SHEET_ENDPOINT, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
-    }
-    document.getElementById('form-success').style.display = 'block';
-    ['femail','ftopic'].forEach(id => document.getElementById(id).value = '');
+// ── STARS ─────────────────────────────────────────────────────────────────────
+const starsEl = document.getElementById('stars');
+for(let i=0;i<80;i++){
+  const s = document.createElement('div');
+  s.className='star';
+  const sz = i%4===0?2:1;
+  s.style.cssText=`left:${(i*43.1+11)%100}%;top:${(i*27.3+5)%58}%;width:${sz}px;height:${sz}px;opacity:${0.03+(i%5)*0.04};animation:tw ${3+(i%6)}s ease-in-out infinite;animation-delay:${(i%9)*0.35}s;`;
+  starsEl.appendChild(s);
+}
+
+// ── GEOMETRY ─────────────────────────────────────────────────────────────────
+function getLayerGeometry(idx, W, H) {
+  const totalH = LAYERS.reduce((s,l)=>s+l.height,0);
+  let acc=0;
+  for(let i=0;i<idx;i++) acc+=LAYERS[i].height;
+  const fromBottomPct = acc/totalH;
+  const heightPct = LAYERS[idx].height/totalH;
+  const yBottom = H - fromBottomPct*H;
+  const yTop = H - (fromBottomPct+heightPct)*H;
+  const t = idx/(LAYERS.length-1);
+  const sagTop = H*(0.11-t*0.065);
+  const sagBottom = H*(0.03-t*0.018);
+  const taper = W*0.03;
+  const path=[
+    `M ${-taper} ${yBottom}`,
+    `Q ${W/2} ${yBottom+sagBottom} ${W+taper} ${yBottom}`,
+    `L ${W+taper} ${yTop}`,
+    `Q ${W/2} ${yTop+sagTop} ${-taper} ${yTop}`,
+    `Z`
+  ].join(' ');
+  const topPct = 1-fromBottomPct-heightPct;
+  return {path,yTop,yBottom,sagTop,topPct,heightPct};
+}
+
+// ── BUILD SVG + LAYER BANDS ───────────────────────────────────────────────────
+function buildScale() {
+  const section = document.getElementById('scale');
+  const W = section.offsetWidth || 1000;
+  const H = section.offsetHeight || 700;
+  const svg = document.getElementById('scale-svg');
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+
+  // Defs
+  let defs = '<defs>';
+  LAYERS.forEach((layer,idx)=>{
+    const {yTop,yBottom,sagTop} = getLayerGeometry(idx,W,H);
+    defs += `<linearGradient id="grad${idx}" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="${layer.color}" stop-opacity="${0.04+(idx/(LAYERS.length-1))*0.08}"/>
+      <stop offset="100%" stop-color="${layer.color}" stop-opacity="${0.11+(idx/(LAYERS.length-1))*0.22}"/>
+    </linearGradient>`;
+  });
+  defs += '<filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>';
+  defs += '</defs>';
+
+  let paths = '';
+  LAYERS.forEach((layer,idx)=>{
+    const g = getLayerGeometry(idx,W,H);
+    paths += `<g>
+      <path d="${g.path}" fill="url(#grad${idx})"/>
+      <path d="M ${-10} ${g.yTop} Q ${W/2} ${g.yTop+g.sagTop} ${W+10} ${g.yTop}"
+        fill="none" stroke="${layer.color}" stroke-width="0.8" stroke-opacity="0.55" filter="url(#glow)"
+        class="layer-stroke" data-idx="${idx}"/>
+    </g>`;
+  });
+  svg.innerHTML = defs + paths;
+
+  // Layer hit bands
+  const bandsEl = document.getElementById('layer-bands');
+  bandsEl.innerHTML='';
+  LAYERS.forEach((layer,idx)=>{
+    if(idx===0) return; // self is handled by core button
+    const g = getLayerGeometry(idx,W,H);
+    const div = document.createElement('div');
+    div.className='layer-band';
+    div.style.cssText=`top:${g.topPct*100}%;height:${g.heightPct*100}%;z-index:${idx+2};`;
+    const fontSize = `clamp(9px,${1.1+idx*0.08}vw,13px)`;
+    const glow = layer.glow;
+    div.innerHTML=`
+      <div class="layer-label-wrap">
+        <div class="layer-main-label" style="font-size:${fontSize};color:${layer.color};text-shadow:0 0 20px ${glow},0 0 40px ${glow};">${layer.label}</div>
+        <div class="layer-sub-label" style="color:${layer.color};">${layer.sub}</div>
+      </div>
+      ${layer.orbs.map(orb=>`
+        <div class="orb-node" data-orbid="${orb.id}" data-layeridx="${idx}"
+          style="left:${orb.x}%;top:${orb.y}%;width:${orb.size}px;height:${orb.size}px;
+          background:radial-gradient(circle at 36% 30%,${orb.color}f0 0%,${orb.color}99 40%,${orb.color}44 100%);
+          border:1.5px solid ${orb.color}ee;
+          box-shadow:0 0 ${orb.size*0.5}px ${orb.color}66,0 0 ${orb.size*0.2}px ${orb.color}44,inset 0 0 ${orb.size*0.3}px rgba(255,255,255,0.14);
+          animation:${orb.pulse==='corrupt'?'pulseCorrupt 2.2s ease-in-out infinite':'orbf '+(3.2+(orb.size%4)*0.6)+'s ease-in-out infinite'};
+          animation-delay:${(orb.size%8)*0.28}s;">
+          <span class="orb-label" style="font-size:${Math.max(7,orb.size*0.16)}px;">${orb.label}</span>
+        </div>
+      `).join('')}
+    `;
+    div.addEventListener('click', ()=>openLayer(idx));
+    div.querySelectorAll('.orb-node').forEach(orbEl=>{
+      orbEl.addEventListener('click', e=>{
+        e.stopPropagation();
+        const orbId = orbEl.dataset.orbid;
+        const layerIdx = parseInt(orbEl.dataset.layeridx);
+        const orb = LAYERS[layerIdx].orbs.find(o=>o.id===orbId);
+        openOrb(orb, LAYERS[layerIdx]);
+      });
+      orbEl.addEventListener('mouseenter', ()=>{
+        orbEl.style.transform='translate(-50%,-50%) scale(1.14)';
+      });
+      orbEl.addEventListener('mouseleave', ()=>{
+        orbEl.style.transform='translate(-50%,-50%) scale(1)';
+      });
+    });
+    bandsEl.appendChild(div);
+  });
+
+  // Core satellites (self layer orbs)
+  const coreOrbs = document.getElementById('core-orbs');
+  coreOrbs.innerHTML='';
+  const positions=[{left:'5%',top:'72%'},{left:'26%',top:'16%'},{left:'50%',top:'78%'},{left:'74%',top:'14%'},{left:'92%',top:'68%'}];
+  LAYERS[0].orbs.forEach((orb,i)=>{
+    const pos=positions[i]||positions[0];
+    const sz=Math.round(orb.size*0.57);
+    const el=document.createElement('div');
+    el.className='core-satellite';
+    el.style.cssText=`left:${pos.left};top:${pos.top};width:${sz}px;height:${sz}px;
+      background:radial-gradient(circle at 36% 30%,${orb.color}ee,${orb.color}66);
+      border:1px solid ${orb.color}cc;
+      box-shadow:0 0 ${sz*0.6}px ${orb.color}55;`;
+    el.innerHTML=`<span style="font-size:${Math.max(7,sz*0.18)}px;color:rgba(255,255,255,0.88);font-family:'Courier New',monospace;text-align:center;line-height:1.15;padding:2px;pointer-events:none;">${orb.label}</span>`;
+    el.addEventListener('click',e=>{e.stopPropagation();openOrb(orb,LAYERS[0]);});
+    el.addEventListener('mouseenter',()=>{el.style.transform='translate(-50%,-50%) scale(1.15)';el.style.boxShadow=`0 0 ${sz}px ${orb.color}99`;});
+    el.addEventListener('mouseleave',()=>{el.style.transform='translate(-50%,-50%) scale(1)';el.style.boxShadow=`0 0 ${sz*0.6}px ${orb.color}55`;});
+    coreOrbs.appendChild(el);
+  });
+}
+
+// ── MODAL ─────────────────────────────────────────────────────────────────────
+function openLayer(idx) {
+  const layer = LAYERS[idx];
+  showModal({
+    color: layer.color,
+    glow: layer.glow,
+    tag: layer.label + ' · ' + layer.time,
+    title: layer.label,
+    sub: layer.sub,
+    desc: layer.desc,
+    links: [],
+    beyond: layer.beyond||[],
+    orbs: layer.orbs,
+    isLayer: true,
+  });
+}
+
+function openOrb(orb, layer) {
+  showModal({
+    color: layer.color,
+    glow: layer.glow,
+    tag: layer.label + ' · ' + layer.time,
+    title: orb.label,
+    sub: null,
+    desc: orb.desc,
+    links: orb.links||[],
+    beyond: [],
+    orbs: null,
+    isLayer: false,
+  });
+}
+
+function showModal(data) {
+  const overlay = document.getElementById('modal-overlay');
+  const box = document.getElementById('modal-box');
+
+  document.getElementById('modal-drag').style.background = data.color+'77';
+  document.getElementById('modal-layer-tag').style.color = data.color;
+  document.getElementById('modal-layer-tag').textContent = data.tag;
+  document.getElementById('modal-title').textContent = data.title;
+
+  const subEl = document.getElementById('modal-sub');
+  if(data.sub){subEl.style.color=data.color;subEl.style.opacity='0.55';subEl.textContent=data.sub;subEl.style.display='block';}
+  else{subEl.style.display='none';}
+
+  document.getElementById('modal-desc').textContent = data.desc;
+
+  box.style.border = `1px solid ${data.color}55`;
+  box.style.boxShadow = `0 -6px 50px ${data.glow},0 0 120px rgba(0,0,0,0.97)`;
+
+  const linksDiv = document.getElementById('modal-links');
+  const linksList = document.getElementById('modal-links-list');
+  document.getElementById('modal-links-label').style.color = data.color;
+  if(data.links && data.links.length>0){
+    linksDiv.style.display='block';
+    linksList.innerHTML=data.links.map(l=>`
+      <a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link"
+        style="color:${data.color};border:1px solid ${data.color}33;"
+        onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';"
+        onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';">
+        <span class="arrow">→</span>${l.label}
+      </a>`).join('');
+  } else {
+    linksDiv.style.display='none';
   }
+
+  const beyondDiv = document.getElementById('modal-beyond');
+  const beyondList = document.getElementById('modal-beyond-list');
+  const beyondLabel = document.getElementById('modal-beyond-label');
+  if(data.beyond && data.beyond.length>0){
+    beyondDiv.style.display='block';
+    beyondLabel.style.color = data.color;
+    beyondList.innerHTML=data.beyond.map(l=>`
+      <a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link"
+        style="color:${data.color};border:1px solid ${data.color}33;"
+        onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';"
+        onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';">
+        <span class="arrow">→</span><span>${l.label}</span><span style="font-size:8px;opacity:0.45;margin-left:auto;letter-spacing:0.12em;">${l.tag||''}</span>
+      </a>`).join('');
+  } else {
+    beyondDiv.style.display='none';
+  }
+
+  const orbsSection = document.getElementById('modal-orbs-section');
+  const orbsList = document.getElementById('modal-orbs-list');
+  if(data.isLayer && data.orbs){
+    orbsSection.style.display='block';
+    orbsList.innerHTML=data.orbs.map(o=>`<span class="modal-orb-tag" style="color:${data.color};border:1px solid ${data.color}33;">${o.label}</span>`).join('');
+  } else {
+    orbsSection.style.display='none';
+  }
+
+  const closeBtn = document.getElementById('modal-close');
+  closeBtn.style.border=`1px solid ${data.color}44`;
+  closeBtn.style.color=data.color;
+  closeBtn.onmouseenter=()=>closeBtn.style.background=`${data.color}18`;
+  closeBtn.onmouseleave=()=>closeBtn.style.background='transparent';
+
+  overlay.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+// ── INIT + RESIZE ─────────────────────────────────────────────────────────────
+buildScale();
+let resizeTimer;
+window.addEventListener('resize',()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer=setTimeout(buildScale,120);
+});
 </script>
 </body>
 </html>
