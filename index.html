@@ -23,7 +23,7 @@ body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',se
 @keyframes blink{0%,100%{opacity:0.85}50%{opacity:0.2}}
 @keyframes ember{0%,100%{box-shadow:0 0 10px var(--fg,#9b2d2044),0 0 22px var(--fg,#9b2d2022),inset 0 0 8px rgba(255,140,60,0.04)}50%{box-shadow:0 0 22px var(--fg,#9b2d2077),0 0 44px var(--fg,#9b2d2033),inset 0 0 14px rgba(255,140,60,0.08)}}
 #ticker{position:fixed;top:0;left:0;right:0;z-index:600;background:#030609;border-bottom:1px solid rgba(122,96,48,0.44);overflow:hidden;height:30px;display:flex;align-items:center;}
-#ticker-inner{display:flex;gap:56px;animation:ticker 52s linear infinite;white-space:nowrap;}
+#ticker-inner{display:flex;gap:56px;animation:ticker 62s linear infinite;white-space:nowrap;}
 #ticker-inner span{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;opacity:0.75;}
 nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(122,96,48,0.33);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:44px;}
 .nav-logo{display:flex;align-items:center;gap:8px;}
@@ -144,6 +144,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 <body>
 
 <div id="ticker"><div id="ticker-inner">
+<span id="ticker-date"></span>
 <span>◎ Tap any layer or orb to explore · each one opens deeper.</span>
 <span>◎ The question is the answer. The data is the argument.</span><span>◎ $886B defense. $1.2% foreign aid. The gap is the policy.</span><span>◎ 750 U.S. bases. 80 countries. Right now.</span><span>◎ Follow the money. Name the names. See the record.</span><span>◎ Season Two of The Apprentice: Washington Edition — Coming Soon.</span><span>◎ The US in USNow is not one thing.</span><span>◎ Read AtJon on Substack · atjon.substack.com</span>
 <span>◎ Tap any layer or orb to explore · each one opens deeper.</span>
@@ -514,6 +515,7 @@ function submitThought(){
 }
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+const _days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const _months=['January','February','March','April','May','June','July','August','September','October','November','December'];const _now=new Date();document.getElementById('ticker-date').textContent=`◎ Welcome to ${_days[_now.getDay()]}, ${_months[_now.getMonth()]} ${_now.getDate()}, ${_now.getFullYear()}. The question is the answer.`;
 buildScale();
 let resizeTimer;
 window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(buildScale,120);});
