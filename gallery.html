@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Gallery — USNow</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#040810}::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+@keyframes pulseOrb{0%,100%{box-shadow:0 0 30px rgba(26,74,122,0.5),0 0 60px rgba(26,74,122,0.25),inset 0 0 20px rgba(120,180,255,0.05)}50%{box-shadow:0 0 55px rgba(26,74,122,0.8),0 0 100px rgba(26,74,122,0.4),inset 0 0 30px rgba(120,180,255,0.1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{0%{opacity:0.4}50%{opacity:0.7}100%{opacity:0.4}}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,74,122,0.4);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:50px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-back{font-size:9px;letter-spacing:0.22em;color:#4a80b8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;border:1px solid rgba(26,74,122,0.4);padding:5px 14px;border-radius:14px;}
+.nav-back:hover{opacity:1;border-color:#4a80b8;}
+.hero{padding:90px 24px 50px;text-align:center;position:relative;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(26,74,122,0.1) 0%,transparent 65%);pointer-events:none;}
+.eyebrow{font-size:9px;letter-spacing:0.5em;color:#1a5a8a;font-family:'Courier New',monospace;margin-bottom:16px;opacity:0.8;}
+.hero-title{font-size:clamp(28px,4vw,48px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.25;margin:0 0 14px;}
+.hero-title em{color:#3a80c8;font-style:normal;}
+.hero-sub{font-size:13px;color:#3a5a78;font-family:'Courier New',monospace;letter-spacing:0.1em;margin:0 auto;max-width:500px;line-height:1.7;}
+.orbs-field{max-width:960px;margin:0 auto;padding:40px 24px 80px;display:flex;flex-wrap:wrap;justify-content:center;gap:36px 44px;align-items:flex-end;}
+.orb-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp 0.6s ease both;cursor:pointer;}
+.orb-sphere{border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;transition:transform 0.22s ease;animation:float 4.5s ease-in-out infinite,pulseOrb 4.5s ease-in-out infinite;}
+.orb-wrap:hover .orb-sphere{transform:scale(1.1) translateY(-5px);}
+.orb-name{font-size:9px;letter-spacing:0.18em;color:#2a6aaa;font-family:'Courier New',monospace;text-align:center;font-weight:700;text-transform:uppercase;}
+.orb-caption{font-size:10px;color:#2a4a6a;font-family:'Georgia',serif;text-align:center;max-width:120px;line-height:1.5;font-style:italic;}
+/* Modal */
+#modal-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(2,4,10,0.95);backdrop-filter:blur(20px);align-items:center;justify-content:center;padding:20px;}
+#modal-overlay.open{display:flex;}
+#modal-box{background:linear-gradient(160deg,#0a1020 0%,#060b18 100%);border-radius:20px;padding:36px 28px;max-width:560px;width:100%;position:relative;max-height:88vh;overflow-y:auto;border:1px solid rgba(26,90,138,0.4);box-shadow:0 0 80px rgba(26,74,122,0.3);}
+.modal-close-btn{position:absolute;top:14px;right:16px;font-size:9px;letter-spacing:0.2em;color:#2a5a8a;font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(26,74,122,0.3);padding:4px 12px;border-radius:10px;background:transparent;transition:all 0.2s;}
+.modal-close-btn:hover{color:#4a90c8;border-color:#4a90c8;}
+.modal-img-wrap{width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;margin-bottom:20px;background:#060e1a;border:1px solid rgba(26,74,122,0.2);display:flex;align-items:center;justify-content:center;}
+.modal-img-wrap img{width:100%;height:100%;object-fit:cover;}
+.modal-placeholder{font-size:11px;color:#1a3a5a;font-family:'Courier New',monospace;letter-spacing:0.15em;animation:shimmer 2s ease-in-out infinite;}
+.modal-title{font-size:22px;font-weight:300;color:#d4e8f8;font-family:'Georgia',serif;margin:0 0 10px;}
+.modal-caption{font-size:13px;color:#4a7090;font-family:'Georgia',serif;line-height:1.8;margin:0;}
+footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,122,0.2);text-align:center;}
+footer a{font-size:9px;color:#1a3a5a;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;}
+footer a:hover{color:#4a80b8;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="us">US</span><span class="now">NOW</span></a>
+  <a href="index.html" class="nav-back">← BACK TO SCALE</a>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">FOUNDATIONS · THE GALLERY</div>
+  <h1 class="hero-title">Work made <em>visible.</em></h1>
+  <p class="hero-sub">Original artwork, infographic designs, and visual work from the USNow project. Each orb opens a piece.</p>
+</div>
+
+<div class="orbs-field" id="orbs-field"></div>
+
+<div id="modal-overlay" onclick="closeModal()">
+  <div id="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close-btn" onclick="closeModal()">CLOSE ×</button>
+    <div class="modal-img-wrap" id="modal-img-wrap">
+      <div class="modal-placeholder" id="modal-placeholder">IMAGE COMING SOON</div>
+      <img id="modal-img" src="" alt="" style="display:none;"/>
+    </div>
+    <h2 class="modal-title" id="modal-title"></h2>
+    <p class="modal-caption" id="modal-caption"></p>
+  </div>
+</div>
+
+<footer>
+  <a href="graphic-info.html">← Graphic Info</a>
+  &nbsp;·&nbsp;
+  <a href="index.html">USNow Home</a>
+  &nbsp;·&nbsp;
+  <a href="journal.html">USNow Journal →</a>
+  &nbsp;·&nbsp;
+  <a href="substack.html">Substack Articles →</a>
+</footer>
+
+<script>
+// Drop artwork here as you go: {title, caption, img (path or url, optional), size, colorBase, delay}
+const ARTWORKS=[
+  {
+    title:"The Scale",
+    caption:"The USNow scale of perspective — from self to cosmos. Original interface design, 2026.",
+    img:null,
+    size:130,
+    colorBase:"#1a4a7a",
+    delay:0
+  },
+  {
+    title:"Who Rules the World",
+    caption:"Power pyramid infographic. Six-tier visualization of global control structures.",
+    img:null,
+    size:118,
+    colorBase:"#1a3a6a",
+    delay:0.12
+  },
+  {
+    title:"The Corruption Tracker",
+    caption:"Follow the money. Names, records, patterns — made navigable.",
+    img:null,
+    size:110,
+    colorBase:"#3a1a0a",
+    delay:0.24
+  },
+  {
+    title:"Coming Soon",
+    caption:"More work on the way.",
+    img:null,
+    size:90,
+    colorBase:"#0e1a2a",
+    delay:0.36,
+    placeholder:true
+  },
+  {
+    title:"Coming Soon",
+    caption:"",
+    img:null,
+    size:80,
+    colorBase:"#0e1a2a",
+    delay:0.48,
+    placeholder:true
+  }
+];
+
+const field=document.getElementById('orbs-field');
+ARTWORKS.forEach((art,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='orb-wrap';
+  wrap.style.animationDelay=art.delay+'s';
+  if(!art.placeholder) wrap.onclick=()=>openModal(art);
+
+  const sphere=document.createElement('div');
+  sphere.className='orb-sphere';
+  sphere.style.cssText=`
+    width:${art.size}px;height:${art.size}px;
+    background:radial-gradient(circle at 36% 28%, ${art.colorBase}ff 0%, ${art.colorBase}bb 45%, ${art.colorBase}66 80%, ${art.colorBase}22 100%);
+    border:1.5px solid ${art.placeholder?'rgba(26,58,90,0.3)':'rgba(60,130,200,0.5)'};
+    animation-delay:${art.delay}s,${art.delay}s;
+    opacity:${art.placeholder?0.4:1};
+  `;
+
+  const label=document.createElement('div');
+  label.style.cssText=`font-size:${Math.max(8,art.size*0.1)}px;font-weight:700;letter-spacing:0.12em;color:${art.placeholder?'rgba(60,100,140,0.5)':'rgba(140,200,255,0.9)'};text-align:center;line-height:1.3;padding:8px;text-shadow:0 1px 8px rgba(0,0,0,0.95);font-family:'Courier New',monospace;`;
+  label.textContent=art.title;
+  sphere.appendChild(label);
+
+  const nameEl=document.createElement('div');
+  nameEl.className='orb-name';
+  nameEl.style.color=art.placeholder?'#1a3050':'#2a6aaa';
+  nameEl.textContent=art.placeholder?'COMING SOON':'TAP TO VIEW';
+
+  wrap.appendChild(sphere);
+  wrap.appendChild(nameEl);
+  field.appendChild(wrap);
+});
+
+function openModal(art){
+  document.getElementById('modal-title').textContent=art.title;
+  document.getElementById('modal-caption').textContent=art.caption;
+  const img=document.getElementById('modal-img');
+  const placeholder=document.getElementById('modal-placeholder');
+  if(art.img){
+    img.src=art.img;img.alt=art.title;
+    img.style.display='block';placeholder.style.display='none';
+  } else {
+    img.style.display='none';placeholder.style.display='block';
+  }
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Substack Articles — USNow / ATJon</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#040810}::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+@keyframes pulseOrb{0%,100%{box-shadow:0 0 28px rgba(26,74,122,0.5),0 0 55px rgba(26,74,122,0.22),inset 0 0 18px rgba(120,180,255,0.05)}50%{box-shadow:0 0 50px rgba(26,74,122,0.8),0 0 90px rgba(26,74,122,0.35),inset 0 0 28px rgba(120,180,255,0.1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,74,122,0.4);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:50px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-back{font-size:9px;letter-spacing:0.22em;color:#4a80b8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;border:1px solid rgba(26,74,122,0.4);padding:5px 14px;border-radius:14px;}
+.nav-back:hover{opacity:1;border-color:#4a80b8;}
+.hero{padding:90px 24px 50px;text-align:center;position:relative;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(26,74,122,0.1) 0%,transparent 65%);pointer-events:none;}
+.eyebrow{font-size:9px;letter-spacing:0.5em;color:#1a5a8a;font-family:'Courier New',monospace;margin-bottom:16px;opacity:0.8;}
+.hero-title{font-size:clamp(28px,4vw,48px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.25;margin:0 0 14px;}
+.hero-title em{color:#3a80c8;font-style:normal;}
+.hero-sub{font-size:13px;color:#3a5a78;font-family:'Courier New',monospace;letter-spacing:0.1em;margin:0 auto;max-width:560px;line-height:1.7;}
+.publications-bar{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:30px auto 0;max-width:600px;padding:0 24px;}
+.pub-tag{font-size:8px;letter-spacing:0.28em;color:#2a5a8a;font-family:'Courier New',monospace;border:1px solid rgba(26,74,122,0.35);padding:5px 14px;border-radius:12px;text-decoration:none;transition:all 0.2s;}
+.pub-tag:hover{color:#4a90c8;border-color:#4a90c8;}
+.orbs-field{max-width:980px;margin:0 auto;padding:44px 24px 80px;display:flex;flex-wrap:wrap;justify-content:center;gap:32px 40px;align-items:flex-end;}
+.orb-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp 0.6s ease both;}
+.orb-sphere{border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;transition:transform 0.22s ease;animation:float 4.2s ease-in-out infinite,pulseOrb 4.2s ease-in-out infinite;text-decoration:none;}
+.orb-sphere:hover{transform:scale(1.1) translateY(-5px);}
+.orb-pub{font-size:7.5px;letter-spacing:0.3em;color:#1a4a78;font-family:'Courier New',monospace;text-align:center;font-weight:700;margin-bottom:2px;}
+.orb-name{font-size:9px;letter-spacing:0.14em;color:#2a6aaa;font-family:'Courier New',monospace;text-align:center;font-weight:700;}
+.orb-desc{font-size:10px;color:#2a4468;font-family:'Georgia',serif;text-align:center;max-width:130px;line-height:1.5;font-style:italic;}
+.coming-soon-orb{opacity:0.38;}
+.coming-soon-orb .orb-sphere{cursor:default;}
+.coming-soon-orb .orb-sphere:hover{transform:none;}
+footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,122,0.2);text-align:center;}
+footer a{font-size:9px;color:#1a3a5a;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;}
+footer a:hover{color:#4a80b8;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="us">US</span><span class="now">NOW</span></a>
+  <a href="index.html" class="nav-back">← BACK TO SCALE</a>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">FOUNDATIONS · SUBSTACK ARTICLES</div>
+  <h1 class="hero-title">The writing, <em>collected.</em></h1>
+  <p class="hero-sub">Essays, satire, civic commentary, and dispatches from ATJon and USNow — published on Substack. Tap any orb to read.</p>
+  <div class="publications-bar">
+    <a href="https://atjon.substack.com" target="_blank" rel="noreferrer" class="pub-tag">ATJON · SUBSTACK →</a>
+    <a href="https://www.ratemyrep.app" target="_blank" rel="noreferrer" class="pub-tag">RATEMYREP →</a>
+  </div>
+</div>
+
+<div class="orbs-field" id="orbs-field"></div>
+
+<footer>
+  <a href="graphic-info.html">← Graphic Info</a>
+  &nbsp;·&nbsp;
+  <a href="gallery.html">The Gallery</a>
+  &nbsp;·&nbsp;
+  <a href="journal.html">USNow Journal</a>
+  &nbsp;·&nbsp;
+  <a href="index.html">USNow Home</a>
+</footer>
+
+<script>
+const ARTICLES=[
+  {
+    name:"The Apprentice:\nWashington Edition",
+    pub:"ATJON",
+    desc:"Long-form political satire narrated by Michael Cohen.",
+    url:"https://atjon.substack.com",
+    size:138,
+    color:"#1a3a6a",
+    colorLight:"#4a8ad4",
+    delay:0
+  },
+  {
+    name:"The 80% Has\nNo Lobby",
+    pub:"ATJON",
+    desc:"Information asymmetry is the core democratic problem.",
+    url:"https://atjon.substack.com",
+    size:118,
+    color:"#1a3870",
+    colorLight:"#3a78cc",
+    delay:0.1
+  },
+  {
+    name:"AGI Isn't a Mind.\nIt's a Condition.",
+    pub:"ATJON",
+    desc:"What artificial general intelligence actually means.",
+    url:"https://atjon.substack.com",
+    size:112,
+    color:"#142e60",
+    colorLight:"#2a68b8",
+    delay:0.2
+  },
+  {
+    name:"America's\nIndigenous Sin",
+    pub:"ATJON",
+    desc:"On the debt that doesn't appear in any budget.",
+    url:"https://open.substack.com/pub/atjon/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
+    size:108,
+    color:"#12264e",
+    colorLight:"#2258a8",
+    delay:0.3
+  },
+  {
+    name:"The Voter Who\nJust Wants to Ask",
+    pub:"ATJON",
+    desc:"On what civic engagement actually requires.",
+    url:"https://atjon.substack.com",
+    size:102,
+    color:"#101e44",
+    colorLight:"#1a4898",
+    delay:0.4
+  },
+  {
+    name:"RateMyRep\nNewsletter",
+    pub:"RATEMYREP",
+    desc:"Civic accountability dispatches — coming soon.",
+    url:"https://www.ratemyrep.app",
+    size:96,
+    color:"#0e1c3c",
+    colorLight:"#1a4088",
+    delay:0.5
+  },
+  {
+    name:"All Articles\non Substack",
+    pub:"ARCHIVE",
+    desc:"Full archive · atjon.substack.com",
+    url:"https://atjon.substack.com",
+    size:88,
+    color:"#0c1832",
+    colorLight:"#163870",
+    delay:0.6
+  },
+  {
+    name:"Coming\nSoon",
+    pub:"",
+    desc:"New pieces in progress",
+    url:null,
+    size:76,
+    color:"#080e1c",
+    colorLight:"#0e1828",
+    delay:0.7,
+    soon:true
+  },
+  {
+    name:"Coming\nSoon",
+    pub:"",
+    desc:"",
+    url:null,
+    size:68,
+    color:"#080e1c",
+    colorLight:"#0e1828",
+    delay:0.8,
+    soon:true
+  }
+];
+
+const field=document.getElementById('orbs-field');
+ARTICLES.forEach(a=>{
+  const wrap=document.createElement('div');
+  wrap.className='orb-wrap'+(a.soon?' coming-soon-orb':'');
+  wrap.style.animationDelay=a.delay+'s';
+
+  const tag=a.url?'a':'div';
+  const sphere=document.createElement(tag);
+  sphere.className='orb-sphere';
+  if(a.url){sphere.href=a.url;sphere.target='_blank';sphere.rel='noreferrer';}
+  sphere.style.cssText=`
+    width:${a.size}px;height:${a.size}px;
+    background:radial-gradient(circle at 36% 28%, ${a.color}ff 0%, ${a.color}cc 42%, ${a.color}77 78%, ${a.color}22 100%);
+    border:1.5px solid ${a.colorLight}${a.soon?'22':'55'};
+    animation-delay:${a.delay}s,${a.delay}s;
+    cursor:${a.url?'pointer':'default'};
+  `;
+
+  const inner=document.createElement('div');
+  inner.style.cssText=`font-size:${Math.max(7.5,a.size*0.09)}px;font-weight:700;letter-spacing:0.1em;color:${a.soon?'rgba(50,80,120,0.45)':'rgba(140,200,255,0.92)'};text-align:center;line-height:1.3;padding:8px;text-shadow:0 1px 8px rgba(0,0,0,0.95);font-family:'Courier New',monospace;`;
+  inner.innerHTML=a.name.replace('\n','<br>');
+  sphere.appendChild(inner);
+
+  const pubEl=document.createElement('div');
+  pubEl.className='orb-pub';
+  pubEl.textContent=a.pub;
+
+  const nameEl=document.createElement('div');
+  nameEl.className='orb-name';
+  nameEl.style.color=a.soon?'#142030':a.colorLight;
+  nameEl.textContent=a.soon?'COMING SOON':'READ →';
+
+  const descEl=document.createElement('div');
+  descEl.className='orb-desc';
+  descEl.textContent=a.desc;
+
+  wrap.appendChild(sphere);
+  if(a.pub) wrap.appendChild(pubEl);
+  wrap.appendChild(nameEl);
+  if(a.desc) wrap.appendChild(descEl);
+  field.appendChild(wrap);
+});
+</script>
+</body>
+</html>

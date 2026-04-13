@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Graphic Info — USNow</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#040810}::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+@keyframes pulseOrb{0%,100%{box-shadow:0 0 30px var(--c,#1a5a8a66),0 0 60px var(--c,#1a5a8a33),inset 0 0 20px rgba(120,200,255,0.06)}50%{box-shadow:0 0 55px var(--c,#1a5a8aaa),0 0 100px var(--c,#1a5a8a55),inset 0 0 30px rgba(120,200,255,0.12)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:0.85}50%{opacity:0.2}}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,90,138,0.4);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:50px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-back{font-size:9px;letter-spacing:0.22em;color:#4a90c8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;border:1px solid rgba(26,90,138,0.4);padding:5px 14px;border-radius:14px;}
+.nav-back:hover{opacity:1;color:#7ab8e8;border-color:#4a90c8;}
+.hero{padding:90px 24px 50px;text-align:center;position:relative;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(26,90,138,0.12) 0%,transparent 70%);pointer-events:none;}
+.eyebrow{font-size:9px;letter-spacing:0.5em;color:#1a6a9a;font-family:'Courier New',monospace;margin-bottom:16px;opacity:0.8;}
+.hero-title{font-size:clamp(28px,4vw,48px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.25;margin:0 0 14px;letter-spacing:0.02em;}
+.hero-title em{color:#4a9ad4;font-style:normal;}
+.hero-sub{font-size:13px;color:#4a6a88;font-family:'Courier New',monospace;letter-spacing:0.1em;margin:0 auto;max-width:500px;line-height:1.7;}
+.orbs-field{max-width:900px;margin:0 auto;padding:40px 24px 80px;display:flex;flex-wrap:wrap;justify-content:center;gap:32px 40px;align-items:flex-end;}
+.orb-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp 0.6s ease both;}
+.orb-sphere{border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;transition:transform 0.22s ease;}
+.orb-sphere:hover{transform:scale(1.1) translateY(-4px);}
+.orb-sphere.float-anim{animation:float 4s ease-in-out infinite,pulseOrb 4s ease-in-out infinite;}
+.orb-inner{font-family:'Courier New',monospace;text-align:center;line-height:1.3;padding:8px;pointer-events:none;}
+.orb-name{font-size:9px;letter-spacing:0.18em;color:#4a90c8;font-family:'Courier New',monospace;text-align:center;font-weight:700;text-transform:uppercase;}
+.orb-desc{font-size:10px;color:#3a5a7a;font-family:'Courier New',monospace;text-align:center;margin-top:4px;letter-spacing:0.06em;max-width:110px;line-height:1.5;}
+.coming-soon .orb-sphere{opacity:0.45;cursor:default;}
+.coming-soon .orb-sphere:hover{transform:none;}
+.coming-soon .orb-name{color:#2a4a6a;opacity:0.6;}
+.section-divider{width:40px;height:1px;background:rgba(26,90,138,0.3);margin:0 auto 60px;}
+footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,122,0.2);text-align:center;}
+footer a{font-size:9px;color:#2a4a6a;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;}
+footer a:hover{color:#4a90c8;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="us">US</span><span class="now">NOW</span></a>
+  <a href="index.html" class="nav-back">← BACK TO SCALE</a>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">FOUNDATIONS · GRAPHIC INFO</div>
+  <h1 class="hero-title">The data is the <em>argument.</em></h1>
+  <p class="hero-sub">Each infographic below is a question made visible. Tap any orb to go directly to the graphic.</p>
+</div>
+
+<div class="orbs-field" id="orbs-field"></div>
+
+<div class="section-divider"></div>
+
+<footer>
+  <a href="index.html">← USNow Home</a>
+  &nbsp;·&nbsp;
+  <a href="gallery.html">The Gallery →</a>
+  &nbsp;·&nbsp;
+  <a href="journal.html">USNow Journal →</a>
+  &nbsp;·&nbsp;
+  <a href="substack.html">Substack Articles →</a>
+</footer>
+
+<script>
+const INFOGRAPHICS=[
+  {
+    name:"Who Rules\nthe World",
+    desc:"Power pyramid · 6 tiers",
+    url:"https://www.usnow.app/graphics/who-rules-the-world",
+    size:130,
+    color:"#1a5a8a",
+    colorLight:"#4a90c8",
+    delay:0
+  },
+  {
+    name:"Corruption\nTracker",
+    desc:"Follow the money · names & records",
+    url:"https://www.usnow.app/graphics/corruption_tracker.html",
+    size:118,
+    color:"#8a2a10",
+    colorLight:"#d4621a",
+    delay:0.1,
+    pulse:"corrupt"
+  },
+  {
+    name:"Hidden Costs\nof Defense",
+    desc:"$886B · what it could buy",
+    url:"https://www.usnow.app/graphics/hidden-costs",
+    size:122,
+    color:"#1a4a7a",
+    colorLight:"#3a80c8",
+    delay:0.2
+  },
+  {
+    name:"Israel Aid\nTimeline",
+    desc:"$330B since 1948 · 55 years",
+    url:"https://www.usnow.app/graphics/israel-aid-timeline",
+    size:112,
+    color:"#1a3a6a",
+    colorLight:"#2a6aaa",
+    delay:0.3
+  },
+  {
+    name:"750 Bases\nWorldwide",
+    desc:"80 countries · mapped",
+    url:"https://www.usnow.app/graphics/750-bases",
+    size:120,
+    color:"#1a4a8a",
+    colorLight:"#2a7ad4",
+    delay:0.4
+  },
+  {
+    name:"Coming\nSoon",
+    desc:"Federal budget · deep dive",
+    url:null,
+    size:90,
+    color:"#0e2030",
+    colorLight:"#1a3a5a",
+    delay:0.5,
+    soon:true
+  },
+  {
+    name:"Coming\nSoon",
+    desc:"AI & democracy · data",
+    url:null,
+    size:82,
+    color:"#0e2030",
+    colorLight:"#1a3a5a",
+    delay:0.6,
+    soon:true
+  }
+];
+
+const field=document.getElementById('orbs-field');
+INFOGRAPHICS.forEach((g,i)=>{
+  const wrap=document.createElement('div');
+  wrap.className='orb-wrap'+(g.soon?' coming-soon':'');
+  wrap.style.animationDelay=g.delay+'s';
+
+  const tag=g.url?'a':'div';
+  const sphere=document.createElement(tag);
+  sphere.className='orb-sphere'+(g.soon?'':' float-anim');
+  if(g.url){sphere.href=g.url;sphere.target='_blank';sphere.rel='noreferrer';}
+  sphere.style.cssText=`
+    width:${g.size}px;height:${g.size}px;
+    background:radial-gradient(circle at 36% 28%, ${g.color}ff 0%, ${g.color}cc 40%, ${g.color}88 75%, ${g.color}44 100%);
+    border:1.5px solid ${g.colorLight}${g.soon?'33':'88'};
+    --c:${g.colorLight}66;
+    animation-delay:${g.delay}s,${g.delay}s;
+  `;
+  if(g.pulse==='corrupt'){
+    sphere.style.animation='float 4s ease-in-out infinite';
+    sphere.style.boxShadow=`0 0 30px #d4621a66,0 0 60px #d4621a33,inset 0 0 20px rgba(255,150,80,0.06)`;
+  }
+
+  const inner=document.createElement('div');
+  inner.className='orb-inner';
+  inner.innerHTML=`<div style="font-size:${Math.max(9,g.size*0.095)}px;font-weight:700;letter-spacing:0.12em;color:${g.soon?'rgba(100,140,180,0.4)':'rgba(160,210,255,0.95)'};line-height:1.3;text-shadow:0 1px 8px rgba(0,0,0,0.9);">${g.name.replace('\n','<br>')}</div>`;
+  sphere.appendChild(inner);
+
+  const nameEl=document.createElement('div');
+  nameEl.className='orb-name';
+  nameEl.style.color=g.soon?'#1a3a5a':g.colorLight;
+  nameEl.textContent=g.soon?'COMING SOON':'EXPLORE →';
+
+  const descEl=document.createElement('div');
+  descEl.className='orb-desc';
+  descEl.textContent=g.desc;
+
+  wrap.appendChild(sphere);
+  wrap.appendChild(nameEl);
+  wrap.appendChild(descEl);
+  field.appendChild(wrap);
+});
+</script>
+</body>
+</html>

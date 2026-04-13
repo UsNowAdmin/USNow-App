@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>USNow Journal</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#040810}::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+@keyframes pulseOrb{0%,100%{box-shadow:0 0 28px rgba(26,74,122,0.5),0 0 55px rgba(26,74,122,0.22),inset 0 0 18px rgba(120,180,255,0.05)}50%{box-shadow:0 0 50px rgba(26,74,122,0.8),0 0 90px rgba(26,74,122,0.35),inset 0 0 28px rgba(120,180,255,0.1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,74,122,0.4);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:50px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-back{font-size:9px;letter-spacing:0.22em;color:#4a80b8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;border:1px solid rgba(26,74,122,0.4);padding:5px 14px;border-radius:14px;}
+.nav-back:hover{opacity:1;border-color:#4a80b8;}
+.hero{padding:90px 24px 50px;text-align:center;position:relative;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(26,74,122,0.1) 0%,transparent 65%);pointer-events:none;}
+.eyebrow{font-size:9px;letter-spacing:0.5em;color:#1a5a8a;font-family:'Courier New',monospace;margin-bottom:16px;opacity:0.8;}
+.hero-title{font-size:clamp(28px,4vw,48px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.25;margin:0 0 14px;}
+.hero-title em{color:#3a80c8;font-style:normal;}
+.hero-sub{font-size:13px;color:#3a5a78;font-family:'Courier New',monospace;letter-spacing:0.1em;margin:0 auto;max-width:540px;line-height:1.7;}
+.orbs-field{max-width:960px;margin:0 auto;padding:40px 24px 80px;display:flex;flex-wrap:wrap;justify-content:center;gap:36px 44px;align-items:flex-end;}
+.orb-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp 0.6s ease both;}
+.orb-sphere{border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;transition:transform 0.22s ease;animation:float 4.2s ease-in-out infinite,pulseOrb 4.2s ease-in-out infinite;text-decoration:none;}
+.orb-sphere:hover{transform:scale(1.1) translateY(-5px);}
+.orb-name{font-size:9px;letter-spacing:0.18em;color:#2a6aaa;font-family:'Courier New',monospace;text-align:center;font-weight:700;}
+.orb-desc{font-size:10px;color:#2a4a68;font-family:'Georgia',serif;text-align:center;max-width:130px;line-height:1.5;font-style:italic;}
+.coming-soon-orb{opacity:0.4;}
+.coming-soon-orb .orb-sphere{cursor:default;}
+.coming-soon-orb .orb-sphere:hover{transform:none;}
+footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,122,0.2);text-align:center;}
+footer a{font-size:9px;color:#1a3a5a;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;}
+footer a:hover{color:#4a80b8;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="us">US</span><span class="now">NOW</span></a>
+  <a href="index.html" class="nav-back">← BACK TO SCALE</a>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">FOUNDATIONS · USNOW JOURNAL</div>
+  <h1 class="hero-title">Where data becomes <em>narrative.</em></h1>
+  <p class="hero-sub">Satire, essays, investigations, and dispatches written at the intersection of civic data and lived experience. Tap any orb to go directly to the piece.</p>
+</div>
+
+<div class="orbs-field" id="orbs-field"></div>
+
+<footer>
+  <a href="graphic-info.html">← Graphic Info</a>
+  &nbsp;·&nbsp;
+  <a href="gallery.html">The Gallery</a>
+  &nbsp;·&nbsp;
+  <a href="index.html">USNow Home</a>
+  &nbsp;·&nbsp;
+  <a href="substack.html">Substack Articles →</a>
+</footer>
+
+<script>
+const JOURNAL=[
+  {
+    name:"The Apprentice:\nWashington Edition",
+    desc:"Michael Cohen narrates. Reality TV reunion format. Twelve sections.",
+    url:"https://www.usnow.app/apprentice/index.html",
+    size:148,
+    color:"#1a3a6a",
+    colorLight:"#4a8ad4",
+    tag:"FEATURED SERIES",
+    delay:0
+  },
+  {
+    name:"Who Rules\nthe World",
+    desc:"Power pyramid — six tiers of control made visible.",
+    url:"https://www.usnow.app/graphics/who-rules-the-world",
+    size:118,
+    color:"#1a4a7a",
+    colorLight:"#3a80c8",
+    tag:"GRAPHIC ESSAY",
+    delay:0.1
+  },
+  {
+    name:"America's\nIndigenous Sin",
+    desc:"On the debt that doesn't appear in any budget.",
+    url:"https://open.substack.com/pub/atjon/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
+    size:112,
+    color:"#1a3060",
+    colorLight:"#2a6aaa",
+    tag:"ESSAY",
+    delay:0.2
+  },
+  {
+    name:"The 80% Has\nNo Lobby",
+    desc:"On information asymmetry and democratic failure.",
+    url:"https://atjon.substack.com",
+    size:106,
+    color:"#142850",
+    colorLight:"#2a5898",
+    tag:"ESSAY",
+    delay:0.3
+  },
+  {
+    name:"AGI Isn't a Mind.\nIt's a Condition.",
+    desc:"On what artificial general intelligence actually means.",
+    url:"https://atjon.substack.com",
+    size:100,
+    color:"#101e40",
+    colorLight:"#2050a0",
+    tag:"ESSAY",
+    delay:0.4
+  },
+  {
+    name:"All Writing\non Substack",
+    desc:"atjon.substack.com — full archive",
+    url:"https://atjon.substack.com",
+    size:92,
+    color:"#0e1a38",
+    colorLight:"#1a4888",
+    tag:"ARCHIVE →",
+    delay:0.5
+  },
+  {
+    name:"Coming\nSoon",
+    desc:"New series in progress",
+    url:null,
+    size:80,
+    color:"#080e1a",
+    colorLight:"#101e30",
+    tag:"COMING SOON",
+    delay:0.6,
+    soon:true
+  }
+];
+
+const field=document.getElementById('orbs-field');
+JOURNAL.forEach(j=>{
+  const wrap=document.createElement('div');
+  wrap.className='orb-wrap'+(j.soon?' coming-soon-orb':'');
+  wrap.style.animationDelay=j.delay+'s';
+
+  const tag=j.url?'a':'div';
+  const sphere=document.createElement(tag);
+  sphere.className='orb-sphere';
+  if(j.url){sphere.href=j.url;sphere.target='_blank';sphere.rel='noreferrer';}
+  sphere.style.cssText=`
+    width:${j.size}px;height:${j.size}px;
+    background:radial-gradient(circle at 36% 28%, ${j.color}ff 0%, ${j.color}cc 42%, ${j.color}77 78%, ${j.color}33 100%);
+    border:1.5px solid ${j.colorLight}${j.soon?'22':'66'};
+    animation-delay:${j.delay}s,${j.delay}s;
+    cursor:${j.url?'pointer':'default'};
+  `;
+
+  const inner=document.createElement('div');
+  inner.style.cssText=`font-size:${Math.max(8,j.size*0.095)}px;font-weight:700;letter-spacing:0.11em;color:${j.soon?'rgba(60,90,130,0.5)':'rgba(150,205,255,0.93)'};text-align:center;line-height:1.3;padding:8px;text-shadow:0 1px 8px rgba(0,0,0,0.95);font-family:'Courier New',monospace;`;
+  inner.innerHTML=j.name.replace('\n','<br>');
+  sphere.appendChild(inner);
+
+  const tagEl=document.createElement('div');
+  tagEl.className='orb-name';
+  tagEl.style.color=j.soon?'#1a2a40':j.colorLight;
+  tagEl.textContent=j.tag;
+
+  const descEl=document.createElement('div');
+  descEl.className='orb-desc';
+  descEl.textContent=j.desc;
+
+  wrap.appendChild(sphere);
+  wrap.appendChild(tagEl);
+  wrap.appendChild(descEl);
+  field.appendChild(wrap);
+});
+</script>
+</body>
+</html>
