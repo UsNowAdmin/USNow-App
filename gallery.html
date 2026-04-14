@@ -49,8 +49,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97)
 #modal-box{background:linear-gradient(160deg,#080f1a 0%,#050910 100%);border-radius:22px;padding:36px 28px 28px;max-width:580px;width:100%;position:relative;max-height:90vh;overflow-y:auto;}
 .modal-close-btn{position:absolute;top:14px;right:16px;font-size:9px;letter-spacing:0.2em;color:#2a5a4a;font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(42,90,74,0.3);padding:4px 12px;border-radius:10px;background:transparent;transition:all 0.2s;}
 .modal-close-btn:hover{color:#4a9a70;border-color:#4a9a70;}
-.modal-img-wrap{width:100%;aspect-ratio:1/1;border-radius:14px;overflow:hidden;margin-bottom:20px;background:#060e14;border:1px solid rgba(26,74,60,0.3);display:flex;align-items:center;justify-content:center;}
-.modal-img-wrap img{width:100%;height:100%;object-fit:cover;}
+.modal-img-wrap{width:100%;border-radius:14px;overflow:hidden;margin-bottom:20px;background:#060e14;border:1px solid rgba(26,74,60,0.3);display:flex;align-items:center;justify-content:center;cursor:zoom-in;}
+.modal-img-wrap img{width:100%;height:auto;max-height:75vh;object-fit:contain;display:block;border-radius:12px;}
+/* Lightbox */
+#lightbox{display:none;position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,0.97);align-items:center;justify-content:center;cursor:zoom-out;}
+#lightbox.open{display:flex;}
+#lightbox img{max-width:96vw;max-height:96vh;object-fit:contain;border-radius:6px;touch-action:pinch-zoom;user-select:none;}
+#lightbox-close{position:absolute;top:16px;right:20px;font-size:9px;letter-spacing:0.2em;color:rgba(255,255,255,0.4);font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(255,255,255,0.15);padding:4px 12px;border-radius:10px;transition:all 0.2s;}
+#lightbox-close:hover{color:white;border-color:white;}
+#lightbox-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:0.2em;color:rgba(255,255,255,0.2);font-family:'Courier New',monospace;pointer-events:none;}
 .modal-placeholder-text{font-size:10px;color:#1a3a2a;font-family:'Courier New',monospace;letter-spacing:0.2em;animation:blink 2.5s ease-in-out infinite;}
 .modal-title{font-size:24px;font-weight:300;color:#d4e8d8;font-family:'Georgia',serif;margin:0 0 10px;line-height:1.25;}
 .modal-caption{font-size:13px;color:#4a7060;font-family:'Georgia',serif;line-height:1.85;margin:0 0 16px;}
@@ -92,6 +99,12 @@ footer a:hover{color:#4a9a70;}
   </div>
 </div>
 
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()">CLOSE ×</button>
+  <img id="lightbox-img" src="" alt=""/>
+  <div id="lightbox-hint">TAP ANYWHERE TO CLOSE · PINCH TO ZOOM</div>
+</div>
+
 <footer>
   <a href="graphic-info.html">← Graphic Images</a>
   <a href="index.html">USNow Home</a>
@@ -103,8 +116,8 @@ footer a:hover{color:#4a9a70;}
 const SOCIALS=[
   {name:"X · @ATJon27",url:"https://x.com/ATJon27",color:"#1a2a3a",border:"#2a4a6a",size:32},
   {name:"Substack · ATJon",url:"https://atjon.substack.com",color:"#1a2a2a",border:"#2a5a4a",size:32},
-  {name:"YouTube",url:"https://youtube.com",color:"#2a1a1a",border:"#6a2a2a",size:32},
-  {name:"TikTok",url:"https://tiktok.com",color:"#1a1a2a",border:"#2a3a5a",size:32},
+  {name:"YouTube",url:"https://www.youtube.com/@AtJon27",color:"#2a1a1a",border:"#6a2a2a",size:32},
+  {name:"TikTok",url:"https://www.tiktok.com/@USNow.app",color:"#1a1a2a",border:"#2a3a5a",size:32},
 ];
 const socialStrip=document.getElementById('social-strip');
 SOCIALS.forEach(s=>{
@@ -126,7 +139,7 @@ const PIECES=[
     img:"graphics/sin.PNG",
     color:"#1a3a5a",border:"#2a6a9a",glowColor:"#2a6a9a",
     size:160,
-    link:"https://open.substack.com/pub/atjon/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
+    link:"https://open.substack.com/pub/atjon27/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
     linkLabel:"READ THE ESSAY →",
     delay:0
   },
@@ -220,6 +233,7 @@ function openModal(p){
   img.src=p.img;img.alt=p.title;img.style.display='none';ph.style.display='block';
   img.onload=()=>{img.style.display='block';ph.style.display='none';};
   img.onerror=()=>{img.style.display='none';ph.textContent='IMAGE COMING SOON';};
+  img.onclick=()=>openLightbox(p.img,p.title);
   document.getElementById('modal-title').textContent=p.title.replace('\n',' ');
   document.getElementById('modal-caption').textContent=p.caption;
   document.getElementById('modal-link-wrap').innerHTML=p.link?`<a href="${p.link}" target="_blank" rel="noreferrer" class="modal-link">${p.linkLabel||'VIEW →'}</a>`:'';
@@ -228,8 +242,17 @@ function openModal(p){
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
 }
+function openLightbox(src,alt){
+  const lb=document.getElementById('lightbox');
+  const lbImg=document.getElementById('lightbox-img');
+  lbImg.src=src;lbImg.alt=alt||'';
+  lb.classList.add('open');
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+}
 function closeModal(){document.getElementById('modal-overlay').classList.remove('open');document.body.style.overflow='';}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();closeModal();}});
 </script>
 </body>
 </html>
