@@ -27,7 +27,7 @@ body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',se
 #ticker-inner{display:flex;gap:56px;animation:ticker 72s linear infinite;white-space:nowrap;}
 #ticker-inner span{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;opacity:0.75;}
 nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(122,96,48,0.33);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:44px;}
-.nav-logo{display:flex;align-items:center;gap:8px;}
+.nav-logo{display:flex;align-items:center;gap:16px;}
 .nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
 .nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
 .nav-links{display:flex;gap:16px;align-items:center;}
@@ -82,7 +82,7 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .modal-orb-tag{font-size:9px;letter-spacing:0.1em;font-family:'Courier New',monospace;border-radius:10px;padding:4px 10px;display:inline-block;margin:0 5px 5px 0;}
 #modal-close{margin-top:22px;background:transparent;padding:10px 28px;border-radius:26px;cursor:pointer;font-size:9px;letter-spacing:0.25em;font-family:'Courier New',monospace;transition:all 0.2s;}
 #modal-close:hover{opacity:1;}
-#hero{background:#04080f;padding:68px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);}
+#hero{background:#04080f;padding:18px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);}
 #hero .inner{max-width:680px;margin:0 auto;text-align:center;}
 .hero-tap-hint{font-size:8px;letter-spacing:0.28em;color:rgba(201,168,76,0.35);font-family:'Courier New',monospace;margin-bottom:18px;}
 .hero-eyebrow{font-size:10px;letter-spacing:0.5em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:24px;}
@@ -173,8 +173,8 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   </div>
   <div class="nav-links">
     <a href="#scale">Scale</a>
-    <a href="#data">Data</a>
-    <a href="#journal">Journal</a>
+    <a href="#about">About</a>
+    <a href="journal.html">Journal</a>
     <a href="#sources">Sources</a>
     <a href="#thoughts" class="nav-cta">Leave a Comment →</a>
   </div>
@@ -270,43 +270,11 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   </div>
 </section>
 
-<section id="journal">
-  <div class="inner">
-    <div class="section-eyebrow">FROM THE JOURNAL</div>
-    <a href="https://www.usnow.app/apprentice/index.html" target="_blank" rel="noreferrer" class="journal-card">
-      <div class="journal-card-body">
-        <div class="journal-tag">FEATURED SERIES · NEW EPISODES DAILY</div>
-        <h3 class="journal-title">The Apprentice:<br>Washington Edition</h3>
-        <p class="journal-sub">A real-life contemporaneous retrospective parody</p>
-        <p class="journal-desc">Narrated by Michael Cohen · Reality TV reunion format · Written for the U.S. Semiquincentennial</p>
-      </div>
-      <div class="journal-footer"><span>Join the Show Already in Progress</span><span>READ THE SERIES →</span></div>
-    </a>
-    <div class="journal-more"><a href="https://atjon.substack.com" target="_blank" rel="noreferrer">All writing on Substack · atjon.substack.com →</a></div>
-  </div>
-</section>
-
-<section id="data">
-  <div class="inner">
-    <div class="data-header">
-      <div class="section-eyebrow">GRAPHIC IMAGES — SEE IT PLAIN AND CLEAR</div>
-      <h2 class="data-h2">The Question is the Answer. The data is the argument.</h2>
-    </div>
-    <div class="stats-grid">
-      <a href="https://www.usnow.app/graphics/hidden-costs" target="_blank" class="stat-card"><div class="stat-num">$886B</div><div class="stat-label">DoD Budget FY2025</div><div class="stat-sub">More than the next 10 nations combined</div></a>
-      <a href="https://www.usnow.app/graphics/750-bases" target="_blank" class="stat-card"><div class="stat-num">750+</div><div class="stat-label">U.S. Bases Worldwide</div><div class="stat-sub">In 80 countries · the largest military footprint in history</div></a>
-      <a href="https://foreignassistance.gov" target="_blank" class="stat-card"><div class="stat-num">1.2%</div><div class="stat-label">Actual Foreign Aid Share</div><div class="stat-sub">Americans guess 25% · the gap is the policy</div></a>
-      <a href="https://www.usnow.app/graphics/israel-aid-timeline" target="_blank" class="stat-card"><div class="stat-num">$330B</div><div class="stat-label">U.S. Aid to Israel</div><div class="stat-sub">Since 1948 · 55-year cumulative record</div></a>
-      <a href="https://www.cbo.gov" target="_blank" class="stat-card"><div class="stat-num">$900B</div><div class="stat-label">Annual Interest on Debt</div><div class="stat-sub">More than the entire defense budget</div></a>
-      <a href="https://www.usnow.app/graphics/750-bases" target="_blank" class="stat-card"><div class="stat-num">243k</div><div class="stat-label">Troops Stationed Abroad</div><div class="stat-sub">At any given moment · in 80 countries</div></a>
-    </div>
-    <div class="data-links">
-      <a href="https://www.usnow.app/graphics/who-rules-the-world" target="_blank" class="data-pill">Who Rules the World →</a>
-      <a href="https://www.usnow.app/graphics/corruption_tracker.html" target="_blank" class="data-pill" style="color:#d4621a;border-color:#d4621a55;">Corruption Tracker →</a>
-      <a href="https://www.usnow.app/graphics/hidden-costs" target="_blank" class="data-pill">Hidden Costs of Defense →</a>
-      <a href="https://www.usnow.app/graphics/israel-aid-timeline" target="_blank" class="data-pill">Israel Aid Timeline →</a>
-      <a href="https://www.ratemyrep.app" target="_blank" class="data-pill" style="color:#c9a84c;border-color:#c9a84c55;">RateMyRep →</a>
-    </div>
+<!-- WHAT IS USNOW — intro paper placeholder -->
+<section id="about" style="background:#04080f;padding:68px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);">
+  <div style="max-width:680px;margin:0 auto;text-align:center;">
+    <div style="font-size:10px;letter-spacing:0.45em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:32px;">WHAT IS USNOW</div>
+    <p style="font-size:15px;font-weight:300;color:#4a5568;font-family:'Georgia',serif;line-height:1.8;font-style:italic;">— intro paper coming soon —</p>
   </div>
 </section>
 
