@@ -99,54 +99,41 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .foundation-moon:hover{transform:translateY(-6px) scale(1.08) translateX(-50%)!important;}
 
 /* ══════════════════════════════════════════════
-   ORB WORLD — fly-in from orb position
+   ORB WORLD — slide-up drawer (mobile-safe)
    ══════════════════════════════════════════════ */
 #orb-world-overlay{
   display:none;position:fixed;inset:0;z-index:2000;
   background:rgba(2,4,10,0);
-  transition:background 0.4s ease;
+  transition:background 0.3s ease;
+  align-items:flex-end;justify-content:center;
 }
 #orb-world-overlay.open{
-  display:flex;align-items:center;justify-content:center;
-  background:rgba(2,4,10,0.92);
+  display:flex;
+  background:rgba(2,4,10,0.88);
 }
-
 #orb-world{
-  position:fixed;
-  border-radius:50%;
-  width:92vmin;height:92vmin;
-  max-width:560px;max-height:560px;
+  position:relative;
+  width:100%;
+  max-width:640px;
+  max-height:85vh;
+  border-radius:22px 22px 0 0;
   display:flex;flex-direction:column;
-  align-items:center;justify-content:flex-start;
   overflow:hidden;
-  transform-origin:center center;
-  transform:scale(0.08);
+  transform:translateY(100%);
   opacity:0;
   pointer-events:none;
   z-index:2001;
-  /* transition set dynamically */
-}
-#orb-world.expanding{
-  transition:
-    transform 0.52s cubic-bezier(0.34,1.42,0.64,1),
-    opacity 0.28s ease,
-    border-radius 0.52s ease,
-    left 0.52s cubic-bezier(0.34,1.42,0.64,1),
-    top 0.52s cubic-bezier(0.34,1.42,0.64,1),
-    width 0.52s cubic-bezier(0.34,1.42,0.64,1),
-    height 0.52s cubic-bezier(0.34,1.42,0.64,1);
-}
-#orb-world.collapsing{
-  transition:
-    transform 0.32s cubic-bezier(0.55,0,1,0.45),
-    opacity 0.22s ease,
-    border-radius 0.32s ease;
+  transition:transform 0.38s cubic-bezier(0.32,0.94,0.6,1),opacity 0.25s ease;
 }
 #orb-world.open{
-  transform:scale(1);
+  transform:translateY(0);
   opacity:1;
-  border-radius:32px;
   pointer-events:all;
+}
+#orb-world.collapsing{
+  transform:translateY(100%);
+  opacity:0;
+  pointer-events:none;
 }
 
 /* Atmospheric background layers inside orb world */
@@ -508,6 +495,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 <div id="orb-world-overlay" onclick="closeOrbWorld()">
   <div id="orb-world" onclick="event.stopPropagation()">
     <div id="orb-world-atmos"></div>
+    <div style="width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,0.12);margin:10px auto 0;flex-shrink:0;position:relative;z-index:10;"></div>
     <button id="orb-world-close" onclick="closeOrbWorld()">✕ EXIT</button>
     <div id="orb-world-scroll">
       <div class="ow-layer-tag" id="ow-layer-tag"></div>
@@ -594,11 +582,11 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <p style="font-size:15px;font-weight:300;color:#8898b0;font-family:'Georgia',serif;line-height:1.7;margin:0 0 28px;">This site is a work in progress. Your thoughts, comments, suggestions, and notes are welcome. Email is optional.</p>
     <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:flex-end;">
       <input id="t-email" type="email" placeholder="email (optional)"
-        style="background:transparent;border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:6px 0;font-size:12px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:160px;"
+        style="background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:6px 8px;font-size:12px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:160px;border-radius:4px 4px 0 0;"
         onfocus="this.style.borderBottomColor='rgba(201,168,76,0.6)'"
         onblur="this.style.borderBottomColor='rgba(122,96,48,0.3)'"/>
       <input id="t-note" type="text" placeholder="your thought..."
-        style="background:transparent;border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:6px 0;font-size:12px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:240px;"
+        style="background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:6px 8px;font-size:12px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:240px;border-radius:4px 4px 0 0;"
         onfocus="this.style.borderBottomColor='rgba(201,168,76,0.6)'"
         onblur="this.style.borderBottomColor='rgba(122,96,48,0.3)'"/>
       <button onclick="submitThought()"
@@ -614,11 +602,11 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.04) 0%,transparent 70%);pointer-events:none;"></div>
 
-  <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:4px;color:rgba(201,168,76,0.55);text-transform:uppercase;text-align:center;margin-bottom:28px;">WHAT IS USNOW</div>
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:4px;color:rgba(201,168,76,0.55);text-transform:uppercase;text-align:center;margin-bottom:28px;">WHAT IS THIS</div>
 
   <div style="width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.6),transparent);margin:0 auto 24px;"></div>
 
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,8vw,62px);letter-spacing:3px;color:#e8e0d0;text-align:center;margin:0 0 48px;line-height:1;">USNow</h2>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,8vw,62px);letter-spacing:3px;text-align:center;margin:0 0 48px;line-height:1;"><span style="color:#c9a84c;">Us</span><span style="color:#e8e0d0;">Now</span></h2>
 
   <div style="max-width:680px;margin:0 auto;position:relative;z-index:1;">
 
@@ -858,61 +846,18 @@ function buildScale(){
 function openOrbWorld(orb, layer, originEl){
   const world = document.getElementById('orb-world');
   const overlay = document.getElementById('orb-world-overlay');
-
-  // Get orb's center on screen
-  const rect = originEl.getBoundingClientRect();
-  const orbCX = rect.left + rect.width/2;
-  const orbCY = rect.top + rect.height/2;
-
-  // Target: center of screen
-  const targetW = Math.min(window.innerWidth*0.92, 560);
-  const targetH = Math.min(window.innerWidth*0.92, 560);
-  const targetX = window.innerWidth/2;
-  const targetY = window.innerHeight/2;
-
-  // Set orb's color variables
-  world.style.setProperty('--orb-grad', `radial-gradient(circle at 38% 28%, ${orb.color}ff 0%, ${orb.color}88 45%, ${orb.color}22 100%)`);
-  world.style.setProperty('--orb-highlight', orb.color);
-
-  // Style the world box
-  world.style.background = `radial-gradient(ellipse at 38% 24%, ${orb.color}28 0%, #070c1a 60%, #040810 100%)`;
-  world.style.border = `1px solid ${orb.color}66`;
-  world.style.boxShadow = `0 0 80px ${orb.color}44, 0 0 200px rgba(0,0,0,0.98), inset 0 0 40px ${orb.color}11`;
-
-  // Close button color
+  world.style.background = `radial-gradient(ellipse at 38% 0%, ${orb.color}22 0%, #070c1a 55%, #040810 100%)`;
+  world.style.borderTop = `1px solid ${orb.color}55`;
+  world.style.boxShadow = `0 -8px 60px ${orb.color}33, 0 0 0 1px ${orb.color}22`;
   document.getElementById('orb-world-close').style.color = orb.color+'99';
   document.getElementById('orb-world-close').style.borderColor = orb.color+'33';
-
-  // Start: tiny, at orb's position
-  world.classList.remove('expanding','collapsing','open');
-  world.style.width = rect.width+'px';
-  world.style.height = rect.height+'px';
-  world.style.left = orbCX+'px';
-  world.style.top = orbCY+'px';
-  world.style.transform = 'translate(-50%,-50%) scale(0.1)';
-  world.style.borderRadius = '50%';
-  world.style.opacity = '0';
-
-  // Populate content
   populateOrbWorld(orb, layer);
-
-  // Show overlay
   overlay.style.display = 'flex';
+  world.classList.remove('collapsing','open');
   requestAnimationFrame(()=>{
-    overlay.style.background = 'rgba(2,4,10,0.92)';
-    requestAnimationFrame(()=>{
-      world.classList.add('expanding');
-      world.style.width = targetW+'px';
-      world.style.height = targetH+'px';
-      world.style.left = targetX+'px';
-      world.style.top = targetY+'px';
-      world.style.transform = 'translate(-50%,-50%) scale(1)';
-      world.style.borderRadius = '22px';
-      world.style.opacity = '1';
-      setTimeout(()=>{world.classList.add('open');}, 520);
-    });
+    overlay.style.background = 'rgba(2,4,10,0.88)';
+    requestAnimationFrame(()=>{ world.classList.add('open'); });
   });
-
   document.body.style.overflow = 'hidden';
 }
 
@@ -980,17 +925,14 @@ function renderLink(l, color, prefix){
 function closeOrbWorld(){
   const world = document.getElementById('orb-world');
   const overlay = document.getElementById('orb-world-overlay');
-  world.classList.remove('expanding','open');
+  world.classList.remove('open');
   world.classList.add('collapsing');
-  world.style.transform = 'translate(-50%,-50%) scale(0.05)';
-  world.style.opacity = '0';
-  world.style.borderRadius = '50%';
   overlay.style.background = 'rgba(2,4,10,0)';
   setTimeout(()=>{
     overlay.style.display='none';
     world.classList.remove('collapsing');
     document.body.style.overflow='';
-  }, 340);
+  }, 400);
 }
 
 // ════════════════════════════════════════
