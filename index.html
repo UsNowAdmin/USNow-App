@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USNow — Perspective Engine</title>
+    <title>USNow — The Observer's View</title>
     <style>
         :root {
             --gold: #c9a84c;
             --space: #04080f;
+            --me-glow: rgba(139, 188, 245, 0.4);
         }
 
         body, html {
@@ -18,9 +19,9 @@
             height: 100%; overflow: hidden;
         }
 
-        /* THE 3D SCENE */
-        #scene-container {
-            perspective: 800px; /* This is your "Lens". Lower = more distorted/dramatic */
+        /* THE 3D VIEWPORT */
+        #viewport {
+            perspective: 1200px; /* Deep perspective */
             height: 100vh;
             width: 100vw;
             display: flex;
@@ -28,124 +29,139 @@
             justify-content: center;
         }
 
-        #universe {
+        #world {
             position: relative;
             width: 100%;
             height: 100%;
             transform-style: preserve-3d;
-            /* This moves the whole universe toward/away from you */
-            transition: transform 0.1s linear; 
+            /* The Camera Angle: Looking down and slightly from above */
+            transform: rotateX(10deg) translateY(-50px); 
+            transition: transform 0.1s linear;
         }
 
-        /* THE ORBS */
+        /* SHARED ORB STYLING */
         .orb {
             position: absolute;
-            left: 50%; top: 50%;
+            left: 50%;
             transform-style: preserve-3d;
             border-radius: 50%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            transition: opacity 0.5s;
+            transition: all 0.5s ease;
+            cursor: pointer;
         }
 
-        /* Material Styles from your original */
+        /* I: THE OBSERVER (Foreground/Anchor) */
         .mat-me { 
-            width: 300px; height: 300px;
-            margin-left: -150px; margin-top: -150px;
-            background: radial-gradient(circle at 30% 30%, #8bbcf5, #0b1024);
-            transform: translateZ(200px); /* Closest to you, almost behind the camera */
-            border: 1px solid rgba(139, 188, 245, 0.4);
-            box-shadow: 0 0 50px rgba(139, 188, 245, 0.2);
+            width: 260px; height: 260px;
+            margin-left: -130px;
+            bottom: -50px; /* Positioned at the bottom of the screen */
+            background: radial-gradient(circle at 30% 30%, #3a5a8c, #0b1024);
+            transform: translateZ(400px); /* Pushed toward the user */
+            border: 2px solid var(--me-glow);
+            box-shadow: 0 -20px 60px var(--me-glow);
+            z-index: 100;
         }
 
+        /* II: COMMUNITY (Mid-ground) */
         .mat-community { 
-            width: 500px; height: 500px;
-            margin-left: -250px; margin-top: -250px;
-            background: radial-gradient(circle at 30% 30%, #efc79c, #27140c);
-            transform: translateZ(-600px) translateX(200px); /* Further and slightly right */
-            opacity: 0.8;
+            width: 450px; height: 450px;
+            margin-left: -225px;
+            top: 20%;
+            background: radial-gradient(circle at 30% 30%, #b87830, #27140c);
+            transform: translateZ(-400px) translateX(250px); /* Offset to the right */
+            border: 1px solid rgba(184, 120, 48, 0.3);
         }
 
+        /* III: THE NATION (Background) */
         .mat-nation { 
-            width: 800px; height: 800px;
-            margin-left: -400px; margin-top: -400px;
+            width: 700px; height: 700px;
+            margin-left: -350px;
+            top: 5%;
             background: radial-gradient(circle at 30% 30%, #c9a84c, #1a1405);
-            transform: translateZ(-1500px) translateX(-300px); /* Very far and left */
-            opacity: 0.6;
+            transform: translateZ(-1200px) translateX(-350px); /* Offset to the left */
+            border: 1px solid rgba(201, 168, 76, 0.2);
         }
 
         .label {
             font-family: 'Courier New', monospace;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            font-size: 14px;
-            pointer-events: none;
+            font-size: 12px;
+            padding: 10px;
         }
 
-        /* TEXT HUD */
-        #hud {
-            position: fixed;
-            bottom: 40px; width: 100%;
-            text-align: center;
-            z-index: 100;
-            pointer-events: none;
+        /* TEXT OVERLAYS */
+        #header-hud {
+            position: fixed; top: 40px; width: 100%;
+            text-align: center; pointer-events: none;
+        }
+
+        #nav-hint {
+            position: fixed; bottom: 30px; width: 100%;
+            text-align: center; color: var(--gold);
+            font-size: 9px; letter-spacing: 0.4em;
         }
     </style>
 </head>
 <body>
 
-    <div id="scene-container">
-        <div id="universe">
+    <div id="header-hud">
+        <h1 style="font-weight: 200; letter-spacing: 0.6em; font-size: 18px;">US NOW</h1>
+        <p style="font-size: 10px; opacity: 0.6; margin-top: 10px;">NON-PARTISAN · NON-DENOMINATIONAL</p>
+    </div>
+
+    <div id="viewport">
+        <div id="world">
             
             <div class="orb mat-me">
-                <div class="label">The Observer<br>(Me)</div>
+                <div class="label" style="margin-top: -60px;">The Observer</div>
             </div>
 
-            <div class="orb mat-community" onclick="location.href='#community'">
-                <div class="label">Community & Place</div>
+            <div class="orb mat-community" onclick="alert('Entering Community & Place')">
+                <div class="label">Community<br>& Place</div>
             </div>
 
-            <div class="orb mat-nation" onclick="location.href='#nation'">
+            <div class="orb mat-nation" onclick="alert('Entering The Nation')">
                 <div class="label">The Nation<br>(US)</div>
             </div>
 
         </div>
     </div>
 
-    <div id="hud">
-        <p style="color: var(--gold); font-size: 10px;">SCROLL TO MOVE THROUGH SCALE</p>
-        <h1 style="font-weight: 200; letter-spacing: 0.5em;">US NOW</h1>
-    </div>
+    <div id="nav-hint">SWIPE UP OR SCROLL TO EXPLORE THE SCALE</div>
 
     <script>
-        let zPos = 0;
-        const universe = document.getElementById('universe');
+        let scrollPos = 0;
+        const world = document.getElementById('world');
 
-        // Smooth scroll to Z-move
+        // Scroll Logic: Pushes the world towards the camera
         window.addEventListener('wheel', (e) => {
-            // Adjust speed: deltaY is how fast you scroll
-            zPos += e.deltaY * 0.5; 
-            
-            // Limit the "flight" so you don't go into infinite darkness
-            if (zPos < 0) zPos = 0;
-            if (zPos > 2000) zPos = 2000;
-
-            universe.style.transform = `translateZ(${zPos}px)`;
+            scrollPos += e.deltaY * 0.8;
+            updateCamera();
         });
 
-        // Touch support for mobile
+        // Touch Logic for mobile
         let startY = 0;
         window.addEventListener('touchstart', e => startY = e.touches[0].pageY);
         window.addEventListener('touchmove', e => {
             let deltaY = startY - e.touches[0].pageY;
-            zPos += deltaY * 2;
-            if (zPos < 0) zPos = 0;
-            if (zPos > 2000) zPos = 2000;
-            universe.style.transform = `translateZ(${zPos}px)`;
+            scrollPos += deltaY * 3;
+            updateCamera();
             startY = e.touches[0].pageY;
         });
+
+        function updateCamera() {
+            // Keep scroll within a reasonable range (0 to 1800)
+            if (scrollPos < 0) scrollPos = 0;
+            if (scrollPos > 1800) scrollPos = 1800;
+
+            // Move the world on the Z axis and slightly tilt as we go deeper
+            world.style.transform = `rotateX(${10 + (scrollPos/200)}deg) translateZ(${scrollPos}px) translateY(-50px)`;
+        }
     </script>
 </body>
 </html>
