@@ -1,167 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USNow — The Observer's View</title>
-    <style>
-        :root {
-            --gold: #c9a84c;
-            --space: #04080f;
-            --me-glow: rgba(139, 188, 245, 0.4);
-        }
-
-        body, html {
-            margin: 0; padding: 0;
-            background: var(--space);
-            color: white;
-            font-family: 'Georgia', serif;
-            height: 100%; overflow: hidden;
-        }
-
-        /* THE 3D VIEWPORT */
-        #viewport {
-            perspective: 1200px; /* Deep perspective */
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #world {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            /* The Camera Angle: Looking down and slightly from above */
-            transform: rotateX(10deg) translateY(-50px); 
-            transition: transform 0.1s linear;
-        }
-
-        /* SHARED ORB STYLING */
-        .orb {
-            position: absolute;
-            left: 50%;
-            transform-style: preserve-3d;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            transition: all 0.5s ease;
-            cursor: pointer;
-        }
-
-        /* I: THE OBSERVER (Foreground/Anchor) */
-        .mat-me { 
-            width: 260px; height: 260px;
-            margin-left: -130px;
-            bottom: -50px; /* Positioned at the bottom of the screen */
-            background: radial-gradient(circle at 30% 30%, #3a5a8c, #0b1024);
-            transform: translateZ(400px); /* Pushed toward the user */
-            border: 2px solid var(--me-glow);
-            box-shadow: 0 -20px 60px var(--me-glow);
-            z-index: 100;
-        }
-
-        /* II: COMMUNITY (Mid-ground) */
-        .mat-community { 
-            width: 450px; height: 450px;
-            margin-left: -225px;
-            top: 20%;
-            background: radial-gradient(circle at 30% 30%, #b87830, #27140c);
-            transform: translateZ(-400px) translateX(250px); /* Offset to the right */
-            border: 1px solid rgba(184, 120, 48, 0.3);
-        }
-
-        /* III: THE NATION (Background) */
-        .mat-nation { 
-            width: 700px; height: 700px;
-            margin-left: -350px;
-            top: 5%;
-            background: radial-gradient(circle at 30% 30%, #c9a84c, #1a1405);
-            transform: translateZ(-1200px) translateX(-350px); /* Offset to the left */
-            border: 1px solid rgba(201, 168, 76, 0.2);
-        }
-
-        .label {
-            font-family: 'Courier New', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            font-size: 12px;
-            padding: 10px;
-        }
-
-        /* TEXT OVERLAYS */
-        #header-hud {
-            position: fixed; top: 40px; width: 100%;
-            text-align: center; pointer-events: none;
-        }
-
-        #nav-hint {
-            position: fixed; bottom: 30px; width: 100%;
-            text-align: center; color: var(--gold);
-            font-size: 9px; letter-spacing: 0.4em;
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>USNow — The Question is the Answer.</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:#040810}
+::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+*{scrollbar-width:thin;scrollbar-color:#1e2a38 #040810;}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes tw{0%,100%{opacity:0.03}50%{opacity:0.4}}
+@keyframes orbf{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-4px)}}
+@keyframes pulseCore{0%,100%{filter:drop-shadow(0 0 18px rgba(212,168,85,0.7)) drop-shadow(0 0 50px rgba(212,168,85,0.3))}50%{filter:drop-shadow(0 0 32px rgba(212,168,85,1)) drop-shadow(0 0 80px rgba(212,168,85,0.55))}}
+@keyframes coreRipple{0%{transform:translate(-50%,-50%) scale(1);opacity:0.65}100%{transform:translate(-50%,-50%) scale(2.8);opacity:0}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@keyframes pulseCorrupt{0%,100%{box-shadow:0 0 18px #d4621a99,0 0 40px #d4621a44,inset 0 0 12px rgba(255,255,255,0.1)}50%{box-shadow:0 0 36px #d4621aee,0 0 80px #d4621a88,0 0 120px #d4621a33,inset 0 0 20px rgba(255,255,255,0.18)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:0.85}50%{opacity:0.2}}
+@keyframes ember{0%,100%{box-shadow:0 0 10px var(--fg,#9b2d2044),0 0 22px var(--fg,#9b2d2022),inset 0 0 8px rgba(255,140,60,0.04)}50%{box-shadow:0 0 22px var(--fg,#9b2d2077),0 0 44px var(--fg,#9b2d2033),inset 0 0 14px rgba(255,140,60,0.08)}}
+#ticker{position:fixed;top:0;left:0;right:0;z-index:600;background:#030609;border-bottom:1px solid rgba(122,96,48,0.44);overflow:hidden;height:30px;display:flex;align-items:center;}
+#ticker-inner{display:flex;gap:56px;animation:ticker 72s linear infinite;white-space:nowrap;}
+#ticker-inner span{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;opacity:0.75;}
+nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(122,96,48,0.33);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:44px;}
+.nav-logo{display:flex;align-items:center;gap:8px;}
+.nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-links{display:flex;gap:16px;align-items:center;}
+.nav-links a{font-size:9px;letter-spacing:0.22em;color:#8aa0b8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;}
+.nav-links a:hover{color:#c9a84c;opacity:1;}
+.nav-cta{font-size:9px;letter-spacing:0.15em;color:#04080f!important;background:#c9a84c;padding:5px 12px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;opacity:1!important;}
+.nav-cta:hover{background:#e0b860!important;}
+#scale{position:relative;width:100%;height:100svh;min-height:580px;overflow:hidden;background:#04080f;cursor:default;}
+#scale-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;}
+.star{position:absolute;border-radius:50%;background:white;}
+.layer-band{position:absolute;left:0;right:0;cursor:pointer;transition:filter 0.2s ease;}
+.layer-band:hover{filter:brightness(1.5);}
+.layer-label-wrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:25;}
+.layer-main-label{font-weight:700;letter-spacing:0.3em;font-family:'Courier New',monospace;white-space:nowrap;transition:text-shadow 0.2s;}
+.layer-sub-label{font-size:8px;letter-spacing:0.15em;font-family:'Courier New',monospace;margin-top:4px;opacity:0;transform:translateY(-3px);transition:opacity 0.2s ease,transform 0.2s ease;white-space:nowrap;}
+.layer-band:hover .layer-main-label{color:#ffffff!important;text-shadow:0 0 20px rgba(255,255,255,0.4),0 2px 8px rgba(0,0,0,0.9)!important;}
+.layer-band:hover .layer-sub-label{opacity:0.9;transform:translateY(0);color:#e8e8e8!important;text-shadow:0 1px 6px rgba(0,0,0,0.95);}
+.layer-band:hover .layer-label-wrap{z-index:100;}
+.orb-node{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);z-index:20;transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;}
+.orb-node:hover{animation-play-state:paused;}
+.orb-label{color:rgba(255,255,255,0.92);font-family:'Courier New',monospace;letter-spacing:0.03em;text-align:center;line-height:1.15;padding:3px;pointer-events:none;text-shadow:0 1px 4px rgba(0,0,0,0.7);}
+#core-wrap{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:300;display:flex;flex-direction:column;align-items:center;gap:4px;overflow:visible;}
+#core-orbs{position:relative;width:210px;height:62px;}
+.core-satellite{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);transition:transform 0.18s,box-shadow 0.18s;z-index:299;}
+.core-satellite:hover{transform:translate(-50%,-50%) scale(1.15)!important;}
+#core-btn{width:106px;height:106px;border-radius:50%;background:radial-gradient(circle at 37% 32%,#f8e8b0 0%,#d4a855 35%,#8a6020 65%,#3a2408 90%);border:2px solid rgba(240,210,130,0.78);animation:pulseCore 3.5s ease-in-out infinite;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform 0.2s;user-select:none;position:relative;}
+#core-btn::before,#core-btn::after{content:'';position:absolute;top:50%;left:50%;width:100%;height:100%;border-radius:50%;border:1.5px solid rgba(212,168,85,0.5);animation:coreRipple 2.8s ease-out infinite;pointer-events:none;}
+#core-btn::after{animation-delay:1.4s;border-color:rgba(212,168,85,0.28);}
+#core-btn:hover{transform:scale(1.06);}
+#core-btn div{font-size:10px;font-weight:700;letter-spacing:0.22em;color:#1a0e02;font-family:'Courier New',monospace;line-height:1.4;text-align:center;}
+#scroll-hint{position:absolute;bottom:118px;left:50%;transform:translateX(-50%);z-index:301;text-align:center;pointer-events:none;}
+#scroll-hint div:first-child{font-size:8px;letter-spacing:0.22em;color:rgba(201,168,76,0.45);font-family:'Courier New',monospace;margin-bottom:5px;}
+#scroll-hint .arrow{font-size:14px;color:rgba(201,168,76,0.3);animation:bounce 2.1s ease-in-out infinite;}
+/* Foundation half-moons */
+.foundation-moon{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:298;transition:transform 0.22s ease,box-shadow 0.22s ease;text-decoration:none;animation:pulseFoundation 3.8s ease-in-out infinite;}
+.foundation-moon:hover{transform:translateY(-6px) scale(1.08);}
+.foundation-moon span{font-size:9.5px;font-weight:700;letter-spacing:0.13em;color:rgba(255,210,175,0.96);font-family:'Courier New',monospace;text-align:center;line-height:1.3;pointer-events:none;text-shadow:0 1px 8px rgba(0,0,0,0.95);position:absolute;top:7px;left:50%;transform:translateX(-50%);white-space:nowrap;}
+#modal-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(2,4,10,0.94);backdrop-filter:blur(20px);align-items:flex-end;justify-content:center;padding:0 10px 16px;}
+#modal-overlay.open{display:flex;}
+#modal-glow-halo{position:fixed;bottom:-60px;left:50%;transform:translateX(-50%);width:720px;height:420px;border-radius:50%;pointer-events:none;z-index:2999;transition:background 0.4s ease,opacity 0.45s ease;opacity:0;filter:blur(80px);}
+#modal-overlay.open #modal-glow-halo{opacity:1;}
+#modal-box{background:linear-gradient(160deg,#0d1525 0%,#070c1a 100%);border-radius:20px;padding:40px 26px 26px;max-width:560px;width:100%;position:relative;max-height:78vh;overflow-y:auto;transition:box-shadow 0.4s ease,border-color 0.4s ease;}
+.modal-drag{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34px;height:3px;border-radius:2px;}
+.modal-layer-tag{font-size:8px;letter-spacing:0.35em;font-family:'Courier New',monospace;opacity:0.5;margin-bottom:6px;}
+#modal-title{font-size:24px;font-weight:300;color:#f0ece4;margin:0 0 8px;font-family:'Georgia',serif;letter-spacing:0.03em;line-height:1.25;}
+#modal-sub{font-size:10px;font-family:'Courier New',monospace;letter-spacing:0.1em;margin-bottom:18px;}
+#modal-desc{font-size:14px;line-height:1.88;color:#8898b0;font-family:'Georgia',serif;margin:0;}
+#modal-links{margin-top:20px;padding-top:16px;}
+.modal-links-label{font-size:8px;letter-spacing:0.3em;font-family:'Courier New',monospace;margin-bottom:10px;opacity:0.45;}
+.modal-link{font-size:11px;font-family:'Courier New',monospace;letter-spacing:0.08em;text-decoration:none;display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;transition:all 0.2s;margin-bottom:7px;}
+.modal-link:hover{opacity:1;}
+.modal-link .arrow{opacity:0.4;}
+#modal-orbs-section{margin-top:18px;padding-top:16px;}
+.modal-orbs-label{font-size:8px;letter-spacing:0.3em;font-family:'Courier New',monospace;margin-bottom:10px;opacity:0.45;}
+.modal-orb-tag{font-size:9px;letter-spacing:0.1em;font-family:'Courier New',monospace;border-radius:10px;padding:4px 10px;display:inline-block;margin:0 5px 5px 0;}
+#modal-close{margin-top:22px;background:transparent;padding:10px 28px;border-radius:26px;cursor:pointer;font-size:9px;letter-spacing:0.25em;font-family:'Courier New',monospace;transition:all 0.2s;}
+#modal-close:hover{opacity:1;}
+.subcard-blurb{font-size:12px;line-height:1.78;color:#7888a0;font-family:'Georgia',serif;font-style:italic;margin:0 0 18px;padding:12px 14px;border-left:2px solid transparent;border-radius:0 6px 6px 0;background:rgba(255,255,255,0.03);}
+#hero{background:#04080f;padding:18px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);}
+#hero .inner{max-width:680px;margin:0 auto;text-align:center;}
+.hero-tap-hint{font-size:8px;letter-spacing:0.28em;color:rgba(201,168,76,0.35);font-family:'Courier New',monospace;margin-bottom:18px;}
+.hero-eyebrow{font-size:10px;letter-spacing:0.5em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:24px;}
+.hero-h1{font-size:clamp(28px,5vw,50px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.28;margin:0 0 30px;letter-spacing:0.02em;}
+.hero-h1 em{color:#c9a84c;font-style:normal;}
+.hero-items{display:flex;flex-direction:column;gap:14px;text-align:left;max-width:540px;margin:0 auto 32px;}
+.hero-item{display:flex;gap:13px;align-items:flex-start;}
+.hero-rule{width:1px;background:rgba(122,96,48,0.35);align-self:stretch;flex-shrink:0;margin-top:5px;}
+.hero-item p{font-size:15px;line-height:1.78;color:#7888a0;font-family:'Georgia',serif;margin:0;}
+.hero-item strong{color:#f0ece4;font-weight:400;}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.btn-gold{font-size:9px;letter-spacing:0.22em;color:#04080f;background:#c9a84c;padding:11px 24px;border-radius:24px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;}
+.btn-gold:hover{background:#e0b860;}
+.btn-outline{font-size:9px;letter-spacing:0.22em;color:#c9a84c;border:1px solid rgba(122,96,48,0.4);padding:11px 24px;border-radius:24px;font-family:'Courier New',monospace;text-decoration:none;}
+.btn-outline:hover{border-color:#c9a84c;}
+#journal{background:#050a14;padding:68px 24px;border-top:1px solid rgba(122,96,48,0.13);}
+#journal .inner{max-width:740px;margin:0 auto;}
+.section-eyebrow{font-size:10px;letter-spacing:0.45em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:32px;text-align:center;}
+.journal-card{border:1px solid rgba(122,96,48,0.4);border-radius:14px;overflow:hidden;background:linear-gradient(155deg,#13100a 0%,rgba(9,7,4,0) 100%);transition:all 0.25s;text-decoration:none;display:block;}
+.journal-card:hover{border-color:#c9a84c;box-shadow:0 0 40px rgba(122,96,48,0.27);}
+.journal-card-body{padding:30px 26px 20px;border-bottom:1px solid rgba(122,96,48,0.2);}
+.journal-tag{font-size:9px;letter-spacing:0.35em;color:#c9a84c;font-family:'Courier New',monospace;margin-bottom:12px;opacity:0.6;}
+.journal-title{font-size:clamp(20px,3.5vw,34px);font-weight:300;color:#e8d49a;font-family:'Georgia',serif;margin:0 0 10px;letter-spacing:0.03em;line-height:1.28;}
+.journal-sub{font-size:12px;color:rgba(201,168,76,0.53);font-family:'Courier New',monospace;letter-spacing:0.08em;margin:0 0 6px;line-height:1.6;}
+.journal-desc{font-size:12px;color:#4a5568;font-family:'Georgia',serif;margin:0;line-height:1.65;}
+.journal-footer{padding:14px 26px;display:flex;justify-content:space-between;align-items:center;}
+.journal-footer span:first-child{font-size:11px;color:#4a5568;font-family:'Georgia',serif;font-style:italic;}
+.journal-footer span:last-child{font-size:9px;color:#c9a84c;font-family:'Courier New',monospace;letter-spacing:0.2em;}
+.journal-more{margin-top:18px;text-align:center;}
+.journal-more a{font-size:9px;letter-spacing:0.2em;color:#4a5568;font-family:'Courier New',monospace;text-decoration:none;transition:color 0.2s;}
+.journal-more a:hover{color:#8aa0b8;}
+#data{background:#020508;padding:68px 24px;border-top:1px solid rgba(122,96,48,0.13);}
+#data .inner{max-width:880px;margin:0 auto;}
+.data-header{text-align:center;margin-bottom:40px;}
+.data-h2{font-size:clamp(20px,3.5vw,34px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;margin:0;letter-spacing:0.03em;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:rgba(122,96,48,0.13);}
+.stat-card{display:block;padding:24px 20px;background:#070c16;text-decoration:none;transition:background 0.2s;}
+.stat-card:hover{background:#0d1624;}
+.stat-num{font-size:clamp(22px,3vw,34px);font-weight:700;color:#c9a84c;font-family:'Courier New',monospace;margin-bottom:7px;}
+.stat-label{font-size:13px;color:#f0ece4;font-family:'Georgia',serif;margin-bottom:5px;}
+.stat-sub{font-size:10px;color:#4a5568;font-family:'Courier New',monospace;letter-spacing:0.04em;line-height:1.5;}
+.data-links{margin-top:26px;display:flex;gap:9px;flex-wrap:wrap;justify-content:center;}
+.data-pill{font-size:9px;letter-spacing:0.15em;color:#8aa0b8;border:1px solid #3a4a5a;padding:8px 16px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;transition:all 0.2s;}
+.data-pill:hover{color:#c9a84c;border-color:#7a6030;}
+#sources{background:#04080f;padding:68px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);}
+#sources .inner{max-width:840px;margin:0 auto;}
+.sources-intro{text-align:center;margin-bottom:32px;}
+.sources-intro p{font-size:13px;color:#4a5568;font-family:'Georgia',serif;margin:0;line-height:1.7;}
+.sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:1px;background:rgba(58,74,90,0.2);}
+.source-item{display:flex;align-items:center;gap:10px;padding:14px 15px;background:#060b18;text-decoration:none;transition:background 0.2s;}
+.source-item:hover{background:#0a1220;}
+.source-emoji{font-size:16px;}
+.source-name{font-size:11px;color:#f0ece4;font-family:'Georgia',serif;}
+.source-tag{font-size:8px;color:#3a4a5a;font-family:'Courier New',monospace;letter-spacing:0.16em;}
+footer{background:#020508;padding:32px 22px;border-top:1px solid rgba(58,74,90,0.13);}
+footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+@media(max-width:520px){.nav-links a:not(.nav-cta){display:none;}.layer-main-label{letter-spacing:0.15em!important;}}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPZHKNB3E9');</script>
 </head>
 <body>
 
-    <div id="header-hud">
-        <h1 style="font-weight: 200; letter-spacing: 0.6em; font-size: 18px;">US NOW</h1>
-        <p style="font-size: 10px; opacity: 0.6; margin-top: 10px;">NON-PARTISAN · NON-DENOMINATIONAL</p>
+<div id="ticker"><div id="ticker-inner">
+<span>◎ Non-partisan · Non-denominational · Non-negotiable.</span>
+<span>◎ The question is the answer. The data is the argument.</span>
+<span>◎ The US in USNow is not one thing.</span>
+<span>◎ Some guy with AI — minding government propaganda &amp; other media mind control.</span>
+<span>◎ Promoting justice &amp; humanity. Seeing the world go round with focus and perspective.</span>
+<span>◎ Helping AI expose abuse, injustice, corruption, and overreach — wherever it exists.</span>
+<span>◎ The Apprentice: Washington Edition — Second Season Coming Soon</span>
+<span>◎ Read ATJon on Substack · atjon.substack.com</span>
+<span>◎ Non-partisan · Non-denominational · Non-negotiable.</span>
+<span>◎ The question is the answer. The data is the argument.</span>
+<span>◎ The US in USNow is not one thing.</span>
+<span>◎ Some guy with AI — minding government propaganda &amp; other media mind control.</span>
+<span>◎ Promoting justice &amp; humanity. Seeing the world go round with focus and perspective.</span>
+<span>◎ Helping AI expose abuse, injustice, corruption, and overreach — wherever it exists.</span>
+<span>◎ The Apprentice: Washington Edition — Second Season Coming Soon</span>
+<span>◎ Read ATJon on Substack · atjon.substack.com</span>
+</div></div>
+
+<nav>
+  <div class="nav-logo">
+    <span class="us">US</span>
+    <span class="now">NOW</span>
+    <span style="font-size:8px;letter-spacing:0.13em;color:#d4621a;font-family:'Courier New',monospace;border:1px solid rgba(212,98,26,0.4);padding:2px 7px;border-radius:2px;animation:blink 2.2s ease-in-out infinite;margin-left:12px;white-space:nowrap;">UNDER CONSTRUCTION</span>
+  </div>
+  <div class="nav-links">
+    <a href="#scale">Scale</a>
+    <a href="#about">About</a>
+    <a href="journal.html">Journal</a>
+    <a href="#sources">Sources</a>
+    <a href="#thoughts" class="nav-cta">Leave a Comment →</a>
+  </div>
+  <div style="position:absolute;bottom:5px;left:18px;pointer-events:none;display:flex;align-items:center;gap:32px;">
+    <span style="font-size:7px;letter-spacing:0.14em;color:rgba(201,168,76,0.32);font-family:'Courier New',monospace;">The question is the answer · The data is the argument.</span>
+    <span id="hero-date" style="font-size:7px;letter-spacing:0.14em;color:rgba(201,168,76,0.28);font-family:'Courier New',monospace;"></span>
+  </div>
+</nav>
+
+<div style="padding-top:74px;">
+<section id="scale">
+  <div id="stars"></div>
+  <svg id="scale-svg" viewBox="0 0 1000 700" preserveAspectRatio="none"></svg>
+  <div id="layer-bands"></div>
+  <div id="core-wrap">
+    <div id="core-orbs"></div>
+    <div id="core-btn" onclick="openLayer(0)"><div>ME,<br>MYSELF<br>&amp; I</div></div>
+    <!-- Foundation half-moons injected by JS -->
+  </div>
+
+</section>
+
+<div id="modal-overlay" onclick="closeModal()">
+  <div id="modal-glow-halo"></div>
+  <div id="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-drag" id="modal-drag"></div>
+    <div class="modal-layer-tag" id="modal-layer-tag"></div>
+    <h2 id="modal-title"></h2>
+    <div id="modal-sub" class="layer-sub-label" style="position:static;opacity:1;transform:none;"></div>
+    <p id="modal-desc"></p>
+    <div id="modal-links" style="border-top:1px solid rgba(128,128,128,0.1);"><div class="modal-links-label" id="modal-links-label">LINKS &amp; SOURCES</div><div id="modal-links-list"></div></div>
+    <div id="modal-beyond" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-beyond-label">BEYOND BORDERS</div><div id="modal-beyond-list"></div></div>
+    <div id="modal-orbs-section" style="border-top:1px solid rgba(128,128,128,0.1);display:none;"><div class="modal-orbs-label">FORCES IN THIS LAYER</div><div id="modal-orbs-list"></div></div>
+    <div id="modal-subcard-orb-wrap" style="margin-top:20px;display:none;">
+      <div id="modal-subcard-orb" onclick="openSubcard()" style="display:inline-flex;align-items:center;gap:10px;cursor:pointer;padding:10px 14px;border-radius:40px;transition:all 0.2s;">
+        <div id="modal-subcard-sphere" style="width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-family:'Courier New',monospace;font-weight:700;"></div>
+        <span id="modal-subcard-label" style="font-size:9px;letter-spacing:0.22em;font-family:'Courier New',monospace;"></span>
+        <span style="font-size:10px;opacity:0.5;">→</span>
+      </div>
+    </div>
+    <button id="modal-close" onclick="closeModal()">CLOSE</button>
+  </div>
+</div>
+
+<div id="subcard-overlay" onclick="closeSubcard()" style="display:none;position:fixed;inset:0;z-index:4000;background:rgba(2,4,10,0.6);align-items:flex-end;justify-content:center;padding:0 10px 16px;">
+  <div id="subcard-glow-halo" style="position:fixed;bottom:-60px;left:50%;transform:translateX(-50%);width:720px;height:420px;border-radius:50%;pointer-events:none;z-index:3999;filter:blur(80px);transition:background 0.4s ease;"></div>
+  <div id="subcard-box" onclick="event.stopPropagation()" style="background:linear-gradient(160deg,#0d1525 0%,#070c1a 100%);border-radius:20px;padding:40px 26px 26px;max-width:560px;width:100%;position:relative;max-height:78vh;overflow-y:auto;transition:box-shadow 0.4s ease,border-color 0.4s ease;">
+    <div id="subcard-drag" style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34px;height:3px;border-radius:2px;"></div>
+    <div id="subcard-back" onclick="closeSubcard()" style="font-size:8px;letter-spacing:0.2em;font-family:'Courier New',monospace;cursor:pointer;margin-bottom:16px;opacity:0.5;">← BACK</div>
+    <div id="subcard-tag" style="font-size:8px;letter-spacing:0.35em;font-family:'Courier New',monospace;opacity:0.5;margin-bottom:6px;"></div>
+    <h2 id="subcard-title" style="font-size:22px;font-weight:300;color:#f0ece4;margin:0 0 8px;font-family:'Georgia',serif;letter-spacing:0.03em;line-height:1.25;"></h2>
+    <p id="subcard-desc" style="font-size:13px;line-height:1.85;color:#8898b0;font-family:'Georgia',serif;margin:0 0 20px;"></p>
+    <p id="subcard-blurb" class="subcard-blurb" style="display:none;"></p>
+    <div id="subcard-links-list"></div>
+  </div>
+  </div>
+</div>
+
+<section id="hero">
+  <div class="inner">
+    <div class="hero-tap-hint">↑ tap any layer or orb above to explore</div>
+    <div class="hero-eyebrow">WHAT IS US · NOW</div>
+    <h1 class="hero-h1">The <em>US</em> in USNow<br>is not one thing.</h1>
+    <div class="hero-items">
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US - the The United States — the WE in We the People</strong> — our history, the dream, the government for us and by us, its budgets, its bases, its power structures, its contradictions made visible.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US in our groups</strong> — our place in our nation and in the world around us, our communities, our neighborhoods, our mutual obligations to each other.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US in our relationships</strong> — the natural dyad, the family, natural bonds like our parents, our children, our siblings, and the bonds we choose or unchoose - our spouses, friends and other partners.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US within ourselves</strong> — the I and the Me, the observer and the observed — both alive inside the one who decides what you do and why.</p></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#scale" class="btn-gold">EXPLORE THE SCALE ↑</a>
+      <a href="#data" class="btn-outline">SEE THE DATA →</a>
+    </div>
+  </div>
+</section>
+
+<section id="thoughts" style="background:#050a14;padding:44px 24px;border-top:1px solid rgba(122,96,48,0.13);">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <div style="font-size:10px;letter-spacing:0.45em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:14px;">WORK IN PROGRESS</div>
+    <p style="font-size:15px;font-weight:300;color:#8898b0;font-family:'Georgia',serif;line-height:1.7;margin:0 0 28px;">This site is a work in progress. Your thoughts, comments, suggestions, and notes are welcome. Email is optional.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:flex-end;">
+      <input id="t-email" type="email" placeholder="email (optional)"
+        style="background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:6px 8px;font-size:12px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:160px;border-radius:4px 4px 0 0;"
+        onfocus="this.style.borderBottomColor='rgba(201,168,76,0.6)'"
+        onblur="this.style.borderBottomColor='rgba(122,96,48,0.3)'"/>
+      <input id="t-note" type="text" placeholder="your thought..."
+        style="background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:6px 8px;font-size:12px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:240px;border-radius:4px 4px 0 0;"
+        onfocus="this.style.borderBottomColor='rgba(201,168,76,0.6)'"
+        onblur="this.style.borderBottomColor='rgba(122,96,48,0.3)'"/>
+      <button onclick="submitThought()"
+        style="font-size:8px;letter-spacing:0.22em;color:#c9a84c;background:transparent;border:1px solid rgba(122,96,48,0.4);padding:6px 16px;border-radius:14px;cursor:pointer;font-family:'Courier New',monospace;"
+        onmouseover="this.style.borderColor='#c9a84c'"
+        onmouseout="this.style.borderColor='rgba(122,96,48,0.4)'">SEND →</button>
+      <span id="t-confirm" style="font-size:10px;color:#4a9a70;font-family:'Courier New',monospace;opacity:0;transition:opacity 0.4s;">✓ received</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS USNOW — mission statement -->
+<section id="about" style="background:#04080f;padding:64px 24px 72px;border-top:1px solid rgba(201,168,76,0.18);border-bottom:1px solid rgba(201,168,76,0.10);position:relative;overflow:hidden;">
+
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.04) 0%,transparent 70%);pointer-events:none;"></div>
+
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:4px;color:rgba(201,168,76,0.55);text-transform:uppercase;text-align:center;margin-bottom:28px;">WHAT IS THIS</div>
+
+  <div style="width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.6),transparent);margin:0 auto 24px;"></div>
+
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,8vw,62px);letter-spacing:3px;text-align:center;margin:0 0 48px;line-height:1;"><span style="color:#c9a84c;">Us</span><span style="color:#e8e0d0;">Now</span></h2>
+
+  <div style="max-width:680px;margin:0 auto;position:relative;z-index:1;">
+
+    <div style="position:absolute;left:-20px;top:6px;width:2px;height:calc(100% - 12px);background:linear-gradient(180deg,rgba(201,168,76,0.5),rgba(201,168,76,0.08));border-radius:2px;"></div>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
+      You are living inside more information than any human being in history has ever had to process. News, politics, history, science, war, money, culture — all of it arriving simultaneously, all of it demanding a reaction. Most of it is designed to make you <em>feel</em> something specific before you've had a chance to <em>think</em> about anything.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
+      USNow is a place to stop and see where we actually are. Not just in the news cycle, but in the larger picture — the one that includes everything that happened before this moment and everything that has unfolded from it. And where you fit inside all of that.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
+      We start with what's documented and work outward toward what it means.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
+      The goal isn't to tell you what to think. It's to give you enough of the real picture that you can decide for yourself — not as a consumer of someone else's narrative, but as a citizen. As a neighbor. As a human, at your own pace, without all the noise.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0;">
+      Leave a note, a comment, or a suggested topic. We're just getting started and everything is always changing.
+    </p>
+
+  </div>
+
+  <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:52px;">
+    <div style="width:32px;height:1px;background:rgba(201,168,76,0.3);"></div>
+    <div style="width:5px;height:5px;border:1px solid rgba(201,168,76,0.5);transform:rotate(45deg);"></div>
+    <div style="width:32px;height:1px;background:rgba(201,168,76,0.3);"></div>
+  </div>
+
+</section>
+
+<section id="sources">
+  <div class="inner">
+    <div class="sources-intro">
+      <div class="section-eyebrow">ESSENTIAL SOURCES</div>
+      <p>The information is there. These are the doors.</p>
+    </div>
+    <div class="sources-grid">
+      <a href="https://turbovote.org" target="_blank" class="source-item"><span class="source-emoji">🗳️</span><div><div class="source-name">TurboVote</div><div class="source-tag">VOTE</div></div></a>
+      <a href="https://www.opensecrets.org" target="_blank" class="source-item"><span class="source-emoji">💰</span><div><div class="source-name">OpenSecrets</div><div class="source-tag">MONEY</div></div></a>
+      <a href="https://www.followthemoney.org" target="_blank" class="source-item"><span class="source-emoji">🧾</span><div><div class="source-name">FollowTheMoney</div><div class="source-tag">MONEY</div></div></a>
+      <a href="https://www.propublica.org" target="_blank" class="source-item"><span class="source-emoji">📰</span><div><div class="source-name">ProPublica</div><div class="source-tag">JOURNALISM</div></div></a>
+      <a href="https://www.trackaipac.com" target="_blank" class="source-item"><span class="source-emoji">🔍</span><div><div class="source-name">TrackAIPAC</div><div class="source-tag">LOBBYING</div></div></a>
+      <a href="https://foreignassistance.gov" target="_blank" class="source-item"><span class="source-emoji">🌍</span><div><div class="source-name">ForeignAssistance.gov</div><div class="source-tag">AID</div></div></a>
+      <a href="https://quincyinst.org" target="_blank" class="source-item"><span class="source-emoji">🕊️</span><div><div class="source-name">Quincy Institute</div><div class="source-tag">MILITARY</div></div></a>
+      <a href="https://watson.brown.edu/costsofwar" target="_blank" class="source-item"><span class="source-emoji">⚔️</span><div><div class="source-name">Costs of War</div><div class="source-tag">MILITARY</div></div></a>
+      <a href="https://www.pewresearch.org" target="_blank" class="source-item"><span class="source-emoji">📈</span><div><div class="source-name">Pew Research</div><div class="source-tag">DATA</div></div></a>
+      <a href="https://www.congress.gov" target="_blank" class="source-item"><span class="source-emoji">📜</span><div><div class="source-name">Congress.gov</div><div class="source-tag">PRIMARY</div></div></a>
+      <a href="https://www.cbo.gov" target="_blank" class="source-item"><span class="source-emoji">🔢</span><div><div class="source-name">CBO</div><div class="source-tag">BUDGET</div></div></a>
+      <a href="https://www.govtrack.us" target="_blank" class="source-item"><span class="source-emoji">🏛️</span><div><div class="source-name">GovTrack</div><div class="source-tag">CONGRESS</div></div></a>
+      <a href="https://ballotpedia.org" target="_blank" class="source-item"><span class="source-emoji">📋</span><div><div class="source-name">Ballotpedia</div><div class="source-tag">ELECTIONS</div></div></a>
+      <a href="https://www.usaspending.gov" target="_blank" class="source-item"><span class="source-emoji">📊</span><div><div class="source-name">USASpending.gov</div><div class="source-tag">BUDGET</div></div></a>
+    </div>
+  </div>
+</section>
+
+<section style="background:#020508;padding:52px 24px;border-top:1px solid rgba(58,74,90,0.13);">
+  <div style="max-width:840px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:32px;">
+      <div style="font-size:10px;letter-spacing:0.45em;color:#7a6030;font-family:'Courier New',monospace;margin-bottom:10px;">EVEN MORE ESSENTIAL SOURCES</div>
+      <p style="font-size:13px;color:#6a7a8a;font-family:'Georgia',serif;font-style:italic;margin:0;line-height:1.7;">All free. All credible. All pointing inward and outward at once.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:1px;background:rgba(58,74,90,0.15);">
+      <a href="https://medlineplus.gov" target="_blank" class="source-item" style="border-left:2px solid #3a9e5f22;"><span class="source-emoji">🫀</span><div><div class="source-name">NIH MedlinePlus</div><div class="source-tag" style="color:#3a9e5f;">BODY</div></div></a>
+      <a href="https://wonder.cdc.gov" target="_blank" class="source-item" style="border-left:2px solid #3a9e5f22;"><span class="source-emoji">🧬</span><div><div class="source-name">CDC WONDER</div><div class="source-tag" style="color:#3a9e5f;">BODY · DATA</div></div></a>
+      <a href="https://www.themarginalian.org" target="_blank" class="source-item" style="border-left:2px solid #7a5fd422;"><span class="source-emoji">🔭</span><div><div class="source-name">The Marginalian</div><div class="source-tag" style="color:#7a5fd4;">MIND · IDEAS</div></div></a>
+      <a href="https://aeon.co" target="_blank" class="source-item" style="border-left:2px solid #7a5fd422;"><span class="source-emoji">🧠</span><div><div class="source-name">Aeon</div><div class="source-tag" style="color:#7a5fd4;">MIND · PHILOSOPHY</div></div></a>
+      <a href="https://nautil.us" target="_blank" class="source-item" style="border-left:2px solid #7a5fd422;"><span class="source-emoji">🌊</span><div><div class="source-name">Nautilus</div><div class="source-tag" style="color:#7a5fd4;">MIND · SCIENCE</div></div></a>
+      <a href="https://www.khanacademy.org" target="_blank" class="source-item" style="border-left:2px solid #7a5fd422;"><span class="source-emoji">📐</span><div><div class="source-name">Khan Academy</div><div class="source-tag" style="color:#7a5fd4;">MIND · LEARN</div></div></a>
+      <a href="https://onbeing.org" target="_blank" class="source-item" style="border-left:2px solid #d45f8a22;"><span class="source-emoji">🕊️</span><div><div class="source-name">On Being</div><div class="source-tag" style="color:#d45f8a;">SOUL · SPIRIT</div></div></a>
+      <a href="https://insighttimer.com" target="_blank" class="source-item" style="border-left:2px solid #d45f8a22;"><span class="source-emoji">🧘</span><div><div class="source-name">Insight Timer</div><div class="source-tag" style="color:#d45f8a;">SOUL · PRACTICE</div></div></a>
+      <a href="https://www.aljazeera.com" target="_blank" class="source-item" style="border-left:2px solid #4a9fd422;"><span class="source-emoji">🌍</span><div><div class="source-name">Al Jazeera</div><div class="source-tag" style="color:#4a9fd4;">WORLD · NEWS</div></div></a>
+      <a href="https://restofworld.org" target="_blank" class="source-item" style="border-left:2px solid #4a9fd422;"><span class="source-emoji">🔌</span><div><div class="source-name">Rest of World</div><div class="source-tag" style="color:#4a9fd4;">WORLD · TECH</div></div></a>
+      <a href="https://longreads.com" target="_blank" class="source-item" style="border-left:2px solid #4a9fd422;"><span class="source-emoji">📖</span><div><div class="source-name">Longreads</div><div class="source-tag" style="color:#4a9fd4;">WORLD · CULTURE</div></div></a>
+      <a href="https://www.foreignaffairs.com" target="_blank" class="source-item" style="border-left:2px solid #4a9fd422;"><span class="source-emoji">🗺️</span><div><div class="source-name">Foreign Affairs</div><div class="source-tag" style="color:#4a9fd4;">WORLD · GEOPOLITICS</div></div></a>
+      <a href="https://apod.nasa.gov" target="_blank" class="source-item" style="border-left:2px solid #4888c822;"><span class="source-emoji">🌌</span><div><div class="source-name">NASA APOD</div><div class="source-tag" style="color:#4888c8;">COSMOS · DAILY</div></div></a>
+      <a href="https://www.pewresearch.org/religion/" target="_blank" class="source-item" style="border-left:2px solid #4888c822;"><span class="source-emoji">✦</span><div><div class="source-name">Pew: Religion</div><div class="source-tag" style="color:#4888c8;">COSMOS · DATA</div></div></a>
     </div>
 
-    <div id="viewport">
-        <div id="world">
-            
-            <div class="orb mat-me">
-                <div class="label" style="margin-top: -60px;">The Observer</div>
-            </div>
+  </div>
+</section>
 
-            <div class="orb mat-community" onclick="alert('Entering Community & Place')">
-                <div class="label">Community<br>& Place</div>
-            </div>
-
-            <div class="orb mat-nation" onclick="alert('Entering The Nation')">
-                <div class="label">The Nation<br>(US)</div>
-            </div>
-
-        </div>
+<footer>
+  <div class="inner" style="flex-direction:column;align-items:center;text-align:center;gap:20px;">
+    <div style="font-size:26px;font-weight:700;letter-spacing:0.22em;font-family:'Courier New',monospace;"><span style="color:#c9a84c;">Us</span><span style="color:#8aa0b8;">Now</span></div>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;justify-content:center;align-items:baseline;">
+      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">PERSPECTIVE</span>
+      <span style="font-size:7px;color:#3a4a5a;font-family:'Courier New',monospace;">◆</span>
+      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">FOCUS</span>
+      <span style="font-size:7px;color:#3a4a5a;font-family:'Courier New',monospace;">◆</span>
+      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">SCALE</span>
+      <span style="font-size:7px;color:#3a4a5a;font-family:'Courier New',monospace;">◆</span>
+      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">TRUST</span>
     </div>
+    <div style="font-size:9px;letter-spacing:0.2em;color:#4a5a6a;font-family:'Courier New',monospace;">NON-PARTISAN &nbsp;·&nbsp; NON-DENOMINATIONAL &nbsp;·&nbsp; NON-NEGOTIABLE</div>
+    <div style="width:40px;height:1px;background:rgba(122,96,48,0.2);"></div>
+    <div style="font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:0.1em;">LAST UPDATED · APRIL 15, 2026</div>
+    <div style="font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:0.1em;line-height:2;">All Rights Reserved for Copyrightable Content &nbsp;©&nbsp; 2026 &nbsp;USNow.app</div>
+  </div>
+</footer>
+</div>
 
-    <div id="nav-hint">SWIPE UP OR SCROLL TO EXPLORE THE SCALE</div>
+<script>
+const LAYERS=[
+  {id:"self",label:"ME, MYSELF & I",sub:"the I · the observer · the present · right now",color:"#d4a855",glow:"rgba(212,168,85,0.6)",time:"this moment",desc:"The biggest layer because it's where you live. You are the observer and the observed, both at once — the one reading these words and the one who exists before the words arrive. Everything else in the scale reaches you through this aperture. The self is not the most important thing. It is simply the most immediate.",height:22,beyond:[{label:"NIH MedlinePlus — body, zero ads",url:"https://medlineplus.gov",tag:"BODY"},{label:"Insight Timer — free meditation, 180k sessions",url:"https://insighttimer.com",tag:"SOUL"},{label:"The Marginalian — ideas & meaning",url:"https://www.themarginalian.org",tag:"MIND"}],orbs:[{id:"s1",label:"Identity",size:64,x:18,y:38,color:"#c9903a",desc:"Who you think you are. Assembled from memory, projection, and stories others told you before you had language to argue back. Fluid. Constructed. Yours — and not entirely yours.",links:[]},{id:"s2",label:"Body",size:68,x:12,y:55,color:"#b87830",desc:"Before thought, before language — sensation. The body knows things the mind claims to have decided. The oldest intelligence you carry. Body image, physical health, and the stories we tell about the flesh we live in — all of it starts here.",links:[{label:"NIH MedlinePlus",url:"https://medlineplus.gov"},{label:"CDC WONDER — public health data",url:"https://wonder.cdc.gov"},{label:"National Alliance for Eating Disorders",url:"https://www.allianceforeatingdisorders.com"},{label:"Body Dysmorphic Disorder Foundation",url:"https://bddfoundation.org"},{label:"Dove Self-Esteem Project",url:"https://www.dove.com/us/en/dove-self-esteem-project.html"},{label:"NEDA — body image resources",url:"https://www.nationaleatingdisorders.org/body-image-0"}]},{id:"s3",label:"The Observer",size:58,x:48,y:55,color:"#e0a850",desc:"The part of you watching you. Who is that? The gap between the thinker and the thought is where every contemplative tradition in human history has planted its flag.",links:[{label:"On Being — Krista Tippett",url:"https://onbeing.org"},{label:"Aeon — philosophy & mind",url:"https://aeon.co"},{label:"Gallery: What's Happening? →",url:"gallery.html"}]},{id:"s4",label:"Memory",size:44,x:84,y:28,color:"#a06828",desc:"The edited archive. Selective, revisionist, emotionally weighted. The primary material from which you construct the story of being you.",links:[]},{id:"s5",label:"Attention",size:50,x:32,y:26,color:"#d4902a",desc:"What you point your consciousness at becomes your world. Attention is the most powerful political act you perform — and you perform it thousands of times a day, mostly without deciding to.",links:[{label:"Insight Timer — free meditation",url:"https://insighttimer.com"}]}]},
+  {id:"family",label:"FAMILY & ORIGIN",sub:"where you came from · first formation · blood and chosen",color:"#c87850",glow:"rgba(200,120,80,0.4)",time:"your lifetime · generations back",desc:"Your first civilization. Before you had words, you had them. The patterns laid down here run deeper than any philosophy you'll later choose. Family is the original politics, the original theology, the original wound — and the original wonder. You will spend the rest of your life in conversation with it, whether you mean to or not.",height:16,beyond:[{label:"On Being — meaning, spirit, becoming",url:"https://onbeing.org",tag:"SOUL"},{label:"The Marginalian — Maria Popova on living",url:"https://www.themarginalian.org",tag:"MIND"}],orbs:[{id:"f1",label:"Parents",size:62,x:24,y:45,color:"#b86030",desc:"They handed you a lens you didn't ask for. You may spend a lifetime learning to see through it — or around it. Either way, it shaped the prescription.",links:[]},{id:"f2",label:"Ritual & Habit",size:46,x:70,y:50,color:"#a05020",desc:"Sunday dinners. Holidays. Repeated gestures that encoded belonging before you could name belonging. The body remembers ritual the way it remembers how to walk.",links:[]},{id:"f3",label:"Inheritance",size:54,x:52,y:72,color:"#d07840",desc:"Not money. The silences, the rages, the tenderness, the unfinished business of people who never resolved their own. You carry it forward unless you decide to put it down.",links:[]},{id:"f4",label:"Chosen Family",size:40,x:82,y:32,color:"#904828",desc:"The family you build. The people who see you clearly and stay anyway. Sometimes more durable than blood. Always a statement about who you've decided to become.",links:[]},{id:"f5",label:"Families\nin the U.S.",size:58,x:10,y:82,color:"#2a7fd4",desc:"Not one America — many. Families in the U.S. look radically different depending on where you live, what you earn, and what color you are. The gaps in income, health, housing, and opportunity between states and zip codes tell a story that national averages deliberately obscure. The data makes it visible.",links:[{label:"U.S. Census — family & household data",url:"https://data.census.gov"},{label:"Pew Research — American family trends",url:"https://www.pewresearch.org/social-trends/topics/family-and-relationships/"},{label:"Annie E. Casey — Kids Count data by state",url:"https://datacenter.aecf.org"},{label:"Urban Institute — inequality by state",url:"https://www.urban.org"}],subcard:{label:"BY STATE",items:[{label:"Census Bureau — state profiles",url:"https://www.census.gov/data/data-tools/state-profiles.html"},{label:"Pew — income inequality by state",url:"https://www.pewresearch.org/social-trends/2020/01/09/trends-in-income-and-wealth-inequality/"},{label:"Kids Count — child wellbeing by state",url:"https://datacenter.aecf.org/rankings"},{label:"USAFacts — state-by-state comparisons",url:"https://usafacts.org"},{label:"Commonwealth Fund — health by state",url:"https://www.commonwealthfund.org/series/state-health-system-performance"}]}},{id:"f6",label:"Families\nAround the World",size:58,x:88,y:82,color:"#2a7fd4",desc:"Seven billion people. Thousands of ways to be a family. The differences in how people live — what they eat, how long they live, whether their children go to school, whether they have clean water — are not natural. They are the result of history, policy, and power. The data puts it in perspective.",links:[{label:"UN Human Development Index",url:"https://hdr.undp.org/data-center/human-development-index"},{label:"World Bank — open data by country",url:"https://data.worldbank.org"},{label:"Pew Research — global attitudes & trends",url:"https://www.pewresearch.org/global/"},{label:"UNICEF — children around the world",url:"https://data.unicef.org"},{label:"Gapminder — visualizing global inequality",url:"https://www.gapminder.org"}]}]},
+  {id:"community",label:"COMMUNITY & PLACE",sub:"neighbor · belonging · where you actually live",color:"#4a9a70",glow:"rgba(74,154,112,0.32)",time:"your generation · decades",desc:"The village that no longer knows it's a village. Community is the membrane between private life and public world — increasingly thin, increasingly engineered by forces with no stake in your neighborhood. This is where USNow operates: the space between the person and the system.",height:14,beyond:[{label:"Longreads — best long-form journalism, free",url:"https://longreads.com",tag:"CULTURE"},{label:"Rest of World — tech & power beyond the West",url:"https://restofworld.org",tag:"WORLD"},{label:"TurboVote — register, ballots, reminders",url:"https://turbovote.org",tag:"VOTE"},{label:"Ballotpedia — elections & candidates",url:"https://ballotpedia.org",tag:"ELECTIONS"},{label:"ACLU — know your rights",url:"https://www.aclu.org/know-your-rights",tag:"RIGHTS"}],orbs:[{id:"c1",label:"Place",size:50,x:10,y:42,color:"#3a7a58",desc:"Geography is not neutral. Where you were born shapes what you believe is possible, what you believe is normal, and who you believe deserves what. ZIP code predicts life expectancy more reliably than almost any individual behavior.",links:[]},{id:"c2",label:"Social Media",size:66,x:84,y:38,color:"#2a7fd4",desc:"The synthetic village. Engineered for engagement, which turned out to mean outrage. The loudest voices replace the wisest ones. The algorithms are not neutral — they are optimized for the emotion that keeps you scrolling, which is not joy.",links:[]},{id:"c3",label:"Race & Class",size:56,x:28,y:76,color:"#4a9a70",desc:"Two forces so entangled in American life they function as one system. Race determines exposure. Class determines access. Together they determine outcome — and both are consistently presented as personal failure rather than structural design.",links:[{label:"Pew Research: Race & Inequality",url:"https://www.pewresearch.org"},{label:"OpenSecrets: Who Funds What",url:"https://www.opensecrets.org"}]},{id:"c4",label:"Entertainment",size:54,x:70,y:76,color:"#2a6a50",desc:"The great pacifier and the great mirror. What a culture entertains itself with reveals what it actually values — not what it claims to value at the podium. The size of the industry is the size of the need it fills.",links:[]},{id:"c5",label:"Rights &\nObligation",size:52,x:48,y:72,color:"#1a8a60",desc:"Rights without obligation are wishes. Obligation without rights is servitude. The tension between the two is the actual content of civic life — what you are owed, what you owe, and who decides. Every generation renegotiates this contract. Most do it badly.",links:[{label:"ACLU: Know Your Rights",url:"https://www.aclu.org/know-your-rights"},{label:"Ballotpedia",url:"https://ballotpedia.org"},{label:"Congress.gov",url:"https://www.congress.gov"}]},{id:"c7",label:"Tools, Tech\n& AI",size:66,x:10,y:90,color:"#2a7fd4",desc:"The great multiplier. Every technology in history has concentrated power in some hands and distributed it to others — the printing press, the telegraph, the internet, and now AI. The question is never whether technology changes things. The question is always: who gets to use it, who controls it, and who gets to decide what it's for.",links:[{label:"MIT Technology Review — free articles",url:"https://www.technologyreview.com"},{label:"Rest of World — tech beyond the West",url:"https://restofworld.org"},{label:"EFF — digital rights & freedom",url:"https://www.eff.org"},{label:"Gallery: Some Guy With AI →",url:"gallery.html"}],subcard:{label:"ARTIFICIAL INTELLIGENCE",items:[{label:"What is AI? — MIT explainer",url:"https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414"},{label:"AI for Everyone — free course, Coursera",url:"https://www.coursera.org/learn/ai-for-everyone"},{label:"How AI is used to track & control — EFF",url:"https://www.eff.org/issues/ai"},{label:"AI & democracy — Knight Foundation",url:"https://knightfoundation.org/topics/artificial-intelligence/"},{label:"USNow AI Infographic — coming soon",url:"https://www.usnow.app/#data"}]}}]},
+  {id:"education",label:"EDUCATION, LEARNING & FORMATION",sub:"knowledge · transmission · who decides what you know",color:"#5878b8",glow:"rgba(88,120,184,0.28)",time:"your lifetime · centuries of argument",desc:"The organized attempt to pass something forward — always an argument about what matters and who gets to decide. The classroom is a political space dressed in neutral clothes. What gets taught becomes what gets remembered as true. The omissions shape the mind as much as the lessons.",height:13,beyond:[{label:"Nautilus — science meets culture, beautifully written",url:"https://nautil.us",tag:"MIND"},{label:"Aeon — philosophy, science & society, free",url:"https://aeon.co",tag:"IDEAS"},{label:"Khan Academy — free world-class education",url:"https://www.khanacademy.org",tag:"LEARN"},{label:"ProPublica — investigative journalism",url:"https://www.propublica.org",tag:"JOURNALISM"},{label:"CBO — federal budget data",url:"https://www.cbo.gov",tag:"BUDGET"},{label:"USASpending.gov — federal contracts & grants",url:"https://www.usaspending.gov",tag:"DATA"}],orbs:[{id:"e1",label:"Literacy",size:52,x:10,y:46,color:"#3858a8",desc:"Not just reading — the capacity to parse power. Who gave you this? Who withheld it from others on purpose? The gap between those two questions is policy.",links:[]},{id:"e2",label:"Science",size:56,x:82,y:40,color:"#2848a0",desc:"The method that replaced revelation with replication. Still the best tool humans have for being less wrong, systematically. Currently under deliberate political pressure from multiple directions.",links:[{label:"Pew Research",url:"https://www.pewresearch.org"}]},{id:"e3",label:"The Curriculum",size:44,x:28,y:76,color:"#4868b0",desc:"What gets taught is what gets remembered as true. Who writes the textbooks writes the national story. This is why curriculum battles are proxy wars for cultural control — and why they are so bitter.",links:[]},{id:"e4",label:"Student Debt",size:58,x:72,y:76,color:"#183898",desc:"The financialization of learning. Knowledge behind a toll. The mechanism by which education became credential, credential became debt, and debt became a life sentence on the front end of adulthood.",links:[{label:"CBO Data",url:"https://www.cbo.gov"},{label:"ProPublica: Student Debt",url:"https://www.propublica.org"}]},{id:"e5",label:"Public Schools",size:40,x:52,y:65,color:"#6888c8",desc:"The only institution designed to give every child a shared foundation and a common floor. Currently underfunded in poor districts, overstretched everywhere, and politically targeted from multiple directions simultaneously.",links:[{label:"ProPublica: Education",url:"https://www.propublica.org"},{label:"USASpending: Education Budget",url:"https://www.usaspending.gov"}]},{id:"e6",label:"The U.S.\nConstitution",size:58,x:45,y:-6,color:"#b05050",desc:"The operating manual. Seven articles, twenty-seven amendments, and 235 years of argument about what it means. The expectations it sets, the powers it grants, the rights it protects, and the limits it draws — on paper at least. Worth reading. Worth knowing. Worth arguing about.",links:[{label:"Full Text — National Archives",url:"https://www.archives.gov/founding-docs/constitution-transcript"},{label:"Annotated Constitution — Constitution Center",url:"https://constitutioncenter.org/the-constitution"},{label:"Zoomable Original Document",url:"https://www.archives.gov/founding-docs/constitution"}],subcard:{label:"SOURCES & INSPIRATIONS",desc:"The Constitution did not arrive from nowhere.",blurb:"The Constitution was not the first attempt to codify basic rights — it was the product of centuries of argument, rebellion, and hard-won theory. The framers read deeply and argued bitterly. These are the texts and thinkers they were in conversation with when they wrote it.",items:[{label:"Magna Carta (1215) — British Library",url:"https://www.bl.uk/magna-carta"},{label:"John Locke — Two Treatises of Government",url:"https://www.gutenberg.org/ebooks/7370"},{label:"Thomas Paine — Common Sense (1776)",url:"https://www.gutenberg.org/ebooks/147"},{label:"The Federalist Papers — Congress.gov",url:"https://www.congress.gov/resources/display/content/The+Federalist+Papers"},{label:"Montesquieu — The Spirit of the Laws",url:"https://www.gutenberg.org/ebooks/27573"},{label:"The Declaration of Independence — National Archives",url:"https://www.archives.gov/founding-docs/declaration-transcript"}]}}]},
+  {id:"politics",label:"POWER, POLITICS, MEDIA & LAW",sub:"governance · force · narrative · money · who decides",color:"#b05050",glow:"rgba(176,80,80,0.25)",time:"living memory · millennia of structure",desc:"The organized management of who gets what, who decides, and who pays the cost. Politics is not separate from life — it is the frame inside which all other life happens. Media is not separate from politics — it is the air politics breathes. Law is not separate from power — it is power's written memory.",height:13,beyond:[{label:"Al Jazeera — global news outside the US lens",url:"https://www.aljazeera.com",tag:"GLOBAL"},{label:"Rest of World — tech & power beyond the West",url:"https://restofworld.org",tag:"WORLD"},{label:"Foreign Affairs — serious global analysis",url:"https://www.foreignaffairs.com",tag:"GEOPOLITICS"},{label:"FollowTheMoney — state-level campaign finance",url:"https://www.followthemoney.org",tag:"MONEY"},{label:"TrackAIPAC — congressional donations",url:"https://www.trackaipac.com",tag:"LOBBYING"},{label:"GovTrack — bills, votes & records",url:"https://www.govtrack.us",tag:"CONGRESS"},{label:"ForeignAssistance.gov — aid data",url:"https://foreignassistance.gov",tag:"AID"},{label:"Quincy Institute — military policy",url:"https://quincyinst.org",tag:"MILITARY"},{label:"Costs of War — Brown University",url:"https://watson.brown.edu/costsofwar",tag:"MILITARY"}],orbs:[{id:"p1",label:"Law",size:54,x:20,y:44,color:"#a03838",desc:"Codified power. The rules written by those who had the power to write rules. Sometimes just. Often not. Always contested by those the rules were not written for.",links:[{label:"Congress.gov",url:"https://congress.gov"},{label:"GovTrack",url:"https://govtrack.us"}]},{id:"p2",label:"Economy",size:68,x:56,y:40,color:"#883030",desc:"The system for deciding who works, who owns, who starves, who thrives. Not natural law — a set of choices, repeated daily, enforced by every other orb in this layer.",links:[{label:"USASpending.gov",url:"https://www.usaspending.gov"},{label:"CBO",url:"https://www.cbo.gov"}]},{id:"p3",label:"War & Force",size:52,x:34,y:70,color:"#c04848",desc:"The final argument. Where all political failures eventually arrive. 750 U.S. bases in 80 countries. $886B annual budget. The largest military empire in human history — right now, in the present tense.",links:[{label:"750 Bases Map",url:"https://www.usnow.app/graphics/750-bases"},{label:"Costs of War",url:"https://watson.brown.edu/costsofwar"},{label:"Gallery: America's Indigenous Sin →",url:"gallery.html"}]},{id:"p4",label:"Global\nCapital",size:60,x:68,y:74,color:"#904040",desc:"The operating system beneath the visible interface. Follow the money and you find the actual policy — not the speech, not the vote. The money.",links:[{label:"OpenSecrets",url:"https://www.opensecrets.org"},{label:"FollowTheMoney",url:"https://www.followthemoney.org"},{label:"TrackAIPAC",url:"https://www.trackaipac.com"}]},{id:"p5",label:"Media",size:58,x:80,y:28,color:"#784040",desc:"Not just news — the management of reality at scale. Who owns the outlets? Who sets the agenda? What gets covered and what vanishes? Media is where power talks to itself and calls it information.",links:[{label:"ProPublica",url:"https://www.propublica.org"},{label:"Gallery: Bread & Circuses →",url:"gallery.html"}]},{id:"p6",label:"CORRUPTION\nTRACKER",size:52,x:10,y:35,color:"#d4621a",pulse:"corrupt",desc:"Follow the money. Name the names. See the record. Every conflict of interest, every self-enrichment play, every pay-to-play pattern — tracked, sourced, linked. The data is the argument.",links:[{label:"Open Corruption Tracker →",url:"https://www.usnow.app/graphics/corruption_tracker.html"},{label:"RateMyRep — hold your rep accountable",url:"https://www.ratemyrep.app"},{label:"OpenSecrets — follow the money",url:"https://www.opensecrets.org"},{label:"ProPublica — investigative journalism",url:"https://www.propublica.org"},{label:"The Apprentice: Washington Edition →",url:"https://www.usnow.app/apprentice/index.html"}]}]},
+  {id:"history",label:"HISTORY & CIVILIZATION",sub:"the long record · pattern · what keeps recurring",color:"#7858b0",glow:"rgba(120,88,176,0.22)",time:"centuries · ten thousand years",desc:"The long record of what humans have tried, built, destroyed, and tried again. History is not a story of progress — it is a story of oscillation. The patterns repeat because the underlying animal changes very slowly. But cultures change fast. And cultures carry the code for empires.",height:12,beyond:[{label:"Al Jazeera — history still happening",url:"https://www.aljazeera.com",tag:"GLOBAL"},{label:"Longreads — long-form history journalism",url:"https://longreads.com",tag:"CULTURE"},{label:"Foreign Affairs — geopolitics in depth",url:"https://www.foreignaffairs.com",tag:"ANALYSIS"},{label:"Pew Research — data on society & trends",url:"https://www.pewresearch.org",tag:"DATA"}],orbs:[{id:"h1",label:"Empire",size:62,x:10,y:44,color:"#5838a0",desc:"The recurring dream of total organization. Always promising order. Always producing the conditions for its own collapse. The U.S. base footprint is this orb made visible in the present tense.",links:[{label:"Global Base Map",url:"https://www.usnow.app/graphics/750-bases"}]},{id:"h2",label:"Language",size:50,x:80,y:42,color:"#6848b0",desc:"The oldest technology. Every language encodes a different theory of reality. To lose a language is to lose a way of seeing the world that will never exist again. There are roughly 7,000 languages alive today. Half will be gone by 2100.",links:[]},{id:"h3",label:"Revolution",size:48,x:30,y:76,color:"#7858c0",desc:"The recurring reset. Sometimes violent, sometimes tidal. The moment when the accumulated weight of a structure becomes greater than the people's willingness to hold it up. Every ruling class believes it will be the last to face one.",links:[]},{id:"h4",label:"Migration",size:54,x:68,y:76,color:"#4828a0",desc:"The original human act. Every border is a line drawn through a migration route. Every 'native' population arrived from somewhere else, earlier. The timeline just depends on where you start counting.",links:[]},{id:"h5",label:"Geography",size:36,x:50,y:26,color:"#8868c0",desc:"Mountains, rivers, coastlines, and deserts have shaped every civilization more than any ideology. Geopolitics is mostly geography in a suit.",links:[{label:"Pew Research",url:"https://www.pewresearch.org"},{label:"Foreign Affairs",url:"https://www.foreignaffairs.com"}]}]},
+  {id:"cosmos",label:"THE LONG BEFORE",sub:"philosophy · spirit · origin · the question beneath the questions",color:"#4888c8",glow:"rgba(72,136,200,0.16)",time:"before memory · before language · before",desc:"The oldest questions have no answers — only better ways of sitting with them. Here religion, philosophy, and physics converge on the same horizon line. This layer is thin not because it matters less but because it is farthest from the noise. The self, examined from this distance, becomes a question rather than a given. And the question turns out to be the point.",height:10,beyond:[{label:"Aeon — philosophy & cosmology, free",url:"https://aeon.co",tag:"PHILOSOPHY"},{label:"On Being — meaning, spirit, the ineffable",url:"https://onbeing.org",tag:"SPIRIT"},{label:"Nautilus — science at the edge of knowing",url:"https://nautil.us",tag:"COSMOS"},{label:"NASA Astronomy Picture of the Day",url:"https://apod.nasa.gov",tag:"COSMOS"}],orbs:[{id:"x1",label:"Myth",size:52,x:10,y:46,color:"#2868a8",desc:"Not falsehood — the story that carries what facts cannot hold. Every culture answers the same mystery differently. None is complete. None is entirely wrong. Myth is what you tell when truth isn't enough.",links:[]},{id:"x2",label:"Death",size:48,x:80,y:42,color:"#185888",desc:"The organizing fact of human life. Every religion, philosophy, and political system is partly an answer to this. Mostly it is a sophisticated way of not answering it while building elaborate structures to avoid looking directly at it.",links:[]},{id:"x3",label:"Time",size:54,x:28,y:74,color:"#3878b8",desc:"The medium everything happens inside. But what is it? Physics has made it stranger, not clearer. Relativity says it bends. Quantum mechanics barely acknowledges it. The self experiences time as the only real thing. The cosmos does not appear to notice.",links:[]},{id:"x4",label:"Consciousness",size:46,x:66,y:74,color:"#487898",desc:"The hard problem. Why is there something it is like to be you? The universe watching itself through a temporary aperture, briefly convinced it matters. It does. It doesn't. Both are true from different distances.",links:[]},{id:"x5",label:"Religion",size:34,x:48,y:26,color:"#60a0d8",desc:"The organized human attempt to answer the unanswerable — and to build community around the answering. At its best: a technology for meaning, solidarity, and moral formation. At its worst: a technology for control, exclusion, and the management of fear. Usually both simultaneously.",links:[{label:"Pew Research: Religion",url:"https://www.pewresearch.org/religion/"},{label:"On Being",url:"https://onbeing.org"}]}]}
+];
 
-    <script>
-        let scrollPos = 0;
-        const world = document.getElementById('world');
+// Foundation half-moons data
+const FOUNDATIONS=[
+  {id:"graphic-info",label:"GRAPHIC\nIMAGES",href:"graphic-info.html",color:"#8a2010",glow:"#c04428cc",border:"#e06030",offsetX:-315,bottomPct:30,size:88,delay:0},
+  {id:"gallery",label:"THE\nGALLERY",href:"gallery.html",color:"#7a1e18",glow:"#a83822cc",border:"#d04828",offsetX:-155,bottomPct:32,size:82,delay:0.3},
+  {id:"journal",label:"THE\nJOURNAL",href:"journal.html",color:"#8a2a08",glow:"#b84018cc",border:"#d85a20",offsetX:155,bottomPct:28,size:82,delay:0.6},
+  {id:"substack",label:"SUBSTACK\nARTICLES",href:"substack.html",color:"#8a1c20",glow:"#bc2c30cc",border:"#e04040",offsetX:315,bottomPct:31,size:88,delay:0.9}
+];
 
-        // Scroll Logic: Pushes the world towards the camera
-        window.addEventListener('wheel', (e) => {
-            scrollPos += e.deltaY * 0.8;
-            updateCamera();
-        });
+const starsEl=document.getElementById('stars');
+for(let i=0;i<80;i++){const s=document.createElement('div');s.className='star';const sz=i%4===0?2:1;s.style.cssText=`left:${(i*43.1+11)%100}%;top:${(i*27.3+5)%58}%;width:${sz}px;height:${sz}px;opacity:${0.03+(i%5)*0.04};animation:tw ${3+(i%6)}s ease-in-out infinite;animation-delay:${(i%9)*0.35}s;`;starsEl.appendChild(s);}
 
-        // Touch Logic for mobile
-        let startY = 0;
-        window.addEventListener('touchstart', e => startY = e.touches[0].pageY);
-        window.addEventListener('touchmove', e => {
-            let deltaY = startY - e.touches[0].pageY;
-            scrollPos += deltaY * 3;
-            updateCamera();
-            startY = e.touches[0].pageY;
-        });
+function getLayerGeometry(idx,W,H){const totalH=LAYERS.reduce((s,l)=>s+l.height,0);let acc=0;for(let i=0;i<idx;i++)acc+=LAYERS[i].height;const fromBottomPct=acc/totalH;const heightPct=LAYERS[idx].height/totalH;const yBottom=H-fromBottomPct*H;const yTop=H-(fromBottomPct+heightPct)*H;const t=idx/(LAYERS.length-1);const sagTop=H*(0.11-t*0.065);const sagBottom=H*(0.03-t*0.018);const taper=W*0.03;const path=[`M ${-taper} ${yBottom}`,`Q ${W/2} ${yBottom+sagBottom} ${W+taper} ${yBottom}`,`L ${W+taper} ${yTop}`,`Q ${W/2} ${yTop+sagTop} ${-taper} ${yTop}`,`Z`].join(' ');return{path,yTop,yBottom,sagTop,topPct:1-fromBottomPct-heightPct,heightPct};}
 
-        function updateCamera() {
-            // Keep scroll within a reasonable range (0 to 1800)
-            if (scrollPos < 0) scrollPos = 0;
-            if (scrollPos > 1800) scrollPos = 1800;
+function buildFoundationMoons(){
+  // Remove any existing moons
+  document.querySelectorAll('.foundation-moon').forEach(el=>el.remove());
+  const coreWrap=document.getElementById('core-wrap');
+  const coreBtnHeight=92;
+  const W=window.innerWidth;
+  const scale=Math.min(1, Math.max(0.38, W/780));
+  FOUNDATIONS.forEach(f=>{
+    const el=document.createElement('a');
+    el.className='foundation-moon';
+    el.href=f.href;
+    // Position: centered on core-btn center, offset horizontally
+    // core-wrap is centered, core-btn is 92px, core-orbs is 62px above
+    // We position relative to core-wrap using absolute positioning
+    const visiblePct=f.bottomPct/100; // how much shows above bottom
+    const pushDown=f.size*(1-visiblePct); // how many px below bottom edge
+    el.style.cssText=`
+      width:${f.size}px;
+      height:${f.size}px;
+      background:radial-gradient(circle at 38% 28%, ${f.color}ff 0%, ${f.color}dd 35%, ${f.color}99 65%, ${f.color}44 100%);
+      border:2px solid ${f.border}bb;
+      --fg:${f.glow};
+      animation:ember 5s ease-in-out infinite;
+      animation-delay:${f.delay}s;
+      position:absolute;
+      left:calc(50% + ${Math.round(f.offsetX * scale)}px);
+      bottom:${-(f.size*(1-f.bottomPct/100))}px;
+      transform:translateX(-50%);
+      transition:transform 0.22s ease, box-shadow 0.22s ease;
+    `;
+    el.innerHTML=`<span style="font-size:7.5px;font-weight:700;letter-spacing:0.14em;color:rgba(160,210,255,0.92);font-family:'Courier New',monospace;text-align:center;line-height:1.3;padding:4px;pointer-events:none;text-shadow:0 1px 8px rgba(0,0,0,0.95);">${f.label.replace('\n','<br>')}</span>`;
+    el.addEventListener('mouseenter',()=>{
+      el.style.transform=`translateX(-50%) translateY(-8px) scale(1.09)`;
+      el.style.boxShadow=`0 0 ${f.size*0.7}px ${f.glow},0 0 ${f.size*0.35}px ${f.border}88`;
+    });
+    el.addEventListener('mouseleave',()=>{
+      el.style.transform=`translateX(-50%) translateY(0) scale(1)`;
+      el.style.boxShadow='';
+    });
+    coreWrap.appendChild(el);
+  });
+}
 
-            // Move the world on the Z axis and slightly tilt as we go deeper
-            world.style.transform = `rotateX(${10 + (scrollPos/200)}deg) translateZ(${scrollPos}px) translateY(-50px)`;
-        }
-    </script>
+function orbIdleGlow(el,sz,color){el.style.boxShadow=`0 0 ${sz*0.55}px ${color}66,0 0 ${sz*0.22}px ${color}44,inset 0 0 ${sz*0.3}px rgba(255,255,255,0.14)`;}
+function orbHoverGlow(el,sz,color){el.style.cursor='pointer';el.style.transform='translate(-50%,-50%) scale(1.22)';el.style.zIndex='200';el.style.boxShadow=`0 0 ${sz*1.4}px ${color}cc,0 0 ${sz*0.7}px ${color}99,0 0 ${sz*0.3}px ${color}66,inset 0 0 ${sz*0.45}px rgba(255,255,255,0.28)`;el.style.border=`2px solid ${color}ff`;}
+function orbIdleReset(el,sz,color){el.style.transform='translate(-50%,-50%) scale(1)';el.style.zIndex='20';el.style.border=`1.5px solid ${color}ee`;orbIdleGlow(el,sz,color);}
+function orbActivePress(el,sz,color){el.style.transform='translate(-50%,-50%) scale(1.06)';el.style.boxShadow=`0 0 ${sz*0.8}px ${color}ff,0 0 ${sz*2}px ${color}55,inset 0 0 ${sz*0.6}px rgba(255,255,255,0.35)`;}
+function attachOrbEvents(orbEl,orb,openFn){
+  orbEl.style.cursor='pointer';
+  orbEl.addEventListener('mouseenter',()=>{orbHoverGlow(orbEl,orb.size,orb.color);});
+  orbEl.addEventListener('mouseleave',()=>{orbIdleReset(orbEl,orb.size,orb.color);});
+  orbEl.addEventListener('mousedown',()=>{orbActivePress(orbEl,orb.size,orb.color);});
+  orbEl.addEventListener('mouseup',()=>{orbHoverGlow(orbEl,orb.size,orb.color);});
+  orbEl.addEventListener('click',e=>{e.stopPropagation();openFn();});
+}
+function buildScale(){const section=document.getElementById('scale');const W=section.offsetWidth||1000;const H=section.offsetHeight||700;const svg=document.getElementById('scale-svg');svg.setAttribute('viewBox',`0 0 ${W} ${H}`);let defs='<defs>';LAYERS.forEach((layer,idx)=>{defs+=`<linearGradient id="grad${idx}" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="${layer.color}" stop-opacity="${0.04+(idx/(LAYERS.length-1))*0.08}"/><stop offset="100%" stop-color="${layer.color}" stop-opacity="${0.11+(idx/(LAYERS.length-1))*0.22}"/></linearGradient>`;});defs+='<filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter></defs>';let paths='';LAYERS.forEach((layer,idx)=>{const g=getLayerGeometry(idx,W,H);paths+=`<g><path d="${g.path}" fill="url(#grad${idx})"/><path d="M ${-10} ${g.yTop} Q ${W/2} ${g.yTop+g.sagTop} ${W+10} ${g.yTop}" fill="none" stroke="${layer.color}" stroke-width="0.8" stroke-opacity="0.55" filter="url(#glow)"/></g>`;});svg.innerHTML=defs+paths;
+const bandsEl=document.getElementById('layer-bands');bandsEl.innerHTML='';LAYERS.forEach((layer,idx)=>{if(idx===0)return;const g=getLayerGeometry(idx,W,H);const div=document.createElement('div');div.className='layer-band';div.style.cssText=`top:${g.topPct*100}%;height:${g.heightPct*100}%;z-index:${idx+2};cursor:pointer;`;const fontSize=`clamp(9px,${1.1+idx*0.08}vw,13px)`;div.innerHTML=`<div class="layer-label-wrap"><div class="layer-main-label" style="font-size:${fontSize};color:${layer.color};text-shadow:0 0 20px ${layer.glow},0 0 40px ${layer.glow};">${layer.label}</div><div class="layer-sub-label" style="color:${layer.color};">${layer.sub}</div></div>${layer.orbs.map(orb=>`<div class="orb-node" data-orbid="${orb.id}" data-layeridx="${idx}" style="cursor:pointer;left:${orb.x}%;top:${orb.y}%;width:${orb.size}px;height:${orb.size}px;background:radial-gradient(circle at 36% 30%,${orb.color}f0 0%,${orb.color}99 40%,${orb.color}44 100%);border:1.5px solid ${orb.color}ee;box-shadow:0 0 ${orb.size*0.55}px ${orb.color}66,0 0 ${orb.size*0.22}px ${orb.color}44,inset 0 0 ${orb.size*0.3}px rgba(255,255,255,0.14);animation:${orb.pulse==='corrupt'?'pulseCorrupt 2.2s ease-in-out infinite':'orbf '+(3.2+(orb.size%4)*0.6)+'s ease-in-out infinite'};animation-delay:${(orb.size%8)*0.28}s;transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;"><span class="orb-label" style="font-size:${Math.max(7,orb.size*0.16)}px;">${orb.label}</span></div>`).join('')}`;div.addEventListener('click',()=>openLayer(idx));div.querySelectorAll('.orb-node').forEach(orbEl=>{const layerIdx=parseInt(orbEl.dataset.layeridx);const orb=LAYERS[layerIdx].orbs.find(o=>o.id===orbEl.dataset.orbid);attachOrbEvents(orbEl,orb,()=>openOrb(orb,LAYERS[layerIdx]));});bandsEl.appendChild(div);});
+const coreOrbs=document.getElementById('core-orbs');coreOrbs.innerHTML='';const positions=[{left:'5%',top:'72%'},{left:'26%',top:'16%'},{left:'50%',top:'78%'},{left:'74%',top:'14%'},{left:'92%',top:'68%'}];LAYERS[0].orbs.forEach((orb,i)=>{const pos=positions[i]||positions[0];const sz=Math.round(orb.size*0.57);const scaledOrb={...orb,size:sz};const el=document.createElement('div');el.className='core-satellite';el.style.cssText=`cursor:pointer;left:${pos.left};top:${pos.top};width:${sz}px;height:${sz}px;background:radial-gradient(circle at 36% 30%,${orb.color}ee,${orb.color}66);border:1px solid ${orb.color}cc;box-shadow:0 0 ${sz*0.6}px ${orb.color}55;transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;`;el.innerHTML=`<span style="font-size:${Math.max(7,sz*0.18)}px;color:rgba(255,255,255,0.88);font-family:'Courier New',monospace;text-align:center;line-height:1.15;padding:2px;pointer-events:none;">${orb.label}</span>`;attachOrbEvents(el,scaledOrb,()=>openOrb(orb,LAYERS[0]));coreOrbs.appendChild(el);});
+buildFoundationMoons();}
+
+function openLayer(idx){const layer=LAYERS[idx];showModal({color:layer.color,glow:layer.glow,tag:layer.label+' · '+layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:[],beyond:layer.beyond||[],orbs:layer.orbs,isLayer:true});}
+function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;showModal({color:c,glow:og,tag:layer.label+' · '+layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],beyond:[],orbs:null,isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});}
+
+function showModal(data){
+  document.getElementById('modal-drag').style.background=data.color+'77';
+  document.getElementById('modal-layer-tag').style.color=data.color;
+  document.getElementById('modal-layer-tag').textContent=data.tag;
+  document.getElementById('modal-title').textContent=data.title;
+  const subEl=document.getElementById('modal-sub');
+  if(data.sub){subEl.style.color=data.color;subEl.style.opacity='0.55';subEl.textContent=data.sub;subEl.style.display='block';}else{subEl.style.display='none';}
+  document.getElementById('modal-desc').textContent=data.desc;
+  const box=document.getElementById('modal-box');
+  const hx=data.color.replace('#','');
+  const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
+  box.style.border=`1px solid rgba(${r},${g},${b},0.55)`;
+  box.style.boxShadow=`0 0 0 1px rgba(${r},${g},${b},0.18),0 -8px 60px rgba(${r},${g},${b},0.55),0 0 120px rgba(${r},${g},${b},0.25),inset 0 0 40px rgba(${r},${g},${b},0.07)`;
+  document.getElementById('modal-glow-halo').style.background=`radial-gradient(ellipse,rgba(${r},${g},${b},0.55) 0%,rgba(${r},${g},${b},0.18) 45%,transparent 75%)`;
+  const linksDiv=document.getElementById('modal-links');document.getElementById('modal-links-label').style.color=data.color;
+  if(data.links&&data.links.length>0){linksDiv.style.display='block';document.getElementById('modal-links-list').innerHTML=data.links.map((l,i)=>{
+    const isTracker=l.url.includes('corruption_tracker');
+    if(isTracker){return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:#d4621a;border:1px solid #d4621a66;background:rgba(212,98,26,0.08);animation:pulseCorrupt 2.2s ease-in-out infinite;font-weight:700;letter-spacing:0.12em;" onmouseenter="this.style.background='rgba(212,98,26,0.18)';this.style.borderColor='#d4621aaa';" onmouseleave="this.style.background='rgba(212,98,26,0.08)';this.style.borderColor='#d4621a66';"><span style="opacity:1;">◆</span> ${l.label}</a>`;}
+    return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${data.color};border:1px solid ${data.color}33;" onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';"><span class="arrow">→</span>${l.label}</a>`;
+  }).join('');}else{linksDiv.style.display='none';}
+  const beyondDiv=document.getElementById('modal-beyond');const beyondLabel=document.getElementById('modal-beyond-label');
+  if(data.beyond&&data.beyond.length>0){beyondDiv.style.display='block';beyondLabel.style.color=data.color;document.getElementById('modal-beyond-list').innerHTML=data.beyond.map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${data.color};border:1px solid ${data.color}33;" onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';"><span class="arrow">→</span><span>${l.label}</span><span style="font-size:8px;opacity:0.45;margin-left:auto;letter-spacing:0.12em;">${l.tag||''}</span></a>`).join('');}else{beyondDiv.style.display='none';}
+  const orbsSection=document.getElementById('modal-orbs-section');
+  if(data.isLayer&&data.orbs){orbsSection.style.display='block';document.getElementById('modal-orbs-list').innerHTML=data.orbs.map(o=>`<span class="modal-orb-tag" style="color:${data.color};border:1px solid ${data.color}33;">${o.label}</span>`).join('');}else{orbsSection.style.display='none';}
+  const subcardWrap=document.getElementById('modal-subcard-orb-wrap');
+  if(data.subcard){
+    subcardWrap.style.display='block';
+    const sphere=document.getElementById('modal-subcard-sphere');
+    const sc=data.subcard.orbColor||data.color;
+    sphere.style.background=`radial-gradient(circle at 36% 30%,${sc}f0 0%,${sc}99 40%,${sc}44 100%)`;
+    sphere.style.border=`1.5px solid ${sc}cc`;
+    sphere.style.boxShadow=`0 0 12px ${sc}66`;
+    sphere.style.color='rgba(255,255,255,0.9)';
+    sphere.textContent='✦';
+    const lbl=document.getElementById('modal-subcard-label');
+    lbl.style.color=data.color;lbl.textContent=data.subcard.label;
+    const orbBtn=document.getElementById('modal-subcard-orb');
+    orbBtn.style.border=`1px solid ${data.color}33`;
+    orbBtn.onmouseenter=()=>{orbBtn.style.background=`${data.color}11`;orbBtn.style.borderColor=`${data.color}66`;};
+    orbBtn.onmouseleave=()=>{orbBtn.style.background='transparent';orbBtn.style.borderColor=`${data.color}33`;};
+    window._subcardData={color:data.color,glow:data.glow,tag:data.subcard.label,title:data.subcard.label,desc:data.subcard.desc||'',blurb:data.subcard.blurb||'',items:data.subcard.items};
+  } else {subcardWrap.style.display='none';}
+  const closeBtn=document.getElementById('modal-close');closeBtn.style.border=`1px solid ${data.color}44`;closeBtn.style.color=data.color;closeBtn.onmouseenter=()=>closeBtn.style.background=`${data.color}18`;closeBtn.onmouseleave=()=>closeBtn.style.background='transparent';
+  document.getElementById('modal-overlay').classList.add('open');document.body.style.overflow='hidden';
+}
+
+function openSubcard(){
+  const d=window._subcardData;if(!d)return;
+  document.getElementById('subcard-drag').style.background=d.color+'77';
+  document.getElementById('subcard-tag').style.color=d.color;document.getElementById('subcard-tag').textContent=d.tag;
+  document.getElementById('subcard-back').style.color=d.color;
+  document.getElementById('subcard-title').textContent=d.title;
+  document.getElementById('subcard-desc').textContent=d.desc;
+  // Blurb
+  const blurbEl=document.getElementById('subcard-blurb');
+  if(d.blurb){blurbEl.textContent=d.blurb;blurbEl.style.borderLeftColor=d.color+'66';blurbEl.style.color=d.color+'aa';blurbEl.style.display='block';}else{blurbEl.style.display='none';}
+  const scBox=document.getElementById('subcard-box');
+  const hx=d.color.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
+  scBox.style.border=`1px solid rgba(${r},${g},${b},0.55)`;
+  scBox.style.boxShadow=`0 0 0 1px rgba(${r},${g},${b},0.18),0 -8px 60px rgba(${r},${g},${b},0.55),0 0 120px rgba(${r},${g},${b},0.25),inset 0 0 40px rgba(${r},${g},${b},0.07)`;
+  document.getElementById('subcard-glow-halo').style.background=`radial-gradient(ellipse,rgba(${r},${g},${b},0.55) 0%,rgba(${r},${g},${b},0.18) 45%,transparent 75%)`;
+  document.getElementById('subcard-links-list').innerHTML=d.items.map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${d.color};border:1px solid ${d.color}33;" onmouseenter="this.style.background='${d.color}18';this.style.borderColor='${d.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${d.color}33';"><span class="arrow">→</span>${l.label}</a>`).join('');
+  document.getElementById('subcard-overlay').style.display='flex';
+}
+
+function closeSubcard(){document.getElementById('subcard-overlay').style.display='none';}
+function toggleSubcard(){const list=document.getElementById('modal-subcard-list');const arrow=document.getElementById('modal-subcard-arrow');const open=list.style.display==='none';list.style.display=open?'block':'none';arrow.textContent=open?'▾':'▸';}
+function closeModal(){document.getElementById('modal-overlay').classList.remove('open');document.body.style.overflow='';}
+
+function submitThought(){
+  const note=document.getElementById('t-note').value.trim();
+  if(!note){document.getElementById('t-note').style.borderBottomColor='rgba(212,98,26,0.7)';document.getElementById('t-note').focus();return;}
+  const ENDPOINT='https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
+  fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('t-email').value||'anonymous',topic:note,why:'',sources:'',submitted:new Date().toISOString()})});
+  document.getElementById('t-email').value='';document.getElementById('t-note').value='';
+  const c=document.getElementById('t-confirm');c.style.opacity='1';setTimeout(()=>c.style.opacity='0',3000);
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+const _days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const _months=['January','February','March','April','May','June','July','August','September','October','November','December'];const _now=new Date();document.getElementById('hero-date').textContent=`${_days[_now.getDay()].toUpperCase()} · ${_months[_now.getMonth()].toUpperCase()} ${_now.getDate()}, ${_now.getFullYear()}`;
+buildScale();
+let resizeTimer;
+window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(buildScale,120);});
+</script>
 </body>
 </html>
