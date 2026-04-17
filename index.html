@@ -652,5 +652,204 @@ buildScale();
 let resizeTimer;
 window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(buildScale,120);});
 </script>
+
+<style>
+.glory-word{font-style:italic;border-bottom:1px dotted rgba(201,168,76,0.35);cursor:pointer;transition:border-color 0.2s,color 0.2s;}
+.glory-word:hover{border-bottom-color:rgba(201,168,76,0.85);color:#e0c060;}
+#glory-pop{display:none;position:fixed;z-index:9000;background:linear-gradient(160deg,#0d1525,#070c1a);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 16px;max-width:280px;box-shadow:0 0 40px rgba(0,0,0,0.7),0 0 20px rgba(201,168,76,0.12);}
+#glory-pop .gp-word{font-size:13px;font-weight:700;letter-spacing:0.1em;color:#e0c060;font-family:'Courier New',monospace;margin-bottom:6px;}
+#glory-pop .gp-def{font-size:12px;line-height:1.6;color:#8898b0;font-family:'Georgia',serif;font-style:italic;margin-bottom:10px;}
+#glory-pop .gp-link{font-size:9px;letter-spacing:0.15em;color:rgba(201,168,76,0.6);font-family:'Courier New',monospace;text-decoration:none;transition:color 0.2s;}
+#glory-pop .gp-link:hover{color:#c9a84c;}
+</style>
+
+<div id="glory-pop">
+  <div class="gp-word" id="gp-word"></div>
+  <div class="gp-def" id="gp-def"></div>
+  <a class="gp-link" id="gp-link" href="compendium.html" target="_blank">→ THE WORLD COMPENDIUM</a>
+</div>
+
+<script>
+// ── THE WORLD COMPENDIUM — Glory Highlights ──
+const GLORIES = {
+  "Accident":"An event that appears to happen on its own — distinct from mistake, coincidence, and fate — yet cause or blame can always be traced to human action, the surrounding conditions, or the laws of physics.",
+  "Belief":"Faith, opinion, or knowledge without proof — often used interchangeably.",
+  "Bias":"Everyone has it — only other people are accused of it.",
+  "Border":"Line on a map, security concept, or human rights issue.",
+  "Capitalism":"Freedom through markets or organized extraction — still being argued.",
+  "Censorship":"Suppression of truth or removal of harm — always contested.",
+  "Change":"Hope or threat depending entirely on what you have to lose.",
+  "Charity":"Generosity, tax strategy, or substitute for justice.",
+  "Class":"Economic position, cultural identity, or something Americans pretend doesn't exist.",
+  "Community":"Neighborhood, identity group, or abstraction invoked to avoid specifics.",
+  "Constitution":"Living document or fixed text — the entire legal debate in one word.",
+  "Crime":"Defined by law, which is defined by power.",
+  "Crisis":"Emergency requiring action or excuse for overreach — both true simultaneously.",
+  "Culture":"Everything and therefore sometimes nothing.",
+  "Death":"End, transition, or the thing that makes everything else matter.",
+  "Debt":"Investment, trap, or moral failing — all three framings in active use.",
+  "Defense":"Protection or the budget line item for offense.",
+  "Democracy":"Majority rule, representative republic, or an untenable experiment — depending on who's asking.",
+  "Deserve":"Merit-based, luck-based, or morally determined — not agreed upon.",
+  "Dignity":"Inherent or earned — the oldest human argument.",
+  "Education":"Learning, credentialing, indoctrination, or liberation — depends on who controls it.",
+  "Elite":"Meritocracy's winners or an unaccountable class — depends who's talking.",
+  "Evidence":"Proof to some, inconvenience to others.",
+  "Evil":"Theological category, political label, or description of harm.",
+  "Expert":"Trusted authority or unelected elite, depending on whether you like the answer.",
+  "Fact":"Observed, agreed upon, or declared — the word claims more certainty than it delivers.",
+  "Fair":"Equal, equitable, or whatever I think it is.",
+  "Faith":"Trust, religion, or the decision to believe without proof.",
+  "Family":"Blood, choice, or the unit the state prefers you to be.",
+  "Freedom":"Means liberation to one person, license to another, absence of government to a third.",
+  "Future":"Promise, threat, or abstraction used to defer present action.",
+  "Gender":"Biology, identity, performance, or spectrum — the conversation is ongoing.",
+  "God":"Creator, metaphor, authority, or comfort — the most loaded word in any language.",
+  "Good":"Moral, effective, or just pleasant — the word carries all three.",
+  "Government":"Servant of the people or threat to liberty — same institution, opposite readings.",
+  "Growth":"Economic progress or ecological destruction — depends on the time horizon.",
+  "Health":"Physical state, industry, or human right — not settled.",
+  "Heritage":"Pride, mythology, or unexamined inheritance.",
+  "History":"What happened, what was recorded, or what was decided mattered.",
+  "Home":"Place, feeling, nation, or the thing you can lose.",
+  "Immigrant":"Neighbor, threat, or economic category — depends on the decade.",
+  "Investment":"Building something or extracting value — both use the same word.",
+  "Judgment":"Divine reckoning, personal criticism, or legal ruling.",
+  "Justice":"Punishment, restoration, or equity — three entirely different systems.",
+  "Law":"Protection or weapon, depending entirely on where you're standing.",
+  "Legacy":"What you leave or what you're blamed for.",
+  "Liberty":"Often used as freedom's more formal twin — with very different implications.",
+  "Life":"Biological, biographical, or the political category in 'pro-life'.",
+  "Memory":"Individual, collective, or politically managed.",
+  "Minority":"Numerical or structural — not the same thing.",
+  "Miracle":"Divine intervention or improbable event — language reveals belief.",
+  "Misinformation":"False content — or content someone in power doesn't want believed.",
+  "Modern":"Current, Western, or superior — the assumptions are buried in the word.",
+  "Narrative":"Story, spin, or the frame around the facts.",
+  "Nation":"Geography, people, government, or myth — not always the same thing.",
+  "Native":"Indigenous or simply born here — two very different claims.",
+  "Natural":"From nature or morally correct — the conflation is deliberate.",
+  "News":"Events reported, events selected, or events manufactured.",
+  "Normal":"Statistical average or social enforcement.",
+  "Opinion":"Personal view or the equal of established fact — being treated as the same is the problem.",
+  "Order":"Peace or enforcement — whose order matters enormously.",
+  "Patriot":"Lover of country or enforcer of conformity.",
+  "Populism":"The people's voice or mob rule dressed up in a flag.",
+  "Poverty":"Circumstance, system, or personal failure — the diagnosis determines the cure.",
+  "Power":"Authority, force, or energy — and who has it changes everything.",
+  "Prayer":"Communication with the divine or wishful thinking — depends entirely on belief.",
+  "Privilege":"Advantage, blessing, or grievance depending on the conversation.",
+  "Progress":"Forward movement or destruction of what works — both claims made sincerely.",
+  "Propaganda":"Enemy messaging — your side calls it communication.",
+  "Protest":"Democratic expression or public disorder — same event, different headlines.",
+  "Race":"Biological fiction, social reality, and lived experience — all three at once.",
+  "Reform":"Progress or erosion, depending on what you're attached to.",
+  "Religion":"Present in every layer of human history, still shaping the present.",
+  "Responsibility":"Personal accountability or systemic obligation — the debate is which one applies.",
+  "Revolution":"Heroic founding or dangerous chaos, depending on whose side won.",
+  "Rights":"God-given, government-granted, or socially constructed — this is us.",
+  "Riot":"What they call a protest they disapprove of.",
+  "Sacred":"Holy, protected, or beyond criticism.",
+  "Salvation":"Religious rescue or political promise — used by both.",
+  "Science":"Method, institution, consensus, or authority — critics conflate them deliberately.",
+  "Security":"Safety or control — both use the same infrastructure.",
+  "Shame":"Moral corrective or social weapon.",
+  "Sin":"Religious transgression or social failure — still very much in circulation.",
+  "Socialism":"Collective care or government overreach — rarely defined before being invoked.",
+  "Soul":"Theological reality, metaphor, or the part of a person that can't be quantified.",
+  "Sovereignty":"National independence or the right of the powerful to do as they please.",
+  "Tax":"Civic contribution or government theft — one of the oldest fights.",
+  "Terrorism":"Political violence by enemies — rarely applied to ourselves.",
+  "Theory":"In science: well-tested explanation. In common use: a guess. The gap is exploited constantly.",
+  "They":"The most dangerous three-letter word.",
+  "Tradition":"Wisdom passed down or refusal to change — context decides.",
+  "Truth":"Correspondence to fact, lived experience, or what power decides — rarely neutral.",
+  "Violence":"Physical harm, structural harm, or the word used to shut down protest.",
+  "War":"Defense, aggression, or policy — same act, opposite framings.",
+  "Wealth":"Earned, inherited, extracted, or accumulated — rarely just one.",
+  "Work":"Dignity, exploitation, or identity — all three true simultaneously."
+};
+
+// Build regex from word list — whole words only, case insensitive
+const _words = Object.keys(GLORIES).sort((a,b)=>b.length-a.length);
+const _re = new RegExp('\\b(' + _words.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|') + ')\\b','gi');
+
+function applyGlories(root){
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(n){
+      const p = n.parentElement;
+      if(!p) return NodeFilter.FILTER_REJECT;
+      const tag = p.tagName;
+      if(['SCRIPT','STYLE','A','BUTTON','INPUT'].includes(tag)) return NodeFilter.FILTER_REJECT;
+      if(p.classList&&p.classList.contains('glory-word')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes=[];
+  while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+    if(!_re.test(node.textContent)) return;
+    _re.lastIndex=0;
+    const frag = document.createDocumentFragment();
+    let last=0, m;
+    _re.lastIndex=0;
+    while((m=_re.exec(node.textContent))!==null){
+      if(m.index>last) frag.appendChild(document.createTextNode(node.textContent.slice(last,m.index)));
+      const span=document.createElement('span');
+      span.className='glory-word';
+      span.textContent=m[0];
+      span.dataset.glory=m[0].charAt(0).toUpperCase()+m[0].slice(1).toLowerCase();
+      frag.appendChild(span);
+      last=_re.lastIndex;
+    }
+    if(last<node.textContent.length) frag.appendChild(document.createTextNode(node.textContent.slice(last)));
+    node.parentNode.replaceChild(frag,node);
+  });
+}
+
+// Pop-up logic
+const pop=document.getElementById('glory-pop');
+document.body.addEventListener('click',e=>{
+  const t=e.target.closest('.glory-word');
+  if(t){
+    e.stopPropagation();
+    const key=t.dataset.glory;
+    const def=GLORIES[key]||GLORIES[Object.keys(GLORIES).find(k=>k.toLowerCase()===key.toLowerCase())];
+    if(!def) return;
+    document.getElementById('gp-word').textContent=key.toUpperCase();
+    document.getElementById('gp-def').textContent=def;
+    document.getElementById('gp-link').href='compendium.html#'+key.toLowerCase();
+    // Position near word
+    const r=t.getBoundingClientRect();
+    const pw=280, ph=120;
+    let left=r.left, top=r.bottom+8;
+    if(left+pw>window.innerWidth-10) left=window.innerWidth-pw-10;
+    if(top+ph>window.innerHeight-10) top=r.top-ph-8;
+    pop.style.left=Math.max(8,left)+'px';
+    pop.style.top=Math.max(8,top)+'px';
+    pop.style.display='block';
+    return;
+  }
+  if(!e.target.closest('#glory-pop')) pop.style.display='none';
+});
+
+// Apply to static content on load
+window.addEventListener('load',()=>{
+  ['hero','about','thoughts'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) applyGlories(el);
+  });
+});
+
+// Apply to modal content after render
+const _origRender=window.renderCard;
+window.renderCard=function(data){
+  _origRender(data);
+  setTimeout(()=>{
+    const desc=document.getElementById('modal-desc');
+    if(desc) applyGlories(desc);
+  },50);
+};
+</script>
 </body>
 </html>
