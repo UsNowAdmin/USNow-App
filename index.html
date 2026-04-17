@@ -790,6 +790,7 @@ function applyGlories(root){
   const nodes=[];
   while(walker.nextNode()) nodes.push(walker.currentNode);
   nodes.forEach(node=>{
+    _re.lastIndex=0;
     if(!_re.test(node.textContent)) return;
     _re.lastIndex=0;
     const frag = document.createDocumentFragment();
@@ -847,10 +848,13 @@ window.addEventListener('load',()=>{
 const _origRender=window.renderCard;
 window.renderCard=function(data){
   _origRender(data);
+  _re.lastIndex=0;
   setTimeout(()=>{
-    const desc=document.getElementById('modal-desc');
-    if(desc) applyGlories(desc);
-  },50);
+    ['modal-desc','modal-deep-section'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el&&el.style.display!=='none'){_re.lastIndex=0;applyGlories(el);}
+    });
+  },80);
 };
 </script>
 </body>
