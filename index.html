@@ -811,7 +811,7 @@ function applyGlories(root){
 
 // Pop-up logic
 const pop=document.getElementById('glory-pop');
-document.body.addEventListener('click',e=>{
+document.addEventListener('click',e=>{
   const t=e.target.closest('.glory-word');
   if(t){
     e.stopPropagation();
