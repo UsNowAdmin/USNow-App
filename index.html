@@ -204,6 +204,11 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
 <div id="modal-overlay" onclick="cardNavClose()">
   <div id="modal-glow-halo"></div>
+  <div id="glory-pop-modal" style="display:none;position:fixed;z-index:9500;background:linear-gradient(160deg,#0d1525,#070c1a);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 16px;max-width:280px;box-shadow:0 0 40px rgba(0,0,0,0.7),0 0 20px rgba(201,168,76,0.12);" onclick="event.stopPropagation()">
+    <div id="gp-word-modal" style="font-size:13px;font-weight:700;letter-spacing:0.1em;color:#e0c060;font-family:'Courier New',monospace;margin-bottom:6px;"></div>
+    <div id="gp-def-modal" style="font-size:12px;line-height:1.6;color:#8898b0;font-family:'Georgia',serif;font-style:italic;margin-bottom:10px;"></div>
+    <a id="gp-link-modal" href="compendium.html" target="_blank" style="font-size:9px;letter-spacing:0.15em;color:rgba(201,168,76,0.6);font-family:'Courier New',monospace;text-decoration:none;">→ THE WORLD COMPENDIUM</a>
+  </div>
   <div id="modal-box" onclick="event.stopPropagation()">
     <div class="modal-drag" id="modal-drag"></div>
     <div id="card-nav-bar" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
@@ -546,9 +551,11 @@ function cardNavOpen(data){
 
 function cardNavBack(){
   window._cardStack.pop();
+  const _gpm=document.getElementById('glory-pop-modal');if(_gpm)_gpm.style.display='none';
   if(window._cardStack.length===0){
     document.getElementById('modal-overlay').classList.remove('open');
     document.body.style.overflow='';
+    const _gp=document.getElementById('glory-pop');if(_gp)_gp.style.display='none';
   } else {
     renderCard(window._cardStack[window._cardStack.length-1]);
   }
@@ -558,6 +565,8 @@ function cardNavClose(){
   window._cardStack=[];
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow='';
+  const _gp=document.getElementById('glory-pop');if(_gp)_gp.style.display='none';
+  const _gpm=document.getElementById('glory-pop-modal');if(_gpm)_gpm.style.display='none';
 }
 
 function renderCard(data){
@@ -810,30 +819,43 @@ function applyGlories(root){
   });
 }
 
-// Pop-up logic
+// Pop-up logic — dual pop: one for page, one inside modal stacking context
 const pop=document.getElementById('glory-pop');
+const popModal=document.getElementById('glory-pop-modal');
+
+function showGloryPop(t, useModal){
+  const key=t.dataset.glory;
+  const def=GLORIES[key]||GLORIES[Object.keys(GLORIES).find(k=>k.toLowerCase()===key.toLowerCase())];
+  if(!def) return;
+  const r=t.getBoundingClientRect();
+  const pw=280, ph=120;
+  let left=r.left, top=r.bottom+8;
+  if(left+pw>window.innerWidth-10) left=window.innerWidth-pw-10;
+  if(top+ph>window.innerHeight-10) top=r.top-ph-8;
+  const target = useModal ? popModal : pop;
+  const other  = useModal ? pop : popModal;
+  other.style.display='none';
+  target.querySelector ? null : null; // no-op
+  (useModal ? document.getElementById('gp-word-modal') : document.getElementById('gp-word')).textContent=key.toUpperCase();
+  (useModal ? document.getElementById('gp-def-modal')  : document.getElementById('gp-def')).textContent=def;
+  (useModal ? document.getElementById('gp-link-modal') : document.getElementById('gp-link')).href='compendium.html#'+key.toLowerCase();
+  target.style.left=Math.max(8,left)+'px';
+  target.style.top=Math.max(8,top)+'px';
+  target.style.display='block';
+}
+
 document.addEventListener('click',e=>{
   const t=e.target.closest('.glory-word');
   if(t){
     e.stopPropagation();
-    const key=t.dataset.glory;
-    const def=GLORIES[key]||GLORIES[Object.keys(GLORIES).find(k=>k.toLowerCase()===key.toLowerCase())];
-    if(!def) return;
-    document.getElementById('gp-word').textContent=key.toUpperCase();
-    document.getElementById('gp-def').textContent=def;
-    document.getElementById('gp-link').href='compendium.html#'+key.toLowerCase();
-    // Position near word
-    const r=t.getBoundingClientRect();
-    const pw=280, ph=120;
-    let left=r.left, top=r.bottom+8;
-    if(left+pw>window.innerWidth-10) left=window.innerWidth-pw-10;
-    if(top+ph>window.innerHeight-10) top=r.top-ph-8;
-    pop.style.left=Math.max(8,left)+'px';
-    pop.style.top=Math.max(8,top)+'px';
-    pop.style.display='block';
+    const inModal=!!t.closest('#modal-overlay');
+    showGloryPop(t, inModal);
     return;
   }
-  if(!e.target.closest('#glory-pop')) pop.style.display='none';
+  if(!e.target.closest('#glory-pop')&&!e.target.closest('#glory-pop-modal')){
+    pop.style.display='none';
+    popModal.style.display='none';
+  }
 });
 
 // Apply to static content on load
