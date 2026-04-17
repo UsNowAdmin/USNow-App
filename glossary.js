@@ -1,331 +1,332 @@
 // USNow — The World Compendium
-// glossary.js — shared across index.html and compendium.html
-// Add new entries alphabetically. One line each.
+// glossary.js
+// Definitions verbatim from working document.
+// Three confirmed edits: ACCIDENT, DEMOCRACY, RIGHTS.
+// To add a word: { word: "", category: "", definition: "" },
 
 const glossary = [
 
   // A
-  { word: "Accident",
+  { word: "Accident", category: "Time & Change",
     definition: "An event that appears to happen on its own — distinct from mistake, coincidence, and fate — yet cause or blame can always be traced to human action, the surrounding conditions, or the laws of physics." },
 
   // B
-  { word: "Belief",
-    definition: "What you hold to be true before — or instead of — proof. Not the same as faith, not the same as knowledge, though all three are used interchangeably." },
+  { word: "Belief", category: "Truth & Knowledge",
+    definition: "Faith, opinion, or knowledge without proof — often used interchangeably." },
 
-  { word: "Bias",
-    definition: "A lens everyone has and only other people are accused of using." },
+  { word: "Bias", category: "Truth & Knowledge",
+    definition: "Everyone has it — only other people are accused of it." },
 
-  { word: "Body",
-    definition: "Your first and only address — also, depending on who's in power, a political terrain." },
+  { word: "Body", category: "The Body & Life",
+    definition: "Self, vessel, political terrain, or crime scene — context is everything." },
 
-  { word: "Border",
-    definition: "A line on a map that someone decided was worth dying for." },
+  { word: "Border", category: "Violence & Conflict",
+    definition: "Line on a map, security concept, or human rights issue." },
 
   // C
-  { word: "Capitalism",
-    definition: "An economic system built on free markets and private ownership — celebrated as freedom, contested as organized extraction, and rarely defined before being defended." },
+  { word: "Capitalism", category: "Money & Economy",
+    definition: "Freedom through markets or organized extraction — still being argued." },
 
-  { word: "Censorship",
-    definition: "The suppression of speech or information — called protection by those doing it, tyranny by those it silences." },
+  { word: "Censorship", category: "Truth & Knowledge",
+    definition: "Suppression of truth or removal of harm — always contested." },
 
-  { word: "Change",
-    definition: "Progress or threat — entirely dependent on what you stand to lose." },
+  { word: "Change", category: "Time & Change",
+    definition: "Hope or threat depending entirely on what you have to lose." },
 
-  { word: "Charity",
-    definition: "Voluntary giving to those in need — sometimes generosity, sometimes tax strategy, sometimes a substitute for the justice that would make it unnecessary." },
+  { word: "Charity", category: "Morality & Values",
+    definition: "Generosity, tax strategy, or substitute for justice." },
 
-  { word: "Class",
-    definition: "Your position in the economic order — the thing Americans are least comfortable admitting exists." },
+  { word: "Class", category: "Identity & Belonging",
+    definition: "Economic position, cultural identity, or something Americans pretend doesn't exist." },
 
-  { word: "Community",
-    definition: "The people around you, the group you belong to, or a word used to avoid naming either one specifically." },
+  { word: "Community", category: "Identity & Belonging",
+    definition: "Neighborhood, identity group, or abstraction invoked to avoid specifics." },
 
-  { word: "Constitution",
-    definition: "The founding legal document of the United States — a living framework to some, a fixed text to others, and the subject of every argument in between." },
+  { word: "Constitution", category: "Power & Governance",
+    definition: "Living document or fixed text — the entire legal debate in one word." },
 
-  { word: "Crime",
-    definition: "An act defined as illegal — by law, which is defined by those who write it." },
+  { word: "Crime", category: "Violence & Conflict",
+    definition: "Defined by law, which is defined by power." },
 
-  { word: "Crisis",
-    definition: "An emergency requiring immediate action — or the word used to justify it." },
+  { word: "Crisis", category: "Time & Change",
+    definition: "Emergency requiring action or excuse for overreach — both true simultaneously." },
 
-  { word: "Culture",
-    definition: "Everything a group of people share and pass on — so broad it sometimes means nothing, so real it shapes everything." },
+  { word: "Culture", category: "Identity & Belonging",
+    definition: "Everything and therefore sometimes nothing." },
 
   // D
-  { word: "Death",
-    definition: "The one thing every living thing has in common — and the one thing no system of power has ever fully controlled." },
+  { word: "Death", category: "The Body & Life",
+    definition: "End, transition, or the thing that makes everything else matter." },
 
-  { word: "Debt",
-    definition: "Money owed — framed as investment, trap, or moral failing depending on who holds it and who doesn't." },
+  { word: "Debt", category: "Money & Economy",
+    definition: "Investment, trap, or moral failing — all three framings in active use." },
 
-  { word: "Defense",
-    definition: "Protection of a nation and its people — also the budget line item for a military that spends more than the next ten countries combined." },
+  { word: "Defense", category: "Violence & Conflict",
+    definition: "Protection or the budget line item for offense." },
 
-  { word: "Democracy",
+  { word: "Democracy", category: "Power & Governance",
     definition: "Majority rule, representative republic, or an untenable experiment — depending on who's asking." },
 
-  { word: "Deserve",
-    definition: "What you've earned, what luck gave you, or what God intended — none of these are the same thing." },
+  { word: "Deserve", category: "Morality & Values",
+    definition: "Merit-based, luck-based, or morally determined — not agreed upon." },
 
-  { word: "Dignity",
-    definition: "The quality of being worthy of respect — either inherent to every person or something that has to be earned. The oldest human argument." },
+  { word: "Dignity", category: "Morality & Values",
+    definition: "Inherent or earned — the oldest human argument." },
 
   // E
-  { word: "Education",
-    definition: "The transmission of knowledge — through schools, systems, and gatekeepers who decide what counts." },
+  { word: "Education", category: "Truth & Knowledge",
+    definition: "Learning, credentialing, indoctrination, or liberation — depends on who controls it." },
 
-  { word: "Elite",
-    definition: "Those at the top of a system — called meritocracy's winners by some, an unaccountable class by others." },
+  { word: "Elite", category: "Power & Governance",
+    definition: "Meritocracy's winners or an unaccountable class — depends who's talking." },
 
-  { word: "Empire",
-    definition: "A state that extends its power beyond its borders — by force, by money, by culture, or by all three at once." },
+  { word: "Evidence", category: "Truth & Knowledge",
+    definition: "Proof to some, inconvenience to others." },
 
-  { word: "Evidence",
-    definition: "What supports a claim — treated as proof by some and inconvenience by others." },
+  { word: "Evil", category: "Morality & Values",
+    definition: "Theological category, political label, or description of harm." },
 
-  { word: "Evil",
-    definition: "Profound wrongdoing — a theological category, a political label, and a word that ends conversations." },
-
-  { word: "Expert",
-    definition: "Someone with deep knowledge in a field — trusted authority to some, unelected elite to others, depending entirely on whether you like the answer." },
+  { word: "Expert", category: "Truth & Knowledge",
+    definition: "Trusted authority or unelected elite, depending on whether you like the answer." },
 
   // F
-  { word: "Fact",
-    definition: "Something that can be verified — a word that claims more certainty than it always delivers." },
+  { word: "Fact", category: "Truth & Knowledge",
+    definition: "Observed, agreed upon, or declared — the word claims more certainty than it delivers." },
 
-  { word: "Faith",
-    definition: "Trust, religion, or the decision to believe without proof — sometimes all three at once." },
+  { word: "Fair", category: "Morality & Values",
+    definition: "Equal, equitable, or whatever I think it is." },
 
-  { word: "Family",
-    definition: "The people you came from, the people you chose, or the unit the state prefers you to organize yourself into." },
+  { word: "Faith", category: "Religion & Meaning",
+    definition: "Trust, religion, or the decision to believe without proof." },
 
-  { word: "Fate",
-    definition: "The idea that outcomes were always going to happen this way — which removes both responsibility and the possibility of change." },
+  { word: "Family", category: "Identity & Belonging",
+    definition: "Blood, choice, or the unit the state prefers you to be." },
 
-  { word: "Freedom",
-    definition: "Liberation, personal license, or the absence of government — the same word carrying three entirely different political philosophies." },
+  { word: "Freedom", category: "Power & Governance",
+    definition: "Means liberation to one person, license to another, absence of government to a third." },
 
-  { word: "Future",
-    definition: "What hasn't happened yet — invoked as promise, threat, or reason to defer action in the present." },
+  { word: "Future", category: "Time & Change",
+    definition: "Promise, threat, or abstraction used to defer present action." },
 
   // G
-  { word: "Gender",
-    definition: "Biology, identity, performance, or spectrum — a word the culture is still catching up to." },
+  { word: "Gender", category: "Identity & Belonging",
+    definition: "Biology, identity, performance, or spectrum — the conversation is ongoing." },
 
-  { word: "God",
-    definition: "Creator, metaphor, moral authority, or comfort — the most contested word in any language, including this one." },
+  { word: "God", category: "Religion & Meaning",
+    definition: "Creator, metaphor, authority, or comfort — the most loaded word in any language." },
 
-  { word: "Good",
-    definition: "Morally right, practically effective, or simply pleasant — a word doing three jobs at once." },
+  { word: "Good", category: "Morality & Values",
+    definition: "Moral, effective, or just pleasant — the word carries all three." },
 
-  { word: "Government",
-    definition: "The institutions through which a society organizes power — servant of the people to some, threat to liberty to others." },
+  { word: "Government", category: "Power & Governance",
+    definition: "Servant of the people or threat to liberty — same institution, opposite readings." },
 
-  { word: "Growth",
-    definition: "Economic expansion — progress on a short time horizon, ecological destruction on a longer one." },
+  { word: "Growth", category: "Money & Economy",
+    definition: "Economic progress or ecological destruction — depends on the time horizon." },
 
   // H
-  { word: "Health",
-    definition: "The condition of the body and mind — also an industry, and in most of the world, a human right." },
+  { word: "Health", category: "The Body & Life",
+    definition: "Physical state, industry, or human right — not settled." },
 
-  { word: "Heritage",
-    definition: "What was passed down to you — pride, mythology, or unexamined inheritance, depending on what it contains." },
+  { word: "Heritage", category: "Identity & Belonging",
+    definition: "Pride, mythology, or unexamined inheritance." },
 
-  { word: "History",
-    definition: "What happened, filtered through what was recorded, filtered again through what was decided to matter." },
+  { word: "History", category: "Time & Change",
+    definition: "What happened, what was recorded, or what was decided mattered." },
 
-  { word: "Home",
-    definition: "A place, a feeling, a country, or the thing you can be made to leave." },
+  { word: "Home", category: "The Body & Life",
+    definition: "Place, feeling, nation, or the thing you can lose." },
 
   // I
-  { word: "Immigrant",
-    definition: "A person who moves from one country to another — neighbor, threat, or economic category, depending on the decade." },
+  { word: "Immigrant", category: "Identity & Belonging",
+    definition: "Neighbor, threat, or economic category — depends on the decade." },
 
-  { word: "Investment",
-    definition: "Deploying resources to build something of value — or to extract it. Both use the same word." },
+  { word: "Investment", category: "Money & Economy",
+    definition: "Building something or extracting value — both use the same word." },
 
   // J
-  { word: "Judgment",
-    definition: "A conclusion reached about a person, action, or situation — divine reckoning, personal criticism, or legal ruling." },
+  { word: "Judgment", category: "Religion & Meaning",
+    definition: "Divine reckoning, personal criticism, or legal ruling." },
 
-  { word: "Justice",
-    definition: "Punishment, restoration, or equity — three entirely different systems, all called by the same name." },
+  { word: "Justice", category: "Power & Governance",
+    definition: "Punishment, restoration, or equity — three entirely different systems." },
 
   // L
-  { word: "Law",
-    definition: "The rules a society agrees to live by — protection or weapon, depending entirely on where you're standing." },
+  { word: "Law", category: "Power & Governance",
+    definition: "Protection or weapon, depending entirely on where you're standing." },
 
-  { word: "Legacy",
-    definition: "What you leave behind — celebrated achievement or inherited responsibility, depending on who's accounting for it." },
+  { word: "Legacy", category: "Time & Change",
+    definition: "What you leave or what you're blamed for." },
 
-  { word: "Liberty",
-    definition: "Freedom's more formal twin — with a harder edge and a longer list of implications." },
+  { word: "Liberty", category: "Power & Governance",
+    definition: "Often used as freedom's more formal twin — with very different implications." },
 
-  { word: "Life",
-    definition: "Biological existence, a personal story, or a political category — as in the one that appears in 'pro-life,' which narrows the word considerably." },
+  { word: "Life", category: "The Body & Life",
+    definition: "Biological, biographical, or the political category in 'pro-life'." },
 
   // M
-  { word: "Memory",
-    definition: "What we hold onto from the past — individual, collective, and sometimes carefully managed by those in power." },
+  { word: "Memory", category: "Time & Change",
+    definition: "Individual, collective, or politically managed." },
 
-  { word: "Minority",
-    definition: "A group smaller in number — or smaller in power. Not the same thing." },
+  { word: "Minority", category: "Identity & Belonging",
+    definition: "Numerical or structural — not the same thing." },
 
-  { word: "Miracle",
-    definition: "An event that defies normal explanation — divine intervention or improbable coincidence, depending on what you already believe." },
+  { word: "Miracle", category: "Religion & Meaning",
+    definition: "Divine intervention or improbable event — language reveals belief." },
 
-  { word: "Misinformation",
-    definition: "False or inaccurate information — or, depending on who's defining it, information someone in power doesn't want believed." },
+  { word: "Misinformation", category: "Truth & Knowledge",
+    definition: "False content — or content someone in power doesn't want believed." },
 
-  { word: "Modern",
-    definition: "Of the present time — a word that often carries the unstated assumption that current equals better." },
+  { word: "Modern", category: "Time & Change",
+    definition: "Current, Western, or superior — the assumptions are buried in the word." },
 
   // N
-  { word: "Narrative",
-    definition: "The story around the facts — useful frame or deliberate spin, depending on who built it." },
+  { word: "Narrative", category: "Truth & Knowledge",
+    definition: "Story, spin, or the frame around the facts." },
 
-  { word: "Nation",
-    definition: "A country, a people, a government, or a shared myth — not always the same thing, often treated as one." },
+  { word: "Nation", category: "Identity & Belonging",
+    definition: "Geography, people, government, or myth — not always the same thing." },
 
-  { word: "Native",
-    definition: "Indigenous to a place, or simply born there — two very different claims, one word." },
+  { word: "Native", category: "Identity & Belonging",
+    definition: "Indigenous or simply born here — two very different claims." },
 
-  { word: "Natural",
-    definition: "Found in or produced by nature — or morally correct. The conflation of those two meanings is rarely accidental." },
+  { word: "Natural", category: "Religion & Meaning",
+    definition: "From nature or morally correct — the conflation is deliberate." },
 
-  { word: "News",
-    definition: "Events reported, events selected, or events manufactured — the difference matters more than it used to." },
+  { word: "News", category: "Truth & Knowledge",
+    definition: "Events reported, events selected, or events manufactured." },
 
-  { word: "Normal",
-    definition: "The statistical average or the social expectation — used to describe both, enforce one." },
+  { word: "Normal", category: "Identity & Belonging",
+    definition: "Statistical average or social enforcement." },
 
   // O
-  { word: "Opinion",
-    definition: "A personal view — increasingly treated as the equal of established fact. It isn't." },
+  { word: "Opinion", category: "Truth & Knowledge",
+    definition: "Personal view or the equal of established fact — being treated as the same is the problem." },
 
-  { word: "Order",
-    definition: "Stability, peace, or the enforcement of existing arrangements — whose order is always the question." },
+  { word: "Order", category: "Violence & Conflict",
+    definition: "Peace or enforcement — whose order matters enormously." },
 
   // P
-  { word: "Patriot",
-    definition: "Someone who loves their country — or someone who demands everyone else demonstrate it the same way." },
+  { word: "Patriot", category: "Power & Governance",
+    definition: "Lover of country or enforcer of conformity." },
 
-  { word: "Populism",
-    definition: "A political approach that claims to speak for ordinary people against elites — sometimes it does." },
+  { word: "Populism", category: "Power & Governance",
+    definition: "The people's voice or mob rule dressed up in a flag." },
 
-  { word: "Poverty",
-    definition: "Not having enough — a circumstance, a system, or a personal failure, depending on the diagnosis, which determines the cure." },
+  { word: "Poverty", category: "Money & Economy",
+    definition: "Circumstance, system, or personal failure — the diagnosis determines the cure." },
 
-  { word: "Power",
-    definition: "The ability to make things happen — or to stop them. Who has it, and how they got it, is most of the story." },
+  { word: "Power", category: "Power & Governance",
+    definition: "Authority, force, or energy — and who has it changes everything." },
 
-  { word: "Prayer",
-    definition: "Communication with the divine, or the wish that something were different — both are real, in different ways." },
+  { word: "Prayer", category: "Religion & Meaning",
+    definition: "Communication with the divine or wishful thinking — depends entirely on belief." },
 
-  { word: "Privilege",
-    definition: "Unearned advantage — a blessing to those who have it, a grievance to those naming it." },
+  { word: "Privilege", category: "Morality & Values",
+    definition: "Advantage, blessing, or grievance depending on the conversation." },
 
-  { word: "Progress",
-    definition: "Movement forward — or the destruction of what works, depending on what you're attached to." },
+  { word: "Progress", category: "Time & Change",
+    definition: "Forward movement or destruction of what works — both claims made sincerely." },
 
-  { word: "Propaganda",
-    definition: "Information designed to promote a particular point of view — what the other side does. Your side calls it communication." },
+  { word: "Propaganda", category: "Truth & Knowledge",
+    definition: "Enemy messaging — your side calls it communication." },
 
-  { word: "Protest",
-    definition: "Public expression of opposition — democratic participation or public disorder, depending on the headline." },
+  { word: "Protest", category: "Violence & Conflict",
+    definition: "Democratic expression or public disorder — same event, different headlines." },
 
   // R
-  { word: "Race",
-    definition: "A biological fiction that became a social reality — and a lived experience that shapes everything regardless of its origins." },
+  { word: "Race", category: "Identity & Belonging",
+    definition: "Biological fiction, social reality, and lived experience — all three at once." },
 
-  { word: "Reform",
-    definition: "A change to improve a system — or the erosion of something that worked, depending on what you had." },
+  { word: "Reform", category: "Power & Governance",
+    definition: "Progress or erosion, depending on what you're attached to." },
 
-  { word: "Religion",
-    definition: "An organized system of belief, practice, and community — present in every layer of human history, still shaping the present." },
+  { word: "Religion", category: "Religion & Meaning",
+    definition: "Present in every layer of human history, still shaping the present." },
 
-  { word: "Responsibility",
-    definition: "Personal accountability or systemic obligation — the entire political debate is which one applies in any given situation." },
+  { word: "Responsibility", category: "Morality & Values",
+    definition: "Personal accountability or systemic obligation — the debate is which one applies." },
 
-  { word: "Revolution",
-    definition: "The overthrow of an existing order — heroic founding or dangerous chaos, depending entirely on whose side won." },
+  { word: "Revolution", category: "Violence & Conflict",
+    definition: "Heroic founding or dangerous chaos, depending on whose side won." },
 
-  { word: "Rights",
+  { word: "Rights", category: "Power & Governance",
     definition: "God-given, government-granted, or socially constructed — this is us." },
 
-  { word: "Riot",
-    definition: "Violent public disorder — or what a protest gets called when the people in power disapprove of it." },
+  { word: "Riot", category: "Violence & Conflict",
+    definition: "What they call a protest they disapprove of." },
 
   // S
-  { word: "Sacred",
-    definition: "Connected to something beyond the ordinary — holy, protected, or simply beyond criticism." },
+  { word: "Sacred", category: "Religion & Meaning",
+    definition: "Holy, protected, or beyond criticism." },
 
-  { word: "Salvation",
-    definition: "Rescue from harm or damnation — a religious promise and a political one, often made with equal conviction." },
+  { word: "Salvation", category: "Religion & Meaning",
+    definition: "Religious rescue or political promise — used by both." },
 
-  { word: "Science",
-    definition: "A method for understanding the world through observation and testing — also an institution, a consensus, and an authority some would rather not answer to." },
+  { word: "Science", category: "Truth & Knowledge",
+    definition: "Method, institution, consensus, or authority — critics conflate them deliberately." },
 
-  { word: "Security",
-    definition: "The condition of being safe — and the infrastructure built in its name, which can look very different depending on who it's pointed at." },
+  { word: "Security", category: "Violence & Conflict",
+    definition: "Safety or control — both use the same infrastructure." },
 
-  { word: "Shame",
-    definition: "The painful awareness of having done wrong — a moral corrective or a social weapon, depending on who's applying it." },
+  { word: "Shame", category: "Morality & Values",
+    definition: "Moral corrective or social weapon." },
 
-  { word: "Sin",
-    definition: "A transgression against moral or divine law — a religious category that has found a very comfortable home in secular politics." },
+  { word: "Sin", category: "Religion & Meaning",
+    definition: "Religious transgression or social failure — still very much in circulation." },
 
-  { word: "Socialism",
-    definition: "An economic system emphasizing collective ownership and social welfare — rarely defined before being invoked as either salvation or warning." },
+  { word: "Socialism", category: "Money & Economy",
+    definition: "Collective care or government overreach — rarely defined before being invoked." },
 
-  { word: "Soul",
-    definition: "The nonphysical essence of a person — theological reality, poetic metaphor, or simply the part of someone that can't be quantified." },
+  { word: "Soul", category: "Religion & Meaning",
+    definition: "Theological reality, metaphor, or the part of a person that can't be quantified." },
 
-  { word: "Sovereignty",
-    definition: "The right of a state to govern itself — or the right of those powerful enough to do as they please." },
+  { word: "Sovereignty", category: "Power & Governance",
+    definition: "National independence or the right of the powerful to do as they please." },
 
   // T
-  { word: "Tax",
-    definition: "What individuals and institutions contribute to fund the collective — civic obligation to some, government theft to others." },
+  { word: "Tax", category: "Money & Economy",
+    definition: "Civic contribution or government theft — one of the oldest fights." },
 
-  { word: "Terrorism",
-    definition: "Political violence designed to cause fear — applied to enemies. Rarely to ourselves." },
+  { word: "Terrorism", category: "Violence & Conflict",
+    definition: "Political violence by enemies — rarely applied to ourselves." },
 
-  { word: "The Market",
-    definition: "The collective mechanism of economic exchange — spoken of as if it were a person with opinions, feelings, and the right to decide." },
+  { word: "The Market", category: "Money & Economy",
+    definition: "Spoken of as if it were a person with opinions." },
 
-  { word: "Theory",
-    definition: "In science: a well-tested explanation supported by evidence. In common use: a guess. The gap between those meanings is exploited constantly." },
+  { word: "Theory", category: "Truth & Knowledge",
+    definition: "In science: well-tested explanation. In common use: a guess. The gap is exploited constantly." },
 
-  { word: "Tradition",
-    definition: "A practice passed down through generations — accumulated wisdom or refusal to change, depending on what it asks of you." },
+  { word: "They", category: "Identity & Belonging",
+    definition: "The most dangerous three-letter word." },
 
-  { word: "Truth",
-    definition: "Correspondence to what is real — also lived experience, also what power decides, and rarely as neutral as the word implies." },
+  { word: "Tradition", category: "Time & Change",
+    definition: "Wisdom passed down or refusal to change — context decides." },
+
+  { word: "Truth", category: "Truth & Knowledge",
+    definition: "Correspondence to fact, lived experience, or what power decides — rarely neutral." },
 
   // U
-  { word: "Us",
-    definition: "The two most loaded letters in the language — who's in, who's out, and who gets to decide." },
+  { word: "Us", category: "Identity & Belonging",
+    definition: "The most loaded two-letter word in the language." },
 
   // V
-  { word: "Violence",
-    definition: "Physical force that causes harm — also structural, also the word used to discredit protest, also what some systems do quietly every day." },
+  { word: "Violence", category: "Violence & Conflict",
+    definition: "Physical harm, structural harm, or the word used to shut down protest." },
 
   // W
-  { word: "War",
-    definition: "Armed conflict between organized groups — defense or aggression, depending on which side is writing the history." },
+  { word: "War", category: "Violence & Conflict",
+    definition: "Defense, aggression, or policy — same act, opposite framings." },
 
-  { word: "Wealth",
-    definition: "An abundance of valuable resources — earned, inherited, extracted, or accumulated through all three." },
+  { word: "Wealth", category: "Money & Economy",
+    definition: "Earned, inherited, extracted, or accumulated — rarely just one." },
 
-  { word: "Work",
-    definition: "Labor exchanged for compensation — dignity, exploitation, or identity, often all at once." },
+  { word: "Work", category: "Money & Economy",
+    definition: "Dignity, exploitation, or identity — all three true simultaneously." },
 
-  // Placeholder for future entries
-  // { word: "", definition: "" },
+  // ── ADD NEW WORDS BELOW ──
+  // { word: "", category: "", definition: "" },
 
 ];
 
-// Make available for both compendium.html and index.html
 if (typeof module !== 'undefined') module.exports = glossary;
