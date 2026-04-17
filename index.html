@@ -639,6 +639,16 @@ function renderCard(data){
   // Other Links
   const beyondDiv=document.getElementById('modal-beyond');const beyondLabel=document.getElementById('modal-beyond-label');
   if(data.beyond&&data.beyond.length>0){beyondDiv.style.display='block';beyondLabel.style.color=data.color;document.getElementById('modal-beyond-list').innerHTML=data.beyond.map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${data.color};border:1px solid ${data.color}33;" onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';"><span class="arrow">→</span><span>${l.label}</span><span style="font-size:8px;opacity:0.45;margin-left:auto;letter-spacing:0.12em;">${l.tag||''}</span></a>`).join('');}else{beyondDiv.style.display='none';}
+  // Apply glory highlights — deferred so DOM is painted first
+  setTimeout(()=>{
+    if(typeof applyGlories==='function'){
+      _re.lastIndex=0;
+      const descEl=document.getElementById('modal-desc');
+      if(descEl) applyGlories(descEl);
+      const deepEl=document.getElementById('modal-deep-section');
+      if(deepEl&&deepEl.style.display!=='none') applyGlories(deepEl);
+    }
+  },80);
 }
 
 function closeModal(){cardNavClose();}
@@ -867,14 +877,14 @@ window.addEventListener('load',()=>{
 });
 
 // Apply to modal content after render
-const _origRender=window.renderCard;
+const _origRender=renderCard;
 window.renderCard=function(data){
   _origRender(data);
   _re.lastIndex=0;
   setTimeout(()=>{
     ['modal-desc','modal-deep-section'].forEach(id=>{
       const el=document.getElementById(id);
-      if(el&&el.style.display!=='none'){_re.lastIndex=0;applyGlories(el);}
+      if(el&&window.getComputedStyle(el).display!=='none'){_re.lastIndex=0;applyGlories(el);}
     });
   },80);
 };
