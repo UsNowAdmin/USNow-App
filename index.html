@@ -64,8 +64,7 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .foundation-moon{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:298;transition:transform 0.22s ease,box-shadow 0.22s ease;text-decoration:none;animation:pulseFoundation 3.8s ease-in-out infinite;pointer-events:all;}
 .foundation-moon:hover{transform:translateY(-6px) scale(1.08);}
 .foundation-moon span{font-size:9.5px;font-weight:700;letter-spacing:0.04em;color:#1a0e02;font-family:'Georgia','Times New Roman',serif;text-align:center;line-height:1.3;pointer-events:none;text-shadow:none;position:absolute;top:7px;left:50%;transform:translateX(-50%);white-space:nowrap;}
-#modal-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(2,4,10,0.94);align-items:flex-end;justify-content:center;padding:0 10px 16px;}
-#modal-overlay::before{content:'';position:fixed;inset:0;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);pointer-events:none;z-index:0;}
+#modal-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(2,4,10,0.94);backdrop-filter:blur(20px);align-items:flex-end;justify-content:center;padding:0 10px 16px;}
 #modal-overlay.open{display:flex;}
 #modal-glow-halo{position:fixed;bottom:-60px;left:50%;transform:translateX(-50%);width:720px;height:420px;border-radius:50%;pointer-events:none;z-index:2999;transition:background 0.4s ease,opacity 0.45s ease;opacity:0;filter:blur(80px);}
 #modal-overlay.open #modal-glow-halo{opacity:1;}
@@ -547,11 +546,9 @@ function cardNavOpen(data){
 
 function cardNavBack(){
   window._cardStack.pop();
-  const _gpm=document.getElementById('glory-pop-modal');if(_gpm)_gpm.style.display='none';
   if(window._cardStack.length===0){
     document.getElementById('modal-overlay').classList.remove('open');
     document.body.style.overflow='';
-    const _gp=document.getElementById('glory-pop');if(_gp)_gp.style.display='none';
   } else {
     renderCard(window._cardStack[window._cardStack.length-1]);
   }
@@ -561,8 +558,6 @@ function cardNavClose(){
   window._cardStack=[];
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow='';
-  const _gp=document.getElementById('glory-pop');if(_gp)_gp.style.display='none';
-  const _gpm=document.getElementById('glory-pop-modal');if(_gpm)_gpm.style.display='none';
 }
 
 function renderCard(data){
@@ -635,16 +630,6 @@ function renderCard(data){
   // Other Links
   const beyondDiv=document.getElementById('modal-beyond');const beyondLabel=document.getElementById('modal-beyond-label');
   if(data.beyond&&data.beyond.length>0){beyondDiv.style.display='block';beyondLabel.style.color=data.color;document.getElementById('modal-beyond-list').innerHTML=data.beyond.map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${data.color};border:1px solid ${data.color}33;" onmouseenter="this.style.background='${data.color}18';this.style.borderColor='${data.color}77';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}33';"><span class="arrow">→</span><span>${l.label}</span><span style="font-size:8px;opacity:0.45;margin-left:auto;letter-spacing:0.12em;">${l.tag||''}</span></a>`).join('');}else{beyondDiv.style.display='none';}
-  // Apply glory highlights — deferred so DOM is painted first
-  setTimeout(()=>{
-    if(typeof applyGlories==='function'){
-      _re.lastIndex=0;
-      const descEl=document.getElementById('modal-desc');
-      if(descEl) applyGlories(descEl);
-      const deepEl=document.getElementById('modal-deep-section');
-      if(deepEl&&deepEl.style.display!=='none') applyGlories(deepEl);
-    }
-  },80);
 }
 
 function closeModal(){cardNavClose();}
@@ -805,7 +790,6 @@ function applyGlories(root){
   const nodes=[];
   while(walker.nextNode()) nodes.push(walker.currentNode);
   nodes.forEach(node=>{
-    _re.lastIndex=0;
     if(!_re.test(node.textContent)) return;
     _re.lastIndex=0;
     const frag = document.createDocumentFragment();
@@ -825,44 +809,33 @@ function applyGlories(root){
   });
 }
 
-// Pop-up logic — dual pop: one for page, one inside modal stacking context
+// Pop-up logic
 const pop=document.getElementById('glory-pop');
-const popModal=document.getElementById('glory-pop-modal');
-
-function showGloryPop(t, useModal){
-  const key=t.dataset.glory;
-  const def=GLORIES[key]||GLORIES[Object.keys(GLORIES).find(k=>k.toLowerCase()===key.toLowerCase())];
-  if(!def) return;
-  const r=t.getBoundingClientRect();
-  const pw=280, ph=120;
-  let left=r.left, top=r.bottom+8;
-  if(left+pw>window.innerWidth-10) left=window.innerWidth-pw-10;
-  if(top+ph>window.innerHeight-10) top=r.top-ph-8;
-  const target = useModal ? popModal : pop;
-  const other  = useModal ? pop : popModal;
-  other.style.display='none';
-  target.querySelector ? null : null; // no-op
-  (useModal ? document.getElementById('gp-word-modal') : document.getElementById('gp-word')).textContent=key.toUpperCase();
-  (useModal ? document.getElementById('gp-def-modal')  : document.getElementById('gp-def')).textContent=def;
-  (useModal ? document.getElementById('gp-link-modal') : document.getElementById('gp-link')).href='compendium.html#'+key.toLowerCase();
-  target.style.left=Math.max(8,left)+'px';
-  target.style.top=Math.max(8,top)+'px';
-  target.style.display='block';
-}
-
+// Use CAPTURE phase so this fires before modal-box's stopPropagation
+// (which kills the bubble phase and prevents document-level bubble listeners)
 document.addEventListener('click',e=>{
   const t=e.target.closest('.glory-word');
   if(t){
     e.stopPropagation();
-    const inModal=!!t.closest('#modal-overlay');
-    showGloryPop(t, inModal);
+    const key=t.dataset.glory;
+    const def=GLORIES[key]||GLORIES[Object.keys(GLORIES).find(k=>k.toLowerCase()===key.toLowerCase())];
+    if(!def) return;
+    document.getElementById('gp-word').textContent=key.toUpperCase();
+    document.getElementById('gp-def').textContent=def;
+    document.getElementById('gp-link').href='compendium.html#'+key.toLowerCase();
+    // Position near word
+    const r=t.getBoundingClientRect();
+    const pw=280, ph=120;
+    let left=r.left, top=r.bottom+8;
+    if(left+pw>window.innerWidth-10) left=window.innerWidth-pw-10;
+    if(top+ph>window.innerHeight-10) top=r.top-ph-8;
+    pop.style.left=Math.max(8,left)+'px';
+    pop.style.top=Math.max(8,top)+'px';
+    pop.style.display='block';
     return;
   }
-  if(!e.target.closest('#glory-pop')&&!e.target.closest('#glory-pop-modal')){
-    pop.style.display='none';
-    popModal.style.display='none';
-  }
-});
+  if(!e.target.closest('#glory-pop')) pop.style.display='none';
+},true);
 
 // Apply to static content on load
 window.addEventListener('load',()=>{
@@ -873,22 +846,14 @@ window.addEventListener('load',()=>{
 });
 
 // Apply to modal content after render
-const _origRender=renderCard;
+const _origRender=window.renderCard;
 window.renderCard=function(data){
   _origRender(data);
-  _re.lastIndex=0;
   setTimeout(()=>{
-    ['modal-desc','modal-deep-section'].forEach(id=>{
-      const el=document.getElementById(id);
-      if(el&&window.getComputedStyle(el).display!=='none'){_re.lastIndex=0;applyGlories(el);}
-    });
-  },80);
+    const desc=document.getElementById('modal-desc');
+    if(desc) applyGlories(desc);
+  },50);
 };
 </script>
-<div id="glory-pop-modal" style="display:none;position:fixed;z-index:10000;background:linear-gradient(160deg,#0d1525,#070c1a);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 16px;max-width:280px;box-shadow:0 0 40px rgba(0,0,0,0.7),0 0 20px rgba(201,168,76,0.12);" onclick="event.stopPropagation()">
-  <div id="gp-word-modal" style="font-size:13px;font-weight:700;letter-spacing:0.1em;color:#e0c060;font-family:'Courier New',monospace;margin-bottom:6px;"></div>
-  <div id="gp-def-modal" style="font-size:12px;line-height:1.6;color:#8898b0;font-family:'Georgia',serif;font-style:italic;margin-bottom:10px;"></div>
-  <a id="gp-link-modal" href="compendium.html" target="_blank" style="font-size:9px;letter-spacing:0.15em;color:rgba(201,168,76,0.6);font-family:'Courier New',monospace;text-decoration:none;">→ THE WORLD COMPENDIUM</a>
-</div>
 </body>
 </html>
