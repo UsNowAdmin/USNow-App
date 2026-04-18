@@ -62,7 +62,7 @@ const GLORY_DATA = [
     definition: "Protection or the budget line item for offense" },
 
   { word: "Democracy", category: "Power & Governance",
-    definition: "Majority rule, representative republic, or failing experiment depending on who's asking" },
+    definition: "Majority rule, representative republic, or untenable experiment depending on who's asking" },
 
   { word: "Deserve", category: "Morality & Values",
     definition: "Merit-based, luck-based, or morally determined — not agreed upon" },
@@ -236,7 +236,7 @@ const GLORY_DATA = [
     definition: "Heroic founding or dangerous chaos, depending on whose side won" },
 
   { word: "Rights", category: "Power & Governance",
-    definition: "God-given, government-granted, or socially constructed — all three camps exist" },
+    definition: "God-given, government-granted, or socially constructed — this is us." },
 
   { word: "Riot", category: "Violence & Conflict",
     definition: "What they call a protest they disapprove of" },
