@@ -281,7 +281,7 @@ const GLORY_DATA = [
     definition: "In science: well-tested explanation. In common use: a guess. The gap is exploited constantly" },
 
   { word: "They", category: "Identity & Belonging",
-    definition: "The most dangerous three-letter word" },
+    definition: "The most dangerous four-letter word" },
 
   { word: "Tradition", category: "Time & Change",
     definition: "Wisdom passed down or refusal to change — context decides" },
