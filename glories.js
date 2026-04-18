@@ -8,7 +8,7 @@
 
 const GLORY_DATA = [
   { word: "Accident", category: "Time & Change",
-    definition: "An event that appears to happen on its own — distinct from mistake, coincidence, and fate — yet cause or blame can always be traced to human action, the surrounding conditions, or the laws of physics" },
+    definition: "An event that appears to happen on its own — distinct from mistake, coincidence, and fate — but cause or blame can always be traced to human action, the surrounding conditions, or the laws of physics" },
 
   { word: "Belief", category: "Truth & Knowledge",
     definition: "Faith, opinion, or knowledge without proof — often used interchangeably" },
