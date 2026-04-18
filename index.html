@@ -177,17 +177,22 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 </div></div>
 
 <nav>
-  <div class="nav-logo" style="margin-bottom:8px;">
-    <span class="us">US</span>
-    <span class="now">NOW</span>
+  <div class="nav-logo" style="margin-bottom:8px;flex-direction:column;align-items:flex-start;gap:2px;">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span class="us">US</span>
+      <span class="now">NOW</span>
+    </div>
+    <span style="font-size:7px;letter-spacing:0.13em;color:rgba(201,168,76,0.48);font-family:'Courier New',monospace;white-space:nowrap;">THE QUESTION IS THE ANSWER.</span>
   </div>
 
-  <!-- Sign — flex center between logo and button -->
-  <span id="nav-sign" style="flex:1;display:inline-flex;align-items:center;justify-content:center;margin:0 18px;margin-bottom:8px;max-width:210px;height:20px;border:1px solid rgba(201,168,76,0.38);border-radius:3px;background:rgba(201,168,76,0.04);box-shadow:0 0 10px rgba(201,168,76,0.08);overflow:hidden;pointer-events:none;transition:opacity 0.25s;position:relative;">
-    <span style="position:absolute;width:100%;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame1 4s ease-in-out infinite;">CLARITY IN PROGRESS</span>
-    <span style="position:absolute;width:100%;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame2 4s ease-in-out infinite;">ADD YOUR VOICE</span>
-  </span>
-
+  <!-- Sign + timestamp — flex center between logo and button -->
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;margin:0 18px;margin-bottom:0;">
+    <span id="nav-sign" style="display:inline-flex;align-items:center;justify-content:center;width:188px;height:20px;border:1px solid rgba(201,168,76,0.38);border-radius:3px;background:rgba(201,168,76,0.04);box-shadow:0 0 10px rgba(201,168,76,0.08);overflow:hidden;pointer-events:none;transition:opacity 0.25s;position:relative;margin-bottom:1px;">
+      <span style="position:absolute;width:100%;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame1 4s ease-in-out infinite;">CLARITY IN PROGRESS</span>
+      <span style="position:absolute;width:100%;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame2 4s ease-in-out infinite;">ADD YOUR VOICE</span>
+    </span>
+    <span id="hero-date" style="font-size:7px;letter-spacing:0.14em;color:rgba(201,168,76,0.28);font-family:'Courier New',monospace;white-space:nowrap;"></span>
+  </div>
   <!-- Contact toggle -->
   <div style="display:flex;align-items:center;gap:8px;overflow:hidden;margin-bottom:8px;">
     <!-- Button -->
@@ -214,10 +219,6 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     </div>
   </div>
 
-  <div style="position:absolute;bottom:5px;left:18px;pointer-events:none;display:flex;align-items:center;gap:32px;">
-    <span style="font-size:7px;letter-spacing:0.14em;color:rgba(201,168,76,0.32);font-family:'Courier New',monospace;">The question is the answer · The data is the argument.</span>
-    <span id="hero-date" style="font-size:7px;letter-spacing:0.14em;color:rgba(201,168,76,0.28);font-family:'Courier New',monospace;"></span>
-  </div>
 </nav>
 
 <!-- Nav submit confirmation — floats above everything -->
