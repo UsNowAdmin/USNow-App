@@ -486,6 +486,14 @@
   }
   .pill-block.open .pill-content { display: block; }
   .pill-block.open .pill-btn { opacity: 0.7; }
+  .pill-phonetic {
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    color: #d4a855;
+    padding: 12px 14px 4px 28px;
+    font-style: normal;
+  }
 
 </style>
 </head>
@@ -739,7 +747,7 @@ function buildEntry(entry) {
   }
 
   const pills = [
-    { key: 'phonetic', label: 'How We Say It', color: '#d4a855' },
+    { key: 'phonetic', label: 'How We Say It', color: '#d4a855', isPhonetic: true },
     { key: 'origin',   label: 'Where It Comes From', color: '#c87850' },
     { key: 'howUsed',  label: "How It's Been Used", color: '#7858b0' },
   ];
@@ -750,7 +758,7 @@ function buildEntry(entry) {
       <button class="pill-btn" onclick="event.stopPropagation();togglePill(this)" style="border-color:${p.color}55;color:${p.color};">
         <span class="pill-dot" style="background:${p.color};"></span>${p.label}
       </button>
-      <div class="pill-content">${entry[p.key]}</div>
+      <div class="pill-content ${p.isPhonetic ? 'pill-phonetic' : ''}">${entry[p.key]}</div>
     </div>`;
   }).join('');
 
@@ -760,7 +768,6 @@ function buildEntry(entry) {
       <span class="entry-definition">${entry.definition}</span>
     </div>
     <div class="entry-detail">
-      ${entry.phonetic ? '<div class="entry-phonetic">' + entry.phonetic + '</div>' : ''}
       <div class="entry-pills">${pillsHTML}</div>
       <div class="entry-cat-label">Category</div>
       <div class="entry-tags">
