@@ -741,7 +741,7 @@ function buildEntry(entry) {
   const pills = [
     { key: 'phonetic', label: 'How We Say It', color: '#d4a855' },
     { key: 'origin',   label: 'Where It Comes From', color: '#c87850' },
-    { key: 'howUsed',  label: 'How It's Been Used', color: '#7858b0' },
+    { key: 'howUsed',  label: "How It's Been Used", color: '#7858b0' },
   ];
 
   const pillsHTML = pills.map(p => {
@@ -760,7 +760,7 @@ function buildEntry(entry) {
       <span class="entry-definition">${entry.definition}</span>
     </div>
     <div class="entry-detail">
-      ${entry.phonetic ? `<div class="entry-phonetic">${entry.phonetic}</div>` : ''}
+      ${entry.phonetic ? '<div class="entry-phonetic">' + entry.phonetic + '</div>' : ''}
       <div class="entry-pills">${pillsHTML}</div>
       <div class="entry-cat-label">Category</div>
       <div class="entry-tags">
