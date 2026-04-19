@@ -66,7 +66,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97)
 #lightbox.open{display:block;}
 #lightbox-canvas{position:absolute;inset:0;cursor:grab;user-select:none;}
 #lightbox-canvas.dragging{cursor:grabbing;}
-#lightbox-img-viewer{position:absolute;transform-origin:0 0;will-change:transform;pointer-events:none;}
+#lightbox-img-viewer{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform;pointer-events:none;opacity:0;transition:opacity 0.18s ease;}
 #lightbox-img-viewer img{display:block;max-width:none;user-select:none;-webkit-user-drag:none;}
 #lightbox-close{position:fixed;top:16px;right:20px;font-size:9px;letter-spacing:0.2em;color:rgba(255,255,255,0.5);font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(255,255,255,0.2);padding:5px 14px;border-radius:10px;transition:all 0.2s;z-index:5002;background:rgba(0,0,0,0.5);}
 #lightbox-close:hover{color:#fff;border-color:#fff;}
@@ -211,8 +211,9 @@ const viewer={
   img(){return document.getElementById('lightbox-img');},
   indicator(){return document.getElementById('lightbox-zoom-indicator');},
 
-  applyTransform(){
+  applyTransform(reveal){
     this.el().style.transform=`translate(${this.x}px,${this.y}px) scale(${this.scale})`;
+    if(reveal)this.el().style.opacity='1';
     const pct=Math.round(this.scale*100);
     this.indicator().textContent=pct+'%';
     this.indicator().style.opacity=pct===100?'0.2':'0.7';
@@ -240,28 +241,28 @@ const viewer={
     this.x=clientX-(clientX-this.x)*(this.scale/oldScale);
     this.y=clientY-(clientY-this.y)*(this.scale/oldScale);
     this.clampPan();
-    this.applyTransform();
+    this.applyTransform(false);
   },
 
   reset(){
     this.scale=1;
     this.centerImage();
-    this.applyTransform();
+    this.applyTransform(false);
   },
 
   load(src){
     const img=this.img();
+    this.el().style.opacity='0';
     img.onload=()=>{
       this.imgW=img.naturalWidth;
       this.imgH=img.naturalHeight;
-      // Fit to screen initially
       const vw=window.innerWidth,vh=window.innerHeight;
       const fitScale=Math.min(vw/this.imgW,vh/this.imgH);
       this.scale=fitScale;
       this.minScale=fitScale*0.5;
       this.maxScale=Math.max(12,this.imgW/100);
       this.centerImage();
-      this.applyTransform();
+      this.applyTransform(true);
     };
     img.src=src;
   },
@@ -279,7 +280,7 @@ const viewer={
       if(!this.dragging)return;
       this.x+=e.clientX-this.lastX;this.y+=e.clientY-this.lastY;
       this.lastX=e.clientX;this.lastY=e.clientY;
-      this.clampPan();this.applyTransform();
+      this.clampPan();this.applyTransform(false);
     });
     window.addEventListener('mouseup',()=>{
       this.dragging=false;canvas.classList.remove('dragging');
@@ -331,7 +332,7 @@ const viewer={
         const dy=this.touches[0].clientY-this.lastY;
         this.x+=dx;this.y+=dy;
         this.lastX=this.touches[0].clientX;this.lastY=this.touches[0].clientY;
-        this.clampPan();this.applyTransform();
+        this.clampPan();this.applyTransform(false);
       }
     },{passive:false});
 
