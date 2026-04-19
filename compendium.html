@@ -436,16 +436,26 @@
 // ─────────────────────────────────────────────
 
 const CATEGORIES = [
-  "Power & Governance",
-  "Money & Economy",
-  "Identity & Belonging",
-  "Truth & Knowledge",
-  "Morality & Values",
-  "Violence & Conflict",
-  "Religion & Meaning",
-  "Time & Change",
-  "The Body & Life"
+  "Myself & I",
+  "Origins",
+  "Community & Culture",
+  "Knowledge & Learning",
+  "Power & Politics",
+  "History & Civilization",
+  "Further",
+  "Not Classified"
 ];
+
+const CATEGORY_COLORS = {
+  "Myself & I":           "#d4a855",
+  "Origins":              "#c87850",
+  "Community & Culture":  "#4a9a70",
+  "Knowledge & Learning": "#5878b8",
+  "Power & Politics":     "#b05050",
+  "History & Civilization": "#7858b0",
+  "Further":              "#4888c8",
+  "Not Classified":       "#888888"
+};
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
 
@@ -471,7 +481,22 @@ function init() {
     const btn = document.createElement('button');
     btn.className = 'cat-btn';
     btn.textContent = cat;
-    btn.onclick = () => toggleCategory(cat, btn);
+    const col = CATEGORY_COLORS[cat] || '#888888';
+    btn.style.cssText = `border-color:${col}44;color:${col};`;
+    btn.addEventListener('mouseenter', () => { if (!btn.classList.contains('active')) btn.style.cssText = `border-color:${col};color:${col};`; });
+    btn.addEventListener('mouseleave', () => { if (!btn.classList.contains('active')) btn.style.cssText = `border-color:${col}44;color:${col};`; });
+    btn.onclick = () => {
+      toggleCategory(cat, btn);
+      document.querySelectorAll('.cat-btn[data-cat]').forEach(b => {
+        const c = CATEGORY_COLORS[b.dataset.cat] || '#888888';
+        if (b.classList.contains('active')) {
+          b.style.cssText = `border-color:${c};color:${c};background:${c}18;`;
+        } else {
+          b.style.cssText = `border-color:${c}44;color:${c};`;
+        }
+      });
+    };
+    btn.dataset.cat = cat;
     catRow.appendChild(btn);
   });
 
@@ -620,7 +645,7 @@ function buildEntry(entry) {
     <div class="entry-detail">
       <div class="entry-cat-label">Category</div>
       <div class="entry-tags">
-        <span class="entry-tag" onclick="event.stopPropagation();filterByCat('${entry.category}')">${entry.category}</span>
+        <span class="entry-tag" onclick="event.stopPropagation();filterByCat('${entry.category}')" style="border-color:${CATEGORY_COLORS[entry.category]||'#888'}66;color:${CATEGORY_COLORS[entry.category]||'#888'};">${entry.category}</span>
       </div>
     </div>
   `;
