@@ -130,6 +130,807 @@
     line-height: 1.6;
   }
 
+  .suggest-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    align-items: center;
+  }
+  .suggest-form input {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    padding: 8px 12px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .suggest-form input:focus { border-color: rgba(212,168,85,0.5); }
+  #sg-word { width: 140px; }
+  #sg-def  { flex: 1; min-width: 180px; }
+  .suggest-form button {
+    background: transparent;
+    border: 1px solid rgba(212,168,85,0.35);
+    border-radius: 4px;
+    color: var(--amber-dim);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    text-transform: uppercase;
+  }
+  .suggest-form button:hover { border-color: var(--amber); color: var(--amber); }
+  .sg-confirm {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber-dim);
+    width: 100%;
+    min-height: 16px;
+    letter-spacing: 0.04em;
+  }
+
+  .entry-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber-dim);
+    margin-top: 8px;
+    opacity: 0.6;
+  }
+
+  /* ── CONTROLS ── */
+  .controls {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(8,11,20,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border2);
+    margin-bottom: 8px;
+  }
+
+  .search-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  #search {
+    flex: 1;
+    background: var(--layer1);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  #search::placeholder { color: var(--text-faint); }
+  #search:focus { border-color: var(--amber); }
+
+  .clear-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+  .clear-btn:hover { border-color: var(--amber); color: var(--amber); }
+
+  /* Category filters */
+  .cat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .cat-btn {
+    background: transparent;
+    border: 1px solid var(--border2);
+    color: var(--text-faint);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .cat-btn:hover { border-color: var(--amber-dim); color: var(--amber-dim); }
+  .cat-btn.active { background: rgba(212,150,10,0.12); border-color: var(--amber); color: var(--amber); }
+
+  /* Alpha row */
+  .alpha-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .alpha-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-faint);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .alpha-btn:hover { color: var(--amber); }
+  .alpha-btn.active { color: var(--amber-glow); font-weight: 500; }
+  .alpha-btn.has-entries { color: var(--text-dim); }
+  .alpha-btn.no-entries { opacity: 0.25; cursor: default; }
+
+  /* ── RESULTS INFO ── */
+  .results-info {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.06em;
+    padding: 12px 0 4px;
+    min-height: 28px;
+  }
+
+  /* ── LETTER GROUP ── */
+  .letter-group { margin-bottom: 8px; }
+
+  .letter-anchor {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: var(--amber-dim);
+    text-transform: uppercase;
+    padding: 20px 0 6px;
+    opacity: 0.5;
+  }
+
+  /* ── ENTRY ── */
+  .entry {
+    border-bottom: 1px solid var(--border2);
+    padding: 16px 0 14px;
+    transition: background 0.15s;
+  }
+  .entry:hover { background: rgba(255,255,255,0.015); }
+
+  /* Always-visible row: WORD + DEFINITION side by side */
+  .entry-main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: baseline;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .entry-word {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--amber-glow);
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .entry:hover .entry-word { color: #f5c842; }
+
+  .entry-toggle {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    transition: transform 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .entry.open .entry-toggle { transform: rotate(90deg); color: var(--amber); }
+
+  .entry-definition {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.02rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  /* Expandable: category + tags — hidden until click */
+  .entry-detail {
+    display: none;
+    padding: 10px 0 0 220px;
+  }
+  .entry.open .entry-detail { display: block; }
+
+  .entry-cat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--amber-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+
+  .entry-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .entry-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    border: 1px solid var(--border2);
+    padding: 3px 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .entry-tag:hover { border-color: var(--amber-dim); color: var(--amber-dim); }
+
+  @media (max-width: 600px) {
+    .entry-main { grid-template-columns: 1fr; gap: 6px; }
+    .entry-detail { padding-left: 0; }
+  }
+
+  /* ── EMPTY STATE ── */
+  .empty {
+    text-align: center;
+    padding: 60px 0;
+    color: var(--text-faint);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    display: none;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border2);
+    text-align: center;
+  }
+
+  .footer-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--text-faint);
+    text-transform: uppercase;
+  }
+
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--amber-dim);
+    margin-top: 6px;
+    font-style: italic;
+    opacity: 0.6;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--amber-dim); opacity: 0.3; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="back-link" href="index.html">USNow</a>
+    <div class="site-name">USNow · The World Compendium</div>
+    <h1>The words we share<br>but don't <em>agree</em> on</h1>
+    <div class="subtitle">A living and growing glossary. Click any word. Suggest one anytime.</div>
+
+    <div class="suggest-form" id="suggest-form">
+      <input type="text" id="sg-word" placeholder="Word or phrase…" autocomplete="off" spellcheck="false" maxlength="60">
+      <input type="text" id="sg-def" placeholder="Your definition…" autocomplete="off" spellcheck="false" maxlength="280">
+      <button id="sg-send" onclick="submitSuggestion()">Submit</button>
+      <div class="sg-confirm" id="sg-confirm"></div>
+    </div>
+
+    <div class="entry-count" id="entry-count"></div>
+  </header>
+
+  <div class="controls">
+    <div class="search-row">
+      <input type="text" id="search" placeholder="Search words or definitions…" autocomplete="off" spellcheck="false">
+      <button class="clear-btn" onclick="clearAll()">Clear</button>
+    </div>
+    <div class="cat-row" id="cat-row"></div>
+    <div class="alpha-row" id="alpha-row"></div>
+  </div>
+
+  <div class="results-info" id="results-info"></div>
+  <div id="glossary-list"></div>
+  <div class="empty" id="empty-state">No words found — yet.</div>
+
+  <footer>
+    <div class="footer-text">Perspective · Focus · Scale · Trust</div>
+    <div class="footer-tagline">The question is the answer · The data is the argument</div>
+  </footer>
+
+</div>
+
+<script src="glories.js"></script>
+<script>
+// ─────────────────────────────────────────────
+// THE WORLD COMPENDIUM — Engine
+// Glossary data loaded from shared glories.js
+// To add/edit words: edit glories.js (both pages update)
+// ─────────────────────────────────────────────
+
+const CATEGORIES = [
+  "Myself & I",
+  "Origins",
+  "Community & Culture",
+  "Knowledge & Learning",
+  "Power & Politics",
+  "History & Civilization",
+  "Further",
+  "Not Classified"
+];
+
+const CATEGORY_COLORS = {
+  "Myself & I":           "#d4a855",
+  "Origins":              "#c87850",
+  "Community & Culture":  "#4a9a70",
+  "Knowledge & Learning": "#5878b8",
+  "Power & Politics":     "#b05050",
+  "History & Civilization": "#7858b0",
+  "Further":              "#4888c8",
+  "Not Classified":       "#888888"
+};
+
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+
+let activeCategory = null;
+let activeLetter   = null;
+let searchQuery    = '';
+
+function init() {
+  document.getElementById('entry-count').textContent =
+    glossary.length + ' entries · growing';
+
+  // Category buttons — ALL first
+  const catRow = document.getElementById('cat-row');
+
+  const allBtn = document.createElement('button');
+  allBtn.className = 'cat-btn active';
+  allBtn.id = 'cat-all';
+  allBtn.textContent = 'ALL';
+  allBtn.onclick = () => clearAll();
+  catRow.appendChild(allBtn);
+
+  CATEGORIES.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'cat-btn';
+    btn.textContent = cat;
+    const col = CATEGORY_COLORS[cat] || '#888888';
+    btn.style.cssText = `border-color:${col}44;color:${col};`;
+    btn.addEventListener('mouseenter', () => { if (!btn.classList.contains('active')) btn.style.cssText = `border-color:${col};color:${col};`; });
+    btn.addEventListener('mouseleave', () => { if (!btn.classList.contains('active')) btn.style.cssText = `border-color:${col}44;color:${col};`; });
+    btn.onclick = () => {
+      toggleCategory(cat, btn);
+      document.querySelectorAll('.cat-btn[data-cat]').forEach(b => {
+        const c = CATEGORY_COLORS[b.dataset.cat] || '#888888';
+        if (b.classList.contains('active')) {
+          b.style.cssText = `border-color:${c};color:${c};background:${c}18;`;
+        } else {
+          b.style.cssText = `border-color:${c}44;color:${c};`;
+        }
+      });
+    };
+    btn.dataset.cat = cat;
+    catRow.appendChild(btn);
+  });
+
+  // Alpha buttons
+  const alphaRow = document.getElementById('alpha-row');
+  const usedLetters = new Set(glossary.map(e => e.word[0].toUpperCase()));
+  ALPHABET.forEach(letter => {
+    const btn = document.createElement('button');
+    btn.className = 'alpha-btn ' + (usedLetters.has(letter) ? 'has-entries' : 'no-entries');
+    btn.textContent = letter;
+    btn.id = 'alpha-' + letter;
+    if (usedLetters.has(letter)) btn.onclick = () => toggleLetter(letter, btn);
+    alphaRow.appendChild(btn);
+  });
+
+  // Search
+  document.getElementById('search').addEventListener('input', e => {
+    searchQuery = e.target.value.trim().toLowerCase();
+    activeLetter = null;
+    activeCategory = null;
+    document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    render();
+  });
+
+  render();
+}
+
+function toggleCategory(cat, btn) {
+  activeCategory = activeCategory === cat ? null : cat;
+  activeLetter = null;
+  searchQuery = '';
+  document.getElementById('search').value = '';
+  document.querySelectorAll('.alpha-btn, .cat-btn').forEach(b => b.classList.remove('active'));
+  if (activeCategory) {
+    btn.classList.add('active');
+  } else {
+    document.getElementById('cat-all').classList.add('active');
+  }
+  render();
+}
+
+function toggleLetter(letter, btn) {
+  activeLetter = activeLetter === letter ? null : letter;
+  activeCategory = null;
+  searchQuery = '';
+  document.getElementById('search').value = '';
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+  if (activeLetter) btn.classList.add('active');
+  render();
+}
+
+function clearAll() {
+  activeCategory = null;
+  activeLetter   = null;
+  searchQuery    = '';
+  document.getElementById('search').value = '';
+  document.querySelectorAll('.cat-btn, .alpha-btn').forEach(b => b.classList.remove('active'));
+  const allBtn = document.getElementById('cat-all');
+  if (allBtn) allBtn.classList.add('active');
+  render();
+}
+
+function getFiltered() {
+  return glossary.filter(entry => {
+    if (searchQuery) {
+      return entry.word.toLowerCase().includes(searchQuery) ||
+             entry.definition.toLowerCase().includes(searchQuery);
+    }
+    if (activeCategory) return entry.category === activeCategory;
+    if (activeLetter)   return entry.word[0].toUpperCase() === activeLetter;
+    return true;
+  });
+}
+
+function render() {
+  const filtered = getFiltered();
+  const list = document.getElementById('glossary-list');
+  const empty = document.getElementById('empty-state');
+  const info  = document.getElementById('results-info');
+
+  list.innerHTML = '';
+
+  if (filtered.length === 0) {
+    empty.style.display = 'block';
+    info.textContent = '';
+    return;
+  }
+  empty.style.display = 'none';
+
+  // Results info
+  if (searchQuery || activeCategory || activeLetter) {
+    info.textContent = filtered.length + ' word' + (filtered.length !== 1 ? 's' : '');
+  } else {
+    info.textContent = '';
+  }
+
+  // Group by letter
+  const grouped = {};
+  filtered.forEach(entry => {
+    const letter = entry.word[0].toUpperCase();
+    if (!grouped[letter]) grouped[letter] = [];
+    grouped[letter].push(entry);
+  });
+
+  Object.keys(grouped).sort().forEach(letter => {
+    const group = document.createElement('div');
+    group.className = 'letter-group';
+
+    if (!searchQuery && !activeCategory) {
+      const anchor = document.createElement('div');
+      anchor.className = 'letter-anchor';
+      anchor.id = 'letter-' + letter;
+      anchor.textContent = '— ' + letter + ' —';
+      group.appendChild(anchor);
+    }
+
+    grouped[letter].forEach(entry => {
+      group.appendChild(buildEntry(entry));
+    });
+
+    list.appendChild(group);
+  });
+
+  // Scroll to letter anchor if letter filter active
+  if (activeLetter) {
+    const anchor = document.getElementById('letter-' + activeLetter);
+    if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function buildEntry(entry) {
+  const div = document.createElement('div');
+  div.className = 'entry';
+
+  if (window.location.hash === '#' + entry.word.toLowerCase().replace(/\s/g,'-')) {
+    div.classList.add('open');
+  }
+
+  div.innerHTML = `
+    <div class="entry-main" onclick="toggleEntry(this)">
+      <span class="entry-word"><span class="entry-toggle">&#x203A;</span>${entry.word}</span>
+      <span class="entry-definition">${entry.definition}</span>
+    </div>
+    <div class="entry-detail">
+      <div class="entry-cat-label">Category</div>
+      <div class="entry-tags">
+        <span class="entry-tag" onclick="event.stopPropagation();filterByCat('${entry.category}')" style="border-color:${CATEGORY_COLORS[entry.category]||'#888'}66;color:${CATEGORY_COLORS[entry.category]||'#888'};">${entry.category}</span>
+      </div>
+    </div>
+  `;
+  return div;
+}
+
+function toggleEntry(header) {
+  const entry = header.parentElement;
+  entry.classList.toggle('open');
+}
+
+function filterByCat(cat) {
+  activeCategory = cat;
+  activeLetter = null;
+  searchQuery = '';
+  document.getElementById('search').value = '';
+  document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.cat-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent === cat);
+  });
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Handle direct links: compendium.html#accident
+function submitSuggestion() {
+  const word = document.getElementById('sg-word').value.trim();
+  const def  = document.getElementById('sg-def').value.trim();
+  const conf = document.getElementById('sg-confirm');
+  if (!word || !def) { conf.textContent = 'Please fill in both fields.'; return; }
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
+  fetch(ENDPOINT, {
+    method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'compendium-suggestion', topic: word, why: def, sources: '', submitted: new Date().toISOString() })
+  });
+  document.getElementById('sg-word').value = '';
+  document.getElementById('sg-def').value  = '';
+  conf.textContent = '✓ Received — thank you.';
+  setTimeout(() => { conf.textContent = ''; }, 4000);
+}
+
+window.addEventListener('load', () => {
+  init();
+  if (window.location.hash) {
+    const target = window.location.hash.slice(1);
+    const found = glossary.find(e =>
+      e.word.toLowerCase().replace(/\s/g,'-') === target
+    );
+    if (found) {
+      searchQuery = found.word.toLowerCase();
+      render();
+    }
+  }
+});
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World Compendium — USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #080b14;
+    --bg2:       #0d1220;
+    --layer1:    #111827;
+    --amber:     #d4960a;
+    --amber-dim: #9a6c08;
+    --amber-glow:#f0b429;
+    --red:       #c0392b;
+    --blue-deep: #1a2a4a;
+    --blue-mid:  #1e3a6e;
+    --purple:    #2d1b4e;
+    --text:      #dde3ef;
+    --text-dim:  #8a93a8;
+    --text-faint:#4a5168;
+    --border:    rgba(212,150,10,0.15);
+    --border2:   rgba(255,255,255,0.06);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Background field — matches USNow wave atmosphere */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(45,27,78,0.6) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 20% 60%, rgba(26,42,74,0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 30% at 80% 40%, rgba(192,57,43,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse 100% 60% at 50% 0%, rgba(13,18,32,0.9) 0%, transparent 80%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Subtle star field */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 8%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 58% 35%, rgba(255,255,255,0.25) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 15%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 28%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 6%  55%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 92% 70%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 44% 80%, rgba(255,255,255,0.1) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 48px 0 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--amber-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+  .back-link::before { content: '← '; }
+
+  .site-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--amber-dim);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    color: var(--text);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  h1 em {
+    color: var(--amber);
+    font-style: italic;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .suggest-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    align-items: center;
+  }
+  .suggest-form input {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    padding: 8px 12px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .suggest-form input:focus { border-color: rgba(212,168,85,0.5); }
+  #sg-word { width: 140px; }
+  #sg-def  { flex: 1; min-width: 180px; }
+  .suggest-form button {
+    background: transparent;
+    border: 1px solid rgba(212,168,85,0.35);
+    border-radius: 4px;
+    color: var(--amber-dim);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    text-transform: uppercase;
+  }
+  .suggest-form button:hover { border-color: var(--amber); color: var(--amber); }
+  .sg-confirm {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--amber-dim);
+    width: 100%;
+    min-height: 16px;
+    letter-spacing: 0.04em;
+  }
+
   .entry-count {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -404,6 +1205,14 @@
     <div class="site-name">USNow · The World Compendium</div>
     <h1>The words we use<br>but don't all define <em>the same.</em></h1>
     <div class="subtitle">A living glossary. Click any word. Add one anytime.</div>
+
+    <div class="suggest-form" id="suggest-form">
+      <input type="text" id="sg-word" placeholder="Word or phrase…" autocomplete="off" spellcheck="false" maxlength="60">
+      <input type="text" id="sg-def" placeholder="Your definition…" autocomplete="off" spellcheck="false" maxlength="280">
+      <button id="sg-send" onclick="submitSuggestion()">Submit</button>
+      <div class="sg-confirm" id="sg-confirm"></div>
+    </div>
+
     <div class="entry-count" id="entry-count"></div>
   </header>
 
@@ -671,6 +1480,23 @@ function filterByCat(cat) {
 }
 
 // Handle direct links: compendium.html#accident
+function submitSuggestion() {
+  const word = document.getElementById('sg-word').value.trim();
+  const def  = document.getElementById('sg-def').value.trim();
+  const conf = document.getElementById('sg-confirm');
+  if (!word || !def) { conf.textContent = 'Please fill in both fields.'; return; }
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
+  fetch(ENDPOINT, {
+    method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'compendium-suggestion', topic: word, why: def, sources: '', submitted: new Date().toISOString() })
+  });
+  document.getElementById('sg-word').value = '';
+  document.getElementById('sg-def').value  = '';
+  conf.textContent = '✓ Received — thank you.';
+  setTimeout(() => { conf.textContent = ''; }, 4000);
+}
+
 window.addEventListener('load', () => {
   init();
   if (window.location.hash) {
