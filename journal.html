@@ -109,7 +109,7 @@ function buildPill(p,container){
   const el=document.createElement(p.url?'a':'div');el.className='pill-sphere';
   if(p.url){el.href=p.url;el.target=p.url.startsWith('http')?'_blank':'_self';el.rel='noreferrer';el.style.textDecoration='none';}
   el.style.cssText=`width:${sz}px;height:${sz}px;background:${sphereGrad(p.color)};border:1.5px solid ${sphereBorder(p.color)};--pg:${p.color}66;animation-delay:${p.delay||0}s,${p.delay||0}s;`;
-  el.innerHTML=`<span style="font-size:7px;letter-spacing:0.08em;color:${lc};font-family:'Courier New',monospace;font-weight:700;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,0.9);">${p.label.replace(' ','<br>')}</span>`;
+  el.innerHTML=`<span style="font-size:7px;letter-spacing:0.08em;color:${lc};font-family:'Georgia','Times New Roman',serif;font-weight:700;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 0 8px rgba(0,0,0,1),0 1px 6px rgba(0,0,0,1),0 2px 4px rgba(0,0,0,1);">${p.label.replace(' ','<br>')}</span>`;
   const nm=document.createElement('div');nm.className='pill-name';nm.style.color=lc;nm.textContent=p.sub||'EXPLORE →';
   wrap.appendChild(el);wrap.appendChild(nm);container.appendChild(wrap);
 }
