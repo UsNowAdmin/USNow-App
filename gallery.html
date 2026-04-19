@@ -228,10 +228,10 @@ const viewer={
   clampPan(){
     const vw=window.innerWidth,vh=window.innerHeight;
     const sw=this.imgW*this.scale,sh=this.imgH*this.scale;
-    const padX=Math.min(vw*0.3,sw*0.3);
-    const padY=Math.min(vh*0.3,sh*0.3);
-    this.x=Math.min(padX,Math.max(vw-sw-padX,this.x));
-    this.y=Math.min(padY,Math.max(vh-sh-padY,this.y));
+    // Keep at least 15% of image on screen — generous enough to never fight centering
+    const mx=sw*0.15,my=sh*0.15;
+    this.x=Math.min(vw-mx,Math.max(-(sw-mx),this.x));
+    this.y=Math.min(vh-my,Math.max(-(sh-my),this.y));
   },
 
   zoomAt(clientX,clientY,delta){
