@@ -62,12 +62,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97)
 .modal-caption{font-size:13px;color:#4a7060;font-family:'Georgia',serif;line-height:1.85;margin:0 0 16px;}
 .modal-link{font-size:10px;letter-spacing:0.15em;color:#3a8a60;font-family:'Courier New',monospace;text-decoration:none;border:1px solid rgba(42,120,80,0.3);padding:7px 16px;border-radius:12px;display:inline-block;transition:all 0.2s;margin-top:4px;}
 .modal-link:hover{color:#6ab890;border-color:#4a9a70;}
-#lightbox{display:none;position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,0.97);align-items:center;justify-content:center;cursor:zoom-out;}
+#lightbox{display:none;position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,0.97);align-items:center;justify-content:center;cursor:zoom-out;overflow:hidden;}
 #lightbox.open{display:flex;}
-#lightbox img{max-width:96vw;max-height:96vh;object-fit:contain;border-radius:6px;touch-action:pinch-zoom;}
-#lightbox-close{position:absolute;top:16px;right:20px;font-size:9px;letter-spacing:0.2em;color:rgba(255,255,255,0.4);font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(255,255,255,0.15);padding:4px 12px;border-radius:10px;transition:all 0.2s;}
+#lightbox img{width:100vw;height:100vh;object-fit:contain;touch-action:pinch-zoom;transform-origin:center center;transition:transform 0.15s ease;user-select:none;}
+#lightbox-close{position:absolute;top:16px;right:20px;font-size:9px;letter-spacing:0.2em;color:rgba(255,255,255,0.4);font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(255,255,255,0.15);padding:4px 12px;border-radius:10px;transition:all 0.2s;z-index:5001;}
 #lightbox-close:hover{color:#fff;border-color:#fff;}
-#lightbox-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:0.2em;color:rgba(255,255,255,0.18);font-family:'Courier New',monospace;pointer-events:none;}
+#lightbox-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:0.2em;color:rgba(255,255,255,0.18);font-family:'Courier New',monospace;pointer-events:none;white-space:nowrap;}
+.modal-zoom-hint{font-size:8px;letter-spacing:0.18em;color:rgba(74,154,112,0.4);font-family:'Courier New',monospace;text-align:center;margin:-14px 0 16px;cursor:pointer;}
+.modal-zoom-hint:hover{color:rgba(74,154,112,0.8);}
 footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,60,0.2);text-align:center;}
 footer a{font-size:9px;color:#1a3a2a;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;margin:0 10px;}
 footer a:hover{color:#4a9a70;}
@@ -101,6 +103,7 @@ footer a:hover{color:#4a9a70;}
       <img id="modal-img" src="" alt="" style="display:none;"/>
       <div class="modal-placeholder-text" id="modal-placeholder">IMAGE COMING SOON</div>
     </div>
+    <div class="modal-zoom-hint" id="modal-zoom-hint" style="display:none;" onclick="openLightboxFromHint()">↑ TAP TO ZOOM FULL SCREEN</div>
     <h2 class="modal-title" id="modal-title"></h2>
     <p class="modal-caption" id="modal-caption"></p>
     <div id="modal-link-wrap"></div>
@@ -140,7 +143,7 @@ function buildPill(p,container){
   el.className='pill-sphere';
   if(p.url){el.href=p.url;el.target=p.url.startsWith('http')?'_blank':'_self';el.rel='noreferrer';el.style.textDecoration='none';}
   el.style.cssText=`width:${sz}px;height:${sz}px;background:${sphereGrad(p.color)};border:1.5px solid ${sphereBorder(p.color)};--pg:${p.color}66;animation-delay:${p.delay||0}s,${p.delay||0}s;`;
-  el.innerHTML=`<span style="font-size:7px;letter-spacing:0.08em;color:${lc};font-family:'Courier New',monospace;font-weight:700;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,0.9);">${p.label.replace(' ','<br>')}</span>`;
+  el.innerHTML=`<span style="font-size:7px;letter-spacing:0.08em;color:${lc};font-family:'Georgia','Times New Roman',serif;font-weight:700;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 0 8px rgba(0,0,0,1),0 1px 6px rgba(0,0,0,1),0 2px 4px rgba(0,0,0,1);">${p.label.replace(' ','<br>')}</span>`;
   const nm=document.createElement('div');nm.className='pill-name';nm.style.color=lc;nm.textContent=p.sub||'EXPLORE →';
   wrap.appendChild(el);wrap.appendChild(nm);container.appendChild(wrap);
 }
@@ -185,12 +188,15 @@ PIECES.forEach(p=>{
   wrap.appendChild(orb);field.appendChild(wrap);
 });
 
+let _currentLightboxSrc='';let _lbScale=1;
 function openModal(p){
   const img=document.getElementById('modal-img');const ph=document.getElementById('modal-placeholder');
-  img.src=p.img;img.alt=p.title;img.style.display='none';ph.style.display='block';
-  img.onload=()=>{img.style.display='block';ph.style.display='none';};
-  img.onerror=()=>{img.style.display='none';ph.textContent='IMAGE COMING SOON';};
+  const hint=document.getElementById('modal-zoom-hint');
+  img.src=p.img;img.alt=p.title;img.style.display='none';ph.style.display='block';hint.style.display='none';
+  img.onload=()=>{img.style.display='block';ph.style.display='none';hint.style.display='block';};
+  img.onerror=()=>{img.style.display='none';ph.textContent='IMAGE COMING SOON';hint.style.display='none';};
   img.onclick=()=>openLightbox(p.img,p.title);
+  _currentLightboxSrc=p.img;
   document.getElementById('modal-title').textContent=p.title.replace('\n',' ');
   document.getElementById('modal-caption').textContent=p.caption;
   document.getElementById('modal-link-wrap').innerHTML=p.link?`<a href="${p.link}" target="_blank" rel="noreferrer" class="modal-link">${p.linkLabel||'VIEW →'}</a>`:'';
@@ -198,10 +204,26 @@ function openModal(p){
   document.getElementById('modal-box').style.boxShadow=`0 0 60px ${p.glowColor}33`;
   document.getElementById('modal-overlay').classList.add('open');document.body.style.overflow='hidden';
 }
-function openLightbox(src,alt){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox-img').alt=alt||'';document.getElementById('lightbox').classList.add('open');}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
+function openLightboxFromHint(){openLightbox(_currentLightboxSrc,'');}
+function openLightbox(src,alt){
+  _lbScale=1;
+  const lbImg=document.getElementById('lightbox-img');
+  lbImg.src=src;lbImg.alt=alt||'';lbImg.style.transform='scale(1)';
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(){
+  _lbScale=1;
+  document.getElementById('lightbox-img').style.transform='scale(1)';
+  document.getElementById('lightbox').classList.remove('open');
+}
 function closeModal(){document.getElementById('modal-overlay').classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();closeModal();}});
+// Desktop scroll-wheel zoom in lightbox
+document.getElementById('lightbox').addEventListener('wheel',e=>{
+  e.preventDefault();
+  _lbScale=Math.min(5,Math.max(1,_lbScale-(e.deltaY*0.001)));
+  document.getElementById('lightbox-img').style.transform=`scale(${_lbScale})`;
+},{passive:false});
 </script>
 </body>
 </html>
