@@ -62,12 +62,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97)
 .modal-caption{font-size:13px;color:#4a7060;font-family:'Georgia',serif;line-height:1.85;margin:0 0 16px;}
 .modal-link{font-size:10px;letter-spacing:0.15em;color:#3a8a60;font-family:'Courier New',monospace;text-decoration:none;border:1px solid rgba(42,120,80,0.3);padding:7px 16px;border-radius:12px;display:inline-block;transition:all 0.2s;margin-top:4px;}
 .modal-link:hover{color:#6ab890;border-color:#4a9a70;}
-#lightbox{display:none;position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,0.97);align-items:center;justify-content:center;cursor:zoom-out;overflow:hidden;}
-#lightbox.open{display:flex;}
-#lightbox img{width:100vw;height:100vh;object-fit:contain;touch-action:pinch-zoom;transform-origin:center center;transition:transform 0.15s ease;user-select:none;}
-#lightbox-close{position:absolute;top:16px;right:20px;font-size:9px;letter-spacing:0.2em;color:rgba(255,255,255,0.4);font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(255,255,255,0.15);padding:4px 12px;border-radius:10px;transition:all 0.2s;z-index:5001;}
+#lightbox{display:none;position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,0.97);overflow:hidden;touch-action:none;}
+#lightbox.open{display:block;}
+#lightbox-canvas{position:absolute;inset:0;cursor:grab;user-select:none;}
+#lightbox-canvas.dragging{cursor:grabbing;}
+#lightbox-img-viewer{position:absolute;transform-origin:0 0;will-change:transform;pointer-events:none;}
+#lightbox-img-viewer img{display:block;max-width:none;user-select:none;-webkit-user-drag:none;}
+#lightbox-close{position:fixed;top:16px;right:20px;font-size:9px;letter-spacing:0.2em;color:rgba(255,255,255,0.5);font-family:'Courier New',monospace;cursor:pointer;border:1px solid rgba(255,255,255,0.2);padding:5px 14px;border-radius:10px;transition:all 0.2s;z-index:5002;background:rgba(0,0,0,0.5);}
 #lightbox-close:hover{color:#fff;border-color:#fff;}
-#lightbox-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:0.2em;color:rgba(255,255,255,0.18);font-family:'Courier New',monospace;pointer-events:none;white-space:nowrap;}
+#lightbox-hint{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);font-size:8px;letter-spacing:0.2em;color:rgba(255,255,255,0.18);font-family:'Courier New',monospace;pointer-events:none;white-space:nowrap;z-index:5002;}
+#lightbox-zoom-indicator{position:fixed;top:16px;left:20px;font-size:9px;letter-spacing:0.15em;color:rgba(255,255,255,0.3);font-family:'Courier New',monospace;z-index:5002;transition:opacity 0.3s;}
 .modal-zoom-hint{font-size:8px;letter-spacing:0.18em;color:rgba(74,154,112,0.4);font-family:'Courier New',monospace;text-align:center;margin:-14px 0 16px;cursor:pointer;}
 .modal-zoom-hint:hover{color:rgba(74,154,112,0.8);}
 footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,60,0.2);text-align:center;}
@@ -109,10 +113,13 @@ footer a:hover{color:#4a9a70;}
     <div id="modal-link-wrap"></div>
   </div>
 </div>
-<div id="lightbox" onclick="closeLightbox()">
+<div id="lightbox">
+  <div id="lightbox-canvas">
+    <div id="lightbox-img-viewer"><img id="lightbox-img" src="" alt=""/></div>
+  </div>
   <button id="lightbox-close" onclick="closeLightbox()">CLOSE ×</button>
-  <img id="lightbox-img" src="" alt=""/>
-  <div id="lightbox-hint">TAP ANYWHERE TO CLOSE · PINCH TO ZOOM</div>
+  <div id="lightbox-zoom-indicator">100%</div>
+  <div id="lightbox-hint">SCROLL TO ZOOM · DRAG TO PAN · PINCH ON MOBILE</div>
 </div>
 
 <footer>
@@ -188,7 +195,153 @@ PIECES.forEach(p=>{
   wrap.appendChild(orb);field.appendChild(wrap);
 });
 
-let _currentLightboxSrc='';let _lbScale=1;
+let _currentLightboxSrc='';
+
+// ── Pan/Zoom Viewer ──────────────────────────────────────────────
+const viewer={
+  scale:1, minScale:0.5, maxScale:12,
+  x:0, y:0,
+  imgW:0, imgH:0,
+  dragging:false, lastX:0, lastY:0,
+  touches:[],
+  lastPinchDist:0,
+
+  el(){return document.getElementById('lightbox-img-viewer');},
+  canvas(){return document.getElementById('lightbox-canvas');},
+  img(){return document.getElementById('lightbox-img');},
+  indicator(){return document.getElementById('lightbox-zoom-indicator');},
+
+  applyTransform(){
+    this.el().style.transform=`translate(${this.x}px,${this.y}px) scale(${this.scale})`;
+    const pct=Math.round(this.scale*100);
+    this.indicator().textContent=pct+'%';
+    this.indicator().style.opacity=pct===100?'0.2':'0.7';
+  },
+
+  centerImage(){
+    const vw=window.innerWidth,vh=window.innerHeight;
+    this.x=(vw-this.imgW*this.scale)/2;
+    this.y=(vh-this.imgH*this.scale)/2;
+  },
+
+  clampPan(){
+    const vw=window.innerWidth,vh=window.innerHeight;
+    const sw=this.imgW*this.scale,sh=this.imgH*this.scale;
+    const padX=Math.min(vw*0.3,sw*0.3);
+    const padY=Math.min(vh*0.3,sh*0.3);
+    this.x=Math.min(padX,Math.max(vw-sw-padX,this.x));
+    this.y=Math.min(padY,Math.max(vh-sh-padY,this.y));
+  },
+
+  zoomAt(clientX,clientY,delta){
+    const oldScale=this.scale;
+    this.scale=Math.min(this.maxScale,Math.max(this.minScale,this.scale*delta));
+    // Zoom toward cursor point
+    this.x=clientX-(clientX-this.x)*(this.scale/oldScale);
+    this.y=clientY-(clientY-this.y)*(this.scale/oldScale);
+    this.clampPan();
+    this.applyTransform();
+  },
+
+  reset(){
+    this.scale=1;
+    this.centerImage();
+    this.applyTransform();
+  },
+
+  load(src){
+    const img=this.img();
+    img.onload=()=>{
+      this.imgW=img.naturalWidth;
+      this.imgH=img.naturalHeight;
+      // Fit to screen initially
+      const vw=window.innerWidth,vh=window.innerHeight;
+      const fitScale=Math.min(vw/this.imgW,vh/this.imgH);
+      this.scale=fitScale;
+      this.minScale=fitScale*0.5;
+      this.maxScale=Math.max(12,this.imgW/100);
+      this.centerImage();
+      this.applyTransform();
+    };
+    img.src=src;
+  },
+
+  bindEvents(){
+    const canvas=this.canvas();
+
+    // Mouse drag
+    canvas.addEventListener('mousedown',e=>{
+      if(e.button!==0)return;
+      this.dragging=true;this.lastX=e.clientX;this.lastY=e.clientY;
+      canvas.classList.add('dragging');
+    });
+    window.addEventListener('mousemove',e=>{
+      if(!this.dragging)return;
+      this.x+=e.clientX-this.lastX;this.y+=e.clientY-this.lastY;
+      this.lastX=e.clientX;this.lastY=e.clientY;
+      this.clampPan();this.applyTransform();
+    });
+    window.addEventListener('mouseup',()=>{
+      this.dragging=false;canvas.classList.remove('dragging');
+    });
+
+    // Scroll wheel zoom
+    canvas.addEventListener('wheel',e=>{
+      e.preventDefault();
+      const delta=e.deltaY<0?1.1:0.91;
+      this.zoomAt(e.clientX,e.clientY,delta);
+    },{passive:false});
+
+    // Double-click to zoom in / reset
+    canvas.addEventListener('dblclick',e=>{
+      if(this.scale>1.5){this.reset();}
+      else{this.zoomAt(e.clientX,e.clientY,2.5);}
+    });
+
+    // Touch — pinch zoom + pan
+    canvas.addEventListener('touchstart',e=>{
+      e.preventDefault();
+      this.touches=[...e.touches];
+      if(this.touches.length===2){
+        this.lastPinchDist=Math.hypot(
+          this.touches[1].clientX-this.touches[0].clientX,
+          this.touches[1].clientY-this.touches[0].clientY
+        );
+      }
+      if(this.touches.length===1){
+        this.lastX=this.touches[0].clientX;this.lastY=this.touches[0].clientY;
+      }
+    },{passive:false});
+
+    canvas.addEventListener('touchmove',e=>{
+      e.preventDefault();
+      this.touches=[...e.touches];
+      if(this.touches.length===2){
+        const dist=Math.hypot(
+          this.touches[1].clientX-this.touches[0].clientX,
+          this.touches[1].clientY-this.touches[0].clientY
+        );
+        const midX=(this.touches[0].clientX+this.touches[1].clientX)/2;
+        const midY=(this.touches[0].clientY+this.touches[1].clientY)/2;
+        const delta=dist/this.lastPinchDist;
+        this.zoomAt(midX,midY,delta);
+        this.lastPinchDist=dist;
+      } else if(this.touches.length===1){
+        const dx=this.touches[0].clientX-this.lastX;
+        const dy=this.touches[0].clientY-this.lastY;
+        this.x+=dx;this.y+=dy;
+        this.lastX=this.touches[0].clientX;this.lastY=this.touches[0].clientY;
+        this.clampPan();this.applyTransform();
+      }
+    },{passive:false});
+
+    canvas.addEventListener('touchend',e=>{
+      this.touches=[...e.touches];
+    },{passive:true});
+  }
+};
+viewer.bindEvents();
+
 function openModal(p){
   const img=document.getElementById('modal-img');const ph=document.getElementById('modal-placeholder');
   const hint=document.getElementById('modal-zoom-hint');
@@ -206,24 +359,19 @@ function openModal(p){
 }
 function openLightboxFromHint(){openLightbox(_currentLightboxSrc,'');}
 function openLightbox(src,alt){
-  _lbScale=1;
-  const lbImg=document.getElementById('lightbox-img');
-  lbImg.src=src;lbImg.alt=alt||'';lbImg.style.transform='scale(1)';
+  document.getElementById('lightbox-img').alt=alt||'';
   document.getElementById('lightbox').classList.add('open');
+  viewer.load(src);
 }
 function closeLightbox(){
-  _lbScale=1;
-  document.getElementById('lightbox-img').style.transform='scale(1)';
   document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox-img').src='';
 }
 function closeModal(){document.getElementById('modal-overlay').classList.remove('open');document.body.style.overflow='';}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();closeModal();}});
-// Desktop scroll-wheel zoom in lightbox
-document.getElementById('lightbox').addEventListener('wheel',e=>{
-  e.preventDefault();
-  _lbScale=Math.min(5,Math.max(1,_lbScale-(e.deltaY*0.001)));
-  document.getElementById('lightbox-img').style.transform=`scale(${_lbScale})`;
-},{passive:false});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeLightbox();closeModal();}
+  if(e.key==='0'&&document.getElementById('lightbox').classList.contains('open')){viewer.reset();}
+});
 </script>
 </body>
 </html>
