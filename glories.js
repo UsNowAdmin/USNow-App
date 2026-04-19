@@ -10,6 +10,9 @@ const GLORY_DATA = [
   { word: "Accident", category: "Time & Change",
     definition: "An event that some say happens on its own — distinct from mistake, coincidence, and fate — but cause or blame can always be traced to human action, the surrounding conditions, or the laws of physics" },
 
+  { word: "American Dream", category: "Identity & Belonging",
+  definition: "The promise that effort equals outcome — more myth than mechanism, more powerful for being neither provably true nor provably false" },
+  
   { word: "Belief", category: "Truth & Knowledge",
     definition: "Faith, opinion, or knowledge without proof — often used interchangeably" },
 
