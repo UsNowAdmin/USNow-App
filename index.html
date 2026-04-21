@@ -544,6 +544,16 @@ function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#
 // Unified card navigation stack
 window._cardStack=[];
 
+
+function _vpLock(){
+  const vp=document.querySelector('meta[name=viewport]');
+  if(vp)vp.content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no';
+}
+function _vpUnlock(){
+  const vp=document.querySelector('meta[name=viewport]');
+  if(vp)vp.content='width=device-width,initial-scale=1.0';
+}
+
 function cardNavOpen(data){
   window._cardStack.push(data);
   renderCard(data);
@@ -556,6 +566,7 @@ function cardNavBack(){
   if(window._cardStack.length===0){
     document.getElementById('modal-overlay').classList.remove('open');
     document.body.style.overflow='';
+    if(/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent))_vpUnlock();
   } else {
     renderCard(window._cardStack[window._cardStack.length-1]);
   }
@@ -565,6 +576,7 @@ function cardNavClose(){
   window._cardStack=[];
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow='';
+  if(/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent))_vpUnlock();
 }
 
 function renderCard(data){
