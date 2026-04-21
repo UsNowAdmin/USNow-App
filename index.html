@@ -492,12 +492,12 @@ function attachOrbEvents(orbEl,orb,openFn){
   orbEl.addEventListener('mouseleave',()=>{orbIdleReset(orbEl,orb.size,orb.color);});
   orbEl.addEventListener('mousedown',()=>{orbActivePress(orbEl,orb.size,orb.color);});
   orbEl.addEventListener('mouseup',()=>{orbHoverGlow(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('click',e=>{e.stopPropagation();openFn();});
+  orbEl.addEventListener('click',e=>{e.stopPropagation();e.stopImmediatePropagation();openFn();});
   // Touch
   let _tsx=0,_tsy=0,_tmoved=false;
   orbEl.addEventListener('touchstart',e=>{e.stopPropagation();_tsx=e.touches[0].clientX;_tsy=e.touches[0].clientY;_tmoved=false;orbHoverGlow(orbEl,orb.size,orb.color);},{passive:true});
   orbEl.addEventListener('touchmove',e=>{if(Math.abs(e.touches[0].clientX-_tsx)>8||Math.abs(e.touches[0].clientY-_tsy)>8){_tmoved=true;orbIdleReset(orbEl,orb.size,orb.color);}},{passive:true});
-  orbEl.addEventListener('touchend',e=>{e.stopPropagation();if(_tmoved){orbIdleReset(orbEl,orb.size,orb.color);return;}e.preventDefault();orbActivePress(orbEl,orb.size,orb.color);setTimeout(()=>{orbIdleReset(orbEl,orb.size,orb.color);openFn();},120);});
+  orbEl.addEventListener('touchend',e=>{e.stopPropagation();e.stopImmediatePropagation();if(_tmoved){orbIdleReset(orbEl,orb.size,orb.color);return;}e.preventDefault();orbActivePress(orbEl,orb.size,orb.color);setTimeout(()=>{orbIdleReset(orbEl,orb.size,orb.color);openFn();},120);});
 }
 // Sphere gradient — light source from lower-left (ME orb direction)
 function sphereGrad(c){
