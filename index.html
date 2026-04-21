@@ -85,8 +85,8 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 #modal-desc{font-size:clamp(17px,2.2vw,19px);line-height:1.8;color:#e4eef8;font-family:'Georgia',serif;margin:0;}
 #modal-links{margin-top:20px;padding-top:16px;}
 .modal-links-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;}
-.modal-link{font-size:13px;font-family:'Courier New',monospace;letter-spacing:0.04em;text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:10px;transition:all 0.2s;margin-bottom:9px;line-height:1.4;box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);}
-.modal-link:hover{opacity:1;}
+.modal-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(58,74,90,0.15);border-radius:8px;overflow:hidden;margin-top:4px;}.modal-link{display:flex;align-items:center;gap:10px;padding:13px 14px;background:#060b18;text-decoration:none;transition:background 0.2s;line-height:1.3;}@media(max-width:480px){.modal-links-grid{grid-template-columns:1fr;}}
+.modal-link:hover{background:#0d1525;}
 .modal-link .arrow{opacity:0.75;}
 #modal-bottompills-section{margin-top:18px;padding-top:16px;}
 .modal-bottompills-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;}
@@ -255,7 +255,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div id="modal-toppills-list" style="display:flex;flex-wrap:wrap;gap:6px;"></div></div>
     <p id="modal-desc"></p>
     <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div id="modal-bottompills-list" style="display:flex;flex-wrap:wrap;gap:8px;"></div></div>
-    <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OTHER LINKS &amp; CONNECTIONS</div><div id="modal-links-list"></div></div>
+    <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OTHER LINKS &amp; CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
   </div>
 </div>
 
@@ -705,7 +705,7 @@ function renderCard(data){
     document.getElementById('modal-links-list').innerHTML=allLinks.map(l=>{
       const isTracker=l.url&&l.url.includes('corruption_tracker');
       if(isTracker){return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:#f0a060;border:1px solid #d4621a88;background:rgba(212,98,26,0.12);animation:pulseCorrupt 2.2s ease-in-out infinite;font-weight:700;letter-spacing:0.12em;" onmouseenter="this.style.background='rgba(212,98,26,0.22)';this.style.borderColor='#f0a060cc';" onmouseleave="this.style.background='rgba(212,98,26,0.12)';this.style.borderColor='#d4621a88';"><span style="opacity:1;">◆</span> ${l.label}</a>`;}
-      return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:${lc};border:1px solid ${data.color}44;" onmouseenter="this.style.background='${data.color}22';this.style.borderColor='${data.color}88';" onmouseleave="this.style.background='transparent';this.style.borderColor='${data.color}44';"><span class="arrow">→</span><span>${l.label}</span>${l.tag?`<span style="font-size:8px;opacity:0.6;margin-left:auto;letter-spacing:0.12em;">${l.tag}</span>`:''}</a>`;
+      return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link"><span style="font-size:18px;line-height:1;">${l.emoji||'🔗'}</span><div><div style="font-size:12px;color:#f0ece4;font-family:'Georgia',serif;line-height:1.3;">${l.label}</div>${l.tag?`<div style="font-size:8px;color:#5a6a7a;font-family:'Courier New',monospace;letter-spacing:0.14em;margin-top:2px;">${l.tag}</div>`:''}</div></a>`;
     }).join('');
   }else{linksDiv.style.display='none';}
 }
