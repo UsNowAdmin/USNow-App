@@ -549,6 +549,13 @@ function cardNavOpen(data){
   renderCard(data);
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
+  if(/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)){
+    const vp=document.querySelector('meta[name=viewport]');
+    if(vp){
+      vp.content='width=device-width,initial-scale=1.0,maximum-scale=1.0';
+      requestAnimationFrame(()=>{vp.content='width=device-width,initial-scale=1.0';});
+    }
+  }
 }
 
 function cardNavBack(){
