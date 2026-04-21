@@ -556,6 +556,7 @@ function _vpUnlock(){
 
 function cardNavOpen(data){
   window._cardStack.push(data);
+  if(/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent))_vpLock();
   renderCard(data);
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
