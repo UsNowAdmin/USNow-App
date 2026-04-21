@@ -542,7 +542,7 @@ const coreOrbs=document.getElementById('core-orbs');coreOrbs.innerHTML='';const 
 buildFoundationMoons();}
 
 function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const bottomPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:false,layer:layer});}
-function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;cardNavOpen({color:c,glow:og,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});}
+function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;cardNavOpen({color:c,glow:og,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false});}
 
 // Unified card navigation stack
 window._cardStack=[];
@@ -659,20 +659,12 @@ function renderCard(data){
   const topSection=document.getElementById('modal-toppills-section');
   const topList=document.getElementById('modal-toppills-list');
   let topPills=[];
-  if(data.subcard){
-    const sc=data.subcard;const c=sc.orbColor||data.color;const cl=lightenHex(c,0.45);
-    const scObj={color:c,glow:data.glow,tag:data.title,scaleText:null,title:sc.label,sub:null,desc:sc.desc||'',links:sc.items||[],bottomPills:sc.bottomPills||[],topPills:sc.topPills||[],isLayer:false};
-    window._deepCards=window._deepCards||{};
-    const key='sc_'+sc.label.replace(/\W/g,'');
-    window._deepCards[key]=JSON.stringify(scObj);
-    topPills.push(`<span class="modal-orb-tag" style="color:${cl};background:${c}28;border:1px solid ${c}66;" onclick="cardNavOpen(JSON.parse(window._deepCards['${key}']));"><span class="modal-orb-dot" style="background:${sphereGrad(c)};border:1px solid ${sphereBorder(c)};"></span>${sc.label}</span>`);
-  }
   if(data.topPills&&data.topPills.length>0){
     window._deepCards=window._deepCards||{};
     data.topPills.forEach(d=>{
       const c=d.color||data.color;const cl=lightenHex(c,0.45);
       const key='dp_'+d.id;
-      window._deepCards[key]=JSON.stringify({color:c,glow:data.glow,tag:data.title,scaleText:null,title:d.label,sub:null,desc:d.desc||'',links:d.links||[],bottomPills:[],topPills:d.topPills||[],isLayer:false});
+      window._deepCards[key]=JSON.stringify({color:c,glow:data.glow,tag:data.title,scaleText:null,title:d.label,sub:null,desc:d.desc||'',links:d.links||[],bottomPills:d.bottomPills||[],topPills:d.topPills||[],isLayer:false});
       topPills.push(`<span class="modal-orb-tag" style="color:${cl};background:${c}28;border:1px solid ${c}66;" onclick="cardNavOpen(JSON.parse(window._deepCards['${key}']));"><span class="modal-orb-dot" style="background:${sphereGrad(c)};border:1px solid ${sphereBorder(c)};"></span>${d.label}</span>`);
     });
   }
@@ -709,10 +701,6 @@ function renderCard(data){
 
 function closeModal(){cardNavClose();}
 function closeSubcard(){cardNavBack();}
-function openSubcard(){
-  const d=window._subcardData;if(!d)return;
-  cardNavOpen({color:d.color,glow:d.glow,tag:d.tag,scaleText:null,title:d.title,sub:null,desc:d.desc,links:d.items||[],topPills:[],bottomPills:[],isLayer:false});
-}
 
 function submitThought(){
   const note=document.getElementById('t-note').value.trim();
