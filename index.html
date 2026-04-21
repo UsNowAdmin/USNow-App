@@ -254,8 +254,8 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:14px;display:none;"></div>
     <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div id="modal-toppills-list" style="display:flex;flex-wrap:wrap;gap:6px;"></div></div>
     <p id="modal-desc"></p>
-    <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div id="modal-bottompills-list" style="display:flex;flex-wrap:wrap;gap:8px;"></div></div>
-    <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OTHER LINKS &amp; CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
+    <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label" style="font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:0.7;">ON-SITE CONNECTIONS</div><div id="modal-bottompills-list" style="display:flex;flex-wrap:wrap;gap:8px;"></div></div>
+    <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OFF-SITE CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
   </div>
 </div>
 
@@ -541,7 +541,7 @@ const bandsEl=document.getElementById('layer-bands');bandsEl.innerHTML='';LAYERS
 const coreOrbs=document.getElementById('core-orbs');coreOrbs.innerHTML='';const positions=[{left:'5%',top:'72%'},{left:'26%',top:'16%'},{left:'50%',top:'78%'},{left:'74%',top:'14%'},{left:'92%',top:'68%'}];LAYERS[0].orbs.forEach((orb,i)=>{const pos=positions[i]||positions[0];const sz=Math.round(orb.size*0.57*orbScale);const scaledOrb={...orb,size:sz};const el=document.createElement('div');el.className='core-satellite';el.style.cssText=`cursor:pointer;left:${pos.left};top:${pos.top};width:${sz}px;height:${sz}px;background:${sphereGrad(orb.color)};border:1.5px solid ${sphereBorder(orb.color)};box-shadow:${sphereGlow(orb.color,sz)};transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;`;el.innerHTML=`<span style="font-size:${Math.max(7,sz*0.18)}px;color:rgba(255,255,255,0.88);font-family:'Courier New',monospace;text-align:center;line-height:1.15;padding:2px;pointer-events:none;">${orb.label}</span>`;attachOrbEvents(el,scaledOrb,()=>openOrb(orb,LAYERS[0]));coreOrbs.appendChild(el);});
 buildFoundationMoons();}
 
-function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],orbs:layer.orbs,topPills:layer.topPills||[],bottomPills:[],isLayer:true,layer:layer});}
+function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const bottomPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:false,layer:layer});}
 function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;cardNavOpen({color:c,glow:og,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});}
 
 // Unified card navigation stack
@@ -659,7 +659,7 @@ function renderCard(data){
   const topSection=document.getElementById('modal-toppills-section');
   const topList=document.getElementById('modal-toppills-list');
   let topPills=[];
-  if(!data.isLayer&&data.subcard){
+  if(data.subcard){
     const sc=data.subcard;const c=sc.orbColor||data.color;const cl=lightenHex(c,0.45);
     const scObj={color:c,glow:data.glow,tag:data.title,scaleText:null,title:sc.label,sub:null,desc:sc.desc||'',links:sc.items||[],bottomPills:sc.bottomPills||[],topPills:sc.topPills||[],isLayer:false};
     window._deepCards=window._deepCards||{};
@@ -677,25 +677,22 @@ function renderCard(data){
     });
   }
   if(topPills.length>0){topSection.style.display='block';topList.innerHTML=topPills.join('');}else{topSection.style.display='none';}
-  // BOTTOM PILLS — bottomPills[] on any card; layer cards use their orbs array
+  // BOTTOM PILLS — uniform across all card types; layer cards pre-build entries in openLayer
   const botSection=document.getElementById('modal-bottompills-section');
   const botList=document.getElementById('modal-bottompills-list');
   let botPills=[];
-  const bpSource=data.isLayer?(data.orbs||[]):(data.bottomPills||[]);
+  const bpSource=data.bottomPills||[];
   if(bpSource.length>0){
+    window._deepCards=window._deepCards||{};
     botPills=bpSource.map(o=>{
       const bg=o.color+'28';const border=o.color+'66';const ol=lightenHex(o.color,0.45);
-      const clickFn=data.isLayer
-        ?`openOrb(window._layerOrbsMap['${o.id}'],window._currentLayer)`
-        :`cardNavOpen(JSON.parse(window._deepCards['bp_${o.id}']))`;
-      if(!data.isLayer){
-        window._deepCards=window._deepCards||{};
-        window._deepCards['bp_'+o.id]=JSON.stringify({color:o.color,glow:data.glow,tag:data.title,scaleText:null,title:o.label,sub:null,desc:o.desc||'',links:o.links||[],bottomPills:o.bottomPills||[],topPills:o.topPills||[],isLayer:false});
+      if(!window._deepCards['bp_'+o.id]){
+        window._deepCards['bp_'+o.id]=JSON.stringify({color:o.color,glow:data.glow,tag:data.title,scaleText:null,title:o.label,sub:null,desc:o.desc||'',links:o.links||[],topPills:o.topPills||[],bottomPills:o.bottomPills||[],isLayer:false});
       }
-      return `<span class="modal-orb-tag" style="color:${ol};background:${bg};border:1px solid ${border};" onclick="${clickFn};"><span class="modal-orb-dot" style="background:${sphereGrad(o.color)};border:1px solid ${sphereBorder(o.color)};"></span>${o.label}</span>`;
+      return `<span class="modal-orb-tag" style="color:${ol};background:${bg};border:1px solid ${border};" onclick="cardNavOpen(JSON.parse(window._deepCards['bp_${o.id}']));"><span class="modal-orb-dot" style="background:${sphereGrad(o.color)};border:1px solid ${sphereBorder(o.color)};"></span>${o.label}</span>`;
     });
   }
-  if(botPills.length>0){botSection.style.display='block';botList.innerHTML=botPills.join('');}else{botSection.style.display='none';}
+  if(botPills.length>0){botSection.style.display='block';const bpLbl=document.getElementById('modal-bottompills-label');if(bpLbl){bpLbl.style.color=lc;}botList.innerHTML=botPills.join('');}else{botSection.style.display='none';}
   // OTHER LINKS & CONNECTIONS — links[] merged with beyond[] (tagged items shown with tag)
   const linksDiv=document.getElementById('modal-links');
   document.getElementById('modal-links-label').style.color=lc;
