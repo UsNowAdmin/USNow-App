@@ -661,7 +661,7 @@ function renderCard(data){
   let topPills=[];
   if(!data.isLayer&&data.subcard){
     const sc=data.subcard;const c=sc.orbColor||data.color;const cl=lightenHex(c,0.45);
-    const scObj={color:c,glow:data.glow,tag:data.title,scaleText:null,title:sc.label,sub:null,desc:sc.desc||'',links:sc.items||[],bottomPills:[],topPills:[],isLayer:false};
+    const scObj={color:c,glow:data.glow,tag:data.title,scaleText:null,title:sc.label,sub:null,desc:sc.desc||'',links:sc.items||[],bottomPills:sc.bottomPills||[],topPills:sc.topPills||[],isLayer:false};
     window._deepCards=window._deepCards||{};
     const key='sc_'+sc.label.replace(/\W/g,'');
     window._deepCards[key]=JSON.stringify(scObj);
@@ -690,7 +690,7 @@ function renderCard(data){
         :`cardNavOpen(JSON.parse(window._deepCards['bp_${o.id}']))`;
       if(!data.isLayer){
         window._deepCards=window._deepCards||{};
-        window._deepCards['bp_'+o.id]=JSON.stringify({color:o.color,glow:data.glow,tag:data.title,scaleText:null,title:o.label,sub:null,desc:o.desc||'',links:o.links||[],bottomPills:[],topPills:o.topPills||[],isLayer:false});
+        window._deepCards['bp_'+o.id]=JSON.stringify({color:o.color,glow:data.glow,tag:data.title,scaleText:null,title:o.label,sub:null,desc:o.desc||'',links:o.links||[],bottomPills:o.bottomPills||[],topPills:o.topPills||[],isLayer:false});
       }
       return `<span class="modal-orb-tag" style="color:${ol};background:${bg};border:1px solid ${border};" onclick="${clickFn};"><span class="modal-orb-dot" style="background:${sphereGrad(o.color)};border:1px solid ${sphereBorder(o.color)};"></span>${o.label}</span>`;
     });
