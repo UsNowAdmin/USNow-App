@@ -71,7 +71,7 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 #modal-overlay.open{display:flex;}
 #modal-glow-halo{position:fixed;bottom:-60px;left:50%;transform:translateX(-50%);width:720px;height:420px;border-radius:50%;pointer-events:none;z-index:2999;transition:background 0.4s ease,opacity 0.45s ease;opacity:0;filter:blur(80px);}
 #modal-overlay.open #modal-glow-halo{opacity:1;}
-#modal-box{background:radial-gradient(ellipse 120% 60% at 50% 0%,rgba(255,255,255,0.09) 0%,rgba(255,255,255,0.02) 35%,transparent 65%),linear-gradient(160deg,#131e35 0%,#0c1228 100%);border-radius:28px 28px 18px 18px;padding:40px 26px 28px;max-width:560px;width:100%;position:relative;max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch;transition:box-shadow 0.4s ease,border-color 0.4s ease;}
+#modal-box{transform-origin:bottom center;transition:box-shadow 0.4s ease,border-color 0.4s ease,transform 0.15s ease;background:radial-gradient(ellipse 120% 60% at 50% 0%,rgba(255,255,255,0.09) 0%,rgba(255,255,255,0.02) 35%,transparent 65%),linear-gradient(160deg,#131e35 0%,#0c1228 100%);border-radius:28px 28px 18px 18px;padding:40px 26px 28px;max-width:560px;width:100%;position:relative;max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch;}
 #modal-box::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.35) 50%,transparent 100%);border-radius:28px 28px 0 0;pointer-events:none;z-index:1;}
 #modal-box::after{content:'';position:absolute;inset:0;border-radius:28px 28px 18px 18px;pointer-events:none;box-shadow:inset 0 -40px 60px -20px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.06);z-index:0;}
 #modal-box>*{position:relative;z-index:2;}
@@ -544,18 +544,30 @@ function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#
 // Unified card navigation stack
 window._cardStack=[];
 
+function getVisualScale(){
+  if(window.visualViewport)return window.visualViewport.scale;
+  return window.outerWidth/window.innerWidth||1;
+}
+function applyModalScale(){
+  const s=getVisualScale();
+  const box=document.getElementById('modal-box');
+  if(s>1.05){
+    const inv=1/s;
+    box.style.transform='scale('+inv+')';
+    box.style.width=(s*100)+'%';
+    box.style.maxWidth=(s*560)+'px';
+  } else {
+    box.style.transform='';
+    box.style.width='100%';
+    box.style.maxWidth='560px';
+  }
+}
 function cardNavOpen(data){
   window._cardStack.push(data);
   renderCard(data);
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
-  if(/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)){
-    const vp=document.querySelector('meta[name=viewport]');
-    if(vp){
-      vp.content='width=device-width,initial-scale=1.0,maximum-scale=1.0';
-      requestAnimationFrame(()=>{vp.content='width=device-width,initial-scale=1.0';});
-    }
-  }
+  applyModalScale();
 }
 
 function cardNavBack(){
@@ -572,6 +584,10 @@ function cardNavClose(){
   window._cardStack=[];
   document.getElementById('modal-overlay').classList.remove('open');
   document.body.style.overflow='';
+  const box=document.getElementById('modal-box');
+  box.style.transform='';
+  box.style.width='100%';
+  box.style.maxWidth='560px';
 }
 
 function renderCard(data){
