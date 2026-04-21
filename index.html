@@ -48,7 +48,8 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .layer-sub-label{display:none;}
 .layer-band:hover .layer-main-label{color:#ffffff!important;text-shadow:0 0 28px rgba(255,255,255,0.55),0 0 60px rgba(255,255,255,0.18),0 2px 8px rgba(0,0,0,0.9)!important;letter-spacing:0.38em!important;}
 .layer-band:hover .layer-label-wrap{z-index:100;}
-.orb-node{position:absolute;border-radius:50%;cursor:pointer;touch-action:manipulation;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);z-index:20;transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;}
+.orb-node{position:absolute;border-radius:50%;cursor:pointer;touch-action:pan-x pan-y;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);z-index:20;transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;}
+@media (hover:none) and (pointer:coarse){.orb-node{min-width:44px;min-height:44px;}}
 .orb-node:hover{animation-play-state:paused;}
 .orb-label{color:#ffffff;font-family:'Georgia','Times New Roman',serif;font-weight:400;letter-spacing:0.01em;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,1),0 0 12px rgba(0,0,0,0.95),0 2px 4px rgba(0,0,0,1);}
 #core-wrap{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:300;display:flex;flex-direction:column;align-items:center;gap:4px;overflow:visible;pointer-events:none;}
@@ -487,42 +488,41 @@ function orbIdleReset(el,sz,color){el.style.transform='translate(-50%,-50%) scal
 function orbActivePress(el,sz,color){el.style.transform='translate(-50%,-50%) scale(1.06)';el.style.boxShadow=`0 0 ${sz*0.7}px ${color}ff,0 0 ${sz*1.8}px ${color}55,inset 0 0 ${sz*0.5}px rgba(0,0,0,0.5)`;}
 function attachOrbEvents(orbEl,orb,openFn){
   orbEl.style.cursor='pointer';
-  // Mouse
+  orbEl.style.webkitTapHighlightColor='transparent';
+
+  let pointerDown=false;
+  let startX=0,startY=0;
+  const moveTol=12;
+
   orbEl.addEventListener('mouseenter',()=>{orbHoverGlow(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('mouseleave',()=>{orbIdleReset(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('mousedown',()=>{orbActivePress(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('mouseup',()=>{orbHoverGlow(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('click',e=>{
-    e.stopPropagation();
-    // Ignore the synthetic click fired after a handled touchend
-    if(orbEl._touchHandled){orbEl._touchHandled=false;return;}
-    openFn();
+  orbEl.addEventListener('mouseleave',()=>{if(!pointerDown)orbIdleReset(orbEl,orb.size,orb.color);});
+
+  orbEl.addEventListener('pointerdown',e=>{
+    if(e.pointerType==='mouse' && e.button!==0)return;
+    pointerDown=true;
+    startX=e.clientX; startY=e.clientY;
+    orbActivePress(orbEl,orb.size,orb.color);
   });
-  // Touch
-  let _tsx=0,_tsy=0,_tmoved=false,_tcancel=false;
-  orbEl.addEventListener('touchstart',e=>{
-    // Multi-finger (pinch-zoom) — bail out
-    if(e.touches.length>1){_tcancel=true;orbIdleReset(orbEl,orb.size,orb.color);return;}
-    _tcancel=false;
-    e.stopPropagation();
-    _tsx=e.touches[0].clientX;_tsy=e.touches[0].clientY;_tmoved=false;
-    orbHoverGlow(orbEl,orb.size,orb.color);
-  },{passive:true});
-  orbEl.addEventListener('touchmove',e=>{
-    if(_tcancel)return;
-    if(e.touches.length>1){_tcancel=true;orbIdleReset(orbEl,orb.size,orb.color);return;}
-    if(Math.abs(e.touches[0].clientX-_tsx)>8||Math.abs(e.touches[0].clientY-_tsy)>8){
-      _tmoved=true;orbIdleReset(orbEl,orb.size,orb.color);
+
+  orbEl.addEventListener('pointermove',e=>{
+    if(!pointerDown)return;
+    if(Math.abs(e.clientX-startX)>moveTol || Math.abs(e.clientY-startY)>moveTol){
+      pointerDown=false;
+      orbIdleReset(orbEl,orb.size,orb.color);
     }
-  },{passive:true});
-  orbEl.addEventListener('touchend',e=>{
-    // Cancelled (pinch) OR other fingers still down → abort
-    if(_tcancel||e.touches.length>0){_tcancel=false;orbIdleReset(orbEl,orb.size,orb.color);return;}
-    e.stopPropagation();
-    if(_tmoved){orbIdleReset(orbEl,orb.size,orb.color);return;}
-    e.preventDefault();
-    orbEl._touchHandled=true;
+  });
+
+  orbEl.addEventListener('pointercancel',()=>{
+    pointerDown=false;
     orbIdleReset(orbEl,orb.size,orb.color);
+  });
+
+  orbEl.addEventListener('pointerup',e=>{
+    const wasDown=pointerDown;
+    pointerDown=false;
+    if(!wasDown){orbIdleReset(orbEl,orb.size,orb.color);return;}
+    e.stopPropagation();
+    orbHoverGlow(orbEl,orb.size,orb.color);
     openFn();
   });
 }
@@ -572,11 +572,9 @@ function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#
 window._cardStack=[];
 
 function setViewportZoom(locked){
-  let vp=document.querySelector('meta[name="viewport"]');
-  if(!vp){vp=document.createElement('meta');vp.name='viewport';document.head.appendChild(vp);}
-  vp.content = locked
-    ? 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no'
-    : 'width=device-width,initial-scale=1.0';
+  // Intentionally left inert. Dynamically changing viewport zoom rules after
+  // a pinch-zoom can make hit-testing and tap behavior glitchy on mobile.
+  return;
 }
 
 function cardNavOpen(data){
@@ -748,7 +746,31 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')cardNavBack();});
 const _days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const _months=['January','February','March','April','May','June','July','August','September','October','November','December'];const _now=new Date();document.getElementById('hero-date').textContent=`${_days[_now.getDay()].toUpperCase()} · ${_months[_now.getMonth()].toUpperCase()} ${_now.getDate()}, ${_now.getFullYear()}`;
 buildScale();
 let resizeTimer;
-window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(buildScale,120);});
+let _lastViewportWidth=window.innerWidth;
+window.addEventListener('resize',()=>{
+  const widthDelta=Math.abs(window.innerWidth-_lastViewportWidth);
+  const modalOpen=document.getElementById('modal-overlay').classList.contains('open');
+  if(widthDelta<40 && modalOpen)return;
+  if(widthDelta<24)return;
+  _lastViewportWidth=window.innerWidth;
+  clearTimeout(resizeTimer);
+  resizeTimer=setTimeout(()=>{
+    if(!document.getElementById('modal-overlay').classList.contains('open')) buildScale();
+  },180);
+});
+if(window.visualViewport){
+  let vvTimer;
+  let lastVVWidth=window.visualViewport.width;
+  window.visualViewport.addEventListener('resize',()=>{
+    const widthDelta=Math.abs(window.visualViewport.width-lastVVWidth);
+    if(widthDelta<24)return;
+    lastVVWidth=window.visualViewport.width;
+    clearTimeout(vvTimer);
+    vvTimer=setTimeout(()=>{
+      if(!document.getElementById('modal-overlay').classList.contains('open')) buildScale();
+    },180);
+  });
+}
 </script>
 
 <style>
