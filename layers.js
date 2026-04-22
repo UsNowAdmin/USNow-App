@@ -1728,6 +1728,316 @@ const LAYERS = [
                 ]
               },
               {
+                "id": "p_left_right",
+                "label": "The Left & The Right",
+                "color": "#b04848",
+                "desc": "Two coalitions. One system. The distance between them, measured in actual policy, is smaller than the noise suggests — and the noise is largely manufactured by the fraction of each side that benefits from the fight. Most Americans don't live at the edges. They live in the middle, watching two minorities perform certainty at each other, waiting for someone to say the obvious thing out loud. This is that card.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "p_party_system",
+                    "label": "The Party System",
+                    "color": "#8a3838",
+                    "desc": "The United States has had two dominant parties for most of its history — not because two parties is the natural state of democracy, but because the system was built that way. Winner-take-all elections, ballot access laws, and the Electoral College all conspire to crush third parties before they scale. The names have changed. The Federalists became Whigs became Republicans. The Democratic-Republicans became Democrats. The positions have flipped more than once — the party of Lincoln and the party of Jefferson have traded ideological DNA across centuries. What hasn't changed is the binary. Two tents. Everyone inside arguing about who belongs.",
+                    "links": [
+                      {
+                        "label": "Ballotpedia — party history",
+                        "url": "https://ballotpedia.org",
+                        "emoji": "🏛️"
+                      },
+                      {
+                        "label": "Pew Research — political polarization",
+                        "url": "https://www.pewresearch.org",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_the_left",
+                    "label": "The Left",
+                    "color": "#3858a8",
+                    "desc": "At its best: a coalition for working people, civil rights, environmental protection, and the idea that government can be a force for collective good. At its worst: captured by its academic fringe, more comfortable with the language of identity than the language of kitchen tables, and prone to losing elections it should win. Most people who vote Democrat are not ideologues. They are parents, workers, and neighbors who want healthcare, schools that work, and a country that doesn't leave people behind. The party contains multitudes — some of them in open conflict with each other.",
+                    "links": [
+                      {
+                        "label": "GovTrack — congressional voting records",
+                        "url": "https://www.govtrack.us",
+                        "emoji": "🏛️"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "p_left_establishment",
+                        "label": "Establishment Democrats",
+                        "color": "#3858a8",
+                        "desc": "The center of the party — institutionalist, incrementalist, and focused on electability. Prioritizes winning over ideological purity, which frustrates the left flank and energizes the right's caricature. The establishment has delivered real policy — the ACA, climate legislation, labor protections — while being accused by its own base of not fighting hard enough for any of it. The tension is real. So are the results.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p_left_progressive",
+                        "label": "The Progressive Wing",
+                        "color": "#2848a8",
+                        "desc": "The left flank of the Democratic Party — pushing the Overton window on healthcare, housing, climate, and economic inequality. Often further ahead of public opinion than polling suggests, and more right than wrong on the long arc. The progressive wing has moved the center of gravity of the party on issues that were once fringe and are now mainstream. Its weakness is coalition-building. Its strength is vision.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p_left_dsa",
+                        "label": "Democratic Socialists",
+                        "color": "#1838a0",
+                        "desc": "Not communism. Not the Soviet Union. The deliberate conflation of those things is a rhetorical move, not an analysis. Democratic socialism holds that political democracy is incomplete without economic democracy — that you cannot have one person one vote when one person has ten billion dollars and another has none. The agenda: universal healthcare, free public higher education, worker ownership, and the regulation of concentrated capital. Most of the policies poll well when described without the label. The label is the fight.",
+                        "links": [
+                          {
+                            "label": "Pew Research — economic views",
+                            "url": "https://www.pewresearch.org",
+                            "emoji": "📊"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "p2",
+                            "label": "Economy & Money",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "p_gov_publicgood",
+                            "label": "The Public Good",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "p_left_labor",
+                        "label": "Labor & Unions",
+                        "color": "#2858a8",
+                        "desc": "The original coalition. Before identity politics, before culture wars, the Democratic Party was built on organized labor — the idea that workers have power when they act together and very little when they don't. Union membership has declined for fifty years, tracked almost exactly by the decline of the middle class. The resurgence of labor organizing in the 2020s — Starbucks, Amazon, Hollywood — is the party's oldest story being told again by a new generation.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p_left_fringe",
+                        "label": "The Academic Fringe",
+                        "color": "#1a3888",
+                        "desc": "The loudest voices in any coalition are rarely the most representative. The academic and activist fringe of the left speaks a language — highly specialized, morally urgent, fluent in theory — that most working Democrats do not recognize as their own. This is not a dismissal of the ideas. Some of them are right. It is an observation about translation: ideas that cannot be explained at a kitchen table rarely survive contact with an election.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_the_right",
+                    "label": "The Right",
+                    "color": "#b84040",
+                    "desc": "At its best: a tradition of limited government, individual liberty, fiscal responsibility, and a healthy skepticism of concentrated power — all ideas worth taking seriously. At its worst: a coalition captured by grievance politics, corporate interests dressed as populism, and a fringe that mistakes volume for mandate. Most people who vote Republican are not extremists. They are people who distrust government overreach, value self-reliance, and feel that the culture has moved faster than the conversation allowed. The party contains multitudes — some of them in open conflict with each other.",
+                    "links": [
+                      {
+                        "label": "GovTrack — congressional voting records",
+                        "url": "https://www.govtrack.us",
+                        "emoji": "🏛️"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "p_right_classical",
+                        "label": "Classical Conservatism",
+                        "color": "#b84040",
+                        "desc": "The Edmund Burke tradition — change should be gradual, institutions earned their authority through time and should not be dismantled lightly, order is a precondition for freedom. This is conservatism as philosophy, not as culture war. It is skeptical of revolution from any direction. It believes that what has been built deserves respect even when it needs reform. It is currently the least represented strain in the Republican Party and the most intellectually serious.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p_right_corporate",
+                        "label": "Corporate Republicans",
+                        "color": "#a83838",
+                        "desc": "The business wing — low taxes, deregulation, free trade, and the reliable delivery of government policy to the industries that fund the campaigns. Often misidentified as conservative in any principled sense. The corporate Republican is not opposed to big government — only to big government that doesn't benefit their donors. The revolving door spins fastest here.",
+                        "links": [
+                          {
+                            "label": "OpenSecrets — who funds whom",
+                            "url": "https://www.opensecrets.org",
+                            "emoji": "💰"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "p_gov_cor_revolve",
+                            "label": "The Revolving Door",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "p_right_religious",
+                        "label": "The Religious Right",
+                        "color": "#983030",
+                        "desc": "The coalition that remade the Republican Party beginning in the 1970s — evangelical Christians organized as a political force around abortion, school prayer, and the sense that American culture had drifted from its moral foundations. At its best: a genuine expression of deeply held values entering the democratic process. At its worst: a vehicle for social control that has consistently prioritized cultural grievance over the economic interests of its own members.",
+                        "links": [
+                          {
+                            "label": "Pew Research — religion & politics",
+                            "url": "https://www.pewresearch.org/religion/",
+                            "emoji": "📊"
+                          }
+                        ],
+                        "topPills": [
+                          {
+                            "id": "p_christian_nationalism",
+                            "label": "Christian Nationalism",
+                            "color": "#882828",
+                            "desc": "The fusion of Christian identity with American political destiny — the belief that the nation was founded as a Christian nation and should be governed as one. Distinct from personal faith, which is private and protected. This is faith as political program. At its edges it rewrites history, reshapes curriculum, and justifies the erosion of the separation of church and state in the name of restoring something that was never quite what they claim it was. Most Christians do not hold this position. The ones who do are organized, well-funded, and currently close to power.",
+                            "links": [
+                              {
+                                "label": "Pew Research — Christian nationalism",
+                                "url": "https://www.pewresearch.org/religion/",
+                                "emoji": "📊"
+                              }
+                            ],
+                            "topPills": [],
+                            "bottomPills": [
+                              {
+                                "id": "x5_christianity",
+                                "label": "Christianity",
+                                "desc": "",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": []
+                              },
+                              {
+                                "id": "p_gov_sep",
+                                "label": "Separation of Powers",
+                                "desc": "",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": []
+                              }
+                            ]
+                          }
+                        ],
+                        "bottomPills": [
+                          {
+                            "id": "x5",
+                            "label": "Religion",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "p_right_maga",
+                        "label": "MAGA & Populist Right",
+                        "color": "#c03030",
+                        "desc": "The current dominant strain — nationalist, protectionist, personality-driven, and animated by the sense that something was taken from real Americans and needs to be reclaimed. It draws from genuine economic grievance, from communities hollowed out by deindustrialization, from people who felt invisible to both parties for decades. It also draws from fear, from misinformation, and from the oldest political tool in the book: the enemy within. The grievance is often real. The diagnosis is often wrong. The remedy is often aimed at the wrong target.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "p_gov_author",
+                            "label": "Authoritarianism",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "p_right_fringe",
+                        "label": "The Fringe Right",
+                        "color": "#901818",
+                        "desc": "Beyond MAGA — the militias, the accelerationists, the conspiracy ecosystems, the groups for whom democracy itself is the problem. A small fraction of the coalition, loud and visible enough to define the whole in the eyes of the opposition, invisible enough to the center that their growth goes underestimated. Named here not to amplify but to locate — the fringe is not the party and the party is not the fringe. Both things are true simultaneously and both matter.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_nationalism",
+                    "label": "Nationalism",
+                    "color": "#8a2828",
+                    "desc": "The belief that the nation — its people, its culture, its borders — is the primary unit of political loyalty and the highest object of collective purpose. Not inherently extreme. Every functioning country runs on some version of it. The question is always what gets included in the 'we' and what gets left outside — and how hard the boundary gets enforced. At low temperature it is civic pride. At high temperature it is a mechanism for exclusion that has repeatedly ended in catastrophe. The distance between those two is shorter than most people think, and the direction of travel is usually one way.",
+                    "links": [
+                      {
+                        "label": "Pew Research — national identity",
+                        "url": "https://www.pewresearch.org",
+                        "emoji": "📊"
+                      },
+                      {
+                        "label": "Foreign Affairs — nationalism & democracy",
+                        "url": "https://www.foreignaffairs.com",
+                        "emoji": "📰"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_christian_nationalism",
+                        "label": "Christian Nationalism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "p_pride_patriotism",
+                    "label": "Pride & Patriotism",
+                    "color": "#7a3838",
+                    "desc": "Pride is not a partisan word. It never was. It belongs to every person who has ever felt something larger than themselves — a country, a community, a tradition, a people — and decided that thing was worth defending and worth improving. Patriotism is the love of what a place can be, not just what it has been. It makes demands. It expects better. It does not require an enemy. The conflation of pride with any single group — political, cultural, or otherwise — is the oldest trick in the book: shrink the word, shrink the tent, claim the flag. Pride is not theirs to own. It never was. It belongs to the 80% who want the same things and keep being told they don't.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_gov_cr",
+                        "label": "Civil Rights & Human Rights",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p_gov_publicgood",
+                        "label": "The Public Good",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
                 "id": "p_gov_sep",
                 "label": "Separation of Powers",
                 "color": "#c04040",
