@@ -680,9 +680,778 @@ const LAYERS = [
         "x": 34,
         "y": 54,
         "color": "#5aaa60",
-        "desc": "Not a cause. A condition. The air, the water, the temperature of the only planet anyone has ever lived on. What happens here isn't separate from politics, economics, or justice — it is all of those things with nowhere left to hide.",
-        "links": [],
-        "topPills": [],
+        "desc": "Not a cause. A condition. The air, the water, the temperature of the only planet anyone has ever lived on. What happens here isn't separate from politics, economics, or justice — it is all of those things with nowhere left to hide. The environment is not an issue. It is the ground everything else stands on.",
+        "links": [
+          {
+            "label": "EPA — environmental data",
+            "url": "https://www.epa.gov",
+            "emoji": "🌿"
+          },
+          {
+            "label": "IPCC — climate science",
+            "url": "https://www.ipcc.ch",
+            "emoji": "🔬"
+          },
+          {
+            "label": "EarthDay.org",
+            "url": "https://www.earthday.org",
+            "emoji": "🌍"
+          },
+          {
+            "label": "NRDC — environmental defense",
+            "url": "https://www.nrdc.org",
+            "emoji": "🌿"
+          }
+        ],
+        "topPills": [
+          {
+            "id": "c_env_climate",
+            "label": "Climate",
+            "color": "#3a9a58",
+            "desc": "The defining condition of the current era. Not a future threat — a present reality, measurable in degrees, in floods, in fire seasons that no longer have seasons. The science has been settled for decades. The politics have not. The gap between what the data shows and what the policy does is the most consequential failure of collective action in human history. It is still in progress.",
+            "links": [
+              {
+                "label": "IPCC — climate reports",
+                "url": "https://www.ipcc.ch",
+                "emoji": "🔬"
+              },
+              {
+                "label": "NASA — climate data",
+                "url": "https://climate.nasa.gov",
+                "emoji": "🔭"
+              },
+              {
+                "label": "Pew Research — climate attitudes",
+                "url": "https://www.pewresearch.org",
+                "emoji": "📊"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "c_env_cc",
+                "label": "Climate Change",
+                "color": "#2a8a48",
+                "desc": "The planet is warming. The cause is human activity — primarily the burning of fossil fuels that releases carbon dioxide and other greenhouse gases that trap heat in the atmosphere. This is not a theory. It is the conclusion of every major scientific institution on earth, supported by multiple independent lines of evidence: temperature records, ice cores, sea level measurements, ocean heat content, atmospheric CO2 readings. The uncertainty is not whether it is happening. The uncertainty is how bad it will get and how fast.",
+                "links": [
+                  {
+                    "label": "NASA — climate change evidence",
+                    "url": "https://climate.nasa.gov",
+                    "emoji": "🔭"
+                  },
+                  {
+                    "label": "IPCC",
+                    "url": "https://www.ipcc.ch",
+                    "emoji": "🔬"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "c_env_cc_science",
+                    "label": "The Science",
+                    "color": "#2a8a48",
+                    "desc": "The greenhouse effect was identified in the 1850s. The connection between fossil fuel burning and atmospheric warming was established by the 1950s. The first detailed warnings to the US government came in the 1960s. The science is not new, not contested among scientists, and not complicated in its basic outline: more CO2 means more heat, more heat means more of everything — more drought, more flood, more fire, more storm. The complexity is in the details. The conclusion is not.",
+                    "links": [
+                      {
+                        "label": "IPCC reports",
+                        "url": "https://www.ipcc.ch",
+                        "emoji": "🔬"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_cc_denial",
+                    "label": "The Denial Industry",
+                    "color": "#1a7a38",
+                    "desc": "The fossil fuel industry knew. Internal documents from Exxon show that their own scientists accurately predicted global warming as early as 1977. The response was not to change course. It was to fund doubt — to create the appearance of scientific controversy where none existed, to support think tanks and politicians who would question the consensus, and to delay action by the decades needed to extract maximum value from existing reserves. The tobacco playbook, applied to the atmosphere.",
+                    "links": [
+                      {
+                        "label": "ProPublica — fossil fuel accountability",
+                        "url": "https://www.propublica.org",
+                        "emoji": "📰"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_cc_politics",
+                    "label": "The Political Fight",
+                    "color": "#3a9a50",
+                    "desc": "Climate change became a partisan issue not because the science is partisan but because the solutions threatened specific economic interests that invested heavily in making it partisan. In the 1980s, Republican and Democratic politicians alike supported climate action. The polarization was manufactured. Today the United States is the only major democracy where climate denial is a viable mainstream political position. That is not an accident of culture. It is an outcome of spending.",
+                    "links": [
+                      {
+                        "label": "OpenSecrets — fossil fuel donations",
+                        "url": "https://www.opensecrets.org",
+                        "emoji": "💰"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_cc_tipping",
+                    "label": "Tipping Points",
+                    "color": "#1a6a30",
+                    "desc": "The climate system contains thresholds — points past which change becomes self-reinforcing and cannot be reversed by reducing emissions. Permafrost melting releases methane that causes more warming that melts more permafrost. Ice sheets reflecting sunlight melt to reveal dark ocean absorbing heat. Amazon dieback releasing stored carbon. Scientists debate exactly where these thresholds are. The consensus is that some of them are closer than comfortable and that the consequences of crossing them are not linear.",
+                    "links": [
+                      {
+                        "label": "IPCC — tipping points",
+                        "url": "https://www.ipcc.ch",
+                        "emoji": "🔬"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_cc_justice",
+                    "label": "Climate Justice",
+                    "color": "#4aaa60",
+                    "desc": "The people who contributed least to climate change are experiencing its worst effects first. Bangladesh floods. Sahel drought. Pacific islands disappearing beneath the sea. Indigenous communities watching ancestral land become unlivable. The carbon was emitted overwhelmingly by wealthy industrialized nations. The consequences are distributed by geography and poverty. Climate justice holds that this is not just an environmental problem. It is a moral one — and the solutions have to reckon with that asymmetry.",
+                    "links": [
+                      {
+                        "label": "UN — climate justice",
+                        "url": "https://www.un.org/en/climatechange",
+                        "emoji": "🌍"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_cc_now",
+                    "label": "What's Happening Now",
+                    "color": "#2a8a48",
+                    "desc": "2023 was the hottest year in recorded history. 2024 broke that record. The ten hottest years on record have all occurred since 2010. Arctic sea ice is at historic lows. Coral reefs are bleaching at unprecedented rates. Wildfire seasons in North America, Australia, and Southern Europe are longer, more intense, and more destructive than any previous era. The changes predicted by climate models decades ago are arriving on schedule. Some are arriving ahead of schedule.",
+                    "links": [
+                      {
+                        "label": "NASA — vital signs",
+                        "url": "https://climate.nasa.gov",
+                        "emoji": "🔭"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "e2_environ",
+                    "label": "Environmental Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_earth",
+                    "label": "Earth Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "c_env_bio",
+            "label": "Biodiversity",
+            "color": "#5aaa50",
+            "desc": "The living web. Every species is a node in a network that took billions of years to build and that we are dismantling in centuries. Biodiversity is not a conservation luxury — it is the operating system of the biosphere. When it degrades, the systems that clean water, pollinate crops, regulate climate, and cycle nutrients degrade with it. We are pulling threads from a fabric we don't fully understand.",
+            "links": [
+              {
+                "label": "IUCN Red List — species status",
+                "url": "https://www.iucnredlist.org",
+                "emoji": "🌿"
+              },
+              {
+                "label": "WWF — biodiversity",
+                "url": "https://www.worldwildlife.org",
+                "emoji": "🌿"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "c_env_bio_extinction",
+                "label": "The Sixth Extinction",
+                "color": "#4a9a40",
+                "desc": "Earth has experienced five mass extinctions in its history. The most recent, 66 million years ago, killed the non-avian dinosaurs. Scientists now believe we are in the sixth — and this one is caused not by an asteroid or volcanic eruption but by one species. Current extinction rates are estimated at 100 to 1,000 times the natural background rate. The rate is accelerating. Unlike the previous five, this one has a cause that could theoretically be addressed.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_bio_species",
+                "label": "Species Loss",
+                "color": "#3a8a30",
+                "desc": "A million species are currently threatened with extinction according to the UN. That number is an estimate — we have not catalogued most of the species that exist. Many will go extinct before they are named. Each loss is a permanent subtraction from the sum of life on earth. Some losses cascade — the extinction of a keystone species can restructure entire ecosystems. We do not know which losses will cascade until after they do.",
+                "links": [
+                  {
+                    "label": "IUCN Red List",
+                    "url": "https://www.iucnredlist.org",
+                    "emoji": "🌿"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_bio_pollinators",
+                "label": "Pollinator Crisis",
+                "color": "#c8a030",
+                "desc": "One third of the world's food supply depends on pollination by bees, butterflies, and other insects. Pollinator populations are collapsing — from pesticides, from habitat loss, from disease, from the monoculture agriculture that replaced the diverse landscapes they evolved alongside. The downstream consequences run from food security to ecosystem stability. The honeybee is the canary. The coal mine is the agricultural system.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_bio_deforest",
+                "label": "Deforestation",
+                "color": "#2a7a20",
+                "desc": "Forests cover 31% of the earth's land surface and contain 80% of terrestrial biodiversity. They are being cleared at a rate of roughly 10 million hectares per year — primarily for agriculture, cattle ranching, and logging. The Amazon, the Congo Basin, and Southeast Asian rainforests are the lungs of the planet and the reservoir of most of the world's remaining terrestrial species. Their destruction is both a biodiversity crisis and a climate crisis simultaneously.",
+                "links": [
+                  {
+                    "label": "Global Forest Watch",
+                    "url": "https://www.globalforestwatch.org",
+                    "emoji": "🌿"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "e2_biology",
+                "label": "Biology",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "e2_environ",
+                "label": "Environmental Science",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "c_env_water",
+            "label": "Water",
+            "color": "#3a78c8",
+            "desc": "The next oil — already scarce, already contested, already being privatized. Every living system on earth requires it. Most political systems treat it as infinite until the moment it isn't, at which point it becomes the thing wars are fought over. The water crisis is not coming. It is already here for the billion people who lack reliable access to clean water today.",
+            "links": [
+              {
+                "label": "UN Water — global water data",
+                "url": "https://www.unwater.org",
+                "emoji": "💧"
+              },
+              {
+                "label": "Pacific Institute — water conflict",
+                "url": "https://pacinst.org",
+                "emoji": "💧"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "c_env_water_drinking",
+                "label": "Drinking Water & Access",
+                "color": "#2a68b8",
+                "desc": "Two billion people lack access to safe drinking water. In the United States — the wealthiest nation in history — Flint, Michigan went years with lead-poisoned water while officials denied it. Jackson, Mississippi lost water pressure for weeks in 2022. The communities that lack reliable clean water are not random — they are poor, they are often majority non-white, and they are the communities with the least political power to demand what everyone agrees they deserve.",
+                "links": [
+                  {
+                    "label": "EPA — drinking water standards",
+                    "url": "https://www.epa.gov/ground-water-and-drinking-water",
+                    "emoji": "💧"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_water_oceans",
+                "label": "Oceans",
+                "color": "#1a58c0",
+                "desc": "The ocean covers 71% of the earth's surface, produces half its oxygen, absorbs a third of the CO2 humans emit, and contains 97% of its water. It is also warming, acidifying, and filling with plastic. Ocean acidification — caused by absorbed CO2 — is dissolving the shells of marine organisms at the base of the food chain. Dead zones — areas of oxygen-depleted water caused by agricultural runoff — now number over 400 worldwide. The ocean is not a backdrop. It is a life support system.",
+                "links": [
+                  {
+                    "label": "NOAA — ocean data",
+                    "url": "https://www.noaa.gov",
+                    "emoji": "🌊"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "c_env_ocean_acid",
+                    "label": "Ocean Acidification",
+                    "color": "#1a58c0",
+                    "desc": "The ocean absorbs roughly a third of the CO2 humans emit. When CO2 dissolves in seawater it forms carbonic acid. The ocean has acidified by 26% since the Industrial Revolution — faster than any time in the last 300 million years. Acidification dissolves the calcium carbonate that oysters, clams, coral, and pteropods — tiny sea snails at the base of the marine food chain — use to build their shells. The math at the bottom of the food chain eventually reaches the top.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_ocean_plastic",
+                    "label": "Plastic & Microplastics",
+                    "color": "#2a68b8",
+                    "desc": "8 million metric tons of plastic enter the ocean every year. The Great Pacific Garbage Patch is twice the size of Texas. But the visible plastic is not the main problem. Plastic breaks down into microplastics — particles smaller than 5mm — that have now been found in the deepest ocean trenches, in Arctic ice, in human blood, in placentas, in the lungs of people who have never been near the ocean. We are eating, drinking, and breathing the packaging.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_ocean_dead",
+                    "label": "Dead Zones",
+                    "color": "#0a48a8",
+                    "desc": "Agricultural fertilizer runoff carries nitrogen and phosphorus into waterways and eventually the ocean, triggering algae blooms that consume the oxygen in the water when they decompose. The resulting hypoxic zones — dead zones — cannot support most marine life. The Gulf of Mexico dead zone, fed by Midwest agricultural runoff down the Mississippi, covers an area the size of New Jersey every summer. There are over 400 dead zones worldwide. The number is growing.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_water_fresh",
+                "label": "Fresh Waterways",
+                "color": "#3a88d8",
+                "desc": "Rivers and lakes hold less than 1% of the world's water but support a third of all vertebrate species and most of humanity's agriculture, industry, and drinking water. They are dammed, diverted, polluted, and depleted faster than they can recover. The health of a river is the health of everything that lives in its watershed — which in most cases means the health of millions of people who may never see the river itself.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "c_env_water_divert",
+                    "label": "Water Diversion",
+                    "color": "#2a78c8",
+                    "desc": "The Colorado River no longer reaches the sea. Fully consumed before it arrives — diverted across seven US states and Mexico through a system of dams, canals, and compacts written when the river ran higher and the West had fewer people. The Aral Sea, once the fourth largest lake on earth, was reduced to 10% of its original size by Soviet irrigation diversions — the fishing industry gone, the surrounding communities devastated, the exposed lakebed now a salt flat that poisons the air for hundreds of miles. The Jordan River is a trickle. California's Central Valley is sinking as groundwater is pumped faster than it recharges. Water diversion is power diversion. The people who control the upstream have always controlled the downstream — politically, economically, and in terms of survival. The river does not just carry water. It carries everything the communities downstream need to exist.",
+                    "links": [
+                      {
+                        "label": "Pacific Institute — water conflict",
+                        "url": "https://pacinst.org",
+                        "emoji": "💧"
+                      },
+                      {
+                        "label": "ProPublica — water rights",
+                        "url": "https://www.propublica.org",
+                        "emoji": "📰"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c_env_water_priv",
+                        "label": "Water Privatization",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p_corp",
+                        "label": "Corporations",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "f_rc_d1",
+                        "label": "Place",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "c_env_water_ground",
+                    "label": "Groundwater Depletion",
+                    "color": "#1a68b8",
+                    "desc": "Aquifers are ancient — some took millions of years to fill. They are being emptied in decades. The Ogallala Aquifer, which underlies the Great Plains and irrigates a significant portion of American agriculture, is being depleted at rates that make it essentially nonrenewable on any human timescale. When it is gone, the agriculture it supports will have to move or end. There is no plan.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_water_wars",
+                    "label": "Water Wars",
+                    "color": "#0a58a8",
+                    "desc": "Water conflict is already happening. Ethiopia, Egypt, and Sudan are in a decade-long dispute over the Grand Ethiopian Renaissance Dam and its effect on Nile water flow. India and Pakistan share rivers and a history of war. American states litigate over Colorado River allocations. The UN has identified water scarcity as one of the primary drivers of conflict in the coming decades. Climate change is not creating the competition — it is intensifying competition that already exists.",
+                    "links": [
+                      {
+                        "label": "Pacific Institute — water conflict chronology",
+                        "url": "https://pacinst.org",
+                        "emoji": "💧"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_water_priv",
+                "label": "Water Privatization",
+                "color": "#4a88d0",
+                "desc": "Water is being treated as a commodity. Nestlé — now BlueTriton — pumps from drought-stricken aquifers under permits that cost almost nothing and sells the water back at a markup. Municipalities sell their water systems to private equity firms that raise rates and defer maintenance. The argument for privatization is efficiency. The argument against it is that efficiency is not the right frame for something people die without. Water is not a product. It is a condition of existence. The question of who owns it is a question about who owns life.",
+                "links": [
+                  {
+                    "label": "ProPublica — water privatization",
+                    "url": "https://www.propublica.org",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p2_exp",
+                    "label": "Exploitation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "c_env_air",
+            "label": "Air",
+            "color": "#7a9a70",
+            "desc": "The commons you breathe whether you consent to or not. You can choose not to drink polluted water. You cannot choose not to breathe the air. Air quality is one of the clearest expressions of environmental injustice — who lives near the refinery, who lives downwind of the highway, who gets the asthma and the cancer clusters, is not random. It follows the lines of race and class with a consistency that is too precise to be coincidence.",
+            "links": [
+              {
+                "label": "EPA — air quality data",
+                "url": "https://www.epa.gov/air-trends",
+                "emoji": "🌿"
+              },
+              {
+                "label": "AirNow — real-time air quality",
+                "url": "https://www.airnow.gov",
+                "emoji": "🌿"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "c_env_air_quality",
+                "label": "Air Quality",
+                "color": "#6a8a60",
+                "desc": "The Clean Air Act of 1970 — born from the same Earth Day energy that is still running — dramatically reduced air pollution in the United States and is estimated to have prevented millions of premature deaths. It is one of the clearest examples of environmental regulation working. It is also under constant pressure from the industries it regulates. Air quality improvements are not permanent. They are the result of ongoing political will to maintain them.",
+                "links": [
+                  {
+                    "label": "EPA — air quality trends",
+                    "url": "https://www.epa.gov/air-trends",
+                    "emoji": "🌿"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_air_pollution",
+                "label": "Pollution",
+                "color": "#5a7a50",
+                "desc": "Industrial pollution, vehicle emissions, agricultural ammonia, methane from landfills and livestock — the sources are varied and the effects are cumulative. Seven million people die from air pollution annually according to the WHO — more than from AIDS, tuberculosis, and malaria combined. The distribution of that death toll is not random. It follows the geography of poverty and the political powerlessness that goes with it.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "c_env_air_industrial",
+                    "label": "Industrial Pollution",
+                    "color": "#5a7a50",
+                    "desc": "The communities that live near petrochemical plants, steel mills, coal-fired power plants, and industrial agriculture operations bear the direct health costs of production that benefits people who live nowhere near them. Cancer Alley in Louisiana — an 85-mile stretch of the Mississippi River between Baton Rouge and New Orleans lined with petrochemical facilities — has cancer rates among the highest in the nation. The residents are overwhelmingly Black and poor. The facilities are overwhelmingly profitable.",
+                    "links": [
+                      {
+                        "label": "ProPublica — pollution mapping",
+                        "url": "https://www.propublica.org",
+                        "emoji": "📰"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_air_export",
+                    "label": "Pollution Export",
+                    "color": "#4a6a40",
+                    "desc": "Wealthy nations have not eliminated pollution. They have moved it. Manufacturing offshored to countries with weaker environmental regulations means that the goods consumed in the United States and Europe are produced in conditions that would be illegal at home. Electronic waste — toxic, valuable, and difficult to process safely — is shipped to Ghana, Nigeria, and China where informal workers dismantle it by hand and breathe the results. The pollution is real. It just happens somewhere the consumer doesn't see it.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p2_trade",
+                        "label": "Trade",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p4",
+                        "label": "Global Capital",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_air_fire",
+                "label": "Wildfires",
+                "color": "#c86030",
+                "desc": "Fire is not new. But the fire seasons of the 21st century are not the fire seasons of the 20th. They are longer, more intense, burning in places that rarely burned before, and producing smoke that crosses continents. The 2020 Australian fires burned 46 million acres — an area larger than Syria — and the smoke circled the globe, measurably affecting air quality in South America. California's annual fire season now runs nearly year-round. The forests are drier, the ignition points more frequent, and the communities in the path more numerous. Wildfire is climate change made visible.",
+                "links": [
+                  {
+                    "label": "NASA — fire data",
+                    "url": "https://firms.modaps.eosdis.nasa.gov",
+                    "emoji": "🔭"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c_env_climate",
+                    "label": "Climate",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "c_env_air_justice",
+                "label": "Environmental Justice",
+                "color": "#7aaa68",
+                "desc": "The geography of pollution is the geography of power. Freeways were routed through Black neighborhoods not because of traffic planning but because of who had the political power to say no. Refineries, power plants, and chemical facilities are sited in low-income communities and communities of color at rates that cannot be explained by land cost alone. Environmental justice holds that the right to clean air and water is not a middle-class amenity. It is a civil right. The data agrees.",
+                "links": [
+                  {
+                    "label": "EPA — environmental justice",
+                    "url": "https://www.epa.gov/environmentaljustice",
+                    "emoji": "⚖️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_rc",
+                    "label": "Race & Ethnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "f_class",
+                    "label": "Class",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "c_env_movement",
+            "label": "The Movement",
+            "color": "#4aaa60",
+            "desc": "Environmentalism is not one thing. It is a century of arguments about what the natural world is for, who it belongs to, and what humans owe it. Those arguments have produced some of the most consequential legislation in American history and some of the most effective corporate greenwashing. The movement is currently in its most urgent and most contested chapter.",
+            "links": [
+              {
+                "label": "EarthDay.org",
+                "url": "https://www.earthday.org",
+                "emoji": "🌍"
+              },
+              {
+                "label": "NRDC — environmental history",
+                "url": "https://www.nrdc.org",
+                "emoji": "🌿"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "c_env_move_conserve",
+                "label": "Conservation",
+                "color": "#3a9a50",
+                "desc": "The original American environmentalism — John Muir, Theodore Roosevelt, the national parks. The idea that wilderness has value independent of its economic utility and that some places should be protected from development permanently. Conservation produced the National Park System, the Wilderness Act, the Endangered Species Act. It also produced a movement that was predominantly white, that sometimes displaced indigenous communities from the lands it sought to protect, and that had to be expanded — by the environmental justice movement — to include the places where people actually live.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_move_earthday",
+                "label": "Earth Day",
+                "color": "#4aaa58",
+                "desc": "April 22, 1970. Senator Gaylord Nelson, activist Denis Hayes, 20 million Americans in the streets. The largest civic demonstration in US history at that point — larger than any Vietnam protest — and entirely focused on the environment. Within two years the Clean Air Act, Clean Water Act, and EPA were created. Earth Day is proof that coordinated civic pressure produces policy. It now mobilizes a billion people in 193 countries annually. The theme for 2026: Our Power, Our Planet.",
+                "links": [
+                  {
+                    "label": "EarthDay.org",
+                    "url": "https://www.earthday.org",
+                    "emoji": "🌍"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_move_justice",
+                "label": "Climate Justice Movement",
+                "color": "#5aba68",
+                "desc": "The new generation of environmentalism — Sunrise Movement, Fridays for Future, the Standing Rock water protectors. Younger, more diverse, and explicitly connecting climate to economic and racial justice. The argument: you cannot solve climate change without addressing the systems of extraction and exploitation that caused it, and you cannot address those systems without centering the communities most harmed by them. Climate is not a single issue. It is the place where all the other issues converge.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_move_capture",
+                "label": "Where It Got Captured",
+                "color": "#2a8a40",
+                "desc": "Greenwashing is the practice of appearing environmentally responsible without being environmentally responsible. It ranges from minor — a plastic bottle with a leaf on it — to systemic — oil companies running advertising campaigns about their clean energy investments while lobbying against clean energy policy. The environmental movement has also been captured by its own success: environmental impact review processes designed to stop bad projects are now routinely used to stop good ones. The tools built for protection can be turned against progress.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_move_indigenous",
+                "label": "Indigenous Stewardship",
+                "color": "#8a9a40",
+                "desc": "The oldest environmental knowledge on earth belongs to the people who have lived with the land the longest. Indigenous land management practices — controlled burns, rotational use, sacred site protection, watershed stewardship — maintained ecological balance for thousands of years before European contact. Much of what environmentalism is now trying to reconstruct, indigenous communities never abandoned. Their dispossession was not only a human rights catastrophe. It was an ecological one.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "x5_indigenous",
+                    "label": "Indigenous & Animist",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_americas",
+                    "label": "The Americas",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "c_env_ourpower",
+            "label": "Our Power, Our Planet",
+            "color": "#5aba70",
+            "desc": "The theme of Earth Day 2026 — and the actual answer. Environmental progress does not depend on any single administration or election. It is sustained by the daily actions of communities, educators, workers, and families protecting where they live and work. Every movement that has ever changed the physical conditions of human life started with people deciding that the way things were was not the way things had to be. This is still that moment.",
+            "links": [
+              {
+                "label": "EarthDay.org — take action",
+                "url": "https://www.earthday.org",
+                "emoji": "🌍"
+              },
+              {
+                "label": "TurboVote — vote on environment",
+                "url": "https://turbovote.org",
+                "emoji": "🗳️"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "c_env_op_community",
+                "label": "Community Action",
+                "color": "#4aaa60",
+                "desc": "The scale of the problem does not mean individual and community action is irrelevant. It means it is necessary but not sufficient. Community cleanups, local policy advocacy, mutual aid, urban gardens, community solar — these are not symbolic gestures. They are the building blocks of the political will that produces the systemic change. You organize locally because that is where organizing is possible. You build nationally because that is where the policy lives.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_op_policy",
+                "label": "Policy & The Vote",
+                "color": "#3a9a50",
+                "desc": "The most powerful environmental action an individual can take is to vote — in every election, at every level. Local elections determine land use, zoning, and utility regulation. State elections determine energy policy and environmental enforcement. Federal elections determine everything else. The fossil fuel industry knows this, which is why it spends so much money on all three levels. The vote is the lever. The question is who shows up to pull it.",
+                "links": [
+                  {
+                    "label": "TurboVote",
+                    "url": "https://turbovote.org",
+                    "emoji": "🗳️"
+                  },
+                  {
+                    "label": "Ballotpedia — environmental candidates",
+                    "url": "https://ballotpedia.org",
+                    "emoji": "🏛️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_op_individual",
+                "label": "Individual Action",
+                "color": "#5aba68",
+                "desc": "Individual action matters. It also does not matter as much as the fossil fuel industry wants you to think it does. The concept of the personal carbon footprint was popularized by a BP advertising campaign in 2004 — a deliberate strategy to shift responsibility from producers to consumers. Recycling, diet, flying less — these are real and worth doing. They are also insufficient without systemic change. Both things are true simultaneously. Do what you can. Demand more than that.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_op_25pct",
+                "label": "The 25% Rule",
+                "color": "#6aca78",
+                "desc": "Research on social change suggests that when roughly 25% of a population commits to a norm, it tends to tip — becoming the new default for the whole group. This has been observed in corporate culture, in social movements, in public health behavior. The environmental movement does not need to convert everyone. It needs committed minorities large enough to change markets, shift norms, and make environmental responsibility politically unavoidable. That threshold is closer than it looks.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "pol_tp5",
+                "label": "The Ballot",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "com_tp3",
+                "label": "The Commons",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          }
+        ],
         "bottomPills": []
       },
       {
