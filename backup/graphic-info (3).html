@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Graphic Images — USNow</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#040810}::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes orbGlow{0%,100%{box-shadow:0 0 18px var(--gc,#1a5a8a55),0 0 40px var(--gc,#1a5a8a22),inset 0 0 14px rgba(0,0,0,0.45)}50%{box-shadow:0 0 34px var(--gc,#1a5a8a99),0 0 70px var(--gc,#1a5a8a44),inset 0 0 22px rgba(0,0,0,0.35)}}
+@keyframes pillFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes pillGlow{0%,100%{box-shadow:0 0 10px var(--pg,#44),0 0 24px var(--pg,#22)}50%{box-shadow:0 0 20px var(--pg,#88),0 0 42px var(--pg,#44)}}
+@keyframes corruptPulse{0%,100%{box-shadow:0 0 18px #d4621a99,0 0 40px #d4621a44}50%{box-shadow:0 0 36px #d4621aee,0 0 80px #d4621a88}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:0.7}50%{opacity:0.2}}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,90,138,0.4);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:50px;}
+.nav-logo{display:flex;flex-direction:column;gap:1px;text-decoration:none;}
+.nav-logo-row{display:flex;align-items:center;gap:8px;}
+.us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-tagline{font-size:7px;letter-spacing:0.12em;color:rgba(201,168,76,0.4);font-family:'Courier New',monospace;}
+.nav-back{font-size:9px;letter-spacing:0.22em;color:#4a90c8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;border:1px solid rgba(26,90,138,0.4);padding:5px 14px;border-radius:14px;}
+.nav-back:hover{opacity:1;color:#7ab8e8;border-color:#4a90c8;}
+.page-header{padding:76px 24px 28px;text-align:center;position:relative;}
+.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(26,90,138,0.12) 0%,transparent 70%);pointer-events:none;}
+.moon-name{font-size:9px;letter-spacing:0.55em;color:#1a6a9a;font-family:'Courier New',monospace;margin-bottom:10px;}
+.page-title{font-size:clamp(24px,4vw,42px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.25;margin:0 0 10px;}
+.page-title em{color:#4a9ad4;font-style:normal;}
+.page-sub{font-size:13px;color:#3a5a78;font-family:'Courier New',monospace;letter-spacing:0.08em;margin:0 auto;max-width:500px;line-height:1.7;}
+.pills-row{max-width:820px;margin:0 auto;padding:22px 24px 6px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px 20px;}
+.pill-wrap{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;animation:fadeUp 0.5s ease both;}
+.pill-sphere{border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;animation:pillFloat 3.6s ease-in-out infinite,pillGlow 3.6s ease-in-out infinite;text-decoration:none;}
+.pill-sphere:hover{transform:scale(1.13) translateY(-3px);}
+.pill-name{font-size:8px;letter-spacing:0.16em;font-family:'Courier New',monospace;font-weight:700;text-align:center;}
+.section-rule{width:50px;height:1px;background:linear-gradient(90deg,transparent,rgba(26,90,138,0.35),transparent);margin:18px auto 4px;}
+.orbs-field{max-width:900px;margin:0 auto;padding:14px 24px 52px;display:flex;flex-wrap:wrap;justify-content:center;gap:36px 28px;align-items:flex-end;}
+.orb-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;animation:fadeUp 0.6s ease both;}
+.orb-sphere{border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;text-decoration:none;position:relative;transition:transform 0.22s ease;animation:float 4s ease-in-out infinite,orbGlow 4s ease-in-out infinite;}
+.orb-sphere:hover{transform:scale(1.1) translateY(-4px);}
+.orb-name{font-size:9px;letter-spacing:0.18em;color:#4a90c8;font-family:'Courier New',monospace;text-align:center;font-weight:700;}
+.orb-desc{font-size:10px;color:#3a5a7a;font-family:'Courier New',monospace;text-align:center;margin-top:3px;letter-spacing:0.06em;max-width:120px;line-height:1.5;}
+.coming-wrap{opacity:0.4;}
+.coming-wrap .orb-sphere{cursor:default;animation:none;}
+.coming-wrap .orb-sphere:hover{transform:none;}
+.bottom-pills-row{max-width:820px;margin:0 auto;padding:0 24px 60px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px 20px;}
+footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,122,0.2);text-align:center;}
+footer a{font-size:9px;color:#2a4a6a;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;margin:0 10px;}
+footer a:hover{color:#4a90c8;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPZHKNB3E9');
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-row"><span class="us">US</span><span class="now">NOW</span></div>
+    <span class="nav-tagline">THE QUESTION IS THE ANSWER.</span>
+  </a>
+  <a href="index.html" class="nav-back">← BACK TO SCALE</a>
+</nav>
+
+<div class="page-header">
+  <div class="moon-name">GRAPHIC IMAGES</div>
+  <h1 class="page-title">The data is the <em>argument.</em></h1>
+  <p class="page-sub">Each infographic below is a question made visible. Tap any orb to explore the graphic.</p>
+</div>
+
+<div class="pills-row" id="top-pills"></div>
+<div class="section-rule"></div>
+<div class="orbs-field" id="orbs-field"></div>
+<div class="bottom-pills-row" id="bottom-pills"></div>
+
+<footer>
+  <a href="index.html">← USNow Home</a>
+  <a href="gallery.html">The Gallery</a>
+  <a href="journal.html">The Journal →</a>
+</footer>
+
+<script>
+function sphereGrad(c){
+  const h=c.replace('#','');const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+  const li=(v,a)=>Math.min(255,Math.round(v+a));const dk=(v,a)=>Math.max(0,Math.round(v-a));
+  return `radial-gradient(circle at 30% 68%,rgba(255,255,255,0.76) 0%,rgba(255,255,255,0.76) 4%,rgba(${li(r,70)},${li(g,70)},${li(b,53)},0.90) 12%,rgba(${r},${g},${b},1) 38%,rgba(${dk(r,60)},${dk(g,60)},${dk(b,50)},1) 68%,rgba(${dk(r,90)},${dk(g,90)},${dk(b,80)},1) 88%,rgba(${li(r,40)},${li(g,40)},${li(b,50)},0.5) 100%)`;
+}
+function sphereBorder(c){
+  const h=c.replace('#','');const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+  return `rgba(${Math.min(255,r+60)},${Math.min(255,g+60)},${Math.min(255,b+50)},0.7)`;
+}
+function lightenHex(c,a){
+  const h=c.replace('#','');const R=parseInt(h.slice(0,2),16),G=parseInt(h.slice(2,4),16),B=parseInt(h.slice(4,6),16);
+  const m=v=>Math.min(255,Math.round(v+(255-v)*a));const t=v=>v.toString(16).padStart(2,'0');
+  return '#'+t(m(R))+t(m(G))+t(m(B));
+}
+function buildPill(p,container){
+  const sz=52;const lc=lightenHex(p.color,0.5);
+  const wrap=document.createElement('div');wrap.className='pill-wrap';wrap.style.animationDelay=(p.delay||0)+'s';
+  const el=document.createElement(p.url?'a':'div');el.className='pill-sphere';
+  if(p.url){el.href=p.url;el.target=p.url.startsWith('http')?'_blank':'_self';el.rel='noreferrer';el.style.textDecoration='none';}
+  el.style.cssText=`width:${sz}px;height:${sz}px;background:${sphereGrad(p.color)};border:1.5px solid ${sphereBorder(p.color)};--pg:${p.color}66;animation-delay:${p.delay||0}s,${p.delay||0}s;`;
+  el.innerHTML=`<span style="font-size:7px;letter-spacing:0.08em;color:${lc};font-family:'Georgia','Times New Roman',serif;font-weight:700;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 0 8px rgba(0,0,0,1),0 1px 6px rgba(0,0,0,1),0 2px 4px rgba(0,0,0,1);">${p.label.replace(' ','<br>')}</span>`;
+  const nm=document.createElement('div');nm.className='pill-name';nm.style.color=lc;nm.textContent=p.sub||'EXPLORE →';
+  wrap.appendChild(el);wrap.appendChild(nm);container.appendChild(wrap);
+}
+
+const TOP_PILLS=[
+  {label:"Power & Money",color:"#1a5a8a",delay:0},
+  {label:"Military & War",color:"#4a3a8a",delay:0.1},
+  {label:"Policy & Aid",color:"#1a6a5a",delay:0.2},
+  {label:"Coming Soon",color:"#1a2a3a",sub:"COMING SOON",delay:0.3},
+];
+const topEl=document.getElementById('top-pills');
+TOP_PILLS.forEach(p=>buildPill(p,topEl));
+
+const INFOGRAPHICS=[
+  {name:"Who Rules\nthe World",desc:"Power pyramid · 6 tiers",url:"https://www.usnow.app/graphics/who-rules-the-world",color:"#1a5a8a",size:118,delay:0},
+  {name:"Corruption\nTracker",desc:"Follow the money · names & records",url:"https://www.usnow.app/graphics/corruption_tracker.html",color:"#8a2a10",size:110,delay:0.1,corrupt:true},
+  {name:"Hidden Costs\nof Defense",desc:"$886B · what it could buy",url:"https://www.usnow.app/graphics/hidden-costs",color:"#1a4a7a",size:112,delay:0.2},
+  {name:"Israel Aid\nTimeline",desc:"$330B since 1948 · 55 years",url:"https://www.usnow.app/graphics/israel-aid-timeline",color:"#1a3a6a",size:104,delay:0.3},
+  {name:"750 Bases\nWorldwide",desc:"80 countries · mapped",url:"https://www.usnow.app/graphics/750-bases",color:"#1a4a8a",size:110,delay:0.4},
+  {name:"Coming\nSoon",desc:"Federal budget · deep dive",url:null,color:"#0e2030",size:82,delay:0.5,soon:true},
+  {name:"Coming\nSoon",desc:"AI & democracy · data",url:null,color:"#0e2030",size:74,delay:0.6,soon:true},
+];
+
+const field=document.getElementById('orbs-field');
+INFOGRAPHICS.forEach(g=>{
+  const wrap=document.createElement('div');
+  wrap.className='orb-wrap'+(g.soon?' coming-wrap':'');
+  wrap.style.animationDelay=g.delay+'s';
+  const lc=lightenHex(g.color,0.45);
+  const tag=g.url?'a':'div';
+  const sphere=document.createElement(tag);
+  sphere.className='orb-sphere';
+  if(g.url){sphere.href=g.url;sphere.target='_blank';sphere.rel='noreferrer';}
+  sphere.style.cssText=`width:${g.size}px;height:${g.size}px;background:${sphereGrad(g.color)};border:1.5px solid ${sphereBorder(g.color)};--gc:${g.color}66;animation-delay:${g.delay}s,${g.delay}s;${g.soon?'cursor:default;animation:none;':''}`;
+  if(g.corrupt){sphere.style.animation='float 4s ease-in-out infinite';sphere.style.boxShadow='0 0 30px #d4621a66,0 0 60px #d4621a33,inset 0 0 20px rgba(255,150,80,0.06)';}
+  sphere.innerHTML=`<div style="font-size:${Math.max(9,g.size*0.1)}px;font-weight:700;letter-spacing:0.1em;color:${g.soon?'rgba(80,120,160,0.4)':lc};text-align:center;line-height:1.3;padding:8px;text-shadow:0 1px 8px rgba(0,0,0,0.9);font-family:'Courier New',monospace;">${g.name.replace('\n','<br>')}</div>`;
+  const nameEl=document.createElement('div');nameEl.className='orb-name';nameEl.style.color=g.soon?'#1a3a5a':lc;nameEl.textContent=g.soon?'COMING SOON':'EXPLORE →';
+  const descEl=document.createElement('div');descEl.className='orb-desc';descEl.textContent=g.desc;
+  wrap.appendChild(sphere);wrap.appendChild(nameEl);wrap.appendChild(descEl);field.appendChild(wrap);
+});
+
+// BOTTOM PILLS — ready for future content
+const BOTTOM_PILLS=[];
+</script>
+</body>
+</html>

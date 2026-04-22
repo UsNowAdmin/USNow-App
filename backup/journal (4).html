@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Journal — USNow</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#040810}::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes orbGlow{0%,100%{box-shadow:0 0 22px var(--gc,#1a4a7a55),0 0 48px var(--gc,#1a4a7a22),inset 0 0 16px rgba(0,0,0,0.4)}50%{box-shadow:0 0 40px var(--gc,#1a4a7a99),0 0 80px var(--gc,#1a4a7a44),inset 0 0 26px rgba(0,0,0,0.3)}}
+@keyframes pillFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes pillGlow{0%,100%{box-shadow:0 0 10px var(--pg,#44),0 0 24px var(--pg,#22)}50%{box-shadow:0 0 20px var(--pg,#88),0 0 42px var(--pg,#44)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:0.7}50%{opacity:0.2}}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(4,8,15,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,74,122,0.4);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:50px;}
+.nav-logo{display:flex;flex-direction:column;gap:1px;text-decoration:none;}
+.nav-logo-row{display:flex;align-items:center;gap:8px;}
+.us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
+.now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.65;}
+.nav-tagline{font-size:7px;letter-spacing:0.12em;color:rgba(201,168,76,0.4);font-family:'Courier New',monospace;}
+.nav-back{font-size:9px;letter-spacing:0.22em;color:#4a80b8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.7;transition:all 0.2s;border:1px solid rgba(26,74,122,0.4);padding:5px 14px;border-radius:14px;}
+.nav-back:hover{opacity:1;border-color:#4a80b8;}
+.page-header{padding:76px 24px 28px;text-align:center;position:relative;}
+.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(26,74,122,0.1) 0%,transparent 65%);pointer-events:none;}
+.moon-name{font-size:9px;letter-spacing:0.55em;color:#1a5a8a;font-family:'Courier New',monospace;margin-bottom:10px;}
+.page-title{font-size:clamp(24px,4vw,42px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.25;margin:0 0 10px;}
+.page-title em{color:#3a80c8;font-style:normal;}
+.page-sub{font-size:13px;color:#3a5a78;font-family:'Georgia',serif;line-height:1.8;margin:0 auto;max-width:540px;}
+.pills-row{max-width:820px;margin:0 auto;padding:22px 24px 6px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px 20px;}
+.pill-wrap{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;animation:fadeUp 0.5s ease both;}
+.pill-sphere{border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform 0.2s;animation:pillFloat 3.6s ease-in-out infinite,pillGlow 3.6s ease-in-out infinite;text-decoration:none;}
+.pill-sphere:hover{transform:scale(1.13) translateY(-3px);}
+.pill-name{font-size:8px;letter-spacing:0.16em;font-family:'Courier New',monospace;font-weight:700;text-align:center;}
+.section-rule{width:50px;height:1px;background:linear-gradient(90deg,transparent,rgba(26,74,122,0.35),transparent);margin:18px auto 4px;}
+.orbs-field{max-width:960px;margin:0 auto;padding:14px 24px 52px;display:flex;flex-wrap:wrap;justify-content:center;gap:36px 28px;align-items:flex-end;}
+.orb-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;animation:fadeUp 0.6s ease both;}
+.orb-sphere{border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;transition:transform 0.22s ease;animation:float 4.2s ease-in-out infinite,orbGlow 4.2s ease-in-out infinite;text-decoration:none;}
+.orb-sphere:hover{transform:scale(1.09) translateY(-5px);}
+.orb-tag{font-size:8px;letter-spacing:0.28em;font-family:'Courier New',monospace;font-weight:700;text-align:center;margin-bottom:2px;}
+.orb-name{font-size:9px;letter-spacing:0.15em;font-family:'Courier New',monospace;font-weight:700;text-align:center;}
+.orb-desc{font-size:10px;color:#2a4a68;font-family:'Georgia',serif;text-align:center;max-width:130px;line-height:1.5;font-style:italic;margin-top:2px;}
+.coming-wrap{opacity:0.38;}
+.coming-wrap .orb-sphere{cursor:default;animation:none;}
+.coming-wrap .orb-sphere:hover{transform:none;}
+/* BOTTOM PILLS — social links */
+.bottom-section{max-width:820px;margin:0 auto;padding:8px 24px 20px;text-align:center;}
+.bottom-label{font-size:9px;letter-spacing:0.35em;color:rgba(74,120,170,0.4);font-family:'Courier New',monospace;margin-bottom:18px;}
+.bottom-pills-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 18px;}
+footer{background:#020508;padding:28px 22px;border-top:1px solid rgba(26,74,122,0.2);text-align:center;}
+footer a{font-size:9px;color:#1a3a5a;font-family:'Courier New',monospace;letter-spacing:0.14em;text-decoration:none;transition:color 0.2s;margin:0 10px;}
+footer a:hover{color:#4a80b8;}
+</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPZHKNB3E9');
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-row"><span class="us">US</span><span class="now">NOW</span></div>
+    <span class="nav-tagline">THE QUESTION IS THE ANSWER.</span>
+  </a>
+  <a href="index.html" class="nav-back">← BACK TO SCALE</a>
+</nav>
+
+<div class="page-header">
+  <div class="moon-name">THE JOURNAL</div>
+  <h1 class="page-title">Where data becomes <em>narrative.</em></h1>
+  <p class="page-sub">Satire, essays, investigations, and dispatches written at the intersection of civic data and lived experience. Tap any orb to read.</p>
+</div>
+
+<!-- TOP PILLS — content categories -->
+<div class="pills-row" id="top-pills"></div>
+<div class="section-rule"></div>
+
+<!-- MAIN JOURNAL ORBS -->
+<div class="orbs-field" id="orbs-field"></div>
+
+<!-- BOTTOM PILLS — social & external platforms -->
+<div class="bottom-section">
+  <div class="bottom-label">FOLLOW · READ · CONNECT</div>
+  <div class="bottom-pills-row" id="bottom-pills"></div>
+</div>
+
+<footer>
+  <a href="graphic-info.html">← Graphic Images</a>
+  <a href="gallery.html">The Gallery</a>
+  <a href="index.html">USNow Home</a>
+</footer>
+
+<script>
+function sphereGrad(c){
+  const h=c.replace('#','');const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+  const li=(v,a)=>Math.min(255,Math.round(v+a));const dk=(v,a)=>Math.max(0,Math.round(v-a));
+  return `radial-gradient(circle at 30% 68%,rgba(255,255,255,0.76) 0%,rgba(255,255,255,0.76) 4%,rgba(${li(r,70)},${li(g,70)},${li(b,53)},0.90) 12%,rgba(${r},${g},${b},1) 38%,rgba(${dk(r,60)},${dk(g,60)},${dk(b,50)},1) 68%,rgba(${dk(r,90)},${dk(g,90)},${dk(b,80)},1) 88%,rgba(${li(r,40)},${li(g,40)},${li(b,50)},0.5) 100%)`;
+}
+function sphereBorder(c){
+  const h=c.replace('#','');const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+  return `rgba(${Math.min(255,r+60)},${Math.min(255,g+60)},${Math.min(255,b+50)},0.7)`;
+}
+function lightenHex(c,a){
+  const h=c.replace('#','');const R=parseInt(h.slice(0,2),16),G=parseInt(h.slice(2,4),16),B=parseInt(h.slice(4,6),16);
+  const m=v=>Math.min(255,Math.round(v+(255-v)*a));const t=v=>v.toString(16).padStart(2,'0');
+  return '#'+t(m(R))+t(m(G))+t(m(B));
+}
+function buildPill(p,container){
+  const sz=52;const lc=lightenHex(p.color,0.5);
+  const wrap=document.createElement('div');wrap.className='pill-wrap';wrap.style.animationDelay=(p.delay||0)+'s';
+  const el=document.createElement(p.url?'a':'div');el.className='pill-sphere';
+  if(p.url){el.href=p.url;el.target=p.url.startsWith('http')?'_blank':'_self';el.rel='noreferrer';el.style.textDecoration='none';}
+  el.style.cssText=`width:${sz}px;height:${sz}px;background:${sphereGrad(p.color)};border:1.5px solid ${sphereBorder(p.color)};--pg:${p.color}66;animation-delay:${p.delay||0}s,${p.delay||0}s;`;
+  el.innerHTML=`<span style="font-size:7px;letter-spacing:0.08em;color:${lc};font-family:'Georgia','Times New Roman',serif;font-weight:700;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 0 8px rgba(0,0,0,1),0 1px 6px rgba(0,0,0,1),0 2px 4px rgba(0,0,0,1);">${p.label.replace(' ','<br>')}</span>`;
+  const nm=document.createElement('div');nm.className='pill-name';nm.style.color=lc;nm.textContent=p.sub||'EXPLORE →';
+  wrap.appendChild(el);wrap.appendChild(nm);container.appendChild(wrap);
+}
+
+// TOP PILLS — content type categories
+const TOP_PILLS=[
+  {label:"Original Work",color:"#1a4a8a",delay:0},
+  {label:"Substack",color:"#1a6a4a",url:"https://atjon.substack.com",sub:"READ →",delay:0.1},
+  {label:"Other Publications",color:"#5a3a7a",sub:"COMING SOON",delay:0.2},
+  {label:"RateMyRep",color:"#7a4a1a",url:"https://www.ratemyrep.app",sub:"VISIT →",delay:0.3},
+];
+const topEl=document.getElementById('top-pills');
+TOP_PILLS.forEach(p=>buildPill(p,topEl));
+
+// COMBINED JOURNAL + SUBSTACK entries (deduplicated)
+const PIECES=[
+  {
+    name:"The Apprentice:\nWashington Edition",
+    tag:"FEATURED SERIES",
+    desc:"Michael Cohen narrates. Reality TV reunion format. Twelve sections.",
+    url:"https://www.usnow.app/apprentice/index.html",
+    color:"#1a3a6a",size:140,delay:0
+  },
+  {
+    name:"Who Rules\nthe World",
+    tag:"GRAPHIC ESSAY",
+    desc:"Power pyramid — six tiers of control made visible.",
+    url:"https://www.usnow.app/graphics/who-rules-the-world",
+    color:"#1a4a7a",size:116,delay:0.1
+  },
+  {
+    name:"America's\nIndigenous Sin",
+    tag:"ESSAY",
+    desc:"On the debt that doesn't appear in any budget.",
+    url:"https://open.substack.com/pub/atjon27/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
+    color:"#1a3060",size:110,delay:0.2
+  },
+  {
+    name:"The 80% Has\nNo Lobby",
+    tag:"ESSAY",
+    desc:"Information asymmetry is the core democratic problem.",
+    url:"https://atjon.substack.com",
+    color:"#142850",size:106,delay:0.3
+  },
+  {
+    name:"AGI Isn't a Mind.\nIt's a Condition.",
+    tag:"ESSAY",
+    desc:"What artificial general intelligence actually means.",
+    url:"https://atjon.substack.com",
+    color:"#101e40",size:102,delay:0.4
+  },
+  {
+    name:"The Voter Who\nJust Wants to Ask",
+    tag:"ESSAY",
+    desc:"On what civic engagement actually requires.",
+    url:"https://atjon.substack.com",
+    color:"#0e1c40",size:98,delay:0.5
+  },
+  {
+    name:"All Writing\non Substack",
+    tag:"ARCHIVE →",
+    desc:"atjon.substack.com — full archive",
+    url:"https://atjon.substack.com",
+    color:"#0e1a38",size:90,delay:0.6
+  },
+  {name:"Coming\nSoon",tag:"COMING SOON",desc:"New series in progress",url:null,color:"#080e1a",size:78,delay:0.7,soon:true},
+  {name:"Coming\nSoon",tag:"",desc:"",url:null,color:"#080e1a",size:68,delay:0.8,soon:true},
+];
+
+const field=document.getElementById('orbs-field');
+PIECES.forEach(p=>{
+  const lc=lightenHex(p.color,0.45);
+  const wrap=document.createElement('div');
+  wrap.className='orb-wrap'+(p.soon?' coming-wrap':'');
+  wrap.style.animationDelay=p.delay+'s';
+  const tag=p.url?'a':'div';
+  const sphere=document.createElement(tag);
+  sphere.className='orb-sphere';
+  if(p.url){sphere.href=p.url;sphere.target='_blank';sphere.rel='noreferrer';}
+  sphere.style.cssText=`width:${p.size}px;height:${p.size}px;background:${sphereGrad(p.color)};border:1.5px solid ${sphereBorder(p.color)};--gc:${p.color}55;animation-delay:${p.delay}s,${p.delay}s;cursor:${p.url?'pointer':'default'};`;
+  sphere.innerHTML=`<div style="font-size:${Math.max(8,p.size*0.092)}px;font-weight:700;letter-spacing:0.1em;color:${p.soon?'rgba(50,80,120,0.4)':lc};text-align:center;line-height:1.3;padding:8px;text-shadow:0 1px 8px rgba(0,0,0,0.95);font-family:'Courier New',monospace;">${p.name.replace('\n','<br>')}</div>`;
+  const tagEl=document.createElement('div');tagEl.className='orb-tag';tagEl.style.color=p.soon?'#1a2a40':lc;tagEl.textContent=p.tag;
+  const nameEl=document.createElement('div');nameEl.className='orb-name';nameEl.style.color=p.soon?'#1a2a40':lc;nameEl.textContent=p.soon?'COMING SOON':'READ →';
+  const descEl=document.createElement('div');descEl.className='orb-desc';descEl.textContent=p.desc;
+  wrap.appendChild(sphere);
+  if(p.tag)wrap.appendChild(tagEl);
+  wrap.appendChild(nameEl);
+  if(p.desc)wrap.appendChild(descEl);
+  field.appendChild(wrap);
+});
+
+// BOTTOM PILLS — social platforms (moved from gallery social strip)
+const BOTTOM_PILLS=[
+  {label:"X · ATJon27",color:"#1a2a3a",url:"https://x.com/ATJon27",sub:"FOLLOW →",delay:0},
+  {label:"Substack",color:"#1a2a2a",url:"https://atjon.substack.com",sub:"SUBSCRIBE →",delay:0.1},
+  {label:"YouTube",color:"#2a1a1a",url:"https://www.youtube.com/@AtJon27",sub:"WATCH →",delay:0.2},
+  {label:"TikTok",color:"#1a1a2a",url:"https://www.tiktok.com/@USNow.app",sub:"FOLLOW →",delay:0.3},
+  {label:"RateMyRep",color:"#1a2a1a",url:"https://www.ratemyrep.app",sub:"VISIT →",delay:0.4},
+];
+const botEl=document.getElementById('bottom-pills');
+BOTTOM_PILLS.forEach(p=>buildPill(p,botEl));
+</script>
+</body>
+</html>
