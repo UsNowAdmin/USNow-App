@@ -1735,26 +1735,6 @@ const LAYERS = [
                 "links": [],
                 "topPills": [
                   {
-                    "id": "p_party_system",
-                    "label": "What is a Party?",
-                    "color": "#8a3838",
-                    "desc": "The United States has had two dominant parties for most of its history — not because two parties is the natural state of democracy, but because the system was built that way. Winner-take-all elections, ballot access laws, and the Electoral College all conspire to crush third parties before they scale. The names have changed. The Federalists became Whigs became Republicans. The Democratic-Republicans became Democrats. The positions have flipped more than once — the party of Lincoln and the party of Jefferson have traded ideological DNA across centuries. What hasn't changed is the binary. Two tents. Everyone inside arguing about who belongs.",
-                    "links": [
-                      {
-                        "label": "Ballotpedia — party history",
-                        "url": "https://ballotpedia.org",
-                        "emoji": "🏛️"
-                      },
-                      {
-                        "label": "Pew Research — political polarization",
-                        "url": "https://www.pewresearch.org",
-                        "emoji": "📊"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
                     "id": "p_the_left",
                     "label": "The Left",
                     "color": "#3858a8",
@@ -1972,6 +1952,52 @@ const LAYERS = [
                     "bottomPills": []
                   },
                   {
+                    "id": "p_party_system",
+                    "label": "What Is A Party?",
+                    "color": "#8a3838",
+                    "desc": "The United States has had two dominant parties for most of its history — not because two parties is the natural state of democracy, but because the system was built that way. Winner-take-all elections, ballot access laws, and the Electoral College all conspire to crush third parties before they scale. The names have changed. The Federalists became Whigs became Republicans. The Democratic-Republicans became Democrats. The positions have flipped more than once — the party of Lincoln and the party of Jefferson have traded ideological DNA across centuries. What hasn't changed is the binary. Two tents. Everyone inside arguing about who belongs.",
+                    "links": [
+                      {
+                        "label": "Ballotpedia — party history",
+                        "url": "https://ballotpedia.org",
+                        "emoji": "🏛️"
+                      },
+                      {
+                        "label": "Pew Research — political polarization",
+                        "url": "https://www.pewresearch.org",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_pride_patriotism",
+                    "label": "Pride & Patriotism",
+                    "color": "#7a3838",
+                    "desc": "Pride is not a partisan word. It never was. It belongs to every person who has ever felt something larger than themselves — a country, a community, a tradition, a people — and decided that thing was worth defending and worth improving. Patriotism is the love of what a place can be, not just what it has been. It makes demands. It expects better. It does not require an enemy. The conflation of pride with any single group — political, cultural, or otherwise — is the oldest trick in the book: shrink the word, shrink the tent, claim the flag. Pride is not theirs to own. It never was. It belongs to the 80% who want the same things and keep being told they don't.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_gov_cr",
+                        "label": "Civil Rights & Human Rights",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "p_gov_publicgood",
+                        "label": "The Public Good",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
                     "id": "p_nationalism",
                     "label": "Nationalism",
                     "color": "#8a2828",
@@ -2001,32 +2027,6 @@ const LAYERS = [
                       {
                         "id": "h1",
                         "label": "Nations & Empire",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      }
-                    ]
-                  },
-                  {
-                    "id": "p_pride_patriotism",
-                    "label": "Pride & Patriotism",
-                    "color": "#7a3838",
-                    "desc": "Pride is not a partisan word. It never was. It belongs to every person who has ever felt something larger than themselves — a country, a community, a tradition, a people — and decided that thing was worth defending and worth improving. Patriotism is the love of what a place can be, not just what it has been. It makes demands. It expects better. It does not require an enemy. The conflation of pride with any single group — political, cultural, or otherwise — is the oldest trick in the book: shrink the word, shrink the tent, claim the flag. Pride is not theirs to own. It never was. It belongs to the 80% who want the same things and keep being told they don't.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "p_gov_cr",
-                        "label": "Civil Rights & Human Rights",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      },
-                      {
-                        "id": "p_gov_publicgood",
-                        "label": "The Public Good",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -3595,3 +3595,5 @@ const LAYERS = [
     "bottomPills": []
   }
 ];
+
+const FOUNDATIONS=[{"id":"graphic-info","label":"GRAPHIC\nIMAGES","href":"graphic-info.html","color":"#7a1808","glow":"#c03010cc","border":"#e84020","grad":"radial-gradient(circle at 38% 28%, #ff7020 0%, #c03010 28%, #7a1808 58%, #3a0808 85%, #1a0404 100%)","offsetX":-315,"bottomPct":30,"size":88,"delay":0},{"id":"gallery","label":"THE\nGALLERY","href":"gallery.html","color":"#6a1828","glow":"#a02038cc","border":"#c84050","grad":"radial-gradient(circle at 38% 28%, #e05030 0%, #902030 30%, #5a1020 60%, #2a0810 85%, #100408 100%)","offsetX":-155,"bottomPct":32,"size":82,"delay":0.3},{"id":"journal","label":"THE\nJOURNAL","href":"journal.html","color":"#8a3010","glow":"#c04818cc","border":"#e06828","grad":"radial-gradient(circle at 38% 28%, #ff9040 0%, #c04818 28%, #8a3010 55%, #401808 82%, #180a04 100%)","offsetX":155,"bottomPct":28,"size":82,"delay":0.6},{"id":"glossary","label":"WORLD\nCOMPENDIUM","href":"compendium.html","color":"#5a1030","glow":"#901848cc","border":"#b83858","grad":"radial-gradient(circle at 38% 28%, #c04858 0%, #802038 28%, #5a1030 55%, #280818 82%, #100408 100%)","offsetX":315,"bottomPct":31,"size":88,"delay":0.9}];
