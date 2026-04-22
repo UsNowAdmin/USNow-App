@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World Compendium — USNow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/compendium.css"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPZHKNB3E9');
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="back-link" href="index.html">USNow</a>
+    <div class="site-name">USNow · The World Compendium</div>
+    <h1>The words we share<br>but don't <em>agree</em> on</h1>
+    <div class="subtitle">A living and growing glossary. Click any word. Suggest one anytime.</div>
+
+    <div class="suggest-form" id="suggest-form">
+      <input type="text" id="sg-word" placeholder="Word or phrase…" autocomplete="off" spellcheck="false" maxlength="60">
+      <input type="text" id="sg-def" placeholder="Your definition…" autocomplete="off" spellcheck="false" maxlength="280">
+      <button id="sg-send" onclick="submitSuggestion()">Submit</button>
+      <div class="sg-confirm" id="sg-confirm"></div>
+    </div>
+
+    <div class="entry-count" id="entry-count"></div>
+  </header>
+
+  <div class="controls">
+    <div class="search-row">
+      <input type="text" id="search" placeholder="Search words or definitions…" autocomplete="off" spellcheck="false">
+      <button class="clear-btn" onclick="clearAll()">Clear</button>
+    </div>
+    <div class="cat-row" id="cat-row"></div>
+    <div class="alpha-row" id="alpha-row"></div>
+  </div>
+
+  <div class="results-info" id="results-info"></div>
+  <div id="glossary-list"></div>
+  <div class="empty" id="empty-state">No words found — yet.</div>
+
+  <footer>
+    <div class="footer-text">Perspective · Focus · Scale · Trust</div>
+    <div class="footer-tagline">The question is the answer · The data is the argument</div>
+  </footer>
+
+</div>
+
+<script src="glories.js"></script>
+<script src="assets/js/compendium.js"></script>
+</body>
+</html>
