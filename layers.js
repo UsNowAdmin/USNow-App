@@ -1356,9 +1356,89 @@ const LAYERS = [
                   {
                     "id": "x5_americas",
                     "label": "The Americas",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
+                    "desc": "From the Lakota Sun Dance to the Aztec calendar to the Andean concept of Pachamama — earth as living mother — the indigenous spiritual traditions of the Americas represent thousands of distinct cultures and cosmologies. What they share is a relationship to the natural world as sacred and alive — not a resource to be extracted but a relative to be respected. These traditions survived colonization, suppression, forced conversion, and the deliberate destruction of language and ceremony. Many are being actively reclaimed today.",
+                    "links": [
+                      {
+                        "label": "National Museum of the American Indian",
+                        "url": "https://americanindian.si.edu",
+                        "emoji": "🏛️"
+                      },
+                      {
+                        "label": "Native Land Digital",
+                        "url": "https://native-land.ca",
+                        "emoji": "🗺️"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "x5_am_lakota",
+                        "label": "Lakota & Plains Spirituality",
+                        "color": "#7a9a50",
+                        "desc": "Mitákuye Oyásʼiŋ — all are related. The Lakota phrase that opens every ceremony names the foundational worldview: humans are not separate from or superior to the natural world. They are relatives of the buffalo, the eagle, the river, the stone. The Sun Dance, the sweat lodge, the vision quest — these are not quaint customs. They are technologies for maintaining the right relationship between the human community and the living world it depends on. The Black Hills are sacred not because a treaty said so but because the Lakota have known it for thousands of years.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "hist_fn_blackhills",
+                            "label": "The Black Hills & Fort Laramie",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "x5_am_pachamama",
+                        "label": "Pachamama & Andean Traditions",
+                        "color": "#8aaa40",
+                        "desc": "In the Andean tradition, Pachamama — Earth Mother — is not a metaphor. She is a living entity with rights, needs, and a relationship to the human communities that live within her. Several South American nations have incorporated the rights of nature into their constitutions — Ecuador in 2008, Bolivia in 2010. The legal recognition of a river or a mountain as having rights that can be defended in court is not mysticism. It is a different theory of legal personhood, one that indigenous traditions have practiced relationally for millennia before it appeared in law.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_am_meso",
+                        "label": "Aztec, Maya & Mesoamerican",
+                        "color": "#9a8040",
+                        "desc": "The Maya developed one of the most accurate calendar systems in human history, a sophisticated written language, advanced mathematics including the concept of zero, and cities that rivaled anything in the contemporary world. The Aztec built Tenochtitlan — a city of 200,000 people in the middle of a lake, connected by causeways, with a water supply system that impressed the Spanish who destroyed it. These were not primitive peoples in the path of civilization. They were civilizations, with all the complexity that implies.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_am_stewardship",
+                        "label": "Land as Relative, Not Resource",
+                        "color": "#6a8a30",
+                        "desc": "The distinction between indigenous and European relationships to land is not romantic. It is structural. European property law treats land as a commodity — something that can be owned, bought, sold, and extracted from. Most indigenous traditions treat land as a relative — something you belong to, are responsible for, and exist in relationship with. The ecological consequences of those two frameworks, applied at civilizational scale over centuries, are now visible in the state of the planet. The framework that treated land as a relative maintained ecological balance for thousands of years. The framework that treated it as a resource has produced the current crisis in about 250.",
+                        "links": [
+                          {
+                            "label": "Native Land Digital",
+                            "url": "https://native-land.ca",
+                            "emoji": "🗺️"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c_env_move_indigenous",
+                            "label": "Indigenous Stewardship",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "c_env_ourpower",
+                            "label": "Our Power, Our Planet",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      }
+                    ],
                     "bottomPills": []
                   }
                 ]
@@ -4676,6 +4756,297 @@ const LAYERS = [
         "links": [],
         "topPills": [],
         "bottomPills": []
+      },
+      {
+        "id": "hist_first_nations",
+        "label": "First Nations",
+        "color": "#8a6030",
+        "desc": "Not one people. Not one moment. Not one story. The indigenous nations of North America represented hundreds of distinct civilizations — different languages, different governments, different relationships to land, different cosmologies. What they shared was a continent. What happened to them was not a series of tragic accidents. It was a system, applied over centuries, with the explicit goal of removing them from the land and erasing them as peoples. That system has a history. It deserves to be told plainly.",
+        "links": [
+          {
+            "label": "National Museum of the American Indian",
+            "url": "https://americanindian.si.edu",
+            "emoji": "🏛️"
+          },
+          {
+            "label": "Native Land Digital — whose land",
+            "url": "https://native-land.ca",
+            "emoji": "🗺️"
+          },
+          {
+            "label": "Smithsonian — Native American history",
+            "url": "https://www.si.edu/spotlight/native-voices",
+            "emoji": "📚"
+          }
+        ],
+        "topPills": [
+          {
+            "id": "hist_fn_eastern",
+            "label": "The Eastern Nations",
+            "color": "#7a5028",
+            "desc": "The first peoples Europeans encountered — and the first systematically displaced. The Iroquois Confederacy, or Haudenosaunee, was a sophisticated democratic alliance of six nations whose structure influenced the framers of the US Constitution more than is typically acknowledged. The Cherokee developed a written language, a newspaper, and a constitutional government — and were removed anyway. The Five Civilized Tribes adopted European customs by every measure the colonizers demanded. It made no difference. The land was the point, not the civilization.",
+            "links": [
+              {
+                "label": "National Museum of the American Indian",
+                "url": "https://americanindian.si.edu",
+                "emoji": "🏛️"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "hist_proc_1763",
+                "label": "The Proclamation Line & The Revolution",
+                "color": "#6a4020",
+                "desc": "After defeating France in the Seven Years War, Britain issued the Royal Proclamation of 1763 — drawing a line along the Appalachian Mountains and forbidding colonial settlement west of it. The intent was to stabilize relations with the Indian nations whose land lay beyond it. The colonists were furious. They had just fought a war they believed would open the West to them. Within twelve years they declared independence. One of the grievances in the Declaration of Independence — rarely discussed — is that the King had raised up the Indian nations as a barrier to westward expansion. The Revolution was partly a land deal. The Proclamation Line was what stood between the colonists and the continent. When Britain drew that line, the Revolution became inevitable.",
+                "links": [
+                  {
+                    "label": "National Archives — Declaration of Independence",
+                    "url": "https://www.archives.gov/founding-docs/declaration-transcript",
+                    "emoji": "📜"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov_revolution",
+                    "label": "Revolution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "hist_fn_removal",
+                    "label": "The Removal Era",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "hist_fn_plains",
+            "label": "The Plains Nations",
+            "color": "#9a6830",
+            "desc": "The Lakota, Comanche, Cheyenne, Arapaho, Kiowa — the nations of the Great Plains whose culture was built around the buffalo and transformed by the horse. They were the last to be militarily defeated, and they fought with extraordinary skill and determination. Sitting Bull. Crazy Horse. Little Bighorn, where Custer's Seventh Cavalry was annihilated in 1876 — the high-water mark of Plains resistance, followed within two years by the destruction of the buffalo herds and the end of the world the plains nations had known.",
+            "links": [
+              {
+                "label": "National Museum of the American Indian",
+                "url": "https://americanindian.si.edu",
+                "emoji": "🏛️"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "hist_buffalo",
+                "label": "The Buffalo Slaughter",
+                "color": "#8a5820",
+                "desc": "Between 30 and 60 million bison once roamed the Great Plains. By 1889 there were approximately 1,000 left. The slaughter was not incidental to westward expansion — it was instrumental to it. General Philip Sheridan explicitly advocated for the commercial hide hunters as the most efficient means of ending Plains Indian resistance. Destroy the food supply, destroy the culture, destroy the capacity to survive outside the reservation. The railroad brought the hunters west. The Army provided protection. The government provided indifference. Hunters left carcasses to rot by the millions, taking only the hides. It was policy dressed as commerce, and it worked.",
+                "links": [
+                  {
+                    "label": "Smithsonian — buffalo history",
+                    "url": "https://www.si.edu",
+                    "emoji": "📚"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "hist_fn_removal",
+                    "label": "The Removal Era",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "hist_fn_blackhills",
+                "label": "The Black Hills & Fort Laramie",
+                "color": "#7a5828",
+                "desc": "The Fort Laramie Treaty of 1868 gave the Lakota the Black Hills — Paha Sapa, the heart of everything that is — in perpetuity. In 1874 George Custer led an expedition into the Hills and found gold. By 1877 the Hills had been seized. The Lakota went to court. In 1980 the Supreme Court ruled that the taking of the Black Hills was illegal and awarded $106 million in compensation. The Lakota refused the money. They want the land. The account sits today, accruing interest — now over a billion dollars — uncollected. The Lakota position: the Black Hills are not for sale. That refusal is one of the most dignified acts in American legal history.",
+                "links": [
+                  {
+                    "label": "Native Land Digital",
+                    "url": "https://native-land.ca",
+                    "emoji": "🗺️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "hist_fn_southwest",
+            "label": "The Southwest Nations",
+            "color": "#b07840",
+            "desc": "The Navajo, Apache, Pueblo peoples, Hopi, Zuni — nations whose roots in the Southwest predate European contact by thousands of years. Acoma Pueblo has been continuously inhabited since at least 1150 CE, making it one of the oldest continuously occupied settlements in North America. The Navajo Long Walk of 1864 — the forced relocation of 8,000 Navajo to Bosque Redondo — killed thousands and is the Navajo Trail of Tears. Geronimo and the Apache resisted until 1886, the last armed resistance in the continental United States. The Southwest nations survived in place in ways the Eastern and Plains nations largely could not — the land was less immediately desirable, the resistance more protracted, the cultural continuity more intact.",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "hist_fn_northwest",
+            "label": "Pacific Northwest & Alaska",
+            "color": "#6a8850",
+            "desc": "The nations of the Pacific Northwest — Chinook, Haida, Tlingit, Salish, Nez Perce — built sophisticated cultures around the salmon, the cedar, and the sea. The totem pole is not decorative — it is a genealogical and historical record. The potlatch, a ceremonial feast of gift-giving and redistribution, was so threatening to colonial economic logic that Canada banned it in 1885. The ban lasted until 1951. Chief Joseph of the Nez Perce led one of the most remarkable military retreats in American history — 1,400 miles toward Canada with women, children, and elders, pursued by the Army — before surrendering 40 miles from the border.",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "hist_fn_removal",
+            "label": "The Removal Era",
+            "color": "#8a4020",
+            "desc": "The Indian Removal Act of 1830, signed by Andrew Jackson, authorized the forced relocation of Native nations from their ancestral homelands east of the Mississippi to territory west of it. The Cherokee called their removal Nunna daul Tsuny — the trail where they cried. Approximately 15,000 Cherokee were forced to march in winter. Around 4,000 died on the way. The Removal was not a one-time event. It was a template — applied repeatedly, to nation after nation, as the line of settlement moved west. Each removal was justified by the same logic: the land was needed, the Indians were in the way, and the government had the power to move them.",
+            "links": [
+              {
+                "label": "National Archives — Indian Removal Act",
+                "url": "https://www.archives.gov",
+                "emoji": "📜"
+              },
+              {
+                "label": "National Museum of the American Indian",
+                "url": "https://americanindian.si.edu",
+                "emoji": "🏛️"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "hist_treaty_system",
+                "label": "The Treaty System",
+                "color": "#7a3818",
+                "desc": "The United States signed over 500 treaties with Native nations between 1778 and 1871. It violated every single one. Not gradually, not accidentally — systematically, as a matter of recurring policy, whenever the land covered by a treaty became valuable enough to take. The treaty was the legal mechanism of dispossession: negotiate, sign, wait for the land to become worth something, then find a reason the treaty no longer applies. The Treaty of New Echota in 1835, signed by a small unauthorized faction of Cherokee, was used to justify the Trail of Tears over the objections of 90% of the nation. The Fort Laramie Treaty of 1868 gave the Lakota the Black Hills forever. Gold was discovered in 1874. The treaty lasted six years. The Dawes Act of 1887 broke up communal tribal land into individual allotments and sold the surplus — tribes lost 90 million acres in 47 years. The pattern is too consistent across too many administrations and too many nations to be called anything other than what it was: a method.",
+                "links": [
+                  {
+                    "label": "National Archives — treaty records",
+                    "url": "https://www.archives.gov",
+                    "emoji": "📜"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "hist_smallpox",
+                "label": "Smallpox & Biological Warfare",
+                "color": "#6a2810",
+                "desc": "Disease killed more indigenous people than all the wars combined. Estimates range from 50 to 90 percent of the pre-contact population of the Americas dead within a century of European arrival — primarily from smallpox, measles, and influenza to which they had no immunity. Most of this was not deliberate. Some of it was. The most documented case: during Pontiac's War in 1763, British officers at Fort Pitt distributed blankets and a handkerchief from the smallpox hospital to Delaware tribal leaders. The correspondence between officers explicitly discusses the intent. The deliberate use of disease as a weapon predates germ theory. The people who did it knew what they were doing even if they didn't know the mechanism. The inadvertent and the intentional ran together for centuries, and the outcome was the same.",
+                "links": [
+                  {
+                    "label": "Smithsonian — Native American history",
+                    "url": "https://www.si.edu/spotlight/native-voices",
+                    "emoji": "📚"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "hist_boarding",
+                "label": "The Boarding Schools",
+                "color": "#8a3010",
+                "desc": "Kill the Indian, save the man. That was the stated philosophy of Richard Henry Pratt, founder of the Carlisle Indian Industrial School in 1879 — and of the federal boarding school system that followed it. Native children were taken from their families, sometimes by force, forbidden to speak their languages, given European names, punished for practicing their traditions, and taught that everything about their culture was inferior and shameful. Over 150,000 children passed through these schools. Thousands died and were buried in unmarked graves on school grounds. The last federally operated Indian boarding school closed in 2024. This is not ancient history. People alive today attended them. The intergenerational trauma is still present and still documented.",
+                "links": [
+                  {
+                    "label": "Department of Interior — boarding school report",
+                    "url": "https://www.doi.gov",
+                    "emoji": "📜"
+                  },
+                  {
+                    "label": "National Native American Boarding School Healing Coalition",
+                    "url": "https://boardingschoolhealing.org",
+                    "emoji": "🏛️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "hist_fn_sovereignty",
+            "label": "Reservations & Sovereignty",
+            "color": "#7a5030",
+            "desc": "There are 574 federally recognized tribal nations in the United States today. They are sovereign — meaning they have the right to govern themselves, maintain their own laws, and operate outside some state jurisdictions. That sovereignty is real law. It is also a sovereignty that was established by the same government that destroyed the nations' original sovereignty, on land that represents a fraction of what was taken, with resources that were deliberately impoverished. The reservation system was designed to contain, not to preserve. The nations that have survived and rebuilt within it have done so despite the system, not because of it.",
+            "links": [
+              {
+                "label": "National Congress of American Indians",
+                "url": "https://www.ncai.org",
+                "emoji": "🏛️"
+              },
+              {
+                "label": "Native Land Digital",
+                "url": "https://native-land.ca",
+                "emoji": "🗺️"
+              }
+            ],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "hist_fn_survival",
+            "label": "Survival & Renaissance",
+            "color": "#6a7840",
+            "desc": "The nations survived. That is the part of the story that gets left out of the history that treats indigenous history as tragedy with no third act. The American Indian Movement, founded in 1968, brought civil rights organizing to Native communities and forced a national reckoning with reservation conditions. The occupation of Wounded Knee in 1973 lasted 71 days and put treaty rights on the national agenda. Standing Rock in 2016 brought the pipeline fight to global attention and a new generation of indigenous activism. Languages declared dead are being reclaimed. Tribal colleges are educating a new generation on their own terms. The nations that were supposed to vanish are still here, still governing, still fighting, and in many cases thriving.",
+            "links": [
+              {
+                "label": "National Museum of the American Indian",
+                "url": "https://americanindian.si.edu",
+                "emoji": "🏛️"
+              },
+              {
+                "label": "Tribal colleges — American Indian College Fund",
+                "url": "https://collegefund.org",
+                "emoji": "📚"
+              }
+            ],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
+        "bottomPills": [
+          {
+            "id": "x5_indigenous",
+            "label": "Indigenous & Animist",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "x5_americas",
+            "label": "The Americas",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c_env_move_indigenous",
+            "label": "Indigenous Stewardship",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "h3",
+            "label": "War & Revolutions",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ]
       }
     ],
     "bottomPills": []
@@ -4896,6 +5267,174 @@ const LAYERS = [
               {
                 "id": "x3_astro",
                 "label": "Astrology",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "x3_astro",
+            "label": "Astrology",
+            "color": "#7a6a9a",
+            "desc": "The oldest observatory was the open sky. Every civilization that has ever existed looked up and found meaning in what it saw. Not one astrology — many. The Babylonians built the zodiac we still use. The Chinese developed a parallel system based on a sixty-year cycle and five classical planets. The Vedic tradition of India — Jyotisha — predates Greek influence and remains a living practice for hundreds of millions today. The Maya built the most accurate calendar in the ancient world and tracked Venus with a precision that rivals modern instruments. These are not variations on a single theme. They are independent answers to the same human question: if the sky moves in patterns, and we move in patterns, is there a relationship? The question is older than writing. The answers are as varied as the civilizations that asked it. Astrology is where humanity first decided the universe was paying attention. Whether or not it is, the asking changed everything.",
+            "links": [
+              {
+                "label": "Aeon — history of astrology",
+                "url": "https://aeon.co",
+                "emoji": "💭"
+              },
+              {
+                "label": "NASA Astronomy Picture of the Day",
+                "url": "https://apod.nasa.gov",
+                "emoji": "🔭"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "x3_astro_babylon",
+                "label": "Babylonian & Western",
+                "color": "#9a7a60",
+                "desc": "The Babylonians of Mesopotamia developed the zodiac between 700 and 400 BCE — twelve constellations along the ecliptic, each governing a segment of the year. They tracked five planets visible to the naked eye and correlated celestial events with earthly ones across centuries of careful records. When Greek astronomers encountered that data, they had a foundation to theorize from. The fusion of Babylonian observation with Greek philosophical framework produced the astrological system that passed through Rome, through the Islamic Golden Age where it was preserved and refined, into medieval Europe where it was taught in universities alongside medicine and mathematics, and eventually into the horoscope column — a lineage of 2,500 years from clay tablet to newspaper.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "x1_egyptian",
+                    "label": "Egyptian & Mesopotamian",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_astron",
+                    "label": "Astronomy",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "x3_astro_vedic",
+                "label": "Vedic / Jyotisha",
+                "color": "#c07840",
+                "desc": "Jyotisha — the eye of the Vedas — is one of the six auxiliary disciplines of the Vedic tradition, dating to at least 1500 BCE and possibly much earlier. It uses a sidereal zodiac aligned to actual constellation positions rather than the seasons, and a different house system than Western astrology. Where Western astrology became increasingly psychological in the 20th century, Vedic astrology remained integrated with medicine, architecture, agriculture, and the timing of major life decisions. It is not a relic. Hundreds of millions of people in South Asia consult Jyotish practitioners for births, marriages, and business matters today. It is one of the oldest continuously practiced analytical systems on earth.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "x5_hinduism",
+                    "label": "Hinduism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_dharmic",
+                    "label": "Dharmic Religions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "x3_astro_chinese",
+                "label": "Chinese Astrology",
+                "color": "#c04040",
+                "desc": "The Chinese astrological system is built around a sixty-year cycle — the product of twelve animal signs and five elements — and has been integrated into Chinese governance, medicine, architecture, and daily life for at least 3,000 years. The system tracks Jupiter's twelve-year orbit as its primary clock and organizes time into recursive cycles within cycles. Unlike Western astrology's focus on the solar year and individual birth, Chinese astrology emphasizes collective time — the character of a year, a decade, an era. It is embedded in traditional Chinese medicine, feng shui, the timing of the Lunar New Year, and decisions made daily by hundreds of millions of people.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "x5_taoism",
+                    "label": "Taoism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_confucianism",
+                    "label": "Confucianism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "x3_astro_maya",
+                "label": "Maya & Mesoamerican",
+                "color": "#3a8a50",
+                "desc": "The Maya built two interlocking calendars — the 260-day Tzolkin and the 365-day Haab — whose 52-year Calendar Round governed ceremony, agriculture, war, and royal succession. They also maintained the Long Count, a linear calendar tracking time from a fixed mythological origin — the same impulse that gave us BC and AD. Their tracking of Venus was so precise that their tables predict Venus's appearances to within a day over centuries. Venus was not just a planet to the Maya — it was a war star, whose appearance governed the timing of military campaigns. These were not primitive sky-watchers. They were astronomers who embedded their science in mythology because for them the distinction did not exist.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "x5_meso_rel",
+                    "label": "Mesoamerican",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x1_creation",
+                    "label": "Creation Myths",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "x3_astro_egyptian",
+                "label": "Egyptian & Hellenistic",
+                "color": "#c8a030",
+                "desc": "Egypt contributed the decans — 36 star groups dividing the sky into ten-day periods — and the practice of orienting sacred architecture to celestial alignments. The Dendera zodiac ceiling is the oldest complete horoscope chart known. When Alexander conquered Egypt and Greek culture fused with Egyptian sky religion and Babylonian star-lore in Alexandria, the result was Hellenistic astrology — the most sophisticated synthesis the ancient world produced. It gave us the horoscope as a birth chart, the four elements as astrological qualities, and the philosophical framework within which Ptolemy, Copernicus, Kepler, and Galileo all worked before the scientific revolution finally drew the line between astronomy and astrology. For most of human history that line did not exist.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "x5_egyptian_rel",
+                    "label": "Egyptian",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_scirev",
+                    "label": "The Scientific Revolution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "e2_astron",
+                "label": "Astronomy",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x3_histtime",
+                "label": "History of Time",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -5433,24 +5972,6 @@ const LAYERS = [
             "bottomPills": [],
             "topPills": [
               {
-                "id": "x3_astro",
-                "label": "Astrology",
-                "color": "#7a6a9a",
-                "desc": "The oldest observatory was the open sky. Long before writing, before religion, before mathematics, humans across different civilizations with different methods and language, watched the heavens with extraordinary precision — tracking the sun's arc, the moon's phases, the slow wheel of stars through the seasons. It was noticing this that developed time in human consciousness. Not just time as duration, but time as patterns.  Astrology today is known as  trying to predict or assign meaning and personality from these patterns but assigning meaning to patterns is what humans do.   So, Astrology, as a foundation, uses real observable science as a foundation, and builds upon that thousands of years of correlating human traits and events with the observable patterns. \nAs man became more 'rational' , Astronomia or Astronomy, the understanding of the actual / observable motions of the planets and the stars ane beyone.   Recognition and recording of this observation and pattern recognition unfolds naturally into Geometry and deeper mathematics,  agriculture, architecture, navigation, and eventually science itself are all downstream of someone, long ago, watching the sky and deciding the cycles meant something.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "e2_astron",
-                    "label": "Astronomy",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ]
-              },
-              {
                 "id": "x3_ancient_time",
                 "label": "Ancient Timekeeping",
                 "color": "#7a6a9a",
@@ -5576,7 +6097,184 @@ const LAYERS = [
             "label": "Myth",
             "desc": "",
             "links": [],
-            "topPills": [],
+            "topPills": [
+              {
+                "id": "x3_astro",
+                "label": "Astrology",
+                "color": "#7a6a9a",
+                "desc": "The oldest observatory was the open sky. Every civilization that has ever existed looked up and found meaning in what it saw. Not one astrology — many. The Babylonians built the zodiac we still use. The Chinese developed a parallel system based on a sixty-year cycle and five classical planets. The Vedic tradition of India — Jyotisha — predates Greek influence and remains a living practice for hundreds of millions today. The Maya built the most accurate calendar in the ancient world and tracked Venus with a precision that rivals modern instruments. These are not variations on a single theme. They are independent answers to the same human question: if the sky moves in patterns, and we move in patterns, is there a relationship? The question is older than writing. The answers are as varied as the civilizations that asked it. Astrology is where humanity first decided the universe was paying attention. Whether or not it is, the asking changed everything.",
+                "links": [
+                  {
+                    "label": "Aeon — history of astrology",
+                    "url": "https://aeon.co",
+                    "emoji": "💭"
+                  },
+                  {
+                    "label": "NASA Astronomy Picture of the Day",
+                    "url": "https://apod.nasa.gov",
+                    "emoji": "🔭"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "x3_astro_babylon",
+                    "label": "Babylonian & Western",
+                    "color": "#9a7a60",
+                    "desc": "The Babylonians of Mesopotamia — modern Iraq — developed the zodiac between 700 and 400 BCE: twelve constellations along the ecliptic, each governing a segment of the year. They tracked the movements of five planets visible to the naked eye and correlated celestial events with earthly ones with extraordinary precision. When Greek astronomers encountered Babylonian records, they had centuries of data to work with. The fusion of Babylonian observation with Greek philosophical theory produced the astrological system that passed through Rome, through the Islamic Golden Age where it was preserved and refined, into medieval Europe and eventually into the horoscope column — a lineage of 2,500 years from clay tablet to newspaper.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x1_egyptian",
+                        "label": "Egyptian & Mesopotamian",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "e2_astron",
+                        "label": "Astronomy",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x3_astro_vedic",
+                    "label": "Vedic / Jyotisha",
+                    "color": "#c07840",
+                    "desc": "Jyotisha — the eye of the Vedas — is one of the six auxiliary disciplines of the Vedic tradition, dating to at least 1500 BCE and possibly much earlier. It uses a sidereal zodiac — aligned to the actual positions of constellations rather than the seasons — and a different house system than Western astrology. Where Western astrology became increasingly psychological in the 20th century, Vedic astrology remained tightly integrated with medicine, architecture, agriculture, and the timing of major life decisions. It is not a relic. Hundreds of millions of people in South Asia consult Jyotish practitioners for births, marriages, and business decisions today. It is one of the oldest continuously practiced analytical systems on earth.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_hinduism",
+                        "label": "Hinduism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_dharmic",
+                        "label": "Dharmic Religions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x3_astro_chinese",
+                    "label": "Chinese Astrology",
+                    "color": "#c04040",
+                    "desc": "The Chinese astrological system is built around a sixty-year cycle — the product of twelve animal signs and five elements — and has been integrated into Chinese governance, medicine, architecture, and daily life for at least 3,000 years. The system tracks Jupiter's approximately twelve-year orbit as its primary clock and organizes time into a recursive pattern of cycles within cycles. Unlike Western astrology's focus on the solar year and individual birth charts, Chinese astrology emphasizes cycles of collective time — the character of a year, a decade, an era. It is embedded in traditional Chinese medicine, in feng shui, in the timing of the Lunar New Year, and in decisions made by a fifth of the world's population.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_taoism",
+                        "label": "Taoism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_confucianism",
+                        "label": "Confucianism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x3_astro_maya",
+                    "label": "Maya & Mesoamerican",
+                    "color": "#3a8a50",
+                    "desc": "The Maya built two interlocking calendars — the 260-day Tzolkin and the 365-day Haab — whose fifty-two-year Calendar Round governed ceremony, agriculture, war, and the timing of royal succession. They also maintained the Long Count, a linear calendar tracking time from a fixed mythological origin point — the same impulse that gave us BC and AD. Their tracking of Venus was so precise that their tables predict Venus's heliacal rising to within a day over centuries. Venus was not just a planet to the Maya — it was a war star, whose appearance governed the timing of military campaigns. These were not primitive sky-watchers. They were astronomers who embedded their science in mythology because for them the distinction did not exist.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_meso_rel",
+                        "label": "Mesoamerican",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x1_creation",
+                        "label": "Creation Myths",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x3_astro_egyptian",
+                    "label": "Egyptian & Hellenistic",
+                    "color": "#c8a030",
+                    "desc": "Egypt contributed the decans — 36 star groups dividing the sky into ten-day periods — and the practice of orienting sacred architecture to celestial alignments. The Great Pyramid's shafts point to specific stars. Dendera's famous zodiac ceiling is the oldest complete horoscope chart known. When Alexander conquered Egypt and Greek culture fused with Egyptian sky religion and Babylonian star-lore in Alexandria, the result was Hellenistic astrology — the most sophisticated synthesis the ancient world produced. It gave us the horoscope as a birth chart, the four elements as astrological qualities, and the philosophical framework that made astrology the queen of the sciences in the ancient world and the framework within which Ptolemy, Copernicus, Kepler, and Galileo all worked before the scientific revolution drew the line between astronomy and astrology.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_egyptian_rel",
+                        "label": "Egyptian",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x1_egyptian",
+                        "label": "Egyptian & Mesopotamian",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "e2_scirev",
+                        "label": "The Scientific Revolution",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "e2_astron",
+                    "label": "Astronomy",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x3_histtime",
+                    "label": "History of Time",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
             "bottomPills": []
           },
           {
