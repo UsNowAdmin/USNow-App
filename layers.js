@@ -1736,7 +1736,7 @@ const LAYERS = [
                 "topPills": [
                   {
                     "id": "p_party_system",
-                    "label": "The Party System",
+                    "label": "What is a Party?",
                     "color": "#8a3838",
                     "desc": "The United States has had two dominant parties for most of its history — not because two parties is the natural state of democracy, but because the system was built that way. Winner-take-all elections, ballot access laws, and the Electoral College all conspire to crush third parties before they scale. The names have changed. The Federalists became Whigs became Republicans. The Democratic-Republicans became Democrats. The positions have flipped more than once — the party of Lincoln and the party of Jefferson have traded ideological DNA across centuries. What hasn't changed is the binary. Two tents. Everyone inside arguing about who belongs.",
                     "links": [
