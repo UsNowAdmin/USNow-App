@@ -1350,95 +1350,104 @@ const LAYERS = [
                     "label": "Indigenous & Animist",
                     "desc": "",
                     "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "x5_americas",
-                    "label": "The Americas",
-                    "desc": "From the Lakota Sun Dance to the Aztec calendar to the Andean concept of Pachamama — earth as living mother — the indigenous spiritual traditions of the Americas represent thousands of distinct cultures and cosmologies. What they share is a relationship to the natural world as sacred and alive — not a resource to be extracted but a relative to be respected. These traditions survived colonization, suppression, forced conversion, and the deliberate destruction of language and ceremony. Many are being actively reclaimed today.",
-                    "links": [
-                      {
-                        "label": "National Museum of the American Indian",
-                        "url": "https://americanindian.si.edu",
-                        "emoji": "🏛️"
-                      },
-                      {
-                        "label": "Native Land Digital",
-                        "url": "https://native-land.ca",
-                        "emoji": "🗺️"
-                      }
-                    ],
                     "topPills": [
                       {
-                        "id": "x5_am_lakota",
-                        "label": "Lakota & Plains Spirituality",
-                        "color": "#7a9a50",
-                        "desc": "Mitákuye Oyásʼiŋ — all are related. The Lakota phrase that opens every ceremony names the foundational worldview: humans are not separate from or superior to the natural world. They are relatives of the buffalo, the eagle, the river, the stone. The Sun Dance, the sweat lodge, the vision quest — these are not quaint customs. They are technologies for maintaining the right relationship between the human community and the living world it depends on. The Black Hills are sacred not because a treaty said so but because the Lakota have known it for thousands of years.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "hist_fn_blackhills",
-                            "label": "The Black Hills & Fort Laramie",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          }
-                        ]
-                      },
-                      {
-                        "id": "x5_am_pachamama",
-                        "label": "Pachamama & Andean Traditions",
-                        "color": "#8aaa40",
-                        "desc": "In the Andean tradition, Pachamama — Earth Mother — is not a metaphor. She is a living entity with rights, needs, and a relationship to the human communities that live within her. Several South American nations have incorporated the rights of nature into their constitutions — Ecuador in 2008, Bolivia in 2010. The legal recognition of a river or a mountain as having rights that can be defended in court is not mysticism. It is a different theory of legal personhood, one that indigenous traditions have practiced relationally for millennia before it appeared in law.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      },
-                      {
-                        "id": "x5_am_meso",
-                        "label": "Aztec, Maya & Mesoamerican",
-                        "color": "#9a8040",
-                        "desc": "The Maya developed one of the most accurate calendar systems in human history, a sophisticated written language, advanced mathematics including the concept of zero, and cities that rivaled anything in the contemporary world. The Aztec built Tenochtitlan — a city of 200,000 people in the middle of a lake, connected by causeways, with a water supply system that impressed the Spanish who destroyed it. These were not primitive peoples in the path of civilization. They were civilizations, with all the complexity that implies.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      },
-                      {
-                        "id": "x5_am_stewardship",
-                        "label": "Land as Relative, Not Resource",
-                        "color": "#6a8a30",
-                        "desc": "The distinction between indigenous and European relationships to land is not romantic. It is structural. European property law treats land as a commodity — something that can be owned, bought, sold, and extracted from. Most indigenous traditions treat land as a relative — something you belong to, are responsible for, and exist in relationship with. The ecological consequences of those two frameworks, applied at civilizational scale over centuries, are now visible in the state of the planet. The framework that treated land as a relative maintained ecological balance for thousands of years. The framework that treated it as a resource has produced the current crisis in about 250.",
+                        "id": "x5_americas",
+                        "label": "The Americas",
+                        "desc": "From the Lakota Sun Dance to the Aztec calendar to the Andean concept of Pachamama — earth as living mother — the indigenous spiritual traditions of the Americas represent thousands of distinct cultures and cosmologies. What they share is a relationship to the natural world as sacred and alive — not a resource to be extracted but a relative to be respected. These traditions survived colonization, suppression, forced conversion, and the deliberate destruction of language and ceremony. Many are being actively reclaimed today.",
                         "links": [
+                          {
+                            "label": "National Museum of the American Indian",
+                            "url": "https://americanindian.si.edu",
+                            "emoji": "🏛️"
+                          },
                           {
                             "label": "Native Land Digital",
                             "url": "https://native-land.ca",
                             "emoji": "🗺️"
                           }
                         ],
-                        "topPills": [],
-                        "bottomPills": [
+                        "topPills": [
                           {
-                            "id": "c_env_move_indigenous",
-                            "label": "Indigenous Stewardship",
-                            "desc": "",
+                            "id": "x5_am_lakota",
+                            "label": "Lakota & Plains Spirituality",
+                            "color": "#7a9a50",
+                            "desc": "Mitákuye Oyásʼiŋ — all are related. The Lakota phrase that opens every ceremony names the foundational worldview: humans are not separate from or superior to the natural world. They are relatives of the buffalo, the eagle, the river, the stone. The Sun Dance, the sweat lodge, the vision quest — these are not quaint customs. They are technologies for maintaining the right relationship between the human community and the living world it depends on. The Black Hills are sacred not because a treaty said so but because the Lakota have known it for thousands of years.",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [
+                              {
+                                "id": "hist_fn_blackhills",
+                                "label": "The Black Hills & Fort Laramie",
+                                "desc": "",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "x5_am_pachamama",
+                            "label": "Pachamama & Andean Traditions",
+                            "color": "#8aaa40",
+                            "desc": "In the Andean tradition, Pachamama — Earth Mother — is not a metaphor. She is a living entity with rights, needs, and a relationship to the human communities that live within her. Several South American nations have incorporated the rights of nature into their constitutions — Ecuador in 2008, Bolivia in 2010. The legal recognition of a river or a mountain as having rights that can be defended in court is not mysticism. It is a different theory of legal personhood, one that indigenous traditions have practiced relationally for millennia before it appeared in law.",
                             "links": [],
                             "topPills": [],
                             "bottomPills": []
                           },
                           {
-                            "id": "c_env_ourpower",
-                            "label": "Our Power, Our Planet",
-                            "desc": "",
+                            "id": "x5_am_meso",
+                            "label": "Aztec, Maya & Mesoamerican",
+                            "color": "#9a8040",
+                            "desc": "The Maya developed one of the most accurate calendar systems in human history, a sophisticated written language, advanced mathematics including the concept of zero, and cities that rivaled anything in the contemporary world. The Aztec built Tenochtitlan — a city of 200,000 people in the middle of a lake, connected by causeways, with a water supply system that impressed the Spanish who destroyed it. These were not primitive peoples in the path of civilization. They were civilizations, with all the complexity that implies.",
                             "links": [],
                             "topPills": [],
                             "bottomPills": []
+                          },
+                          {
+                            "id": "x5_am_stewardship",
+                            "label": "Land as Relative, Not Resource",
+                            "color": "#6a8a30",
+                            "desc": "The distinction between indigenous and European relationships to land is not romantic. It is structural. European property law treats land as a commodity — something that can be owned, bought, sold, and extracted from. Most indigenous traditions treat land as a relative — something you belong to, are responsible for, and exist in relationship with. The ecological consequences of those two frameworks, applied at civilizational scale over centuries, are now visible in the state of the planet. The framework that treated land as a relative maintained ecological balance for thousands of years. The framework that treated it as a resource has produced the current crisis in about 250.",
+                            "links": [
+                              {
+                                "label": "Native Land Digital",
+                                "url": "https://native-land.ca",
+                                "emoji": "🗺️"
+                              }
+                            ],
+                            "topPills": [],
+                            "bottomPills": [
+                              {
+                                "id": "c_env_move_indigenous",
+                                "label": "Indigenous Stewardship",
+                                "desc": "",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": []
+                              },
+                              {
+                                "id": "c_env_ourpower",
+                                "label": "Our Power, Our Planet",
+                                "desc": "",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": []
+                              }
+                            ]
                           }
-                        ]
+                        ],
+                        "bottomPills": []
                       }
                     ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_americas",
+                    "label": "The Americas",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
                     "bottomPills": []
                   }
                 ]
