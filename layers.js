@@ -5798,15 +5798,6 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
-              },
-              {
-                "id": "x3_astro",
-                "label": "Astrology",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
               }
             ],
             "topPills": [
@@ -5971,7 +5962,16 @@ const LAYERS = [
             "color": "#7a9a50",
             "desc": "The spiritual traditions of indigenous peoples on every continent — the oldest living relationship between humans and the sacred. Animism holds that the natural world is alive with spirit: animals, plants, rivers, and ancestors are not separate from the sacred but continuous with it. These traditions survived colonization, suppression, and forced conversion. Many are still living and practiced today.",
             "links": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "hist_first_nations",
+                "label": "First Nations",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "topPills": [
               {
                 "id": "x5_americas",
@@ -6060,7 +6060,16 @@ const LAYERS = [
                     ]
                   }
                 ],
-                "bottomPills": []
+                "bottomPills": [
+                  {
+                    "id": "hist_first_nations",
+                    "label": "First Nations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
               },
               {
                 "id": "x5_africa_ind",
