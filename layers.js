@@ -97,7 +97,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "c3d2",
@@ -117,7 +118,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "c3d3",
@@ -132,10 +134,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "s3",
@@ -167,10 +171,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "s1",
@@ -179,7 +185,8 @@ const LAYERS = [
         "desc": "Who you think you are. Assembled from memory, projection, and stories others told you before you had language to argue back. Fluid. Constructed. Yours — and not entirely yours.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "s4",
@@ -207,7 +214,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "s5",
@@ -229,10 +237,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -268,7 +278,8 @@ const LAYERS = [
         "desc": "Everything your family carried before you arrived — the stories told at dinner, the ones never told at all, the photographs nobody labeled, the silences that shaped the room. The archive is not always written down. Sometimes it lives in the body. In the way someone flinches. In the thing nobody ever explained but everyone understood. You are the latest keeper of something older than you.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "fam_tp2",
@@ -277,7 +288,8 @@ const LAYERS = [
         "desc": "The movement of people across borders — forced, chosen, surviving. Every diaspora carries two maps: the place left behind and the place arrived at. Neither is ever complete. The first generation remembers what was lost. The second inherits the loss without the memory. The third inherits the gap. All three are shaped by a crossing that only one of them made.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "fam_tp3",
@@ -286,7 +298,8 @@ const LAYERS = [
         "desc": "The long chain behind you. DNA tells one version — migrations, admixtures, the slow drift of populations across continents over millennia. Culture tells another — the traditions, foods, languages, and faiths that survived the crossing. Mythology a third. None of them alone is the whole story. All of them together are still an approximation of something that recedes the further back you look.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "fam_tp4",
@@ -306,7 +319,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "fam_tp5",
@@ -315,7 +329,8 @@ const LAYERS = [
         "desc": "Every family carries both. The wound is what was done — the neglect, the silence, the inherited rage, the love that came with conditions attached. The wonder is what survived anyway — the tenderness that skipped a generation and landed whole, the gift that came through people who didn't know they were carrying it. You don't get to choose which you inherited. You do get to choose what you pass forward.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "fam_tp6",
@@ -324,7 +339,8 @@ const LAYERS = [
         "desc": "The people who see you clearly and stay anyway. Sometimes blood, sometimes not. The friend who showed up. The mentor who stayed. The community that caught you when the family of origin couldn't. Chosen family is not a consolation prize for people who didn't get a good one. It is its own form of love — deliberate, renewable, and occasionally more honest than the kind you were born into.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "orbs": [
@@ -338,7 +354,8 @@ const LAYERS = [
         "desc": "Before you were anything else, you were a set of instructions. Four letters, three billion combinations, and a blueprint nobody asked to read before it was already running. The code is not the destiny — but it shapes the playing field before you take a single step.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "f4",
@@ -377,10 +394,12 @@ const LAYERS = [
                 "desc": "Before memory, before story — the biological inheritance. The code passed forward without consent, carrying predispositions, vulnerabilities, and gifts across generations. Your ancestry is both a map and a mystery.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "f3",
@@ -409,7 +428,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "f3d2",
@@ -429,10 +449,12 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "f4d1",
@@ -462,7 +484,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "f4d2",
@@ -497,10 +520,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "f_class",
@@ -537,7 +562,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "f_rc",
@@ -586,7 +612,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "f_rc_d2",
@@ -611,10 +638,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -671,7 +700,8 @@ const LAYERS = [
         "desc": "The original infrastructure. Before governments, before markets, before the internet — there were people who needed each other. How we attach, how we repair, how we lose each other and what we do next. Everything else in the scale is downstream of this.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "c_env",
@@ -758,7 +788,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_cc_denial",
@@ -773,7 +804,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_cc_politics",
@@ -788,7 +820,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_cc_tipping",
@@ -803,7 +836,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_cc_justice",
@@ -818,7 +852,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_cc_now",
@@ -833,7 +868,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "bottomPills": [
@@ -843,7 +879,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e2_earth",
@@ -851,12 +888,15 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "c_env_bio",
@@ -883,7 +923,8 @@ const LAYERS = [
                 "desc": "Earth has experienced five mass extinctions in its history. The most recent, 66 million years ago, killed the non-avian dinosaurs. Scientists now believe we are in the sixth — and this one is caused not by an asteroid or volcanic eruption but by one species. Current extinction rates are estimated at 100 to 1,000 times the natural background rate. The rate is accelerating. Unlike the previous five, this one has a cause that could theoretically be addressed.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_bio_species",
@@ -898,7 +939,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_bio_pollinators",
@@ -907,7 +949,8 @@ const LAYERS = [
                 "desc": "One third of the world's food supply depends on pollination by bees, butterflies, and other insects. Pollinator populations are collapsing — from pesticides, from habitat loss, from disease, from the monoculture agriculture that replaced the diverse landscapes they evolved alongside. The downstream consequences run from food security to ecosystem stability. The honeybee is the canary. The coal mine is the agricultural system.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_bio_deforest",
@@ -922,7 +965,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
             "bottomPills": [
@@ -932,7 +976,8 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_environ",
@@ -940,9 +985,11 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "c_env_water",
@@ -975,7 +1022,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_water_oceans",
@@ -997,7 +1045,8 @@ const LAYERS = [
                     "desc": "The ocean absorbs roughly a third of the CO2 humans emit. When CO2 dissolves in seawater it forms carbonic acid. The ocean has acidified by 26% since the Industrial Revolution — faster than any time in the last 300 million years. Acidification dissolves the calcium carbonate that oysters, clams, coral, and pteropods — tiny sea snails at the base of the marine food chain — use to build their shells. The math at the bottom of the food chain eventually reaches the top.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_ocean_plastic",
@@ -1006,7 +1055,8 @@ const LAYERS = [
                     "desc": "8 million metric tons of plastic enter the ocean every year. The Great Pacific Garbage Patch is twice the size of Texas. But the visible plastic is not the main problem. Plastic breaks down into microplastics — particles smaller than 5mm — that have now been found in the deepest ocean trenches, in Arctic ice, in human blood, in placentas, in the lungs of people who have never been near the ocean. We are eating, drinking, and breathing the packaging.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_ocean_dead",
@@ -1015,10 +1065,12 @@ const LAYERS = [
                     "desc": "Agricultural fertilizer runoff carries nitrogen and phosphorus into waterways and eventually the ocean, triggering algae blooms that consume the oxygen in the water when they decompose. The resulting hypoxic zones — dead zones — cannot support most marine life. The Gulf of Mexico dead zone, fed by Midwest agricultural runoff down the Mississippi, covers an area the size of New Jersey every summer. There are over 400 dead zones worldwide. The number is growing.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_water_fresh",
@@ -1052,7 +1104,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "p_corp",
@@ -1060,7 +1113,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "f_rc_d1",
@@ -1068,9 +1122,11 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_water_ground",
@@ -1079,7 +1135,8 @@ const LAYERS = [
                     "desc": "Aquifers are ancient — some took millions of years to fill. They are being emptied in decades. The Ogallala Aquifer, which underlies the Great Plains and irrigates a significant portion of American agriculture, is being depleted at rates that make it essentially nonrenewable on any human timescale. When it is gone, the agriculture it supports will have to move or end. There is no plan.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_water_wars",
@@ -1094,10 +1151,12 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_water_priv",
@@ -1119,7 +1178,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p2_exp",
@@ -1127,12 +1187,15 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "c_env_air",
@@ -1165,7 +1228,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_air_pollution",
@@ -1187,7 +1251,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c_env_air_export",
@@ -1203,7 +1268,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "p4",
@@ -1211,12 +1277,15 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   }
                 ],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_air_fire",
@@ -1238,9 +1307,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "c_env_air_justice",
@@ -1262,7 +1333,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "f_class",
@@ -1270,12 +1342,15 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "c_env_movement",
@@ -1302,7 +1377,8 @@ const LAYERS = [
                 "desc": "The original American environmentalism — John Muir, Theodore Roosevelt, the national parks. The idea that wilderness has value independent of its economic utility and that some places should be protected from development permanently. Conservation produced the National Park System, the Wilderness Act, the Endangered Species Act. It also produced a movement that was predominantly white, that sometimes displaced indigenous communities from the lands it sought to protect, and that had to be expanded — by the environmental justice movement — to include the places where people actually live.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_move_earthday",
@@ -1317,7 +1393,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_move_justice",
@@ -1326,7 +1403,8 @@ const LAYERS = [
                 "desc": "The new generation of environmentalism — Sunrise Movement, Fridays for Future, the Standing Rock water protectors. Younger, more diverse, and explicitly connecting climate to economic and racial justice. The argument: you cannot solve climate change without addressing the systems of extraction and exploitation that caused it, and you cannot address those systems without centering the communities most harmed by them. Climate is not a single issue. It is the place where all the other issues converge.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_move_capture",
@@ -1335,7 +1413,8 @@ const LAYERS = [
                 "desc": "Greenwashing is the practice of appearing environmentally responsible without being environmentally responsible. It ranges from minor — a plastic bottle with a leaf on it — to systemic — oil companies running advertising campaigns about their clean energy investments while lobbying against clean energy policy. The environmental movement has also been captured by its own success: environmental impact review processes designed to stop bad projects are now routinely used to stop good ones. The tools built for protection can be turned against progress.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_move_indigenous",
@@ -1350,96 +1429,7 @@ const LAYERS = [
                     "label": "Indigenous & Animist",
                     "desc": "",
                     "links": [],
-                    "topPills": [
-                      {
-                        "id": "x5_americas",
-                        "label": "The Americas",
-                        "desc": "From the Lakota Sun Dance to the Aztec calendar to the Andean concept of Pachamama — earth as living mother — the indigenous spiritual traditions of the Americas represent thousands of distinct cultures and cosmologies. What they share is a relationship to the natural world as sacred and alive — not a resource to be extracted but a relative to be respected. These traditions survived colonization, suppression, forced conversion, and the deliberate destruction of language and ceremony. Many are being actively reclaimed today.",
-                        "links": [
-                          {
-                            "label": "National Museum of the American Indian",
-                            "url": "https://americanindian.si.edu",
-                            "emoji": "🏛️"
-                          },
-                          {
-                            "label": "Native Land Digital",
-                            "url": "https://native-land.ca",
-                            "emoji": "🗺️"
-                          }
-                        ],
-                        "topPills": [
-                          {
-                            "id": "x5_am_lakota",
-                            "label": "Lakota & Plains Spirituality",
-                            "color": "#7a9a50",
-                            "desc": "Mitákuye Oyásʼiŋ — all are related. The Lakota phrase that opens every ceremony names the foundational worldview: humans are not separate from or superior to the natural world. They are relatives of the buffalo, the eagle, the river, the stone. The Sun Dance, the sweat lodge, the vision quest — these are not quaint customs. They are technologies for maintaining the right relationship between the human community and the living world it depends on. The Black Hills are sacred not because a treaty said so but because the Lakota have known it for thousands of years.",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [
-                              {
-                                "id": "hist_fn_blackhills",
-                                "label": "The Black Hills & Fort Laramie",
-                                "desc": "",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": []
-                              }
-                            ]
-                          },
-                          {
-                            "id": "x5_am_pachamama",
-                            "label": "Pachamama & Andean Traditions",
-                            "color": "#8aaa40",
-                            "desc": "In the Andean tradition, Pachamama — Earth Mother — is not a metaphor. She is a living entity with rights, needs, and a relationship to the human communities that live within her. Several South American nations have incorporated the rights of nature into their constitutions — Ecuador in 2008, Bolivia in 2010. The legal recognition of a river or a mountain as having rights that can be defended in court is not mysticism. It is a different theory of legal personhood, one that indigenous traditions have practiced relationally for millennia before it appeared in law.",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "x5_am_meso",
-                            "label": "Aztec, Maya & Mesoamerican",
-                            "color": "#9a8040",
-                            "desc": "The Maya developed one of the most accurate calendar systems in human history, a sophisticated written language, advanced mathematics including the concept of zero, and cities that rivaled anything in the contemporary world. The Aztec built Tenochtitlan — a city of 200,000 people in the middle of a lake, connected by causeways, with a water supply system that impressed the Spanish who destroyed it. These were not primitive peoples in the path of civilization. They were civilizations, with all the complexity that implies.",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "x5_am_stewardship",
-                            "label": "Land as Relative, Not Resource",
-                            "color": "#6a8a30",
-                            "desc": "The distinction between indigenous and European relationships to land is not romantic. It is structural. European property law treats land as a commodity — something that can be owned, bought, sold, and extracted from. Most indigenous traditions treat land as a relative — something you belong to, are responsible for, and exist in relationship with. The ecological consequences of those two frameworks, applied at civilizational scale over centuries, are now visible in the state of the planet. The framework that treated land as a relative maintained ecological balance for thousands of years. The framework that treated it as a resource has produced the current crisis in about 250.",
-                            "links": [
-                              {
-                                "label": "Native Land Digital",
-                                "url": "https://native-land.ca",
-                                "emoji": "🗺️"
-                              }
-                            ],
-                            "topPills": [],
-                            "bottomPills": [
-                              {
-                                "id": "c_env_move_indigenous",
-                                "label": "Indigenous Stewardship",
-                                "desc": "",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": []
-                              },
-                              {
-                                "id": "c_env_ourpower",
-                                "label": "Our Power, Our Planet",
-                                "desc": "",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": []
-                              }
-                            ]
-                          }
-                        ],
-                        "bottomPills": []
-                      }
-                    ],
+                    "topPills": [],
                     "bottomPills": []
                   },
                   {
@@ -1450,10 +1440,12 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "c_env_ourpower",
@@ -1480,7 +1472,8 @@ const LAYERS = [
                 "desc": "The scale of the problem does not mean individual and community action is irrelevant. It means it is necessary but not sufficient. Community cleanups, local policy advocacy, mutual aid, urban gardens, community solar — these are not symbolic gestures. They are the building blocks of the political will that produces the systemic change. You organize locally because that is where organizing is possible. You build nationally because that is where the policy lives.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_op_policy",
@@ -1500,7 +1493,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_op_individual",
@@ -1509,7 +1503,8 @@ const LAYERS = [
                 "desc": "Individual action matters. It also does not matter as much as the fossil fuel industry wants you to think it does. The concept of the personal carbon footprint was popularized by a BP advertising campaign in 2004 — a deliberate strategy to shift responsibility from producers to consumers. Recycling, diet, flying less — these are real and worth doing. They are also insufficient without systemic change. Both things are true simultaneously. Do what you can. Demand more than that.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "c_env_op_25pct",
@@ -1518,7 +1513,8 @@ const LAYERS = [
                 "desc": "Research on social change suggests that when roughly 25% of a population commits to a norm, it tends to tip — becoming the new default for the whole group. This has been observed in corporate culture, in social movements, in public health behavior. The environmental movement does not need to convert everyone. It needs committed minorities large enough to change markets, shift norms, and make environmental responsibility politically unavoidable. That threshold is closer than it looks.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
             "bottomPills": [
@@ -1528,7 +1524,8 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "com_tp3",
@@ -1536,12 +1533,15 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "c2",
@@ -1578,7 +1578,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "c4",
@@ -1590,7 +1591,8 @@ const LAYERS = [
         "desc": "The great pacifier and the great mirror. What a culture entertains itself with reveals what it actually values — not what it claims to value at the podium. The size of the industry is the size of the need it fills.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "topPills": [
@@ -1608,9 +1610,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "com_tp2",
@@ -1625,7 +1629,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "com_tp3",
@@ -1640,7 +1645,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "com_tp4",
@@ -1655,7 +1661,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "com_tp5",
@@ -1682,9 +1689,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -1747,7 +1756,8 @@ const LAYERS = [
         "desc": "Not just reading — the capacity to parse power. Who gave you this? Who withheld it from others on purpose? The gap between those two questions is policy. The internet extended literacy to a billion people and simultaneously buried it under an avalanche of noise.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "e2",
@@ -1780,7 +1790,8 @@ const LAYERS = [
                 "desc": "The foundations — counting, operations, and the rules for manipulating quantities and unknowns. The math most people use every day without realizing it underpins everything from a grocery bill to a rocket trajectory.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_math_geo",
@@ -1789,7 +1800,8 @@ const LAYERS = [
                 "desc": "The mathematics of shape, space, and structure. From Euclid's Elements to the non-Euclidean geometries that made Einstein's relativity possible. Architecture, art, navigation, and physics all run on geometry.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_math_calc",
@@ -1798,7 +1810,8 @@ const LAYERS = [
                 "desc": "Invented independently by Newton and Leibniz in the 17th century, calculus is the mathematics of change. It made modern physics, engineering, and economics possible. Every curve, every rate of change, every optimization problem runs on calculus.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_math_stats",
@@ -1807,9 +1820,11 @@ const LAYERS = [
                 "desc": "The mathematics of uncertainty. How to draw conclusions from incomplete information, how likely something is, how confident we should be in a result. Essential for medicine, polling, finance, AI, and every claim that begins with \"studies show.\"",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "e2_hard",
@@ -1833,9 +1848,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "e2_chemistry",
@@ -1844,7 +1861,8 @@ const LAYERS = [
                 "desc": "The science of matter — what things are made of, how they combine, and what happens when they react. Chemistry is the bridge between physics and biology, between the atomic and the alive. It gave us pharmaceuticals, plastics, fertilizers, and explosives.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_biology",
@@ -1853,7 +1871,8 @@ const LAYERS = [
                 "desc": "The study of living things — how they are built, how they function, how they reproduce, how they evolve. Biology encompasses everything from the molecular machinery of the cell to the ecology of the entire planet. Darwin's theory of evolution by natural selection is its organizing principle.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_earth",
@@ -1862,7 +1881,8 @@ const LAYERS = [
                 "desc": "The study of the planet itself — geology, meteorology, oceanography, climatology. Earth science tells us how old the planet is, how its continents move, how its climate has changed, and what humans are doing to it now.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_astron",
@@ -1878,9 +1898,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "e2_environ",
@@ -1889,9 +1911,11 @@ const LAYERS = [
                 "desc": "The interdisciplinary study of the natural world and human impact on it. Environmental science draws on biology, chemistry, geology, and economics to understand climate change, pollution, biodiversity loss, and the sustainability of human civilization.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "e2_social",
@@ -1908,7 +1932,8 @@ const LAYERS = [
                 "desc": "The study of the mind and behavior — how humans think, feel, perceive, learn, and act. Psychology sits at the intersection of biology and culture, the individual and the social. Its findings are frequently misapplied, occasionally revolutionary, and always contested.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_sociology",
@@ -1917,7 +1942,8 @@ const LAYERS = [
                 "desc": "The study of human society — how groups form, how institutions function, how inequality persists, how culture changes. Sociology asks why the world is organized the way it is and in whose interest that organization serves.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_anthro",
@@ -1926,7 +1952,8 @@ const LAYERS = [
                 "desc": "The broadest of the social sciences — the study of humanity across time and culture. Cultural anthropology examines how different societies live. Physical anthropology traces human evolution. Archaeology recovers the past from what was left behind.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_econ",
@@ -1967,7 +1994,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "f_rc",
@@ -1975,7 +2003,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "c7_garage",
@@ -1983,14 +2012,18 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       }
                     ],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "e2_polisci",
@@ -2006,11 +2039,14 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "e2_method",
@@ -2027,7 +2063,8 @@ const LAYERS = [
                 "desc": "Science begins with looking carefully and asking a specific, testable question. A hypothesis is not a guess — it is a falsifiable prediction. If there is no way to prove it wrong, it is not science.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_method_peer",
@@ -2036,7 +2073,8 @@ const LAYERS = [
                 "desc": "The process by which scientific findings are evaluated by other experts before publication. Peer review is imperfect, slow, and sometimes corrupted — but it remains the best mechanism humans have for catching errors and filtering out bad science.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_method_rep",
@@ -2045,7 +2083,8 @@ const LAYERS = [
                 "desc": "A finding is not established until it can be reproduced by independent researchers. The replication crisis — the discovery that many published findings in psychology and medicine cannot be reproduced — has forced a reckoning about the reliability of scientific literature.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_method_cons",
@@ -2054,9 +2093,11 @@ const LAYERS = [
                 "desc": "When overwhelming evidence from multiple independent lines of inquiry converges on the same conclusion, that is scientific consensus. It is not unanimity — scientists disagree constantly. It is the weight of evidence. Climate change, evolution, vaccine safety, and the age of the universe are consensus. Treating them as matters of opinion is not skepticism — it is denial.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "e2_histsci",
@@ -2073,7 +2114,8 @@ const LAYERS = [
                 "desc": "The 16th and 17th century transformation in which Europe stopped deferring to ancient authority and began testing the world directly. Copernicus displaced the earth from the center of the universe. Galileo pointed a telescope at the sky. Newton unified terrestrial and celestial mechanics with mathematics. Nothing was the same after.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e2_enlighten",
@@ -2089,9 +2131,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "e2_darwin",
@@ -2107,9 +2151,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "e2_quantum_hist",
@@ -2125,11 +2171,14 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           }
         ],
         "bottomPills": [
@@ -2139,9 +2188,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "e_ah",
@@ -2182,7 +2233,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "e_ah_d2",
@@ -2204,7 +2256,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "e_ah_d3",
@@ -2226,7 +2279,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "e_ah_d4",
@@ -2241,10 +2295,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "e_fe",
@@ -2300,10 +2356,12 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "e4",
@@ -2323,10 +2381,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "c7",
@@ -2392,10 +2452,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "topPills": [
@@ -2419,9 +2481,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "edu_tp2",
@@ -2430,7 +2494,8 @@ const LAYERS = [
         "desc": "Knowledge has gatekeepers. Who gets to be an expert, who gets published, who gets funded, who gets cited — these are not purely meritocratic processes. They are social processes, which means they carry the biases of the societies that built them. The credential is real. The knowledge it certifies is real. The question of who was systematically excluded from earning it is also real, and the answer shapes what we know and don't know.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "edu_tp3",
@@ -2493,7 +2558,8 @@ const LAYERS = [
                     "desc": "Before writing there was the spoken word, memorized and transmitted with extraordinary precision. The Homeric epics were oral compositions for centuries before anyone wrote them down. The Vedas were preserved in oral tradition for millennia with an accuracy that rivals written transmission. Oral cultures developed memory techniques — rhythm, repetition, narrative — that writing made unnecessary and that we have largely forgotten.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e1_alphabet",
@@ -2502,7 +2568,8 @@ const LAYERS = [
                     "desc": "The Phoenician alphabet — 22 consonants, no vowels — was the ancestor of Greek, Latin, Arabic, Hebrew, and most of the writing systems used today. Its genius was simplicity: instead of thousands of pictographs, just a few dozen symbols that could represent any sound in any language. The alphabet democratized literacy. You could learn it in weeks, not years. That was a political revolution dressed as a technology.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e1_print",
@@ -2511,7 +2578,8 @@ const LAYERS = [
                     "desc": "Gutenberg's movable type press, circa 1440, did not just make books cheaper. It broke the church's monopoly on the written word, made the Reformation possible, accelerated the Scientific Revolution, and eventually produced the newspaper, the pamphlet, the novel, and the concept of public opinion. Every subsequent information revolution — telegraph, radio, television, internet — is the printing press running faster.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "bottomPills": [
@@ -2545,7 +2613,8 @@ const LAYERS = [
                           }
                         ],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "h2_diversity",
@@ -2560,7 +2629,8 @@ const LAYERS = [
                           }
                         ],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "h2_power",
@@ -2569,7 +2639,8 @@ const LAYERS = [
                         "desc": "Who names things controls things. Colonial powers renamed mountains, rivers, and peoples as an act of possession. The erasure of indigenous languages was policy — residential schools explicitly forbade native languages because language carries culture and culture carries resistance. The fight over terminology in politics, medicine, and law is never just a fight about words. It is a fight about who gets to define reality.",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "h2_writing_link",
@@ -2585,9 +2656,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "h2_endangered",
@@ -2602,12 +2675,15 @@ const LAYERS = [
                           }
                         ],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
                     ],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "e1_library",
@@ -2627,7 +2703,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "e1_internet",
@@ -2654,7 +2731,8 @@ const LAYERS = [
                     "desc": "Wikipedia. Khan Academy. The Internet Archive. Project Gutenberg. OpenCourseWare. The open knowledge movement holds that information essential to human flourishing should be free, accessible, and maintained by communities rather than owned by corporations. It is one of the more quietly radical ideas of the digital age, and it is working.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e1_surveillance",
@@ -2669,7 +2747,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "bottomPills": [
@@ -2679,7 +2758,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "c7",
@@ -2720,7 +2800,8 @@ const LAYERS = [
                           }
                         ],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "c7_ownership",
@@ -2747,7 +2828,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "p_mil",
@@ -2755,7 +2837,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "p_corp",
@@ -2770,7 +2853,8 @@ const LAYERS = [
                                 "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
                                 "links": [],
                                 "topPills": [],
-                                "bottomPills": []
+                                "bottomPills": [],
+                                "orbs": []
                               },
                               {
                                 "id": "p_corp_monopoly",
@@ -2797,7 +2881,8 @@ const LAYERS = [
                                     "desc": "",
                                     "links": [],
                                     "topPills": [],
-                                    "bottomPills": []
+                                    "bottomPills": [],
+                                    "orbs": []
                                   },
                                   {
                                     "id": "c7_platform",
@@ -2805,9 +2890,11 @@ const LAYERS = [
                                     "desc": "",
                                     "links": [],
                                     "topPills": [],
-                                    "bottomPills": []
+                                    "bottomPills": [],
+                                    "orbs": []
                                   }
-                                ]
+                                ],
+                                "orbs": []
                               },
                               {
                                 "id": "p_corp_tech",
@@ -2834,7 +2921,8 @@ const LAYERS = [
                                     "desc": "The design company that became a religion, then a supply chain, then a surveillance device you carry in your pocket and love. Apple did not invent the smartphone. It invented the smartphone you couldn't imagine not having. The genius was not the technology — it was the experience, the identity, the feeling of belonging to something. Every Apple product is a mirror that shows you a slightly better version of yourself. That is worth a lot of money and it turns out people will pay almost anything for it.",
                                     "links": [],
                                     "topPills": [],
-                                    "bottomPills": []
+                                    "bottomPills": [],
+                                    "orbs": []
                                   },
                                   {
                                     "id": "p_corp_google",
@@ -2850,9 +2938,11 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       }
-                                    ]
+                                    ],
+                                    "orbs": []
                                   },
                                   {
                                     "id": "p_corp_amazon",
@@ -2868,7 +2958,8 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       },
                                       {
                                         "id": "c7_garage",
@@ -2876,9 +2967,11 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       }
-                                    ]
+                                    ],
+                                    "orbs": []
                                   },
                                   {
                                     "id": "p_corp_meta",
@@ -2900,7 +2993,8 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       },
                                       {
                                         "id": "c7_algo_editor",
@@ -2908,9 +3002,11 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       }
-                                    ]
+                                    ],
+                                    "orbs": []
                                   },
                                   {
                                     "id": "p_corp_microsoft",
@@ -2926,9 +3022,11 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       }
-                                    ]
+                                    ],
+                                    "orbs": []
                                   },
                                   {
                                     "id": "p_corp_openai",
@@ -2955,7 +3053,8 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       },
                                       {
                                         "id": "p_gov_cor",
@@ -2963,17 +3062,22 @@ const LAYERS = [
                                         "desc": "",
                                         "links": [],
                                         "topPills": [],
-                                        "bottomPills": []
+                                        "bottomPills": [],
+                                        "orbs": []
                                       }
-                                    ]
+                                    ],
+                                    "orbs": []
                                   }
                                 ],
-                                "bottomPills": []
+                                "bottomPills": [],
+                                "orbs": []
                               }
                             ],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "c7_garage",
@@ -2989,7 +3093,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "p2_american_dream",
@@ -2997,9 +3102,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "c7_platform",
@@ -3026,7 +3133,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "e1_surveillance",
@@ -3034,7 +3142,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "c2",
@@ -3042,9 +3151,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "c7_controlled",
@@ -3066,7 +3177,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "c7_ownership",
@@ -3074,9 +3186,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "c7_algo_editor",
@@ -3103,7 +3217,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "edu_tp4",
@@ -3111,7 +3226,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "pol_tp4",
@@ -3119,19 +3235,25 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       }
                     ],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "edu_tp4",
@@ -3151,7 +3273,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "edu_tp5",
@@ -3171,7 +3294,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -3256,9 +3380,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "pol_tp2",
@@ -3280,9 +3406,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "pol_tp3",
@@ -3302,7 +3430,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "pol_tp4",
@@ -3329,9 +3458,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "pol_tp5",
@@ -3363,9 +3494,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       }
     ],
     "orbs": [
@@ -3394,7 +3527,8 @@ const LAYERS = [
                 "desc": "The idea, developed by Hobbes, Locke, and Rousseau, that government derives its legitimacy from an agreement — explicit or implied — between the governed and those who govern. People surrender some freedom in exchange for security and order. When government breaks the contract, the people retain the right to alter or abolish it. That last sentence is in the Declaration of Independence.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_rulelaw",
@@ -3403,7 +3537,8 @@ const LAYERS = [
                 "desc": "The principle that no person — including those in power — is above the law. Laws apply equally, are publicly known, are enforced consistently, and are adjudicated independently. Rule of law is the difference between a government and a gang. It is easier to describe than to maintain.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_publicgood",
@@ -3412,7 +3547,8 @@ const LAYERS = [
                 "desc": "The idea that government exists to serve the common interest — not the interests of those who hold power, or those who fund campaigns, or those who own the most property. Defining what the public good actually requires is the central argument of democratic politics.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_legitimacy",
@@ -3421,7 +3557,8 @@ const LAYERS = [
                 "desc": "A government is legitimate when the governed accept its authority as rightful — not merely as force. Legitimacy can come from tradition, from divine sanction, from elections, or from delivering results. When legitimacy collapses, governments fall — sometimes quietly, sometimes not.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_cr",
@@ -3437,7 +3574,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "h6",
@@ -3445,11 +3583,14 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "p_gov_types",
@@ -3466,7 +3607,8 @@ const LAYERS = [
                 "desc": "Government by the people, exercised through free elections, protected rights, and the rule of law. No democracy is perfect — all are works in progress, subject to erosion from within. The United States is a constitutional republic with democratic features, not a pure democracy. The distinction matters.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_repub",
@@ -3475,7 +3617,8 @@ const LAYERS = [
                 "desc": "A system in which power is held by elected representatives rather than directly by the people or a monarch. Most modern democracies are republics. The Roman Republic lasted 500 years before becoming an empire — a cautionary tale that the founders of the United States studied carefully.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_auth",
@@ -3484,7 +3627,8 @@ const LAYERS = [
                 "desc": "Government in which power is concentrated in a single leader or party with little or no accountability to the governed. Authoritarian regimes may hold elections — but not free ones. They may have constitutions — but not rule of law. The line between democracy and authoritarianism is thinner than most people think, and the crossing is often gradual.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_theo",
@@ -3500,9 +3644,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "p_gov_monarch",
@@ -3511,9 +3657,11 @@ const LAYERS = [
                 "desc": "Government by a hereditary ruler — a king, queen, emperor, or sultan. Absolute monarchies, in which the ruler holds unchecked power, are rare today. Constitutional monarchies, in which a monarch reigns but does not rule, persist in the UK, Spain, Japan, and elsewhere. The institution is older than writing.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "p_gov_us",
@@ -3584,7 +3732,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e6p_articles",
@@ -3593,7 +3742,8 @@ const LAYERS = [
                     "desc": "The original seven articles of the Constitution establish the structure of the federal government: Article I creates Congress, Article II the Presidency, Article III the Courts. Articles IV through VII deal with federalism, supremacy, ratification, and the relationship between states. The first three articles and their balance of power were the founding generation's most consequential design decision.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e6p_bor",
@@ -3602,7 +3752,8 @@ const LAYERS = [
                     "desc": "The first ten amendments to the Constitution, ratified in 1791 as the price of ratification in several key states. Freedom of speech, religion, press, assembly. The right to bear arms. Protection against unreasonable search and seizure, self-incrimination, and cruel punishment. These ten amendments define the relationship between the individual and the state — and their interpretation has been contested ever since.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e6p_amend",
@@ -3611,7 +3762,8 @@ const LAYERS = [
                     "desc": "The Constitution has been amended 27 times — the most recent in 1992. The amendments tell the story of America's ongoing argument with itself: abolishing slavery (13th), granting citizenship to the formerly enslaved (14th), giving women the vote (19th), limiting presidential terms (22nd). The amendment process is intentionally difficult. That difficulty is both the Constitution's strength and its limitation.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e6p_crisis",
@@ -3620,9 +3772,11 @@ const LAYERS = [
                     "desc": "Moments when the constitutional system was pushed to — or past — its limits. The Civil War. Reconstruction. FDR's court-packing threat. Watergate. The disputed 2000 election. January 6, 2021. A constitution is only as strong as the willingness of those in power to honor it. That willingness has been tested repeatedly and is being tested now.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "p_left_right",
@@ -3651,7 +3805,8 @@ const LAYERS = [
                         "desc": "The center of the party — institutionalist, incrementalist, and focused on electability. Prioritizes winning over ideological purity, which frustrates the left flank and energizes the right's caricature. The establishment has delivered real policy — the ACA, climate legislation, labor protections — while being accused by its own base of not fighting hard enough for any of it. The tension is real. So are the results.",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "p_left_progressive",
@@ -3660,7 +3815,8 @@ const LAYERS = [
                         "desc": "The left flank of the Democratic Party — pushing the Overton window on healthcare, housing, climate, and economic inequality. Often further ahead of public opinion than polling suggests, and more right than wrong on the long arc. The progressive wing has moved the center of gravity of the party on issues that were once fringe and are now mainstream. Its weakness is coalition-building. Its strength is vision.",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "p_left_dsa",
@@ -3682,7 +3838,8 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           },
                           {
                             "id": "p_gov_publicgood",
@@ -3690,9 +3847,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "p_left_labor",
@@ -3701,7 +3860,8 @@ const LAYERS = [
                         "desc": "The original coalition. Before identity politics, before culture wars, the Democratic Party was built on organized labor — the idea that workers have power when they act together and very little when they don't. Union membership has declined for fifty years, tracked almost exactly by the decline of the middle class. The resurgence of labor organizing in the 2020s — Starbucks, Amazon, Hollywood — is the party's oldest story being told again by a new generation.",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "p_left_fringe",
@@ -3710,10 +3870,12 @@ const LAYERS = [
                         "desc": "The loudest voices in any coalition are rarely the most representative. The academic and activist fringe of the left speaks a language — highly specialized, morally urgent, fluent in theory — that most working Democrats do not recognize as their own. This is not a dismissal of the ideas. Some of them are right. It is an observation about translation: ideas that cannot be explained at a kitchen table rarely survive contact with an election.",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
                     ],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_the_right",
@@ -3735,7 +3897,8 @@ const LAYERS = [
                         "desc": "The Edmund Burke tradition — change should be gradual, institutions earned their authority through time and should not be dismantled lightly, order is a precondition for freedom. This is conservatism as philosophy, not as culture war. It is skeptical of revolution from any direction. It believes that what has been built deserves respect even when it needs reform. It is currently the least represented strain in the Republican Party and the most intellectually serious.",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "p_right_corporate",
@@ -3757,9 +3920,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "p_right_religious",
@@ -3794,7 +3959,8 @@ const LAYERS = [
                                 "desc": "",
                                 "links": [],
                                 "topPills": [],
-                                "bottomPills": []
+                                "bottomPills": [],
+                                "orbs": []
                               },
                               {
                                 "id": "p_gov_sep",
@@ -3802,9 +3968,11 @@ const LAYERS = [
                                 "desc": "",
                                 "links": [],
                                 "topPills": [],
-                                "bottomPills": []
+                                "bottomPills": [],
+                                "orbs": []
                               }
-                            ]
+                            ],
+                            "orbs": []
                           }
                         ],
                         "bottomPills": [
@@ -3814,9 +3982,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "p_right_maga",
@@ -3832,9 +4002,11 @@ const LAYERS = [
                             "desc": "",
                             "links": [],
                             "topPills": [],
-                            "bottomPills": []
+                            "bottomPills": [],
+                            "orbs": []
                           }
-                        ]
+                        ],
+                        "orbs": []
                       },
                       {
                         "id": "p_right_fringe",
@@ -3843,10 +4015,12 @@ const LAYERS = [
                         "desc": "Beyond MAGA — the militias, the accelerationists, the conspiracy ecosystems, the groups for whom democracy itself is the problem. A small fraction of the coalition, loud and visible enough to define the whole in the eyes of the opposition, invisible enough to the center that their growth goes underestimated. Named here not to amplify but to locate — the fringe is not the party and the party is not the fringe. Both things are true simultaneously and both matter.",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
                     ],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_party_system",
@@ -3866,7 +4040,8 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_pride_patriotism",
@@ -3882,7 +4057,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "p_gov_publicgood",
@@ -3890,9 +4066,11 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   },
                   {
                     "id": "p_nationalism",
@@ -3919,7 +4097,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "h1",
@@ -3927,12 +4106,15 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   }
                 ],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_sep",
@@ -3949,7 +4131,8 @@ const LAYERS = [
                     "desc": "Congress — the Senate and the House of Representatives — holds the power to make law, control the budget, declare war, and check the executive through oversight and impeachment. It is the branch closest to the people by design. It is also the branch most vulnerable to capture by narrow interests.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_exec",
@@ -3958,7 +4141,8 @@ const LAYERS = [
                     "desc": "The President holds executive power — enforcing the law, commanding the military, conducting foreign policy, and appointing federal officers. The executive branch has grown dramatically since 1787. The question of how much power a president can legally claim — and how much can be taken — is the defining constitutional question of the modern era.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_jud",
@@ -3967,7 +4151,8 @@ const LAYERS = [
                     "desc": "Federal courts — headed by the Supreme Court — interpret the law and can strike down acts of Congress or the President as unconstitutional. Federal judges serve for life, insulating them from political pressure in theory. The Supreme Court's composition is itself a political question, decided by whoever controls the Senate and the White House.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_checks",
@@ -3976,9 +4161,11 @@ const LAYERS = [
                     "desc": "The specific mechanisms by which each branch limits the others: veto and override, confirmation and appointment, judicial review, impeachment, the power of the purse. The founders designed these checks because they had lived under unchecked power and trusted no one with it — including themselves.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "p_gov_vote",
@@ -4006,7 +4193,8 @@ const LAYERS = [
                     "desc": "The history of who gets to vote in America is a history of expansion and contraction. Property requirements, race restrictions, poll taxes, literacy tests — and the movements that dismantled them. The Voting Rights Act of 1965 was the high-water mark. Its gutting by the Supreme Court in 2013 opened the door to a new wave of restrictions.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_elect_college",
@@ -4015,7 +4203,8 @@ const LAYERS = [
                     "desc": "The mechanism by which the United States elects its president — not by national popular vote but through 538 electors allocated by state. Twice in the last 25 years, a candidate won the presidency while losing the popular vote. The Electoral College was a compromise at the founding. Whether it is still a reasonable one is actively debated.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_gerry",
@@ -4024,7 +4213,8 @@ const LAYERS = [
                     "desc": "The manipulation of electoral district boundaries to advantage one party or group. The practice is as old as the republic — the term dates to 1812. Modern computing has made it dramatically more precise and effective. Both parties do it. The result is a system where politicians choose their voters rather than voters choosing their representatives.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_campaign",
@@ -4033,9 +4223,11 @@ const LAYERS = [
                     "desc": "The rules — and the absence of rules — governing who can give money to political campaigns and how much. Citizens United (2010) held that political spending is protected speech and corporations can spend unlimited amounts. The result is a system in which the price of political access has made most Americans effectively spectators in their own democracy.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "p_gov_cor",
@@ -4058,7 +4250,8 @@ const LAYERS = [
                     "desc": "The legal industry of attempting to influence government decisions on behalf of paying clients. In the United States, lobbying is protected speech. There are more registered lobbyists in Washington than members of Congress times ten. The line between legitimate advocacy and legalized corruption is the central question of American political economy.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_cor_dark",
@@ -4067,7 +4260,8 @@ const LAYERS = [
                     "desc": "Political spending by nonprofit organizations that are not required to disclose their donors. After Citizens United, dark money became a major feature of American elections. Hundreds of millions of dollars influence political campaigns and policy debates with no public accounting of where the money comes from or whose interests it serves.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "p_gov_cor_revolve",
@@ -4076,11 +4270,14 @@ const LAYERS = [
                     "desc": "The movement of individuals between government regulatory positions and the industries they regulate. A regulator becomes a lobbyist. A senator becomes a bank executive. The knowledge, relationships, and access built in public service are monetized in private industry. The public interest is represented by whoever is left.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "p_gov_intl",
@@ -4097,7 +4294,8 @@ const LAYERS = [
                 "desc": "Founded in 1945 after World War II to prevent another global conflict. The UN provides a forum for diplomacy, coordinates humanitarian response, and establishes international norms. It is constrained by the veto power of its five permanent Security Council members — the US, UK, France, Russia, and China — which can paralyze action when great powers disagree.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_treaties",
@@ -4106,7 +4304,8 @@ const LAYERS = [
                 "desc": "Agreements between nations that carry the force of law — governing trade, war, human rights, the environment, nuclear weapons, and more. International law has no police force. Compliance depends on reputation, reciprocity, and the willingness of powerful nations to submit to rules they helped write.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_nato",
@@ -4122,9 +4321,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "p_gov_sovereignty",
@@ -4133,9 +4334,11 @@ const LAYERS = [
                 "desc": "The principle that nations have the right to govern themselves without outside interference — and the equally powerful principle that peoples have the right to determine their own political future. These two principles are frequently in conflict. The history of the post-colonial world is largely the story of that conflict.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "p_gov_change",
@@ -4159,9 +4362,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "p_gov_reform",
@@ -4170,7 +4375,8 @@ const LAYERS = [
                 "desc": "Change from within — gradual, incremental, working through existing institutions. Reform is slower than revolution and less dramatic. It is also more likely to last. The abolition of slavery, women's suffrage, the New Deal, the Civil Rights Act — these were reforms, achieved through organizing, legislation, and years of sustained pressure.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "p_gov_constchange",
@@ -4186,9 +4392,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "p_gov_collapse",
@@ -4197,12 +4405,15 @@ const LAYERS = [
                 "desc": "When governments lose the capacity or legitimacy to function — through war, corruption, economic failure, or political crisis. Failed states create humanitarian catastrophe and regional instability. They are rarely accidents. They are usually the endpoint of a long process of institutional erosion that was visible long before the collapse.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "p_corp",
@@ -4221,10 +4432,12 @@ const LAYERS = [
             "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "p5",
@@ -4254,10 +4467,12 @@ const LAYERS = [
             "desc": "The deliberate engineering of what people believe is true, important, or possible. Not always a lie — sometimes just a frame, a sequence, an omission.",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "p_mil",
@@ -4320,10 +4535,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "p2",
@@ -4369,7 +4586,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "p2_exp",
@@ -4378,7 +4596,8 @@ const LAYERS = [
             "desc": "The extraction of value from labor, land, or people at a price that only one party agreed to. The engine beneath most of the wealth in this layer.",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "p2_trade",
@@ -4406,10 +4625,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -4471,7 +4692,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "h3",
@@ -4512,7 +4734,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "h3d0",
@@ -4532,7 +4755,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "h3d1",
@@ -4541,7 +4765,8 @@ const LAYERS = [
             "desc": "The recurring reset. Sometimes violent, sometimes tidal. The moment when the accumulated weight of a structure becomes greater than the people's willingness to hold it up. Every ruling class believes it will be the last to face one.",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "h3d2",
@@ -4566,10 +4791,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "h6",
@@ -4592,7 +4819,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "h1",
@@ -4628,7 +4856,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "h1d2",
@@ -4643,10 +4872,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "h4",
@@ -4658,7 +4889,8 @@ const LAYERS = [
         "desc": "The original human act. Every border is a line drawn through a migration route. Every 'native' population arrived from somewhere else, earlier. The timeline just depends on where you start counting.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "h2",
@@ -4670,7 +4902,8 @@ const LAYERS = [
         "desc": "The oldest technology. Every language encodes a different theory of reality. To lose a language is to lose a way of seeing the world that will never exist again. There are roughly 7,000 languages alive today. Half will be gone by 2100.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "topPills": [
@@ -4692,7 +4925,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "hist_tp2",
@@ -4714,9 +4948,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "hist_tp3",
@@ -4738,9 +4974,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "hist_tp4",
@@ -4755,7 +4993,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "hist_tp5",
@@ -4764,7 +5003,8 @@ const LAYERS = [
         "desc": "What a society chooses to commemorate is what it chooses to be. The statue in the town square is an argument. The name on the school is an argument. What gets put in the museum and what gets left in the storage room is an argument. These arguments have always been contested — the fights over monuments are not new, only newly visible. Who gets to be a hero in the official story is the same question as who gets to belong.",
         "links": [],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "hist_first_nations",
@@ -4822,7 +5062,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "hist_fn_removal",
@@ -4830,12 +5071,15 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "hist_fn_plains",
@@ -4870,9 +5114,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "hist_fn_blackhills",
@@ -4887,10 +5133,12 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "hist_fn_southwest",
@@ -4899,7 +5147,8 @@ const LAYERS = [
             "desc": "The Navajo, Apache, Pueblo peoples, Hopi, Zuni — nations whose roots in the Southwest predate European contact by thousands of years. Acoma Pueblo has been continuously inhabited since at least 1150 CE, making it one of the oldest continuously occupied settlements in North America. The Navajo Long Walk of 1864 — the forced relocation of 8,000 Navajo to Bosque Redondo — killed thousands and is the Navajo Trail of Tears. Geronimo and the Apache resisted until 1886, the last armed resistance in the continental United States. The Southwest nations survived in place in ways the Eastern and Plains nations largely could not — the land was less immediately desirable, the resistance more protracted, the cultural continuity more intact.",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "hist_fn_northwest",
@@ -4908,7 +5157,8 @@ const LAYERS = [
             "desc": "The nations of the Pacific Northwest — Chinook, Haida, Tlingit, Salish, Nez Perce — built sophisticated cultures around the salmon, the cedar, and the sea. The totem pole is not decorative — it is a genealogical and historical record. The potlatch, a ceremonial feast of gift-giving and redistribution, was so threatening to colonial economic logic that Canada banned it in 1885. The ban lasted until 1951. Chief Joseph of the Nez Perce led one of the most remarkable military retreats in American history — 1,400 miles toward Canada with women, children, and elders, pursued by the Army — before surrendering 40 miles from the border.",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "hist_fn_removal",
@@ -4941,7 +5191,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "hist_smallpox",
@@ -4956,7 +5207,8 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "hist_boarding",
@@ -4976,10 +5228,12 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "hist_fn_sovereignty",
@@ -4999,7 +5253,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "hist_fn_survival",
@@ -5019,7 +5274,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
         "bottomPills": [
@@ -5029,7 +5285,8 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "x5_americas",
@@ -5045,7 +5302,8 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "h3",
@@ -5053,9 +5311,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -5143,7 +5403,8 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "xc2",
@@ -5165,10 +5426,12 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "x2",
@@ -5199,7 +5462,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "x1",
@@ -5237,7 +5501,8 @@ const LAYERS = [
             "desc": "The gods of Greece and Rome were not distant abstractions — they were jealous, lustful, political, and petty. They were humanity projected onto the sky and given power. These myths became the foundation of Western literature, philosophy, art, and science. The planets still carry their names.",
             "links": [],
             "bottomPills": [],
-            "topPills": []
+            "topPills": [],
+            "orbs": []
           },
           {
             "id": "x1_norse",
@@ -5246,7 +5511,8 @@ const LAYERS = [
             "desc": "The mythologies of northern and eastern Europe — gods of war, winter, fate, and the forge. Norse mythology gave us Odin's sacrifice for wisdom, Ragnarok as the end of everything, and a cosmology built around a world tree connecting nine realms. These traditions survived in fragments, preserved partly by Christian scribes who found them too powerful to fully erase.",
             "links": [],
             "bottomPills": [],
-            "topPills": []
+            "topPills": [],
+            "orbs": []
           },
           {
             "id": "x1_egyptian",
@@ -5255,7 +5521,8 @@ const LAYERS = [
             "desc": "The oldest written mythologies on earth. Mesopotamian texts like the Epic of Gilgamesh predate the Bible by over a thousand years and contain flood narratives strikingly similar to Noah's. Egyptian mythology built one of history's most elaborate cosmologies around death, resurrection, and the eternal order of the cosmos.",
             "links": [],
             "bottomPills": [],
-            "topPills": []
+            "topPills": [],
+            "orbs": []
           },
           {
             "id": "x1_creation",
@@ -5271,7 +5538,8 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_astro",
@@ -5279,9 +5547,11 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x3_astro",
@@ -5315,7 +5585,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e2_astron",
@@ -5323,9 +5594,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "x3_astro_vedic",
@@ -5341,7 +5614,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "x5_dharmic",
@@ -5349,9 +5623,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "x3_astro_chinese",
@@ -5367,7 +5643,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "x5_confucianism",
@@ -5375,9 +5652,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "x3_astro_maya",
@@ -5393,7 +5672,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "x1_creation",
@@ -5401,9 +5681,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               },
               {
                 "id": "x3_astro_egyptian",
@@ -5419,7 +5701,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "e2_scirev",
@@ -5427,9 +5710,11 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
             "bottomPills": [
@@ -5439,7 +5724,8 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_histtime",
@@ -5447,9 +5733,11 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           }
         ],
         "bottomPills": [
@@ -5459,7 +5747,8 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "x3_histtime",
@@ -5467,9 +5756,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "x5",
@@ -5505,7 +5796,8 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_astro",
@@ -5513,7 +5805,8 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
             "topPills": [
@@ -5524,7 +5817,8 @@ const LAYERS = [
                 "desc": "The oldest of the Abrahamic faiths and the root from which Christianity and Islam both grew. Judaism is not only a religion but a civilization — a people, a legal tradition, a language, and a continuous 4,000-year conversation with a single God. The Torah, the Talmud, and centuries of rabbinic debate form one of the most intellectually rich traditions in human history.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_christianity",
@@ -5533,7 +5827,8 @@ const LAYERS = [
                 "desc": "The world's largest religion, with over 2 billion adherents across hundreds of denominations. Built on the life, death, and resurrection of Jesus of Nazareth, a Jewish teacher whose followers believed him to be the Son of God. Christianity spread across the Roman Empire, became its state religion, and shaped the political, artistic, and philosophical foundations of Western civilization.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_islam",
@@ -5542,7 +5837,8 @@ const LAYERS = [
                 "desc": "The world's second-largest religion, with 1.8 billion adherents. Founded in 7th century Arabia through the Prophet Muhammad, who received revelations recorded in the Quran. Islam means submission — to one God, Allah. It built one of history's great civilizations, preserving and advancing mathematics, astronomy, medicine, and philosophy while Europe was in its dark ages.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_druze",
@@ -5551,7 +5847,8 @@ const LAYERS = [
                 "desc": "An offshoot of Ismaili Islam that emerged in 11th century Egypt and Syria, the Druze faith incorporates elements of Neoplatonism, Gnosticism, and Abrahamic tradition into a secretive and tightly knit religious community. About one million Druze live primarily in Lebanon, Syria, and Israel. Their faith is not open to converts.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_bahai",
@@ -5560,7 +5857,8 @@ const LAYERS = [
                 "desc": "Founded in 19th century Persia, the Bahá'í Faith teaches the essential unity of all religions and the oneness of humanity. Its founder, Bahá'u'lláh, claimed to be the latest in a line of divine messengers that includes Abraham, Moses, Jesus, and Muhammad. With 5-8 million followers worldwide, it is one of the fastest-growing independent religions.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_mandaean",
@@ -5569,9 +5867,11 @@ const LAYERS = [
                 "desc": "One of the oldest continuously practiced religions in the world, Mandaeism traces its roots to John the Baptist and the Jordan River. Its followers, concentrated historically in Iraq and Iran, practice baptism as a central ritual and revere a dualistic cosmology of light and darkness. Fewer than 100,000 Mandaeans remain, many displaced by war.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x5_dharmic",
@@ -5588,7 +5888,8 @@ const LAYERS = [
                 "desc": "The world's oldest living religion, with roots stretching back over 4,000 years to the Indus Valley civilization. Hinduism is less a single religion than a vast family of traditions — polytheistic, monotheistic, and monistic strains coexist. Its texts include the Vedas, Upanishads, Bhagavad Gita, and the epics Mahabharata and Ramayana.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_buddhism",
@@ -5597,7 +5898,8 @@ const LAYERS = [
                 "desc": "Founded in the 5th century BCE by Siddhartha Gautama in what is now Nepal. Buddhism teaches that suffering arises from attachment and desire, and that liberation comes through the Eightfold Path of ethical conduct, mental discipline, and wisdom. With 500 million followers, it is the fourth-largest religion in the world.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_jainism",
@@ -5606,7 +5908,8 @@ const LAYERS = [
                 "desc": "One of the oldest religions in the world, Jainism teaches non-violence (ahimsa) as its supreme principle. Jains believe every living being has a soul, and that liberation comes through strict ethical discipline and non-attachment. Jain philosophy deeply influenced Mahatma Gandhi's concept of nonviolent resistance.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_sikhism",
@@ -5615,9 +5918,11 @@ const LAYERS = [
                 "desc": "Founded in 15th century Punjab by Guru Nanak, Sikhism teaches devotion to one God, equality of all people, and service to others. With 25-30 million followers it is the fifth-largest religion in the world. The tradition of langar — a free communal kitchen open to all regardless of background — is one of the largest volunteer-run food programs on earth.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x5_eastasian",
@@ -5634,7 +5939,8 @@ const LAYERS = [
                 "desc": "Rooted in the ancient Chinese concept of the Tao — the Way, the underlying principle of the universe. Taoism teaches harmony with nature, simplicity, and non-action (wu wei) — doing less so that more can happen naturally. The Tao Te Ching, attributed to Laozi, is one of the most translated texts in history.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_confucianism",
@@ -5643,7 +5949,8 @@ const LAYERS = [
                 "desc": "Less a religion than a social philosophy, Confucianism is built on the teachings of Confucius (551-479 BCE) and centers on right relationships — between ruler and subject, parent and child, elder and younger, friend and friend. It shaped Chinese governance, education, and family life for over 2,000 years.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_shinto",
@@ -5652,9 +5959,11 @@ const LAYERS = [
                 "desc": "The indigenous spirituality of Japan. Shinto holds that kami — spirits or divine forces — inhabit natural phenomena: mountains, rivers, trees, and ancestors. There is no founding figure, no canonical scripture. Shinto is a practice of purification, gratitude, and right relationship with the natural and ancestral world.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x5_indigenous",
@@ -5668,9 +5977,89 @@ const LAYERS = [
                 "id": "x5_americas",
                 "label": "The Americas",
                 "color": "#7a9a50",
-                "desc": "From the Lakota Sun Dance to the Aztec calendar to the Andean concept of Pachamama — earth as mother — the indigenous spiritual traditions of the Americas represent thousands of distinct cultures and cosmologies. Many were systematically suppressed by colonial authorities and Christian missionaries. Many survive.",
-                "links": [],
-                "topPills": [],
+                "desc": "From the Lakota Sun Dance to the Aztec calendar to the Andean concept of Pachamama — earth as living mother — the indigenous spiritual traditions of the Americas represent thousands of distinct cultures and cosmologies. What they share is a relationship to the natural world as sacred and alive — not a resource to be extracted but a relative to be respected. These traditions survived colonization, suppression, forced conversion, and the deliberate destruction of language and ceremony. Many are being actively reclaimed today.",
+                "links": [
+                  {
+                    "label": "National Museum of the American Indian",
+                    "url": "https://americanindian.si.edu",
+                    "emoji": "🏛️"
+                  },
+                  {
+                    "label": "Native Land Digital",
+                    "url": "https://native-land.ca",
+                    "emoji": "🗺️"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "x5_am_lakota",
+                    "label": "Lakota & Plains Spirituality",
+                    "color": "#7a9a50",
+                    "desc": "Mitákuye Oyásʼiŋ — all are related. The Lakota phrase that opens every ceremony names the foundational worldview: humans are not separate from or superior to the natural world. They are relatives of the buffalo, the eagle, the river, the stone. The Sun Dance, the sweat lodge, the vision quest — these are not quaint customs. They are technologies for maintaining right relationship between the human community and the living world it depends on. The Black Hills are sacred not because a treaty said so but because the Lakota have known it for thousands of years.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "hist_fn_blackhills",
+                        "label": "The Black Hills & Fort Laramie",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x5_am_pachamama",
+                    "label": "Pachamama & Andean Traditions",
+                    "color": "#8aaa40",
+                    "desc": "In the Andean tradition, Pachamama — Earth Mother — is not a metaphor. She is a living entity with rights, needs, and a relationship to the human communities that live within her. Several South American nations have incorporated the rights of nature into their constitutions — Ecuador in 2008, Bolivia in 2010. The legal recognition of a river or a mountain as having rights that can be defended in court is not mysticism. It is a different theory of legal personhood, one that indigenous traditions have practiced relationally for millennia before it appeared in law.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_am_meso",
+                    "label": "Aztec, Maya & Mesoamerican",
+                    "color": "#9a8040",
+                    "desc": "The Maya developed one of the most accurate calendar systems in human history, a sophisticated written language, advanced mathematics including the concept of zero, and cities that rivaled anything in the contemporary world. The Aztec built Tenochtitlan — a city of 200,000 people in the middle of a lake, connected by causeways, with a water supply system that impressed the Spanish who destroyed it. These were not primitive peoples in the path of civilization. They were civilizations, with all the complexity that implies.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_am_stewardship",
+                    "label": "Land as Relative, Not Resource",
+                    "color": "#6a8a30",
+                    "desc": "The distinction between indigenous and European relationships to land is not romantic. It is structural. European property law treats land as a commodity — something that can be owned, bought, sold, and extracted from. Most indigenous traditions treat land as a relative — something you belong to, are responsible for, and exist in relationship with. The ecological consequences of those two frameworks, applied at civilizational scale over centuries, are now visible in the state of the planet. The framework that treated land as a relative maintained ecological balance for thousands of years. The framework that treated it as a resource has produced the current crisis in about 250.",
+                    "links": [
+                      {
+                        "label": "Native Land Digital",
+                        "url": "https://native-land.ca",
+                        "emoji": "🗺️"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c_env_move_indigenous",
+                        "label": "Indigenous Stewardship",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "c_env_ourpower",
+                        "label": "Our Power, Our Planet",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
                 "bottomPills": []
               },
               {
@@ -5680,7 +6069,8 @@ const LAYERS = [
                 "desc": "Africa is the birthplace of humanity and home to some of its oldest spiritual traditions. West African traditions like Yoruba gave rise to diaspora religions — Candomblé, Vodou, Santería — carried across the Atlantic by enslaved people. Ubuntu, the southern African philosophy of shared humanity, is both ethical and spiritual.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_oceania",
@@ -5689,9 +6079,11 @@ const LAYERS = [
                 "desc": "Aboriginal Australian Dreamtime is one of the oldest living cosmologies on earth — a framework in which the land itself is sacred, ancestors created the world through song, and time is not linear but layered. Pacific Islander traditions carry similar themes of connection between land, sea, ancestors, and the living.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x5_ancient",
@@ -5706,7 +6098,8 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
             ],
             "topPills": [
@@ -5717,7 +6110,8 @@ const LAYERS = [
                 "desc": "The Olympian gods of Greece and their Roman counterparts were state religions — practiced through sacrifice, festival, and temple worship. They were also political tools: emperors became gods, wars were fought with divine sanction. The philosophical tradition that grew alongside them quietly dismantled the mythology while keeping the questions.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_egyptian_rel",
@@ -5726,7 +6120,8 @@ const LAYERS = [
                 "desc": "One of history's longest-running religious traditions — over 3,000 years of continuous practice. Egyptian religion was inseparable from the state, centered on Ma'at (cosmic order), the afterlife, and the divine kingship of the pharaoh. Its influence on early monotheism and Gnosticism is significant.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_norse_rel",
@@ -5735,7 +6130,8 @@ const LAYERS = [
                 "desc": "The pre-Christian religious traditions of Scandinavia and the Celtic world. Norse religion centered on warrior virtues, fate, and Ragnarok — the inevitable destruction and renewal of the cosmos. Celtic traditions were largely oral, preserved by druids, and survive mainly in fragments.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_meso_rel",
@@ -5744,9 +6140,11 @@ const LAYERS = [
                 "desc": "The Aztec, Maya, and other Mesoamerican civilizations developed elaborate religious systems centered on cosmic cycles, sacrifice, and the relationship between humans and gods who required sustenance to maintain the universe. The Mayan calendar system is among the most accurate ever devised.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x5_secular",
@@ -5763,7 +6161,8 @@ const LAYERS = [
                 "desc": "The position that there is no God or gods. Not a religion, not a faith — a conclusion. Atheism has existed as long as religion has, though it has rarely been safe to say so publicly. Today roughly 7% of the global population identifies as atheist, with significantly higher rates in parts of Europe and East Asia.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_agnosticism",
@@ -5772,7 +6171,8 @@ const LAYERS = [
                 "desc": "The position that the existence of God is unknown and possibly unknowable. Where atheism says no, agnosticism says we cannot know. The term was coined by Thomas Huxley in 1869. It is the honest position of many who take the question seriously without claiming certainty in either direction.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x5_humanism",
@@ -5781,9 +6181,11 @@ const LAYERS = [
                 "desc": "A philosophical framework that locates meaning, ethics, and human flourishing in reason, science, and human connection rather than religion. Secular humanism holds that humans are capable of defining and living by ethical values without divine authority. It is the implicit philosophy of much of modern liberal democracy.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           }
         ],
         "bottomPills": [
@@ -5793,7 +6195,8 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "x3_histtime",
@@ -5801,9 +6204,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "x3",
@@ -5849,7 +6254,8 @@ const LAYERS = [
                 "desc": "The original clock. The tilt of the earth, the orbit of the moon — these rhythms governed planting and harvest, migration and shelter, ritual and rest for most of human history. They still govern more than we admit.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_calendar",
@@ -5858,7 +6264,8 @@ const LAYERS = [
                 "desc": "The human attempt to standardize the cycle. The Sumerian, Egyptian, Mayan, Julian, Gregorian — each a negotiation between astronomical reality and political necessity. The calendar you use was decided by a pope in 1582.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_agtime",
@@ -5867,9 +6274,11 @@ const LAYERS = [
                 "desc": "For ten thousand years, time meant the growing season. When to plant, when to harvest, when to store, when to rest. The entire structure of ancient society — religion, governance, trade, war — was organized around the agricultural cycle.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x3_linear",
@@ -5886,7 +6295,8 @@ const LAYERS = [
                 "desc": "The belief that things can get better — and the evidence that sometimes they do. Linear time gave us the idea of improvement, of building on what came before. It also gave us the burden of believing every generation should do better than the last.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_cause",
@@ -5895,7 +6305,8 @@ const LAYERS = [
                 "desc": "The foundational assumption of linear time — that what happens now was caused by what happened before, and will cause what comes next. The basis of science, law, and narrative. Quantum mechanics complicates this considerably.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_arrow",
@@ -5904,7 +6315,8 @@ const LAYERS = [
                 "desc": "Why does time only move forward? The laws of physics are mostly reversible — a film of billiard balls played backward looks equally plausible. But entropy gives time its direction. Everything falls apart eventually. That is the arrow.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_entropy",
@@ -5913,9 +6325,11 @@ const LAYERS = [
                 "desc": "The second law of thermodynamics: disorder always increases in a closed system. Ice melts, stars burn out, empires fall. Entropy is why time feels irreversible and why the future is always more uncertain than the past.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x3_quantum",
@@ -5932,7 +6346,8 @@ const LAYERS = [
                 "desc": "Einstein's special and general theories established that time is not fixed — it passes more slowly near massive objects and at high speeds. Two clocks separated by gravity or velocity will disagree on how much time has passed. GPS satellites correct for this every day.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_qm",
@@ -5941,7 +6356,8 @@ const LAYERS = [
                 "desc": "At the subatomic level, particles exist in superposition — multiple states simultaneously — until observed. Entangled particles affect each other instantly across any distance. The neat causality of linear time begins to dissolve.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_observer",
@@ -5950,7 +6366,8 @@ const LAYERS = [
                 "desc": "In quantum physics, the act of observation collapses a wave of probability into a single outcome. The observer is not separate from what is being observed. This has radical implications for our understanding of reality, consciousness, and time itself.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_spacetime",
@@ -5959,9 +6376,11 @@ const LAYERS = [
                 "desc": "Einstein unified space and time into a single four-dimensional fabric. Mass warps it. Energy moves through it. What we experience as gravity is the curvature of spacetime around massive objects. Time and space are not separate stages — they are one continuous medium.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           },
           {
             "id": "x3_timelines",
@@ -5970,7 +6389,8 @@ const LAYERS = [
             "desc": "The human tool for mapping time — arranging events in sequence to find pattern, cause, and meaning. Every civilization builds timelines: genealogies, chronicles, histories, prophecies. A timeline is always an argument about what mattered and what did not.",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "x3_histtime",
@@ -5987,7 +6407,8 @@ const LAYERS = [
                 "desc": "Sundials, water clocks, shadow sticks, lunar calendars. Ancient Egyptians divided the day into 24 hours. Babylonians gave us 60-minute hours and 60-second minutes — a base-60 system still in use today. Stonehenge is a solar calendar. The impulse to measure time precisely is as old as civilization itself.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_clock",
@@ -5996,7 +6417,8 @@ const LAYERS = [
                 "desc": "The mechanical clock, invented in 13th century Europe, changed everything. It standardized time across communities, made coordinated labor possible, and began the slow shift from natural to artificial time. The factory whistle replaced the sunrise. The clock did not just measure time — it reorganized society around it.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_timezone",
@@ -6005,7 +6427,8 @@ const LAYERS = [
                 "desc": "Before 1884, every town kept its own local solar time. The railroad made this chaos — trains could not run on schedules when every station kept a different clock. Standard time zones were agreed upon at the International Meridian Conference in Washington, DC in 1884. The world synchronized itself for commerce.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               },
               {
                 "id": "x3_atomic",
@@ -6014,12 +6437,15 @@ const LAYERS = [
                 "desc": "The cesium atomic clock, developed in the 1950s, is accurate to one second in 300 million years. It defines the official length of a second. GPS satellites carry atomic clocks and must correct for relativistic time dilation to remain accurate. We now measure time more precisely than we understand what time actually is.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": []
+                "bottomPills": [],
+                "orbs": []
               }
-            ]
+            ],
+            "orbs": []
           }
         ],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       }
     ],
     "topPills": [
@@ -6041,7 +6467,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "cosmos_tp2",
@@ -6063,9 +6490,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "cosmos_tp3",
@@ -6085,7 +6514,8 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": []
+        "bottomPills": [],
+        "orbs": []
       },
       {
         "id": "cosmos_tp4",
@@ -6139,7 +6569,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "e2_astron",
@@ -6147,9 +6578,11 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   },
                   {
                     "id": "x3_astro_vedic",
@@ -6165,7 +6598,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "x5_dharmic",
@@ -6173,9 +6607,11 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   },
                   {
                     "id": "x3_astro_chinese",
@@ -6191,7 +6627,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "x5_confucianism",
@@ -6199,9 +6636,11 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   },
                   {
                     "id": "x3_astro_maya",
@@ -6217,7 +6656,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "x1_creation",
@@ -6225,9 +6665,11 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   },
                   {
                     "id": "x3_astro_egyptian",
@@ -6243,7 +6685,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "x1_egyptian",
@@ -6251,7 +6694,8 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       },
                       {
                         "id": "e2_scirev",
@@ -6259,9 +6703,11 @@ const LAYERS = [
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": []
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ]
+                    ],
+                    "orbs": []
                   }
                 ],
                 "bottomPills": [
@@ -6271,7 +6717,8 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   },
                   {
                     "id": "x3_histtime",
@@ -6279,12 +6726,15 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": []
+                    "bottomPills": [],
+                    "orbs": []
                   }
-                ]
+                ],
+                "orbs": []
               }
             ],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "x5",
@@ -6292,9 +6742,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       },
       {
         "id": "cosmos_tp5",
@@ -6321,7 +6773,8 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           },
           {
             "id": "self",
@@ -6329,9 +6782,11 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": []
+            "bottomPills": [],
+            "orbs": []
           }
-        ]
+        ],
+        "orbs": []
       }
     ],
     "bottomPills": []
