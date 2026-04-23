@@ -8318,6 +8318,294 @@ const LAYERS = [
             "bottomPills": [],
             "orbs": []
           }
+,
+          {
+            "id": "occ_secret_societies",
+            "label": "Secret Societies",
+            "color": "#2a3a6a",
+            "desc": "A secret society is a formal organization whose membership, rituals, or purposes are concealed from the public. The secrecy is not incidental — it is structural. It creates loyalty, enforces hierarchy, and produces the conditions for trust between members who would not otherwise have reason to trust each other. Every major civilization has produced them. Some were fraternal. Some were revolutionary. Some were instruments of state power. Some were all three simultaneously. The consistent feature across all of them is not the content of the secret. It is the organizational work the secret performs.",
+            "links": [
+              {
+                "label": "Carroll Quigley — Tragedy and Hope",
+                "url": "https://archive.org",
+                "emoji": "📚"
+              },
+              {
+                "label": "Foreign Affairs — shadow networks",
+                "url": "https://www.foreignaffairs.com",
+                "emoji": "📰"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "occ_ss_ancient",
+                "label": "Ancient & Medieval Orders",
+                "color": "#3a4a7a",
+                "desc": "The oldest secret societies on record were the mystery schools — Eleusis, the Pythagorean Brotherhood, Mithraism — covered in Mystery School Traditions. What follows them are the operational organizations: groups formed not primarily for spiritual transmission but for political, military, or economic purposes, using initiatic structure as their organizational technology.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "occ_ss_anc_assassins",
+                    "label": "The Assassins",
+                    "color": "#7a3a2a",
+                    "desc": "The Nizari Ismaili sect operated from mountain fortresses across Persia and Syria from the 11th to 13th centuries. Their founder Hassan-i Sabbah built a decentralized network of agents capable of targeted killing at distances and timescales that conventional armies could not match. The word assassin derives from their name. The strategic logic — a small, disciplined, covert network projecting power asymmetrically against larger forces — is the template every subsequent asymmetric organization has followed. The Mongols destroyed their headquarters at Alamut in 1256. The legend outlasted the organization by centuries.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_anc_templar",
+                    "label": "Knights Templar",
+                    "color": "#6a5a2a",
+                    "desc": "Founded in 1119 CE to protect Christian pilgrims in the Holy Land, the Knights Templar became within two centuries the most powerful financial and military organization in Europe. They invented the letter of credit — the mechanism by which a pilgrim could deposit money in Paris and withdraw it in Jerusalem without carrying gold across bandit-held roads. This made them the bankers of the Crusades and eventually of European monarchies. Philip IV of France, deeply in debt to them, arrested every Templar in France on the same day in 1307, extracted confessions of heresy under torture, and had the order dissolved by Pope Clement V in 1312. The last Grand Master, Jacques de Molay, was burned at the stake in 1314. Whether any organizational continuity survived into Freemasonry is disputed by historians and asserted by Freemasons.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "occ_org_masonry",
+                        "label": "Freemasonry",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_anc_criminal",
+                    "label": "Criminal Fraternities",
+                    "color": "#5a3a3a",
+                    "desc": "The Thuggee of India operated as an organized criminal fraternity across the subcontinent for centuries before British colonial suppression in the 1830s. The historical evidence for a centralized Thuggee organization is thinner than the British administration claimed — the suppression was partly a colonial project. What is clear is that organized criminal networks using initiatic structure, oath-bound loyalty, and ritual justification have appeared independently in every major civilization. The Triads of China, the Camorra of Naples, the Yakuza of Japan — all share the mystery school's organizational DNA applied to criminal enterprise.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_ss_revolutionary",
+                "label": "Revolutionary Societies",
+                "color": "#2a5a4a",
+                "desc": "The 18th and 19th centuries produced a wave of secret societies organized not for spiritual transmission or criminal enterprise but for political revolution. Operating under repressive regimes where open organizing was impossible, they used initiatic structure — oaths, degrees, cells, need-to-know information sharing — as a survival mechanism. Some succeeded. Some were infiltrated and destroyed. All of them influenced the organizational model of every revolutionary movement that followed.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "occ_ss_rev_carbonari",
+                    "label": "The Carbonari",
+                    "color": "#3a6a4a",
+                    "desc": "The Carbonari — charcoal burners — were a secret revolutionary society active across Italy and France in the early 19th century, dedicated to constitutional government and national liberation from Austrian and Bourbon rule. At their peak they had several hundred thousand members organized in cells that shared only what each level needed to know. Giuseppe Mazzini, Simón Bolívar, and Louis-Napoleon Bonaparte were all members or associates at various points. The Carbonari were the direct organizational ancestors of the unified Italian nationalist movement and their cell structure became the template for revolutionary organization across the 19th and 20th centuries.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_rev_irish",
+                    "label": "The Fenians & IRB",
+                    "color": "#4a6a3a",
+                    "desc": "The Irish Republican Brotherhood, founded in 1858, was a transatlantic oath-bound secret society dedicated to Irish independence by armed revolution. Its American wing — the Fenian Brotherhood — funded arms and sustained the organizational infrastructure of Irish revolutionary nationalism for decades. The IRB was the secret society within which the 1916 Easter Rising was planned — the Supreme Council authorized the rising without the knowledge of most IRB members. Michael Collins reorganized it as an intelligence network capable of dismantling the British intelligence apparatus in Ireland by 1920. The IRB is the clearest example of a secret society achieving its stated political objective.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_rev_blackhand",
+                    "label": "The Black Hand",
+                    "color": "#5a4a3a",
+                    "desc": "Ujedinjenje ili smrt — Union or Death — was a Serbian secret society founded in 1901 by army officers dedicated to South Slavic unification. Known as the Black Hand. In 1914, Black Hand operatives — acting without the knowledge or authorization of the Serbian government — provided the weapons and training used by Gavrilo Princip to assassinate Archduke Franz Ferdinand in Sarajevo. The act that triggered the First World War was carried out by a cell of a secret society whose own leadership didn't know it was happening. The organizational logic of compartmentalization produced an event that killed seventeen million people.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "h1_20th_wwi",
+                        "label": "WWI & the Broken Map",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_ss_elite",
+                "label": "Elite Networks",
+                "color": "#2a3a5a",
+                "desc": "Elite networks are distinguished from revolutionary societies by their relationship to existing power: they operate within it, not against it. Their purpose is not to overthrow the system but to coordinate within it — to create trust, share information, and align interests among people who already have power and want to keep it. The secrecy serves a different function here: not protection from a hostile state but insulation from public accountability.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "occ_ss_el_roundtable",
+                    "label": "The Round Table & Rhodes Network",
+                    "color": "#3a4a6a",
+                    "desc": "Cecil Rhodes left his fortune to fund a secret society dedicated to extending British influence globally. The Rhodes Scholarships are the public face. The Round Table Groups, established from 1909 onward in Britain and its dominions, were the organizational structure — discussion groups of elite figures coordinating on imperial policy outside official government channels. Carroll Quigley documented their history in Tragedy and Hope (1966) with access to their internal records. The Council on Foreign Relations in the United States and the Royal Institute of International Affairs in Britain are their institutional descendants — now public, originally conceived as the above-ground face of a below-ground network.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_el_bilderberg",
+                    "label": "Bilderberg & Davos",
+                    "color": "#2a4a7a",
+                    "desc": "The Bilderberg Group has met annually since 1954, bringing together approximately 130 senior figures from European and North American politics, finance, military, and media. No press. No formal resolutions. No published minutes. A steering committee selects the attendees. For decades the meetings themselves were not officially acknowledged. The argument that nothing important happens there requires believing that the most powerful people in the Western world gather annually for small talk. The World Economic Forum at Davos operates the same logic in public — the off-the-record sessions are the point, not the panels.",
+                    "links": [
+                      {
+                        "label": "Bilderberg — official participant list",
+                        "url": "https://bilderbergmeetings.org",
+                        "emoji": "📋"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_el_cfr",
+                    "label": "Council on Foreign Relations",
+                    "color": "#3a5a7a",
+                    "desc": "The CFR was founded in 1921 and has functioned as the primary foreign policy establishment institution in the United States ever since. Its membership of approximately 5,000 includes virtually every person who has held a senior foreign policy position in any administration of either party for a century. Its journal Foreign Affairs defines the Overton window of acceptable foreign policy debate. It is not secret — its membership list is public, its meetings published, its influence openly discussed by its members. It is on this list because it represents the endpoint of what a secret society becomes when it succeeds: an institution so embedded in the structure of power that it no longer needs secrecy to maintain its influence.",
+                    "links": [
+                      {
+                        "label": "Council on Foreign Relations",
+                        "url": "https://www.cfr.org",
+                        "emoji": "🏛️"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_ss_statecraft",
+                "label": "Secret Societies & the State",
+                "color": "#4a2a5a",
+                "desc": "The relationship between secret societies and state power is not always adversarial. Some secret societies have been instruments of the state — created, funded, or tolerated by governments as tools of covert influence, internal discipline, or plausible deniability. When a government wants something done that it cannot be seen doing, the structure of a secret society is the solution.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "occ_ss_state_p2",
+                    "label": "Propaganda Due — P2",
+                    "color": "#6a2a5a",
+                    "desc": "Propaganda Due was an irregular Masonic lodge in Italy whose membership, when exposed in 1981, included the heads of all three Italian intelligence services, 43 generals, 8 admirals, 43 members of parliament, the future prime minister Silvio Berlusconi, and the financier Roberto Calvi — found hanging from Blackfriars Bridge in London in 1982. Its master, Licio Gelli, had connections to the CIA, Argentine military junta figures, and the Vatican Bank. Its stated goal was to prevent a communist takeover of Italy. Its actual activities included the 1980 Bologna train station bombing that killed 85 people, carried out to discredit the left. P2 is not a conspiracy theory. It is a documented case of a secret society operating as a shadow government inside a NATO democracy.",
+                    "links": [
+                      {
+                        "label": "Italian Parliamentary Commission — P2 report",
+                        "url": "https://www.jstor.org",
+                        "emoji": "📋"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "orb_corruption",
+                        "label": "Corruption Tracker",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_state_gladio",
+                    "label": "Operation GLADIO",
+                    "color": "#5a2a4a",
+                    "desc": "GLADIO was a NATO stay-behind network — covert paramilitary organizations established in Western European countries after WWII to organize resistance in the event of a Soviet invasion. Confirmed by Italian Prime Minister Giulio Andreotti in 1990. Similar networks were subsequently confirmed in Belgium, Switzerland, France, Germany, Greece, and most other NATO members. The stay-behind networks maintained arms caches, trained personnel, and in some cases were involved in domestic terrorism designed to shift public opinion toward authoritarian solutions — the strategy of tension. GLADIO operated for four decades without the knowledge of most elected officials in the countries where it existed.",
+                    "links": [
+                      {
+                        "label": "Daniele Ganser — NATO's Secret Armies",
+                        "url": "https://www.jstor.org",
+                        "emoji": "📚"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "h1_american",
+                        "label": "The American Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_state_triads",
+                    "label": "Triads, Yakuza & State Tolerance",
+                    "color": "#4a3a5a",
+                    "desc": "The Chinese Triads trace their origin mythology to 17th century resistance to Qing dynasty rule — a secret society with a nationalist founding story that became a criminal syndicate. The Yakuza of Japan were tolerated by American occupation authorities and Japanese conservative governments as a cold calculation: organized criminal networks that controlled labor and territory were useful buffers against communist organizing. The CIA's relationships with Corsican crime syndicates in Marseille in the 1950s — the French Connection heroin network — followed the same logic. The line between state-sanctioned secret society and criminal organization has always been drawn by whoever controls the state.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "x4",
+                "label": "The Occult",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_megalomania",
+                "label": "Megalomania & the Crown",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "orb_corruption",
+                "label": "Corruption Tracker",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "glories_deepstate",
+                "label": "The Deep State",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          }
         ],
         "bottomPills": [
           {
