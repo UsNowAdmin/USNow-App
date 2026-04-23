@@ -907,7 +907,55 @@ const GLORY_DATA = [
     definition: "The power to say no \u2014 a check that can become a blockage",
     phonetic: "vee\u00b7toh",
     origin: "Latin <em>veto</em> \u2014 I forbid. Used by Roman tribunes who could block actions of the Senate to protect plebeian interests. The word entered constitutional language directly \u2014 the Latin term retained because it was already in use for the concept.",
-    howUsed: "In the US: the President's power to reject legislation, overridable by two-thirds of Congress. In the UN Security Council: the five permanent members (US, UK, France, Russia, China) each hold absolute veto power over binding resolutions \u2014 a design that has blocked action on numerous crises including Syria and Ukraine. 'Pocket veto' \u2014 allowing a bill to die by not signing it at the end of a congressional session \u2014 is a specific American variant. The veto is simultaneously a protection against majority overreach and a mechanism for blocking legitimate action." },
+    howUsed: "In the US: the President's power to reject legislation, overridable by two-thirds of Congress. In the UN Security Council: the five permanent members (US, UK, France, Russia, China) each hold absolute veto power over binding resolutions \u2014 a design that has blocked action on numerous crises including Syria and Ukraine. 'Pocket veto' \u2014 allowing a bill to die by not signing it at the end of a congressional session \u2014 is a specific American variant. The veto is simultaneously a protection against majority overreach and a mechanism for blocking legitimate action." },,
+{ word: "Checks and Balances", category: "Power & Politics",
+    definition: "The constitutional design that assumes power will be abused — and tries to make abuse expensive",
+    phonetic: "cheks and bal·əns·iz",
+    origin: "The phrase synthesizes two older ideas: 'checks' from the practice of verifying accounts against a ledger, and 'balance' from the physical scale. Montesquieu theorized the separation of powers in <em>The Spirit of the Laws</em> (1748); Madison and Hamilton operationalized it in the Federalist Papers. The phrase as a unit entered American political vocabulary in the late 18th century.",
+    howUsed: "Invoked reverentially when your branch is under threat; dismissed as obstruction when your branch holds power. The checks were designed not for good-faith actors — those don't need them — but for the ones who would dismantle the system if they could. The design works only as long as the people inside it choose to honor it." },
+
+  { word: "Due Process", category: "Power & Politics",
+    definition: "The right not to be done to without fair procedure — the line between law and arbitrary power",
+    phonetic: "dyoo pros·es",
+    origin: "From the Magna Carta (1215): <em>nisi per legale judicium parium suorum vel per legem terrae</em> — 'except by lawful judgment of his peers or by the law of the land.' The phrase 'due process of law' appeared in a 1354 statute of Edward III and was carried into the Fifth and Fourteenth Amendments to the U.S. Constitution.",
+    howUsed: "Appears in two constitutional amendments because the founders understood it needed saying twice — once to limit the federal government, once to limit the states. In practice, contested at every edge: who gets it, when it applies, what procedures satisfy it. Governments under pressure tend to find ways to suspend it while insisting they haven't." },
+
+  { word: "Executive Order", category: "Power & Politics",
+    definition: "Presidential policy by pen — legal, fast, and increasingly the whole game",
+    phonetic: "ig·zek·yoo·tiv or·dər",
+    origin: "Not mentioned in the Constitution by name. Derives from Article II's grant of 'executive power' and the instruction to 'take care that the laws be faithfully executed.' George Washington issued the first one in 1789. The practice expanded dramatically in the 20th century — FDR issued 3,721 of them, including the internment of Japanese Americans.",
+    howUsed: "Used when Congress won't act, or when a president prefers speed over durability. Executive orders can be reversed by the next president on day one — which is both their weakness and, for opponents, their only immediate remedy. The volume of orders issued in any administration is a rough measure of how far the president is operating outside legislative consensus." },
+
+  { word: "The Deep State", category: "Power & Politics",
+    definition: "Career government employees, or the conspiracy theory used to justify firing them",
+    phonetic: "thuh deep stayt",
+    origin: "The concept of a permanent administrative layer operating beneath elected government is real and has serious academic literature behind it — political scientists call it the 'administrative state' or 'permanent government.' The phrase 'deep state' came from Turkish politics in the 1990s, describing the military and intelligence networks that operated outside civilian control. It entered American political rhetoric around 2017.",
+    howUsed: "Split cleanly between two meanings that rarely meet. The academic meaning: career professionals in intelligence, defense, and regulatory agencies who continue across administrations and hold institutional knowledge. The political meaning: a shadowy network of ideological enemies using government machinery to sabotage the will of the people. The second meaning is useful primarily for justifying the removal of the first." },
+
+  { word: "The Revolving Door", category: "Power & Politics",
+    definition: "The legal pipeline between regulating an industry and being employed by it",
+    phonetic: "thuh ri·vol·ving dor",
+    origin: "The revolving door as a metaphor for the exchange of personnel between government and private industry dates to at least the 1950s in American political writing. The physical revolving door was patented in 1888 by Theophilus Van Kannel — who would presumably be appalled at what his invention came to represent.",
+    howUsed: "Documented, legal, and continuous across administrations of both parties. Senior officials at regulatory agencies routinely move to the industries they regulated; industry executives move into the agencies that oversee them. The result is regulatory capture — agencies that protect the industries they are supposed to police. The term is used critically but the practice continues because it is not illegal." },
+
+  { word: "False Flag", category: "Power & Politics",
+    definition: "An operation designed to be blamed on someone else — documented in history, weaponized in conspiracy culture",
+    phonetic: "fols flag",
+    origin: "From naval warfare — literally flying the flag of another nation to avoid engagement or gain access. The practice was legal under the laws of war until the moment of attack. As a political concept, documented examples include the Gleiwitz incident (1939), in which Nazi Germany staged a Polish attack on a German radio station to justify the invasion of Poland.",
+    howUsed: "Has a documented history in state-sponsored operations going back centuries. Has also become the default explanation for every mass casualty event in certain corners of the internet, applied without evidence to discredit victims and derail accountability. The documented history makes the conspiracy version harder to dismiss and more dangerous when misapplied." },
+
+  { word: "Mandate of Heaven", category: "History & Civilization",
+    definition: "The divine permission to rule — revocable by disaster, defeat, or uprising, retroactively",
+    phonetic: "man·dayt uv hev·ən",
+    origin: "Chinese: <em>Tiānmìng</em> (天命). Developed by the Zhou dynasty around 1046 BCE to justify their overthrow of the Shang. The theory held that Heaven granted rulers legitimacy based on virtue and just governance, and withdrew it — signaled through natural disasters, military defeat, or popular revolt — when rulers became corrupt or incompetent.",
+    howUsed: "One of the oldest and most elegant accountability mechanisms in political theory — and one of the most easily gamed. The winner of any conflict could claim Heaven had revoked the previous ruler's mandate and granted it to them. This made it simultaneously a check on power and a retroactive justification for whoever seized it. Its logic resurfaces in every theocracy and every revolution that claims divine or historical inevitability." },
+
+  { word: "Shadow Government", category: "Power & Politics",
+    definition: "The parallel power structure operating beneath the visible one — real in some forms, imagined in others",
+    phonetic: "shad·oh guv·ərn·mənt",
+    origin: "In British parliamentary tradition, the 'Shadow Cabinet' is the official opposition's parallel ministerial team — entirely legitimate and named on purpose. In American and international usage the phrase shifted to describe covert or unaccountable power structures: intelligence networks, financial interests, or cabals operating outside democratic oversight.",
+    howUsed: "Occupies the same split as 'deep state' — a real political science concept describing unaccountable power networks, and a conspiracy framework applied without evidence. The documented versions — P2 in Italy, GLADIO across NATO, certain intelligence community operations — give the concept enough factual grounding to make it impossible to dismiss entirely, which makes it more available for misuse." }
+
 ];
 
 // ── Derived lookup for index.html glory highlights ──
