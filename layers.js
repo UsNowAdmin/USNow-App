@@ -245,7 +245,8 @@ const LAYERS = [
         "orbs": []
       }
     ],
-    "bottomPills": []
+    "bottomPills": [],
+    "inProgress": true
   },
   {
     "id": "family",
@@ -355,7 +356,8 @@ const LAYERS = [
         "links": [],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "f4",
@@ -525,7 +527,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "f_class",
@@ -563,7 +566,8 @@ const LAYERS = [
         ],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "f_rc",
@@ -643,7 +647,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       }
     ],
     "bottomPills": []
@@ -701,7 +706,8 @@ const LAYERS = [
         "links": [],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "c_env",
@@ -1579,7 +1585,8 @@ const LAYERS = [
         ],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "c4",
@@ -1592,7 +1599,8 @@ const LAYERS = [
         "links": [],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       }
     ],
     "topPills": [
@@ -2941,7 +2949,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "e_fe",
@@ -3027,7 +3036,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "c7",
@@ -3098,7 +3108,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       }
     ],
     "topPills": [
@@ -4345,7 +4356,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "p5",
@@ -5070,7 +5082,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "p2",
@@ -5223,7 +5236,8 @@ const LAYERS = [
         ],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "h3",
@@ -6167,7 +6181,8 @@ const LAYERS = [
         ],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "h1",
@@ -6224,7 +6239,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "h4",
@@ -6237,7 +6253,8 @@ const LAYERS = [
         "links": [],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "h2",
@@ -7767,7 +7784,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "x2",
@@ -7799,7 +7817,8 @@ const LAYERS = [
         ],
         "topPills": [],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "x1",
