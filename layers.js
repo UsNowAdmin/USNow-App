@@ -1748,14 +1748,651 @@ const LAYERS = [
     "orbs": [
       {
         "id": "e1",
-        "label": "Libraries &\nthe Internet",
-        "size": 52,
-        "x": 8,
-        "y": 52,
-        "color": "#3858a8",
-        "desc": "Not just reading — the capacity to parse power. Who gave you this? Who withheld it from others on purpose? The gap between those two questions is policy. The internet extended literacy to a billion people and simultaneously buried it under an avalanche of noise.",
-        "links": [],
-        "topPills": [],
+        "label": "Libraries & the Internet",
+        "desc": "Not just reading — the capacity to parse power. Every technology that has ever democratized access to information has also democratized the ability to spread misinformation. The library and the internet are the same impulse separated by five centuries: the belief that knowledge should be available to everyone, and the ongoing argument about what that actually means and who it actually serves.",
+        "links": [
+          {
+            "label": "Internet Archive — the web's memory",
+            "url": "https://archive.org",
+            "emoji": "📚"
+          },
+          {
+            "label": "Khan Academy — free world-class education",
+            "url": "https://www.khanacademy.org",
+            "emoji": "📚"
+          },
+          {
+            "label": "Project Gutenberg — free literature",
+            "url": "https://www.gutenberg.org",
+            "emoji": "📖"
+          },
+          {
+            "label": "EFF — digital rights & freedom",
+            "url": "https://www.eff.org",
+            "emoji": "🔒"
+          }
+        ],
+        "topPills": [
+          {
+            "id": "e1_writing",
+            "label": "The History of Writing",
+            "color": "#3858a8",
+            "desc": "Writing is the original information technology — the moment humanity outsourced memory to a surface. Sumerian cuneiform around 3200 BCE. Egyptian hieroglyphics. The Phoenician alphabet that most modern scripts descend from. Chinese characters with 3,000 years of continuous use. Each writing system is a different theory of how meaning works. The invention of writing did not just preserve information — it changed what information was, what memory meant, and what a civilization could become.",
+            "links": [
+              {
+                "label": "Encyclopaedia Britannica — history of writing",
+                "url": "https://www.britannica.com/topic/writing",
+                "emoji": "📖"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "e1_oral",
+                "label": "Oral Tradition",
+                "color": "#3858a8",
+                "desc": "Before writing there was the spoken word, memorized and transmitted with extraordinary precision. The Homeric epics were oral compositions for centuries before anyone wrote them down. The Vedas were preserved in oral tradition for millennia with an accuracy that rivals written transmission. Oral cultures developed memory techniques — rhythm, repetition, narrative — that writing made unnecessary and that we have largely forgotten.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e1_alphabet",
+                "label": "The Alphabet",
+                "color": "#3858a8",
+                "desc": "The Phoenician alphabet — 22 consonants, no vowels — was the ancestor of Greek, Latin, Arabic, Hebrew, and most of the writing systems used today. Its genius was simplicity: instead of thousands of pictographs, just a few dozen symbols that could represent any sound in any language. The alphabet democratized literacy. You could learn it in weeks, not years. That was a political revolution dressed as a technology.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e1_print",
+                "label": "The Printing Press",
+                "color": "#3858a8",
+                "desc": "Gutenberg's movable type press, circa 1440, did not just make books cheaper. It broke the church's monopoly on the written word, made the Reformation possible, accelerated the Scientific Revolution, and eventually produced the newspaper, the pamphlet, the novel, and the concept of public opinion. Every subsequent information revolution — telegraph, radio, television, internet — is the printing press running faster.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "h2",
+                "label": "Language",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "e1_library",
+            "label": "The Library",
+            "color": "#4868b8",
+            "desc": "The organized attempt to keep everything. Alexandria aimed to collect every book in the known world and came close. Its destruction — whether by Caesar, by Christian mob, by Arab conquest, depending on who is telling the story — became the symbol of everything lost when knowledge burns. Every library built since is an argument against forgetting. The public library is one of the few institutions in American life that exists purely to serve the people who use it, with no transaction required.",
+            "links": [
+              {
+                "label": "Internet Archive",
+                "url": "https://archive.org",
+                "emoji": "📚"
+              },
+              {
+                "label": "Project Gutenberg",
+                "url": "https://www.gutenberg.org",
+                "emoji": "📖"
+              }
+            ],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "e1_internet",
+            "label": "The Internet",
+            "color": "#5878c8",
+            "desc": "The most significant information revolution since the printing press, still unfolding, still not understood. It extended literacy to a billion people and simultaneously buried it under an avalanche of noise. It gave everyone a voice and gave the loudest voices amplifiers the size of continents. It made the sum of human knowledge available to anyone with a connection and made it nearly impossible to know which parts of that knowledge are true. We are still in the first chapter.",
+            "links": [
+              {
+                "label": "EFF — digital rights",
+                "url": "https://www.eff.org",
+                "emoji": "🔒"
+              },
+              {
+                "label": "MIT Technology Review",
+                "url": "https://www.technologyreview.com",
+                "emoji": "📰"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "e1_open",
+                "label": "Open Knowledge",
+                "color": "#4868b8",
+                "desc": "Wikipedia. Khan Academy. The Internet Archive. Project Gutenberg. OpenCourseWare. The open knowledge movement holds that information essential to human flourishing should be free, accessible, and maintained by communities rather than owned by corporations. It is one of the more quietly radical ideas of the digital age, and it is working.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e1_surveillance",
+                "label": "Surveillance Capitalism",
+                "color": "#3858a8",
+                "desc": "The business model of the free internet: your attention and your data are the product. Every search, every click, every pause while scrolling is a data point sold to advertisers, insurance companies, political campaigns, and anyone else willing to pay. The transaction is invisible, which is the point. You are not the customer. You are the inventory.",
+                "links": [
+                  {
+                    "label": "EFF — surveillance",
+                    "url": "https://www.eff.org",
+                    "emoji": "🔒"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "c2",
+                "label": "Social Media",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "c7",
+                "label": "Tools, Tech & AI",
+                "desc": "",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "c7_ai",
+                    "label": "Artificial Intelligence",
+                    "color": "#4870c8",
+                    "desc": "",
+                    "links": [
+                      {
+                        "label": "What is AI? — MIT explainer",
+                        "url": "https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414",
+                        "emoji": "🤖"
+                      },
+                      {
+                        "label": "AI for Everyone — free course, Coursera",
+                        "url": "https://www.coursera.org/learn/ai-for-everyone",
+                        "emoji": "📚"
+                      },
+                      {
+                        "label": "How AI is used to track & control — EFF",
+                        "url": "https://www.eff.org/issues/ai",
+                        "emoji": "🔒"
+                      },
+                      {
+                        "label": "AI & democracy — Knight Foundation",
+                        "url": "https://knightfoundation.org/topics/artificial-intelligence/",
+                        "emoji": "🔒"
+                      },
+                      {
+                        "label": "USNow AI Infographic — coming soon",
+                        "url": "https://www.usnow.app/#data",
+                        "emoji": "⭐"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c7_ownership",
+                    "label": "Who Owns the Invention?",
+                    "color": "#3860b8",
+                    "desc": "The technologies that made Silicon Valley possible were almost entirely funded by the public. The internet: DARPA. GPS: the military. The touchscreen: University of Delaware on NSF grants. Siri: DARPA again. Voice recognition, satellite navigation, the browser, fiber optics — the basic research that makes every smartphone possible was paid for by taxpayers and handed to private companies at the moment it became profitable. This is not a conspiracy. It is policy. The question of who should benefit from publicly funded innovation is one of the most important economic questions nobody is asking out loud.",
+                    "links": [
+                      {
+                        "label": "USASpending.gov — federal R&D",
+                        "url": "https://www.usaspending.gov",
+                        "emoji": "📊"
+                      },
+                      {
+                        "label": "Costs of War — defense research",
+                        "url": "https://watson.brown.edu/costsofwar",
+                        "emoji": "⚔️"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_gov_publicgood",
+                        "label": "The Public Good",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_mil",
+                        "label": "Military",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_corp",
+                        "label": "Corporations",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [
+                          {
+                            "id": "p_corp_cor",
+                            "label": "Corruption",
+                            "color": "#883030",
+                            "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "p_corp_monopoly",
+                            "label": "Monopoly & Capture",
+                            "color": "#902828",
+                            "desc": "The Sherman Antitrust Act was passed in 1890 because Americans had seen this movie before — Standard Oil, the railroads, the steel trusts. The lesson was that unchecked market power eventually stops being market power and becomes political power. That lesson was learned, applied, and then gradually forgotten over fifty years of deregulation and the theory that big is efficient. The tech monopolies of the current era are Standard Oil with better PR and a more complicated product.",
+                            "links": [
+                              {
+                                "label": "ProPublica — corporate power",
+                                "url": "https://www.propublica.org",
+                                "emoji": "📰"
+                              },
+                              {
+                                "label": "OpenSecrets — corporate lobbying",
+                                "url": "https://www.opensecrets.org",
+                                "emoji": "💰"
+                              }
+                            ],
+                            "topPills": [],
+                            "bottomPills": [
+                              {
+                                "id": "p_gov_cor",
+                                "label": "Corruption",
+                                "desc": "",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": [],
+                                "orbs": []
+                              },
+                              {
+                                "id": "c7_platform",
+                                "label": "Platform Capture",
+                                "desc": "",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": [],
+                                "orbs": []
+                              }
+                            ],
+                            "orbs": []
+                          },
+                          {
+                            "id": "p_corp_tech",
+                            "label": "The Tech Giants",
+                            "color": "#7a2828",
+                            "desc": "Five companies now control more of the world's information infrastructure than any empire in history controlled territory. They did not seize it. They built it, product by product, acquisition by acquisition, until the infrastructure was them. Understanding what they are — not just what they sell — is one of the essential literacy requirements of the current era.",
+                            "links": [
+                              {
+                                "label": "EFF — big tech accountability",
+                                "url": "https://www.eff.org",
+                                "emoji": "🔒"
+                              },
+                              {
+                                "label": "MIT Technology Review",
+                                "url": "https://www.technologyreview.com",
+                                "emoji": "📰"
+                              }
+                            ],
+                            "topPills": [
+                              {
+                                "id": "p_corp_apple",
+                                "label": "Apple",
+                                "color": "#7a2828",
+                                "desc": "The design company that became a religion, then a supply chain, then a surveillance device you carry in your pocket and love. Apple did not invent the smartphone. It invented the smartphone you couldn't imagine not having. The genius was not the technology — it was the experience, the identity, the feeling of belonging to something. Every Apple product is a mirror that shows you a slightly better version of yourself. That is worth a lot of money and it turns out people will pay almost anything for it.",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": [],
+                                "orbs": []
+                              },
+                              {
+                                "id": "p_corp_google",
+                                "label": "Google",
+                                "color": "#6a2020",
+                                "desc": "Started as a search engine — a better way to find things on the internet. Then it became the advertising system the internet runs on. Then the map. Then the email. Then the phone operating system used by 70% of the world. Then the browser. Then the AI. Google did not take over the internet. It became the interface through which most of the world experiences the internet. The search bar is not a tool. It is the front door to a system that knows more about your intentions than you do.",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": [
+                                  {
+                                    "id": "e1_surveillance",
+                                    "label": "Surveillance Capitalism",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  }
+                                ],
+                                "orbs": []
+                              },
+                              {
+                                "id": "p_corp_amazon",
+                                "label": "Amazon",
+                                "color": "#882828",
+                                "desc": "It started with books. Then everything else. Then it became the store that other stores sell through — charging them rent while competing against them with its own products. Then AWS, which now runs a significant portion of the internet including Netflix, the CIA, and most of the startups that consider themselves Amazon's competitors. The everything store became the everything infrastructure. Jeff Bezos started in a garage in Bellevue with $300,000 from his parents and a Princeton degree. The garage was real. The rest of the origin story needs footnotes.",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": [
+                                  {
+                                    "id": "c7_platform",
+                                    "label": "Platform Capture",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  },
+                                  {
+                                    "id": "c7_garage",
+                                    "label": "The Garage Myth",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  }
+                                ],
+                                "orbs": []
+                              },
+                              {
+                                "id": "p_corp_meta",
+                                "label": "Meta",
+                                "color": "#782020",
+                                "desc": "Facebook was built to rate the attractiveness of Harvard women and became the public square for three billion people. The pivot from social network to political influence machine was not an accident — it was the product of an engagement algorithm that discovered outrage was more profitable than connection and optimized accordingly. Meta did not create political polarization. It found it, amplified it, sold advertising against it, and called the result community.",
+                                "links": [
+                                  {
+                                    "label": "Pew Research — social media & democracy",
+                                    "url": "https://www.pewresearch.org/internet/",
+                                    "emoji": "📊"
+                                  }
+                                ],
+                                "topPills": [],
+                                "bottomPills": [
+                                  {
+                                    "id": "c2",
+                                    "label": "Social Media",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  },
+                                  {
+                                    "id": "c7_algo_editor",
+                                    "label": "The Algorithm as Editor",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  }
+                                ],
+                                "orbs": []
+                              },
+                              {
+                                "id": "p_corp_microsoft",
+                                "label": "Microsoft",
+                                "color": "#6a1818",
+                                "desc": "The original tech monopoly — convicted of antitrust violations in 2000 and somehow still here, larger than ever. Microsoft survived its antitrust case, reinvented itself as cloud infrastructure, acquired LinkedIn and GitHub, invested billions in OpenAI, and quietly became the enterprise operating system for most of the world's businesses. The lesson of Microsoft is that a monopoly broken in the courts can reconstitute itself in a different shape faster than regulation can follow.",
+                                "links": [],
+                                "topPills": [],
+                                "bottomPills": [
+                                  {
+                                    "id": "p_corp_monopoly",
+                                    "label": "Monopoly & Capture",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  }
+                                ],
+                                "orbs": []
+                              },
+                              {
+                                "id": "p_corp_openai",
+                                "label": "OpenAI & The AI Race",
+                                "color": "#5a1010",
+                                "desc": "Founded as a nonprofit to ensure artificial intelligence benefits all of humanity. Became a capped-profit company backed by Microsoft. Released ChatGPT and changed the public's relationship to AI overnight. The current chapter of the tech story is being written in real time — who controls the most powerful AI systems, who sets the safety standards, who decides what the technology is for. The garage myth is running at civilizational scale. The stakes have never been higher and the accountability has never been thinner.",
+                                "links": [
+                                  {
+                                    "label": "EFF — AI accountability",
+                                    "url": "https://www.eff.org/issues/ai",
+                                    "emoji": "🔒"
+                                  },
+                                  {
+                                    "label": "MIT Technology Review — AI",
+                                    "url": "https://www.technologyreview.com",
+                                    "emoji": "📰"
+                                  }
+                                ],
+                                "topPills": [],
+                                "bottomPills": [
+                                  {
+                                    "id": "c7_ai",
+                                    "label": "Artificial Intelligence",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  },
+                                  {
+                                    "id": "p_gov_cor",
+                                    "label": "Corruption",
+                                    "desc": "",
+                                    "links": [],
+                                    "topPills": [],
+                                    "bottomPills": [],
+                                    "orbs": []
+                                  }
+                                ],
+                                "orbs": []
+                              }
+                            ],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c7_garage",
+                    "label": "The Garage Myth",
+                    "color": "#4868c0",
+                    "desc": "Amazon started in a garage. Apple started in a garage. Hewlett-Packard started in a garage. The garage is the American creation myth of the technology age — the lone genius, the humble origin, the pure meritocracy of ideas. It is also carefully curated. Bezos had a Princeton degree, a Wall Street salary, and $300,000 from his parents before the garage. Jobs had Wozniak, who actually built the thing. The myth is not entirely false — the work was real, the vision was real. But the myth erases the infrastructure, the capital, the connections, and the publicly funded research that made the garage possible. The dream is real. The story told about it is edited.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "f_class",
+                        "label": "Class",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p2_american_dream",
+                        "label": "The American Dream",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c7_platform",
+                    "label": "Platform Capture",
+                    "color": "#5070c8",
+                    "desc": "Amazon started selling books. Then everything. Then it became the store other stores sell through. Then it became the cloud infrastructure most of the internet runs on. Google started as a search engine. Now it is the advertising system, the email provider, the map, the phone operating system, and the browser for most of the planet. This is not coincidence or pure market efficiency. It is a specific strategy: start with a product, use the data and capital it generates to become the infrastructure, then charge rent on the infrastructure everyone now depends on. The garage became the landlord.",
+                    "links": [
+                      {
+                        "label": "EFF — platform accountability",
+                        "url": "https://www.eff.org",
+                        "emoji": "🔒"
+                      },
+                      {
+                        "label": "MIT Technology Review",
+                        "url": "https://www.technologyreview.com",
+                        "emoji": "📰"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_corp",
+                        "label": "Corporations",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e1_surveillance",
+                        "label": "Surveillance Capitalism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c2",
+                        "label": "Social Media",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c7_controlled",
+                    "label": "Controlled Release",
+                    "color": "#3858b0",
+                    "desc": "The technologies that appear suddenly and change everything are rarely as sudden as they appear. GPS was military technology for decades before civilians got access. The internet existed as ARPANET for twenty years before it was public. Voice recognition, facial recognition, autonomous vehicles — these have existed in classified and corporate research for years before their public announcement. The question of when a technology gets released, to whom, and at what price is a political decision. The garage story implies serendipity. The actual history implies strategy.",
+                    "links": [
+                      {
+                        "label": "Quincy Institute — military & technology",
+                        "url": "https://quincyinst.org",
+                        "emoji": "⚔️"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_mil",
+                        "label": "Military",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c7_ownership",
+                        "label": "Who Owns the Invention?",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c7_algo_editor",
+                    "label": "The Algorithm as Editor",
+                    "color": "#4060b8",
+                    "desc": "Before the algorithm there were editors — human beings who decided what was newsworthy, what was true enough to print, what deserved the front page. They were imperfect and sometimes corrupt. The algorithm replaced them with something that has no concept of truth, only engagement. The most engaging content is not the most accurate content. It is the most emotionally activating content. Outrage travels faster than correction. Fear travels faster than reassurance. The algorithm did not create human division. It found it, monetized it, and scaled it to a billion people simultaneously.",
+                    "links": [
+                      {
+                        "label": "EFF — algorithmic accountability",
+                        "url": "https://www.eff.org",
+                        "emoji": "🔒"
+                      },
+                      {
+                        "label": "Pew Research — algorithms & news",
+                        "url": "https://www.pewresearch.org/internet/",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c2",
+                        "label": "Social Media",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "edu_tp4",
+                        "label": "Misinformation",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "pol_tp4",
+                        "label": "The Fourth Estate",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          }
+        ],
         "bottomPills": [],
         "orbs": []
       },
@@ -2514,743 +3151,10 @@ const LAYERS = [
           {
             "id": "e1",
             "label": "Libraries & the Internet",
-            "desc": "Not just reading — the capacity to parse power. Every technology that has ever democratized access to information has also democratized the ability to spread misinformation. The library and the internet are the same impulse separated by five centuries: the belief that knowledge should be available to everyone, and the ongoing argument about what that actually means and who it actually serves.",
-            "links": [
-              {
-                "label": "Internet Archive — the web's memory",
-                "url": "https://archive.org",
-                "emoji": "📚"
-              },
-              {
-                "label": "Khan Academy — free world-class education",
-                "url": "https://www.khanacademy.org",
-                "emoji": "📚"
-              },
-              {
-                "label": "Project Gutenberg — free literature",
-                "url": "https://www.gutenberg.org",
-                "emoji": "📖"
-              },
-              {
-                "label": "EFF — digital rights & freedom",
-                "url": "https://www.eff.org",
-                "emoji": "🔒"
-              }
-            ],
-            "topPills": [
-              {
-                "id": "e1_writing",
-                "label": "The History of Writing",
-                "color": "#3858a8",
-                "desc": "Writing is the original information technology — the moment humanity outsourced memory to a surface. Sumerian cuneiform around 3200 BCE. Egyptian hieroglyphics. The Phoenician alphabet that most modern scripts descend from. Chinese characters with 3,000 years of continuous use. Each writing system is a different theory of how meaning works. The invention of writing did not just preserve information — it changed what information was, what memory meant, and what a civilization could become.",
-                "links": [
-                  {
-                    "label": "Encyclopaedia Britannica — history of writing",
-                    "url": "https://www.britannica.com/topic/writing",
-                    "emoji": "📖"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "e1_oral",
-                    "label": "Oral Tradition",
-                    "color": "#3858a8",
-                    "desc": "Before writing there was the spoken word, memorized and transmitted with extraordinary precision. The Homeric epics were oral compositions for centuries before anyone wrote them down. The Vedas were preserved in oral tradition for millennia with an accuracy that rivals written transmission. Oral cultures developed memory techniques — rhythm, repetition, narrative — that writing made unnecessary and that we have largely forgotten.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "e1_alphabet",
-                    "label": "The Alphabet",
-                    "color": "#3858a8",
-                    "desc": "The Phoenician alphabet — 22 consonants, no vowels — was the ancestor of Greek, Latin, Arabic, Hebrew, and most of the writing systems used today. Its genius was simplicity: instead of thousands of pictographs, just a few dozen symbols that could represent any sound in any language. The alphabet democratized literacy. You could learn it in weeks, not years. That was a political revolution dressed as a technology.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "e1_print",
-                    "label": "The Printing Press",
-                    "color": "#3858a8",
-                    "desc": "Gutenberg's movable type press, circa 1440, did not just make books cheaper. It broke the church's monopoly on the written word, made the Reformation possible, accelerated the Scientific Revolution, and eventually produced the newspaper, the pamphlet, the novel, and the concept of public opinion. Every subsequent information revolution — telegraph, radio, television, internet — is the printing press running faster.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "bottomPills": [
-                  {
-                    "id": "h2",
-                    "label": "Language",
-                    "desc": "The oldest technology. Every language encodes a different theory of reality — a different set of distinctions, a different grammar of causation, a different palette of emotion. To lose a language is to lose a way of seeing the world that will never exist again. There are roughly 7,000 languages alive today. Half will be gone by 2100. What disappears with them is not just vocabulary. It is entire architectures of thought.",
-                    "links": [
-                      {
-                        "label": "Endangered Language Fund",
-                        "url": "https://www.endangeredlanguagefund.org",
-                        "emoji": "🌍"
-                      },
-                      {
-                        "label": "Aeon — language & thought",
-                        "url": "https://aeon.co",
-                        "emoji": "💭"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "h2_origin",
-                        "label": "Origin of Language",
-                        "color": "#7858a0",
-                        "desc": "Nobody knows exactly when or how humans began to speak. The fossil record preserves bones but not words. The best estimates place the emergence of complex language somewhere between 50,000 and 200,000 years ago — a range that reflects how little we know. What we do know: language changed everything. It made large-scale cooperation possible, made planning across time possible, made culture possible. Everything in this scale is downstream of someone, somewhere, saying the first word.",
-                        "links": [
-                          {
-                            "label": "Aeon — origins of language",
-                            "url": "https://aeon.co",
-                            "emoji": "💭"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h2_diversity",
-                        "label": "Language Diversity",
-                        "color": "#6848a0",
-                        "desc": "7,000 languages. Each one a complete system for organizing reality. The Hopi language encodes time differently than English. Pirahã has no numbers and no creation myth. Some languages have dozens of words for types of snow; others have none. The Sapir-Whorf hypothesis — that language shapes thought — remains contested but the weaker version is clearly true: the words you have available shape what distinctions you notice. Lose the words, lose the distinctions.",
-                        "links": [
-                          {
-                            "label": "Endangered Language Fund",
-                            "url": "https://www.endangeredlanguagefund.org",
-                            "emoji": "🌍"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h2_power",
-                        "label": "Language & Power",
-                        "color": "#8060b0",
-                        "desc": "Who names things controls things. Colonial powers renamed mountains, rivers, and peoples as an act of possession. The erasure of indigenous languages was policy — residential schools explicitly forbade native languages because language carries culture and culture carries resistance. The fight over terminology in politics, medicine, and law is never just a fight about words. It is a fight about who gets to define reality.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h2_writing_link",
-                        "label": "Writing Systems",
-                        "color": "#7060b8",
-                        "desc": "The externalization of language — the moment speech became something you could look at, correct, preserve, and send across distance and time. Every writing system is a different solution to the same problem: how do you represent sound, or meaning, or both, in marks on a surface? Alphabetic, syllabic, logographic — each approach makes certain things easy and certain things hard. The script you read in shapes how you read the world.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "e1_writing",
-                            "label": "The History of Writing",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h2_endangered",
-                        "label": "Endangered Languages",
-                        "color": "#5848a0",
-                        "desc": "A language dies when its last fluent speaker dies. This is happening at a rate of roughly one language every two weeks. The causes are familiar: colonization, urbanization, the economic pressure to speak dominant languages, the association of indigenous languages with poverty and backwardness that colonial education deliberately planted. The loss is not just cultural — it is cognitive. Humanity is destroying its own library.",
-                        "links": [
-                          {
-                            "label": "Endangered Language Fund",
-                            "url": "https://www.endangeredlanguagefund.org",
-                            "emoji": "🌍"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              },
-              {
-                "id": "e1_library",
-                "label": "The Library",
-                "color": "#4868b8",
-                "desc": "The organized attempt to keep everything. Alexandria aimed to collect every book in the known world and came close. Its destruction — whether by Caesar, by Christian mob, by Arab conquest, depending on who is telling the story — became the symbol of everything lost when knowledge burns. Every library built since is an argument against forgetting. The public library is one of the few institutions in American life that exists purely to serve the people who use it, with no transaction required.",
-                "links": [
-                  {
-                    "label": "Internet Archive",
-                    "url": "https://archive.org",
-                    "emoji": "📚"
-                  },
-                  {
-                    "label": "Project Gutenberg",
-                    "url": "https://www.gutenberg.org",
-                    "emoji": "📖"
-                  }
-                ],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "e1_internet",
-                "label": "The Internet",
-                "color": "#5878c8",
-                "desc": "The most significant information revolution since the printing press, still unfolding, still not understood. It extended literacy to a billion people and simultaneously buried it under an avalanche of noise. It gave everyone a voice and gave the loudest voices amplifiers the size of continents. It made the sum of human knowledge available to anyone with a connection and made it nearly impossible to know which parts of that knowledge are true. We are still in the first chapter.",
-                "links": [
-                  {
-                    "label": "EFF — digital rights",
-                    "url": "https://www.eff.org",
-                    "emoji": "🔒"
-                  },
-                  {
-                    "label": "MIT Technology Review",
-                    "url": "https://www.technologyreview.com",
-                    "emoji": "📰"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "e1_open",
-                    "label": "Open Knowledge",
-                    "color": "#4868b8",
-                    "desc": "Wikipedia. Khan Academy. The Internet Archive. Project Gutenberg. OpenCourseWare. The open knowledge movement holds that information essential to human flourishing should be free, accessible, and maintained by communities rather than owned by corporations. It is one of the more quietly radical ideas of the digital age, and it is working.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "e1_surveillance",
-                    "label": "Surveillance Capitalism",
-                    "color": "#3858a8",
-                    "desc": "The business model of the free internet: your attention and your data are the product. Every search, every click, every pause while scrolling is a data point sold to advertisers, insurance companies, political campaigns, and anyone else willing to pay. The transaction is invisible, which is the point. You are not the customer. You are the inventory.",
-                    "links": [
-                      {
-                        "label": "EFF — surveillance",
-                        "url": "https://www.eff.org",
-                        "emoji": "🔒"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "bottomPills": [
-                  {
-                    "id": "c2",
-                    "label": "Social Media",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c7",
-                    "label": "Tools, Tech & AI",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [
-                      {
-                        "id": "c7_ai",
-                        "label": "Artificial Intelligence",
-                        "color": "#4870c8",
-                        "desc": "",
-                        "links": [
-                          {
-                            "label": "What is AI? — MIT explainer",
-                            "url": "https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414",
-                            "emoji": "🤖"
-                          },
-                          {
-                            "label": "AI for Everyone — free course, Coursera",
-                            "url": "https://www.coursera.org/learn/ai-for-everyone",
-                            "emoji": "📚"
-                          },
-                          {
-                            "label": "How AI is used to track & control — EFF",
-                            "url": "https://www.eff.org/issues/ai",
-                            "emoji": "🔒"
-                          },
-                          {
-                            "label": "AI & democracy — Knight Foundation",
-                            "url": "https://knightfoundation.org/topics/artificial-intelligence/",
-                            "emoji": "🔒"
-                          },
-                          {
-                            "label": "USNow AI Infographic — coming soon",
-                            "url": "https://www.usnow.app/#data",
-                            "emoji": "⭐"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c7_ownership",
-                        "label": "Who Owns the Invention?",
-                        "color": "#3860b8",
-                        "desc": "The technologies that made Silicon Valley possible were almost entirely funded by the public. The internet: DARPA. GPS: the military. The touchscreen: University of Delaware on NSF grants. Siri: DARPA again. Voice recognition, satellite navigation, the browser, fiber optics — the basic research that makes every smartphone possible was paid for by taxpayers and handed to private companies at the moment it became profitable. This is not a conspiracy. It is policy. The question of who should benefit from publicly funded innovation is one of the most important economic questions nobody is asking out loud.",
-                        "links": [
-                          {
-                            "label": "USASpending.gov — federal R&D",
-                            "url": "https://www.usaspending.gov",
-                            "emoji": "📊"
-                          },
-                          {
-                            "label": "Costs of War — defense research",
-                            "url": "https://watson.brown.edu/costsofwar",
-                            "emoji": "⚔️"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov_publicgood",
-                            "label": "The Public Good",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "p_mil",
-                            "label": "Military",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "p_corp",
-                            "label": "Corporations",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [
-                              {
-                                "id": "p_corp_cor",
-                                "label": "Corruption",
-                                "color": "#883030",
-                                "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": [],
-                                "orbs": []
-                              },
-                              {
-                                "id": "p_corp_monopoly",
-                                "label": "Monopoly & Capture",
-                                "color": "#902828",
-                                "desc": "The Sherman Antitrust Act was passed in 1890 because Americans had seen this movie before — Standard Oil, the railroads, the steel trusts. The lesson was that unchecked market power eventually stops being market power and becomes political power. That lesson was learned, applied, and then gradually forgotten over fifty years of deregulation and the theory that big is efficient. The tech monopolies of the current era are Standard Oil with better PR and a more complicated product.",
-                                "links": [
-                                  {
-                                    "label": "ProPublica — corporate power",
-                                    "url": "https://www.propublica.org",
-                                    "emoji": "📰"
-                                  },
-                                  {
-                                    "label": "OpenSecrets — corporate lobbying",
-                                    "url": "https://www.opensecrets.org",
-                                    "emoji": "💰"
-                                  }
-                                ],
-                                "topPills": [],
-                                "bottomPills": [
-                                  {
-                                    "id": "p_gov_cor",
-                                    "label": "Corruption",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "c7_platform",
-                                    "label": "Platform Capture",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  }
-                                ],
-                                "orbs": []
-                              },
-                              {
-                                "id": "p_corp_tech",
-                                "label": "The Tech Giants",
-                                "color": "#7a2828",
-                                "desc": "Five companies now control more of the world's information infrastructure than any empire in history controlled territory. They did not seize it. They built it, product by product, acquisition by acquisition, until the infrastructure was them. Understanding what they are — not just what they sell — is one of the essential literacy requirements of the current era.",
-                                "links": [
-                                  {
-                                    "label": "EFF — big tech accountability",
-                                    "url": "https://www.eff.org",
-                                    "emoji": "🔒"
-                                  },
-                                  {
-                                    "label": "MIT Technology Review",
-                                    "url": "https://www.technologyreview.com",
-                                    "emoji": "📰"
-                                  }
-                                ],
-                                "topPills": [
-                                  {
-                                    "id": "p_corp_apple",
-                                    "label": "Apple",
-                                    "color": "#7a2828",
-                                    "desc": "The design company that became a religion, then a supply chain, then a surveillance device you carry in your pocket and love. Apple did not invent the smartphone. It invented the smartphone you couldn't imagine not having. The genius was not the technology — it was the experience, the identity, the feeling of belonging to something. Every Apple product is a mirror that shows you a slightly better version of yourself. That is worth a lot of money and it turns out people will pay almost anything for it.",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "p_corp_google",
-                                    "label": "Google",
-                                    "color": "#6a2020",
-                                    "desc": "Started as a search engine — a better way to find things on the internet. Then it became the advertising system the internet runs on. Then the map. Then the email. Then the phone operating system used by 70% of the world. Then the browser. Then the AI. Google did not take over the internet. It became the interface through which most of the world experiences the internet. The search bar is not a tool. It is the front door to a system that knows more about your intentions than you do.",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [
-                                      {
-                                        "id": "e1_surveillance",
-                                        "label": "Surveillance Capitalism",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      }
-                                    ],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "p_corp_amazon",
-                                    "label": "Amazon",
-                                    "color": "#882828",
-                                    "desc": "It started with books. Then everything else. Then it became the store that other stores sell through — charging them rent while competing against them with its own products. Then AWS, which now runs a significant portion of the internet including Netflix, the CIA, and most of the startups that consider themselves Amazon's competitors. The everything store became the everything infrastructure. Jeff Bezos started in a garage in Bellevue with $300,000 from his parents and a Princeton degree. The garage was real. The rest of the origin story needs footnotes.",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [
-                                      {
-                                        "id": "c7_platform",
-                                        "label": "Platform Capture",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      },
-                                      {
-                                        "id": "c7_garage",
-                                        "label": "The Garage Myth",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      }
-                                    ],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "p_corp_meta",
-                                    "label": "Meta",
-                                    "color": "#782020",
-                                    "desc": "Facebook was built to rate the attractiveness of Harvard women and became the public square for three billion people. The pivot from social network to political influence machine was not an accident — it was the product of an engagement algorithm that discovered outrage was more profitable than connection and optimized accordingly. Meta did not create political polarization. It found it, amplified it, sold advertising against it, and called the result community.",
-                                    "links": [
-                                      {
-                                        "label": "Pew Research — social media & democracy",
-                                        "url": "https://www.pewresearch.org/internet/",
-                                        "emoji": "📊"
-                                      }
-                                    ],
-                                    "topPills": [],
-                                    "bottomPills": [
-                                      {
-                                        "id": "c2",
-                                        "label": "Social Media",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      },
-                                      {
-                                        "id": "c7_algo_editor",
-                                        "label": "The Algorithm as Editor",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      }
-                                    ],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "p_corp_microsoft",
-                                    "label": "Microsoft",
-                                    "color": "#6a1818",
-                                    "desc": "The original tech monopoly — convicted of antitrust violations in 2000 and somehow still here, larger than ever. Microsoft survived its antitrust case, reinvented itself as cloud infrastructure, acquired LinkedIn and GitHub, invested billions in OpenAI, and quietly became the enterprise operating system for most of the world's businesses. The lesson of Microsoft is that a monopoly broken in the courts can reconstitute itself in a different shape faster than regulation can follow.",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [
-                                      {
-                                        "id": "p_corp_monopoly",
-                                        "label": "Monopoly & Capture",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      }
-                                    ],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "p_corp_openai",
-                                    "label": "OpenAI & The AI Race",
-                                    "color": "#5a1010",
-                                    "desc": "Founded as a nonprofit to ensure artificial intelligence benefits all of humanity. Became a capped-profit company backed by Microsoft. Released ChatGPT and changed the public's relationship to AI overnight. The current chapter of the tech story is being written in real time — who controls the most powerful AI systems, who sets the safety standards, who decides what the technology is for. The garage myth is running at civilizational scale. The stakes have never been higher and the accountability has never been thinner.",
-                                    "links": [
-                                      {
-                                        "label": "EFF — AI accountability",
-                                        "url": "https://www.eff.org/issues/ai",
-                                        "emoji": "🔒"
-                                      },
-                                      {
-                                        "label": "MIT Technology Review — AI",
-                                        "url": "https://www.technologyreview.com",
-                                        "emoji": "📰"
-                                      }
-                                    ],
-                                    "topPills": [],
-                                    "bottomPills": [
-                                      {
-                                        "id": "c7_ai",
-                                        "label": "Artificial Intelligence",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      },
-                                      {
-                                        "id": "p_gov_cor",
-                                        "label": "Corruption",
-                                        "desc": "",
-                                        "links": [],
-                                        "topPills": [],
-                                        "bottomPills": [],
-                                        "orbs": []
-                                      }
-                                    ],
-                                    "orbs": []
-                                  }
-                                ],
-                                "bottomPills": [],
-                                "orbs": []
-                              }
-                            ],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c7_garage",
-                        "label": "The Garage Myth",
-                        "color": "#4868c0",
-                        "desc": "Amazon started in a garage. Apple started in a garage. Hewlett-Packard started in a garage. The garage is the American creation myth of the technology age — the lone genius, the humble origin, the pure meritocracy of ideas. It is also carefully curated. Bezos had a Princeton degree, a Wall Street salary, and $300,000 from his parents before the garage. Jobs had Wozniak, who actually built the thing. The myth is not entirely false — the work was real, the vision was real. But the myth erases the infrastructure, the capital, the connections, and the publicly funded research that made the garage possible. The dream is real. The story told about it is edited.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "f_class",
-                            "label": "Class",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "p2_american_dream",
-                            "label": "The American Dream",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c7_platform",
-                        "label": "Platform Capture",
-                        "color": "#5070c8",
-                        "desc": "Amazon started selling books. Then everything. Then it became the store other stores sell through. Then it became the cloud infrastructure most of the internet runs on. Google started as a search engine. Now it is the advertising system, the email provider, the map, the phone operating system, and the browser for most of the planet. This is not coincidence or pure market efficiency. It is a specific strategy: start with a product, use the data and capital it generates to become the infrastructure, then charge rent on the infrastructure everyone now depends on. The garage became the landlord.",
-                        "links": [
-                          {
-                            "label": "EFF — platform accountability",
-                            "url": "https://www.eff.org",
-                            "emoji": "🔒"
-                          },
-                          {
-                            "label": "MIT Technology Review",
-                            "url": "https://www.technologyreview.com",
-                            "emoji": "📰"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_corp",
-                            "label": "Corporations",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "e1_surveillance",
-                            "label": "Surveillance Capitalism",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "c2",
-                            "label": "Social Media",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c7_controlled",
-                        "label": "Controlled Release",
-                        "color": "#3858b0",
-                        "desc": "The technologies that appear suddenly and change everything are rarely as sudden as they appear. GPS was military technology for decades before civilians got access. The internet existed as ARPANET for twenty years before it was public. Voice recognition, facial recognition, autonomous vehicles — these have existed in classified and corporate research for years before their public announcement. The question of when a technology gets released, to whom, and at what price is a political decision. The garage story implies serendipity. The actual history implies strategy.",
-                        "links": [
-                          {
-                            "label": "Quincy Institute — military & technology",
-                            "url": "https://quincyinst.org",
-                            "emoji": "⚔️"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_mil",
-                            "label": "Military",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "c7_ownership",
-                            "label": "Who Owns the Invention?",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c7_algo_editor",
-                        "label": "The Algorithm as Editor",
-                        "color": "#4060b8",
-                        "desc": "Before the algorithm there were editors — human beings who decided what was newsworthy, what was true enough to print, what deserved the front page. They were imperfect and sometimes corrupt. The algorithm replaced them with something that has no concept of truth, only engagement. The most engaging content is not the most accurate content. It is the most emotionally activating content. Outrage travels faster than correction. Fear travels faster than reassurance. The algorithm did not create human division. It found it, monetized it, and scaled it to a billion people simultaneously.",
-                        "links": [
-                          {
-                            "label": "EFF — algorithmic accountability",
-                            "url": "https://www.eff.org",
-                            "emoji": "🔒"
-                          },
-                          {
-                            "label": "Pew Research — algorithms & news",
-                            "url": "https://www.pewresearch.org/internet/",
-                            "emoji": "📊"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "c2",
-                            "label": "Social Media",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "edu_tp4",
-                            "label": "Misinformation",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "pol_tp4",
-                            "label": "The Fourth Estate",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              }
-            ],
-            "bottomPills": [],
-            "orbs": []
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
           }
         ],
         "orbs": []
@@ -4895,13 +4799,99 @@ const LAYERS = [
       {
         "id": "h2",
         "label": "Language",
-        "size": 46,
-        "x": 88,
-        "y": 54,
-        "color": "#7858a0",
-        "desc": "The oldest technology. Every language encodes a different theory of reality. To lose a language is to lose a way of seeing the world that will never exist again. There are roughly 7,000 languages alive today. Half will be gone by 2100.",
-        "links": [],
-        "topPills": [],
+        "desc": "The oldest technology. Every language encodes a different theory of reality — a different set of distinctions, a different grammar of causation, a different palette of emotion. To lose a language is to lose a way of seeing the world that will never exist again. There are roughly 7,000 languages alive today. Half will be gone by 2100. What disappears with them is not just vocabulary. It is entire architectures of thought.",
+        "links": [
+          {
+            "label": "Endangered Language Fund",
+            "url": "https://www.endangeredlanguagefund.org",
+            "emoji": "🌍"
+          },
+          {
+            "label": "Aeon — language & thought",
+            "url": "https://aeon.co",
+            "emoji": "💭"
+          }
+        ],
+        "topPills": [
+          {
+            "id": "h2_origin",
+            "label": "Origin of Language",
+            "color": "#7858a0",
+            "desc": "Nobody knows exactly when or how humans began to speak. The fossil record preserves bones but not words. The best estimates place the emergence of complex language somewhere between 50,000 and 200,000 years ago — a range that reflects how little we know. What we do know: language changed everything. It made large-scale cooperation possible, made planning across time possible, made culture possible. Everything in this scale is downstream of someone, somewhere, saying the first word.",
+            "links": [
+              {
+                "label": "Aeon — origins of language",
+                "url": "https://aeon.co",
+                "emoji": "💭"
+              }
+            ],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h2_diversity",
+            "label": "Language Diversity",
+            "color": "#6848a0",
+            "desc": "7,000 languages. Each one a complete system for organizing reality. The Hopi language encodes time differently than English. Pirahã has no numbers and no creation myth. Some languages have dozens of words for types of snow; others have none. The Sapir-Whorf hypothesis — that language shapes thought — remains contested but the weaker version is clearly true: the words you have available shape what distinctions you notice. Lose the words, lose the distinctions.",
+            "links": [
+              {
+                "label": "Endangered Language Fund",
+                "url": "https://www.endangeredlanguagefund.org",
+                "emoji": "🌍"
+              }
+            ],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h2_power",
+            "label": "Language & Power",
+            "color": "#8060b0",
+            "desc": "Who names things controls things. Colonial powers renamed mountains, rivers, and peoples as an act of possession. The erasure of indigenous languages was policy — residential schools explicitly forbade native languages because language carries culture and culture carries resistance. The fight over terminology in politics, medicine, and law is never just a fight about words. It is a fight about who gets to define reality.",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h2_writing_link",
+            "label": "Writing Systems",
+            "color": "#7060b8",
+            "desc": "The externalization of language — the moment speech became something you could look at, correct, preserve, and send across distance and time. Every writing system is a different solution to the same problem: how do you represent sound, or meaning, or both, in marks on a surface? Alphabetic, syllabic, logographic — each approach makes certain things easy and certain things hard. The script you read in shapes how you read the world.",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [
+              {
+                "id": "e1_writing",
+                "label": "The History of Writing",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "h2_endangered",
+            "label": "Endangered Languages",
+            "color": "#5848a0",
+            "desc": "A language dies when its last fluent speaker dies. This is happening at a rate of roughly one language every two weeks. The causes are familiar: colonization, urbanization, the economic pressure to speak dominant languages, the association of indigenous languages with poverty and backwardness that colonial education deliberately planted. The loss is not just cultural — it is cognitive. Humanity is destroying its own library.",
+            "links": [
+              {
+                "label": "Endangered Language Fund",
+                "url": "https://www.endangeredlanguagefund.org",
+                "emoji": "🌍"
+              }
+            ],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
         "bottomPills": [],
         "orbs": []
       }
