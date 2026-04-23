@@ -7804,7 +7804,13 @@ const LAYERS = [
                     "bottomPills": [],
                     "orbs": []
                   }
-                ],
+                ,
+              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1_megalomania", "label": "Megalomania & the Crown", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "glories_deepstate", "label": "The Deep State", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "glories_checksbalances", "label": "Checks & Balances", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                 "orbs": []
               },
               {
@@ -8251,7 +8257,10 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [
                   { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ],
+                ,
+              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                 "orbs": []
               },
               {
@@ -8263,7 +8272,10 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [
                   { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ],
+                ,
+              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                 "orbs": []
               },
               {
@@ -8275,7 +8287,10 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [
                   { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ],
+                ,
+              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                 "orbs": []
               },
               {
@@ -8287,7 +8302,10 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [
                   { "id": "x5", "label": "Religion", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ],
+                ,
+              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                 "orbs": []
               },
               {
@@ -8301,7 +8319,10 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [
                   { "id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ],
+                ,
+              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1_megalomania", "label": "Megalomania & the Crown", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                 "orbs": []
               },
               {
@@ -8311,7 +8332,10 @@ const LAYERS = [
                 "desc": "The Solar Temple — founded in the 1980s on Rosicrucian and Templar symbolism — promised initiates access to trans-dimensional beings. Between 1994 and 1997, 74 members died in coordinated mass murders and suicides in Switzerland, Canada, and France. The bodies were arranged in ritual positions. Heaven's Gate synthesized UFO belief with Christian eschatology and Theosophical cosmology into a system in which the body was a vehicle to be shed. In March 1997, 39 members took their lives in Rancho Santa Fe, timed to the Hale-Bopp comet. These are not edge cases. They are the mechanism in its most concentrated form: exclusive access to higher reality, isolation from external verification, progressive surrender of individual judgment to institutional authority. The claim that you alone possess the truth. Capable of producing willingness to die for it. And occasionally does.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "x4", "label": "The Occult", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ],
                 "orbs": []
               }
             ],
@@ -8351,7 +8375,17 @@ const LAYERS = [
                     "desc": "The Nizari Ismaili sect operated from mountain fortresses across Persia and Syria from the 11th to 13th centuries. Their founder Hassan-i Sabbah built a decentralized network of agents capable of targeted killing at distances and timescales that conventional armies could not match. The word assassin derives from their name. The strategic logic — a small, disciplined, covert network projecting power asymmetrically against larger forces — is the template every subsequent asymmetric organization has followed. The Mongols destroyed their headquarters at Alamut in 1256. The legend outlasted the organization by centuries.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+              {"id": "occ_organizations", "label": "Living Organizational Expressions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "glories_deepstate", "label": "The Deep State", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ,
+              {"id": "x1", "label": "Myth", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "x5", "label": "Religion", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "hist_geopolitics", "label": "Geopolitics", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                     "orbs": []
                   },
                   {
@@ -8371,7 +8405,10 @@ const LAYERS = [
                         "bottomPills": [],
                         "orbs": []
                       }
-                    ],
+                    ,
+              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "x5_abrahamic", "label": "Abrahamic Religions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                     "orbs": []
                   },
                   {
@@ -8402,7 +8439,12 @@ const LAYERS = [
                     "desc": "The Carbonari — charcoal burners — were a secret revolutionary society active across Italy and France in the early 19th century, dedicated to constitutional government and national liberation from Austrian and Bourbon rule. At their peak they had several hundred thousand members organized in cells that shared only what each level needed to know. Giuseppe Mazzini, Simón Bolívar, and Louis-Napoleon Bonaparte were all members or associates at various points. The Carbonari were the direct organizational ancestors of the unified Italian nationalist movement and their cell structure became the template for revolutionary organization across the 19th and 20th centuries.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_gov_revolution", "label": "Revolution", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ,
+              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                     "orbs": []
                   },
                   {
@@ -8412,7 +8454,10 @@ const LAYERS = [
                     "desc": "The Irish Republican Brotherhood, founded in 1858, was a transatlantic oath-bound secret society dedicated to Irish independence by armed revolution. Its American wing — the Fenian Brotherhood — funded arms and sustained the organizational infrastructure of Irish revolutionary nationalism for decades. The IRB was the secret society within which the 1916 Easter Rising was planned — the Supreme Council authorized the rising without the knowledge of most IRB members. Michael Collins reorganized it as an intelligence network capable of dismantling the British intelligence apparatus in Ireland by 1920. The IRB is the clearest example of a secret society achieving its stated political objective.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ],
                     "orbs": []
                   },
                   {
@@ -8432,7 +8477,8 @@ const LAYERS = [
                         "bottomPills": [],
                         "orbs": []
                       }
-                    ],
+                    ,
+              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                     "orbs": []
                   }
                 ],
@@ -8453,7 +8499,14 @@ const LAYERS = [
                     "desc": "Cecil Rhodes left his fortune to fund a secret society dedicated to extending British influence globally. The Rhodes Scholarships are the public face. The Round Table Groups, established from 1909 onward in Britain and its dominions, were the organizational structure — discussion groups of elite figures coordinating on imperial policy outside official government channels. Carroll Quigley documented their history in Tragedy and Hope (1966) with access to their internal records. The Council on Foreign Relations in the United States and the Royal Institute of International Affairs in Britain are their institutional descendants — now public, originally conceived as the above-ground face of a below-ground network.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p5", "label": "Media", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ,
+              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                     "orbs": []
                   },
                   {
@@ -8469,7 +8522,12 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ],
                     "orbs": []
                   },
                   {
@@ -8485,7 +8543,12 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p5", "label": "Media", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "hist_geopolitics", "label": "Geopolitics", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ],
                     "orbs": []
                   }
                 ],
@@ -8522,7 +8585,12 @@ const LAYERS = [
                         "bottomPills": [],
                         "orbs": []
                       }
-                    ],
+                    ,
+              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "glories_checksbalances", "label": "Checks & Balances", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                     "orbs": []
                   },
                   {
@@ -8548,7 +8616,10 @@ const LAYERS = [
                         "bottomPills": [],
                         "orbs": []
                       }
-                    ],
+                    ,
+              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
                     "orbs": []
                   },
                   {
@@ -8558,7 +8629,12 @@ const LAYERS = [
                     "desc": "The Chinese Triads trace their origin mythology to 17th century resistance to Qing dynasty rule — a secret society with a nationalist founding story that became a criminal syndicate. The Yakuza of Japan were tolerated by American occupation authorities and Japanese conservative governments as a cold calculation: organized criminal networks that controlled labor and territory were useful buffers against communist organizing. The CIA's relationships with Corsican crime syndicates in Marseille in the 1950s — the French Connection heroin network — followed the same logic. The line between state-sanctioned secret society and criminal organization has always been drawn by whoever controls the state.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+              {"id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "hist_geopolitics", "label": "Geopolitics", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
+              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
+            ],
                     "orbs": []
                   }
                 ],
