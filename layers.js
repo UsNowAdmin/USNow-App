@@ -4350,37 +4350,659 @@ const LAYERS = [
       {
         "id": "p5",
         "label": "Media",
-        "size": 52,
         "x": 48,
         "y": 38,
+        "size": 52,
         "color": "#883848",
-        "desc": "Not just news — the management of reality at scale. Who owns the outlets? Who sets the agenda? What gets covered and what vanishes? Media is where power talks to itself and calls it information.",
+        "pulse": "off",
+        "desc": "Information is infrastructure. What gets reported, how it gets framed, and who owns the platform that delivers it shapes what people think is real before they have a chance to decide what they think. Media is not just the news. It is the environment inside which political reality is constructed. Understanding how it works — the history, the economics, the ownership, the difference between journalism and content — is one of the core requirements of democratic literacy.",
         "links": [
           {
-            "label": "ProPublica",
-            "url": "https://www.propublica.org",
+            "label": "Columbia Journalism Review",
+            "url": "https://www.cjr.org",
             "emoji": "📰"
           },
           {
-            "label": "Gallery: Bread & Circuses →",
-            "url": "gallery.html",
-            "emoji": "🖼️"
+            "label": "Nieman Lab — journalism research",
+            "url": "https://www.niemanlab.org",
+            "emoji": "📰"
+          },
+          {
+            "label": "Reporters Without Borders — press freedom index",
+            "url": "https://rsf.org",
+            "emoji": "📰"
+          },
+          {
+            "label": "Pew Research — media & news",
+            "url": "https://www.pewresearch.org/journalism",
+            "emoji": "📊"
           }
         ],
         "topPills": [
           {
-            "id": "p5_man",
-            "label": "Manipulation",
-            "color": "#783040",
-            "desc": "The deliberate engineering of what people believe is true, important, or possible. Not always a lie — sometimes just a frame, a sequence, an omission.",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
+            "id": "p5_history",
+            "label": "History of Media & Journalism",
+            "color": "#8a7030",
+            "desc": "The history of journalism is the history of who controlled information and what they did with that control. Every technology that changed how information moved — the printing press, the telegraph, radio, television, the internet — reorganized power. The business model has always shaped the content. Advertising-supported journalism was never purely objective; it served the audiences advertisers wanted to reach. Understanding where media came from explains most of what it is today.",
+            "links": [
+              {
+                "label": "Nieman Lab — media history",
+                "url": "https://www.niemanlab.org",
+                "emoji": "📰"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "p5_hist_penny",
+                "label": "The Penny Press & Yellow Journalism",
+                "color": "#8a7030",
+                "desc": "Before the 1830s, newspapers cost six cents and were read mostly by merchants and elites. The penny press changed that — mass circulation papers affordable to working people, funded by advertising rather than subscriptions. The model worked by maximizing readership, which meant maximizing engagement, which frequently meant sensationalism. William Randolph Hearst and Joseph Pulitzer's circulation war in the 1890s — complete with lurid crime coverage and what historians debate was deliberate agitation toward the Spanish-American War — established a template for audience-driven journalism that has never fully gone away.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_hist_broadcast",
+                "label": "Radio, Television & the Fairness Doctrine",
+                "color": "#7a6020",
+                "desc": "Radio brought political speech into living rooms for the first time. Franklin Roosevelt's fireside chats used it to build direct connection with the public. Edward R. Murrow used television to confront McCarthyism and showed what broadcast journalism could do at its best. The Fairness Doctrine — an FCC rule requiring broadcasters to present contrasting views on controversial issues — governed American broadcasting from 1949 until its repeal in 1987. Its repeal is one of the more significant and least discussed media policy decisions of the 20th century. Talk radio and its particular economics followed almost immediately.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_hist_jfk_nixon",
+                "label": "The JFK-Nixon Debate",
+                "color": "#9a8040",
+                "desc": "September 26, 1960. The first televised presidential debate. People who heard it on radio thought Nixon won. People who watched it on television thought Kennedy won. The medium was the message — and the message was that television would reshape what political leadership looked like, felt like, and required. Candidates would now need to perform as well as argue. Image management became a political profession. The debate didn't just cover an election. It changed how elections work.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_hist_watergate",
+                "label": "Watergate & The Press",
+                "color": "#7a6030",
+                "desc": "The Washington Post's investigation of the 1972 Watergate break-in — reported by Bob Woodward and Carl Bernstein, protected by editor Ben Bradlee and publisher Katharine Graham — led directly to the resignation of a sitting US president. It is the clearest example in American history of what investigative journalism can do when done with courage and institutional backing. It also set unrealistic expectations. Most journalism is not Watergate. Most newsrooms do not have the resources, the protection, or the story. The mythology of Watergate has been both an inspiration and a distortion.",
+                "links": [
+                  {
+                    "label": "Washington Post — Watergate archive",
+                    "url": "https://www.washingtonpost.com",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_hist_collapse",
+                "label": "The Business Model Collapse",
+                "color": "#8a6828",
+                "desc": "The internet did not just change how news was delivered. It destroyed the economic model that paid for it. Classified advertising — which funded a significant portion of American newspapers — migrated to Craigslist almost overnight. Display advertising moved to Google and Facebook, which could target audiences with precision newspapers couldn't match. Between 2005 and 2023, more than 2,500 American newspapers closed. Local newsrooms — the places that covered city councils, school boards, and county courts — were the hardest hit. The communities that lost their local paper lost their primary accountability mechanism. Nobody replaced it.",
+                "links": [
+                  {
+                    "label": "Nieman Lab — local news collapse",
+                    "url": "https://www.niemanlab.org",
+                    "emoji": "📰"
+                  },
+                  {
+                    "label": "Pew Research — news industry trends",
+                    "url": "https://www.pewresearch.org/journalism",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c7_platform",
+                    "label": "Platform Capture",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "p5_landscape",
+            "label": "The Landscape Today",
+            "color": "#9a7838",
+            "desc": "American media in the current era is simultaneously more abundant and less trustworthy than at any previous point in its history. There is more content than anyone can consume. There is less journalism — in the original sense of verified, sourced, accountable reporting — than a generation ago. The consolidation of ownership and the collapse of local news have happened simultaneously, leaving national outlets with enormous reach and local communities with almost none.",
+            "links": [
+              {
+                "label": "Pew Research — state of the news media",
+                "url": "https://www.pewresearch.org/journalism",
+                "emoji": "📊"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "p5_land_ownership",
+                "label": "Who Owns What",
+                "color": "#9a7838",
+                "desc": "A small number of corporations control most of what Americans see, read, and hear. Comcast owns NBC, MSNBC, and Universal. Disney owns ABC and ESPN. News Corp owns Fox News, the Wall Street Journal, and the New York Post. Warner Bros. Discovery owns CNN and HBO. The consolidation has accelerated since the 1996 Telecommunications Act relaxed ownership limits. The consequence: editorial decisions at the largest news organizations are made within corporate structures that have advertising relationships, political interests, and regulatory exposures that inevitably shape what gets covered and how.",
+                "links": [
+                  {
+                    "label": "Free Press — media ownership",
+                    "url": "https://www.freepress.net",
+                    "emoji": "📰"
+                  },
+                  {
+                    "label": "Columbia Journalism Review",
+                    "url": "https://www.cjr.org",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p2",
+                    "label": "Economy & Money",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "p5_land_desert",
+                "label": "The Local News Desert",
+                "color": "#8a6828",
+                "desc": "A news desert is a community with no local news coverage. The United States now has hundreds of them — counties and towns where no reporter covers the school board, the county commissioner, the local court, or the police department. Research consistently shows that communities without local news have lower civic participation, higher government corruption, and worse bond ratings. The information gap doesn't stay empty — it fills with rumor, misinformation, and content from sources with no local accountability. The local news collapse is a civic emergency that has received far less attention than national media dysfunction.",
+                "links": [
+                  {
+                    "label": "Poynter — local news tracker",
+                    "url": "https://www.poynter.org",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "com_tp3",
+                    "label": "The Commons",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "p5_land_survived",
+                "label": "What Survived",
+                "color": "#b09040",
+                "desc": "Not everything collapsed. Nonprofit investigative journalism has grown — ProPublica, The Marshall Project, The Texas Tribune, and dozens of local nonprofit newsrooms have emerged to fill some of the gap. Public radio has maintained audience and resources better than most commercial outlets. A small number of national newspapers — the New York Times, Washington Post, and Wall Street Journal — have built subscription models that sustain significant newsrooms. Substack and independent newsletters have created a path for individual journalists to reach audiences directly. These are not replacements for the local news infrastructure that was lost. They are partial substitutes for a fraction of the audience.",
+                "links": [
+                  {
+                    "label": "ProPublica — nonprofit investigative journalism",
+                    "url": "https://www.propublica.org",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "p5_spectrum",
+            "label": "The Spectrum",
+            "color": "#7a8040",
+            "desc": "American news media spans a wide range of political perspective, ownership structure, and editorial standard. Understanding where an outlet sits on the spectrum — and why — is a basic literacy skill for navigating the current information environment. The spectrum is real. It is also frequently misused: bias and inaccuracy are different things, and a biased outlet is not necessarily an inaccurate one. The ratings below draw from independent media bias organizations including AllSides and Ad Fontes Media, which publish their methodology publicly.",
+            "links": [
+              {
+                "label": "AllSides — media bias ratings",
+                "url": "https://www.allsides.com/media-bias/ratings",
+                "emoji": "📊"
+              },
+              {
+                "label": "Ad Fontes Media — bias & reliability chart",
+                "url": "https://adfontesmedia.com",
+                "emoji": "📊"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "p5_spec_howto",
+                "label": "How to Read It",
+                "color": "#7a8040",
+                "desc": "Bias and inaccuracy are not the same thing. A news outlet can be politically left-leaning and still report accurately. It can be politically right-leaning and still report accurately. The more important question is whether reporting is based on verifiable facts, whether sources are named and accountable, and whether opinion is clearly separated from news. The spectrum describes tendency, not reliability. Every consumer of news should know the editorial perspective of the outlets they rely on — and consult more than one.",
+                "links": [
+                  {
+                    "label": "AllSides — understanding media bias",
+                    "url": "https://www.allsides.com",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_spec_center",
+                "label": "Center & Legacy Press",
+                "color": "#8a9050",
+                "desc": "The Associated Press and Reuters are wire services — they supply factual reporting to thousands of outlets and are generally rated as the most politically centered and factually reliable sources available. NPR and PBS operate with public funding and are consistently rated center to center-left. The New York Times and Washington Post are rated center-left by most independent organizations. All carry significant institutional weight and editorial resources. All have also published stories that were later corrected or disputed. No outlet is infallible. These are starting points, not endpoints.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_spec_right",
+                "label": "Right-Leaning Outlets",
+                "color": "#b05040",
+                "desc": "The Wall Street Journal separates its news coverage — generally rated center — from its opinion pages, which are consistently right-leaning. Fox News is the most-watched cable news network in the United States and is rated right by AllSides and right-center to right by Ad Fontes Media depending on the program. Its opinion programming (Tucker Carlson's former show, Hannity, Ingraham) is rated further right than its news coverage. The New York Post is rated right. Newsmax and OAN are rated further right and have faced defamation judgments related to 2020 election coverage.",
+                "links": [
+                  {
+                    "label": "AllSides — outlet ratings",
+                    "url": "https://www.allsides.com",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_spec_left",
+                "label": "Left-Leaning Outlets",
+                "color": "#4060a0",
+                "desc": "MSNBC is rated left by most independent organizations. Its opinion programming skews further left than its news coverage. The Guardian US, Mother Jones, and The Nation are rated left-center to left. Democracy Now is rated left. These outlets do original reporting and maintain editorial standards, though their perspective shapes story selection and framing. Being aware of a left-leaning perspective in a source is not a reason to dismiss it — it is a reason to read it knowing what lens is being applied.",
+                "links": [
+                  {
+                    "label": "AllSides — outlet ratings",
+                    "url": "https://www.allsides.com",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "p5_new_voices",
+            "label": "The New Voices",
+            "color": "#8a7848",
+            "desc": "The collapse of the traditional media business model and the rise of digital distribution have created a new media landscape that is still being understood. Some of what has emerged is genuine — independent journalists doing real reporting with new tools. Some of it is advocacy dressed as journalism, partisan content designed to look like news, and influence operations operating at the speed of social media. The challenge is that the formats look identical.",
+            "links": [
+              {
+                "label": "Columbia Journalism Review",
+                "url": "https://www.cjr.org",
+                "emoji": "📰"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "p5_new_cred",
+                "label": "The Credentialing Problem",
+                "color": "#8a7848",
+                "desc": "White House press credentials have historically been managed by the White House Correspondents' Association, an independent organization that sets standards for access. The expansion of digital media has made credentialing decisions more contested. Under the current administration, several outlets and individual creators with limited or no traditional editorial standards have received access alongside legacy press. The result is a briefing room that mixes organizations with decades of accountability structures alongside operations with none. The format is the same. The institutional backstop is not.",
+                "links": [
+                  {
+                    "label": "White House Correspondents' Association",
+                    "url": "https://www.whca.press",
+                    "emoji": "📰"
+                  },
+                  {
+                    "label": "Columbia Journalism Review",
+                    "url": "https://www.cjr.org",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_new_partisan",
+                "label": "Partisan Outlets",
+                "color": "#9a8050",
+                "desc": "A growing number of outlets present themselves as news organizations while functioning primarily as advocacy platforms. On the right: Breitbart, The Daily Wire, OAN. On the left: The Young Turks, some Substack newsletters. The distinction worth making: advocacy is not inherently dishonest, and opinion journalism has a long legitimate history. The problem arises when advocacy is presented as neutral reporting, when factual claims are made without verification, and when corrections are not issued. The format of news without the standards of journalism is a specific and documentable phenomenon.",
+                "links": [
+                  {
+                    "label": "Ad Fontes Media — reliability ratings",
+                    "url": "https://adfontesmedia.com",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p5_manip_spin",
+                    "label": "The Spin Room",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "p5_new_podcasts",
+                "label": "Podcasts & Independent Media",
+                "color": "#7a6838",
+                "desc": "The podcast format has produced some of the most significant journalism of the past decade — Serial, The Daily, investigative work from independent producers — alongside some of the most listened-to misinformation. Joe Rogan's podcast reaches an estimated 11 million listeners per episode, more than any cable news program. He is not a journalist and does not operate under journalistic standards. His influence on political opinion, demonstrated in measurable polling shifts, represents a new category: media power without media accountability. Substack has created a path for individual journalists to sustain themselves through subscriptions — some doing serious work, some building audiences through outrage.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_new_foreign",
+                "label": "Foreign State Media",
+                "color": "#6a7838",
+                "desc": "RT (formerly Russia Today) and China's CGTN operate with state funding and produce content designed partly to influence foreign audiences. The US government has required both to register as foreign agents under FARA. Al Jazeera, funded by the Qatari government, covers stories that Western outlets often miss, particularly in the Middle East and Global South, and maintains editorial standards that have earned it significant credibility — while also reflecting Qatari foreign policy interests in its coverage choices. The BBC is funded by the British government through the license fee but operates under an editorial independence charter. State funding does not automatically equal propaganda. It does mean interests should be understood.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "c7_algo_editor",
+                "label": "The Algorithm as Editor",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c7_platform",
+                "label": "Platform Capture",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "p5_manipulation",
+            "label": "Manipulation & Framing",
+            "color": "#7a5838",
+            "desc": "The line between reporting and framing has always existed. What has changed is the scale, the speed, and the sophistication of the tools available to blur it. Every editorial decision — what to cover, what headline to write, what image to use, who to quote — is a framing decision. Most of those decisions are made in good faith by people trying to communicate clearly. Some are not. Understanding the difference requires knowing what the techniques look like.",
+            "links": [
+              {
+                "label": "Pew Research — media trust",
+                "url": "https://www.pewresearch.org/journalism",
+                "emoji": "📊"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "p5_man",
+                "label": "Manipulation",
+                "color": "#783040",
+                "desc": "The deliberate engineering of what people believe is true, important, or possible. Not always a lie — sometimes just a frame, a sequence, an omission.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p5_manip_coverage",
+                "label": "What Gets Covered & What Doesn't",
+                "color": "#7a5838",
+                "desc": "Every news organization makes choices about what to cover. Those choices are shaped by resources, audience interest, advertiser relationships, editorial judgment, and the political environment. A story that never gets assigned never gets reported. The most consequential editorial decisions are often the ones that don't produce a story — the investigation that wasn't pursued, the pattern that wasn't noticed, the community whose concerns weren't treated as newsworthy. The gap between what happened and what got covered is where much of the real information failure lives.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_manip_framing",
+                "label": "Framing Effects",
+                "color": "#8a6848",
+                "desc": "The same event described two ways can produce opposite emotional responses and different political conclusions — both technically accurate. 'Government spending increases' and 'taxpayer burden grows' can describe identical budget data. 'Pro-life advocates' and 'abortion opponents' describe the same people. 'Estate tax' and 'death tax' describe the same policy. Framing is not lying. It is the choice of which accurate description to use, and that choice shapes how people understand the underlying reality. Awareness of framing doesn't make anyone immune to it — but it creates the capacity to notice it.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_manip_spin",
+                "label": "The Spin Room",
+                "color": "#9a6840",
+                "desc": "Every administration since at least the Eisenhower era has had a professional communications apparatus designed to manage its public image. Press secretaries, communications directors, media advisors — their job is to present administration actions in the most favorable light, control the narrative, and limit damage from negative coverage. The daily White House briefing is partly an information delivery mechanism and partly a performance. What has changed over time is the degree of candor, the relationship between the press secretary and the press corps, and the extent to which the briefing functions as an exchange of information versus a one-way assertion of preferred reality. These are measurable differences, documented across administrations.",
+                "links": [
+                  {
+                    "label": "White House Correspondents' Association",
+                    "url": "https://www.whca.press",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov_us",
+                    "label": "U.S. Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "p5_manip_disinfo",
+                "label": "Disinformation vs. Misinformation",
+                "color": "#6a4828",
+                "desc": "Misinformation is false information spread without intent to deceive — someone repeating something they believe to be true that isn't. Disinformation is false information spread deliberately to deceive. The distinction matters for understanding cause, but both produce the same result: people acting on false beliefs. Research consistently shows that false stories spread faster and wider than corrections on social media. The correction rarely reaches the people who saw the original claim. The asymmetry is structural, not accidental.",
+                "links": [
+                  {
+                    "label": "Pew Research — misinformation",
+                    "url": "https://www.pewresearch.org",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "edu_tp4",
+                    "label": "Misinformation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c7_algo_editor",
+                    "label": "The Algorithm as Editor",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "p5_manip_propaganda",
+                "label": "Propaganda Techniques",
+                "color": "#8a5030",
+                "desc": "Propaganda is not limited to authoritarian states. The techniques are documented, named, and visible in democratic media environments. Repetition: a claim repeated often enough becomes familiar, and familiarity reads as truth. Fear appeals: threat framing activates emotional responses that override analytical thinking. False equivalence: presenting two positions as equally valid when evidence strongly supports one. The firehose of falsehood: flooding the information environment with so many false claims that fact-checking cannot keep up and exhaustion sets in. These are not theories. They are documented persuasion techniques with measurable effects. Knowing their names does not make anyone immune. It creates the possibility of noticing them.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "edu_tp4",
+                "label": "Misinformation",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "pol_tp2",
+                "label": "Narrative",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "p5_journalism",
+            "label": "What Journalism Is",
+            "color": "#6a8050",
+            "desc": "Journalism has a specific meaning that is distinct from content, opinion, commentary, and advocacy. It involves the gathering and verification of information, identification of sources, accountability to correction, and separation of fact from interpretation. These standards exist not because journalists are better people than anyone else but because the function journalism serves — holding power accountable and informing democratic participation — requires them. When those standards are abandoned, the format of news continues while the function disappears.",
+            "links": [
+              {
+                "label": "Society of Professional Journalists — code of ethics",
+                "url": "https://www.spj.org/ethicscode.asp",
+                "emoji": "📰"
+              },
+              {
+                "label": "Reporters Without Borders — press freedom index",
+                "url": "https://rsf.org",
+                "emoji": "📰"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "p5_jour_standards",
+                "label": "The Standards",
+                "color": "#6a8050",
+                "desc": "The Society of Professional Journalists code of ethics identifies four principles: seek truth and report it, minimize harm, act independently, and be accountable and transparent. These are not bureaucratic rules. They are the operating requirements for a function — informing the public accurately — that democracy depends on. Verification means not publishing claims that haven't been confirmed. Attribution means identifying sources so readers can evaluate their credibility. Independence means not serving the interests of the subjects being covered. Accountability means correcting errors when they occur. Each standard has a specific purpose.",
+                "links": [
+                  {
+                    "label": "SPJ Code of Ethics",
+                    "url": "https://www.spj.org/ethicscode.asp",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_jour_opinion",
+                "label": "Reporting vs. Opinion vs. Content",
+                "color": "#7a9060",
+                "desc": "News reporting describes what happened based on verified facts. Opinion journalism interprets what happened and argues for a conclusion. Content is material produced to attract attention, often optimized for engagement metrics rather than informational value. All three exist. The problem is that the formats have converged — opinion is presented with the visual language of reporting, content is presented with the credibility signals of journalism. The blurring is sometimes accidental and sometimes deliberate. The capacity to distinguish between them is one of the most practically useful things a news consumer can develop.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_jour_freedom",
+                "label": "Press Freedom",
+                "color": "#5a7040",
+                "desc": "The First Amendment protects press freedom in the United States — the government cannot, in most circumstances, prevent publication or criminally prosecute reporters for their journalism. In practice, press freedom is constrained by shield law gaps (no federal shield law protecting reporters from having to identify sources in federal court), by legal costs of defending against defamation suits, and by the physical safety of journalists covering certain stories. The United States ranks 55th on the Reporters Without Borders 2024 World Press Freedom Index — behind most Western democracies. The ranking reflects legal protections, economic conditions, and political attacks on the press.",
+                "links": [
+                  {
+                    "label": "Reporters Without Borders — US ranking",
+                    "url": "https://rsf.org",
+                    "emoji": "📰"
+                  },
+                  {
+                    "label": "Reporters Committee for Freedom of the Press",
+                    "url": "https://www.rcfp.org",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_jour_funding",
+                "label": "Who Funds It Now",
+                "color": "#8a9858",
+                "desc": "The funding model of a news organization shapes what it covers, how it covers it, and what it avoids. Advertising-supported media serves audiences that advertisers want to reach. Subscription-supported media serves paying readers, which skews toward higher income and education. Foundation-funded journalism serves the foundation's priorities, which may or may not align with the public interest. Billionaire-owned media — Jeff Bezos owns the Washington Post, Rupert Murdoch controls News Corp — brings the owner's interests into the editorial environment. Government-funded media operates under the political pressure of funding cycles. There is no conflict-free funding model. Knowing who pays is part of reading any outlet clearly.",
+                "links": [
+                  {
+                    "label": "Columbia Journalism Review — media economics",
+                    "url": "https://www.cjr.org",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p2",
+                    "label": "Economy & Money",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "pol_tp4",
+                "label": "The Fourth Estate",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "edu_tp3",
+                "label": "The Press to the Feed",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
           }
         ],
-        "bottomPills": [],
-        "orbs": []
+        "bottomPills": [
+          {
+            "id": "c2",
+            "label": "Social Media",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c7_algo_editor",
+            "label": "The Algorithm as Editor",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "pol_tp4",
+            "label": "The Fourth Estate",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ]
       },
       {
         "id": "p_mil",
@@ -6517,10 +7139,212 @@ const LAYERS = [
                   {
                     "id": "geo_shifting",
                     "label": "The Shifting Order",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
+                    "desc": "The international order built after WWII — the United Nations, the World Bank, the IMF, the dollar as reserve currency, US military dominance — is under more pressure than at any point since it was created. It is not collapsing. But it is no longer unchallenged. The question of what comes after American unipolarity — whether a multipolar world is more or less stable than a unipolar one — is the defining geopolitical question of the current era.",
+                    "links": [
+                      {
+                        "label": "Foreign Affairs — world order",
+                        "url": "https://www.foreignaffairs.com",
+                        "emoji": "🗺️"
+                      },
+                      {
+                        "label": "Quincy Institute",
+                        "url": "https://quincyinst.org",
+                        "emoji": "🕊️"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "geo_shift_american",
+                        "label": "The American Century",
+                        "color": "#5888a8",
+                        "desc": "Henry Luce coined the term in 1941, before the US had even entered WWII. The American Century was the period of uncontested US dominance — military, economic, cultural — that ran from 1945 to some point in the early 21st century that historians will eventually date precisely. At its peak the US produced 50% of global GDP, maintained roughly 800 military bases in 70 countries, and set the rules for international trade, finance, and diplomacy. It also fought Korea, Vietnam, Iraq, and Afghanistan. The question of whether the American Century ended with a success or a failure depends entirely on whose century you think it was.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "geo_shift_china",
+                        "label": "China's Challenge",
+                        "color": "#b04040",
+                        "desc": "The Thucydides Trap: when a rising power threatens to displace a ruling power, the result is usually war. Of sixteen historical cases of power transition identified by Graham Allison, twelve ended in war. China is the rising power. The US is the ruling power. Both are nuclear armed. The competition is real — in trade, technology, military capability, and influence — but the stakes of direct conflict are existential for both. Managing this transition without war is the central challenge of 21st century statecraft.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "geo_shift_brics",
+                        "label": "BRICS & Multipolarity",
+                        "color": "#7898b8",
+                        "desc": "Brazil, Russia, India, China, South Africa — plus more recent additions — represent an alternative pole of global organization that rejects Western liberal order as the only framework. BRICS countries now represent a larger share of global GDP than the G7. They are building alternative payment systems to avoid dollar dependence, alternative development banks to bypass the IMF, and alternative diplomatic frameworks. Whether this becomes a genuine alternative order or remains a loose coalition of countries that dislike American hegemony for different reasons is still being determined.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "geo_shift_globalsouth",
+                        "label": "The Global South",
+                        "color": "#5a9858",
+                        "desc": "The Global South is not a geographic description — it is a political one. It names the nations of Africa, Latin America, South and Southeast Asia, and Oceania that share a history of colonization, economic extraction, and exclusion from the institutions that govern the global order. These nations were not present at Bretton Woods, where the IMF and World Bank were created. They were not equal parties at the negotiations that established the WTO's trade rules. The term replaced Third World after the Cold War ended and the binary it implied dissolved. What it describes did not change much. The Global South represents the majority of the world's population, most of its land area, and a growing share of its economic output — while remaining underrepresented in the institutions that set the rules it lives under. The current moment is specifically about whether that changes.",
+                        "links": [
+                          {
+                            "label": "Foreign Affairs — Global South",
+                            "url": "https://www.foreignaffairs.com",
+                            "emoji": "🗺️"
+                          },
+                          {
+                            "label": "Al Jazeera — Global South coverage",
+                            "url": "https://www.aljazeera.com",
+                            "emoji": "🌍"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "geo_africa",
+                            "label": "Africa",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "geo_americas",
+                            "label": "The Americas",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "h3_rev_decolonization",
+                            "label": "Decolonization",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "geo_shift_brics",
+                            "label": "BRICS & Multipolarity",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "c_env_cc_justice",
+                            "label": "Climate Justice",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "geo_resources",
+                            "label": "Resources & Control",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "geo_shift_nam",
+                        "label": "Non-Aligned Movement & G77",
+                        "color": "#6a8858",
+                        "desc": "In 1961, leaders of newly independent nations — Jawaharlal Nehru of India, Gamal Abdel Nasser of Egypt, Josip Broz Tito of Yugoslavia, Kwame Nkrumah of Ghana, Sukarno of Indonesia — founded the Non-Aligned Movement. The premise: newly decolonized nations should not be forced to choose between the American and Soviet blocs. They had their own interests. The movement now has 120 member states and is largely symbolic — the Cold War binary it was designed to resist no longer exists. The G77, founded at the United Nations in 1964, is its more functional successor: a coalition of 134 developing nations that coordinates positions within UN bodies and advocates for trade rules, development financing, and climate arrangements that serve the Global South's interests. It is the largest intergovernmental organization within the UN system that most people have never heard of.",
+                        "links": [
+                          {
+                            "label": "G77 — official site",
+                            "url": "https://www.g77.org",
+                            "emoji": "🌍"
+                          },
+                          {
+                            "label": "Non-Aligned Movement — history",
+                            "url": "https://www.nam.gov.za",
+                            "emoji": "🌍"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "geo_shift_globalsouth",
+                            "label": "The Global South",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "geo_shift_brics",
+                            "label": "BRICS & Multipolarity",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "h3_rev_decolonization",
+                            "label": "Decolonization",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "geo_shift_next",
+                        "label": "What Comes Next",
+                        "color": "#4878a8",
+                        "desc": "No one knows. The honest answer to what the post-American order looks like is that we are in the middle of finding out. Climate change is introducing a variable that no geopolitical theory fully accounts for — it does not respect borders, alliances, or spheres of influence, and its effects will redraw the map of where humans can live more dramatically than any war. The countries that adapt fastest, that control the technology of the energy transition, and that manage internal inequality without political collapse will define the next order. That list may not look like the current one.",
+                        "links": [
+                          {
+                            "label": "Foreign Affairs",
+                            "url": "https://www.foreignaffairs.com",
+                            "emoji": "🗺️"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c_env_climate",
+                            "label": "Climate",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          },
+                          {
+                            "id": "p4",
+                            "label": "Global Capital",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      }
+                    ],
+                    "bottomPills": [
+                      {
+                        "id": "p_mil",
+                        "label": "Military",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
                   }
                 ]
               },
