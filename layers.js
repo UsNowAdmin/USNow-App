@@ -4606,105 +4606,922 @@ const LAYERS = [
       {
         "id": "h3",
         "label": "War &\nRevolutions",
-        "size": 60,
         "x": 22,
         "y": 36,
+        "size": 60,
         "color": "#6040b0",
-        "desc": "The recurring reset and the final argument — two forces so entangled they can barely be told apart. Revolutions produce wars. Wars produce revolutions. The moment accumulated weight becomes greater than the people's willingness to hold it up — and the violence that follows.",
+        "pulse": "off",
+        "desc": "War is the continuation of politics by other means — Clausewitz. Revolutions are the continuation of war by other means — history. The two are inseparable. Every major political order that exists today was produced by violence — by a war won or lost, a revolution that succeeded or failed, a genocide that was allowed to happen. Understanding war and revolution is not a morbid hobby. It is the prerequisite for understanding how the world got to be the way it is and who paid the price for it getting here.",
         "links": [
           {
-            "label": "Costs of War — Brown University",
+            "label": "Costs of War Project — Brown University",
             "url": "https://watson.brown.edu/costsofwar",
             "emoji": "⚔️"
           },
           {
-            "label": "750 Bases Map",
-            "url": "https://www.usnow.app/graphics/750-bases",
+            "label": "National Archives — US military history",
+            "url": "https://www.archives.gov/research/military",
+            "emoji": "📜"
+          },
+          {
+            "label": "Foreign Affairs — war & conflict",
+            "url": "https://www.foreignaffairs.com",
             "emoji": "🗺️"
           }
         ],
         "topPills": [
           {
-            "id": "h3d_war",
-            "label": "War",
-            "color": "#c04848",
-            "desc": "The organized application of violence between groups. As old as civilization itself — and as present as this morning's news. Every war is fought twice: once on the battlefield and once in the story told afterward.",
+            "id": "h3_whatis",
+            "label": "What Is War",
+            "color": "#8a2828",
+            "desc": "War is organized violence between groups for political ends. That definition is simple. What it contains is not. Every element is contested — what counts as organized, what counts as political, where the line between war and massacre and police action and genocide runs. The 20th century killed more people in war than all previous centuries combined, using weapons and logistics that earlier centuries could not imagine, for ideological stakes that previous centuries did not have. The 21st century has not yet clarified whether we are getting better or worse at this.",
             "links": [
               {
-                "label": "Costs of War — Brown University",
+                "label": "Costs of War Project",
                 "url": "https://watson.brown.edu/costsofwar",
                 "emoji": "⚔️"
-              },
-              {
-                "label": "Amnesty International",
-                "url": "https://www.amnesty.org",
-                "emoji": "⚔️"
               }
             ],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h3d0",
-            "label": "The Crusades",
-            "color": "#8848a0",
-            "desc": "Two centuries of religiously sanctioned warfare between Christian Europe and the Islamic world — and everyone caught between them. The Crusades were simultaneously a military campaign, a pilgrimage, a land grab, and a template for how religion and power would justify each other for centuries to come.",
-            "links": [
+            "topPills": [
               {
-                "label": "BBC: The Crusades",
-                "url": "https://www.bbc.co.uk/history/crusades",
-                "emoji": "📰"
+                "id": "h3_whatis_clausewitz",
+                "label": "War as Politics",
+                "color": "#8a2828",
+                "desc": "Carl von Clausewitz wrote that war is the continuation of politics by other means — not a breakdown of the political order but an extension of it. States go to war when they calculate that military force will achieve political objectives that diplomacy cannot. This framing is still the most useful starting point for understanding why wars start: not because leaders are irrational or bloodthirsty but because they believe the war will work. They are frequently wrong. The calculation rarely accounts for what the other side believes.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
               },
               {
-                "label": "Encyclopaedia Britannica: Crusades",
-                "url": "https://www.britannica.com/event/Crusades",
-                "emoji": "📖"
+                "id": "h3_whatis_just",
+                "label": "Just War Theory",
+                "color": "#7a1818",
+                "desc": "The philosophical framework for when war is morally permissible. Dating to Augustine and Aquinas, formalized over centuries of Catholic moral theology, and now embedded in international law: a just war requires a just cause, right intention, proper authority, last resort, probability of success, and proportionality. Every nation that has ever gone to war has claimed to meet all six criteria. The theory has never prevented a war. It has shaped how wars are conducted and how war crimes are defined — which is not nothing.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_whatis_causes",
+                "label": "Why Wars Start",
+                "color": "#9a3030",
+                "desc": "Territory. Resources. Religion. Ideology. Nationalism. Fear. Miscalculation. Domestic politics. The search for a single cause of war is always wrong — wars are overdetermined events with multiple sufficient causes any one of which might have been enough. WWI started because of an assassination, a tangle of alliances, imperial competition, nationalist pressure, and a military planning system that left no room for de-escalation. Remove any one of those factors and the war might not have happened. Keep all of them and it was nearly inevitable.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_whatis_types",
+                "label": "War vs Revolution vs Genocide",
+                "color": "#8a2020",
+                "desc": "The distinctions matter legally, morally, and historically. War is organized violence between armed groups. Revolution is the violent overthrow of an existing political order — it can happen without external war. Genocide is the systematic destruction of a people as such — it requires state power or its equivalent, a specific intent to destroy the group, and does not require a military opponent. All three can occur simultaneously. The Holocaust happened inside WWII. The Rwandan genocide happened after a civil war. The categories overlap but they are not the same thing.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
               }
             ],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
+            "bottomPills": []
           },
           {
-            "id": "h3d1",
-            "label": "Revolution",
-            "color": "#7858c0",
-            "desc": "The recurring reset. Sometimes violent, sometimes tidal. The moment when the accumulated weight of a structure becomes greater than the people's willingness to hold it up. Every ruling class believes it will be the last to face one.",
+            "id": "h3_revolutions",
+            "label": "Revolutions",
+            "color": "#b04040",
+            "desc": "A revolution is the violent overthrow of an existing political order and its replacement with something new. Not a rebellion — rebellions seek relief within the existing order. Not a coup — coups change who holds power without changing the structure of power. A revolution changes the structure. The American, French, Haitian, Russian, and Chinese revolutions all changed not just who governed but how governance was legitimized, who counted as a citizen, and what the state owed the people. All of them also devoured significant portions of their own participants.",
             "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h3d2",
-            "label": "War & Force",
-            "color": "#c04848",
-            "desc": "The final argument. Where all political failures eventually arrive. 750 U.S. bases in 80 countries. $886B annual budget. The largest military empire in human history — right now, in the present tense.",
-            "links": [
+            "topPills": [
               {
-                "label": "750 Bases Map",
-                "url": "https://www.usnow.app/graphics/750-bases",
-                "emoji": "🗺️"
+                "id": "h3_rev_american",
+                "label": "The American Revolution",
+                "color": "#b04040",
+                "desc": "The revolution that produced the most durable political document in modern history also produced the most consequential contradiction: a declaration that all men are created equal, written by slaveholders, ratified by a constitutional system that counted enslaved people as three-fifths of a person for purposes of political representation. The revolution was simultaneously a genuine democratic breakthrough and a land deal — the colonists wanted the West that Britain's Proclamation Line denied them. Both things are true. The tension between them has never been resolved.",
+                "links": [
+                  {
+                    "label": "National Archives — Declaration of Independence",
+                    "url": "https://www.archives.gov/founding-docs",
+                    "emoji": "📜"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "hist_proc_1763",
+                    "label": "The Proclamation Line",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_gov_us",
+                    "label": "U.S. Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
               },
               {
-                "label": "Costs of War",
+                "id": "h3_rev_french",
+                "label": "The French Revolution",
+                "color": "#a03030",
+                "desc": "Liberty, equality, fraternity — and the guillotine. The French Revolution of 1789 overthrew the monarchy, executed the king, produced the Declaration of the Rights of Man, sparked a Reign of Terror that killed thousands, and ended with Napoleon Bonaparte declaring himself Emperor. It established the modern vocabulary of left and right — the terms come from where delegates sat in the National Assembly. It exported revolutionary ideology across Europe and triggered a generation of continental war. It proved that revolutions are not controlled by the people who start them.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_rev_haitian",
+                "label": "The Haitian Revolution",
+                "color": "#c05050",
+                "desc": "The only successful slave revolt in history. From 1791 to 1804, enslaved people in the French colony of Saint-Domingue — the most profitable colony in the world — rose up, defeated Napoleon's army, and established Haiti as the first Black republic and the first free nation in the Americas after the United States. France's response: demand reparations for the loss of its enslaved property. Haiti paid that debt — the equivalent of $21 billion today — until 1947. The revolution that scared every slaveholding society in the hemisphere is the one history has most systematically ignored.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_rc",
+                    "label": "Race & Ethnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "h3_rev_russian",
+                "label": "The Russian Revolution",
+                "color": "#903030",
+                "desc": "1917: two revolutions in one year. The February Revolution overthrew the Tsar and established a provisional government. The October Revolution — the Bolshevik coup — overthrew the provisional government and established Soviet power. Lenin's promise: peace, land, bread. What followed: civil war, famine, the Red Terror, Stalin, the Gulag, 70 years of totalitarianism. The Russian Revolution produced the 20th century's most influential political experiment and its most catastrophic political failure — and the debate about whether those are the same thing or different things is still live.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_rev_decolonization",
+                "label": "Decolonization",
+                "color": "#b85050",
+                "desc": "The 20th century's revolution wave: between 1945 and 1975, dozens of African and Asian nations achieved independence from European colonial powers. Some peacefully — India's independence movement under Gandhi. Some through armed struggle — Algeria's eight-year war against France, Vietnam's decades-long fight against France and then the United States. Decolonization changed the map of the world more dramatically than any event since the Congress of Vienna. It also left most newly independent nations with colonial borders, colonial economic relationships, and colonial institutions dressed in national flags.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "geo_africa",
+                    "label": "Africa",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_mideast",
+                    "label": "The Middle East",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "h3_genocide",
+            "label": "Genocide",
+            "color": "#6a2828",
+            "desc": "Raphael Lemkin coined the word in 1944 — combining the Greek genos (people) with the Latin cide (killing) — because no existing word described what he had witnessed. The UN Convention on the Prevention and Punishment of Genocide, adopted in 1948, defines it as acts committed with intent to destroy, in whole or in part, a national, ethnic, racial, or religious group. The definition is precise. Its application has been consistently political — powerful nations resist the word when applying it would require them to act or implicate their allies.",
+            "links": [
+              {
+                "label": "United States Holocaust Memorial Museum",
+                "url": "https://www.ushmm.org",
+                "emoji": "🕍"
+              },
+              {
+                "label": "Genocide Watch",
+                "url": "https://www.genocidewatch.com",
+                "emoji": "⚖️"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h3_gen_whatis",
+                "label": "What Is Genocide",
+                "color": "#6a2828",
+                "desc": "The legal definition requires three elements: a protected group (national, ethnic, racial, or religious), specific acts (killing, causing serious bodily or mental harm, deliberately inflicting destructive conditions, preventing births, forcibly transferring children), and the intent to destroy the group in whole or in part. The intent element is the hardest to prove and the most frequently contested. States that commit genocide rarely announce it. They use euphemisms — final solution, ethnic cleansing, special measures — and destroy the evidence. The word exists because the acts it describes are categorically different from war crimes or crimes against humanity.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_gen_holocaust",
+                "label": "The Holocaust",
+                "color": "#5a1818",
+                "desc": "Six million Jews — two-thirds of European Jewry — murdered by the Nazi state between 1933 and 1945. Five to six million others: Roma, disabled people, Soviet POWs, political prisoners, gay men, Jehovah's Witnesses. The Holocaust was not a medieval eruption of ancient hatred. It was a modern bureaucratic project — organized by educated people, implemented through industrial infrastructure, documented in meticulous records, carried out in a country that was one of the most culturally and scientifically advanced in the world. The lesson is not that monsters do this. The lesson is that ordinary institutions, in the wrong conditions, can.",
+                "links": [
+                  {
+                    "label": "United States Holocaust Memorial Museum",
+                    "url": "https://www.ushmm.org",
+                    "emoji": "🕍"
+                  },
+                  {
+                    "label": "Yad Vashem",
+                    "url": "https://www.yadvashem.org",
+                    "emoji": "🕍"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h3_gen_other",
+                    "label": "Other Genocides",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "h3_gen_firstnations",
+                "label": "First Nations & The Americas",
+                "color": "#7a3828",
+                "desc": "The destruction of indigenous peoples in the Americas over four centuries meets the legal definition of genocide across multiple elements: deliberate killing, the engineered spread of disease, forced removal from ancestral land, the destruction of food supplies (the buffalo slaughter), the forcible transfer of children to boarding schools with the explicit goal of destroying culture. Scholars debate whether the full legal threshold — particularly the intent element — is met. What is not debated is the scale: an estimated 90% population reduction across the Americas within a century of European contact. The word genocide was coined after the fact. The acts predate it by centuries.",
+                "links": [
+                  {
+                    "label": "National Museum of the American Indian",
+                    "url": "https://americanindian.si.edu",
+                    "emoji": "🏛️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "hist_first_nations",
+                    "label": "First Nations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "hist_boarding",
+                    "label": "The Boarding Schools",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "hist_smallpox",
+                    "label": "Smallpox & Biological Warfare",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "hist_buffalo",
+                    "label": "The Buffalo Slaughter",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "h3_gen_other",
+                "label": "Other Genocides",
+                "color": "#782030",
+                "desc": "The 20th century produced more documented genocides than any previous era — not because humans became more violent but because states acquired the bureaucratic and industrial capacity to organize mass killing at scale. Each case has its own particular causes, perpetrators, and survivors. None of them are fully in the past.",
+                "links": [
+                  {
+                    "label": "Genocide Watch",
+                    "url": "https://www.genocidewatch.com",
+                    "emoji": "⚖️"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "h3_gen_armenian",
+                    "label": "The Armenian Genocide",
+                    "color": "#782030",
+                    "desc": "1915-1916. The Ottoman Empire, in the final years of WWI, systematically deported and massacred its Armenian Christian population. An estimated 1 to 1.5 million dead — through mass execution, death marches into the Syrian desert, and deliberate starvation. Turkey has never acknowledged it as genocide. The United States formally recognized it as genocide in 2021 after decades of diplomatic avoidance — Turkey is a NATO ally. The Armenian genocide is the model Lemkin had in mind when he coined the word.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_gen_holodomor",
+                    "label": "The Holodomor",
+                    "color": "#883030",
+                    "desc": "1932-1933. Stalin's Soviet government engineered a famine in Ukraine that killed between 3.5 and 7 million people. Grain was seized from Ukrainian farms and exported while peasants starved. The borders were sealed to prevent escape. The famine was deliberately targeted at Ukraine — other Soviet regions received relief that Ukraine did not. Whether it meets the legal definition of genocide — particularly the intent element — is still debated. What is not debated is that the Soviet government knew people were dying in the millions and continued the policy.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_gen_cambodia",
+                    "label": "Cambodia",
+                    "color": "#6a1828",
+                    "desc": "1975-1979. The Khmer Rouge under Pol Pot evacuated Cambodia's cities, abolished money, abolished religion, declared Year Zero, and set about building an agrarian utopia through forced labor and mass execution. Between 1.5 and 2 million people died — roughly a quarter of Cambodia's population — from execution, starvation, disease, and forced labor. Intellectuals, ethnic Vietnamese, ethnic Chinese, Muslim Cham, Buddhist monks, and anyone wearing glasses were targeted. The genocide ended when Vietnam invaded in 1979 — the US, which had destabilized Cambodia through illegal bombing during Vietnam, opposed the Vietnamese intervention.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_gen_rwanda",
+                    "label": "Rwanda",
+                    "color": "#7a1818",
+                    "desc": "100 days. 800,000 dead. 1994. The Rwandan genocide was the fastest mass killing in recorded history — Tutsi civilians murdered by Hutu militia and ordinary neighbors at a rate that exceeded the Holocaust's daily death toll. The UN had peacekeepers in Rwanda who were ordered not to intervene. The US explicitly avoided using the word genocide because its own law would have required a response. Bill Clinton later called his administration's inaction one of the greatest failures of his presidency. The genocide ended when the Rwandan Patriotic Front — a Tutsi-led rebel army — took the country by force.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_gen_bosnia",
+                    "label": "Bosnia & Srebrenica",
+                    "color": "#8a2828",
+                    "desc": "July 1995. Srebrenica, Bosnia. Dutch UN peacekeepers stood aside while Bosnian Serb forces under Ratko Mladic separated the men and boys from the women and executed 8,000 of them over five days. The International Court of Justice ruled it genocide. It happened in Europe. It happened while the UN was present. It happened while Western governments debated whether to intervene. Mladic was not captured until 2011. He was convicted of genocide in 2017. The women who survived are still alive. The men and boys are in mass graves that are still being excavated.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_gen_ongoing",
+                "label": "The Ongoing Question",
+                "color": "#8a3838",
+                "desc": "Genocide is not only history. The Uyghur people in China's Xinjiang region have been subjected to mass detention, forced sterilization, destruction of cultural and religious sites, and the forcible separation of children from families — the US State Department and several allied governments have called it genocide. The conflict in Gaza following the October 7, 2023 Hamas attack and Israel's military response has been the subject of genocide proceedings at the International Court of Justice, brought by South Africa. The application of the word is always political. The refusal to apply it is also always political. The question of who gets the word and who does not tells you everything about who holds power.",
+                "links": [
+                  {
+                    "label": "Genocide Watch",
+                    "url": "https://www.genocidewatch.com",
+                    "emoji": "⚖️"
+                  },
+                  {
+                    "label": "ICJ — genocide cases",
+                    "url": "https://www.icj-cij.org",
+                    "emoji": "⚖️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "geo_china",
+                    "label": "China & Asia",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_me_israel",
+                    "label": "Israel & Palestine",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "hist_first_nations",
+                "label": "First Nations",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race & Ethnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "h3_american_wars",
+            "label": "American Wars",
+            "color": "#b83030",
+            "desc": "The United States has been at war — formally or informally — for most of its existence. The American mythology of reluctant superpower, drawn into conflicts it did not start and eager to come home when they end, is contradicted by the record. From the wars against indigenous nations that preceded and accompanied westward expansion, through the Civil War, two World Wars, Korea, Vietnam, and the Forever Wars, to the present day, the United States has maintained a continuous military presence somewhere in the world for over a century. Understanding American wars requires understanding both what they achieved and what they cost — and for whom.",
+            "links": [
+              {
+                "label": "Costs of War Project",
                 "url": "https://watson.brown.edu/costsofwar",
                 "emoji": "⚔️"
               },
               {
-                "label": "Gallery: America's Indigenous Sin →",
-                "url": "gallery.html",
-                "emoji": "🖼️"
+                "label": "National Archives — military records",
+                "url": "https://www.archives.gov/research/military",
+                "emoji": "📜"
               }
             ],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
+            "topPills": [
+              {
+                "id": "h3_aw_civil",
+                "label": "The Civil War — The Unending War",
+                "color": "#a82020",
+                "desc": "The deadliest war in American history — 620,000 to 750,000 dead — was fought over slavery. The Confederate states said so explicitly in their declarations of secession and their new constitution. The states rights framing was constructed after the fact, primarily during the Lost Cause mythology-building of the late 19th and early 20th centuries. The war ended at Appomattox in 1865. The conflict it represented did not. The South lost the military contest and won the political one — through the betrayal of Reconstruction, the terror of the Klan, Jim Crow, mass incarceration, and the ongoing contestation of what the war was actually about. The Civil War is the most important unresolved event in American history.",
+                "links": [
+                  {
+                    "label": "National Archives — Civil War records",
+                    "url": "https://www.archives.gov",
+                    "emoji": "📜"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "h3_civil_reconstruction",
+                    "label": "Reconstruction & Its Betrayal",
+                    "color": "#a82020",
+                    "desc": "1865 to 1877: the brief window when the constitutional amendments meant something. The 13th abolished slavery. The 14th guaranteed citizenship and equal protection. The 15th guaranteed the right to vote. Black men voted and held office across the South. Schools were built. The framework of a multiracial democracy was being constructed. Then the Compromise of 1877 — a disputed presidential election resolved by withdrawing federal troops from the South — ended it. The Redeemers took over. The amendments remained on paper. The promise of Reconstruction is the most important broken promise in American history.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_civil_lostcause",
+                    "label": "The Lost Cause",
+                    "color": "#982020",
+                    "desc": "The mythology constructed after Confederate defeat to reframe the Civil War as a noble cause — about states rights and Southern honor, not slavery — and the Confederacy as a heroic lost civilization. The Lost Cause was not organic nostalgia. It was a deliberate political and cultural project. The Confederate monuments — most built between 1890 and 1950, not in the immediate aftermath of the war — were propaganda: assertions of white supremacy during Jim Crow and the Civil Rights era. The textbooks that taught Southern schoolchildren the war was not about slavery were written by the United Daughters of the Confederacy.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "hist_tp5",
+                        "label": "Monuments & Memory",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "h3_civil_shadow",
+                    "label": "The Long Shadow",
+                    "color": "#b83030",
+                    "desc": "The line from Appomattox to the present is not metaphorical — it is documented political history. Jim Crow law replaced slavery as the mechanism of racial subordination. Mass incarceration replaced Jim Crow when the Civil Rights Act made explicit discrimination illegal. The Southern Strategy of the 1960s Republican Party deliberately exploited white resentment of civil rights gains to realign the South politically. The Confederate flag flew over Southern statehouses through the 1990s and 2000s. January 6, 2021, when rioters carrying Confederate flags stormed the US Capitol, was not an anomaly. It was a chapter in a story that began in 1865.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "f_rc",
+                        "label": "Race & Ethnicity",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "f_class",
+                        "label": "Class",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "hist_tp2",
+                    "label": "Who Writes It",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_civil_lostcause",
+                    "label": "The Lost Cause",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "h3_aw_worldwars",
+                "label": "The World Wars",
+                "color": "#c04040",
+                "desc": "Two world wars in thirty years, both centered in Europe, both drawing in the United States after initial reluctance, both reshaping the global order more dramatically than any previous conflict. Together they killed an estimated 100 million people including combatants and civilians, produced the Holocaust, ended the European empires, created the United Nations, established American hegemony, and set the stage for the Cold War. They are the defining events of the 20th century.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "h3_ww1",
+                    "label": "WWI — The War That Made the Next One",
+                    "color": "#b03030",
+                    "desc": "Triggered by an assassination in Sarajevo, caused by decades of imperial competition, nationalist pressure, entangling alliances, and a military planning system with no off switch. 20 million dead. The Ottoman Empire dissolved, its Arab territories carved up by Britain and France in lines that still govern the Middle East. The Austro-Hungarian Empire dissolved. The Russian Empire collapsed into revolution. Germany was humiliated by the Treaty of Versailles — the war guilt clause, the reparations, the territorial losses. The humiliation produced the conditions for Hitler. WWI did not end a world. It broke one and left the pieces lying on the floor.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "geo_me_borders",
+                        "label": "The Lines in the Sand",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "h3_ww2",
+                    "label": "WWII — The Good War",
+                    "color": "#c04848",
+                    "desc": "The deadliest conflict in human history — 70 to 85 million dead. The war against fascism that the United States entered after Pearl Harbor and won through a combination of industrial output, Soviet sacrifice (the USSR lost 27 million people), and Allied coordination. It is called the Good War because the moral stakes were unusually clear — the Axis powers represented something that had to be defeated. The complications: the US fought a war for democracy with a segregated military. It firebombed Dresden and Tokyo. It dropped atomic bombs on Hiroshima and Nagasaki. It interned its Japanese American citizens. Good wars are still wars.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_aw_korea_vietnam",
+                "label": "Korea & Vietnam",
+                "color": "#b04040",
+                "desc": "Two Cold War proxy wars fought on the Asian mainland, both involving the United States in conflicts that were fundamentally about nationalism and civil war rather than the communist aggression the US claimed to be containing. Korea ended in armistice — technically still unresolved. Vietnam ended in American defeat — the first and only. Both wars shaped American military doctrine, domestic politics, and foreign policy for generations afterward.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "h3_korea",
+                    "label": "Korea — The Forgotten War",
+                    "color": "#b04040",
+                    "desc": "36,000 American dead, three million Korean dead, fought between 1950 and 1953, ended in armistice not peace treaty — technically ongoing. North and South Korea are still at war. The US maintains 28,000 troops in South Korea. North Korea has nuclear weapons. The Korean War established the precedent that the US would fight land wars in Asia to contain communism — a precedent that led directly to Vietnam. It is called the forgotten war because it came between the triumphalism of WWII and the trauma of Vietnam, and because it ended without victory.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_vietnam",
+                    "label": "Vietnam — The Lost War",
+                    "color": "#a03030",
+                    "desc": "58,000 American dead. 2 to 3 million Vietnamese dead. A war prosecuted on a false pretext — the Gulf of Tonkin incident, which never happened as reported — against a nationalist movement that the US misidentified as Soviet expansion. The Pentagon Papers, leaked in 1971, revealed that the government had known for years it could not win and continued fighting anyway. The war ended in 1975 with the fall of Saigon. It produced a generation of veterans with PTSD, a nation's profound distrust of its government, and the Vietnam Syndrome — the reluctance to commit ground troops — that Ronald Reagan deliberately set about curing.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "geo_proxy_cold",
+                        "label": "Cold War Proxies",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_aw_forever",
+                "label": "The Forever Wars",
+                "color": "#c03030",
+                "desc": "After September 11, 2001, the United States launched what it called the Global War on Terror — an open-ended military campaign against a tactic rather than a state, with no defined victory condition and no geographic boundary. The Authorization for Use of Military Force passed in 2001 has been used to justify military action in at least 19 countries. The wars in Afghanistan and Iraq lasted 20 and 8 years respectively and ended without achieving their stated objectives. The Costs of War Project at Brown University estimates the total cost at over $8 trillion and 900,000 deaths.",
+                "links": [
+                  {
+                    "label": "Costs of War Project",
+                    "url": "https://watson.brown.edu/costsofwar",
+                    "emoji": "⚔️"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "h3_afghanistan",
+                    "label": "Afghanistan",
+                    "color": "#c03030",
+                    "desc": "The United States invaded Afghanistan in October 2001 to destroy Al-Qaeda and remove the Taliban government that sheltered it. Al-Qaeda was dispersed within months. The US then spent 20 years attempting to build a democratic Afghan state while fighting the Taliban insurgency. In August 2021, US forces withdrew and the Taliban retook the country in 11 days. The Soviet Union had tried and failed in Afghanistan from 1979 to 1989. The British Empire had tried and failed three times before that. Afghanistan has been called the graveyard of empires. The graveyard is still open.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_iraq",
+                    "label": "Iraq — The WMD Lie",
+                    "color": "#b02020",
+                    "desc": "The United States invaded Iraq in March 2003 on the basis that Saddam Hussein possessed weapons of mass destruction — a claim that the administration knew was uncertain and that UN inspectors were in the process of disproving. No weapons of mass destruction were found. The invasion destabilized Iraq, dissolved its military and government, created a power vacuum that produced ISIS, killed an estimated 200,000 Iraqi civilians, cost $2 trillion, and damaged US credibility globally in ways that have not recovered. The people who made the decision suffered no legal consequences. The people of Iraq are still living in the results.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_war_on_terror",
+                    "label": "The War on Terror",
+                    "color": "#d04040",
+                    "desc": "You cannot declare war on a tactic. The War on Terror was from the beginning a category error — an attempt to apply military force to a political and ideological problem. What it produced: the surveillance state (NSA mass surveillance revealed by Snowden), the drone program (extrajudicial killing in countries the US is not at war with), Guantanamo (indefinite detention without trial, still operating), and the normalization of perpetual war as the background condition of American life. The original Al-Qaeda that attacked on September 11 has been largely destroyed. The conditions that produced it have not.",
+                    "links": [
+                      {
+                        "label": "ACLU — national security",
+                        "url": "https://www.aclu.org/issues/national-security",
+                        "emoji": "⚖️"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "geo_proxy",
+                    "label": "Proxy Wars",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_perm_war",
+                    "label": "The Permanent War Economy",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "h3_aw_drugwar",
+                "label": "The War on Drugs",
+                "color": "#983838",
+                "desc": "President Nixon declared war on drugs in 1971. Nixon's domestic policy adviser John Ehrlichman later admitted: we knew we could not make it illegal to be either against the war or Black, but by getting the public to associate the hippies with marijuana and Blacks with heroin, and then criminalizing both heavily, we could disrupt those communities. The War on Drugs was not a war on drugs. It was a war on political enemies and communities, conducted using drugs as the legal pretext. The United States incarcerates more people than any nation on earth. A disproportionate number of them are Black and Latino men convicted of drug offenses.",
+                "links": [
+                  {
+                    "label": "Drug Policy Alliance",
+                    "url": "https://drugpolicy.org",
+                    "emoji": "⚖️"
+                  },
+                  {
+                    "label": "ACLU — mass incarceration",
+                    "url": "https://www.aclu.org",
+                    "emoji": "⚖️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_rc",
+                    "label": "Race & Ethnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "f_class",
+                    "label": "Class",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_gov_us",
+                    "label": "U.S. Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "hist_geopolitics",
+                "label": "Geopolitics",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_mil",
+                "label": "Military",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "h3_perm_war",
+            "label": "The Permanent War Economy",
+            "color": "#8a4040",
+            "desc": "Dwight Eisenhower coined the term military-industrial complex in his 1961 farewell address — a warning from the Supreme Commander of Allied Forces in WWII and two-term President about the dangers of a permanent arms industry with a financial interest in perpetual conflict. The United States has not been at peace since. The defense budget exceeds $900 billion annually — more than the next ten countries combined. The Pentagon cannot pass an audit. Defense contractors employ hundreds of thousands of workers in congressional districts across every state, making cuts politically impossible. The complex Eisenhower warned about has become the background condition of American governance.",
+            "links": [
+              {
+                "label": "Costs of War Project",
+                "url": "https://watson.brown.edu/costsofwar",
+                "emoji": "⚔️"
+              },
+              {
+                "label": "OpenSecrets — defense lobbying",
+                "url": "https://www.opensecrets.org",
+                "emoji": "💰"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h3_pw_mic",
+                "label": "The Military Industrial Complex",
+                "color": "#8a4040",
+                "desc": "Eisenhower's warning in full: in the councils of government, we must guard against the acquisition of unwarranted influence, whether sought or unsought, by the military-industrial complex. The potential for the disastrous rise of misplaced power exists and will persist. The complex: defense contractors who profit from war, military brass who rotate into contractor jobs after retirement, politicians who receive contractor donations and protect contractor jobs in their districts, think tanks funded by defense money that produce arguments for military spending. The system is self-reinforcing and largely immune to democratic pressure.",
+                "links": [
+                  {
+                    "label": "OpenSecrets — defense industry",
+                    "url": "https://www.opensecrets.org",
+                    "emoji": "💰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_pw_budget",
+                "label": "The Defense Budget",
+                "color": "#9a5050",
+                "desc": "The US defense budget exceeds $900 billion annually — more than the combined military spending of China, Russia, India, Saudi Arabia, the UK, Germany, France, South Korea, Japan, and Ukraine. It has never been successfully audited. The Pentagon failed its fifth consecutive audit in 2023. The budget funds 800 overseas bases, 11 aircraft carrier groups, the nuclear arsenal, and the largest military bureaucracy in human history. It also funds Lockheed Martin, Raytheon, Boeing, General Dynamics, and Northrop Grumman — the five largest defense contractors — whose combined revenue exceeds the GDP of most countries.",
+                "links": [
+                  {
+                    "label": "USASpending.gov — defense",
+                    "url": "https://www.usaspending.gov",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_pw_bases",
+                "label": "800 Bases",
+                "color": "#7a3030",
+                "desc": "The United States maintains approximately 800 military bases in 70 countries — more than any empire in history. Britain at the height of its empire had 36 bases outside the UK. The US base network costs an estimated $100 billion per year to maintain. Many bases have been there since WWII or the Cold War and have never been reconsidered. The bases project power, protect allies, and provide logistical infrastructure for global military operations. They also generate resentment, produce crimes committed by stationed personnel, and represent a permanent commitment of American treasure and credibility to arrangements that are rarely debated.",
+                "links": [
+                  {
+                    "label": "Costs of War — overseas bases",
+                    "url": "https://watson.brown.edu/costsofwar",
+                    "emoji": "⚔️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_pw_revolving",
+                "label": "The Revolving Door",
+                "color": "#a05050",
+                "desc": "Senior military officers retire and join the boards or advisory staffs of defense contractors. Defense contractor executives become Deputy Secretaries of Defense. Congressional staffers who write defense appropriations bills take jobs with the companies their bills fund. Think tank analysts who argue for defense spending are funded by defense contractors. The revolving door is legal, documented, and universal. It ensures that the people who make decisions about military spending have financial interests in maximum military spending. Eisenhower's warning was not a prediction. It was an observation about something already fully formed.",
+                "links": [
+                  {
+                    "label": "OpenSecrets — revolving door",
+                    "url": "https://www.opensecrets.org",
+                    "emoji": "💰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_corp_cor",
+                    "label": "Corruption",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p2",
+                "label": "Economy & Money",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_corp",
+                "label": "Corporations",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "h3_war_memory",
+            "label": "War & Memory",
+            "color": "#7a5050",
+            "desc": "Wars are fought twice — once on the battlefield and once in the history books. The second fight is often more consequential. Who gets remembered, how the war is framed, what the war was for — these questions are settled not by generals but by politicians, educators, novelists, filmmakers, and the organizations of veterans and survivors who have the most at stake in the official story. The Lost Cause is the most successful example in American history of losing the military war and winning the memory war. It has not been the last.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "h3_mem_monuments",
+                "label": "Who Gets Remembered",
+                "color": "#7a5050",
+                "desc": "The decision about who gets a monument, a holiday, a textbook chapter, a named building is a political decision. Confederate monuments were built primarily during two periods: the 1890s-1920s, when Jim Crow was being consolidated, and the 1950s-1960s, when the Civil Rights Movement was threatening it. They were not nostalgia. They were assertions of power. The fights over monuments in the 2010s and 2020s are the same fight that produced them — a contestation over whose history is the official history and whose version of the war gets taught to the next generation.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "hist_tp5",
+                    "label": "Monuments & Memory",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "h3_mem_vietnam_syndrome",
+                "label": "Vietnam Syndrome",
+                "color": "#6a4040",
+                "desc": "After Vietnam, the American public was deeply skeptical of military intervention. Politicians called this the Vietnam Syndrome — as if reluctance to start wars was a pathology to be cured. Ronald Reagan set about curing it: Grenada in 1983, Libya in 1986, the rhetoric of American strength. George H.W. Bush declared after the Gulf War that we have kicked the Vietnam Syndrome once and for all. He meant the public's resistance to military force had been overcome. The Forever Wars that followed demonstrated that the syndrome's diagnosis was more accurate than its cure.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3_mem_fatigue",
+                "label": "Endless War Fatigue",
+                "color": "#8a6060",
+                "desc": "The Forever Wars produced something the Vietnam War had not: a public that mostly stopped paying attention. Vietnam was on television every night and produced a mass anti-war movement. Afghanistan and Iraq were fought by a volunteer military — less than 1% of the population — and covered by an embedded press that showed less than Vietnam's uncensored footage. The wars continued for twenty years with declining public engagement. When Afghanistan fell in 2021, many Americans seemed surprised the war was still happening. The design of the all-volunteer military and the embedded media system produced exactly this result: war without political cost to the society conducting it.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "hist_tp2",
+                "label": "Who Writes It",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "hist_tp5",
+                "label": "Monuments & Memory",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
           }
         ],
-        "bottomPills": [],
-        "orbs": []
+        "bottomPills": [
+          {
+            "id": "hist_geopolitics",
+            "label": "Geopolitics",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_mil",
+            "label": "Military",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "h1",
+            "label": "Nations & Empire",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ]
       },
       {
         "id": "h6",
