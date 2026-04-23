@@ -6196,56 +6196,669 @@ const LAYERS = [
         "x": 55,
         "y": 52,
         "color": "#4828a8",
-        "desc": "Nations draw lines. Empires erase them and draw bigger ones. The recurring dream of total organization — always promising order, always producing the conditions for its own collapse. The nation-state is the empire's smaller, more polite successor. For now.",
+        "desc": "Nations draw lines. Empires erase them. The line between the two has always been thinner than the people inside either one prefer to believe. What changes across five thousand years of this story is the technology and the justification. The pattern underneath doesn't change at all.",
         "links": [
           {
-            "label": "Global Base Map",
-            "url": "https://www.usnow.app/graphics/750-bases",
-            "emoji": "🗺️"
+            "label": "Foreign Affairs — empire & power",
+            "url": "https://www.foreignaffairs.com",
+            "emoji": "📰"
+          },
+          {
+            "label": "Lapham's Quarterly — history in primary sources",
+            "url": "https://www.laphamsquarterly.org",
+            "emoji": "📜"
           }
         ],
         "topPills": [
           {
-            "id": "h1d1",
-            "label": "The American Empire",
-            "color": "#5838b8",
-            "desc": "750 bases in 80 countries. The largest military footprint in human history — so normalized it barely registers as empire at all. Coming soon.",
+            "id": "h1_ancient",
+            "label": "The Ancient World",
+            "color": "#6848a8",
+            "desc": "The first experiments in total organization. Power at this scale had never existed before. Nobody knew the rules because nobody had written them yet. They wrote them in stone and called it divine.",
             "links": [
               {
-                "label": "750 Bases Map",
-                "url": "https://www.usnow.app/graphics/750-bases",
-                "emoji": "🗺️"
-              },
-              {
-                "label": "Costs of War",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "⚔️"
+                "label": "Lapham's Quarterly — ancient empires",
+                "url": "https://www.laphamsquarterly.org",
+                "emoji": "📜"
               }
             ],
+            "topPills": [
+              {
+                "id": "h1_anc_egypt",
+                "label": "Egypt",
+                "color": "#9a8a2a",
+                "desc": "Three thousand years of a system so stable it almost looks like it wasn't run by humans. The Pharaoh as living god — not metaphor, not ceremony, but administrative fact. The Nile as the real sovereign: when it flooded on schedule, the theology held. When it didn't, dynasties fell. Egypt is the longest continuous state in human history and the first proof that the divine-right claim, maintained with enough consistency, can organize a civilization for longer than most civilizations last.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_anc_persia",
+                "label": "Persia",
+                "color": "#8a5a2a",
+                "desc": "The first true multiethnic empire. Cyrus the Great conquered Babylon in 539 BCE and immediately issued what some call the first human rights document — freeing captive peoples, allowing religious practice, returning stolen idols. Whether this was principle or administrative strategy is a debate that applies to every liberal empire since. The Achaemenid Empire stretched from Egypt to India and was governed through a system of satrapies — regional governors accountable to the center — that became the template for every large-scale bureaucratic empire that followed.",
+                "links": [
+                  {
+                    "label": "British Museum — Cyrus Cylinder",
+                    "url": "https://www.britishmuseum.org/collection/object/W_1880-0617-1941",
+                    "emoji": "🏛️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_anc_alexander",
+                "label": "Alexander & the Hellenistic World",
+                "color": "#7a6a3a",
+                "desc": "Conquered the known world by 32. Dead at 32. The empire fractured immediately into the Diadochi successor kingdoms — his generals carving up what he'd built before his body was cold. What lasted wasn't territory. It was Greek language, culture, and philosophy spreading across the Middle East and Central Asia — the Hellenistic synthesis that fused Greek thought with Persian, Egyptian, and Babylonian traditions. That fusion produced the intellectual world in which Christianity, Neoplatonism, and Islam all took shape.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_anc_rome",
+                "label": "Rome",
+                "color": "#8a4a3a",
+                "desc": "The template everything since has borrowed from, consciously or not. The Republic lasted 500 years before becoming the Empire — a cautionary tale the American founders studied carefully and partially misread. Roman law still runs Western legal systems. Roman roads still determine European geography. The fall took 300 years and still surprises people who expect collapse to be an event rather than a process. What Rome proved: that a republic can become an empire without anyone deciding to make it one. It happens one accommodation at a time.",
+                "links": [
+                  {
+                    "label": "Encyclopaedia Britannica — Roman Empire",
+                    "url": "https://www.britannica.com/place/Roman-Empire",
+                    "emoji": "📖"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_megalomania",
+                    "label": "Megalomania & the Crown",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_anc_han",
+                "label": "Han China",
+                "color": "#5a7a3a",
+                "desc": "Contemporary with Rome, unknown to Rome, comparable in scale and sophistication. The Han Dynasty (206 BCE – 220 CE) established the bureaucratic examination system — merit-based governance in theory, the first attempt to staff an empire on competence rather than birth. The Silk Road under Han governance was the first global supply chain, connecting China to Rome through Central Asia without either empire knowing the other existed. The precedent Han set — that China is a unified civilization with a continuous mandate — is one the country has never stopped drawing on.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_anc_india",
+                "label": "Maurya & Gupta India",
+                "color": "#6a5a2a",
+                "desc": "Ashoka's conversion after the Kalinga massacre is the only moment in recorded history where a conqueror looked at what he'd done and publicly renounced it. He had killed perhaps 100,000 people in a single campaign. He erected pillars across the subcontinent inscribed with principles of non-violence, religious tolerance, and just governance — the first public human rights proclamations in history. Whether the conversion was complete or strategic, the record is there. The Gupta period that followed was the classical peak of Indian civilization — mathematics, astronomy, literature, philosophy — what the subcontinent looked like before the next wave arrived.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_medieval",
+            "label": "The Medieval Order",
+            "color": "#5838a8",
+            "desc": "The period between Rome and modernity that history treats as a gap. It wasn't a gap. It was a complete reorganization of how power justifies itself — through God instead of gods, through the Church instead of the Emperor, and then through both simultaneously until they started killing each other over the difference.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "h1_med_byzantium",
+                "label": "Byzantium",
+                "color": "#5848b8",
+                "desc": "The eastern half of Rome that didn't fall. It lasted another thousand years, until 1453, when Constantinople fell to the Ottoman Turks. In that thousand years it preserved Greek philosophy, Roman law, and Christian theology in a single continuous state while the West lost all three. Byzantine scholars fleeing to Italy after 1453 brought Greek manuscripts with them — their arrival is one of the triggers of the Renaissance. The civilization that saved Western knowledge is the one Western history most consistently forgets.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_med_caliphates",
+                "label": "The Islamic Caliphates",
+                "color": "#8a6a2a",
+                "desc": "Umayyad, Abbasid, Fatimid. The most sophisticated civilization on earth between 700 and 1200 CE while Europe was burning books. The House of Wisdom in Baghdad was the largest library and translation center in the world — Greek philosophy, Persian mathematics, Indian numerals all translated, synthesized, and extended. Algebra is an Arabic word. Algorithms are named for al-Khwarizmi. The optics that Newton built on were developed by Ibn al-Haytham. The Crusades were not a clash of equals — they were a backwater attacking a civilization that barely noticed.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_med_mongol",
+                "label": "The Mongol Empire",
+                "color": "#7a4a2a",
+                "desc": "The largest contiguous land empire in history, built in one generation. Genghis Khan unified warring steppe tribes through military genius and systematic terror — cities that surrendered were spared, cities that resisted were erased. The Pax Mongolica that followed created the first Eurasian trade and communication network — goods, ideas, and disease moving from China to Europe at unprecedented speed. The Black Death traveled the Mongol road. So did the exchange of technologies that seeded the next 500 years. The destruction of Baghdad in 1258 ended the Abbasid Caliphate and the Islamic Golden Age in a single week.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_med_feudal",
+                "label": "Feudal Europe",
+                "color": "#6a5a4a",
+                "desc": "Not chaos. A system. Land for loyalty, loyalty for protection — the only currency that mattered when the centralized state had dissolved. The Catholic Church was the one institution that crossed every border, providing administrative continuity, literacy, and the only pan-European identity available. The tension between pope and emperor — who crowns whom, who can depose whom — runs through 500 years of European history and produces both the Reformation and the modern nation-state. Feudalism didn't collapse because it failed. It was outcompeted by gunpowder, trade, and the printing press.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_med_song",
+                "label": "Song Dynasty & Medieval China",
+                "color": "#5a7a4a",
+                "desc": "Gunpowder, printing, the compass — all Chinese, all medieval. The Song Dynasty (960–1279 CE) ran the most commercially sophisticated economy on earth before industrialization. Paper money. Urban populations of over a million. A civil service examination system producing a genuine meritocratic bureaucracy. Lost to the Mongols. Rebuilt under the Ming and Qing. The pattern of Chinese civilization — absorbing its conquerors, continuing, insisting on continuity — is itself a form of imperial endurance that has no Western equivalent.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_med_crusades",
+                "label": "The Crusades",
+                "color": "#7a3a3a",
+                "desc": "Nine military campaigns over 200 years, launched in the name of God, motivated by land, politics, and the papal need to redirect European violence outward. The First Crusade succeeded. The rest mostly didn't. What the Crusades produced: 200 years of contact between European and Islamic civilization, the transfer of Islamic science and philosophy to Europe through captured libraries and translated texts, and a template for religiously justified warfare that both traditions have been using ever since. The long-term damage to Christian-Muslim relations was not incidental. It was baked in.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_empires",
+            "label": "The Age of Empires",
+            "color": "#4828a8",
+            "desc": "Five hundred years of European powers drawing lines on maps they had never seen, across lands they had never visited, over peoples they had never met — and calling it civilization. The infrastructure of that project is still running. We just changed the paperwork.",
+            "links": [
+              {
+                "label": "World History Encyclopedia — colonialism",
+                "url": "https://www.worldhistory.org",
+                "emoji": "📚"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h1_emp_iberian",
+                "label": "Portugal & Spain",
+                "color": "#9a7a2a",
+                "desc": "The first. The Treaty of Tordesillas in 1494 divided the entire undiscovered world between two countries by papal decree — a line drawn down the Atlantic, everything west to Spain, everything east to Portugal. Neither country had seen most of what it was claiming. The Columbian Exchange that followed was the greatest biological disruption in human history: foods, diseases, plants, animals moving between hemispheres that had been separated for 10,000 years. Smallpox killed an estimated 90% of the indigenous population of the Americas within a century of contact. The gold and silver extracted funded the first global economy and inflated Europe's money supply into crisis.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_emp_british",
+                "label": "The British Empire",
+                "color": "#4a5a8a",
+                "desc": "At its peak, one quarter of the earth's land surface and one quarter of its population. The East India Company governed India for a century as private profit underwritten by public military force — the original corporation-state. The ideology of improvement justified extraction: we are making you better while taking everything you have. The Bengal famine of 1943 — three million dead while India exported food to Britain — is the clearest case, but not the only one. Mike Davis documented Victorian-era famines that killed 30 to 60 million people under British administration. The legal and institutional architecture the Empire left behind still runs many of the countries it abandoned.",
+                "links": [
+                  {
+                    "label": "Oxford Dictionary of National Biography — empire",
+                    "url": "https://www.oxforddnb.com",
+                    "emoji": "📚"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_emp_french",
+                "label": "The French Empire",
+                "color": "#7a3a5a",
+                "desc": "Algeria, Indochina, West Africa, the Caribbean. The mission civilisatrice — the explicit ideological claim that French culture was a gift to the world that justified taking everything else in return. The Haitian Revolution of 1791–1804 is where that claim was tested by the people it was being applied to. The only successful slave revolt in history produced the first Black republic. France responded by demanding reparations — Haiti paid them until 1947. France's colonial wars in Algeria and Vietnam were among the most brutal of the 20th century. The postcolonial relationship between France and its former African colonies remains uniquely extractive.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h3_colonial_wars",
+                    "label": "Colonial Wars",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_emp_dutch_belgian",
+                "label": "Dutch & Belgian Empires",
+                "color": "#3a6a5a",
+                "desc": "The Dutch East India Company — the VOC — was the first multinational corporation, the first company to issue tradeable stock, and the first to use private military force at global scale. It governed what is now Indonesia for 200 years as a commercial operation. The Belgian Congo under Leopold II was not a colony in any administrative sense — it was a personal property. Leopold never visited it. His private army, the Force Publique, enforced rubber quotas by severing the hands of workers who failed to meet them. An estimated ten million people died. The international outcry that ended Leopold's personal rule was the first modern human rights campaign.",
+                "links": [
+                  {
+                    "label": "Adam Hochschild — King Leopold's Ghost",
+                    "url": "https://www.jstor.org",
+                    "emoji": "📚"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_emp_ottoman",
+                "label": "The Ottoman Empire",
+                "color": "#8a5a2a",
+                "desc": "Six hundred years. Three continents. The millet system organized non-Muslim subjects — Christians, Jews, Armenians — into self-governing religious communities under Ottoman sovereignty. A form of pluralism. Also a form of permanent second-class status. The long 19th-century dissolution — the 'sick man of Europe,' the loss of the Balkans, the Arab provinces — produced escalating internal pressure on minority populations. The Armenian Genocide of 1915–1916 was the empire's response to that pressure: the systematic deportation and massacre of its Armenian Christian population. An estimated 1 to 1.5 million dead. Turkey has never acknowledged it.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_emp_berlin",
+                "label": "The Berlin Conference",
+                "color": "#6a4a3a",
+                "desc": "1884. Fourteen European powers. No Africans. The entire continent divided in ten weeks. Otto von Bismarck hosted. The stated purpose was to regulate trade and suppress the slave trade. The actual purpose was to prevent European powers from going to war with each other over African territory by formalizing the rules of the scramble. The lines drawn ignored every ethnic, tribal, linguistic, and geographic reality that had organized the continent for centuries. 54 countries still live inside those lines. Nearly every conflict on the continent since has roots in that room.",
+                "links": [
+                  {
+                    "label": "African Union — colonial borders & conflict",
+                    "url": "https://au.int",
+                    "emoji": "🌍"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_20thc",
+            "label": "The 20th Century Redrawing",
+            "color": "#3828a8",
+            "desc": "The 20th century ran four major experiments in total power — fascism, communism, liberal democracy, and colonial independence — simultaneously, on a planet with industrial weapons. The borders it drew, the institutions it built, and the wreckage it left are the world we're currently living in.",
+            "links": [
+              {
+                "label": "Foreign Affairs — 20th century history",
+                "url": "https://www.foreignaffairs.com",
+                "emoji": "📰"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h1_20th_wwi",
+                "label": "WWI & the Broken Map",
+                "color": "#6a4a7a",
+                "desc": "Four empires dissolved in four years: Ottoman, Austro-Hungarian, Russian, German. Sykes-Picot drew the Middle East in 1916 — a secret Anglo-French agreement that ignored every existing boundary of ethnicity, tribe, and sect. The lines it drew still govern the region and still produce the conflicts the region is known for. The Treaty of Versailles humiliated Germany with war guilt, reparations, and territorial loss. Keynes predicted the result in 1919. Hitler arrived on schedule. Woodrow Wilson's self-determination principle was applied to Europeans. The colonized peoples who traveled to Paris to ask for the same thing were turned away.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h3",
+                    "label": "War & Revolutions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_20th_totalitarian",
+                "label": "The Rise of Totalitarianism",
+                "color": "#7a2a2a",
+                "desc": "Stalin, Mussolini, Hitler, Franco — not aberrations. Products of specific conditions: economic collapse, humiliated nationalism, institutional failure, and populations willing to trade freedom for order. The mechanism by which democracies became dictatorships was documented in real time and mostly misread as it happened. The Enabling Act that gave Hitler absolute power was passed legally by the Reichstag. The constitutional tools were used to end the constitution. This has been demonstrated. It is not theoretical.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_megalomania",
+                    "label": "Megalomania & the Crown",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_20th_wwii",
+                "label": "WWII & the New Architecture",
+                "color": "#5a4a8a",
+                "desc": "The war ended with two superpowers, the United Nations, the Bretton Woods institutions, the Universal Declaration of Human Rights, and the nuclear weapon — all arriving within three years of each other. The attempt to build a world order that would prevent a repeat was genuine. The UN Security Council veto guaranteed that the countries most likely to start a world war could not be stopped by it. That structural flaw was visible at founding. It was the price of getting them to sign.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h3",
+                    "label": "War & Revolutions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_20th_decolonize",
+                "label": "Decolonization",
+                "color": "#4a7a5a",
+                "desc": "50 new nations in 20 years. Independence arrived inside the colonial borders — the only option on offer, and the one that locked in every ethnic and tribal conflict the colonial administrators had managed through deliberate division. The leaders who tried to build something different were mostly removed: Lumumba in the Congo, Mosaddegh in Iran, Allende in Chile — CIA operations, some direct, some by proxy, documented in declassified files. The pattern: any government that attempted to control its own resources on behalf of its own people was a communist threat. The ideology was the justification. The resources were the point.",
+                "links": [
+                  {
+                    "label": "National Security Archive — declassified interventions",
+                    "url": "https://nsarchive.gwu.edu",
+                    "emoji": "📋"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h4",
+                    "label": "Migration",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_20th_coldwar",
+                "label": "The Cold War Map",
+                "color": "#3a5a8a",
+                "desc": "Two superpowers, 175 proxy conflicts, 40 years. Korea, Vietnam, Angola, Mozambique, Nicaragua, El Salvador, Afghanistan — every one a local conflict, every one also a superpower chess move. The ideology was real on both sides. The interests underneath the ideology were older than either system. The Cold War ended not with a war but with an economic collapse — the Soviet system couldn't produce consumer goods or compete technologically. The Wall fell in 1989. The Soviet Union dissolved in 1991. The vacuum it left has been filling ever since.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_20th_1989",
+                "label": "1989 & After",
+                "color": "#6a3a8a",
+                "desc": "The Wall falls. The Soviet Union dissolves. Francis Fukuyama publishes The End of History — liberal democracy as the final form of human government. The thesis lasted about fifteen years before the evidence turned against it. The unipolar moment — American power without a peer competitor — produced NATO expansion, the Iraq War, and the financial crisis of 2008. Each one weakened the institutional order the US had built. The countries that reorganized around the assumption of American-led stability are now recalculating. The recalculation is ongoing.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_american",
+            "label": "The American Empire",
+            "color": "#4838b8",
+            "desc": "The largest military and economic footprint in human history, operated by a country that has never called itself an empire and genuinely believes it isn't one. That gap between what it is and what it believes itself to be is the most consequential blind spot in contemporary geopolitics.",
+            "links": [
+              {
+                "label": "Costs of War — Brown University",
+                "url": "https://watson.brown.edu/costsofwar",
+                "emoji": "📋"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h1_am_architecture",
+                "label": "The Architecture",
+                "color": "#5848c8",
+                "desc": "The post-WWII institutional order the US designed and built: NATO, the IMF, the World Bank, the WTO, the dollar as global reserve currency, the UN Security Council veto. The most sophisticated hegemonic infrastructure ever constructed. Built for genuine reasons — the memory of depression and war was fresh, the desire to prevent a repeat was real. Operated for mixed ones. The architecture served American interests and global stability simultaneously for decades. The two goals are now visibly separating.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_am_footprint",
+                "label": "The Military Footprint",
+                "color": "#4838b8",
+                "desc": "Approximately 800 bases in 80 countries. More than any empire in history controlled at its peak. Britain at the height of its empire maintained 36 overseas bases. The US base network costs an estimated $100 billion per year. Many bases date to WWII or the Korean War and have never been reconsidered. They project power, protect allies, and provide logistical infrastructure for global operations. They also generate resentment, produce incidents, and represent permanent commitments to arrangements that are never debated by the people paying for them.",
+                "links": [
+                  {
+                    "label": "Costs of War — base network analysis",
+                    "url": "https://watson.brown.edu/costsofwar",
+                    "emoji": "📋"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_am_economic",
+                "label": "The Economic Empire",
+                "color": "#3a5ab8",
+                "desc": "The petrodollar arrangement — US security guarantees for Saudi Arabia in exchange for oil priced in dollars — underwrote American financial dominance for fifty years. Structural adjustment programs tied IMF and World Bank loans to privatization, deregulation, and austerity. The countries that followed the prescription got debt relief and economic contraction. The Washington Consensus was a policy position dressed as economic science. The countries that ignored it — South Korea, Taiwan, China — industrialized. The ones that adopted it — sub-Saharan Africa, Latin America — mostly didn't.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_am_interventions",
+                "label": "The Interventions",
+                "color": "#6a3a7a",
+                "desc": "Iran 1953. Guatemala 1954. Congo 1960. Brazil 1964. Chile 1973. Nicaragua through the 1980s. El Salvador through the 1980s. Iraq 2003. Libya 2011. A documented list, not a theory — the operational details are in declassified files at the National Security Archive. What was said each time: communist threat, regional stability, protection of democracy. What actually happened each time: governments that attempted to control their own resources were removed and replaced with governments that didn't. The pattern has no exceptions.",
+                "links": [
+                  {
+                    "label": "National Security Archive — declassified records",
+                    "url": "https://nsarchive.gwu.edu",
+                    "emoji": "📋"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_am_idea",
+                "label": "The Idea of America",
+                "color": "#4a6ab8",
+                "desc": "The Declaration's claim — that all men are created equal and endowed with inalienable rights — is the most powerful political sentence ever written. It was written by a slaveholder. That is not a reason to dismiss it. It is the central fact about it. The gap between the claim and the practice has been the engine of American political life since 1776. Every expansion of rights — abolition, women's suffrage, civil rights, marriage equality — has been an argument that the founding claim means what it says. The power of the idea is real. So is the damage done when the practice contradicts it loudly enough that no one can pretend otherwise.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_am_now",
+                "label": "The Current Moment",
+                "color": "#3a4aa8",
+                "desc": "The deliberate dismantling of the post-WWII institutional order by the country that built it. Withdrawal from international agreements, tariff wars with allies, pressure on NATO commitments, the weaponization of dollar dominance. The countries that organized their security and economic arrangements around the assumption of American institutional reliability are recalculating. China is offering an alternative architecture. The transition between hegemonic systems is historically the most dangerous period in international relations. We are in one.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs — American power",
+                    "url": "https://www.foreignaffairs.com",
+                    "emoji": "📰"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_megalomania",
+            "label": "Megalomania & the Crown",
+            "color": "#7a1a3a",
+            "desc": "Power doesn't find megalomaniacs. It makes them. The process is slow and it looks like success the entire time. Deference comes first. Then insulation. Then the removal of consequence. By the time the grandiosity is visible the architecture that would have corrected it is already gone. We call it corruption. It's more like a conversion.",
+            "links": [
+              {
+                "label": "Hannah Arendt — The Origins of Totalitarianism",
+                "url": "https://www.jstor.org",
+                "emoji": "📚"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h1_meg_pattern",
+                "label": "The Pattern",
+                "color": "#8a2a4a",
+                "desc": "The mechanics are consistent across centuries and cultures. The sequence doesn't vary much. What varies is the speed. Deference loops form first — surrounded by people whose survival depends on agreement, dissent becomes career-ending, then dangerous, then impossible, and the feedback loop closes. Insulation follows — physical first, then informational, and what reaches the leader is curated by people who know what he wants to hear. The gap between the map and the territory widens without anyone announcing it. Then consequence is removed — legal immunity formal or informal, no mechanism left to correct behavior, actions that would have ended a career or a freedom for anyone else pass without friction. Once all three are in place the process stops being reversible from inside. External pressure is the only remaining corrective. External pressure gets called an attack. The system doesn't fail all at once. It fails one accommodation at a time.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_record",
+                "label": "The Historical Record",
+                "color": "#7a2a3a",
+                "desc": "The names change. The structure doesn't. Caesar crossed the Rubicon with a popular mandate and a Senate that had one structural check left — they used it with knives, and the Republic died anyway because the conditions that produced him were still intact. Caligula and Nero show what happens after the precedent is set: the office becomes the pathology accelerant, and the second generation is always worse because the first one had to fight for it. The Mongol succession problem — when the institution is a person, the institution dies when he does. Napoleon: the revolution that produced him was exhausted and hungry for order, he gave them order and took everything else. Stalin: paranoia as governance, the purges weren't irrational, they were efficient — everyone who could have stopped him was removed before they knew they were a threat. Hitler: a functional democracy dismantled legally, the Enabling Act passed by vote, the people inside the system who could have stopped it mostly decided not to. Mao: true believer first, megalomaniac second, the ideology became the insulation and the body count became negotiable. Amin and Gaddafi: power in the complete absence of institutional friction, which removes even the pretense of constraint. The echo is left to the reader.",
+                "links": [
+                  {
+                    "label": "Lapham's Quarterly — tyrants & power",
+                    "url": "https://www.laphamsquarterly.org",
+                    "emoji": "📜"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_taxonomy",
+                "label": "The Living Taxonomy",
+                "color": "#6a1a3a",
+                "desc": "Four current types, documented, present tense. Authoritarian consolidators work through institutions, dismantling them from inside while maintaining the appearance of legitimacy — slow, methodical, hard to stop because nothing looks illegal until it's too late. Opportunistic disruptors surf genuine institutional failure — they didn't build the conditions, they read them correctly and moved, faster and louder, potentially less structurally durable. Inherited rulers operate in zero-accountability architecture from birth — no path to power meant no friction, no testing, no corrective. The pathology has no origin story because there was never a moment it could have been stopped. Techno-feudalists purchase proximity to state power without election or inheritance — this is genuinely new, no historical sub-card fits it yet, the mechanism is being written in real time.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_failure",
+                "label": "The Structural Failure",
+                "color": "#5a1a2a",
+                "desc": "The checks existed. Most of them. For a while. What failed wasn't just the architecture. It was the assumption underneath it — that the people inside the system shared something basic with the people it was built to protect. The ones who did rarely made it far enough to matter.",
+                "links": [
+                  {
+                    "label": "Checks & Balances — GLORIES",
+                    "url": "https://usnow.app",
+                    "emoji": "⚖️"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "glories_checksbalances",
+                    "label": "Checks & Balances",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "glories_dueprocess",
+                    "label": "Due Process",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
+        "bottomPills": [
+          {
+            "id": "h3",
+            "label": "War & Revolutions",
+            "desc": "",
+            "links": [],
             "topPills": [],
             "bottomPills": [],
             "orbs": []
           },
           {
-            "id": "h1d2",
-            "label": "Rome",
-            "color": "#6848a8",
-            "desc": "The template. Every empire since has consciously or unconsciously modeled itself on Rome — its law, its roads, its reach, its fall. Coming soon.",
-            "links": [
-              {
-                "label": "Encyclopaedia Britannica: Roman Empire",
-                "url": "https://www.britannica.com/place/Roman-Empire",
-                "emoji": "📖"
-              }
-            ],
+            "id": "x4",
+            "label": "The Occult",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "orb_corruption",
+            "label": "Corruption Tracker",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "glories_checksbalances",
+            "label": "Checks & Balances",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "hist_first_nations",
+            "label": "First Nations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h4",
+            "label": "Migration",
+            "desc": "",
+            "links": [],
             "topPills": [],
             "bottomPills": [],
             "orbs": []
           }
         ],
-        "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "h4",
