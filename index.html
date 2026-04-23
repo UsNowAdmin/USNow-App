@@ -246,15 +246,16 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   <div id="modal-glow-halo"></div>
   <div id="modal-box" onclick="event.stopPropagation()">
     <div class="modal-drag" id="modal-drag"></div>
-    <div id="card-nav-bar" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+    <div id="card-nav-bar" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:8px;">
       <div id="modal-layer-tag" style="font-size:10px;letter-spacing:0.3em;font-family:'Courier New',monospace;opacity:1;line-height:1.6;"></div>
+      <div id="modal-node-id" style="font-size:9px;letter-spacing:0.12em;font-family:'Courier New',monospace;opacity:0.28;margin-left:auto;white-space:nowrap;"></div>
       <button id="modal-close" onclick="cardNavBack()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:transparent;border:1px solid transparent;padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;"></button>
     </div>
     <h2 id="modal-title"></h2>
     <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:14px;display:none;"></div>
-    <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div id="modal-toppills-list" style="display:flex;flex-wrap:wrap;gap:6px;"></div></div>
+    <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div id="modal-toppills-list" style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;"></div></div>
     <p id="modal-desc"></p>
-    <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label" style="font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:0.7;">ON-SITE CONNECTIONS</div><div id="modal-bottompills-list" style="display:flex;flex-wrap:wrap;gap:8px;"></div></div>
+    <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label" style="font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:0.7;">ON-SITE CONNECTIONS</div><div id="modal-bottompills-list" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;"></div></div>
     <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OFF-SITE CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
   </div>
 </div>
@@ -480,6 +481,23 @@ function buildFoundationMoons(){
       el.style.transform=`translateX(-50%) translateY(0) scale(1)`;
       el.style.boxShadow='';
     });
+    var _fTmoved=false,_fTsx=0,_fTsy=0;
+    el.addEventListener('touchstart',function(e){
+      _fTsx=e.touches[0].clientX;_fTsy=e.touches[0].clientY;_fTmoved=false;
+      el.style.transform='translateX(-50%) translateY(-8px) scale(1.09)';
+      el.style.boxShadow='0 0 '+f.size*0.7+'px '+f.glow+',0 0 '+f.size*0.35+'px '+f.border+'88';
+    },{passive:true});
+    el.addEventListener('touchmove',function(e){
+      if(Math.abs(e.touches[0].clientX-_fTsx)>8||Math.abs(e.touches[0].clientY-_fTsy)>8){
+        _fTmoved=true;
+        el.style.transform='translateX(-50%) translateY(0) scale(1)';
+        el.style.boxShadow='';
+      }
+    },{passive:true});
+    el.addEventListener('touchend',function(e){
+      el.style.transform='translateX(-50%) translateY(0) scale(1)';
+      el.style.boxShadow='';
+    });
     coreWrap.appendChild(el);
   });
 }
@@ -544,7 +562,7 @@ buildFoundationMoons();}
 // Build flat card index by id for bottomPill cross-reference navigation
 window._cardIndex={};
 function _setIndex(id,entry){
-  const existing=window._cardIndex[id];
+  var existing=window._cardIndex[id];
   if(!existing||((!existing.desc||!existing.desc.trim())&&entry.desc&&entry.desc.trim())){
     window._cardIndex[id]=entry;
   }
@@ -558,11 +576,43 @@ function _setIndex(id,entry){
     const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
     const glow=`rgba(${r},${g},${b},0.28)`;
     const tag=(orbData&&orbData.label)||(layerData&&layerData.label)||'';
-    _setIndex(item.id,{color,glow,tag,scaleText:(layerData&&layerData.time)||null,title:item.label,sub:item.sub||null,desc:item.desc||''    ,links:item.links||[],topPills:item.topPills||[],bottomPills:item.bottomPills||[],isLayer:false,nodeId:item.id});
+    _setIndex(item.id,{color,glow,tag,scaleText:(layerData&&layerData.time)||null,title:item.label,sub:item.sub||null,desc:item.desc||'',links:item.links||[],topPills:item.topPills||[],bottomPills:item.bottomPills||[],isLayer:false,nodeId:item.id});
     buildIndex(item.topPills,layerData,orbData||item);
     buildIndex(item.bottomPills,layerData,orbData||item);
   });
 })(LAYERS.flatMap(l=>[...l.orbs,...(l.topPills||[])]),null,null);
+// Deep-index layer topPill subcards
+LAYERS.forEach(function(l){
+  (l.topPills||[]).forEach(function(tp){
+    if(!tp||!tp.id)return;
+    var _c=(tp.color||l.color||'#888888');
+    var _hx=_c.replace('#','');
+    var _r=parseInt(_hx.slice(0,2),16),_g=parseInt(_hx.slice(2,4),16),_b=parseInt(_hx.slice(4,6),16);
+    _setIndex(tp.id,{color:_c,glow:'rgba('+_r+','+_g+','+_b+',0.28)',tag:l.label,scaleText:l.time,title:tp.label,sub:null,desc:tp.desc||'',links:tp.links||[],topPills:tp.topPills||[],bottomPills:tp.bottomPills||[],isLayer:false,nodeId:tp.id});
+    (function _wSub(pills){
+      if(!pills)return;
+      pills.forEach(function(p){
+        if(!p||!p.id)return;
+        var c2=(p.color||_c||'#888888');
+        var hx2=c2.replace('#','');
+        var r2=parseInt(hx2.slice(0,2),16),g2=parseInt(hx2.slice(2,4),16),b2=parseInt(hx2.slice(4,6),16);
+        _setIndex(p.id,{color:c2,glow:'rgba('+r2+','+g2+','+b2+',0.28)',tag:l.label,scaleText:l.time,title:p.label,sub:null,desc:p.desc||'',links:p.links||[],topPills:p.topPills||[],bottomPills:p.bottomPills||[],isLayer:false,nodeId:p.id});
+        _wSub(p.topPills);
+        _wSub(p.bottomPills);
+      });
+    })(tp.topPills);
+    (function _wSubB(pills){
+      if(!pills)return;
+      pills.forEach(function(p){
+        if(!p||!p.id)return;
+        var c2=(p.color||_c||'#888888');
+        var hx2=c2.replace('#','');
+        var r2=parseInt(hx2.slice(0,2),16),g2=parseInt(hx2.slice(2,4),16),b2=parseInt(hx2.slice(4,6),16);
+        _setIndex(p.id,{color:c2,glow:'rgba('+r2+','+g2+','+b2+',0.28)',tag:l.label,scaleText:l.time,title:p.label,sub:null,desc:p.desc||'',links:p.links||[],topPills:p.topPills||[],bottomPills:p.bottomPills||[],isLayer:false,nodeId:p.id});
+      });
+    })(tp.bottomPills);
+  });
+});
 LAYERS.forEach(layer=>{
   _setIndex(layer.id,{color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub||null,desc:layer.desc||'',links:layer.links||[],topPills:layer.topPills||[],bottomPills:layer.bottomPills||[],isLayer:true,nodeId:layer.id});
   layer.orbs.forEach(orb=>{
@@ -583,7 +633,7 @@ LAYERS.forEach(layer=>{
   });
 });
 
-function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const bottomPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:false,layer:layer});}
+function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const bottomPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:true,layer:layer});}
 function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;cardNavOpen({color:c,glow:og,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false});}
 
 // Unified card navigation stack
@@ -668,7 +718,7 @@ function renderCard(data){
   // Header — 2 lines for layer/orb cards (tag + Scale: time), 1 line for subcards
   const tagEl=document.getElementById('modal-layer-tag');
   tagEl.style.color=lc;
-  if(data.scaleText){
+  if(data.scaleText&&data.isLayer){
     tagEl.innerHTML=`<span style="display:block;">${data.tag}</span><span style="display:block;font-size:8px;letter-spacing:0.18em;opacity:0.6;margin-top:2px;">Scale: ${data.scaleText}</span>`;
   } else {
     tagEl.textContent=data.tag;
@@ -683,11 +733,8 @@ function renderCard(data){
   closeBtn.onmouseleave=()=>{closeBtn.style.background='transparent';};
   // Title / subtitle / desc
   document.getElementById('modal-title').textContent=data.title;
-  // Show node ID for reference
-  let _idEl=document.getElementById('modal-node-id');
-  if(!_idEl){_idEl=document.createElement('div');_idEl.id='modal-node-id';_idEl.style.cssText='font-size:9px;letter-spacing:0.15em;font-family:\'Courier New\',monospace;opacity:0.35;margin-bottom:6px;margin-top:-4px;';document.getElementById('modal-title').parentNode.insertBefore(_idEl,document.getElementById('modal-title').nextSibling);}
-  _idEl.style.color=lc;
-  _idEl.textContent=data.nodeId?'#'+data.nodeId:'';
+  var _idEl=document.getElementById('modal-node-id');
+  if(_idEl){_idEl.style.color=lc;_idEl.textContent=data.nodeId?'#'+data.nodeId:'';}
   const subEl=document.getElementById('modal-sub');
   if(data.sub){subEl.style.color=lc;subEl.style.opacity='0.9';subEl.textContent=data.sub;subEl.style.display='block';}else{subEl.style.display='none';}
   document.getElementById('modal-desc').textContent=data.desc;
