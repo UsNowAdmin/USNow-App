@@ -2395,7 +2395,10 @@ const LAYERS = [
         ],
         "bottomPills": [],
         "orbs": [],
-        "color": "#3858a8"
+        "color": "#3858a8",
+        "x": 8,
+        "y": 52,
+        "size": 52
       },
       {
         "id": "e2",
@@ -4895,7 +4898,10 @@ const LAYERS = [
         ],
         "bottomPills": [],
         "orbs": [],
-        "color": "#7858a0"
+        "color": "#7858a0",
+        "x": 88,
+        "y": 54,
+        "size": 46
       }
     ],
     "topPills": [
