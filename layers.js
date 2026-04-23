@@ -8123,8 +8123,19 @@ const LAYERS = [
             "id": "x5_abrahamic",
             "label": "Abrahamic Religions",
             "color": "#7a5c9a",
-            "desc": "Three of the world's largest religions — and several smaller ones — share a single origin: the covenant between Abraham and God described in the Hebrew scriptures. Judaism, Christianity, and Islam are the major branches. All three worship the same God, revere many of the same prophets, and have spent much of history in conflict with each other.",
-            "links": [],
+            "desc": "The three Abrahamic faiths — Judaism, Christianity, and Islam — share a common origin in the story of Abraham and his covenant with God, and together account for the religious identity of more than half the world's population. They are distinct civilizations, not variations on a theme. Each has its own scripture, its own legal tradition, its own mystical dimension, its own relationship to political power, and its own internal diversity that dwarfs the differences between them. Understanding each one on its own terms — rather than primarily in contrast to the others — is the beginning of understanding any of them.",
+            "links": [
+              {
+                "label": "Pew Research — global religion",
+                "url": "https://www.pewresearch.org/religion",
+                "emoji": "📊"
+              },
+              {
+                "label": "Pluralism Project — Harvard",
+                "url": "https://pluralism.org",
+                "emoji": "📚"
+              }
+            ],
             "bottomPills": [
               {
                 "id": "x1",
@@ -8132,36 +8143,841 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
-                "orbs": []
+                "bottomPills": []
+              },
+              {
+                "id": "h3_genocide",
+                "label": "Genocide",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_mideast",
+                "label": "The Middle East",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
               }
             ],
             "topPills": [
               {
-                "id": "x5_judaism",
+                "id": "x5_jud",
                 "label": "Judaism",
-                "color": "#7a5c9a",
-                "desc": "The oldest of the Abrahamic faiths and the root from which Christianity and Islam both grew. Judaism is not only a religion but a civilization — a people, a legal tradition, a language, and a continuous 4,000-year conversation with a single God. The Torah, the Talmud, and centuries of rabbinic debate form one of the most intellectually rich traditions in human history.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
+                "color": "#6a58a0",
+                "desc": "One of the oldest monotheistic traditions, Judaism is simultaneously a religion, an ethnicity, a culture, and a civilization. It is not one thing. The range of people who identify as Jewish spans those for whom every aspect of daily life is governed by religious law, to those who are entirely secular and non-practicing but identify deeply with Jewish history, culture, and community. What holds the tradition together across that range is not uniformity of belief or practice — it is a shared history, a shared text, and a shared experience of being a minority people in a world that has repeatedly tried to erase them.",
+                "links": [
+                  {
+                    "label": "My Jewish Learning — accessible Jewish education",
+                    "url": "https://www.myjewishlearning.com",
+                    "emoji": "✡️"
+                  },
+                  {
+                    "label": "Jewish Virtual Library",
+                    "url": "https://www.jewishvirtuallibrary.org",
+                    "emoji": "📚"
+                  },
+                  {
+                    "label": "Pew Research — Jewish Americans",
+                    "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
+                    "emoji": "📊"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "x5_jud_torah",
+                    "label": "Torah & Talmudic Tradition",
+                    "color": "#6a58a0",
+                    "desc": "The Torah — the five books of Moses — is the foundation of Jewish religious life. It contains the 613 commandments that Orthodox Judaism holds as binding on Jews, the narrative of the Jewish people from creation through the death of Moses, and the covenant between God and the Jewish people. The Talmud — compiled over several centuries, completed around 500 CE — is the record of rabbinic discussion and interpretation of Torah law and is the central text of mainstream Rabbinic Judaism. It is not a rulebook but an argument — a multi-generational conversation about what the law means and how it applies. The tradition of interpretation, debate, and commentary that produced the Talmud has continued without interruption for two thousand years.",
+                    "links": [
+                      {
+                        "label": "My Jewish Learning — Torah & Talmud",
+                        "url": "https://www.myjewishlearning.com/article/talmud-101",
+                        "emoji": "✡️"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_jud_covenant",
+                    "label": "The Covenant & Jewish Identity",
+                    "color": "#7a68b0",
+                    "desc": "The covenant — brit — is the foundational concept of Jewish theology: a binding agreement between God and the Jewish people, initiated with Abraham, renewed at Sinai, and understood as ongoing. Jewish identity is grounded in this relationship, which creates obligations on both sides. The question of who is a Jew — defined in traditional halacha as someone born of a Jewish mother or converted according to religious law — is both a theological question and a deeply practical one that affects immigration rights in Israel, membership in Jewish communities, and personal identity. The definition is contested between denominations and between religious and secular understandings of Jewish identity.",
+                    "links": [
+                      {
+                        "label": "My Jewish Learning — Jewish identity",
+                        "url": "https://www.myjewishlearning.com",
+                        "emoji": "✡️"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_jud_denom",
+                    "label": "Denominations",
+                    "color": "#5a48a0",
+                    "desc": "Judaism is not monolithic. The major denominations represent genuinely different approaches to Jewish law, tradition, and modernity — not just differences of degree but differences of principle about what Judaism requires and permits.",
+                    "links": [
+                      {
+                        "label": "My Jewish Learning — denominations",
+                        "url": "https://www.myjewishlearning.com/article/the-four-jewish-denominations",
+                        "emoji": "✡️"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "x5_jud_orthodox",
+                        "label": "Orthodox Judaism",
+                        "color": "#5a48a0",
+                        "desc": "Orthodox Judaism holds that the Torah was given by God to Moses at Sinai and that Jewish law — halacha — as interpreted through the rabbinic tradition is binding and not subject to modification by human authority. Sabbath observance, dietary laws, gender-separated prayer, and traditional family structure are non-negotiable. Orthodox Judaism is not itself uniform — it contains Modern Orthodox communities that engage fully with secular society and professions, and Haredi communities that maintain greater separation from the secular world. Haredi Judaism, sometimes called ultra-Orthodox, includes the Hasidic movements founded in 18th century Eastern Europe and is among the fastest-growing Jewish communities globally due to high birth rates.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_conservative",
+                        "label": "Conservative Judaism",
+                        "color": "#6a58a8",
+                        "desc": "Conservative Judaism — called Masorti outside North America — occupies the middle ground between Orthodoxy and Reform. It holds that Jewish law is binding but that it has always evolved through legitimate interpretation and can continue to do so in response to contemporary circumstances. It maintains traditional liturgy and Hebrew prayer while permitting changes that Orthodoxy prohibits — including, since 2006, the ordination of openly gay rabbis. Conservative Judaism was the dominant form of American Jewish practice for much of the 20th century and has declined significantly in membership since the 1990s as American Jews have moved toward either Orthodoxy or Reform.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_reform",
+                        "label": "Reform Judaism",
+                        "color": "#7a68b0",
+                        "desc": "Reform Judaism, founded in 19th century Germany, holds that Jewish law is not binding in its traditional form — that the ethical and spiritual core of Judaism is permanent but its ritual expression must be adapted to contemporary life. It was the first denomination to ordain women as rabbis (1972), to fully affirm LGBTQ+ Jews (1990), and to accept patrilineal as well as matrilineal descent for Jewish identity. Reform Judaism is the largest Jewish denomination in the United States. Its emphasis on social justice as an expression of Jewish values — tikkun olam, repair of the world — has shaped American progressive politics significantly.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_recon",
+                        "label": "Reconstructionist & Renewal",
+                        "color": "#8a78b8",
+                        "desc": "Reconstructionist Judaism, founded by Mordecai Kaplan in the 1920s, understands Judaism as an evolving religious civilization rather than a divinely revealed religion. God is redefined as a force or process within nature rather than a supernatural being. Jewish practice is valued for its communal and cultural meaning rather than its divine authority. Jewish Renewal, a later movement, emphasizes mysticism, meditation, and feminist and ecological spirituality drawn from Hasidic and Kabbalistic sources. Both movements are small in membership but significant in their intellectual influence on progressive Judaism.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_jud_diaspora",
+                    "label": "The Diaspora Experience",
+                    "color": "#7a68a8",
+                    "desc": "The Jewish diaspora — the dispersal of Jews from the Land of Israel — began with the Babylonian conquest in 586 BCE and accelerated with the Roman destruction of the Second Temple in 70 CE. For nearly two thousand years, Jewish life was lived as a minority community within other civilizations — in Babylon, in the Islamic world, in Christian Europe. That experience of living as a minority, maintaining a distinct identity under pressure, developing portable institutions (the synagogue, the rabbi, the text) that could sustain community without territory — shaped Judaism profoundly and produced communities that are genuinely distinct from each other despite shared roots.",
+                    "links": [
+                      {
+                        "label": "Jewish Virtual Library — diaspora communities",
+                        "url": "https://www.jewishvirtuallibrary.org",
+                        "emoji": "📚"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "x5_jud_ashkenazi",
+                        "label": "Ashkenazi & Sephardic",
+                        "color": "#7a68a8",
+                        "desc": "Ashkenazi Jews are the descendants of Jewish communities that settled in Central and Eastern Europe — Germany, Poland, Russia, Ukraine. Sephardic Jews are the descendants of those expelled from Spain in 1492, who settled in North Africa, the Ottoman Empire, and the Americas. The two communities developed distinct traditions, liturgies, languages (Yiddish for Ashkenazi, Ladino for Sephardic), and cultural practices. Ashkenazi Jews have historically dominated American and Israeli Jewish institutional life — a dominance that has been increasingly challenged as Mizrahi and Sephardic communities assert their own history and identity.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_mizrahi",
+                        "label": "Mizrahi Jews",
+                        "color": "#9a8098",
+                        "desc": "Mizrahi Jews — from the Hebrew for Eastern — are the descendants of Jewish communities that lived in the Middle East, North Africa, and Central Asia for millennia before the establishment of Israel. Iraqi Jews, Yemeni Jews, Iranian Jews, Moroccan Jews — communities that trace their presence in these lands to the Babylonian exile, more than 2,500 years ago. Most Mizrahi Jews emigrated to Israel after 1948, often under duress as conditions for Jewish minorities deteriorated in Arab countries following Israeli independence. In Israel, Mizrahi Jews have historically faced discrimination from the Ashkenazi-dominated establishment — a class and ethnic division within Israeli society that is ongoing.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_ethiopian",
+                        "label": "Ethiopian Jews — Beta Israel",
+                        "color": "#8a7890",
+                        "desc": "The Beta Israel — House of Israel — are the Jews of Ethiopia, with a history in the region dating back at least to the medieval period and possibly much earlier. Their Judaism developed in isolation from the rabbinic tradition and differs significantly in practice — they follow the Torah and certain books not in the standard Hebrew Bible but do not recognize the Talmud. Between 1984 and 1991, Israel airlifted most of the Ethiopian Jewish community to Israel in Operations Moses and Solomon. Ethiopian Israelis have faced significant discrimination and poverty in Israel and have organized politically to address it.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_american",
+                        "label": "American Jewish Experience",
+                        "color": "#6a58a0",
+                        "desc": "The United States is home to the largest diaspora Jewish population in the world — approximately 7 million people, depending on how Jewish identity is measured. American Jews are disproportionately represented in law, medicine, academia, media, and politics relative to their share of the population. They are also among the most religiously unaffiliated of any American religious group — large numbers identify as Jewish culturally and ethnically while having no synagogue membership or religious practice. American Jewish political identity has historically been strongly Democratic and liberal, though that alignment has shown some movement in recent years. The relationship between American Jewish identity and Israel is complex and increasingly contested across generational and political lines.",
+                        "links": [
+                          {
+                            "label": "Pew Research — Jewish Americans 2020",
+                            "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
+                            "emoji": "📊"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_jud_zionism",
+                    "label": "Zionism",
+                    "color": "#5a6890",
+                    "desc": "Zionism is a political movement — not a religious one, in its origins — founded in the late 19th century by largely secular Jews responding to European antisemitism. Theodor Herzl, an Austro-Hungarian journalist, published Der Judenstaat (The Jewish State) in 1896 arguing that Jews would never be safe in Europe and needed a state of their own. The movement he founded sought to establish that state in Palestine, then part of the Ottoman Empire. Zionism has never been a unified ideology — it has contained socialist, liberal, revisionist, religious, and cultural variants with genuinely different visions of what a Jewish state should be. It has also always been contested within Judaism, from Orthodox communities that held Jewish statehood must await the Messiah to Reform communities that initially saw Jewish identity as purely religious. Understanding Zionism requires distinguishing it from Judaism, from Israeli policy, and from support for Israel's existence — categories that overlap but are not identical.",
+                    "links": [
+                      {
+                        "label": "Jewish Virtual Library — Zionism",
+                        "url": "https://www.jewishvirtuallibrary.org/zionism",
+                        "emoji": "📚"
+                      },
+                      {
+                        "label": "My Jewish Learning — Zionism",
+                        "url": "https://www.myjewishlearning.com",
+                        "emoji": "✡️"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "x5_jud_zion_origins",
+                        "label": "Origins — Herzl & the Modern Movement",
+                        "color": "#5a6890",
+                        "desc": "Theodor Herzl did not invent the Jewish longing for return to the Land of Israel — that is embedded in Jewish liturgy and has been present for two millennia. He organized it into a modern political movement in response to a specific historical moment: the Dreyfus Affair in France, in which a Jewish army officer was falsely convicted of treason in a country that had given Jews full citizenship, demonstrated to Herzl that emancipation had not solved antisemitism. The first Zionist Congress met in Basel in 1897. Herzl wrote in his diary that he had founded the Jewish state. He was right, though he did not live to see it.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_zion_religious",
+                        "label": "Religious vs. Secular Zionism",
+                        "color": "#6a78a0",
+                        "desc": "Herzl's Zionism was explicitly secular — he envisioned a modern European-style state that happened to be for Jews, not a religious state governed by Jewish law. Religious Zionism emerged as a competing stream that saw the establishment of a Jewish state as the beginning of divine redemption — a theological category that secular Zionists rejected. Today, Religious Zionism in Israel is associated with the settler movement and nationalist religious politics. The Haredi Orthodox community, by contrast, contains significant anti-Zionist factions — most prominently the Satmar Hasidic movement and Neturei Karta — who hold that establishing a Jewish state before the coming of the Messiah is a theological error.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_jud_zion_diaspora",
+                        "label": "Zionism & Diaspora Jewish Opinion",
+                        "color": "#7a88b0",
+                        "desc": "Support for Israel's existence is widespread among diaspora Jews. Identification as Zionist is less uniform and has declined among younger American Jews in particular. Pew Research surveys of American Jews show growing gaps between older and younger generations on questions of Israeli government policy, Palestinian rights, and the degree to which criticism of Israel constitutes antisemitism. Jewish Voice for Peace, a progressive organization that supports Palestinian rights and opposes some Israeli policies, has grown significantly. These shifts do not represent rejection of Jewish identity — they represent generational disagreement about what Jewish identity requires in relation to a specific state and its specific policies.",
+                        "links": [
+                          {
+                            "label": "Pew Research — Jewish Americans & Israel",
+                            "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
+                            "emoji": "📊"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "geo_me_israel",
+                            "label": "Israel & Palestine",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      }
+                    ],
+                    "bottomPills": [
+                      {
+                        "id": "geo_me_israel",
+                        "label": "Israel & Palestine",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x5_jud_antisemitism",
+                    "label": "Antisemitism",
+                    "color": "#8a2828",
+                    "desc": "Antisemitism — hostility toward, prejudice against, or discrimination against Jewish people — is among the oldest and most persistent forms of bigotry in recorded history. Its persistence across radically different civilizations, political systems, and religious contexts — pagan Rome, Christian Europe, Islamic societies, secular nationalism, and communist states have all produced it — makes it worth understanding as a distinct phenomenon rather than simply another form of racism. It has taken religious forms (Jews as Christ-killers), economic forms (Jews as financial manipulators), racial forms (Jews as a biologically inferior or dangerous race), and conspiratorial forms (Jews as a secret power controlling governments and media). Each form has been used to justify persecution ranging from social exclusion to mass murder.",
+                    "links": [
+                      {
+                        "label": "United States Holocaust Memorial Museum — antisemitism",
+                        "url": "https://www.ushmm.org/antisemitism",
+                        "emoji": "🕍"
+                      },
+                      {
+                        "label": "ADL — tracking antisemitism",
+                        "url": "https://www.adl.org",
+                        "emoji": "⚖️"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "x5_jud_anti_history",
+                        "label": "History of Persecution",
+                        "color": "#8a2828",
+                        "desc": "The history of Jewish persecution in Europe spans more than a thousand years. The Crusades beginning in 1096 brought massacres of Jewish communities across the Rhineland. The expulsion from England in 1290, from France repeatedly, from Spain in 1492. The Russian pogroms of the 19th and early 20th centuries killed thousands and drove millions to emigrate. The Dreyfus Affair. The Protocols of the Elders of Zion — a fabricated antisemitic text produced by the Tsarist secret police in 1903 that has been continuously reprinted and circulated ever since. The Holocaust was the culmination of this history, but it was not an aberration from it.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "h3_gen_holocaust",
+                            "label": "The Holocaust",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "x5_jud_anti_contemporary",
+                        "label": "Contemporary Antisemitism",
+                        "color": "#9a3838",
+                        "desc": "Antisemitic incidents in the United States and Europe have increased measurably since 2016, reaching record levels in multiple years since. The ADL tracks incidents annually. Contemporary antisemitism comes from multiple directions — white nationalist movements that have always been antisemitic, some strands of political Islam, and debates around Israeli policy where anti-Zionist criticism sometimes crosses into antisemitic rhetoric. The question of where criticism of Israeli government policy ends and antisemitism begins is genuinely contested and politically charged. What is not contested is that antisemitic violence, vandalism, and harassment are increasing and are documented.",
+                        "links": [
+                          {
+                            "label": "ADL — antisemitism tracker",
+                            "url": "https://www.adl.org/resources/report/audit-antisemitic-incidents",
+                            "emoji": "⚖️"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ],
+                    "bottomPills": [
+                      {
+                        "id": "h3_gen_holocaust",
+                        "label": "The Holocaust",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "f_rc",
+                        "label": "Race & Ethnicity",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x5_jud_holocaust_theology",
+                    "label": "The Holocaust & Theology",
+                    "color": "#5a3858",
+                    "desc": "The Holocaust confronted Jewish theology with a question it had never faced at this scale: where was God at Auschwitz? Six million Jews — including one million children — murdered by a modern state using modern methods in the heart of Christian civilization. The theological responses have been varied and profound. Elie Wiesel documented the crisis of faith in Night and spent his life insisting on memory as a moral obligation. Rabbi Irving Greenberg articulated the idea that the Holocaust requires a rethinking of the covenant. Orthodox theologian Eliezer Berkovits argued that God's hiddenness is necessary to human freedom. Some refused to offer theological explanations at all, holding that the question must remain open. The Holocaust did not destroy Jewish faith — but it permanently altered the terms on which that faith is held.",
+                    "links": [
+                      {
+                        "label": "Elie Wiesel Foundation",
+                        "url": "https://eliewieselfoundation.org",
+                        "emoji": "🕍"
+                      },
+                      {
+                        "label": "USHMM — Jewish responses to the Holocaust",
+                        "url": "https://www.ushmm.org",
+                        "emoji": "🕍"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "h3_gen_holocaust",
+                        "label": "The Holocaust",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "fam_tp2",
+                    "label": "Diaspora",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "f_rc",
+                    "label": "Race & Ethnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_abrahamic",
+                    "label": "Abrahamic Religions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
               },
               {
-                "id": "x5_christianity",
+                "id": "x5_christ",
                 "label": "Christianity",
-                "color": "#7a5c9a",
-                "desc": "The world's largest religion, with over 2 billion adherents across hundreds of denominations. Built on the life, death, and resurrection of Jesus of Nazareth, a Jewish teacher whose followers believed him to be the Son of God. Christianity spread across the Roman Empire, became its state religion, and shaped the political, artistic, and philosophical foundations of Western civilization.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
+                "color": "#5870a8",
+                "desc": "Christianity is the world's largest religion — approximately 2.4 billion adherents across every continent, in virtually every culture on earth. It is also among the most internally diverse, containing traditions as different from each other as Ethiopian Orthodoxy and American Pentecostalism, medieval Catholicism and Quaker silence, liberation theology and prosperity gospel. What holds these traditions together is a shared claim: that Jesus of Nazareth, a first-century Jewish teacher executed by Roman authorities, was the Son of God whose death and resurrection offer salvation to humanity. What that claim means, how it is lived, and what it requires has been the subject of two thousand years of sometimes violent disagreement.",
+                "links": [
+                  {
+                    "label": "Pew Research — global Christianity",
+                    "url": "https://www.pewresearch.org/religion",
+                    "emoji": "📊"
+                  },
+                  {
+                    "label": "Christianity Today",
+                    "url": "https://www.christianitytoday.com",
+                    "emoji": "✝️"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "x5_christ_jesus",
+                    "label": "The Life & Teaching of Jesus",
+                    "color": "#5870a8",
+                    "desc": "Jesus of Nazareth was a first-century Jewish teacher who lived in Roman-occupied Judea. His life is described in the four Gospels — Matthew, Mark, Luke, and John — written decades after his death by communities of his followers. Historians, applying the same methods used for other ancient figures, generally accept that Jesus existed, was baptized by John the Baptist, gathered followers, taught in Galilee and Jerusalem, and was crucified by Roman authorities around 30 CE. The theological claims about Jesus — his divine nature, his resurrection, his role as savior — are matters of faith, not historical methodology. His moral teaching: love of God and neighbor, care for the poor and marginalized, forgiveness, non-violence. That teaching has been interpreted to support both liberation movements and empires.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_christ_catholic",
+                    "label": "Catholic & Orthodox Traditions",
+                    "color": "#6880b8",
+                    "desc": "For the first thousand years of Christianity, the church was largely unified under a structure centered in Rome and Constantinople. The Great Schism of 1054 permanently divided Latin Christianity (Roman Catholic) from Eastern Christianity (Eastern Orthodox). Both traditions claim apostolic continuity — unbroken succession from the original apostles. Both maintain elaborate liturgical traditions, veneration of saints, and sacramental theology. Both have undergone significant internal evolution while maintaining institutional continuity across two millennia.",
+                    "links": [
+                      {
+                        "label": "Pew Research — Catholic & Orthodox",
+                        "url": "https://www.pewresearch.org/religion",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [
+                      {
+                        "id": "x5_christ_roman",
+                        "label": "Roman Catholic Church",
+                        "color": "#6880b8",
+                        "desc": "With approximately 1.3 billion members, the Roman Catholic Church is the largest Christian denomination and the largest religious organization in the world. It is governed by the Pope — currently Francis — who is understood as the successor of Peter and holds supreme authority in matters of faith and morals. Catholic social teaching, developed over more than a century of papal encyclicals, addresses poverty, labor rights, family, war, and the environment in ways that have shaped both progressive and conservative political thought. The Church has also faced — and imperfectly responded to — a global clergy sexual abuse crisis whose scale became fully public in the early 2000s and whose institutional coverup at multiple levels is documented.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_christ_orthodox",
+                        "label": "Eastern Orthodox",
+                        "color": "#7890c8",
+                        "desc": "Eastern Orthodoxy encompasses the national churches of Greece, Russia, Serbia, Romania, Georgia, Ethiopia, and others — each autocephalous (self-governing) but in communion with each other. There are approximately 260 million Orthodox Christians worldwide, concentrated in Eastern Europe, the Middle East, and Africa. Orthodox theology emphasizes theosis — the gradual transformation of the believer into closer union with God — and maintains a theological method that prizes the accumulated tradition of the Church Fathers over systematic innovation. The Russian Orthodox Church, the largest Orthodox body, has had a complex and often compromised relationship with Russian state power across both the Soviet and post-Soviet eras.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_christ_protestant",
+                    "label": "The Protestant Reformation",
+                    "color": "#4860a0",
+                    "desc": "On October 31, 1517, Martin Luther nailed his 95 Theses to the door of the Castle Church in Wittenberg — a challenge to the Catholic practice of selling indulgences that became the spark for a century of religious war and permanent division in Western Christianity. The Reformation's core claim: salvation comes through faith alone (sola fide), by grace alone (sola gratia), through scripture alone (sola scriptura) — not through the sacramental system administered by priests. What began as a reform movement became a fracture that produced hundreds of distinct Protestant traditions.",
+                    "links": [],
+                    "topPills": [
+                      {
+                        "id": "x5_christ_lutheran",
+                        "label": "Lutheran",
+                        "color": "#4860a0",
+                        "desc": "Martin Luther's tradition — the original Protestant denomination — emphasizes justification by faith alone and the authority of scripture. Lutheran churches are the dominant Christian tradition in Germany and Scandinavia and have been central to German cultural and intellectual life for five centuries. Luther's translation of the Bible into German helped standardize the German language. Lutheran theology produced Bach's sacred music, Kierkegaard's existentialism, and Dietrich Bonhoeffer's resistance theology, written while imprisoned by the Nazis.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_christ_calvinist",
+                        "label": "Calvinist & Reformed",
+                        "color": "#5870a8",
+                        "desc": "John Calvin's theology, centered in Geneva, emphasized the absolute sovereignty of God, predestination — that God has predetermined who will be saved — and the transformation of society according to biblical principles. Reformed and Presbyterian churches trace their lineage to Calvin. Max Weber's famous argument in The Protestant Ethic and the Spirit of Capitalism connected Calvinist theology to the cultural conditions that produced modern capitalism — the idea that worldly success could be a sign of divine election created a religious incentive for work and accumulation.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_christ_anglican",
+                        "label": "Anglican & Episcopal",
+                        "color": "#6878b0",
+                        "desc": "The Church of England was established in 1534 when Henry VIII broke with Rome — less for theological reasons than for political ones: the Pope would not annul his marriage. The Anglican tradition that emerged occupies a distinctive middle position — Catholic in its liturgical form and episcopal structure, Protestant in its rejection of papal authority. The worldwide Anglican Communion, which includes the Episcopal Church in the United States, encompasses 85 million members across 165 countries. It is currently experiencing significant internal conflict over the full inclusion of LGBTQ+ Christians, with African Anglican churches taking more conservative positions than their North American and European counterparts.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_christ_baptist",
+                        "label": "Baptist & Free Church Traditions",
+                        "color": "#7888b8",
+                        "desc": "Baptist churches emphasize the autonomy of the local congregation, the priesthood of all believers, and — most distinctively — believers' baptism: the practice of baptizing only those who have made a personal profession of faith, not infants. There is no central Baptist authority; each congregation governs itself. The tradition has produced both the American civil rights movement — Martin Luther King Jr. was a Baptist minister — and the Southern Baptist Convention, which separated from northern Baptists over slavery in 1845 and remains the largest Protestant denomination in the United States.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_christ_evangelical",
+                    "label": "Evangelical & Charismatic Christianity",
+                    "color": "#7858a0",
+                    "desc": "Evangelical Christianity — defined by the centrality of a personal conversion experience, the authority of the Bible, the importance of sharing the faith, and the significance of Christ's atoning death — is the dominant form of Protestantism in the United States and the fastest growing form of Christianity globally, particularly in sub-Saharan Africa, Latin America, and East Asia. Pentecostalism, which emerged from a revival at Azusa Street in Los Angeles in 1906, emphasizes the gifts of the Holy Spirit — speaking in tongues, healing, prophecy — and has grown to an estimated 500 million adherents worldwide, making it the largest Protestant movement on earth. Its growth is concentrated overwhelmingly in the Global South.",
+                    "links": [
+                      {
+                        "label": "Pew Research — global Pentecostalism",
+                        "url": "https://www.pewresearch.org/religion",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "geo_shift_globalsouth",
+                        "label": "The Global South",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "geo_africa",
+                        "label": "Africa",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x5_christ_liberation",
+                    "label": "Liberation Theology",
+                    "color": "#4a7858",
+                    "desc": "Liberation theology emerged in Latin America in the 1960s and 1970s as a theological movement that read the Christian gospel through the experience of the poor. Its foundational claim: God has a preferential option for the poor, and the Church's mission requires not only charity but structural change to eliminate the conditions that produce poverty. Gustavo Gutiérrez's A Theology of Liberation (1971) is the foundational text. The movement shaped base communities across Latin America, provided theological grounding for civil rights struggles, and influenced the Catholic Church sufficiently that Pope Francis — the first Latin American pope — has drawn significantly from its tradition. The Vatican under John Paul II and Benedict XVI was deeply suspicious of liberation theology's use of Marxist social analysis.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "geo_americas",
+                        "label": "The Americas",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "geo_shift_globalsouth",
+                        "label": "The Global South",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "x5_christ_power",
+                    "label": "Christianity & Power",
+                    "color": "#8860a0",
+                    "desc": "The history of Christianity as an institution of power begins with Constantine — the Roman emperor who legalized Christianity in 313 CE and used it to unify his empire. In 380 CE it became the official state religion of Rome. What began as a movement of the marginalized became the ideology of empire, and that transformation has shaped Christianity ever since. The Crusades were fought in Christ's name. The Inquisition operated under Church authority. The colonization of the Americas was accompanied by forced conversion. The justification of slavery in the American South drew on scripture. None of this represents what Jesus of Nazareth taught. All of it was done by people who understood themselves as Christians. The tension between the gospel's radical ethic and the institutional Church's exercise of power is not resolved. It is ongoing.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "h3_genocide",
+                        "label": "Genocide",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "h3_rev_decolonization",
+                        "label": "Decolonization",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "x5_abrahamic",
+                    "label": "Abrahamic Religions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
               },
               {
                 "id": "x5_islam",
                 "label": "Islam",
+                "color": "#2a7858",
+                "desc": "Islam is the world's second largest religion — approximately 1.8 billion adherents across every continent, representing the majority population in 49 countries and significant minorities in dozens more. It is profoundly diverse: Arab and non-Arab, Sunni and Shia, Sufi and Salafi, traditional and reform-minded, rural and urban, deeply devout and nominally affiliated. The vast majority of the world's Muslims live not in the Arab Middle East but in South and Southeast Asia — Indonesia alone has more Muslims than the entire Arab world. Understanding Islam requires releasing the assumption that it is primarily a Middle Eastern religion or primarily defined by its relationship to political conflict. It is a civilization.",
+                "links": [
+                  {
+                    "label": "Pew Research — global Muslim population",
+                    "url": "https://www.pewresearch.org/religion/2011/01/27/the-future-of-the-global-muslim-population",
+                    "emoji": "📊"
+                  },
+                  {
+                    "label": "Islamic Society of North America",
+                    "url": "https://www.isna.net",
+                    "emoji": "☪️"
+                  },
+                  {
+                    "label": "Al Jazeera — Islam and the world",
+                    "url": "https://www.aljazeera.com",
+                    "emoji": "🌍"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "x5_islam_pillars",
+                    "label": "The Five Pillars & Core Belief",
+                    "color": "#2a7858",
+                    "desc": "Islam rests on five foundational practices — the Pillars — that structure Muslim life across all traditions and cultures. Shahada: the declaration of faith — there is no god but God, and Muhammad is his messenger. Salat: prayer five times daily, oriented toward Mecca. Zakat: giving a portion of one's wealth to those in need — a religious obligation, not a voluntary charity. Sawm: fasting during the month of Ramadan from dawn to sunset. Hajj: pilgrimage to Mecca at least once in a lifetime for those who are able. The Pillars are the common ground across enormous diversity. The theological core: tawhid, the absolute oneness of God — the rejection of any association of partners with God is the central principle of Islamic theology.",
+                    "links": [
+                      {
+                        "label": "Pew Research — Muslim beliefs & practices",
+                        "url": "https://www.pewresearch.org/religion",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_islam_sunni",
+                    "label": "Sunni Islam",
+                    "color": "#3a8868",
+                    "desc": "Approximately 85-90% of the world's Muslims are Sunni. The term comes from Sunna — the practice and example of the Prophet Muhammad, recorded in the hadith literature. Sunni Islam is not a monolithic tradition. It contains four major schools of jurisprudence — Hanafi, Maliki, Shafi'i, and Hanbali — with different approaches to Islamic law, and a wide range of theological and spiritual traditions. The Hanafi school, the most widely followed, is dominant in South Asia, Central Asia, and much of the Arab world. The Hanbali school, the most strict in its approach to scripture, is the basis for Wahhabism — the theological tradition associated with Saudi Arabia and influential in some reformist and militant movements. These are not equivalent expressions of Sunni Islam.",
+                    "links": [],
+                    "topPills": [
+                      {
+                        "id": "x5_islam_sunni_schools",
+                        "label": "Schools of Thought",
+                        "color": "#3a8868",
+                        "desc": "The four Sunni schools of jurisprudence — madhabs — were established between the 8th and 9th centuries and represent different methodological approaches to deriving Islamic law from the Quran and hadith. The Hanafi school, founded by Abu Hanifa, is the most widely followed globally and is known for its use of reason and analogy in legal reasoning. The Maliki school, dominant in North and West Africa, gives particular weight to the practice of the community of Medina. The Shafi'i school, common in East Africa, Yemen, and Southeast Asia, developed a systematic approach to legal methodology. The Hanbali school, smallest and most strictly text-based, is the official school of Saudi Arabia and the theological basis for Wahhabi and Salafi movements.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_islam_sunni_global",
+                        "label": "Sunni Communities Globally",
+                        "color": "#4a9878",
+                        "desc": "The center of gravity of Sunni Islam is not the Arab world — it is South and Southeast Asia. Indonesia has the largest Muslim population of any country, approximately 230 million. Pakistan and Bangladesh together have more than 300 million Muslims. India has approximately 200 million Muslim citizens — the third largest Muslim population in any country, living as a minority in a Hindu-majority democracy. West Africa — Senegal, Mali, Nigeria, Niger — has large, ancient Muslim communities with distinctive Sufi traditions. The diversity of Sunni practice across these communities is enormous and largely invisible in Western coverage of Islam.",
+                        "links": [
+                          {
+                            "label": "Pew Research — Muslim population by country",
+                            "url": "https://www.pewresearch.org/religion",
+                            "emoji": "📊"
+                          },
+                          {
+                            "label": "Al Jazeera",
+                            "url": "https://www.aljazeera.com",
+                            "emoji": "🌍"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "geo_shift_globalsouth",
+                            "label": "The Global South",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_islam_shia",
+                    "label": "Shia Islam",
+                    "color": "#1a6848",
+                    "desc": "The split between Sunni and Shia Islam dates to the immediate aftermath of the Prophet Muhammad's death in 632 CE — a dispute over who should lead the Muslim community. Those who became Shia held that leadership rightfully belonged to Ali ibn Abi Talib, the Prophet's cousin and son-in-law, and to his descendants through Fatima, the Prophet's daughter. The martyrdom of Ali's son Husayn at the Battle of Karbala in 680 CE is the founding trauma of Shia Islam — commemorated annually in Ashura, an occasion of collective mourning that has no parallel in Sunni practice. Shia Islam constitutes 10-15% of Muslims globally but majorities in Iran, Iraq, Azerbaijan, and Bahrain, and large communities in Lebanon, Pakistan, India, and Kuwait.",
+                    "links": [],
+                    "topPills": [
+                      {
+                        "id": "x5_islam_shia_origins",
+                        "label": "Karbala & the Origins of the Split",
+                        "color": "#1a6848",
+                        "desc": "The theological and political dispute that created the Sunni-Shia divide began as a question of succession and became a question of legitimate authority, justice, and the nature of Islamic leadership. For Shia Muslims, the Imams — descendants of the Prophet through Ali and Fatima — carry a special spiritual authority not recognized in Sunni Islam. The death of Husayn at Karbala, outnumbered and abandoned, is understood not merely as a historical tragedy but as a spiritual paradigm — the righteous suffering of the faithful against unjust power — that shapes Shia theology, spirituality, and political consciousness. It is why Shia political theology has historically been more attentive to questions of justice and resistance than Sunni political thought.",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "x5_islam_shia_communities",
+                        "label": "Shia Communities Today",
+                        "color": "#2a7858",
+                        "desc": "Iran is the only country with a Shia theocracy — the Islamic Republic established after the 1979 revolution under Ayatollah Khomeini's doctrine of velayat-e faqih (guardianship of the jurist). Iraq, with a Shia majority long suppressed under Saddam Hussein's Sunni-dominated government, now has a Shia-led government with close ties to Iran. Lebanon's Hezbollah, a Shia political and military organization, is the most powerful non-state armed group in the Arab world. Pakistan and India together have tens of millions of Shia Muslims. The Shia communities of the Persian Gulf — in Bahrain, Saudi Arabia's Eastern Province, and Kuwait — have faced systematic discrimination from Sunni-majority governments.",
+                        "links": [
+                          {
+                            "label": "Pew Research — Shia population",
+                            "url": "https://www.pewresearch.org/religion",
+                            "emoji": "📊"
+                          }
+                        ],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "geo_mideast",
+                            "label": "The Middle East",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": []
+                          }
+                        ]
+                      }
+                    ],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_islam_sufism",
+                    "label": "Sufism — The Mystical Tradition",
+                    "color": "#5a7848",
+                    "desc": "Sufism is the mystical dimension of Islam — the tradition of interior spiritual practice aimed at direct experience of God's presence rather than mere external observance of law. It developed from the earliest centuries of Islam among those who felt that formal legalism was insufficient for the spiritual life. Sufi orders — tariqas — have transmitted their practice through chains of masters and disciples across generations. The poetry of Rumi, Hafez, and Ibn Arabi represents some of the greatest mystical literature in any tradition. Sufi shrines are pilgrimage sites across South Asia, North Africa, and the Middle East. Sufism has been the primary vehicle through which Islam spread peacefully in sub-Saharan Africa and South and Southeast Asia — through traveling saints and merchants rather than conquest.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_islam_civilization",
+                    "label": "Islamic Civilization & the Golden Age",
+                    "color": "#4a8858",
+                    "desc": "Between roughly 800 and 1300 CE, Islamic civilization was the most intellectually dynamic in the world. The House of Wisdom in Baghdad preserved and extended Greek philosophy and science at a time when that knowledge was largely lost to Europe. Muslim scholars made foundational contributions to mathematics (algebra is an Arabic word), astronomy, medicine, chemistry, optics, and philosophy. Ibn Sina — Avicenna — wrote the Canon of Medicine, a standard medical text in European universities for six centuries. Ibn Rushd — Averroes — produced commentaries on Aristotle that were essential to the European scholastic tradition. Al-Khwarizmi's work on algorithms is why we use the word. The Islamic Golden Age was not a preamble to Western civilization. It was a civilization.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_islam_modern",
+                    "label": "Islam in the Modern World",
+                    "color": "#3a7848",
+                    "desc": "The encounter between Islamic civilization and European colonialism in the 19th and 20th centuries produced the central tensions of contemporary Muslim life: how to engage with modernity, how to understand the relationship between Islam and the state, how to respond to Western political and cultural dominance. The range of responses has been enormous — from secular nationalism (Ataturk's Turkey, Nasser's Egypt), to modernist reform (movements to reinterpret Islamic law in light of contemporary conditions), to political Islam (movements seeking to establish Islamic governance), to militant jihadism (a small but violent minority). None of these is the definitive Muslim response to modernity. All of them are Muslim responses, and understanding the distinctions between them is essential.",
+                    "links": [
+                      {
+                        "label": "Pew Research — Muslims and modernity",
+                        "url": "https://www.pewresearch.org/religion",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5_islam_globalsouth",
+                    "label": "Islam & the Global South",
+                    "color": "#2a6838",
+                    "desc": "The majority of the world's Muslims live in the Global South — in communities that have experienced colonialism, economic marginalization, and political exclusion from the institutions that set global rules. Islam in these contexts is not primarily about the questions that dominate Western discourse — terrorism, Islamism, the headscarf. It is about community, practice, identity, and meaning in conditions of poverty and political powerlessness. The fastest growing Muslim communities are in sub-Saharan Africa. Islam's spread in West Africa over more than a thousand years through trade and scholarship produced deep-rooted traditions of Islamic learning, Sufi practice, and peaceful coexistence that have little resemblance to the Islam of the headlines. That Islam — vast, diverse, ordinary, devout — is the Islam most of the world's Muslims actually live.",
+                    "links": [
+                      {
+                        "label": "Al Jazeera — Islam in Africa",
+                        "url": "https://www.aljazeera.com",
+                        "emoji": "🌍"
+                      },
+                      {
+                        "label": "Pew Research — Islam in sub-Saharan Africa",
+                        "url": "https://www.pewresearch.org/religion",
+                        "emoji": "📊"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "geo_shift_globalsouth",
+                        "label": "The Global South",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      },
+                      {
+                        "id": "geo_africa",
+                        "label": "Africa",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": []
+                      }
+                    ]
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "x5_abrahamic",
+                    "label": "Abrahamic Religions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_mideast",
+                    "label": "The Middle East",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_shift_globalsouth",
+                    "label": "The Global South",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "x5_judaism",
+                "label": "Judaism",
+                "desc": "",
+                "color": "#6a58a0",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x5_mandaean",
+                "label": "Mandaeism",
                 "color": "#7a5c9a",
-                "desc": "The world's second-largest religion, with 1.8 billion adherents. Founded in 7th century Arabia through the Prophet Muhammad, who received revelations recorded in the Quran. Islam means submission — to one God, Allah. It built one of history's great civilizations, preserving and advancing mathematics, astronomy, medicine, and philosophy while Europe was in its dark ages.",
+                "desc": "One of the oldest continuously practiced religions in the world, Mandaeism traces its roots to John the Baptist and the Jordan River. Its followers, concentrated historically in Iraq and Iran, practice baptism as a central ritual and revere a dualistic cosmology of light and darkness. Fewer than 100,000 Mandaeans remain, many displaced by war.",
                 "links": [],
                 "topPills": [],
                 "bottomPills": [],
@@ -8182,16 +8998,6 @@ const LAYERS = [
                 "label": "Bahá'í",
                 "color": "#7a5c9a",
                 "desc": "Founded in 19th century Persia, the Bahá'í Faith teaches the essential unity of all religions and the oneness of humanity. Its founder, Bahá'u'lláh, claimed to be the latest in a line of divine messengers that includes Abraham, Moses, Jesus, and Muhammad. With 5-8 million followers worldwide, it is one of the fastest-growing independent religions.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "x5_mandaean",
-                "label": "Mandaeism",
-                "color": "#7a5c9a",
-                "desc": "One of the oldest continuously practiced religions in the world, Mandaeism traces its roots to John the Baptist and the Jordan River. Its followers, concentrated historically in Iraq and Iran, practice baptism as a central ritual and revere a dualistic cosmology of light and darkness. Fewer than 100,000 Mandaeans remain, many displaced by war.",
                 "links": [],
                 "topPills": [],
                 "bottomPills": [],
