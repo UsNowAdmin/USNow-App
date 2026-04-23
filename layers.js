@@ -8241,7 +8241,7 @@ const LAYERS = [
           },
           {
             "id": "occ_organizations",
-            "label": "Living Organizational Expressions",
+            "label": "Secret Societies",
             "color": "#3a2a5a",
             "desc": "The organizational expressions of occult tradition are where the hidden-knowledge claim meets institutional power in its most legible form. Some of these organizations are harmless fraternal clubs with elaborate ritual trappings. Some have exercised political influence that is documented, measurable, and in some cases decisive. The point is not to claim conspiracy where there is only fraternity. The point is to notice that the structural features of the mystery school — secret membership, initiatic hierarchy, oath-bound loyalty, exclusive access to insider information — are ideal instruments for the exercise of influence, and that some organizations built on these features have used them exactly that way.",
             "links": [],
@@ -8345,7 +8345,7 @@ const LAYERS = [
 ,
           {
             "id": "occ_secret_societies",
-            "label": "Secret Societies",
+            "label": "Other Secret Societies",
             "color": "#2a3a6a",
             "desc": "A secret society is a formal organization whose membership, rituals, or purposes are concealed from the public. The secrecy is not incidental — it is structural. It creates loyalty, enforces hierarchy, and produces the conditions for trust between members who would not otherwise have reason to trust each other. Every major civilization has produced them. Some were fraternal. Some were revolutionary. Some were instruments of state power. Some were all three simultaneously. The consistent feature across all of them is not the content of the secret. It is the organizational work the secret performs.",
             "links": [
