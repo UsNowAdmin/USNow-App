@@ -480,23 +480,6 @@ function buildFoundationMoons(){
       el.style.transform=`translateX(-50%) translateY(0) scale(1)`;
       el.style.boxShadow='';
     });
-    let _fTmoved=false,_fTsx=0,_fTsy=0;
-    el.addEventListener('touchstart',e=>{
-      _fTsx=e.touches[0].clientX;_fTsy=e.touches[0].clientY;_fTmoved=false;
-      el.style.transform=`translateX(-50%) translateY(-8px) scale(1.09)`;
-      el.style.boxShadow=`0 0 ${f.size*0.7}px ${f.glow},0 0 ${f.size*0.35}px ${f.border}88`;
-    },{passive:true});
-    el.addEventListener('touchmove',e=>{
-      if(Math.abs(e.touches[0].clientX-_fTsx)>8||Math.abs(e.touches[0].clientY-_fTsy)>8){
-        _fTmoved=true;
-        el.style.transform=`translateX(-50%) translateY(0) scale(1)`;
-        el.style.boxShadow='';
-      }
-    },{passive:true});
-    el.addEventListener('touchend',e=>{
-      el.style.transform=`translateX(-50%) translateY(0) scale(1)`;
-      el.style.boxShadow='';
-    });
     coreWrap.appendChild(el);
   });
 }
@@ -575,26 +558,15 @@ function _setIndex(id,entry){
     const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
     const glow=`rgba(${r},${g},${b},0.28)`;
     const tag=(orbData&&orbData.label)||(layerData&&layerData.label)||'';
-    _setIndex(item.id,{color,glow,tag,scaleText:(layerData&&layerData.time)||null,title:item.label,sub:item.sub||null,desc:item.desc||'',links:item.links||[],topPills:item.topPills||[],bottomPills:item.bottomPills||[],isLayer:false,nodeId:item.id});
+    _setIndex(item.id,{color,glow,tag,scaleText:(layerData&&layerData.time)||null,title:item.label,sub:item.sub||null,desc:item.desc||''    ,links:item.links||[],topPills:item.topPills||[],bottomPills:item.bottomPills||[],isLayer:false,nodeId:item.id});
     buildIndex(item.topPills,layerData,orbData||item);
     buildIndex(item.bottomPills,layerData,orbData||item);
   });
 })(LAYERS.flatMap(l=>[...l.orbs,...(l.topPills||[])]),null,null);
-// Also deep-index layer topPill children (subcards under layer-level pills)
-LAYERS.forEach(l=>{
-  (l.topPills||[]).forEach(function walkTP(tp){
-    if(!tp||!tp.id)return;
-    const c=(tp.color||l.color||'#888888');const hx=c.replace('#','');
-    const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
-    _setIndex(tp.id,{color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:l.label,scaleText:l.time,title:tp.label,sub:null,desc:tp.desc||'',links:tp.links||[],topPills:tp.topPills||[],bottomPills:tp.bottomPills||[],isLayer:false,nodeId:tp.id});
-    (tp.topPills||[]).forEach(walkTP);
-    (tp.bottomPills||[]).forEach(walkTP);
-  });
-});
 LAYERS.forEach(layer=>{
   _setIndex(layer.id,{color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub||null,desc:layer.desc||'',links:layer.links||[],topPills:layer.topPills||[],bottomPills:layer.bottomPills||[],isLayer:true,nodeId:layer.id});
   layer.orbs.forEach(orb=>{
-    const hx=(orb.color||'#888888').replace('#','');
+    const hx=orb.color.replace('#','');
     const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
     _setIndex(orb.id,{color:orb.color,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc||'',links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,nodeId:orb.id});
     (function indexDeep(pills,l,o){
@@ -611,7 +583,7 @@ LAYERS.forEach(layer=>{
   });
 });
 
-function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const bottomPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:true,layer:layer});}
+function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const bottomPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:false,layer:layer});}
 function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;cardNavOpen({color:c,glow:og,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false});}
 
 // Unified card navigation stack
@@ -696,7 +668,7 @@ function renderCard(data){
   // Header — 2 lines for layer/orb cards (tag + Scale: time), 1 line for subcards
   const tagEl=document.getElementById('modal-layer-tag');
   tagEl.style.color=lc;
-  if(data.scaleText&&data.isLayer){
+  if(data.scaleText){
     tagEl.innerHTML=`<span style="display:block;">${data.tag}</span><span style="display:block;font-size:8px;letter-spacing:0.18em;opacity:0.6;margin-top:2px;">Scale: ${data.scaleText}</span>`;
   } else {
     tagEl.textContent=data.tag;
@@ -711,8 +683,9 @@ function renderCard(data){
   closeBtn.onmouseleave=()=>{closeBtn.style.background='transparent';};
   // Title / subtitle / desc
   document.getElementById('modal-title').textContent=data.title;
+  // Show node ID for reference
   let _idEl=document.getElementById('modal-node-id');
-  if(!_idEl){_idEl=document.createElement('div');_idEl.id='modal-node-id';_idEl.style.cssText='font-size:9px;letter-spacing:0.15em;font-family:\'Courier New\',monospace;opacity:0.3;margin-bottom:6px;margin-top:-2px;';document.getElementById('modal-title').parentNode.insertBefore(_idEl,document.getElementById('modal-title').nextSibling);}
+  if(!_idEl){_idEl=document.createElement('div');_idEl.id='modal-node-id';_idEl.style.cssText='font-size:9px;letter-spacing:0.15em;font-family:\'Courier New\',monospace;opacity:0.35;margin-bottom:6px;margin-top:-4px;';document.getElementById('modal-title').parentNode.insertBefore(_idEl,document.getElementById('modal-title').nextSibling);}
   _idEl.style.color=lc;
   _idEl.textContent=data.nodeId?'#'+data.nodeId:'';
   const subEl=document.getElementById('modal-sub');
