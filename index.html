@@ -594,7 +594,7 @@ LAYERS.forEach(l=>{
 LAYERS.forEach(layer=>{
   _setIndex(layer.id,{color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub||null,desc:layer.desc||'',links:layer.links||[],topPills:layer.topPills||[],bottomPills:layer.bottomPills||[],isLayer:true,nodeId:layer.id});
   layer.orbs.forEach(orb=>{
-    const hx=orb.color.replace('#','');
+    const hx=(orb.color||'#888888').replace('#','');
     const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
     _setIndex(orb.id,{color:orb.color,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc||'',links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,nodeId:orb.id});
     (function indexDeep(pills,l,o){
