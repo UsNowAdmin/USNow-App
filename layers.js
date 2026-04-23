@@ -2949,8 +2949,7 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "e_fe",
