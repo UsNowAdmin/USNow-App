@@ -7710,203 +7710,48 @@ const LAYERS = [
     "orbs": [
       {
         "id": "x4",
-        "label": "Consciousness",
+        "label": "The Occult",
         "size": 54,
         "x": 8,
         "y": 42,
-        "color": "#3878a8",
-        "desc": "The hard problem. Why is there something it is like to be you? The universe watching itself through a temporary aperture, briefly convinced it matters. It does. It doesn't. Both are true from different distances.",
+        "color": "#5a2a7a",
+        "glow": "rgba(120,60,180,0.55)",
+        "border": "rgba(160,100,220,0.6)",
+        "desc": "Occult means hidden. That is the whole mechanism. There is a hidden order beneath visible reality. We have access to it. You don't. That claim — not the belief itself — is what makes occult knowledge a power instrument. The belief is sincere in most cases. The power structure built on top of it is not incidental. Throughout recorded history, exclusive access to hidden knowledge has justified priestly authority, royal legitimacy, initiatic hierarchy, and the gatekeeping of entire fields of inquiry. The systems change every few centuries. The access claim doesn't. What we call the occult is not one tradition — it is dozens of independent traditions that share one structural feature: the meaningful is concealed, the concealment is deliberate, and admission requires sponsorship from those already inside. That is not a spiritual claim. It is an organizational one. The history of the occult is inseparable from the history of power.",
         "links": [
           {
-            "label": "Aeon: The Hard Problem",
-            "url": "https://aeon.co/essays/the-hard-problem-of-consciousness-is-a-distraction-from-the-real-one",
-            "emoji": "💭"
+            "label": "Wouter Hanegraaff — Western Esotericism (Oxford)",
+            "url": "https://www.oxfordbibliographies.com/display/document/obo-9780195396577/obo-9780195396577-0232.xml",
+            "tag": "SCHOLARSHIP",
+            "emoji": "📚"
           },
           {
-            "label": "On Being: What is consciousness?",
-            "url": "https://onbeing.org",
-            "emoji": "🕊️"
+            "label": "Hermetic Library — primary texts archive",
+            "url": "https://hermetic.com",
+            "tag": "ARCHIVE",
+            "emoji": "🗝️"
+          },
+          {
+            "label": "Esoteric Archives — Mead, Waite, Lévi digitized",
+            "url": "http://www.esotericarchives.com",
+            "tag": "TEXTS",
+            "emoji": "📜"
+          },
+          {
+            "label": "JSTOR — Journal for the Study of Western Esotericism",
+            "url": "https://www.jstor.org",
+            "tag": "ACADEMIC",
+            "emoji": "🔬"
           }
         ],
         "topPills": [
           {
-            "id": "xc1",
-            "label": "The Hard Problem",
-            "color": "#3878a8",
-            "desc": "David Chalmers' term for the question that won't go away: why does physical brain activity feel like anything at all? Science can explain what the brain does. It cannot yet explain why there is something it is like to be you. Coming soon.",
-            "links": [
-              {
-                "label": "Aeon — the hard problem",
-                "url": "https://aeon.co/essays/the-hard-problem-of-consciousness-is-a-distraction-from-the-real-one",
-                "emoji": "💭",
-                "tag": "PHILOSOPHY"
-              },
-              {
-                "label": "On Being — consciousness",
-                "url": "https://onbeing.org",
-                "emoji": "🕊️",
-                "tag": "SPIRIT"
-              },
-              {
-                "label": "Nautilus — mind & consciousness",
-                "url": "https://nautil.us",
-                "emoji": "🔬",
-                "tag": "SCIENCE"
-              }
-            ],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "xc2",
-            "label": "Dreams",
-            "color": "#2858a0",
-            "desc": "A third of your life spent in a state of consciousness so strange it was once indistinguishable from prophecy. What are they for? Nobody fully knows. Coming soon.",
-            "links": [
-              {
-                "label": "Aeon — on dreams",
-                "url": "https://aeon.co",
-                "emoji": "💭",
-                "tag": "PHILOSOPHY"
-              },
-              {
-                "label": "The Marginalian — dreams & meaning",
-                "url": "https://www.themarginalian.org",
-                "emoji": "🕊️",
-                "tag": "MIND"
-              }
-            ],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          }
-        ],
-        "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
-      },
-      {
-        "id": "x2",
-        "label": "Death",
-        "size": 48,
-        "x": 27,
-        "y": 56,
-        "color": "#1860a0",
-        "desc": "The organizing fact of human life. Every religion, philosophy, and political system is partly an answer to this. Mostly it is a sophisticated way of not answering it while building elaborate structures to avoid looking directly at it.",
-        "links": [
-          {
-            "label": "On Being — death & meaning",
-            "url": "https://onbeing.org",
-            "emoji": "🕊️",
-            "tag": "SPIRIT"
-          },
-          {
-            "label": "Aeon — philosophy of death",
-            "url": "https://aeon.co",
-            "emoji": "💭",
-            "tag": "PHILOSOPHY"
-          },
-          {
-            "label": "The Marginalian — on mortality",
-            "url": "https://www.themarginalian.org",
-            "emoji": "🕊️",
-            "tag": "MIND"
-          }
-        ],
-        "topPills": [],
-        "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
-      },
-      {
-        "id": "x1",
-        "label": "Myth",
-        "size": 44,
-        "x": 50,
-        "y": 60,
-        "color": "#2858b8",
-        "desc": "Not falsehood — the story that carries what facts cannot hold. Every culture answers the same mystery differently. None is complete. None is entirely wrong. Myth is what you tell when truth isn't enough.",
-        "links": [
-          {
-            "label": "On Being — myth & meaning",
-            "url": "https://onbeing.org",
-            "emoji": "🕊️",
-            "tag": "SPIRIT"
-          },
-          {
-            "label": "Aeon — myth & culture",
-            "url": "https://aeon.co",
-            "emoji": "💭",
-            "tag": "PHILOSOPHY"
-          },
-          {
-            "label": "The Marginalian — mythology",
-            "url": "https://www.themarginalian.org",
-            "emoji": "🕊️",
-            "tag": "CULTURE"
-          }
-        ],
-        "topPills": [
-          {
-            "id": "x1_greek",
-            "label": "Greek & Roman",
-            "color": "#8a7060",
-            "desc": "The gods of Greece and Rome were not distant abstractions — they were jealous, lustful, political, and petty. They were humanity projected onto the sky and given power. These myths became the foundation of Western literature, philosophy, art, and science. The planets still carry their names.",
+            "id": "occ_divination",
+            "label": "Divination Systems",
+            "color": "#7a4a9a",
+            "desc": "Divination is the organized attempt to extract information from sources that are not supposed to have it. The randomness is the point. By removing human intention from the signal — a thrown coin, a drawn card, the flight path of a bird — the practitioner creates a channel the rational mind cannot contaminate. Whether that channel connects to anything is a metaphysical question. What it does for the person asking is not. Divination systems have been the interface layer between human anxiety and the unknown in every civilization on record. The specific systems change. The need they serve doesn't.",
             "links": [],
-            "bottomPills": [],
-            "topPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_norse",
-            "label": "Norse, Celtic & Slavic",
-            "color": "#8a7060",
-            "desc": "The mythologies of northern and eastern Europe — gods of war, winter, fate, and the forge. Norse mythology gave us Odin's sacrifice for wisdom, Ragnarok as the end of everything, and a cosmology built around a world tree connecting nine realms. These traditions survived in fragments, preserved partly by Christian scribes who found them too powerful to fully erase.",
-            "links": [],
-            "bottomPills": [],
-            "topPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_egyptian",
-            "label": "Egyptian & Mesopotamian",
-            "color": "#8a7060",
-            "desc": "The oldest written mythologies on earth. Mesopotamian texts like the Epic of Gilgamesh predate the Bible by over a thousand years and contain flood narratives strikingly similar to Noah's. Egyptian mythology built one of history's most elaborate cosmologies around death, resurrection, and the eternal order of the cosmos.",
-            "links": [],
-            "bottomPills": [],
-            "topPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_creation",
-            "label": "Creation Myths",
-            "color": "#8a7060",
-            "desc": "Every culture has one. From the Babylonian Enuma Elish to Genesis to the Mayan Popol Vuh to the Hindu Rigveda — humanity's universal need to answer the question: how did all of this begin? These stories are not competing with science. They are something science cannot replace: the human need for a story that includes us.",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [
-              {
-                "id": "x5_abrahamic",
-                "label": "Abrahamic Religions",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "x3_astro",
-                "label": "Astrology",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "orbs": []
-          },
+            "topPills": [
           {
             "id": "x3_astro",
             "label": "Astrology",
@@ -8084,6 +7929,560 @@ const LAYERS = [
               {
                 "id": "x3_histtime",
                 "label": "History of Time",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+              {
+                "id": "occ_div_numerology",
+                "label": "Numerology",
+                "color": "#5a4a8a",
+                "desc": "The claim that numbers carry intrinsic meaning — not just quantity but character — runs from Pythagoras through Kabbalah through modern self-help shelves. Pythagoras taught that number was the principle underlying all things and that specific numbers carried specific qualities. The Hebrew tradition of Gematria assigned numerical values to letters and found meaning in the sums shared between words. The Arabic system of Abjad did the same. That numbers have structural properties recurring in nature — the Fibonacci sequence, the golden ratio — is mathematical fact. The leap from mathematical recurrence to personal destiny is where the system makes its power move. It is a leap that has been made, consistently, for 2,500 years.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_div_tarot",
+                "label": "Tarot",
+                "color": "#7a3a8a",
+                "desc": "Tarot cards began as a game. The 78-card Italian tarocchi deck — 22 trump cards plus four suits — was used for card games in northern Italy from the 15th century onward. Occultists didn't discover it as a divinatory tool until the 1780s, when Antoine Court de Gébelin claimed, with no evidence, that the Major Arcana were an ancient Egyptian book of wisdom encoded in card form. The claim was false. It didn't matter. Within a generation the tarot had been fully integrated into ceremonial magic, Kabbalah, and Hermetic philosophy. The Rider-Waite deck of 1909 — illustrated by Pamela Colman Smith under Arthur Edward Waite's direction — became the template that defines the medium today. It is a modern invention with an invented ancient pedigree. It is also a genuinely sophisticated symbolic system. Both things are true.",
+                "links": [
+                  { "label": "British Museum — tarot history", "url": "https://www.britishmuseum.org", "emoji": "🏛️" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_div_iching",
+                "label": "I Ching",
+                "color": "#4a6a8a",
+                "desc": "The I Ching — the Book of Changes — is one of the oldest texts in continuous use on earth, dating to at least the 9th century BCE with roots possibly 3,000 years older. Sixty-four hexagrams, each composed of six broken or unbroken lines, are consulted by throwing yarrow stalks or coins. The hexagram that results is not understood as a prediction but as a description of the present moment's underlying pattern — the condition of change you are already inside. Carl Jung spent years with the I Ching and proposed it operated through synchronicity: meaningful coincidence rather than causal mechanism. He introduced it to the West in his foreword to the Wilhelm translation in 1950. It is the one major divination system with a fully developed academic philosophical tradition alongside it.",
+                "links": [
+                  { "label": "I Ching — Wilhelm/Baynes translation (Princeton)", "url": "https://press.princeton.edu", "emoji": "📖" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_div_augury",
+                "label": "Augury & Haruspicy",
+                "color": "#8a5a3a",
+                "desc": "Rome did not go to war without consulting the birds. Augury — the interpretation of bird flight, behavior, and calls — was an official state function. The College of Augurs was one of the most important priestly colleges in the Roman Republic. Their readings could delay a military campaign, invalidate an election, or block a law. Haruspicy — reading the entrails of sacrificed animals, particularly the liver — was imported from the Etruscans and performed by haruspices who maintained detailed bronze liver models used for training. These were not folk practices. They were official instruments of state governance. The system didn't require universal belief to exercise universal power. It required institutional authority. It had that.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_div_oracle",
+                "label": "Oracle Systems",
+                "color": "#7a7a3a",
+                "desc": "The Oracle at Delphi operated for nearly a thousand years — approximately 800 BCE to 390 CE — and was the most politically influential institution in the ancient Greek world. Every major state decision, colonial expedition, and military campaign was routed through it. The Pythia — a woman chosen from local families, seated over a chasm in Apollo's temple — delivered ambiguous pronouncements interpreted by priests. Modern archaeology confirmed the presence of ethylene-producing geological faults beneath the temple. The system was not a fraud. It was a sophisticated interface between state power, popular belief, and genuine altered-state experience — with professionally managed interpretation built in. The Yoruba Ifá system uses a binary divination corpus of 256 Odù encoding centuries of accumulated wisdom. Chinese oracle bones — cattle scapulae and turtle shells heated until they cracked — were read by Shang dynasty diviners from 1200 BCE onward. The questions asked are preserved. They range from weather to warfare to toothache. They are the oldest continuous record of written Chinese.",
+                "links": [
+                  { "label": "UNESCO — Yoruba Ifá Divination System", "url": "https://ich.unesco.org/en/RL/ifa-divination-system-00146", "emoji": "🌍" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "occ_cosmology",
+            "label": "Esoteric Cosmologies",
+            "color": "#4a2a8a",
+            "desc": "An esoteric cosmology is a complete account of the structure of reality available only to initiates. The exoteric version — what everyone gets — is incomplete by design. These are not fringe curiosities. Hermeticism, Kabbalah, and Neoplatonism shaped the intellectual foundations of Western philosophy, science, and religion for two thousand years. Gnosticism was a serious theological competitor to orthodox Christianity in the 2nd and 3rd centuries. Theosophy produced institutional children still operating today. These systems mattered. Understanding what they claimed and how those claims functioned is not optional for anyone trying to understand how Western civilization built its ideas.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "occ_cosm_hermeticism",
+                "label": "Hermeticism",
+                "color": "#9a8a3a",
+                "desc": "The core texts — the Corpus Hermeticum — were written in Egypt between 100 and 300 CE, probably by multiple authors working in a Neoplatonic-Egyptian-Jewish synthesis. Renaissance humanists believed they were ancient Egyptian wisdom predating Moses. They were not. That belief — corrected by Isaac Casaubon in 1614 — had already reshaped Western intellectual history by the time it was disproved. Hermetic philosophy holds that the cosmos is a living divine unity; that the human soul participates in that divinity; that gnosis — direct experiential knowledge — is the path to liberation; and that the hidden connections between things can be worked with. As above, so below. Hermeticism was foundational to Renaissance science, to alchemy, and to virtually every Western esoteric tradition that followed it.",
+                "links": [
+                  { "label": "Corpus Hermeticum — Hermetic Library", "url": "https://hermetic.com/texts/corpus-hermeticum", "emoji": "📜" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_cosm_kabbalah",
+                "label": "Kabbalah",
+                "color": "#6a3a9a",
+                "desc": "Kabbalah is the mystical dimension of Judaism — an interpretive tradition claiming to reveal the hidden structure of divinity and its relationship to creation. Its foundational text, the Zohar, appeared in 13th-century Spain, attributed to the 2nd-century rabbi Shimon bar Yochai but written, by scholarly consensus, by Moses de León. The Kabbalistic cosmos is structured around the Sefirot — ten divine emanations arranged on the Tree of Life — through which the infinite Ein Sof flows into finite existence. In the 16th century, Isaac Luria developed Lurianic Kabbalah — a cosmological account of divine contraction, catastrophe, and repair (tikkun) that became enormously influential in Jewish mysticism and eventually in Hermeticism and Freemasonry. The Tree of Life diagram is arguably the most influential single diagram in Western esoteric history.",
+                "links": [
+                  { "label": "Gershom Scholem — Major Trends in Jewish Mysticism", "url": "https://www.jstor.org", "emoji": "📚" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_cosm_gnosticism",
+                "label": "Gnosticism",
+                "color": "#5a3a6a",
+                "desc": "Gnosticism holds that the material world was created not by the supreme God but by an inferior, ignorant, or malevolent demiurge — a lesser being who mistook himself for the highest. The true divine spark is trapped in matter. The purpose of existence is to remember what you are and escape. In the 2nd and 3rd centuries, Gnostic Christianity was a serious competitor to what became orthodoxy. The Nag Hammadi library, discovered in Egypt in 1945, returned 52 texts that orthodox Christianity spent centuries trying to erase — the Gospel of Thomas, the Gospel of Philip, the Apocryphon of John. The verdict of history — that orthodoxy won and Gnosticism was a deviant heresy — is a political verdict, not a theological one.",
+                "links": [
+                  { "label": "Nag Hammadi Library — Gnostic Society", "url": "http://www.gnosis.org/naghamm/nhl.html", "emoji": "📜" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_cosm_theosophy",
+                "label": "Theosophy",
+                "color": "#3a5a7a",
+                "desc": "Helena Petrovna Blavatsky founded the Theosophical Society in New York in 1875. Her two major works — Isis Unveiled (1877) and The Secret Doctrine (1888) — claimed to synthesize Eastern and Western esoteric traditions into a unified account of cosmic and human evolution. Blavatsky was almost certainly a fraud in her production of physical phenomena. Her intellectual synthesis was not — it was genuinely original, deeply influential, and institutionally productive. The Theosophical Society seeded the modern Western interest in Hinduism and Buddhism, contributed to Indian independence movements through Annie Besant, and its cosmological framework became the skeleton of most 20th-century New Age thought.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_cosm_rosicrucian",
+                "label": "Rosicrucianism",
+                "color": "#8a3a4a",
+                "desc": "In 1614 and 1615, two anonymous pamphlets appeared in Germany announcing the existence of a secret brotherhood founded by one Christian Rosenkreutz — a traveler who had acquired hidden wisdom from Eastern sages. No such brotherhood existed when the pamphlets were published. Within a decade, it did. The Rosicrucian manifestos — almost certainly written by Lutheran theologian Johann Valentin Andreae as a literary experiment — became the founding charter of an order people built to match the description. This is the occult dynamic in its purest form: a claimed hidden order produces an actual hidden order. AMORC, the Ancient Mystical Order Rosae Crucis, founded in 1915 in New York, has hundreds of thousands of members worldwide. The order it claims continuity with was invented in 1614.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_cosm_neoplatonism",
+                "label": "Neoplatonism",
+                "color": "#4a6a5a",
+                "desc": "Plotinus — writing in Rome in the 3rd century CE — systematized the Neoplatonic cosmos: the One overflows into Nous (divine intellect), which overflows into the World Soul, which produces the material world as its lowest emanation. The soul's purpose is to return through these levels to union with the One. Neoplatonism was the dominant intellectual framework of late antiquity, shaping pagan philosophy and Christian theology simultaneously. Augustine was a Neoplatonist before his conversion and remained one after it. Renaissance Hermeticism was built on a Neoplatonic foundation. Without Neoplatonism there is no Western esoteric tradition as we know it.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "occ_ritual",
+            "label": "Ritual & Magical Systems",
+            "color": "#7a2a4a",
+            "desc": "A magical system is a technology for producing change through non-physical means. The practitioner manipulates symbols, substances, words, and postures according to a coherent theory of correspondence — like affects like, the name of a thing is connected to the thing, sufficiently concentrated will can bend probability. Whether any of this works in the sense a physicist would recognize is beside the point for understanding its history. The history is that every civilization on record has had one. The question is not whether magic is real. The question is what it is for, who controls access to it, and what work it does in the organization of human power.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "occ_rit_alchemy",
+                "label": "Alchemy",
+                "color": "#9a7a2a",
+                "desc": "Alchemy is the attempt to perfect matter and spirit simultaneously. The physical operation — transmuting base metals into gold — was always understood by serious practitioners as inseparable from the interior operation: the transmutation of the base human soul into something incorruptible. The tradition has roots in Hellenistic Egypt, was preserved and developed by Islamic scholars (al-Rāzī, Jābir ibn Hayyān), and entered Europe in the 12th century through Latin translations of Arabic texts. Newton spent more time on alchemy than on physics. His unpublished alchemical manuscripts run to roughly a million words. Alchemy produced the laboratory method, distillation, acids, and the vocabulary of chemistry before chemistry existed as a discipline.",
+                "links": [
+                  { "label": "Newton Project — alchemical manuscripts", "url": "https://www.newtonproject.ox.ac.uk", "emoji": "🔬" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_rit_ceremonial",
+                "label": "Ceremonial Magic",
+                "color": "#6a2a7a",
+                "desc": "Ceremonial magic is the systematic application of ritual technique — circles, invocations, correspondences, tools — to produce contact with or command over spiritual entities. Its foundational medieval texts — the Lesser Key of Solomon, the Greater Key of Solomon, the Sworn Book of Honorius — describe hierarchies of demons, angels, and intelligences that can be summoned and bound. In the late 19th century the Hermetic Order of the Golden Dawn — whose members included W.B. Yeats, Aleister Crowley, and Dion Fortune — synthesized Kabbalah, tarot, astrology, and Hermetic philosophy into a complete initiatic magical curriculum. The Golden Dawn system remains the foundation of virtually all Western magical practice today.",
+                "links": [
+                  { "label": "Agrippa — Three Books of Occult Philosophy", "url": "http://www.esotericarchives.com/agrippa/agrippa1.htm", "emoji": "📜" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_rit_thelema",
+                "label": "Thelema",
+                "color": "#8a2a3a",
+                "desc": "Thelema is the system founded by Aleister Crowley following a claimed dictation in Cairo in 1904, in which he received The Book of the Law from a discarnate entity called Aiwass. The core injunction — Do what thou wilt shall be the whole of the Law — is frequently misread as libertinism. In Crowley's framework it means the opposite: discover your true will and pursue nothing else. Crowley's influence on 20th-century culture is measurable: he appears on the Beatles' Sgt. Pepper cover; Jimmy Page of Led Zeppelin owned his former home and manuscripts; his system underlies significant portions of modern Western occultism. The tradition remains active through the Ordo Templi Orientis worldwide.",
+                "links": [
+                  { "label": "The Book of the Law — Liber AL vel Legis", "url": "https://hermetic.com/crowley/libers/lib220", "emoji": "📜" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_rit_vodou",
+                "label": "Vodou",
+                "color": "#5a3a2a",
+                "desc": "Haitian Vodou emerged from the forced convergence of West African Fon, Ewe, and Yoruba religious traditions with French Catholicism in Saint-Domingue. It is organized around the Lwa — spiritual beings who act as intermediaries between the human world and the supreme creator Bondye. The Lwa are not demons. They are specific personalities — Erzulie Freda, Ogou, Baron Samedi — who ride their devotees in possession ceremonies. Vodou was the spiritual framework within which the Haitian Revolution — the only successful slave revolt in history — was organized. The ceremony at Bois Caïman in 1791 is considered its beginning. The connection between spiritual practice and political liberation is not incidental. It is the point.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_rit_candomble",
+                "label": "Candomblé / Santería",
+                "color": "#6a4a2a",
+                "desc": "Candomblé and Santería are the Brazilian and Cuban expressions of the same process: the preservation of Yoruba religious tradition through syncretism with Catholic saints during the Atlantic slave trade. Enslaved Yoruba people continued worshipping their Orishas by mapping each one to a corresponding Catholic saint. Ochun became Our Lady of Charity. Shango became Saint Barbara. Ogun became Saint Peter. The syncretism was protective camouflage that became culture. These are not survival artifacts. They are living, evolving religious systems with millions of practitioners, formal priestly hierarchies, and rigorous initiatic training — currently under active persecution by Pentecostal churches in Brazil and decades of state suppression in Cuba.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_rit_shamanism",
+                "label": "Shamanism",
+                "color": "#3a5a3a",
+                "desc": "The anthropologist Mircea Eliade defined shamanism not by belief but by technique: the practitioner enters an altered state, travels to non-ordinary reality, retrieves information or power, and returns. He documented this pattern independently across Siberia, Central Asia, the Americas, Southeast Asia, and Oceania. The shaman's function is medical, divinatory, and political simultaneously — they negotiate between the human community and the spirit world. Ayahuasca ceremony — an Amazonian shamanic practice — is currently the subject of clinical trials at Johns Hopkins and New York University for treatment of depression and PTSD. The oldest technology for altered-state experience is now inside academic medicine.",
+                "links": [
+                  { "label": "Johns Hopkins Psychedelic Research", "url": "https://hopkinspsychedelic.org", "emoji": "🔬" }
+                ],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "occ_mystery",
+            "label": "Mystery School Traditions",
+            "color": "#2a4a7a",
+            "desc": "A mystery school is an initiatic institution that transmits knowledge in stages, binding each level with oath, ceremony, and the threat of consequences for disclosure. The knowledge itself varies. The structure doesn't. What the mystery schools understood — and what every organization that has borrowed their model understands — is that scarcity of information creates loyalty, shared secrets create community, and the experience of being admitted creates identification stronger than anything available to outsiders. This is not a spiritual insight. It is an organizational technology. Every institution that has adopted it has grown.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "occ_mys_egypt",
+                "label": "Egyptian Mystery Schools",
+                "color": "#9a8a2a",
+                "desc": "Egyptian temples were tiered institutions with degrees of access. The inner sanctum contained knowledge — astronomical, medical, mathematical — not available to the general population. Plutarch's On Isis and Osiris describes initiation rites. Apuleius, in The Golden Ass, provides the most detailed first-person account of an Isis initiation surviving from the ancient world. The temples of Karnak, Luxor, and Dendera encode sophisticated astronomical knowledge in their architecture and orientation. The knowledge was controlled. The control was institutional. The institution was the temple.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_mys_eleusinian",
+                "label": "Eleusinian Mysteries",
+                "color": "#6a7a3a",
+                "desc": "The Eleusinian Mysteries operated for nearly two thousand years — approximately 1500 BCE until 392 CE, when Theodosius I ordered all pagan temples closed. The mysteries honored Demeter and Persephone and culminated in the epopteia — the direct vision. Initiates were sworn to absolute secrecy under pain of death. They kept it. We know who participated: Plato, Aristotle, Cicero, Marcus Aurelius, Hadrian. Cicero wrote that Athens gave the world nothing greater. The classicist Walter Burkert and the mycologist Gordon Wasson separately argued that the kykeon — the ceremonial drink — contained ergot alkaloids, the natural precursor to LSD. Consciousness alteration as institutional spiritual technology, two thousand years uninterrupted.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_mys_pythagoras",
+                "label": "Pythagorean Brotherhood",
+                "color": "#5a6a7a",
+                "desc": "Pythagoras established a community at Croton around 530 BCE that was simultaneously a mathematical school, a religious community, and a political organization. Members were divided into those who had heard Pythagoras speak directly and those who had heard his reasoning. The society held property in common and maintained strict secrecy about its internal teachings. Pythagorean political influence in the cities of Magna Graecia was strong enough that the communities were eventually destroyed by popular revolts — the meeting houses burned, members killed. The mathematical discoveries attributed to the school are real and foundational. They were made inside an initiatic community that treated mathematical knowledge as sacred. That framing shaped how knowledge has been organized ever since.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_mys_mithraism",
+                "label": "Mithraism",
+                "color": "#7a3a3a",
+                "desc": "Mithraism spread through the Roman Empire between the 1st and 4th centuries CE with particular strength in the legions. Adherents met in underground temples — mithraea — dozens of which have been excavated from Britain to Syria. The religion had seven initiatory grades: Corax, Nymphus, Miles, Leo, Perses, Heliodromus, Pater. No Mithraic text survives. Everything we know comes from the mithraea, iconography, and hostile Christian sources. The central image — Mithras slaughtering the bull — may encode an astronomical map. Tertullian complained that the Devil had created Mithraic mysteries specifically to mock Christian sacraments. The chronological relationship between the two traditions remains a point of serious scholarly dispute.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_mys_sufism",
+                "label": "Sufism",
+                "color": "#4a7a5a",
+                "desc": "Sufism is the mystical dimension of Islam — the tradition of direct experiential knowledge of God transmitted through a chain of teachers from master to student. The Sufi orders — Qadiriyya, Naqshbandiyya, Mevlevi, Chishti, Shadhiliyya and dozens more — are initiatic brotherhoods with specific practices, lineages, and degrees of transmission. Rumi's Masnavi — 25,000 verses of mystical poetry — is one of the most widely read works in the Persian language. Sufism has been periodically suppressed by orthodox Islamic authorities throughout its history for the same reason mystical traditions are always targets: direct access to the divine threatens the institutional mediator.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_mys_vajrayana",
+                "label": "Vajrayana Buddhism",
+                "color": "#6a5a2a",
+                "desc": "Vajrayana — the Diamond Vehicle — is the Tantric school of Buddhism, dominant in Tibet, Bhutan, and Mongolia. It transmits specific practices — visualization, mantra, mudra, deity yoga — understood to accelerate the path to liberation to a single lifetime. These practices are transmitted only by a qualified lama to an authorized student through empowerment ceremonies, and their unauthorized practice is considered dangerous. The Kalachakra Tantra — the Wheel of Time — is one of the most complex initiatory systems in any tradition: an astronomy, a cosmology, an internal physiology, and a political prophecy woven into a single framework. The Dalai Lama has given Kalachakra initiations publicly since 1954 — a deliberate decision to make a historically secret transmission public in response to the near-destruction of the tradition under Chinese occupation.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "occ_organizations",
+            "label": "Living Organizational Expressions",
+            "color": "#3a2a5a",
+            "desc": "The organizational expressions of occult tradition are where the hidden-knowledge claim meets institutional power in its most legible form. Some of these organizations are harmless fraternal clubs with elaborate ritual trappings. Some have exercised political influence that is documented, measurable, and in some cases decisive. The point is not to claim conspiracy where there is only fraternity. The point is to notice that the structural features of the mystery school — secret membership, initiatic hierarchy, oath-bound loyalty, exclusive access to insider information — are ideal instruments for the exercise of influence, and that some organizations built on these features have used them exactly that way.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "occ_org_masonry",
+                "label": "Freemasonry",
+                "color": "#7a6a3a",
+                "desc": "Freemasonry is the largest initiatic brotherhood in Western history. The modern form traces to the Grand Lodge of England in 1717, though the operative stonemasons' guilds whose ritual it adapted are centuries older. The three Craft degrees use the building of Solomon's Temple and the death of its master architect Hiram Abiff as their symbolic framework. At its peak in the United States — mid-20th century — Masonic membership exceeded four million. Most U.S. presidents before 1950 were Masons. The founding documents of the American Republic bear significant Masonic intellectual influence. Freemasonry has been banned by the Catholic Church since 1738, by Nazi Germany, by Soviet Russia, and by most Middle Eastern states. The list of those who have feared it is itself a piece of information.",
+                "links": [
+                  { "label": "United Grand Lodge of England", "url": "https://www.ugle.org.uk", "emoji": "🏛️" }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "occ_org_skullandbones",
+                "label": "Skull & Bones",
+                "color": "#4a3a4a",
+                "desc": "Skull and Bones was founded at Yale in 1832. Fifteen juniors are tapped each year into a society whose membership list, rituals, and proceedings are secret. The Tomb on High Street in New Haven is its only public marker. The membership history is not. George H.W. Bush, George W. Bush, John Kerry, William Howard Taft, and James Jesus Angleton — CIA counterintelligence chief — were Bonesmen. The argument that this is coincidence requires ignoring the selection mechanism: a self-perpetuating elite tapping the next generation of itself. These are not conspiracy theories. They are alumni directories.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "occ_org_bohemian",
+                "label": "Bohemian Grove",
+                "color": "#3a5a3a",
+                "desc": "The Bohemian Club was founded in San Francisco in 1872 by journalists and artists. Within a decade it had been captured by the city's financial elite. Its annual summer retreat — two weeks in a 2,700-acre redwood grove in Sonoma County — became the most exclusive gathering in American political and corporate life. Every Republican president since Hoover has attended. The opening ceremony — the Cremation of Care, a symbolic effigy burned before a 40-foot stone owl — is documented on video. Nixon called it the most faggy goddamned thing he ever saw. He kept going. The relationships formed where the most powerful people in the country spend two weeks together without press or public are the story. Not the ceremony.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "occ_org_opusdei",
+                "label": "Opus Dei",
+                "color": "#7a3a2a",
+                "desc": "Opus Dei — the Work of God — was founded in Spain in 1928 by Josemaría Escrivá, canonized in 2002. It is the only personal prelature of the Catholic Church, meaning it operates outside ordinary diocesan structure and reports directly to the Holy See. Its approximately 90,000 members include numeraries who practice corporal mortification — the cilice, a spiked chain worn around the thigh, and the discipline, a small whip. Its institutional presence in Catholic universities, media, and the judiciary is disproportionate to its membership size. Its archives are not public. Its membership list is not public. Its finances are managed separately from the Vatican's. The actual organization requires less fiction than The Da Vinci Code provided.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  { "id": "x5", "label": "Religion", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "occ_org_ahnenerbe",
+                "label": "Ahnenerbe",
+                "color": "#5a3a2a",
+                "desc": "The Ahnenerbe was founded by Heinrich Himmler in 1935 to research the occult, racial, and ancestral heritage of the Aryan race. Absorbed into the SS in 1937. Its departments conducted expeditions to Tibet, Iceland, Finland, and the Middle East; investigated Atlantis, runes, and the Holy Grail; and sponsored criminal medical experiments at Dachau and Natzweiler. The Ahnenerbe is the clearest historical example of occult belief operationalized by a state apparatus with industrial-scale capacity for violence. Himmler was a genuine believer. The genocide and the mysticism were not separate projects. They were the same project.",
+                "links": [
+                  { "label": "Michael Kater — Das Ahnenerbe der SS", "url": "https://www.jstor.org", "emoji": "📚" }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  { "id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "occ_org_destructive",
+                "label": "Destructive End-States",
+                "color": "#7a2a2a",
+                "desc": "The Solar Temple — founded in the 1980s on Rosicrucian and Templar symbolism — promised initiates access to trans-dimensional beings. Between 1994 and 1997, 74 members died in coordinated mass murders and suicides in Switzerland, Canada, and France. The bodies were arranged in ritual positions. Heaven's Gate synthesized UFO belief with Christian eschatology and Theosophical cosmology into a system in which the body was a vehicle to be shed. In March 1997, 39 members took their lives in Rancho Santa Fe, timed to the Hale-Bopp comet. These are not edge cases. They are the mechanism in its most concentrated form: exclusive access to higher reality, isolation from external verification, progressive surrender of individual judgment to institutional authority. The claim that you alone possess the truth. Capable of producing willingness to die for it. And occasionally does.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
+        "bottomPills": [
+          {
+            "id": "x1",
+            "label": "Myth",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x5",
+            "label": "Religion",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1",
+            "label": "Nations & Empire",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h3",
+            "label": "War & Revolutions",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
+        "orbs": []
+      },
+      {
+        "id": "x2",
+        "label": "Death",
+        "size": 48,
+        "x": 27,
+        "y": 56,
+        "color": "#1860a0",
+        "desc": "The organizing fact of human life. Every religion, philosophy, and political system is partly an answer to this. Mostly it is a sophisticated way of not answering it while building elaborate structures to avoid looking directly at it.",
+        "links": [
+          {
+            "label": "On Being — death & meaning",
+            "url": "https://onbeing.org",
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
+          },
+          {
+            "label": "Aeon — philosophy of death",
+            "url": "https://aeon.co",
+            "emoji": "💭",
+            "tag": "PHILOSOPHY"
+          },
+          {
+            "label": "The Marginalian — on mortality",
+            "url": "https://www.themarginalian.org",
+            "emoji": "🕊️",
+            "tag": "MIND"
+          }
+        ],
+        "topPills": [],
+        "bottomPills": [],
+        "orbs": [],
+        "inProgress": true
+      },
+      {
+        "id": "x1",
+        "label": "Myth",
+        "size": 44,
+        "x": 50,
+        "y": 60,
+        "color": "#2858b8",
+        "desc": "Not falsehood — the story that carries what facts cannot hold. Every culture answers the same mystery differently. None is complete. None is entirely wrong. Myth is what you tell when truth isn't enough.",
+        "links": [
+          {
+            "label": "On Being — myth & meaning",
+            "url": "https://onbeing.org",
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
+          },
+          {
+            "label": "Aeon — myth & culture",
+            "url": "https://aeon.co",
+            "emoji": "💭",
+            "tag": "PHILOSOPHY"
+          },
+          {
+            "label": "The Marginalian — mythology",
+            "url": "https://www.themarginalian.org",
+            "emoji": "🕊️",
+            "tag": "CULTURE"
+          }
+        ],
+        "topPills": [
+          {
+            "id": "x1_greek",
+            "label": "Greek & Roman",
+            "color": "#8a7060",
+            "desc": "The gods of Greece and Rome were not distant abstractions — they were jealous, lustful, political, and petty. They were humanity projected onto the sky and given power. These myths became the foundation of Western literature, philosophy, art, and science. The planets still carry their names.",
+            "links": [],
+            "bottomPills": [],
+            "topPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x1_norse",
+            "label": "Norse, Celtic & Slavic",
+            "color": "#8a7060",
+            "desc": "The mythologies of northern and eastern Europe — gods of war, winter, fate, and the forge. Norse mythology gave us Odin's sacrifice for wisdom, Ragnarok as the end of everything, and a cosmology built around a world tree connecting nine realms. These traditions survived in fragments, preserved partly by Christian scribes who found them too powerful to fully erase.",
+            "links": [],
+            "bottomPills": [],
+            "topPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x1_egyptian",
+            "label": "Egyptian & Mesopotamian",
+            "color": "#8a7060",
+            "desc": "The oldest written mythologies on earth. Mesopotamian texts like the Epic of Gilgamesh predate the Bible by over a thousand years and contain flood narratives strikingly similar to Noah's. Egyptian mythology built one of history's most elaborate cosmologies around death, resurrection, and the eternal order of the cosmos.",
+            "links": [],
+            "bottomPills": [],
+            "topPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x1_creation",
+            "label": "Creation Myths",
+            "color": "#8a7060",
+            "desc": "Every culture has one. From the Babylonian Enuma Elish to Genesis to the Mayan Popol Vuh to the Hindu Rigveda — humanity's universal need to answer the question: how did all of this begin? These stories are not competing with science. They are something science cannot replace: the human need for a story that includes us.",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [
+              {
+                "id": "x5_abrahamic",
+                "label": "Abrahamic Religions",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "x3_astro",
+                "label": "Astrology",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "x3_astro",
+            "label": "Astrology",
+            "color": "#7a6a9a",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [
+              {
+                "id": "x4",
+                "label": "The Occult",
                 "desc": "",
                 "links": [],
                 "topPills": [],
