@@ -181,10 +181,10 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
 <nav>
   <div class="nav-logo" style="margin-bottom:8px;flex-direction:column;align-items:flex-start;gap:2px;">
-    <div style="display:flex;align-items:center;gap:8px;">
+    <a href="log.html" style="text-decoration:none;display:flex;align-items:center;gap:8px;" title="The Log">
       <span class="us">US</span>
       <span class="now">NOW</span>
-    </div>
+    </a>
     <span style="font-size:7px;letter-spacing:0.13em;color:rgba(201,168,76,0.48);font-family:'Courier New',monospace;white-space:nowrap;">THE QUESTION IS THE ANSWER.</span>
   </div>
 
@@ -237,7 +237,42 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div id="card-nav-bar" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:8px;">
       <div id="modal-layer-tag" style="font-size:10px;letter-spacing:0.3em;font-family:'Courier New',monospace;opacity:1;line-height:1.6;"></div>
       <div id="modal-node-id" style="font-size:9px;letter-spacing:0.12em;font-family:'Courier New',monospace;opacity:0.28;margin-left:auto;white-space:nowrap;"></div>
+      <button id="thought-btn" onclick="openThoughtPanel()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:transparent;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;" onmouseenter="this.style.borderColor='#c9a84c';this.style.boxShadow='0 0 10px rgba(201,168,76,0.18)';" onmouseleave="this.style.borderColor='rgba(201,168,76,0.4)';this.style.boxShadow='none';">Thought?</button>
       <button id="modal-close" onclick="cardNavBack()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:transparent;border:1px solid transparent;padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;"></button>
+    </div>
+
+    <!-- Thought? panel — overlays modal content, same card colors applied by JS -->
+    <div id="thought-panel">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="tp-eyebrow" id="tp-context-tag">The Log</div>
+        <button class="tp-back" onclick="closeThoughtPanel()">← BACK</button>
+      </div>
+      <div>
+        <div class="tp-headline" id="tp-headline">What's wrong with what you read?</div>
+      </div>
+      <hr class="tp-divider" id="tp-divider">
+      <p class="tp-copy">Maybe nothing. Maybe everything. Maybe you know something this platform doesn't — a fact that cuts the other way, a lived experience that rewrites the framing, a connection we missed entirely.<br><br>Leave it here. Agree, disagree, expand, correct. Everything coherent goes into <strong>The Log</strong> — permanent, searchable, kept as long as this exists. Profanity and noise get filtered. Everything else stays forever.<br><br><em>This is the record of what real people thought when they stopped and actually considered something. You're part of that now.</em></p>
+      <div class="tp-field">
+        <div class="tp-label">Your name <span style="opacity:0.4;">(optional)</span></div>
+        <input id="tp-name" class="tp-input" type="text" placeholder="Anonymous is fine">
+      </div>
+      <div class="tp-field">
+        <div class="tp-label">Your thought</div>
+        <textarea id="tp-thought" class="tp-input" rows="4" placeholder="Say something real."></textarea>
+      </div>
+      <input type="hidden" id="tp-node-id">
+      <input type="hidden" id="tp-node-label">
+      <div class="tp-actions">
+        <button class="tp-back" onclick="closeThoughtPanel()">← BACK</button>
+        <button class="tp-send" onclick="submitToLog()">SEND TO THE LOG →</button>
+      </div>
+      <!-- Confirmation state -->
+      <div class="tp-confirm" id="tp-confirm">
+        <div class="tp-confirm-mark">✦</div>
+        <div class="tp-confirm-title" id="tp-confirm-title">Received.</div>
+        <div class="tp-confirm-sub">Your thought is in The Log.<br>If it belongs, it stays forever.</div>
+        <button class="tp-confirm-back" id="tp-confirm-back-btn" onclick="closeThoughtPanel()">← BACK TO CARD</button>
+      </div>
     </div>
     <h2 id="modal-title"></h2>
     <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:14px;display:none;"></div>
@@ -621,7 +656,7 @@ LAYERS.forEach(layer=>{
   });
 });
 
-function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const bottomPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,inProgress:orb.inProgress||false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:true,inProgress:layer.inProgress||false,layer:layer});}
+function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const orbPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,inProgress:orb.inProgress||false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});const bottomPills=[...orbPills,...(layer.bottomPills||[])];cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:true,inProgress:layer.inProgress||false,layer:layer});}
 function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;cardNavOpen({color:c,glow:og,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,inProgress:orb.inProgress||false});}
 
 // Unified card navigation stack
@@ -795,7 +830,100 @@ function submitThought(){
 
 
 
-document.addEventListener('keydown',e=>{if(e.key==='Escape')cardNavBack();});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const panel=document.getElementById('thought-panel');
+    if(panel.classList.contains('open')) closeThoughtPanel();
+    else cardNavBack();
+  }
+});
+
+// ── Thought? panel ──
+const LOG_ENDPOINT='https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
+
+function openThoughtPanel(){
+  const panel=document.getElementById('thought-panel');
+  const box=document.getElementById('modal-box');
+  // Pull current card context
+  const stack=window._cardStack||[];
+  const current=stack[stack.length-1]||{};
+  const nodeId=current.nodeId||'';
+  const nodeLabel=current.title||'';
+  const color=current.color||'#c9a84c';
+  const hx=color.replace('#','');
+  const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
+  const lc=(()=>{const mix=(c)=>Math.min(255,Math.round(c+(255-c)*0.45));const toHex=(v)=>v.toString(16).padStart(2,'0');return '#'+toHex(mix(r))+toHex(mix(g))+toHex(mix(b));})();
+  // Set hidden fields
+  document.getElementById('tp-node-id').value=nodeId;
+  document.getElementById('tp-node-label').value=nodeLabel;
+  // Style panel to match card color
+  panel.style.background=`linear-gradient(160deg, rgba(${r},${g},${b},0.10) 0%, #0c1228 100%)`;
+  panel.style.borderTop=`1px solid rgba(${r},${g},${b},0.22)`;
+  // Context tag
+  const ctxTag=document.getElementById('tp-context-tag');
+  ctxTag.style.color=lc;
+  ctxTag.textContent=nodeLabel ? `THE LOG · ${nodeLabel.toUpperCase()}` : 'THE LOG';
+  // Headline color
+  document.getElementById('tp-headline').style.color='#f0ece4';
+  // Divider color
+  document.getElementById('tp-divider').style.borderColor=color;
+  // Inputs border color on focus via CSS already; tint placeholder
+  ['tp-name','tp-thought'].forEach(id=>{
+    const el=document.getElementById(id);
+    el.style.borderBottomColor=`rgba(${r},${g},${b},0.3)`;
+    el.addEventListener('focus',()=>el.style.borderBottomColor=`rgba(201,168,76,0.8)`,{once:false});
+    el.addEventListener('blur',()=>el.style.borderBottomColor=`rgba(${r},${g},${b},0.3)`,{once:false});
+  });
+  // Send button color
+  const sendBtn=document.querySelector('.tp-send');
+  sendBtn.style.color=lc;
+  sendBtn.style.borderColor=`rgba(${r},${g},${b},0.5)`;
+  // Confirm back button color
+  const confirmBack=document.getElementById('tp-confirm-back-btn');
+  confirmBack.style.color=lc;
+  confirmBack.style.border=`1px solid rgba(${r},${g},${b},0.35)`;
+  // Reset confirm state
+  document.getElementById('tp-confirm').classList.remove('show');
+  document.querySelector('.tp-actions').style.display='flex';
+  document.querySelectorAll('.tp-field').forEach(f=>f.style.display='flex');
+  document.getElementById('tp-thought').value='';
+  document.getElementById('tp-name').value='';
+  // Show panel, scroll to top
+  panel.classList.add('open');
+  box.scrollTop=0;
+}
+
+function closeThoughtPanel(){
+  document.getElementById('thought-panel').classList.remove('open');
+  const box=document.getElementById('modal-box');
+  if(box) box.scrollTop=0;
+}
+
+function submitToLog(){
+  const thought=document.getElementById('tp-thought').value.trim();
+  if(!thought){
+    document.getElementById('tp-thought').focus();
+    document.getElementById('tp-thought').style.borderBottomColor='rgba(212,98,26,0.8)';
+    return;
+  }
+  const payload={
+    name: document.getElementById('tp-name').value.trim()||'Anonymous',
+    topic: document.getElementById('tp-node-label').value||'General',
+    nodeId: document.getElementById('tp-node-id').value||'',
+    why: thought,
+    sources: 'The Log',
+    submitted: new Date().toISOString()
+  };
+  fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  // Show confirmation
+  document.querySelector('.tp-actions').style.display='none';
+  document.querySelectorAll('.tp-field').forEach(f=>f.style.display='none');
+  const confirm=document.getElementById('tp-confirm');
+  const stack=window._cardStack||[];
+  const current=stack[stack.length-1]||{};
+  document.getElementById('tp-confirm-title').textContent=`Received.`;
+  confirm.classList.add('show');
+}
 const _days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const _months=['January','February','March','April','May','June','July','August','September','October','November','December'];const _now=new Date();document.getElementById('hero-date').textContent=`${_days[_now.getDay()].toUpperCase()} · ${_months[_now.getMonth()].toUpperCase()} ${_now.getDate()}, ${_now.getFullYear()}`;
 buildScale();
 let resizeTimer;
@@ -803,6 +931,31 @@ window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setT
 </script>
 
 <style>
+/* ── Thought? panel ── */
+#thought-panel{display:none;position:absolute;inset:0;border-radius:28px 28px 18px 18px;z-index:10;padding:32px 26px 28px;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+#thought-panel.open{display:flex;flex-direction:column;gap:18px;}
+.tp-eyebrow{font-size:9px;letter-spacing:0.35em;font-family:'Courier New',monospace;opacity:0.6;text-transform:uppercase;}
+.tp-headline{font-size:clamp(20px,4.5vw,26px);font-weight:400;font-family:'Georgia',serif;line-height:1.25;margin:0;}
+.tp-divider{height:1px;border:none;opacity:0.18;margin:2px 0;}
+.tp-copy{font-size:14px;line-height:1.8;font-family:'Georgia',serif;opacity:0.82;margin:0;}
+.tp-field{display:flex;flex-direction:column;gap:7px;}
+.tp-label{font-size:9px;letter-spacing:0.22em;font-family:'Courier New',monospace;opacity:0.55;text-transform:uppercase;}
+.tp-input{background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(255,255,255,0.18);padding:10px 4px;font-size:14px;font-family:'Georgia',serif;color:#e4eef8;outline:none;border-radius:0;width:100%;transition:border-color 0.2s;resize:none;}
+.tp-input:focus{border-bottom-color:rgba(201,168,76,0.8);}
+.tp-input::placeholder{opacity:0.35;}
+.tp-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:4px;}
+.tp-send{font-size:9px;letter-spacing:0.22em;font-family:'Courier New',monospace;font-weight:700;padding:10px 26px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid rgba(201,168,76,0.6);color:#c9a84c;background:rgba(201,168,76,0.06);}
+.tp-send:hover{background:rgba(201,168,76,0.14);border-color:#c9a84c;box-shadow:0 0 14px rgba(201,168,76,0.2);}
+.tp-back{font-size:9px;letter-spacing:0.18em;font-family:'Courier New',monospace;padding:10px 18px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;color:rgba(255,255,255,0.35);background:transparent;}
+.tp-back:hover{color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);}
+.tp-confirm{text-align:center;padding:28px 0 16px;display:none;flex-direction:column;gap:10px;align-items:center;}
+.tp-confirm.show{display:flex;}
+.tp-confirm-mark{font-size:28px;opacity:0.9;}
+.tp-confirm-title{font-size:16px;font-family:'Georgia',serif;letter-spacing:0.03em;}
+.tp-confirm-sub{font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.1em;opacity:0.5;}
+.tp-confirm-back{margin-top:8px;font-size:9px;letter-spacing:0.2em;font-family:'Courier New',monospace;padding:9px 22px;border-radius:18px;cursor:pointer;background:transparent;transition:all 0.2s;}
+.tp-confirm-back:hover{opacity:1;}
+
 .glory-word{font-style:italic;border-bottom:1px dotted rgba(201,168,76,0.35);cursor:pointer;transition:border-color 0.2s,color 0.2s;}
 .glory-word:hover{border-bottom-color:rgba(201,168,76,0.85);color:#e0c060;}
 #glory-pop{display:none;position:fixed;z-index:9000;background:linear-gradient(160deg,#0d1525,#070c1a);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 16px;max-width:280px;box-shadow:0 0 40px rgba(0,0,0,0.7),0 0 20px rgba(201,168,76,0.12);}
