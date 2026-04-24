@@ -147,7 +147,7 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .source-tag{font-size:8px;color:#5a6a7a;font-family:'Courier New',monospace;letter-spacing:0.16em;}
 footer{background:#020508;padding:32px 22px;border-top:1px solid rgba(58,74,90,0.25);}
 footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-@media(max-width:520px){.nav-links a{display:none;}.layer-main-label{letter-spacing:0.15em!important;}.nav-fields{display:none!important;}}
+@media(max-width:560px){.nav-links a{display:none;}.layer-main-label{letter-spacing:0.15em!important;}.nav-fields{display:none!important;}}
 
 .glory-word{font-style:italic;border-bottom:1px dotted rgba(201,168,76,0.35);cursor:pointer;transition:border-color 0.2s,color 0.2s;}
 .glory-word:hover{border-bottom-color:rgba(201,168,76,0.85);color:#e0c060;}
