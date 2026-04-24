@@ -27,7 +27,7 @@ body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',se
 @keyframes navSignPulse{0%,100%{box-shadow:0 0 6px rgba(201,168,76,0.12)}50%{box-shadow:0 0 14px rgba(201,168,76,0.32),0 0 28px rgba(201,168,76,0.1)}}
 @keyframes ember{0%,100%{box-shadow:0 0 10px var(--fg,#9b2d2044),0 0 22px var(--fg,#9b2d2022),inset 0 0 8px rgba(255,140,60,0.04)}50%{box-shadow:0 0 22px var(--fg,#9b2d2077),0 0 44px var(--fg,#9b2d2033),inset 0 0 14px rgba(255,140,60,0.08)}}
 #ticker{position:fixed;top:0;left:0;right:0;z-index:600;background:#030609;border-bottom:1px solid rgba(122,96,48,0.44);overflow:hidden;height:30px;display:flex;align-items:center;}
-#ticker-inner{display:flex;gap:56px;animation:ticker 72s linear infinite;white-space:nowrap;}
+#ticker-inner{display:flex;gap:56px;animation:ticker 72s linear infinite;white-space:nowrap;}#ticker-inner span{text-transform:uppercase;}
 #ticker-inner span{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;opacity:0.75;}
 nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(122,96,48,0.33);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:44px;}
 .nav-logo{display:flex;align-items:center;gap:8px;}
@@ -164,18 +164,18 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 <div id="ticker"><div id="ticker-inner">
 <span>◎ Non-partisan · Non-denominational · Non-negotiable.</span>
 <span>◎ The question is the answer. The data is the argument.</span>
-<span>◎ Some guy with AI — minding propaganda &amp; media mind control.</span>
-<span>◎ Share it and Help Build it.</span>
-<span>◎ The US in USNow is not one thing.</span>
-<span>◎ Helping AI expose corruption, abuse, injustice, and overreach — wherever it exists.</span>
-<span>◎ See the Indexed and Interactive World Compendium.</span>
+<span>◎ The us in USNow is not one thing.</span>
+<span>◎ ENJOY THE Interactive World Compendium Index©</span>
+<span>◎ PERSPECTIVE · CLARITY · SCALE · TRUST</span>
+<span>◎ CLARITY IN PROGRESS · UPDATING DAILY · TELL A FRIEND</span>
+<span>◎ START ANYWHERE. GO ANYWHERE.</span>
 <span>◎ Non-partisan · Non-denominational · Non-negotiable.</span>
 <span>◎ The question is the answer. The data is the argument.</span>
-<span>◎ Some guy with AI — minding propaganda &amp; media mind control.</span>
-<span>◎ Share it and Help Build it.</span>
-<span>◎ The US in USNow is not one thing.</span>
-<span>◎ Helping AI expose corruption, abuse, injustice, and overreach — wherever it exists.</span>
-<span>◎ See the Indexed and Interactive World Compendium.</span>
+<span>◎ The us in USNow is not one thing.</span>
+<span>◎ ENJOY THE Interactive World Compendium Index©</span>
+<span>◎ PERSPECTIVE · CLARITY · SCALE · TRUST</span>
+<span>◎ CLARITY IN PROGRESS · UPDATING DAILY · TELL A FRIEND</span>
+<span>◎ START ANYWHERE. GO ANYWHERE.</span>
 </div></div>
 
 <nav>
@@ -189,38 +189,24 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
   <!-- Sign + timestamp — flex center between logo and button -->
   <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;margin:0 18px;margin-bottom:0;">
-    <span id="nav-sign" style="display:inline-flex;align-items:center;justify-content:center;min-width:160px;max-width:420px;padding:0 14px;height:20px;border:1px solid rgba(201,168,76,0.38);border-radius:3px;background:rgba(201,168,76,0.04);overflow:visible;pointer-events:none;transition:opacity 0.25s;position:relative;margin-bottom:1px;animation:navSignPulse 4s ease-in-out infinite;white-space:nowrap;">
+    <span id="nav-sign" onclick="document.getElementById('thoughts').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;display:inline-flex;align-items:center;justify-content:center;min-width:160px;max-width:420px;padding:0 14px;height:20px;border:1px solid rgba(201,168,76,0.38);border-radius:3px;background:rgba(201,168,76,0.04);overflow:visible;pointer-events:all;transition:opacity 0.25s;position:relative;margin-bottom:1px;animation:navSignPulse 4s ease-in-out infinite;white-space:nowrap;">
       <!-- Ghost sizer — invisible, drives container width to longest string -->
-      <span style="visibility:hidden;font-size:10px;letter-spacing:0.22em;font-family:'Courier New',monospace;white-space:nowrap;pointer-events:none;">CLARITY IN PROGRESS</span>
-      <span style="position:absolute;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame1 4s ease-in-out infinite;">CLARITY IN PROGRESS</span>
-      <span style="position:absolute;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame2 4s ease-in-out infinite;">ADD YOUR VOICE</span>
+      <span style="visibility:hidden;font-size:10px;letter-spacing:0.22em;font-family:'Courier New',monospace;white-space:nowrap;pointer-events:none;">START ANYWHERE · GO ANYWHERE</span>
+      <span style="position:absolute;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame1 4s ease-in-out infinite;">START ANYWHERE · GO ANYWHERE</span>
+      <span style="position:absolute;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame2 4s ease-in-out infinite;">ADD YOUR VOICE ↓</span>
     </span>
     <span id="hero-date" style="font-size:7px;letter-spacing:0.14em;color:rgba(201,168,76,0.28);font-family:'Courier New',monospace;white-space:nowrap;"></span>
   </div>
   <!-- Contact toggle -->
-  <div style="display:flex;align-items:center;gap:8px;overflow:hidden;margin-bottom:8px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
     <!-- Button -->
-    <button id="nav-contact-btn" onclick="openNavForm()"
+    <button id="nav-contact-btn" onclick="document.getElementById('thoughts').scrollIntoView({behavior:'smooth'})"
       style="font-size:11px;letter-spacing:0.04em;background:transparent;border:1px solid rgba(122,96,48,0.45);padding:5px 14px;border-radius:16px;cursor:pointer;font-family:'Courier New',monospace;white-space:nowrap;transition:all 0.25s;"
       onmouseover="this.style.borderColor='#c9a84c'"
       onmouseout="this.style.borderColor='rgba(122,96,48,0.45)'">
       <span style="color:#8aa0b8;letter-spacing:0.06em;">Contact </span><span style="color:#c9a84c;font-weight:700;letter-spacing:0.18em;">US</span><span style="color:#8aa0b8;letter-spacing:0.1em;">Now</span>
     </button>
-    <!-- Fields (hidden by default) -->
-    <div id="nav-form-wrap" style="display:none;align-items:center;gap:7px;animation:fadeIn 0.25s ease;">
-      <input id="nav-email" type="email" placeholder="email (optional)"
-        style="background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:4px 7px;font-size:10px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:122px;border-radius:3px 3px 0 0;"
-        onfocus="this.style.borderBottomColor='rgba(201,168,76,0.6)'"
-        onblur="this.style.borderBottomColor='rgba(122,96,48,0.3)'"/>
-      <input id="nav-note" type="text" placeholder="your thought..."
-        style="background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(122,96,48,0.3);padding:4px 7px;font-size:10px;color:#8aa0b8;font-family:'Courier New',monospace;outline:none;width:160px;border-radius:3px 3px 0 0;"
-        onfocus="this.style.borderBottomColor='rgba(201,168,76,0.6)'"
-        onblur="this.style.borderBottomColor='rgba(122,96,48,0.3)'"/>
-      <button onclick="submitNavThought()"
-        style="font-size:8px;letter-spacing:0.22em;color:#c9a84c;background:transparent;border:1px solid rgba(122,96,48,0.4);padding:4px 11px;border-radius:12px;cursor:pointer;font-family:'Courier New',monospace;white-space:nowrap;"
-        onmouseover="this.style.borderColor='#c9a84c'"
-        onmouseout="this.style.borderColor='rgba(122,96,48,0.4)'">SEND →</button>
-    </div>
+    
   </div>
 
 </nav>
@@ -266,10 +252,10 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div class="hero-eyebrow">WHAT IS US · NOW</div>
     <h1 class="hero-h1">The <em>US</em> in USNow<br>is not one thing.</h1>
     <div class="hero-items">
-      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  in our country</strong> — in the U.S. it's WE the People, our history, our government, the American dream - and the reality - along with our mutual obligations with the rest of the world.</p></div>
-      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  in our groups</strong> — our state, our party, religion or sport team - the groups we are in or those we join - how they can bring us together and how they divide and separate us as well.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US in our country — your country</strong> — in the U.S. it's WE the People, our history, our government, the American dream - and the reality - along with our mutual obligations with the rest of the world.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  in our groups</strong> — our state, party, religion or sports team - the groups we are in or those we join - how they can bring us together and how they divide and separate us as well.</p></div>
       <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  in our relationships</strong> — the most natural bond - our family, our parents, our children and siblings - and those we choose or unchoose to be closest to us - spouse, friends, partners.</p></div>
-      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  within ourselves</strong> — the innermost us. The me and the I. Our inner voice and the one who heeds it. The us that ultimately determienes what we say and do and why.</p></div>
+      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  within ourselves</strong> — the innermost us. The me and the I. Our inner voice and the one who heeds it. The us that ultimately determines what we say and do and why.</p></div>
     </div>
     <div class="hero-btns">
       <a href="#scale" class="btn-gold">EXPLORE THE SCALE ↑</a>
@@ -335,7 +321,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div style="position:absolute;left:-20px;top:6px;width:2px;height:calc(100% - 12px);background:linear-gradient(180deg,rgba(201,168,76,0.5),rgba(201,168,76,0.08));border-radius:2px;"></div>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      You are living inside more information than any human being in history has ever had to process. News, politics, history, science, war, money, culture — all of it arriving simultaneously, all of it demanding a reaction. Most of it is designed to make you <em>feel</em> something specific before you've had a chance to <em>think</em> about anything.
+      You are living inside more information than any human being in history has ever had to process. News, politics, history, science, war, money, culture — all of it arriving simultaneously, all of it demanding a reaction. Much of it is designed to make you <em>feel something</em>, even before you had time to <em>process anything</em>.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
@@ -351,7 +337,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0;">
-      Leave a note, a comment, or a suggested topic. We're just getting started and everything is always changing.
+      You're Early. This is just getting started and everything is always changing. Some sections have not been completed yet — but check back soon and share with others. Feel free to leave a note, your thoughts, or any proposed content additions or changes.
     </p>
 
   </div>
@@ -805,34 +791,7 @@ function submitThought(){
   const c=document.getElementById('t-confirm');c.style.opacity='1';setTimeout(()=>c.style.opacity='0',3000);
 }
 
-function openNavForm(){
-  document.getElementById('nav-contact-btn').style.display='none';
-  document.getElementById('nav-sign').style.opacity='0';
-  document.getElementById('nav-sign').style.pointerEvents='none';
-  const wrap=document.getElementById('nav-form-wrap');
-  wrap.style.display='flex';
-  setTimeout(()=>document.getElementById('nav-note').focus(),50);
-}
 
-function submitNavThought(){
-  const note=document.getElementById('nav-note').value.trim();
-  if(!note){document.getElementById('nav-note').style.borderBottomColor='rgba(212,98,26,0.7)';document.getElementById('nav-note').focus();return;}
-  const ENDPOINT='https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
-  fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('nav-email').value||'anonymous',topic:note,why:'',sources:'',submitted:new Date().toISOString()})});
-  document.getElementById('nav-email').value='';
-  document.getElementById('nav-note').value='';
-  // Hide fields, show popup
-  document.getElementById('nav-form-wrap').style.display='none';
-  const popup=document.getElementById('nav-confirm');
-  popup.style.display='block';
-  setTimeout(()=>{
-    popup.style.display='none';
-    // Restore sign and button
-    const sign=document.getElementById('nav-sign');
-    sign.style.opacity='1';
-    document.getElementById('nav-contact-btn').style.display='';
-  },3500);
-}
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape')cardNavBack();});
 const _days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const _months=['January','February','March','April','May','June','July','August','September','October','November','December'];const _now=new Date();document.getElementById('hero-date').textContent=`${_days[_now.getDay()].toUpperCase()} · ${_months[_now.getMonth()].toUpperCase()} ${_now.getDate()}, ${_now.getFullYear()}`;
