@@ -245,7 +245,56 @@ const LAYERS = [
         "orbs": []
       }
     ],
-    "bottomPills": [],
+    "bottomPills": [
+      {
+        "id": "fam_tp5",
+        "label": "The Wound & The Wonder",
+        "desc": "",
+        "links": [],
+        "topPills": [],
+        "bottomPills": []
+      },
+      {
+        "id": "c_rel",
+        "label": "Relationships",
+        "desc": "",
+        "links": [],
+        "topPills": [],
+        "bottomPills": []
+      },
+      {
+        "id": "e2_psych",
+        "label": "Psychology",
+        "desc": "",
+        "links": [],
+        "topPills": [],
+        "bottomPills": []
+      },
+      {
+        "id": "x4",
+        "label": "The Occult",
+        "desc": "",
+        "links": [],
+        "topPills": [],
+        "bottomPills": []
+      },
+      {
+        "id": "com_tp2",
+        "label": "Belonging",
+        "desc": "",
+        "links": [],
+        "topPills": [],
+        "bottomPills": []
+      },
+      {
+        "id": "com_tp5",
+        "label": "The Algorithm",
+        "desc": "",
+        "links": [],
+        "topPills": [],
+        "bottomPills": []
+      }
+    ],
     "inProgress": true
   },
   {
@@ -355,7 +404,40 @@ const LAYERS = [
         "desc": "Before you were anything else, you were a set of instructions. Four letters, three billion combinations, and a blueprint nobody asked to read before it was already running. The code is not the destiny — but it shapes the playing field before you take a single step.",
         "links": [],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "c3d1",
+            "label": "Medicine",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "e2_biology",
+            "label": "Biology",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f1d1",
+            "label": "Lineage & DNA",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c3d3",
+            "label": "Aging",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -396,11 +478,77 @@ const LAYERS = [
                 "desc": "Before memory, before story — the biological inheritance. The code passed forward without consent, carrying predispositions, vulnerabilities, and gifts across generations. Your ancestry is both a map and a mystery.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_gen",
+                    "label": "Genetics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "fam_tp3",
+                    "label": "Deep Roots",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "fam_tp2",
+                    "label": "Diaspora",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               }
             ],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "fam_tp5",
+                "label": "The Wound & The Wonder",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "s3",
+                "label": "Emotions",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "s1",
+                "label": "Identity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c3d2",
+                "label": "Mental Health",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -432,30 +580,42 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
-              },
-              {
-                "id": "f3d2",
-                "label": "Religion",
-                "color": "#60a0d8",
-                "desc": "The organized human attempt to answer the unanswerable — and to build community around the answering. At its best: a technology for meaning, solidarity, and moral formation. At its worst: a technology for control, exclusion, and the management of fear. Usually both simultaneously.",
-                "links": [
-                  {
-                    "label": "Pew Research: Religion",
-                    "url": "https://www.pewresearch.org/religion/",
-                    "emoji": "📊"
-                  },
-                  {
-                    "label": "On Being",
-                    "url": "https://onbeing.org",
-                    "emoji": "🕊️"
-                  }
-                ],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
               }
             ],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "fam_tp5",
+                "label": "The Wound & The Wonder",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_class",
+                "label": "Class",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p2",
+                "label": "Economy & Money",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x5",
+                "label": "Religion",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -486,7 +646,48 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "f_class",
+                "label": "Class",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race &\nEthnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p2_american_dream",
+                "label": "The American Dream",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "edu_tp4",
+                "label": "Misinformation",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -522,11 +723,85 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "fam_tp2",
+                "label": "Diaspora",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h1_empires",
+                "label": "The Age of Empires",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race &\nEthnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           }
         ],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "f_class",
+            "label": "Class",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_rc",
+            "label": "Race &\nEthnicity",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "fam_tp4",
+            "label": "Ritual & Tradition",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c_rel",
+            "label": "Relationships",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f4d1",
+            "label": "Families in the U.S.",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -565,7 +840,48 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "f_rc",
+            "label": "Race &\nEthnicity",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p2",
+            "label": "Economy & Money",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p2_american_dream",
+            "label": "The American Dream",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "edu_tp3",
+            "label": "The Press to the Feed",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -616,7 +932,40 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "f_class",
+                "label": "Class",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race &\nEthnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "com_tp3",
+                "label": "The Commons",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c_env_climate",
+                "label": "Climate",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -646,7 +995,48 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "f_class",
+            "label": "Class",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "h1_empires",
+            "label": "The Age of Empires",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "h3_genocide",
+            "label": "Genocide",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_rc_d2",
+            "label": "Rights & Responsibilities",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       }
@@ -705,7 +1095,48 @@ const LAYERS = [
         "desc": "The original infrastructure. Before governments, before markets, before the internet — there were people who needed each other. How we attach, how we repair, how we lose each other and what we do next. Everything else in the scale is downstream of this.",
         "links": [],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "s3",
+            "label": "Emotions",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "fam_tp5",
+            "label": "The Wound & The Wonder",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c_env",
+            "label": "Environment",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp2",
+            "label": "Belonging",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp1",
+            "label": "The Village",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -1546,7 +1977,48 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "c_env_climate",
+            "label": "Climate",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p2",
+            "label": "Economy & Money",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "e2_earth",
+            "label": "Earth Science",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "e2_environ",
+            "label": "Environmental Science",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": []
       },
       {
@@ -1584,7 +2056,48 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "com_tp5",
+            "label": "The Algorithm",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "e1_internet",
+            "label": "The Internet",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "e1_surveillance",
+            "label": "Surveillance Capitalism",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c7_algo_editor",
+            "label": "The Algorithm as Editor",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "edu_tp4",
+            "label": "Misinformation",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -1598,7 +2111,48 @@ const LAYERS = [
         "desc": "The great pacifier and the great mirror. What a culture entertains itself with reveals what it actually values — not what it claims to value at the podium. The size of the industry is the size of the need it fills.",
         "links": [],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "p2",
+            "label": "Economy & Money",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_corp",
+            "label": "Corporations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp1",
+            "label": "The Village",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp4",
+            "label": "Culture Wars",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_rc",
+            "label": "Race &\nEthnicity",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       }
@@ -1620,6 +2174,30 @@ const LAYERS = [
             "topPills": [],
             "bottomPills": [],
             "orbs": []
+          },
+          {
+            "id": "com_tp2",
+            "label": "Belonging",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c2",
+            "label": "Social Media",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "fam_tp4",
+            "label": "Ritual & Tradition",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
           }
         ],
         "orbs": []
@@ -1637,7 +2215,40 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "com_tp1",
+            "label": "The Village",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "s1",
+            "label": "Identity",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "fam_tp4",
+            "label": "Ritual & Tradition",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp4",
+            "label": "Culture Wars",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": []
       },
       {
@@ -1653,7 +2264,40 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_corp",
+            "label": "Corporations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_rc_d1",
+            "label": "Place",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c_env",
+            "label": "Environment",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": []
       },
       {
@@ -1669,7 +2313,48 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "pol_tp4",
+            "label": "The Fourth Estate",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p5",
+            "label": "Media",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp5",
+            "label": "The Algorithm",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "edu_tp4",
+            "label": "Misinformation",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_rc",
+            "label": "Race &\nEthnicity",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": []
       },
       {
@@ -1699,6 +2384,38 @@ const LAYERS = [
             "topPills": [],
             "bottomPills": [],
             "orbs": []
+          },
+          {
+            "id": "e1_surveillance",
+            "label": "Surveillance Capitalism",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c7_algo_editor",
+            "label": "The Algorithm as Editor",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p5",
+            "label": "Media",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "edu_tp4",
+            "label": "Misinformation",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
           }
         ],
         "orbs": []
@@ -1801,7 +2518,40 @@ const LAYERS = [
                 "desc": "Before writing there was the spoken word, memorized and transmitted with extraordinary precision. The Homeric epics were oral compositions for centuries before anyone wrote them down. The Vedas were preserved in oral tradition for millennia with an accuracy that rivals written transmission. Oral cultures developed memory techniques — rhythm, repetition, narrative — that writing made unnecessary and that we have largely forgotten.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "fam_tp4",
+                    "label": "Ritual & Tradition",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "fam_tp1",
+                    "label": "The Archive",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h2",
+                    "label": "Language",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -1811,7 +2561,40 @@ const LAYERS = [
                 "desc": "The Phoenician alphabet — 22 consonants, no vowels — was the ancestor of Greek, Latin, Arabic, Hebrew, and most of the writing systems used today. Its genius was simplicity: instead of thousands of pictographs, just a few dozen symbols that could represent any sound in any language. The alphabet democratized literacy. You could learn it in weeks, not years. That was a political revolution dressed as a technology.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h2",
+                    "label": "Language",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e1_writing",
+                    "label": "The History of Writing",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x1_egyptian",
+                    "label": "Egyptian & Mesopotamian",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e1_print",
+                    "label": "The Printing Press",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -1821,7 +2604,48 @@ const LAYERS = [
                 "desc": "Gutenberg's movable type press, circa 1440, did not just make books cheaper. It broke the church's monopoly on the written word, made the Reformation possible, accelerated the Scientific Revolution, and eventually produced the newspaper, the pamphlet, the novel, and the concept of public opinion. Every subsequent information revolution — telegraph, radio, television, internet — is the printing press running faster.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e1_alphabet",
+                    "label": "The Alphabet",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_scirev",
+                    "label": "The Scientific Revolution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p5_history",
+                    "label": "History of Media & Journalism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "pol_tp4",
+                    "label": "The Fourth Estate",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               }
             ],
@@ -1829,6 +2653,30 @@ const LAYERS = [
               {
                 "id": "h2",
                 "label": "Language",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x3_histtime",
+                "label": "History of Time",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h1_emp_iberian",
+                "label": "Portugal & Spain",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "e1_alphabet",
+                "label": "The Alphabet",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -1855,7 +2703,40 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "com_tp3",
+                "label": "The Commons",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "e1_internet",
+                "label": "The Internet",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "edu_tp4",
+                "label": "Misinformation",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -2396,14 +3277,78 @@ const LAYERS = [
                 ],
                 "bottomPills": [],
                 "orbs": []
+              },
+              {
+                "id": "e1_library",
+                "label": "The Library",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5",
+                "label": "Media",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "edu_tp4",
+                "label": "Misinformation",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "com_tp3",
+                "label": "The Commons",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
               }
             ],
-            "orbs": []
-          ,
+            "orbs": [],
             "inProgress": true
           }
         ],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "p5",
+            "label": "Media",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "edu_tp4",
+            "label": "Misinformation",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp3",
+            "label": "The Commons",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "color": "#3858a8",
         "x": 8,
@@ -2432,7 +3377,40 @@ const LAYERS = [
             "color": "#3858a8",
             "desc": "The language of the universe — or the most useful fiction humans ever invented, depending on who you ask. Mathematics is the only discipline where a proof established 2,000 years ago is still completely valid today. It underlies every other science, every technology, every encrypted message, and every financial transaction on earth.",
             "links": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "e2_physics",
+                "label": "Physics",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x3_quantum",
+                "label": "Relative & Quantum Time",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "e2_method",
+                "label": "The Scientific Method",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "e2_econ",
+                "label": "Economics",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "topPills": [
               {
                 "id": "e2_math_arith",
@@ -2501,6 +3479,22 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "e2_math",
+                    "label": "Mathematics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_scirev",
+                    "label": "The Scientific Revolution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
                   }
                 ],
                 "orbs": []
@@ -2512,7 +3506,32 @@ const LAYERS = [
                 "desc": "The science of matter — what things are made of, how they combine, and what happens when they react. Chemistry is the bridge between physics and biology, between the atomic and the alive. It gave us pharmaceuticals, plastics, fertilizers, and explosives.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d1",
+                    "label": "Medicine",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_climate",
+                    "label": "Climate",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_physics",
+                    "label": "Physics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -2522,7 +3541,32 @@ const LAYERS = [
                 "desc": "The study of living things — how they are built, how they function, how they reproduce, how they evolve. Biology encompasses everything from the molecular machinery of the cell to the ecology of the entire planet. Darwin's theory of evolution by natural selection is its organizing principle.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_gen",
+                    "label": "Genetics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env",
+                    "label": "Environment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_darwin",
+                    "label": "Darwin & Evolution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -2532,7 +3576,32 @@ const LAYERS = [
                 "desc": "The study of the planet itself — geology, meteorology, oceanography, climatology. Earth science tells us how old the planet is, how its continents move, how its climate has changed, and what humans are doing to it now.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c_env",
+                    "label": "Environment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_climate",
+                    "label": "Climate",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_environ",
+                    "label": "Environmental Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -2551,6 +3620,22 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "x3_histtime",
+                    "label": "History of Time",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x3_quantum",
+                    "label": "Relative & Quantum Time",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
                   }
                 ],
                 "orbs": []
@@ -2562,7 +3647,32 @@ const LAYERS = [
                 "desc": "The interdisciplinary study of the natural world and human impact on it. Environmental science draws on biology, chemistry, geology, and economics to understand climate change, pollution, biodiversity loss, and the sustainability of human civilization.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c_env",
+                    "label": "Environment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_climate",
+                    "label": "Climate",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_earth",
+                    "label": "Earth Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               }
             ],
@@ -2583,7 +3693,48 @@ const LAYERS = [
                 "desc": "The study of the mind and behavior — how humans think, feel, perceive, learn, and act. Psychology sits at the intersection of biology and culture, the individual and the social. Its findings are frequently misapplied, occasionally revolutionary, and always contested.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "s3",
+                    "label": "Emotions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "s5",
+                    "label": "Perception",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c3d2",
+                    "label": "Mental Health",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "com_tp4",
+                    "label": "Culture Wars",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "edu_tp4",
+                    "label": "Misinformation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -2593,7 +3744,40 @@ const LAYERS = [
                 "desc": "The study of human society — how groups form, how institutions function, how inequality persists, how culture changes. Sociology asks why the world is organized the way it is and in whose interest that organization serves.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_class",
+                    "label": "Class",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "f_rc",
+                    "label": "Race &\nEthnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "com_tp4",
+                    "label": "Culture Wars",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -2603,7 +3787,40 @@ const LAYERS = [
                 "desc": "The broadest of the social sciences — the study of humanity across time and culture. Cultural anthropology examines how different societies live. Physical anthropology traces human evolution. Archaeology recovers the past from what was left behind.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "fam_tp4",
+                    "label": "Ritual & Tradition",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h1_empires",
+                    "label": "The Age of Empires",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_biology",
+                    "label": "Biology",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -2744,7 +3961,32 @@ const LAYERS = [
                 "desc": "When overwhelming evidence from multiple independent lines of inquiry converges on the same conclusion, that is scientific consensus. It is not unanimity — scientists disagree constantly. It is the weight of evidence. Climate change, evolution, vaccine safety, and the age of the universe are consensus. Treating them as matters of opinion is not skepticism — it is denial.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "edu_tp4",
+                    "label": "Misinformation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env_climate",
+                    "label": "Climate",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "e2_darwin",
+                    "label": "Darwin & Evolution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               }
             ],
@@ -2765,7 +4007,32 @@ const LAYERS = [
                 "desc": "The 16th and 17th century transformation in which Europe stopped deferring to ancient authority and began testing the world directly. Copernicus displaced the earth from the center of the universe. Galileo pointed a telescope at the sky. Newton unified terrestrial and celestial mechanics with mathematics. Nothing was the same after.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e2_enlighten",
+                    "label": "The Enlightenment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -2784,6 +4051,22 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "e2_scirev",
+                    "label": "The Scientific Revolution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "pol_tp1",
+                    "label": "Power",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
                   }
                 ],
                 "orbs": []
@@ -2841,6 +4124,46 @@ const LAYERS = [
             "topPills": [],
             "bottomPills": [],
             "orbs": []
+          },
+          {
+            "id": "e2_method",
+            "label": "The Scientific Method",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "e2_histsci",
+            "label": "History of Science",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "x5",
+            "label": "Religion",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "edu_tp4",
+            "label": "Misinformation",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
           }
         ],
         "orbs": []
@@ -2951,8 +4274,7 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
-      ,
+        "orbs": [],
         "inProgress": true
       },
       {
@@ -4334,7 +5656,48 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "pol_tp5",
+            "label": "The Ballot",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_corp",
+            "label": "Corporations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_mil",
+            "label": "Military",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_class",
+            "label": "Class",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "pol_tp4",
+            "label": "The Fourth Estate",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": []
       },
       {
@@ -4354,11 +5717,85 @@ const LAYERS = [
             "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
             "links": [],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "pol_tp5",
+                "label": "The Ballot",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p4",
+                "label": "Global Capital",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p5_hist_watergate",
+                "label": "Watergate & The Press",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           }
         ],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "p4",
+            "label": "Global Capital",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p2",
+            "label": "Economy & Money",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_mil",
+            "label": "Military",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p5_land_ownership",
+            "label": "Who Owns What",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -5016,6 +6453,30 @@ const LAYERS = [
             "links": [],
             "topPills": [],
             "bottomPills": []
+          },
+          {
+            "id": "p_corp",
+            "label": "Corporations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "edu_tp4",
+            "label": "Misinformation",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "com_tp5",
+            "label": "The Algorithm",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
           }
         ]
       },
@@ -5080,11 +6541,85 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "h3_genocide",
+                "label": "Genocide",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3",
+                "label": "War & Revolutions",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race &\nEthnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           }
         ],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "p_corp",
+            "label": "Corporations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p2",
+            "label": "Economy & Money",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "h3",
+            "label": "War & Revolutions",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "c7_controlled",
+            "label": "Controlled Release",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -5132,7 +6667,48 @@ const LAYERS = [
               }
             ],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "p_corp",
+                "label": "Corporations",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_mil",
+                "label": "Military",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h1_empires",
+                "label": "The Age of Empires",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p2",
+                "label": "Economy & Money",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -5142,7 +6718,48 @@ const LAYERS = [
             "desc": "The extraction of value from labor, land, or people at a price that only one party agreed to. The engine beneath most of the wealth in this layer.",
             "links": [],
             "topPills": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "f_class",
+                "label": "Class",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race &\nEthnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h1_empires",
+                "label": "The Age of Empires",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p4",
+                "label": "Global Capital",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p_mil",
+                "label": "Military",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -5175,9 +6792,49 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "bottomPills": [],
-        "orbs": []
-      ,
+        "bottomPills": [
+          {
+            "id": "p_corp",
+            "label": "Corporations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p4",
+            "label": "Global Capital",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_class",
+            "label": "Class",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p2_american_dream",
+            "label": "The American Dream",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
+        "orbs": [],
         "inProgress": true
       }
     ],
@@ -6400,7 +8057,40 @@ const LAYERS = [
                 "desc": "The first. The Treaty of Tordesillas in 1494 divided the entire undiscovered world between two countries by papal decree — a line drawn down the Atlantic, everything west to Spain, everything east to Portugal. Neither country had seen most of what it was claiming. The Columbian Exchange that followed was the greatest biological disruption in human history: foods, diseases, plants, animals moving between hemispheres that had been separated for 10,000 years. Smallpox killed an estimated 90% of the indigenous population of the Americas within a century of contact. The gold and silver extracted funded the first global economy and inflated Europe's money supply into crisis.",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "x1_creation",
+                    "label": "Creation Myths",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "f_rc",
+                    "label": "Race &\nEthnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p2_exp",
+                    "label": "Exploitation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "c_env",
+                    "label": "Environment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -6416,7 +8106,40 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_rc",
+                    "label": "Race &\nEthnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p2_exp",
+                    "label": "Exploitation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p4",
+                    "label": "Global Capital",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -6435,6 +8158,22 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "f_rc",
+                    "label": "Race &\nEthnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p2_exp",
+                    "label": "Exploitation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
                   }
                 ],
                 "orbs": []
@@ -6452,7 +8191,32 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p2_exp",
+                    "label": "Exploitation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -6488,11 +8252,77 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "f_rc",
+                    "label": "Race &\nEthnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p4",
+                    "label": "Global Capital",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
                 "orbs": []
               }
             ],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "h3",
+                "label": "War & Revolutions",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race &\nEthnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p4",
+                "label": "Global Capital",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p2_exp",
+                "label": "Exploitation",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x5",
+                "label": "Religion",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "orbs": []
           },
           {
@@ -6723,14 +8553,14 @@ const LAYERS = [
                 "label": "Hannah Arendt — The Origins of Totalitarianism",
                 "url": "https://www.jstor.org",
                 "emoji": "📚"
-              }
-            ,
+              },
               {
                 "label": "Who Rules the World — The Architecture of Power",
                 "url": "https://usnow.app/graphics/who-rules-the-world",
                 "emoji": "📊",
                 "tag": "GRAPHIC"
-              }],
+              }
+            ],
             "topPills": [
               {
                 "id": "h1_meg_pattern",
@@ -6780,9 +8610,33 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                      { "id": "glories_checksbalances", "label": "Checks & Balances", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                      {
+                        "id": "glories_checksbalances",
+                        "label": "Checks & Balances",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h6",
+                        "label": "Law",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -6801,9 +8655,33 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                      { "id": "p_gov_author", "label": "Authoritarianism", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "hist_tp1", "label": "The Pattern", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "p5", "label": "Media", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                      {
+                        "id": "p_gov_author",
+                        "label": "Authoritarianism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "hist_tp1",
+                        "label": "The Pattern",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p5",
+                        "label": "Media",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -6822,9 +8700,33 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                      { "id": "h1_empires", "label": "The Age of Empires", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "h1_ancient", "label": "The Ancient World", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                      {
+                        "id": "h1_empires",
+                        "label": "The Age of Empires",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_ancient",
+                        "label": "The Ancient World",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "occ_ss_elite",
+                        "label": "Elite Networks",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -6843,9 +8745,33 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                      { "id": "p_corp", "label": "Corporations", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
-                      { "id": "c7", "label": "Tools, Tech & AI", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                      {
+                        "id": "p_corp",
+                        "label": "Corporations",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p2",
+                        "label": "Economy & Money",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c7",
+                        "label": "Tools, Tech & AI",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   }
@@ -7066,8 +8992,7 @@ const LAYERS = [
         "color": "#7858a0",
         "x": 88,
         "y": 54,
-        "size": 46
-      ,
+        "size": 46,
         "inProgress": true
       }
     ],
@@ -8464,41 +10389,225 @@ const LAYERS = [
             "desc": "Divination is the organized attempt to extract information from sources that are not supposed to have it. The randomness is the point. By removing human intention from the signal — a thrown coin, a drawn card, the flight path of a bird — the practitioner creates a channel the rational mind cannot contaminate. Whether that channel connects to anything is a metaphysical question. What it does for the person asking is not. Divination systems have been the interface layer between human anxiety and the unknown in every civilization on record. The specific systems change. The need they serve doesn't.",
             "links": [],
             "topPills": [
-          {
-            "id": "x3_astro",
-            "label": "Astrology",
-            "color": "#7a6a9a",
-            "desc": "The oldest observatory was the open sky. Every civilization that has ever existed looked up and found meaning in what it saw. Not one astrology — many. The Babylonians built the zodiac we still use. The Chinese developed a parallel system based on a sixty-year cycle and five classical planets. The Vedic tradition of India — Jyotisha — predates Greek influence and remains a living practice for hundreds of millions today. The Maya built the most accurate calendar in the ancient world and tracked Venus with a precision that rivals modern instruments. These are not variations on a single theme. They are independent answers to the same human question: if the sky moves in patterns, and we move in patterns, is there a relationship? The question is older than writing. The answers are as varied as the civilizations that asked it. Astrology is where humanity first decided the universe was paying attention. Whether or not it is, the asking changed everything.",
-            "links": [
               {
-                "label": "Aeon — history of astrology",
-                "url": "https://aeon.co",
-                "emoji": "💭"
-              },
-              {
-                "label": "NASA Astronomy Picture of the Day",
-                "url": "https://apod.nasa.gov",
-                "emoji": "🔭"
-              }
-            ],
-            "topPills": [
-              {
-                "id": "x3_astro_babylon",
-                "label": "Babylonian & Western",
-                "color": "#9a7a60",
-                "desc": "The Babylonians of Mesopotamia developed the zodiac between 700 and 400 BCE — twelve constellations along the ecliptic, each governing a segment of the year. They tracked five planets visible to the naked eye and correlated celestial events with earthly ones across centuries of careful records. When Greek astronomers encountered that data, they had a foundation to theorize from. The fusion of Babylonian observation with Greek philosophical framework produced the astrological system that passed through Rome, through the Islamic Golden Age where it was preserved and refined, into medieval Europe where it was taught in universities alongside medicine and mathematics, and eventually into the horoscope column — a lineage of 2,500 years from clay tablet to newspaper.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
+                "id": "x3_astro",
+                "label": "Astrology",
+                "color": "#7a6a9a",
+                "desc": "The oldest observatory was the open sky. Every civilization that has ever existed looked up and found meaning in what it saw. Not one astrology — many. The Babylonians built the zodiac we still use. The Chinese developed a parallel system based on a sixty-year cycle and five classical planets. The Vedic tradition of India — Jyotisha — predates Greek influence and remains a living practice for hundreds of millions today. The Maya built the most accurate calendar in the ancient world and tracked Venus with a precision that rivals modern instruments. These are not variations on a single theme. They are independent answers to the same human question: if the sky moves in patterns, and we move in patterns, is there a relationship? The question is older than writing. The answers are as varied as the civilizations that asked it. Astrology is where humanity first decided the universe was paying attention. Whether or not it is, the asking changed everything.",
+                "links": [
                   {
-                    "id": "x1_egyptian",
-                    "label": "Egyptian & Mesopotamian",
-                    "desc": "",
+                    "label": "Aeon — history of astrology",
+                    "url": "https://aeon.co",
+                    "emoji": "💭"
+                  },
+                  {
+                    "label": "NASA Astronomy Picture of the Day",
+                    "url": "https://apod.nasa.gov",
+                    "emoji": "🔭"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "x3_astro_babylon",
+                    "label": "Babylonian & Western",
+                    "color": "#9a7a60",
+                    "desc": "The Babylonians of Mesopotamia developed the zodiac between 700 and 400 BCE — twelve constellations along the ecliptic, each governing a segment of the year. They tracked five planets visible to the naked eye and correlated celestial events with earthly ones across centuries of careful records. When Greek astronomers encountered that data, they had a foundation to theorize from. The fusion of Babylonian observation with Greek philosophical framework produced the astrological system that passed through Rome, through the Islamic Golden Age where it was preserved and refined, into medieval Europe where it was taught in universities alongside medicine and mathematics, and eventually into the horoscope column — a lineage of 2,500 years from clay tablet to newspaper.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x1_egyptian",
+                        "label": "Egyptian & Mesopotamian",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_astron",
+                        "label": "Astronomy",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "occ_secret_societies",
+                        "label": "Secret Societies",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_megalomania",
+                        "label": "Megalomania & the Crown",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "glories_deepstate",
+                        "label": "The Deep State",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "glories_checksbalances",
+                        "label": "Checks & Balances",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "orb_corruption",
+                        "label": "Corruption Tracker",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
+                  {
+                    "id": "x3_astro_vedic",
+                    "label": "Vedic / Jyotisha",
+                    "color": "#c07840",
+                    "desc": "Jyotisha — the eye of the Vedas — is one of the six auxiliary disciplines of the Vedic tradition, dating to at least 1500 BCE and possibly much earlier. It uses a sidereal zodiac aligned to actual constellation positions rather than the seasons, and a different house system than Western astrology. Where Western astrology became increasingly psychological in the 20th century, Vedic astrology remained integrated with medicine, architecture, agriculture, and the timing of major life decisions. It is not a relic. Hundreds of millions of people in South Asia consult Jyotish practitioners for births, marriages, and business matters today. It is one of the oldest continuously practiced analytical systems on earth.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_hinduism",
+                        "label": "Hinduism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5_dharmic",
+                        "label": "Dharmic Religions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x3_astro_chinese",
+                    "label": "Chinese Astrology",
+                    "color": "#c04040",
+                    "desc": "The Chinese astrological system is built around a sixty-year cycle — the product of twelve animal signs and five elements — and has been integrated into Chinese governance, medicine, architecture, and daily life for at least 3,000 years. The system tracks Jupiter's twelve-year orbit as its primary clock and organizes time into recursive cycles within cycles. Unlike Western astrology's focus on the solar year and individual birth, Chinese astrology emphasizes collective time — the character of a year, a decade, an era. It is embedded in traditional Chinese medicine, feng shui, the timing of the Lunar New Year, and decisions made daily by hundreds of millions of people.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_taoism",
+                        "label": "Taoism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5_confucianism",
+                        "label": "Confucianism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x3_astro_maya",
+                    "label": "Maya & Mesoamerican",
+                    "color": "#3a8a50",
+                    "desc": "The Maya built two interlocking calendars — the 260-day Tzolkin and the 365-day Haab — whose 52-year Calendar Round governed ceremony, agriculture, war, and royal succession. They also maintained the Long Count, a linear calendar tracking time from a fixed mythological origin — the same impulse that gave us BC and AD. Their tracking of Venus was so precise that their tables predict Venus's appearances to within a day over centuries. Venus was not just a planet to the Maya — it was a war star, whose appearance governed the timing of military campaigns. These were not primitive sky-watchers. They were astronomers who embedded their science in mythology because for them the distinction did not exist.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_meso_rel",
+                        "label": "Mesoamerican",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x1_creation",
+                        "label": "Creation Myths",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x3_astro_egyptian",
+                    "label": "Egyptian & Hellenistic",
+                    "color": "#c8a030",
+                    "desc": "Egypt contributed the decans — 36 star groups dividing the sky into ten-day periods — and the practice of orienting sacred architecture to celestial alignments. The Dendera zodiac ceiling is the oldest complete horoscope chart known. When Alexander conquered Egypt and Greek culture fused with Egyptian sky religion and Babylonian star-lore in Alexandria, the result was Hellenistic astrology — the most sophisticated synthesis the ancient world produced. It gave us the horoscope as a birth chart, the four elements as astrological qualities, and the philosophical framework within which Ptolemy, Copernicus, Kepler, and Galileo all worked before the scientific revolution finally drew the line between astronomy and astrology. For most of human history that line did not exist.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "x5_egyptian_rel",
+                        "label": "Egyptian",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_scirev",
+                        "label": "The Scientific Revolution",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
                   {
                     "id": "e2_astron",
                     "label": "Astronomy",
@@ -8507,36 +10616,10 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
-                  }
-                ,
-              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1_megalomania", "label": "Megalomania & the Crown", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "glories_deepstate", "label": "The Deep State", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "glories_checksbalances", "label": "Checks & Balances", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
-                "orbs": []
-              },
-              {
-                "id": "x3_astro_vedic",
-                "label": "Vedic / Jyotisha",
-                "color": "#c07840",
-                "desc": "Jyotisha — the eye of the Vedas — is one of the six auxiliary disciplines of the Vedic tradition, dating to at least 1500 BCE and possibly much earlier. It uses a sidereal zodiac aligned to actual constellation positions rather than the seasons, and a different house system than Western astrology. Where Western astrology became increasingly psychological in the 20th century, Vedic astrology remained integrated with medicine, architecture, agriculture, and the timing of major life decisions. It is not a relic. Hundreds of millions of people in South Asia consult Jyotish practitioners for births, marriages, and business matters today. It is one of the oldest continuously practiced analytical systems on earth.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "x5_hinduism",
-                    "label": "Hinduism",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
                   },
                   {
-                    "id": "x5_dharmic",
-                    "label": "Dharmic Religions",
+                    "id": "x3_histtime",
+                    "label": "History of Time",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -8546,116 +10629,6 @@ const LAYERS = [
                 ],
                 "orbs": []
               },
-              {
-                "id": "x3_astro_chinese",
-                "label": "Chinese Astrology",
-                "color": "#c04040",
-                "desc": "The Chinese astrological system is built around a sixty-year cycle — the product of twelve animal signs and five elements — and has been integrated into Chinese governance, medicine, architecture, and daily life for at least 3,000 years. The system tracks Jupiter's twelve-year orbit as its primary clock and organizes time into recursive cycles within cycles. Unlike Western astrology's focus on the solar year and individual birth, Chinese astrology emphasizes collective time — the character of a year, a decade, an era. It is embedded in traditional Chinese medicine, feng shui, the timing of the Lunar New Year, and decisions made daily by hundreds of millions of people.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "x5_taoism",
-                    "label": "Taoism",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x5_confucianism",
-                    "label": "Confucianism",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              },
-              {
-                "id": "x3_astro_maya",
-                "label": "Maya & Mesoamerican",
-                "color": "#3a8a50",
-                "desc": "The Maya built two interlocking calendars — the 260-day Tzolkin and the 365-day Haab — whose 52-year Calendar Round governed ceremony, agriculture, war, and royal succession. They also maintained the Long Count, a linear calendar tracking time from a fixed mythological origin — the same impulse that gave us BC and AD. Their tracking of Venus was so precise that their tables predict Venus's appearances to within a day over centuries. Venus was not just a planet to the Maya — it was a war star, whose appearance governed the timing of military campaigns. These were not primitive sky-watchers. They were astronomers who embedded their science in mythology because for them the distinction did not exist.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "x5_meso_rel",
-                    "label": "Mesoamerican",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x1_creation",
-                    "label": "Creation Myths",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              },
-              {
-                "id": "x3_astro_egyptian",
-                "label": "Egyptian & Hellenistic",
-                "color": "#c8a030",
-                "desc": "Egypt contributed the decans — 36 star groups dividing the sky into ten-day periods — and the practice of orienting sacred architecture to celestial alignments. The Dendera zodiac ceiling is the oldest complete horoscope chart known. When Alexander conquered Egypt and Greek culture fused with Egyptian sky religion and Babylonian star-lore in Alexandria, the result was Hellenistic astrology — the most sophisticated synthesis the ancient world produced. It gave us the horoscope as a birth chart, the four elements as astrological qualities, and the philosophical framework within which Ptolemy, Copernicus, Kepler, and Galileo all worked before the scientific revolution finally drew the line between astronomy and astrology. For most of human history that line did not exist.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "x5_egyptian_rel",
-                    "label": "Egyptian",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "e2_scirev",
-                    "label": "The Scientific Revolution",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              }
-            ],
-            "bottomPills": [
-              {
-                "id": "e2_astron",
-                "label": "Astronomy",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "x3_histtime",
-                "label": "History of Time",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "orbs": []
-          },
               {
                 "id": "occ_div_numerology",
                 "label": "Numerology",
@@ -8672,7 +10645,11 @@ const LAYERS = [
                 "color": "#7a3a8a",
                 "desc": "Tarot cards began as a game. The 78-card Italian tarocchi deck — 22 trump cards plus four suits — was used for card games in northern Italy from the 15th century onward. Occultists didn't discover it as a divinatory tool until the 1780s, when Antoine Court de Gébelin claimed, with no evidence, that the Major Arcana were an ancient Egyptian book of wisdom encoded in card form. The claim was false. It didn't matter. Within a generation the tarot had been fully integrated into ceremonial magic, Kabbalah, and Hermetic philosophy. The Rider-Waite deck of 1909 — illustrated by Pamela Colman Smith under Arthur Edward Waite's direction — became the template that defines the medium today. It is a modern invention with an invented ancient pedigree. It is also a genuinely sophisticated symbolic system. Both things are true.",
                 "links": [
-                  { "label": "British Museum — tarot history", "url": "https://www.britishmuseum.org", "emoji": "🏛️" }
+                  {
+                    "label": "British Museum — tarot history",
+                    "url": "https://www.britishmuseum.org",
+                    "emoji": "🏛️"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8684,7 +10661,11 @@ const LAYERS = [
                 "color": "#4a6a8a",
                 "desc": "The I Ching — the Book of Changes — is one of the oldest texts in continuous use on earth, dating to at least the 9th century BCE with roots possibly 3,000 years older. Sixty-four hexagrams, each composed of six broken or unbroken lines, are consulted by throwing yarrow stalks or coins. The hexagram that results is not understood as a prediction but as a description of the present moment's underlying pattern — the condition of change you are already inside. Carl Jung spent years with the I Ching and proposed it operated through synchronicity: meaningful coincidence rather than causal mechanism. He introduced it to the West in his foreword to the Wilhelm translation in 1950. It is the one major divination system with a fully developed academic philosophical tradition alongside it.",
                 "links": [
-                  { "label": "I Ching — Wilhelm/Baynes translation (Princeton)", "url": "https://press.princeton.edu", "emoji": "📖" }
+                  {
+                    "label": "I Ching — Wilhelm/Baynes translation (Princeton)",
+                    "url": "https://press.princeton.edu",
+                    "emoji": "📖"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8706,7 +10687,11 @@ const LAYERS = [
                 "color": "#7a7a3a",
                 "desc": "The Oracle at Delphi operated for nearly a thousand years — approximately 800 BCE to 390 CE — and was the most politically influential institution in the ancient Greek world. Every major state decision, colonial expedition, and military campaign was routed through it. The Pythia — a woman chosen from local families, seated over a chasm in Apollo's temple — delivered ambiguous pronouncements interpreted by priests. Modern archaeology confirmed the presence of ethylene-producing geological faults beneath the temple. The system was not a fraud. It was a sophisticated interface between state power, popular belief, and genuine altered-state experience — with professionally managed interpretation built in. The Yoruba Ifá system uses a binary divination corpus of 256 Odù encoding centuries of accumulated wisdom. Chinese oracle bones — cattle scapulae and turtle shells heated until they cracked — were read by Shang dynasty diviners from 1200 BCE onward. The questions asked are preserved. They range from weather to warfare to toothache. They are the oldest continuous record of written Chinese.",
                 "links": [
-                  { "label": "UNESCO — Yoruba Ifá Divination System", "url": "https://ich.unesco.org/en/RL/ifa-divination-system-00146", "emoji": "🌍" }
+                  {
+                    "label": "UNESCO — Yoruba Ifá Divination System",
+                    "url": "https://ich.unesco.org/en/RL/ifa-divination-system-00146",
+                    "emoji": "🌍"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8729,7 +10714,11 @@ const LAYERS = [
                 "color": "#9a8a3a",
                 "desc": "The core texts — the Corpus Hermeticum — were written in Egypt between 100 and 300 CE, probably by multiple authors working in a Neoplatonic-Egyptian-Jewish synthesis. Renaissance humanists believed they were ancient Egyptian wisdom predating Moses. They were not. That belief — corrected by Isaac Casaubon in 1614 — had already reshaped Western intellectual history by the time it was disproved. Hermetic philosophy holds that the cosmos is a living divine unity; that the human soul participates in that divinity; that gnosis — direct experiential knowledge — is the path to liberation; and that the hidden connections between things can be worked with. As above, so below. Hermeticism was foundational to Renaissance science, to alchemy, and to virtually every Western esoteric tradition that followed it.",
                 "links": [
-                  { "label": "Corpus Hermeticum — Hermetic Library", "url": "https://hermetic.com/texts/corpus-hermeticum", "emoji": "📜" }
+                  {
+                    "label": "Corpus Hermeticum — Hermetic Library",
+                    "url": "https://hermetic.com/texts/corpus-hermeticum",
+                    "emoji": "📜"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8741,7 +10730,11 @@ const LAYERS = [
                 "color": "#6a3a9a",
                 "desc": "Kabbalah is the mystical dimension of Judaism — an interpretive tradition claiming to reveal the hidden structure of divinity and its relationship to creation. Its foundational text, the Zohar, appeared in 13th-century Spain, attributed to the 2nd-century rabbi Shimon bar Yochai but written, by scholarly consensus, by Moses de León. The Kabbalistic cosmos is structured around the Sefirot — ten divine emanations arranged on the Tree of Life — through which the infinite Ein Sof flows into finite existence. In the 16th century, Isaac Luria developed Lurianic Kabbalah — a cosmological account of divine contraction, catastrophe, and repair (tikkun) that became enormously influential in Jewish mysticism and eventually in Hermeticism and Freemasonry. The Tree of Life diagram is arguably the most influential single diagram in Western esoteric history.",
                 "links": [
-                  { "label": "Gershom Scholem — Major Trends in Jewish Mysticism", "url": "https://www.jstor.org", "emoji": "📚" }
+                  {
+                    "label": "Gershom Scholem — Major Trends in Jewish Mysticism",
+                    "url": "https://www.jstor.org",
+                    "emoji": "📚"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8753,7 +10746,11 @@ const LAYERS = [
                 "color": "#5a3a6a",
                 "desc": "Gnosticism holds that the material world was created not by the supreme God but by an inferior, ignorant, or malevolent demiurge — a lesser being who mistook himself for the highest. The true divine spark is trapped in matter. The purpose of existence is to remember what you are and escape. In the 2nd and 3rd centuries, Gnostic Christianity was a serious competitor to what became orthodoxy. The Nag Hammadi library, discovered in Egypt in 1945, returned 52 texts that orthodox Christianity spent centuries trying to erase — the Gospel of Thomas, the Gospel of Philip, the Apocryphon of John. The verdict of history — that orthodoxy won and Gnosticism was a deviant heresy — is a political verdict, not a theological one.",
                 "links": [
-                  { "label": "Nag Hammadi Library — Gnostic Society", "url": "http://www.gnosis.org/naghamm/nhl.html", "emoji": "📜" }
+                  {
+                    "label": "Nag Hammadi Library — Gnostic Society",
+                    "url": "http://www.gnosis.org/naghamm/nhl.html",
+                    "emoji": "📜"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8806,7 +10803,11 @@ const LAYERS = [
                 "color": "#9a7a2a",
                 "desc": "Alchemy is the attempt to perfect matter and spirit simultaneously. The physical operation — transmuting base metals into gold — was always understood by serious practitioners as inseparable from the interior operation: the transmutation of the base human soul into something incorruptible. The tradition has roots in Hellenistic Egypt, was preserved and developed by Islamic scholars (al-Rāzī, Jābir ibn Hayyān), and entered Europe in the 12th century through Latin translations of Arabic texts. Newton spent more time on alchemy than on physics. His unpublished alchemical manuscripts run to roughly a million words. Alchemy produced the laboratory method, distillation, acids, and the vocabulary of chemistry before chemistry existed as a discipline.",
                 "links": [
-                  { "label": "Newton Project — alchemical manuscripts", "url": "https://www.newtonproject.ox.ac.uk", "emoji": "🔬" }
+                  {
+                    "label": "Newton Project — alchemical manuscripts",
+                    "url": "https://www.newtonproject.ox.ac.uk",
+                    "emoji": "🔬"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8818,7 +10819,11 @@ const LAYERS = [
                 "color": "#6a2a7a",
                 "desc": "Ceremonial magic is the systematic application of ritual technique — circles, invocations, correspondences, tools — to produce contact with or command over spiritual entities. Its foundational medieval texts — the Lesser Key of Solomon, the Greater Key of Solomon, the Sworn Book of Honorius — describe hierarchies of demons, angels, and intelligences that can be summoned and bound. In the late 19th century the Hermetic Order of the Golden Dawn — whose members included W.B. Yeats, Aleister Crowley, and Dion Fortune — synthesized Kabbalah, tarot, astrology, and Hermetic philosophy into a complete initiatic magical curriculum. The Golden Dawn system remains the foundation of virtually all Western magical practice today.",
                 "links": [
-                  { "label": "Agrippa — Three Books of Occult Philosophy", "url": "http://www.esotericarchives.com/agrippa/agrippa1.htm", "emoji": "📜" }
+                  {
+                    "label": "Agrippa — Three Books of Occult Philosophy",
+                    "url": "http://www.esotericarchives.com/agrippa/agrippa1.htm",
+                    "emoji": "📜"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8830,7 +10835,11 @@ const LAYERS = [
                 "color": "#8a2a3a",
                 "desc": "Thelema is the system founded by Aleister Crowley following a claimed dictation in Cairo in 1904, in which he received The Book of the Law from a discarnate entity called Aiwass. The core injunction — Do what thou wilt shall be the whole of the Law — is frequently misread as libertinism. In Crowley's framework it means the opposite: discover your true will and pursue nothing else. Crowley's influence on 20th-century culture is measurable: he appears on the Beatles' Sgt. Pepper cover; Jimmy Page of Led Zeppelin owned his former home and manuscripts; his system underlies significant portions of modern Western occultism. The tradition remains active through the Ordo Templi Orientis worldwide.",
                 "links": [
-                  { "label": "The Book of the Law — Liber AL vel Legis", "url": "https://hermetic.com/crowley/libers/lib220", "emoji": "📜" }
+                  {
+                    "label": "The Book of the Law — Liber AL vel Legis",
+                    "url": "https://hermetic.com/crowley/libers/lib220",
+                    "emoji": "📜"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8862,7 +10871,11 @@ const LAYERS = [
                 "color": "#3a5a3a",
                 "desc": "The anthropologist Mircea Eliade defined shamanism not by belief but by technique: the practitioner enters an altered state, travels to non-ordinary reality, retrieves information or power, and returns. He documented this pattern independently across Siberia, Central Asia, the Americas, Southeast Asia, and Oceania. The shaman's function is medical, divinatory, and political simultaneously — they negotiate between the human community and the spirit world. Ayahuasca ceremony — an Amazonian shamanic practice — is currently the subject of clinical trials at Johns Hopkins and New York University for treatment of depression and PTSD. The oldest technology for altered-state experience is now inside academic medicine.",
                 "links": [
-                  { "label": "Johns Hopkins Psychedelic Research", "url": "https://hopkinspsychedelic.org", "emoji": "🔬" }
+                  {
+                    "label": "Johns Hopkins Psychedelic Research",
+                    "url": "https://hopkinspsychedelic.org",
+                    "emoji": "🔬"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [],
@@ -8956,15 +10969,51 @@ const LAYERS = [
                 "color": "#7a6a3a",
                 "desc": "Freemasonry is the largest initiatic brotherhood in Western history. The modern form traces to the Grand Lodge of England in 1717, though the operative stonemasons' guilds whose ritual it adapted are centuries older. The three Craft degrees use the building of Solomon's Temple and the death of its master architect Hiram Abiff as their symbolic framework. At its peak in the United States — mid-20th century — Masonic membership exceeded four million. Most U.S. presidents before 1950 were Masons. The founding documents of the American Republic bear significant Masonic intellectual influence. Freemasonry has been banned by the Catholic Church since 1738, by Nazi Germany, by Soviet Russia, and by most Middle Eastern states. The list of those who have feared it is itself a piece of information.",
                 "links": [
-                  { "label": "United Grand Lodge of England", "url": "https://www.ugle.org.uk", "emoji": "🏛️" }
+                  {
+                    "label": "United Grand Lodge of England",
+                    "url": "https://www.ugle.org.uk",
+                    "emoji": "🏛️"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [
-                  { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ,
-              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                  {
+                    "id": "h1",
+                    "label": "Nations & Empire",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_secret_societies",
+                    "label": "Secret Societies",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_elite",
+                    "label": "Elite Networks",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -8975,11 +11024,43 @@ const LAYERS = [
                 "links": [],
                 "topPills": [],
                 "bottomPills": [
-                  { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ,
-              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                  {
+                    "id": "h1",
+                    "label": "Nations & Empire",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_secret_societies",
+                    "label": "Secret Societies",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_elite",
+                    "label": "Elite Networks",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -8990,11 +11071,43 @@ const LAYERS = [
                 "links": [],
                 "topPills": [],
                 "bottomPills": [
-                  { "id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ,
-              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                  {
+                    "id": "h1",
+                    "label": "Nations & Empire",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_secret_societies",
+                    "label": "Secret Societies",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_ss_elite",
+                    "label": "Elite Networks",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_mil",
+                    "label": "Military",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -9005,11 +11118,43 @@ const LAYERS = [
                 "links": [],
                 "topPills": [],
                 "bottomPills": [
-                  { "id": "x5", "label": "Religion", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ,
-              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_secret_societies",
+                    "label": "Secret Societies",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6",
+                    "label": "Law",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -9018,15 +11163,51 @@ const LAYERS = [
                 "color": "#5a3a2a",
                 "desc": "The Ahnenerbe was founded by Heinrich Himmler in 1935 to research the occult, racial, and ancestral heritage of the Aryan race. Absorbed into the SS in 1937. Its departments conducted expeditions to Tibet, Iceland, Finland, and the Middle East; investigated Atlantis, runes, and the Holy Grail; and sponsored criminal medical experiments at Dachau and Natzweiler. The Ahnenerbe is the clearest historical example of occult belief operationalized by a state apparatus with industrial-scale capacity for violence. Himmler was a genuine believer. The genocide and the mysticism were not separate projects. They were the same project.",
                 "links": [
-                  { "label": "Michael Kater — Das Ahnenerbe der SS", "url": "https://www.jstor.org", "emoji": "📚" }
+                  {
+                    "label": "Michael Kater — Das Ahnenerbe der SS",
+                    "url": "https://www.jstor.org",
+                    "emoji": "📚"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [
-                  { "id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
-                ,
-              {"id": "occ_secret_societies", "label": "Secret Societies", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1_megalomania", "label": "Megalomania & the Crown", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                  {
+                    "id": "h3",
+                    "label": "War & Revolutions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "occ_secret_societies",
+                    "label": "Secret Societies",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "orb_corruption",
+                    "label": "Corruption Tracker",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_megalomania",
+                    "label": "Megalomania & the Crown",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -9037,16 +11218,31 @@ const LAYERS = [
                 "links": [],
                 "topPills": [],
                 "bottomPills": [
-              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "x4", "label": "The Occult", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ],
+                  {
+                    "id": "orb_corruption",
+                    "label": "Corruption Tracker",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x4",
+                    "label": "The Occult",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               }
             ],
             "bottomPills": [],
             "orbs": []
-          }
-,
+          },
           {
             "id": "occ_secret_societies",
             "label": "Other Secret Societies",
@@ -9080,16 +11276,88 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-              {"id": "occ_organizations", "label": "Living Organizational Expressions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "glories_deepstate", "label": "The Deep State", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ,
-              {"id": "x1", "label": "Myth", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "x5", "label": "Religion", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "hist_geopolitics", "label": "Geopolitics", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                      {
+                        "id": "occ_organizations",
+                        "label": "Living Organizational Expressions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "orb_corruption",
+                        "label": "Corruption Tracker",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "glories_deepstate",
+                        "label": "The Deep State",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x1",
+                        "label": "Myth",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5",
+                        "label": "Religion",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h3",
+                        "label": "War & Revolutions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "hist_geopolitics",
+                        "label": "Geopolitics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
                   {
@@ -9108,11 +11376,35 @@ const LAYERS = [
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "h3",
+                        "label": "War & Revolutions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5_abrahamic",
+                        "label": "Abrahamic Religions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ,
-              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "x5_abrahamic", "label": "Abrahamic Religions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                    ],
                     "orbs": []
                   },
                   {
@@ -9144,11 +11436,43 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_gov_revolution", "label": "Revolution", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ,
-              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h3",
+                        "label": "War & Revolutions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_gov_revolution",
+                        "label": "Revolution",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
                   {
@@ -9159,9 +11483,25 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ],
+                      {
+                        "id": "h3",
+                        "label": "War & Revolutions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h6",
+                        "label": "Law",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
                   {
@@ -9180,9 +11520,17 @@ const LAYERS = [
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "h3",
+                        "label": "War & Revolutions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ,
-              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                    ],
                     "orbs": []
                   }
                 ],
@@ -9204,13 +11552,61 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p5", "label": "Media", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ,
-              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p2",
+                        "label": "Economy & Money",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_mil",
+                        "label": "Military",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p5",
+                        "label": "Media",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_american",
+                        "label": "The American Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
                   {
@@ -9227,11 +11623,43 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ],
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p2",
+                        "label": "Economy & Money",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_mil",
+                        "label": "Military",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "orb_corruption",
+                        "label": "Corruption Tracker",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
                   {
@@ -9248,11 +11676,43 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p5", "label": "Media", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "hist_geopolitics", "label": "Geopolitics", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ],
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p5",
+                        "label": "Media",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "hist_geopolitics",
+                        "label": "Geopolitics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_american",
+                        "label": "The American Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   }
                 ],
@@ -9288,13 +11748,53 @@ const LAYERS = [
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_mil",
+                        "label": "Military",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_american",
+                        "label": "The American Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1",
+                        "label": "Nations & Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "glories_checksbalances",
+                        "label": "Checks & Balances",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ,
-              {"id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1", "label": "Nations & Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "glories_checksbalances", "label": "Checks & Balances", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                    ],
                     "orbs": []
                   },
                   {
@@ -9319,11 +11819,35 @@ const LAYERS = [
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "p_mil",
+                        "label": "Military",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h3",
+                        "label": "War & Revolutions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "orb_corruption",
+                        "label": "Corruption Tracker",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ,
-              {"id": "p_mil", "label": "Military", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h3", "label": "War & Revolutions", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "orb_corruption", "label": "Corruption Tracker", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}],
+                    ],
                     "orbs": []
                   },
                   {
@@ -9334,11 +11858,43 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-              {"id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "hist_geopolitics", "label": "Geopolitics", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []},
-              {"id": "h1_american", "label": "The American Empire", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": []}
-            ],
+                      {
+                        "id": "p2",
+                        "label": "Economy & Money",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h6",
+                        "label": "Law",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "hist_geopolitics",
+                        "label": "Geopolitics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_american",
+                        "label": "The American Empire",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   }
                 ],
@@ -9422,80 +11978,104 @@ const LAYERS = [
             "links": [],
             "topPills": [],
             "bottomPills": [
-          {
-            "id": "x5",
-            "label": "Religion",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
+              {
+                "id": "x5",
+                "label": "Religion",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "x1",
+                "label": "Myth",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "x2",
+                "label": "Death",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1",
+                "label": "Nations & Empire",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_megalomania",
+                "label": "Megalomania & the Crown",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "occ_secret_societies",
+                "label": "Other Secret Societies",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "glories_deepstate",
+                "label": "The Deep State",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "orb_corruption",
+                "label": "Corruption Tracker",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
             "orbs": []
           },
           {
-            "id": "x1",
-            "label": "Myth",
+            "id": "s3_obs",
+            "label": "The Observer",
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": [],
-            "orbs": []
+            "bottomPills": []
           },
           {
-            "id": "x2",
-            "label": "Death",
+            "id": "cosmos_tp5",
+            "label": "The Observer",
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": [],
-            "orbs": []
+            "bottomPills": []
           },
           {
-            "id": "h1",
-            "label": "Nations & Empire",
+            "id": "e2_psych",
+            "label": "Psychology",
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h1_megalomania",
-            "label": "Megalomania & the Crown",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "occ_secret_societies",
-            "label": "Other Secret Societies",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "glories_deepstate",
-            "label": "The Deep State",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "orb_corruption",
-            "label": "Corruption Tracker",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          }
-        ],
-            "orbs": []
+            "bottomPills": []
           }
         ],
         "orbs": []
@@ -9726,8 +12306,7 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "orbs": []
-      ,
+        "orbs": [],
         "inProgress": true
       },
       {
@@ -10988,14 +13567,95 @@ const LAYERS = [
             "links": [],
             "topPills": [],
             "bottomPills": [
+              {
+                "id": "h1_medieval",
+                "label": "The Medieval Order",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_empires",
+                "label": "The Age of Empires",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_record",
+                "label": "The Historical Record",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "x4",
+                "label": "The Occult",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h3_genocide",
+                "label": "Genocide",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "hist_first_nations",
+                "label": "First Nations",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "f_rc",
+                "label": "Race & Ethnicity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
           {
-            "id": "h1_medieval",
-            "label": "The Medieval Order",
+            "id": "fam_tp4",
+            "label": "Ritual & Tradition",
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": [],
-            "orbs": []
+            "bottomPills": []
+          },
+          {
+            "id": "f3d2",
+            "label": "Religion",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "x3_astro",
+            "label": "Astrology",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
           },
           {
             "id": "h1_empires",
@@ -11003,56 +13663,7 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h1_meg_record",
-            "label": "The Historical Record",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x4",
-            "label": "The Occult",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h3_genocide",
-            "label": "Genocide",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "hist_first_nations",
-            "label": "First Nations",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "f_rc",
-            "label": "Race & Ethnicity",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          }
-        ],
-            "orbs": []
+            "bottomPills": []
           }
         ],
         "orbs": []
@@ -11184,7 +13795,40 @@ const LAYERS = [
             "color": "#7a6a9a",
             "desc": "Two of the greatest discoveries in physics arrived at the same unsettling conclusion: time is not what we thought. Einstein showed it bends with gravity and speed. Quantum mechanics suggests causality itself may not be absolute at the smallest scales. The clock on your wall is an approximation of something far stranger.",
             "links": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "e2_physics",
+                "label": "Physics",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "e2_astron",
+                "label": "Astronomy",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x4",
+                "label": "The Occult",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x3_histtime",
+                "label": "History of Time",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "topPills": [
               {
                 "id": "x3_relativity",
@@ -11245,7 +13889,40 @@ const LAYERS = [
             "color": "#7a6a9a",
             "desc": "How humans have understood, measured, and argued about time across civilizations — from the first sky-watchers to the atomic clock. The story of timekeeping is the story of human ambition: every improvement in precision opened a new era of science, trade, navigation, and coordination.",
             "links": [],
-            "bottomPills": [],
+            "bottomPills": [
+              {
+                "id": "e2_astron",
+                "label": "Astronomy",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x3_astro",
+                "label": "Astrology",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "e1_writing",
+                "label": "The History of Writing",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "x3_quantum",
+                "label": "Relative & Quantum Time",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
             "topPills": [
               {
                 "id": "x3_ancient_time",
