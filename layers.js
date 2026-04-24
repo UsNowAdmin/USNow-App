@@ -6760,11 +6760,96 @@ const LAYERS = [
               },
               {
                 "id": "h1_meg_taxonomy",
-                "label": "The Living Taxonomy",
+                "label": "The Active Cases",
                 "color": "#6a1a3a",
                 "desc": "Four current types, documented, present tense. Authoritarian consolidators work through institutions, dismantling them from inside while maintaining the appearance of legitimacy — slow, methodical, hard to stop because nothing looks illegal until it's too late. Opportunistic disruptors surf genuine institutional failure — they didn't build the conditions, they read them correctly and moved, faster and louder, potentially less structurally durable. Inherited rulers operate in zero-accountability architecture from birth — no path to power meant no friction, no testing, no corrective. The pathology has no origin story because there was never a moment it could have been stopped. Techno-feudalists purchase proximity to state power without election or inheritance — this is genuinely new, no historical sub-card fits it yet, the mechanism is being written in real time.",
                 "links": [],
-                "topPills": [],
+                "topPills": [
+                  {
+                    "id": "h1_meg_con",
+                    "label": "Authoritarian Consolidators",
+                    "color": "#7a2a3a",
+                    "desc": "The slowest and most durable form. Works through existing institutions — courts, media, elections — dismantling them from inside while maintaining the appearance of legitimacy. Nothing looks illegal until it's too late because legality is being redefined in real time. The democratic forms remain; the democratic function is hollowed out. Requires patience, bureaucratic precision, and a population that mistakes procedure for protection. Putin. Orbán. Erdoğan.",
+                    "links": [
+                      {
+                        "label": "Who Rules the World — The Architecture of Power",
+                        "url": "https://usnow.app/graphics/who-rules-the-world",
+                        "emoji": "📊",
+                        "tag": "GRAPHIC"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      { "id": "glories_checksbalances", "label": "Checks & Balances", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "p_gov", "label": "Government", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "h6", "label": "Law", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_dis",
+                    "label": "Opportunistic Disruptors",
+                    "color": "#7a4a1a",
+                    "desc": "The fastest and loudest form. Doesn't build the conditions — reads them correctly and moves. Genuine institutional failure, genuine economic grievance, genuine cultural anxiety — all real, all pre-existing. The disruptor didn't create the kindling. They brought the match. Potentially less structurally durable than the consolidator because the institutions haven't been fully captured — but durability is not the point. The point is the window, and the window is open. Trump. Milei. Bolsonaro.",
+                    "links": [
+                      {
+                        "label": "Who Rules the World — The Architecture of Power",
+                        "url": "https://usnow.app/graphics/who-rules-the-world",
+                        "emoji": "📊",
+                        "tag": "GRAPHIC"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      { "id": "p_gov_author", "label": "Authoritarianism", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "hist_tp1", "label": "The Pattern", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "p5", "label": "Media", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_inh",
+                    "label": "Inherited Sovereigns",
+                    "color": "#5a2a5a",
+                    "desc": "Zero-accountability architecture from birth. No path to power meant no friction, no testing, no corrective moment where the system could have said no. The pathology has no origin story because there was never a point it could have been stopped. What the others had to dismantle — checks, oversight, dissent — never existed here. The question is not how they got this way. The question is what a human being becomes when no one has ever said no to them. MBS. Kim Jong-un. The Gulf monarchies.",
+                    "links": [
+                      {
+                        "label": "Who Rules the World — The Architecture of Power",
+                        "url": "https://usnow.app/graphics/who-rules-the-world",
+                        "emoji": "📊",
+                        "tag": "GRAPHIC"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      { "id": "h1_empires", "label": "The Age of Empires", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "h1_ancient", "label": "The Ancient World", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "occ_ss_elite", "label": "Elite Networks", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_tech",
+                    "label": "Techno-Feudalists",
+                    "color": "#1a3a6a",
+                    "desc": "Genuinely new. No historical sub-card fits it because the mechanism didn't exist before. Private capital accumulation reaching the scale of state power, then purchasing proximity to state power without election or inheritance. Satellite internet. AI frontier. Global public discourse infrastructure. The formal democratic process wasn't circumvented — it was made irrelevant by operating in the spaces between it. One private citizen with zero democratic oversight and more direct leverage over daily life than most elected governments. The taxonomy doesn't have a name for this yet because it just arrived. Musk — and whoever comes next.",
+                    "links": [
+                      {
+                        "label": "Who Rules the World — The Architecture of Power",
+                        "url": "https://usnow.app/graphics/who-rules-the-world",
+                        "emoji": "📊",
+                        "tag": "GRAPHIC"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      { "id": "p_corp", "label": "Corporations", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "p2", "label": "Economy & Money", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] },
+                      { "id": "c7", "label": "Tools, Tech & AI", "desc": "", "links": [], "topPills": [], "bottomPills": [], "orbs": [] }
+                    ],
+                    "orbs": []
+                  }
+                ],
                 "bottomPills": [],
                 "orbs": []
               },
