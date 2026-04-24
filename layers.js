@@ -45,37 +45,44 @@ const LAYERS = [
           {
             "label": "NIH MedlinePlus",
             "url": "https://medlineplus.gov",
-            "emoji": "🫀"
+            "emoji": "🌱",
+            "tag": "BODY"
           },
           {
             "label": "CDC WONDER — public health data",
             "url": "https://wonder.cdc.gov",
-            "emoji": "🧬"
+            "emoji": "🌱",
+            "tag": "BODY"
           },
           {
             "label": "National Alliance for Eating Disorders",
             "url": "https://www.allianceforeatingdisorders.com",
-            "emoji": "🫀"
+            "emoji": "🌱",
+            "tag": "BODY"
           },
           {
             "label": "Body Dysmorphic Disorder Foundation",
             "url": "https://bddfoundation.org",
-            "emoji": "🫀"
+            "emoji": "🌱",
+            "tag": "BODY"
           },
           {
             "label": "Dove Self-Esteem Project",
             "url": "https://www.dove.com/us/en/dove-self-esteem-project.html",
-            "emoji": "🫀"
+            "emoji": "🌱",
+            "tag": "BODY"
           },
           {
             "label": "NEDA — body image resources",
             "url": "https://www.nationaleatingdisorders.org/body-image-0",
-            "emoji": "🫀"
+            "emoji": "🌱",
+            "tag": "BODY"
           },
           {
             "label": "Pew Research: Health",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [
@@ -88,12 +95,14 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🫀"
+                "emoji": "🌱",
+                "tag": "BODY"
               },
               {
                 "label": "CDC WONDER",
                 "url": "https://wonder.cdc.gov",
-                "emoji": "🧬"
+                "emoji": "🌱",
+                "tag": "BODY"
               }
             ],
             "topPills": [],
@@ -109,12 +118,14 @@ const LAYERS = [
               {
                 "label": "NAMI — National Alliance on Mental Illness",
                 "url": "https://www.nami.org",
-                "emoji": "🧠"
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
                 "label": "Insight Timer — free practice",
                 "url": "https://insighttimer.com",
-                "emoji": "🧘"
+                "emoji": "🧠",
+                "tag": "MIND"
               }
             ],
             "topPills": [],
@@ -130,7 +141,8 @@ const LAYERS = [
               {
                 "label": "NIH — National Institute on Aging",
                 "url": "https://www.nia.nih.gov",
-                "emoji": "🫀"
+                "emoji": "🌱",
+                "tag": "BODY"
               }
             ],
             "topPills": [],
@@ -157,17 +169,20 @@ const LAYERS = [
               {
                 "label": "On Being — Krista Tippett",
                 "url": "https://onbeing.org",
-                "emoji": "🕊️"
+                "emoji": "🕊️",
+                "tag": "SPIRIT"
               },
               {
                 "label": "Aeon — philosophy & mind",
                 "url": "https://aeon.co",
-                "emoji": "💭"
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
                 "label": "Gallery: What's Happening? →",
                 "url": "gallery.html",
-                "emoji": "🖼️"
+                "emoji": "🌐",
+                "tag": "USNOW"
               }
             ],
             "topPills": [],
@@ -233,7 +248,8 @@ const LAYERS = [
               {
                 "label": "Insight Timer — free meditation",
                 "url": "https://insighttimer.com",
-                "emoji": "🧘"
+                "emoji": "🧠",
+                "tag": "MIND"
               }
             ],
             "topPills": [],
@@ -360,12 +376,14 @@ const LAYERS = [
           {
             "label": "On Being — ritual and meaning",
             "url": "https://onbeing.org",
-            "emoji": "🕊️"
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           },
           {
             "label": "The Marginalian — on tradition",
             "url": "https://www.themarginalian.org",
-            "emoji": "🕊️"
+            "emoji": "📚",
+            "tag": "CULTURE"
           }
         ],
         "topPills": [],
@@ -627,22 +645,26 @@ const LAYERS = [
               {
                 "label": "U.S. Census — family & household data",
                 "url": "https://data.census.gov",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Pew Research — American family trends",
                 "url": "https://www.pewresearch.org/social-trends/topics/family-and-relationships/",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Annie E. Casey — Kids Count data by state",
                 "url": "https://datacenter.aecf.org",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Urban Institute — inequality by state",
                 "url": "https://www.urban.org",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [],
@@ -699,27 +721,32 @@ const LAYERS = [
               {
                 "label": "UN Human Development Index",
                 "url": "https://hdr.undp.org/data-center/human-development-index",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "World Bank — open data by country",
                 "url": "https://data.worldbank.org",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Pew Research — global attitudes & trends",
                 "url": "https://www.pewresearch.org/global/",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "UNICEF — children around the world",
                 "url": "https://data.unicef.org",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Gapminder — visualizing global inequality",
                 "url": "https://www.gapminder.org",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [],
@@ -897,12 +924,14 @@ const LAYERS = [
           {
             "label": "Pew Research: Race & Ethnicity",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           },
           {
             "label": "OpenSecrets: Who Funds What",
             "url": "https://www.opensecrets.org",
-            "emoji": "💰"
+            "emoji": "💰",
+            "tag": "MONEY"
           }
         ],
         "topPills": [
@@ -977,17 +1006,20 @@ const LAYERS = [
               {
                 "label": "ACLU: Know Your Rights",
                 "url": "https://www.aclu.org/know-your-rights",
-                "emoji": "⚖️"
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               },
               {
                 "label": "Ballotpedia",
                 "url": "https://ballotpedia.org",
-                "emoji": "🏛️"
+                "emoji": "🗳️",
+                "tag": "VOTE"
               },
               {
                 "label": "Congress.gov",
                 "url": "https://www.congress.gov",
-                "emoji": "🏛️"
+                "emoji": "🏛️",
+                "tag": "CONGRESS"
               }
             ],
             "topPills": [],
@@ -1152,22 +1184,26 @@ const LAYERS = [
           {
             "label": "EPA — environmental data",
             "url": "https://www.epa.gov",
-            "emoji": "🌿"
+            "emoji": "🌍",
+            "tag": "SCIENCE"
           },
           {
             "label": "IPCC — climate science",
             "url": "https://www.ipcc.ch",
-            "emoji": "🔬"
+            "emoji": "🌍",
+            "tag": "SCIENCE"
           },
           {
             "label": "EarthDay.org",
             "url": "https://www.earthday.org",
-            "emoji": "🌍"
+            "emoji": "🌍",
+            "tag": "CULTURE"
           },
           {
             "label": "NRDC — environmental defense",
             "url": "https://www.nrdc.org",
-            "emoji": "🌿"
+            "emoji": "🌍",
+            "tag": "SCIENCE"
           }
         ],
         "topPills": [
@@ -1180,17 +1216,20 @@ const LAYERS = [
               {
                 "label": "IPCC — climate reports",
                 "url": "https://www.ipcc.ch",
-                "emoji": "🔬"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               },
               {
                 "label": "NASA — climate data",
                 "url": "https://climate.nasa.gov",
-                "emoji": "🔭"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               },
               {
                 "label": "Pew Research — climate attitudes",
                 "url": "https://www.pewresearch.org",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -1203,12 +1242,14 @@ const LAYERS = [
                   {
                     "label": "NASA — climate change evidence",
                     "url": "https://climate.nasa.gov",
-                    "emoji": "🔭"
+                    "emoji": "🌍",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "IPCC",
                     "url": "https://www.ipcc.ch",
-                    "emoji": "🔬"
+                    "emoji": "🌍",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [
@@ -1221,7 +1262,8 @@ const LAYERS = [
                       {
                         "label": "IPCC reports",
                         "url": "https://www.ipcc.ch",
-                        "emoji": "🔬"
+                        "emoji": "🌍",
+                        "tag": "SCIENCE"
                       }
                     ],
                     "topPills": [],
@@ -1237,7 +1279,8 @@ const LAYERS = [
                       {
                         "label": "ProPublica — fossil fuel accountability",
                         "url": "https://www.propublica.org",
-                        "emoji": "📰"
+                        "emoji": "📰",
+                        "tag": "JOURNALISM"
                       }
                     ],
                     "topPills": [],
@@ -1253,7 +1296,8 @@ const LAYERS = [
                       {
                         "label": "OpenSecrets — fossil fuel donations",
                         "url": "https://www.opensecrets.org",
-                        "emoji": "💰"
+                        "emoji": "💰",
+                        "tag": "MONEY"
                       }
                     ],
                     "topPills": [],
@@ -1269,7 +1313,8 @@ const LAYERS = [
                       {
                         "label": "IPCC — tipping points",
                         "url": "https://www.ipcc.ch",
-                        "emoji": "🔬"
+                        "emoji": "🌍",
+                        "tag": "SCIENCE"
                       }
                     ],
                     "topPills": [],
@@ -1285,7 +1330,8 @@ const LAYERS = [
                       {
                         "label": "UN — climate justice",
                         "url": "https://www.un.org/en/climatechange",
-                        "emoji": "🌍"
+                        "emoji": "🌍",
+                        "tag": "GLOBAL"
                       }
                     ],
                     "topPills": [],
@@ -1301,7 +1347,8 @@ const LAYERS = [
                       {
                         "label": "NASA — vital signs",
                         "url": "https://climate.nasa.gov",
-                        "emoji": "🔭"
+                        "emoji": "🌍",
+                        "tag": "SCIENCE"
                       }
                     ],
                     "topPills": [],
@@ -1344,12 +1391,14 @@ const LAYERS = [
               {
                 "label": "IUCN Red List — species status",
                 "url": "https://www.iucnredlist.org",
-                "emoji": "🌿"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               },
               {
                 "label": "WWF — biodiversity",
                 "url": "https://www.worldwildlife.org",
-                "emoji": "🌿"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -1372,7 +1421,8 @@ const LAYERS = [
                   {
                     "label": "IUCN Red List",
                     "url": "https://www.iucnredlist.org",
-                    "emoji": "🌿"
+                    "emoji": "🌍",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -1398,7 +1448,8 @@ const LAYERS = [
                   {
                     "label": "Global Forest Watch",
                     "url": "https://www.globalforestwatch.org",
-                    "emoji": "🌿"
+                    "emoji": "🌍",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -1437,12 +1488,14 @@ const LAYERS = [
               {
                 "label": "UN Water — global water data",
                 "url": "https://www.unwater.org",
-                "emoji": "💧"
+                "emoji": "🌍",
+                "tag": "GLOBAL"
               },
               {
                 "label": "Pacific Institute — water conflict",
                 "url": "https://pacinst.org",
-                "emoji": "💧"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -1455,7 +1508,8 @@ const LAYERS = [
                   {
                     "label": "EPA — drinking water standards",
                     "url": "https://www.epa.gov/ground-water-and-drinking-water",
-                    "emoji": "💧"
+                    "emoji": "🌱",
+                    "tag": "BODY"
                   }
                 ],
                 "topPills": [],
@@ -1471,7 +1525,8 @@ const LAYERS = [
                   {
                     "label": "NOAA — ocean data",
                     "url": "https://www.noaa.gov",
-                    "emoji": "🌊"
+                    "emoji": "🌍",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [
@@ -1525,12 +1580,14 @@ const LAYERS = [
                       {
                         "label": "Pacific Institute — water conflict",
                         "url": "https://pacinst.org",
-                        "emoji": "💧"
+                        "emoji": "🌍",
+                        "tag": "SCIENCE"
                       },
                       {
                         "label": "ProPublica — water rights",
                         "url": "https://www.propublica.org",
-                        "emoji": "📰"
+                        "emoji": "📰",
+                        "tag": "JOURNALISM"
                       }
                     ],
                     "topPills": [],
@@ -1584,7 +1641,8 @@ const LAYERS = [
                       {
                         "label": "Pacific Institute — water conflict chronology",
                         "url": "https://pacinst.org",
-                        "emoji": "💧"
+                        "emoji": "🌍",
+                        "tag": "SCIENCE"
                       }
                     ],
                     "topPills": [],
@@ -1604,7 +1662,8 @@ const LAYERS = [
                   {
                     "label": "ProPublica — water privatization",
                     "url": "https://www.propublica.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -1643,12 +1702,14 @@ const LAYERS = [
               {
                 "label": "EPA — air quality data",
                 "url": "https://www.epa.gov/air-trends",
-                "emoji": "🌿"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               },
               {
                 "label": "AirNow — real-time air quality",
                 "url": "https://www.airnow.gov",
-                "emoji": "🌿"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -1661,7 +1722,8 @@ const LAYERS = [
                   {
                     "label": "EPA — air quality trends",
                     "url": "https://www.epa.gov/air-trends",
-                    "emoji": "🌿"
+                    "emoji": "🌍",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -1684,7 +1746,8 @@ const LAYERS = [
                       {
                         "label": "ProPublica — pollution mapping",
                         "url": "https://www.propublica.org",
-                        "emoji": "📰"
+                        "emoji": "📰",
+                        "tag": "JOURNALISM"
                       }
                     ],
                     "topPills": [],
@@ -1733,7 +1796,8 @@ const LAYERS = [
                   {
                     "label": "NASA — fire data",
                     "url": "https://firms.modaps.eosdis.nasa.gov",
-                    "emoji": "🔭"
+                    "emoji": "🌍",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -1759,7 +1823,8 @@ const LAYERS = [
                   {
                     "label": "EPA — environmental justice",
                     "url": "https://www.epa.gov/environmentaljustice",
-                    "emoji": "⚖️"
+                    "emoji": "🌍",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -1798,12 +1863,14 @@ const LAYERS = [
               {
                 "label": "EarthDay.org",
                 "url": "https://www.earthday.org",
-                "emoji": "🌍"
+                "emoji": "🌍",
+                "tag": "CULTURE"
               },
               {
                 "label": "NRDC — environmental history",
                 "url": "https://www.nrdc.org",
-                "emoji": "🌿"
+                "emoji": "🌍",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -1826,7 +1893,8 @@ const LAYERS = [
                   {
                     "label": "EarthDay.org",
                     "url": "https://www.earthday.org",
-                    "emoji": "🌍"
+                    "emoji": "🌍",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -1893,12 +1961,14 @@ const LAYERS = [
               {
                 "label": "EarthDay.org — take action",
                 "url": "https://www.earthday.org",
-                "emoji": "🌍"
+                "emoji": "🌍",
+                "tag": "CULTURE"
               },
               {
                 "label": "TurboVote — vote on environment",
                 "url": "https://turbovote.org",
-                "emoji": "🗳️"
+                "emoji": "🗳️",
+                "tag": "VOTE"
               }
             ],
             "topPills": [
@@ -1921,12 +1991,14 @@ const LAYERS = [
                   {
                     "label": "TurboVote",
                     "url": "https://turbovote.org",
-                    "emoji": "🗳️"
+                    "emoji": "🗳️",
+                    "tag": "VOTE"
                   },
                   {
                     "label": "Ballotpedia — environmental candidates",
                     "url": "https://ballotpedia.org",
-                    "emoji": "🏛️"
+                    "emoji": "🗳️",
+                    "tag": "VOTE"
                   }
                 ],
                 "topPills": [],
@@ -2211,7 +2283,8 @@ const LAYERS = [
           {
             "label": "On Being — the need to belong",
             "url": "https://onbeing.org",
-            "emoji": "🕊️"
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           }
         ],
         "topPills": [],
@@ -2260,7 +2333,8 @@ const LAYERS = [
           {
             "label": "Pew Research — community & civic life",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [],
@@ -2309,7 +2383,8 @@ const LAYERS = [
           {
             "label": "Pew Research — political polarization",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [],
@@ -2366,12 +2441,14 @@ const LAYERS = [
           {
             "label": "EFF — algorithmic accountability",
             "url": "https://www.eff.org",
-            "emoji": "🔒"
+            "emoji": "📡",
+            "tag": "TECH"
           },
           {
             "label": "MIT Technology Review",
             "url": "https://www.technologyreview.com",
-            "emoji": "📰"
+            "emoji": "📡",
+            "tag": "TECH"
           }
         ],
         "topPills": [],
@@ -2479,22 +2556,26 @@ const LAYERS = [
           {
             "label": "Internet Archive — the web's memory",
             "url": "https://archive.org",
-            "emoji": "📚"
+            "emoji": "📚",
+            "tag": "CULTURE"
           },
           {
             "label": "Khan Academy — free world-class education",
             "url": "https://www.khanacademy.org",
-            "emoji": "📚"
+            "emoji": "📚",
+            "tag": "LEARN"
           },
           {
             "label": "Project Gutenberg — free literature",
             "url": "https://www.gutenberg.org",
-            "emoji": "📖"
+            "emoji": "📚",
+            "tag": "TEXTS"
           },
           {
             "label": "EFF — digital rights & freedom",
             "url": "https://www.eff.org",
-            "emoji": "🔒"
+            "emoji": "📡",
+            "tag": "TECH"
           }
         ],
         "topPills": [
@@ -2507,7 +2588,8 @@ const LAYERS = [
               {
                 "label": "Encyclopaedia Britannica — history of writing",
                 "url": "https://www.britannica.com/topic/writing",
-                "emoji": "📖"
+                "emoji": "📚",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [
@@ -2694,12 +2776,14 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚"
+                "emoji": "📚",
+                "tag": "CULTURE"
               },
               {
                 "label": "Project Gutenberg",
                 "url": "https://www.gutenberg.org",
-                "emoji": "📖"
+                "emoji": "📚",
+                "tag": "TEXTS"
               }
             ],
             "topPills": [],
@@ -2748,12 +2832,14 @@ const LAYERS = [
               {
                 "label": "EFF — digital rights",
                 "url": "https://www.eff.org",
-                "emoji": "🔒"
+                "emoji": "📡",
+                "tag": "TECH"
               },
               {
                 "label": "MIT Technology Review",
                 "url": "https://www.technologyreview.com",
-                "emoji": "📰"
+                "emoji": "📡",
+                "tag": "TECH"
               }
             ],
             "topPills": [
@@ -2776,7 +2862,8 @@ const LAYERS = [
                   {
                     "label": "EFF — surveillance",
                     "url": "https://www.eff.org",
-                    "emoji": "🔒"
+                    "emoji": "📡",
+                    "tag": "TECH"
                   }
                 ],
                 "topPills": [],
@@ -2809,27 +2896,32 @@ const LAYERS = [
                       {
                         "label": "What is AI? — MIT explainer",
                         "url": "https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414",
-                        "emoji": "🤖"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       },
                       {
                         "label": "AI for Everyone — free course, Coursera",
                         "url": "https://www.coursera.org/learn/ai-for-everyone",
-                        "emoji": "📚"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       },
                       {
                         "label": "How AI is used to track & control — EFF",
                         "url": "https://www.eff.org/issues/ai",
-                        "emoji": "🔒"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       },
                       {
                         "label": "AI & democracy — Knight Foundation",
                         "url": "https://knightfoundation.org/topics/artificial-intelligence/",
-                        "emoji": "🔒"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       },
                       {
                         "label": "USNow AI Infographic — coming soon",
                         "url": "https://www.usnow.app/#data",
-                        "emoji": "⭐"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       }
                     ],
                     "topPills": [],
@@ -2845,12 +2937,14 @@ const LAYERS = [
                       {
                         "label": "USASpending.gov — federal R&D",
                         "url": "https://www.usaspending.gov",
-                        "emoji": "📊"
+                        "emoji": "💰",
+                        "tag": "BUDGET"
                       },
                       {
                         "label": "Costs of War — defense research",
                         "url": "https://watson.brown.edu/costsofwar",
-                        "emoji": "⚔️"
+                        "emoji": "🪖",
+                        "tag": "MILITARY"
                       }
                     ],
                     "topPills": [],
@@ -2898,12 +2992,14 @@ const LAYERS = [
                               {
                                 "label": "ProPublica — corporate power",
                                 "url": "https://www.propublica.org",
-                                "emoji": "📰"
+                                "emoji": "📰",
+                                "tag": "JOURNALISM"
                               },
                               {
                                 "label": "OpenSecrets — corporate lobbying",
                                 "url": "https://www.opensecrets.org",
-                                "emoji": "💰"
+                                "emoji": "💰",
+                                "tag": "MONEY"
                               }
                             ],
                             "topPills": [],
@@ -2938,12 +3034,14 @@ const LAYERS = [
                               {
                                 "label": "EFF — big tech accountability",
                                 "url": "https://www.eff.org",
-                                "emoji": "🔒"
+                                "emoji": "📡",
+                                "tag": "TECH"
                               },
                               {
                                 "label": "MIT Technology Review",
                                 "url": "https://www.technologyreview.com",
-                                "emoji": "📰"
+                                "emoji": "📡",
+                                "tag": "TECH"
                               }
                             ],
                             "topPills": [
@@ -3015,7 +3113,8 @@ const LAYERS = [
                                   {
                                     "label": "Pew Research — social media & democracy",
                                     "url": "https://www.pewresearch.org/internet/",
-                                    "emoji": "📊"
+                                    "emoji": "📡",
+                                    "tag": "TECH"
                                   }
                                 ],
                                 "topPills": [],
@@ -3070,12 +3169,14 @@ const LAYERS = [
                                   {
                                     "label": "EFF — AI accountability",
                                     "url": "https://www.eff.org/issues/ai",
-                                    "emoji": "🔒"
+                                    "emoji": "📡",
+                                    "tag": "TECH"
                                   },
                                   {
                                     "label": "MIT Technology Review — AI",
                                     "url": "https://www.technologyreview.com",
-                                    "emoji": "📰"
+                                    "emoji": "📡",
+                                    "tag": "TECH"
                                   }
                                 ],
                                 "topPills": [],
@@ -3150,12 +3251,14 @@ const LAYERS = [
                       {
                         "label": "EFF — platform accountability",
                         "url": "https://www.eff.org",
-                        "emoji": "🔒"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       },
                       {
                         "label": "MIT Technology Review",
                         "url": "https://www.technologyreview.com",
-                        "emoji": "📰"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       }
                     ],
                     "topPills": [],
@@ -3199,7 +3302,8 @@ const LAYERS = [
                       {
                         "label": "Quincy Institute — military & technology",
                         "url": "https://quincyinst.org",
-                        "emoji": "⚔️"
+                        "emoji": "🪖",
+                        "tag": "MILITARY"
                       }
                     ],
                     "topPills": [],
@@ -3234,12 +3338,14 @@ const LAYERS = [
                       {
                         "label": "EFF — algorithmic accountability",
                         "url": "https://www.eff.org",
-                        "emoji": "🔒"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       },
                       {
                         "label": "Pew Research — algorithms & news",
                         "url": "https://www.pewresearch.org/internet/",
-                        "emoji": "📊"
+                        "emoji": "📡",
+                        "tag": "TECH"
                       }
                     ],
                     "topPills": [],
@@ -3367,7 +3473,8 @@ const LAYERS = [
           {
             "label": "Pew Research",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [
@@ -3846,12 +3953,14 @@ const LAYERS = [
                           {
                             "label": "Pew Research — economic mobility",
                             "url": "https://www.pewresearch.org/social-trends/",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           },
                           {
                             "label": "Urban Institute — opportunity & inequality",
                             "url": "https://www.urban.org",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           }
                         ],
                         "topPills": [],
@@ -4180,17 +4289,20 @@ const LAYERS = [
           {
             "label": "Khan Academy — Art History",
             "url": "https://www.khanacademy.org/humanities/art-history",
-            "emoji": "📚"
+            "emoji": "📚",
+            "tag": "CULTURE"
           },
           {
             "label": "The Marginalian — ideas through culture",
             "url": "https://www.themarginalian.org",
-            "emoji": "🕊️"
+            "emoji": "📚",
+            "tag": "CULTURE"
           },
           {
             "label": "Longreads — literature & culture",
             "url": "https://longreads.com",
-            "emoji": "📰"
+            "emoji": "📚",
+            "tag": "CULTURE"
           }
         ],
         "topPills": [
@@ -4203,7 +4315,8 @@ const LAYERS = [
               {
                 "label": "Khan Academy: Art History",
                 "url": "https://www.khanacademy.org/humanities/art-history",
-                "emoji": "📚"
+                "emoji": "📚",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [],
@@ -4265,7 +4378,8 @@ const LAYERS = [
               {
                 "label": "Longreads",
                 "url": "https://longreads.com",
-                "emoji": "📰"
+                "emoji": "📚",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [],
@@ -4296,12 +4410,14 @@ const LAYERS = [
               {
                 "label": "ProPublica: Education",
                 "url": "https://www.propublica.org",
-                "emoji": "📰"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               },
               {
                 "label": "USASpending: Education Budget",
                 "url": "https://www.usaspending.gov",
-                "emoji": "📊"
+                "emoji": "💰",
+                "tag": "BUDGET"
               }
             ],
             "topPills": [
@@ -4347,12 +4463,14 @@ const LAYERS = [
               {
                 "label": "CBO Data",
                 "url": "https://www.cbo.gov",
-                "emoji": "📊"
+                "emoji": "💰",
+                "tag": "BUDGET"
               },
               {
                 "label": "ProPublica: Student Debt",
                 "url": "https://www.propublica.org",
-                "emoji": "📰"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [],
@@ -4376,22 +4494,26 @@ const LAYERS = [
           {
             "label": "MIT Technology Review — free articles",
             "url": "https://www.technologyreview.com",
-            "emoji": "📰"
+            "emoji": "📡",
+            "tag": "TECH"
           },
           {
             "label": "Rest of World — tech beyond the West",
             "url": "https://restofworld.org",
-            "emoji": "📰"
+            "emoji": "📡",
+            "tag": "TECH"
           },
           {
             "label": "EFF — digital rights & freedom",
             "url": "https://www.eff.org",
-            "emoji": "🔒"
+            "emoji": "📡",
+            "tag": "TECH"
           },
           {
             "label": "Gallery: Some Guy With AI →",
             "url": "gallery.html",
-            "emoji": "🖼️"
+            "emoji": "🌐",
+            "tag": "USNOW"
           }
         ],
         "topPills": [
@@ -4404,27 +4526,32 @@ const LAYERS = [
               {
                 "label": "What is AI? — MIT explainer",
                 "url": "https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414",
-                "emoji": "🤖"
+                "emoji": "📡",
+                "tag": "TECH"
               },
               {
                 "label": "AI for Everyone — free course, Coursera",
                 "url": "https://www.coursera.org/learn/ai-for-everyone",
-                "emoji": "📚"
+                "emoji": "📡",
+                "tag": "TECH"
               },
               {
                 "label": "How AI is used to track & control — EFF",
                 "url": "https://www.eff.org/issues/ai",
-                "emoji": "🔒"
+                "emoji": "📡",
+                "tag": "TECH"
               },
               {
                 "label": "AI & democracy — Knight Foundation",
                 "url": "https://knightfoundation.org/topics/artificial-intelligence/",
-                "emoji": "🔒"
+                "emoji": "📡",
+                "tag": "TECH"
               },
               {
                 "label": "USNow AI Infographic — coming soon",
                 "url": "https://www.usnow.app/#data",
-                "emoji": "⭐"
+                "emoji": "📡",
+                "tag": "TECH"
               }
             ],
             "topPills": [],
@@ -4447,7 +4574,8 @@ const LAYERS = [
           {
             "label": "ProPublica — education & power",
             "url": "https://www.propublica.org",
-            "emoji": "📰"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           }
         ],
         "topPills": [],
@@ -4483,7 +4611,8 @@ const LAYERS = [
           {
             "label": "Pew Research — media & information",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [],
@@ -4508,12 +4637,14 @@ const LAYERS = [
           {
             "label": "Pew Research — misinformation",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           },
           {
             "label": "MIT Technology Review",
             "url": "https://www.technologyreview.com",
-            "emoji": "📰"
+            "emoji": "📡",
+            "tag": "TECH"
           }
         ],
         "topPills": [],
@@ -4529,12 +4660,14 @@ const LAYERS = [
           {
             "label": "Aeon — philosophy of knowledge",
             "url": "https://aeon.co",
-            "emoji": "💭"
+            "emoji": "🧠",
+            "tag": "MIND"
           },
           {
             "label": "The Marginalian — on wisdom",
             "url": "https://www.themarginalian.org",
-            "emoji": "🕊️"
+            "emoji": "📚",
+            "tag": "CULTURE"
           }
         ],
         "topPills": [],
@@ -4639,7 +4772,8 @@ const LAYERS = [
           {
             "label": "Longreads — politics & narrative",
             "url": "https://longreads.com",
-            "emoji": "📰"
+            "emoji": "📚",
+            "tag": "CULTURE"
           }
         ],
         "topPills": [],
@@ -4665,12 +4799,14 @@ const LAYERS = [
           {
             "label": "GovTrack — bills & votes",
             "url": "https://www.govtrack.us",
-            "emoji": "🏛️"
+            "emoji": "🏛️",
+            "tag": "CONGRESS"
           },
           {
             "label": "OpenSecrets — who funds what",
             "url": "https://www.opensecrets.org",
-            "emoji": "💰"
+            "emoji": "💰",
+            "tag": "MONEY"
           }
         ],
         "topPills": [],
@@ -4686,12 +4822,14 @@ const LAYERS = [
           {
             "label": "ProPublica — investigative journalism",
             "url": "https://www.propublica.org",
-            "emoji": "📰"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           },
           {
             "label": "Columbia Journalism Review",
             "url": "https://www.cjr.org",
-            "emoji": "📰"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           }
         ],
         "topPills": [],
@@ -4717,17 +4855,20 @@ const LAYERS = [
           {
             "label": "TurboVote — register and vote",
             "url": "https://turbovote.org",
-            "emoji": "🗳️"
+            "emoji": "🗳️",
+            "tag": "VOTE"
           },
           {
             "label": "Ballotpedia — find your ballot",
             "url": "https://ballotpedia.org",
-            "emoji": "🏛️"
+            "emoji": "🗳️",
+            "tag": "VOTE"
           },
           {
             "label": "ACLU — voting rights",
             "url": "https://www.aclu.org/issues/voting-rights",
-            "emoji": "⚖️"
+            "emoji": "🗳️",
+            "tag": "VOTE"
           }
         ],
         "topPills": [],
@@ -4924,17 +5065,20 @@ const LAYERS = [
                   {
                     "label": "Full text — Constitution of the United States",
                     "url": "https://constitution.congress.gov/constitution/",
-                    "emoji": "📜"
+                    "emoji": "🏛️",
+                    "tag": "CONGRESS"
                   },
                   {
                     "label": "Interactive Constitution — National Constitution Center",
                     "url": "https://constitutioncenter.org/the-constitution",
-                    "emoji": "🏛️"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   },
                   {
                     "label": "Founders' Constitution — U Chicago",
                     "url": "https://press-pubs.uchicago.edu/founders/",
-                    "emoji": "📚"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "bottomPills": [],
@@ -4947,32 +5091,38 @@ const LAYERS = [
                       {
                         "label": "Magna Carta (1215) — British Library",
                         "url": "https://www.bl.uk/magna-carta",
-                        "emoji": "📜"
+                        "emoji": "🏛️",
+                        "tag": "HISTORY"
                       },
                       {
                         "label": "John Locke — Two Treatises of Government",
                         "url": "https://www.gutenberg.org/ebooks/7370",
-                        "emoji": "📜"
+                        "emoji": "📚",
+                        "tag": "TEXTS"
                       },
                       {
                         "label": "Thomas Paine — Common Sense (1776)",
                         "url": "https://www.gutenberg.org/ebooks/147",
-                        "emoji": "📜"
+                        "emoji": "📚",
+                        "tag": "TEXTS"
                       },
                       {
                         "label": "The Federalist Papers — Congress.gov",
                         "url": "https://www.congress.gov/resources/display/content/The+Federalist+Papers",
-                        "emoji": "🏛️"
+                        "emoji": "🏛️",
+                        "tag": "CONGRESS"
                       },
                       {
                         "label": "Montesquieu — The Spirit of the Laws",
                         "url": "https://www.gutenberg.org/ebooks/27573",
-                        "emoji": "📜"
+                        "emoji": "📚",
+                        "tag": "TEXTS"
                       },
                       {
                         "label": "The Declaration of Independence — National Archives",
                         "url": "https://www.archives.gov/founding-docs/declaration-transcript",
-                        "emoji": "🏛️"
+                        "emoji": "🏛️",
+                        "tag": "HISTORY"
                       }
                     ],
                     "topPills": [],
@@ -5038,7 +5188,8 @@ const LAYERS = [
                       {
                         "label": "GovTrack — congressional voting records",
                         "url": "https://www.govtrack.us",
-                        "emoji": "🏛️"
+                        "emoji": "🏛️",
+                        "tag": "CONGRESS"
                       }
                     ],
                     "topPills": [
@@ -5071,7 +5222,8 @@ const LAYERS = [
                           {
                             "label": "Pew Research — economic views",
                             "url": "https://www.pewresearch.org",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           }
                         ],
                         "topPills": [],
@@ -5130,7 +5282,8 @@ const LAYERS = [
                       {
                         "label": "GovTrack — congressional voting records",
                         "url": "https://www.govtrack.us",
-                        "emoji": "🏛️"
+                        "emoji": "🏛️",
+                        "tag": "CONGRESS"
                       }
                     ],
                     "topPills": [
@@ -5153,7 +5306,8 @@ const LAYERS = [
                           {
                             "label": "OpenSecrets — who funds whom",
                             "url": "https://www.opensecrets.org",
-                            "emoji": "💰"
+                            "emoji": "💰",
+                            "tag": "MONEY"
                           }
                         ],
                         "topPills": [],
@@ -5179,7 +5333,8 @@ const LAYERS = [
                           {
                             "label": "Pew Research — religion & politics",
                             "url": "https://www.pewresearch.org/religion/",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           }
                         ],
                         "topPills": [
@@ -5192,7 +5347,8 @@ const LAYERS = [
                               {
                                 "label": "Pew Research — Christian nationalism",
                                 "url": "https://www.pewresearch.org/religion/",
-                                "emoji": "📊"
+                                "emoji": "📊",
+                                "tag": "DATA"
                               }
                             ],
                             "topPills": [],
@@ -5275,12 +5431,14 @@ const LAYERS = [
                       {
                         "label": "Ballotpedia — party history",
                         "url": "https://ballotpedia.org",
-                        "emoji": "🏛️"
+                        "emoji": "🗳️",
+                        "tag": "VOTE"
                       },
                       {
                         "label": "Pew Research — political polarization",
                         "url": "https://www.pewresearch.org",
-                        "emoji": "📊"
+                        "emoji": "📊",
+                        "tag": "DATA"
                       }
                     ],
                     "topPills": [],
@@ -5325,12 +5483,14 @@ const LAYERS = [
                       {
                         "label": "Pew Research — national identity",
                         "url": "https://www.pewresearch.org",
-                        "emoji": "📊"
+                        "emoji": "📊",
+                        "tag": "DATA"
                       },
                       {
                         "label": "Foreign Affairs — nationalism & democracy",
                         "url": "https://www.foreignaffairs.com",
-                        "emoji": "📰"
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
                       }
                     ],
                     "topPills": [],
@@ -5420,12 +5580,14 @@ const LAYERS = [
                   {
                     "label": "How elections work — USA.gov",
                     "url": "https://www.usa.gov/election",
-                    "emoji": "🗳️"
+                    "emoji": "🗳️",
+                    "tag": "VOTE"
                   },
                   {
                     "label": "Voting rights history — ACLU",
                     "url": "https://www.aclu.org/issues/voting-rights",
-                    "emoji": "📋"
+                    "emoji": "🗳️",
+                    "tag": "VOTE"
                   }
                 ],
                 "bottomPills": [],
@@ -5482,7 +5644,8 @@ const LAYERS = [
                   {
                     "label": "Corruption Perceptions Index — Transparency International",
                     "url": "https://www.transparency.org/en/cpi",
-                    "emoji": "📊"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "bottomPills": [],
@@ -5812,22 +5975,26 @@ const LAYERS = [
           {
             "label": "Columbia Journalism Review",
             "url": "https://www.cjr.org",
-            "emoji": "📰"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           },
           {
             "label": "Nieman Lab — journalism research",
             "url": "https://www.niemanlab.org",
-            "emoji": "📰"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           },
           {
             "label": "Reporters Without Borders — press freedom index",
             "url": "https://rsf.org",
-            "emoji": "📰"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           },
           {
             "label": "Pew Research — media & news",
             "url": "https://www.pewresearch.org/journalism",
-            "emoji": "📊"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           }
         ],
         "topPills": [
@@ -5840,7 +6007,8 @@ const LAYERS = [
               {
                 "label": "Nieman Lab — media history",
                 "url": "https://www.niemanlab.org",
-                "emoji": "📰"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -5880,7 +6048,8 @@ const LAYERS = [
                   {
                     "label": "Washington Post — Watergate archive",
                     "url": "https://www.washingtonpost.com",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -5895,12 +6064,14 @@ const LAYERS = [
                   {
                     "label": "Nieman Lab — local news collapse",
                     "url": "https://www.niemanlab.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "Pew Research — news industry trends",
                     "url": "https://www.pewresearch.org/journalism",
-                    "emoji": "📊"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -5935,7 +6106,8 @@ const LAYERS = [
               {
                 "label": "Pew Research — state of the news media",
                 "url": "https://www.pewresearch.org/journalism",
-                "emoji": "📊"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -5948,12 +6120,14 @@ const LAYERS = [
                   {
                     "label": "Free Press — media ownership",
                     "url": "https://www.freepress.net",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "Columbia Journalism Review",
                     "url": "https://www.cjr.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -5985,7 +6159,8 @@ const LAYERS = [
                   {
                     "label": "Poynter — local news tracker",
                     "url": "https://www.poynter.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6009,7 +6184,8 @@ const LAYERS = [
                   {
                     "label": "ProPublica — nonprofit investigative journalism",
                     "url": "https://www.propublica.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6027,12 +6203,14 @@ const LAYERS = [
               {
                 "label": "AllSides — media bias ratings",
                 "url": "https://www.allsides.com/media-bias/ratings",
-                "emoji": "📊"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               },
               {
                 "label": "Ad Fontes Media — bias & reliability chart",
                 "url": "https://adfontesmedia.com",
-                "emoji": "📊"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -6045,7 +6223,8 @@ const LAYERS = [
                   {
                     "label": "AllSides — understanding media bias",
                     "url": "https://www.allsides.com",
-                    "emoji": "📊"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6069,7 +6248,8 @@ const LAYERS = [
                   {
                     "label": "AllSides — outlet ratings",
                     "url": "https://www.allsides.com",
-                    "emoji": "📊"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6084,7 +6264,8 @@ const LAYERS = [
                   {
                     "label": "AllSides — outlet ratings",
                     "url": "https://www.allsides.com",
-                    "emoji": "📊"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6102,7 +6283,8 @@ const LAYERS = [
               {
                 "label": "Columbia Journalism Review",
                 "url": "https://www.cjr.org",
-                "emoji": "📰"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -6115,12 +6297,14 @@ const LAYERS = [
                   {
                     "label": "White House Correspondents' Association",
                     "url": "https://www.whca.press",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "Columbia Journalism Review",
                     "url": "https://www.cjr.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6135,7 +6319,8 @@ const LAYERS = [
                   {
                     "label": "Ad Fontes Media — reliability ratings",
                     "url": "https://adfontesmedia.com",
-                    "emoji": "📊"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6197,7 +6382,8 @@ const LAYERS = [
               {
                 "label": "Pew Research — media trust",
                 "url": "https://www.pewresearch.org/journalism",
-                "emoji": "📊"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -6238,7 +6424,8 @@ const LAYERS = [
                   {
                     "label": "White House Correspondents' Association",
                     "url": "https://www.whca.press",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6262,7 +6449,8 @@ const LAYERS = [
                   {
                     "label": "Pew Research — misinformation",
                     "url": "https://www.pewresearch.org",
-                    "emoji": "📊"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -6323,12 +6511,14 @@ const LAYERS = [
               {
                 "label": "Society of Professional Journalists — code of ethics",
                 "url": "https://www.spj.org/ethicscode.asp",
-                "emoji": "📰"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               },
               {
                 "label": "Reporters Without Borders — press freedom index",
                 "url": "https://rsf.org",
-                "emoji": "📰"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -6341,7 +6531,8 @@ const LAYERS = [
                   {
                     "label": "SPJ Code of Ethics",
                     "url": "https://www.spj.org/ethicscode.asp",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6365,12 +6556,14 @@ const LAYERS = [
                   {
                     "label": "Reporters Without Borders — US ranking",
                     "url": "https://rsf.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "Reporters Committee for Freedom of the Press",
                     "url": "https://www.rcfp.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6385,7 +6578,8 @@ const LAYERS = [
                   {
                     "label": "Columbia Journalism Review — media economics",
                     "url": "https://www.cjr.org",
-                    "emoji": "📰"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -6635,12 +6829,14 @@ const LAYERS = [
           {
             "label": "USASpending.gov",
             "url": "https://www.usaspending.gov",
-            "emoji": "📊"
+            "emoji": "💰",
+            "tag": "BUDGET"
           },
           {
             "label": "CBO",
             "url": "https://www.cbo.gov",
-            "emoji": "📊"
+            "emoji": "💰",
+            "tag": "BUDGET"
           }
         ],
         "topPills": [
@@ -6653,17 +6849,20 @@ const LAYERS = [
               {
                 "label": "OpenSecrets",
                 "url": "https://www.opensecrets.org",
-                "emoji": "💰"
+                "emoji": "💰",
+                "tag": "MONEY"
               },
               {
                 "label": "FollowTheMoney",
                 "url": "https://www.followthemoney.org",
-                "emoji": "💰"
+                "emoji": "💰",
+                "tag": "MONEY"
               },
               {
                 "label": "TrackAIPAC",
                 "url": "https://www.trackaipac.com",
-                "emoji": "💰"
+                "emoji": "💰",
+                "tag": "LOBBYING"
               }
             ],
             "topPills": [],
@@ -6888,12 +7087,14 @@ const LAYERS = [
           {
             "label": "Pew Research",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           },
           {
             "label": "Foreign Affairs",
             "url": "https://www.foreignaffairs.com",
-            "emoji": "📰"
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
           }
         ],
         "topPills": [],
@@ -6914,17 +7115,20 @@ const LAYERS = [
           {
             "label": "Costs of War Project — Brown University",
             "url": "https://watson.brown.edu/costsofwar",
-            "emoji": "⚔️"
+            "emoji": "🪖",
+            "tag": "MILITARY"
           },
           {
             "label": "National Archives — US military history",
             "url": "https://www.archives.gov/research/military",
-            "emoji": "📜"
+            "emoji": "🪖",
+            "tag": "MILITARY"
           },
           {
             "label": "Foreign Affairs — war & conflict",
             "url": "https://www.foreignaffairs.com",
-            "emoji": "🗺️"
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
           }
         ],
         "topPills": [
@@ -6937,7 +7141,8 @@ const LAYERS = [
               {
                 "label": "Costs of War Project",
                 "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "⚔️"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               }
             ],
             "topPills": [
@@ -6996,7 +7201,8 @@ const LAYERS = [
                   {
                     "label": "National Archives — Declaration of Independence",
                     "url": "https://www.archives.gov/founding-docs",
-                    "emoji": "📜"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -7093,12 +7299,14 @@ const LAYERS = [
               {
                 "label": "United States Holocaust Memorial Museum",
                 "url": "https://www.ushmm.org",
-                "emoji": "🕍"
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               },
               {
                 "label": "Genocide Watch",
                 "url": "https://www.genocidewatch.com",
-                "emoji": "⚖️"
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               }
             ],
             "topPills": [
@@ -7120,12 +7328,14 @@ const LAYERS = [
                   {
                     "label": "United States Holocaust Memorial Museum",
                     "url": "https://www.ushmm.org",
-                    "emoji": "🕍"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "Yad Vashem",
                     "url": "https://www.yadvashem.org",
-                    "emoji": "🕍"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -7149,7 +7359,8 @@ const LAYERS = [
                   {
                     "label": "National Museum of the American Indian",
                     "url": "https://americanindian.si.edu",
-                    "emoji": "🏛️"
+                    "emoji": "🌍",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -7197,7 +7408,8 @@ const LAYERS = [
                   {
                     "label": "Genocide Watch",
                     "url": "https://www.genocidewatch.com",
-                    "emoji": "⚖️"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [
@@ -7258,12 +7470,14 @@ const LAYERS = [
                   {
                     "label": "Genocide Watch",
                     "url": "https://www.genocidewatch.com",
-                    "emoji": "⚖️"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ICJ — genocide cases",
                     "url": "https://www.icj-cij.org",
-                    "emoji": "⚖️"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -7315,12 +7529,14 @@ const LAYERS = [
               {
                 "label": "Costs of War Project",
                 "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "⚔️"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               },
               {
                 "label": "National Archives — military records",
                 "url": "https://www.archives.gov/research/military",
-                "emoji": "📜"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               }
             ],
             "topPills": [
@@ -7333,7 +7549,8 @@ const LAYERS = [
                   {
                     "label": "National Archives — Civil War records",
                     "url": "https://www.archives.gov",
-                    "emoji": "📜"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [
@@ -7493,7 +7710,8 @@ const LAYERS = [
                   {
                     "label": "Costs of War Project",
                     "url": "https://watson.brown.edu/costsofwar",
-                    "emoji": "⚔️"
+                    "emoji": "🪖",
+                    "tag": "MILITARY"
                   }
                 ],
                 "topPills": [
@@ -7524,7 +7742,8 @@ const LAYERS = [
                       {
                         "label": "ACLU — national security",
                         "url": "https://www.aclu.org/issues/national-security",
-                        "emoji": "⚖️"
+                        "emoji": "⚖️",
+                        "tag": "RIGHTS"
                       }
                     ],
                     "topPills": [],
@@ -7559,12 +7778,14 @@ const LAYERS = [
                   {
                     "label": "Drug Policy Alliance",
                     "url": "https://drugpolicy.org",
-                    "emoji": "⚖️"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ACLU — mass incarceration",
                     "url": "https://www.aclu.org",
-                    "emoji": "⚖️"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -7624,12 +7845,14 @@ const LAYERS = [
               {
                 "label": "Costs of War Project",
                 "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "⚔️"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               },
               {
                 "label": "OpenSecrets — defense lobbying",
                 "url": "https://www.opensecrets.org",
-                "emoji": "💰"
+                "emoji": "💰",
+                "tag": "MONEY"
               }
             ],
             "topPills": [
@@ -7642,7 +7865,8 @@ const LAYERS = [
                   {
                     "label": "OpenSecrets — defense industry",
                     "url": "https://www.opensecrets.org",
-                    "emoji": "💰"
+                    "emoji": "💰",
+                    "tag": "MONEY"
                   }
                 ],
                 "topPills": [],
@@ -7657,7 +7881,8 @@ const LAYERS = [
                   {
                     "label": "USASpending.gov — defense",
                     "url": "https://www.usaspending.gov",
-                    "emoji": "📊"
+                    "emoji": "💰",
+                    "tag": "BUDGET"
                   }
                 ],
                 "topPills": [],
@@ -7672,7 +7897,8 @@ const LAYERS = [
                   {
                     "label": "Costs of War — overseas bases",
                     "url": "https://watson.brown.edu/costsofwar",
-                    "emoji": "⚔️"
+                    "emoji": "🪖",
+                    "tag": "MILITARY"
                   }
                 ],
                 "topPills": [],
@@ -7687,7 +7913,8 @@ const LAYERS = [
                   {
                     "label": "OpenSecrets — revolving door",
                     "url": "https://www.opensecrets.org",
-                    "emoji": "💰"
+                    "emoji": "💰",
+                    "tag": "MONEY"
                   }
                 ],
                 "topPills": [],
@@ -7833,12 +8060,14 @@ const LAYERS = [
           {
             "label": "Congress.gov",
             "url": "https://congress.gov",
-            "emoji": "🏛️"
+            "emoji": "🏛️",
+            "tag": "CONGRESS"
           },
           {
             "label": "GovTrack",
             "url": "https://govtrack.us",
-            "emoji": "🏛️"
+            "emoji": "🏛️",
+            "tag": "CONGRESS"
           }
         ],
         "topPills": [],
@@ -7858,12 +8087,14 @@ const LAYERS = [
           {
             "label": "Foreign Affairs — empire & power",
             "url": "https://www.foreignaffairs.com",
-            "emoji": "📰"
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
           },
           {
             "label": "Lapham's Quarterly — history in primary sources",
             "url": "https://www.laphamsquarterly.org",
-            "emoji": "📜"
+            "emoji": "📚",
+            "tag": "HISTORY"
           }
         ],
         "topPills": [
@@ -7876,7 +8107,8 @@ const LAYERS = [
               {
                 "label": "Lapham's Quarterly — ancient empires",
                 "url": "https://www.laphamsquarterly.org",
-                "emoji": "📜"
+                "emoji": "📚",
+                "tag": "HISTORY"
               }
             ],
             "topPills": [
@@ -7899,7 +8131,8 @@ const LAYERS = [
                   {
                     "label": "British Museum — Cyrus Cylinder",
                     "url": "https://www.britishmuseum.org/collection/object/W_1880-0617-1941",
-                    "emoji": "🏛️"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -7925,7 +8158,8 @@ const LAYERS = [
                   {
                     "label": "Encyclopaedia Britannica — Roman Empire",
                     "url": "https://www.britannica.com/place/Roman-Empire",
-                    "emoji": "📖"
+                    "emoji": "📚",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -8046,7 +8280,8 @@ const LAYERS = [
               {
                 "label": "World History Encyclopedia — colonialism",
                 "url": "https://www.worldhistory.org",
-                "emoji": "📚"
+                "emoji": "📚",
+                "tag": "HISTORY"
               }
             ],
             "topPills": [
@@ -8102,7 +8337,8 @@ const LAYERS = [
                   {
                     "label": "Oxford Dictionary of National Biography — empire",
                     "url": "https://www.oxforddnb.com",
-                    "emoji": "📚"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -8187,7 +8423,8 @@ const LAYERS = [
                   {
                     "label": "Adam Hochschild — King Leopold's Ghost",
                     "url": "https://www.jstor.org",
-                    "emoji": "📚"
+                    "emoji": "📚",
+                    "tag": "ACADEMIC"
                   }
                 ],
                 "topPills": [],
@@ -8248,7 +8485,8 @@ const LAYERS = [
                   {
                     "label": "African Union — colonial borders & conflict",
                     "url": "https://au.int",
-                    "emoji": "🌍"
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
                   }
                 ],
                 "topPills": [],
@@ -8334,7 +8572,8 @@ const LAYERS = [
               {
                 "label": "Foreign Affairs — 20th century history",
                 "url": "https://www.foreignaffairs.com",
-                "emoji": "📰"
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
               }
             ],
             "topPills": [
@@ -8407,7 +8646,8 @@ const LAYERS = [
                   {
                     "label": "National Security Archive — declassified interventions",
                     "url": "https://nsarchive.gwu.edu",
-                    "emoji": "📋"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -8457,7 +8697,8 @@ const LAYERS = [
               {
                 "label": "Costs of War — Brown University",
                 "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "📋"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               }
             ],
             "topPills": [
@@ -8480,7 +8721,8 @@ const LAYERS = [
                   {
                     "label": "Costs of War — base network analysis",
                     "url": "https://watson.brown.edu/costsofwar",
-                    "emoji": "📋"
+                    "emoji": "🪖",
+                    "tag": "MILITARY"
                   }
                 ],
                 "topPills": [],
@@ -8506,7 +8748,8 @@ const LAYERS = [
                   {
                     "label": "National Security Archive — declassified records",
                     "url": "https://nsarchive.gwu.edu",
-                    "emoji": "📋"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -8532,7 +8775,8 @@ const LAYERS = [
                   {
                     "label": "Foreign Affairs — American power",
                     "url": "https://www.foreignaffairs.com",
-                    "emoji": "📰"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [],
@@ -8552,7 +8796,8 @@ const LAYERS = [
               {
                 "label": "Hannah Arendt — The Origins of Totalitarianism",
                 "url": "https://www.jstor.org",
-                "emoji": "📚"
+                "emoji": "📚",
+                "tag": "ACADEMIC"
               },
               {
                 "label": "Who Rules the World — The Architecture of Power",
@@ -8581,7 +8826,8 @@ const LAYERS = [
                   {
                     "label": "Lapham's Quarterly — tyrants & power",
                     "url": "https://www.laphamsquarterly.org",
-                    "emoji": "📜"
+                    "emoji": "📚",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -8788,7 +9034,8 @@ const LAYERS = [
                   {
                     "label": "Checks & Balances — GLORIES",
                     "url": "https://usnow.app",
-                    "emoji": "⚖️"
+                    "emoji": "🌐",
+                    "tag": "USNOW"
                   }
                 ],
                 "topPills": [],
@@ -8899,12 +9146,14 @@ const LAYERS = [
           {
             "label": "Endangered Language Fund",
             "url": "https://www.endangeredlanguagefund.org",
-            "emoji": "🌍"
+            "emoji": "📚",
+            "tag": "CULTURE"
           },
           {
             "label": "Aeon — language & thought",
             "url": "https://aeon.co",
-            "emoji": "💭"
+            "emoji": "🧠",
+            "tag": "MIND"
           }
         ],
         "topPills": [
@@ -8917,7 +9166,8 @@ const LAYERS = [
               {
                 "label": "Aeon — origins of language",
                 "url": "https://aeon.co",
-                "emoji": "💭"
+                "emoji": "🧠",
+                "tag": "MIND"
               }
             ],
             "topPills": [],
@@ -8933,7 +9183,8 @@ const LAYERS = [
               {
                 "label": "Endangered Language Fund",
                 "url": "https://www.endangeredlanguagefund.org",
-                "emoji": "🌍"
+                "emoji": "📚",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [],
@@ -8979,7 +9230,8 @@ const LAYERS = [
               {
                 "label": "Endangered Language Fund",
                 "url": "https://www.endangeredlanguagefund.org",
-                "emoji": "🌍"
+                "emoji": "📚",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [],
@@ -9006,12 +9258,14 @@ const LAYERS = [
           {
             "label": "Foreign Affairs — historical analysis",
             "url": "https://www.foreignaffairs.com",
-            "emoji": "📰"
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
           },
           {
             "label": "Longreads — history journalism",
             "url": "https://longreads.com",
-            "emoji": "📰"
+            "emoji": "📚",
+            "tag": "CULTURE"
           }
         ],
         "topPills": [],
@@ -9027,7 +9281,8 @@ const LAYERS = [
           {
             "label": "Longreads — history & memory",
             "url": "https://longreads.com",
-            "emoji": "📰"
+            "emoji": "📚",
+            "tag": "CULTURE"
           }
         ],
         "topPills": [],
@@ -9053,7 +9308,8 @@ const LAYERS = [
           {
             "label": "Foreign Affairs — civilizational risk",
             "url": "https://www.foreignaffairs.com",
-            "emoji": "📰"
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
           }
         ],
         "topPills": [],
@@ -9079,7 +9335,8 @@ const LAYERS = [
           {
             "label": "Pew Research — long-term social trends",
             "url": "https://www.pewresearch.org",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [],
@@ -9105,17 +9362,20 @@ const LAYERS = [
           {
             "label": "National Museum of the American Indian",
             "url": "https://americanindian.si.edu",
-            "emoji": "🏛️"
+            "emoji": "🌍",
+            "tag": "CULTURE"
           },
           {
             "label": "Native Land Digital — whose land",
             "url": "https://native-land.ca",
-            "emoji": "🗺️"
+            "emoji": "🌍",
+            "tag": "CULTURE"
           },
           {
             "label": "Smithsonian — Native American history",
             "url": "https://www.si.edu/spotlight/native-voices",
-            "emoji": "📚"
+            "emoji": "🌍",
+            "tag": "CULTURE"
           }
         ],
         "topPills": [
@@ -9128,7 +9388,8 @@ const LAYERS = [
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🏛️"
+                "emoji": "🌍",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [
@@ -9141,7 +9402,8 @@ const LAYERS = [
                   {
                     "label": "National Archives — Declaration of Independence",
                     "url": "https://www.archives.gov/founding-docs/declaration-transcript",
-                    "emoji": "📜"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -9180,7 +9442,8 @@ const LAYERS = [
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🏛️"
+                "emoji": "🌍",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [
@@ -9193,7 +9456,8 @@ const LAYERS = [
                   {
                     "label": "Smithsonian — buffalo history",
                     "url": "https://www.si.edu",
-                    "emoji": "📚"
+                    "emoji": "📚",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -9219,7 +9483,8 @@ const LAYERS = [
                   {
                     "label": "Native Land Digital",
                     "url": "https://native-land.ca",
-                    "emoji": "🗺️"
+                    "emoji": "🌍",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -9259,12 +9524,14 @@ const LAYERS = [
               {
                 "label": "National Archives — Indian Removal Act",
                 "url": "https://www.archives.gov",
-                "emoji": "📜"
+                "emoji": "🏛️",
+                "tag": "HISTORY"
               },
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🏛️"
+                "emoji": "🌍",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [
@@ -9277,7 +9544,8 @@ const LAYERS = [
                   {
                     "label": "National Archives — treaty records",
                     "url": "https://www.archives.gov",
-                    "emoji": "📜"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -9293,7 +9561,8 @@ const LAYERS = [
                   {
                     "label": "Smithsonian — Native American history",
                     "url": "https://www.si.edu/spotlight/native-voices",
-                    "emoji": "📚"
+                    "emoji": "🌍",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -9309,12 +9578,14 @@ const LAYERS = [
                   {
                     "label": "Department of Interior — boarding school report",
                     "url": "https://www.doi.gov",
-                    "emoji": "📜"
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   },
                   {
                     "label": "National Native American Boarding School Healing Coalition",
                     "url": "https://boardingschoolhealing.org",
-                    "emoji": "🏛️"
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -9334,12 +9605,14 @@ const LAYERS = [
               {
                 "label": "National Congress of American Indians",
                 "url": "https://www.ncai.org",
-                "emoji": "🏛️"
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               },
               {
                 "label": "Native Land Digital",
                 "url": "https://native-land.ca",
-                "emoji": "🗺️"
+                "emoji": "🌍",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [],
@@ -9355,12 +9628,14 @@ const LAYERS = [
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🏛️"
+                "emoji": "🌍",
+                "tag": "CULTURE"
               },
               {
                 "label": "Tribal colleges — American Indian College Fund",
                 "url": "https://collegefund.org",
-                "emoji": "📚"
+                "emoji": "📚",
+                "tag": "LEARN"
               }
             ],
             "topPills": [],
@@ -9416,17 +9691,20 @@ const LAYERS = [
           {
             "label": "Foreign Affairs — geopolitics",
             "url": "https://www.foreignaffairs.com",
-            "emoji": "🗺️"
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
           },
           {
             "label": "Quincy Institute — foreign policy",
             "url": "https://quincyinst.org",
-            "emoji": "🕊️"
+            "emoji": "🪖",
+            "tag": "MILITARY"
           },
           {
             "label": "Council on Foreign Relations",
             "url": "https://www.cfr.org",
-            "emoji": "📰"
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
           }
         ],
         "topPills": [
@@ -9439,7 +9717,8 @@ const LAYERS = [
               {
                 "label": "Foreign Affairs",
                 "url": "https://www.foreignaffairs.com",
-                "emoji": "🗺️"
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
               }
             ],
             "topPills": [
@@ -9482,12 +9761,14 @@ const LAYERS = [
               {
                 "label": "Foreign Affairs",
                 "url": "https://www.foreignaffairs.com",
-                "emoji": "🗺️"
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
               },
               {
                 "label": "Al Jazeera — world coverage",
                 "url": "https://www.aljazeera.com",
-                "emoji": "🌍"
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
               }
             ],
             "topPills": [
@@ -9500,7 +9781,8 @@ const LAYERS = [
                   {
                     "label": "NACLA — Latin America analysis",
                     "url": "https://nacla.org",
-                    "emoji": "🌎"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [
@@ -9522,7 +9804,8 @@ const LAYERS = [
                       {
                         "label": "National Security Archive — declassified docs",
                         "url": "https://nsarchive.gwu.edu",
-                        "emoji": "📜"
+                        "emoji": "🏛️",
+                        "tag": "HISTORY"
                       }
                     ],
                     "topPills": [],
@@ -9566,7 +9849,8 @@ const LAYERS = [
                   {
                     "label": "Foreign Affairs — Europe",
                     "url": "https://www.foreignaffairs.com",
-                    "emoji": "🗺️"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [
@@ -9597,7 +9881,8 @@ const LAYERS = [
                       {
                         "label": "Foreign Affairs — Ukraine",
                         "url": "https://www.foreignaffairs.com",
-                        "emoji": "🗺️"
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
                       }
                     ],
                     "topPills": [],
@@ -9615,7 +9900,8 @@ const LAYERS = [
                   {
                     "label": "Foreign Affairs — Russia",
                     "url": "https://www.foreignaffairs.com",
-                    "emoji": "🗺️"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [
@@ -9667,12 +9953,14 @@ const LAYERS = [
                   {
                     "label": "Foreign Affairs — Middle East",
                     "url": "https://www.foreignaffairs.com",
-                    "emoji": "🗺️"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   },
                   {
                     "label": "Al Jazeera",
                     "url": "https://www.aljazeera.com",
-                    "emoji": "🌍"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [
@@ -9694,7 +9982,8 @@ const LAYERS = [
                       {
                         "label": "B'Tselem — Israeli human rights org",
                         "url": "https://www.btselem.org",
-                        "emoji": "⚖️"
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
                       }
                     ],
                     "topPills": [],
@@ -9747,7 +10036,8 @@ const LAYERS = [
                   {
                     "label": "Foreign Affairs — China",
                     "url": "https://www.foreignaffairs.com",
-                    "emoji": "🗺️"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [
@@ -9797,12 +10087,14 @@ const LAYERS = [
                       {
                         "label": "Foreign Affairs — world order",
                         "url": "https://www.foreignaffairs.com",
-                        "emoji": "🗺️"
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
                       },
                       {
                         "label": "Quincy Institute",
                         "url": "https://quincyinst.org",
-                        "emoji": "🕊️"
+                        "emoji": "🪖",
+                        "tag": "MILITARY"
                       }
                     ],
                     "topPills": [
@@ -9842,12 +10134,14 @@ const LAYERS = [
                           {
                             "label": "Foreign Affairs — Global South",
                             "url": "https://www.foreignaffairs.com",
-                            "emoji": "🗺️"
+                            "emoji": "🌐",
+                            "tag": "GEOPOLITICS"
                           },
                           {
                             "label": "Al Jazeera — Global South coverage",
                             "url": "https://www.aljazeera.com",
-                            "emoji": "🌍"
+                            "emoji": "🌐",
+                            "tag": "GEOPOLITICS"
                           }
                         ],
                         "topPills": [],
@@ -9911,12 +10205,14 @@ const LAYERS = [
                           {
                             "label": "G77 — official site",
                             "url": "https://www.g77.org",
-                            "emoji": "🌍"
+                            "emoji": "🌐",
+                            "tag": "GEOPOLITICS"
                           },
                           {
                             "label": "Non-Aligned Movement — history",
                             "url": "https://www.nam.gov.za",
-                            "emoji": "🌍"
+                            "emoji": "🌐",
+                            "tag": "GEOPOLITICS"
                           }
                         ],
                         "topPills": [],
@@ -9956,7 +10252,8 @@ const LAYERS = [
                           {
                             "label": "Foreign Affairs",
                             "url": "https://www.foreignaffairs.com",
-                            "emoji": "🗺️"
+                            "emoji": "🌐",
+                            "tag": "GEOPOLITICS"
                           }
                         ],
                         "topPills": [],
@@ -10010,12 +10307,14 @@ const LAYERS = [
                   {
                     "label": "Foreign Affairs — Africa",
                     "url": "https://www.foreignaffairs.com",
-                    "emoji": "🗺️"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   },
                   {
                     "label": "Al Jazeera — Africa",
                     "url": "https://www.aljazeera.com",
-                    "emoji": "🌍"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [
@@ -10061,7 +10360,8 @@ const LAYERS = [
               {
                 "label": "Costs of War Project",
                 "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "⚔️"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               }
             ],
             "topPills": [
@@ -10112,7 +10412,8 @@ const LAYERS = [
               {
                 "label": "Costs of War — resource conflicts",
                 "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "⚔️"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               }
             ],
             "topPills": [
@@ -10190,12 +10491,14 @@ const LAYERS = [
               {
                 "label": "Foreign Affairs — world order",
                 "url": "https://www.foreignaffairs.com",
-                "emoji": "🗺️"
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
               },
               {
                 "label": "Quincy Institute",
                 "url": "https://quincyinst.org",
-                "emoji": "🕊️"
+                "emoji": "🪖",
+                "tag": "MILITARY"
               }
             ],
             "topPills": [
@@ -10235,7 +10538,8 @@ const LAYERS = [
                   {
                     "label": "Foreign Affairs",
                     "url": "https://www.foreignaffairs.com",
-                    "emoji": "🗺️"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [],
@@ -10398,12 +10702,14 @@ const LAYERS = [
                   {
                     "label": "Aeon — history of astrology",
                     "url": "https://aeon.co",
-                    "emoji": "💭"
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   },
                   {
                     "label": "NASA Astronomy Picture of the Day",
                     "url": "https://apod.nasa.gov",
-                    "emoji": "🔭"
+                    "emoji": "🔬",
+                    "tag": "COSMOS"
                   }
                 ],
                 "topPills": [
@@ -10648,7 +10954,8 @@ const LAYERS = [
                   {
                     "label": "British Museum — tarot history",
                     "url": "https://www.britishmuseum.org",
-                    "emoji": "🏛️"
+                    "emoji": "📚",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -10664,7 +10971,8 @@ const LAYERS = [
                   {
                     "label": "I Ching — Wilhelm/Baynes translation (Princeton)",
                     "url": "https://press.princeton.edu",
-                    "emoji": "📖"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -10690,7 +10998,8 @@ const LAYERS = [
                   {
                     "label": "UNESCO — Yoruba Ifá Divination System",
                     "url": "https://ich.unesco.org/en/RL/ifa-divination-system-00146",
-                    "emoji": "🌍"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -10717,7 +11026,8 @@ const LAYERS = [
                   {
                     "label": "Corpus Hermeticum — Hermetic Library",
                     "url": "https://hermetic.com/texts/corpus-hermeticum",
-                    "emoji": "📜"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -10733,7 +11043,8 @@ const LAYERS = [
                   {
                     "label": "Gershom Scholem — Major Trends in Jewish Mysticism",
                     "url": "https://www.jstor.org",
-                    "emoji": "📚"
+                    "emoji": "📚",
+                    "tag": "ACADEMIC"
                   }
                 ],
                 "topPills": [],
@@ -10749,7 +11060,8 @@ const LAYERS = [
                   {
                     "label": "Nag Hammadi Library — Gnostic Society",
                     "url": "http://www.gnosis.org/naghamm/nhl.html",
-                    "emoji": "📜"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -10806,7 +11118,8 @@ const LAYERS = [
                   {
                     "label": "Newton Project — alchemical manuscripts",
                     "url": "https://www.newtonproject.ox.ac.uk",
-                    "emoji": "🔬"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -10822,7 +11135,8 @@ const LAYERS = [
                   {
                     "label": "Agrippa — Three Books of Occult Philosophy",
                     "url": "http://www.esotericarchives.com/agrippa/agrippa1.htm",
-                    "emoji": "📜"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -10838,7 +11152,8 @@ const LAYERS = [
                   {
                     "label": "The Book of the Law — Liber AL vel Legis",
                     "url": "https://hermetic.com/crowley/libers/lib220",
-                    "emoji": "📜"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -10874,7 +11189,8 @@ const LAYERS = [
                   {
                     "label": "Johns Hopkins Psychedelic Research",
                     "url": "https://hopkinspsychedelic.org",
-                    "emoji": "🔬"
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -10972,7 +11288,8 @@ const LAYERS = [
                   {
                     "label": "United Grand Lodge of England",
                     "url": "https://www.ugle.org.uk",
-                    "emoji": "🏛️"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -11166,7 +11483,8 @@ const LAYERS = [
                   {
                     "label": "Michael Kater — Das Ahnenerbe der SS",
                     "url": "https://www.jstor.org",
-                    "emoji": "📚"
+                    "emoji": "📚",
+                    "tag": "ACADEMIC"
                   }
                 ],
                 "topPills": [],
@@ -11252,12 +11570,14 @@ const LAYERS = [
               {
                 "label": "Carroll Quigley — Tragedy and Hope",
                 "url": "https://archive.org",
-                "emoji": "📚"
+                "emoji": "📚",
+                "tag": "CULTURE"
               },
               {
                 "label": "Foreign Affairs — shadow networks",
                 "url": "https://www.foreignaffairs.com",
-                "emoji": "📰"
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
               }
             ],
             "topPills": [
@@ -11618,7 +11938,8 @@ const LAYERS = [
                       {
                         "label": "Bilderberg — official participant list",
                         "url": "https://bilderbergmeetings.org",
-                        "emoji": "📋"
+                        "emoji": "💰",
+                        "tag": "MONEY"
                       }
                     ],
                     "topPills": [],
@@ -11671,7 +11992,8 @@ const LAYERS = [
                       {
                         "label": "Council on Foreign Relations",
                         "url": "https://www.cfr.org",
-                        "emoji": "🏛️"
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
                       }
                     ],
                     "topPills": [],
@@ -11735,7 +12057,8 @@ const LAYERS = [
                       {
                         "label": "Italian Parliamentary Commission — P2 report",
                         "url": "https://www.jstor.org",
-                        "emoji": "📋"
+                        "emoji": "📚",
+                        "tag": "ACADEMIC"
                       }
                     ],
                     "topPills": [],
@@ -11806,7 +12129,8 @@ const LAYERS = [
                       {
                         "label": "Daniele Ganser — NATO's Secret Armies",
                         "url": "https://www.jstor.org",
-                        "emoji": "📚"
+                        "emoji": "📚",
+                        "tag": "ACADEMIC"
                       }
                     ],
                     "topPills": [],
@@ -12321,12 +12645,14 @@ const LAYERS = [
           {
             "label": "Pew Research: Religion",
             "url": "https://www.pewresearch.org/religion/",
-            "emoji": "📊"
+            "emoji": "📊",
+            "tag": "DATA"
           },
           {
             "label": "On Being",
             "url": "https://onbeing.org",
-            "emoji": "🕊️"
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           }
         ],
         "topPills": [
@@ -12339,12 +12665,14 @@ const LAYERS = [
               {
                 "label": "Pew Research — global religion",
                 "url": "https://www.pewresearch.org/religion",
-                "emoji": "📊"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Pluralism Project — Harvard",
                 "url": "https://pluralism.org",
-                "emoji": "📚"
+                "emoji": "🕊️",
+                "tag": "SPIRIT"
               }
             ],
             "bottomPills": [
@@ -12383,17 +12711,20 @@ const LAYERS = [
                   {
                     "label": "My Jewish Learning — accessible Jewish education",
                     "url": "https://www.myjewishlearning.com",
-                    "emoji": "✡️"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   },
                   {
                     "label": "Jewish Virtual Library",
                     "url": "https://www.jewishvirtuallibrary.org",
-                    "emoji": "📚"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   },
                   {
                     "label": "Pew Research — Jewish Americans",
                     "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
-                    "emoji": "📊"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [
@@ -12406,7 +12737,8 @@ const LAYERS = [
                       {
                         "label": "My Jewish Learning — Torah & Talmud",
                         "url": "https://www.myjewishlearning.com/article/talmud-101",
-                        "emoji": "✡️"
+                        "emoji": "🕊️",
+                        "tag": "SPIRIT"
                       }
                     ],
                     "topPills": [],
@@ -12421,7 +12753,8 @@ const LAYERS = [
                       {
                         "label": "My Jewish Learning — Jewish identity",
                         "url": "https://www.myjewishlearning.com",
-                        "emoji": "✡️"
+                        "emoji": "🕊️",
+                        "tag": "SPIRIT"
                       }
                     ],
                     "topPills": [],
@@ -12436,7 +12769,8 @@ const LAYERS = [
                       {
                         "label": "My Jewish Learning — denominations",
                         "url": "https://www.myjewishlearning.com/article/the-four-jewish-denominations",
-                        "emoji": "✡️"
+                        "emoji": "🕊️",
+                        "tag": "SPIRIT"
                       }
                     ],
                     "topPills": [
@@ -12488,7 +12822,8 @@ const LAYERS = [
                       {
                         "label": "Jewish Virtual Library — diaspora communities",
                         "url": "https://www.jewishvirtuallibrary.org",
-                        "emoji": "📚"
+                        "emoji": "🕊️",
+                        "tag": "SPIRIT"
                       }
                     ],
                     "topPills": [
@@ -12528,7 +12863,8 @@ const LAYERS = [
                           {
                             "label": "Pew Research — Jewish Americans 2020",
                             "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           }
                         ],
                         "topPills": [],
@@ -12546,12 +12882,14 @@ const LAYERS = [
                       {
                         "label": "Jewish Virtual Library — Zionism",
                         "url": "https://www.jewishvirtuallibrary.org/zionism",
-                        "emoji": "📚"
+                        "emoji": "🕊️",
+                        "tag": "SPIRIT"
                       },
                       {
                         "label": "My Jewish Learning — Zionism",
                         "url": "https://www.myjewishlearning.com",
-                        "emoji": "✡️"
+                        "emoji": "🕊️",
+                        "tag": "SPIRIT"
                       }
                     ],
                     "topPills": [
@@ -12582,7 +12920,8 @@ const LAYERS = [
                           {
                             "label": "Pew Research — Jewish Americans & Israel",
                             "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           }
                         ],
                         "topPills": [],
@@ -12618,12 +12957,14 @@ const LAYERS = [
                       {
                         "label": "United States Holocaust Memorial Museum — antisemitism",
                         "url": "https://www.ushmm.org/antisemitism",
-                        "emoji": "🕍"
+                        "emoji": "⚖️",
+                        "tag": "RIGHTS"
                       },
                       {
                         "label": "ADL — tracking antisemitism",
                         "url": "https://www.adl.org",
-                        "emoji": "⚖️"
+                        "emoji": "⚖️",
+                        "tag": "RIGHTS"
                       }
                     ],
                     "topPills": [
@@ -12654,7 +12995,8 @@ const LAYERS = [
                           {
                             "label": "ADL — antisemitism tracker",
                             "url": "https://www.adl.org/resources/report/audit-antisemitic-incidents",
-                            "emoji": "⚖️"
+                            "emoji": "⚖️",
+                            "tag": "RIGHTS"
                           }
                         ],
                         "topPills": [],
@@ -12689,12 +13031,14 @@ const LAYERS = [
                       {
                         "label": "Elie Wiesel Foundation",
                         "url": "https://eliewieselfoundation.org",
-                        "emoji": "🕍"
+                        "emoji": "⚖️",
+                        "tag": "RIGHTS"
                       },
                       {
                         "label": "USHMM — Jewish responses to the Holocaust",
                         "url": "https://www.ushmm.org",
-                        "emoji": "🕍"
+                        "emoji": "⚖️",
+                        "tag": "RIGHTS"
                       }
                     ],
                     "topPills": [],
@@ -12746,12 +13090,14 @@ const LAYERS = [
                   {
                     "label": "Pew Research — global Christianity",
                     "url": "https://www.pewresearch.org/religion",
-                    "emoji": "📊"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Christianity Today",
                     "url": "https://www.christianitytoday.com",
-                    "emoji": "✝️"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [
@@ -12773,7 +13119,8 @@ const LAYERS = [
                       {
                         "label": "Pew Research — Catholic & Orthodox",
                         "url": "https://www.pewresearch.org/religion",
-                        "emoji": "📊"
+                        "emoji": "📊",
+                        "tag": "DATA"
                       }
                     ],
                     "topPills": [
@@ -12853,7 +13200,8 @@ const LAYERS = [
                       {
                         "label": "Pew Research — global Pentecostalism",
                         "url": "https://www.pewresearch.org/religion",
-                        "emoji": "📊"
+                        "emoji": "📊",
+                        "tag": "DATA"
                       }
                     ],
                     "topPills": [],
@@ -12957,17 +13305,20 @@ const LAYERS = [
                   {
                     "label": "Pew Research — global Muslim population",
                     "url": "https://www.pewresearch.org/religion/2011/01/27/the-future-of-the-global-muslim-population",
-                    "emoji": "📊"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Islamic Society of North America",
                     "url": "https://www.isna.net",
-                    "emoji": "☪️"
+                    "emoji": "🕊️",
+                    "tag": "SPIRIT"
                   },
                   {
                     "label": "Al Jazeera — Islam and the world",
                     "url": "https://www.aljazeera.com",
-                    "emoji": "🌍"
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
                   }
                 ],
                 "topPills": [
@@ -12980,7 +13331,8 @@ const LAYERS = [
                       {
                         "label": "Pew Research — Muslim beliefs & practices",
                         "url": "https://www.pewresearch.org/religion",
-                        "emoji": "📊"
+                        "emoji": "📊",
+                        "tag": "DATA"
                       }
                     ],
                     "topPills": [],
@@ -13011,12 +13363,14 @@ const LAYERS = [
                           {
                             "label": "Pew Research — Muslim population by country",
                             "url": "https://www.pewresearch.org/religion",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           },
                           {
                             "label": "Al Jazeera",
                             "url": "https://www.aljazeera.com",
-                            "emoji": "🌍"
+                            "emoji": "🌐",
+                            "tag": "GEOPOLITICS"
                           }
                         ],
                         "topPills": [],
@@ -13059,7 +13413,8 @@ const LAYERS = [
                           {
                             "label": "Pew Research — Shia population",
                             "url": "https://www.pewresearch.org/religion",
-                            "emoji": "📊"
+                            "emoji": "📊",
+                            "tag": "DATA"
                           }
                         ],
                         "topPills": [],
@@ -13104,7 +13459,8 @@ const LAYERS = [
                       {
                         "label": "Pew Research — Muslims and modernity",
                         "url": "https://www.pewresearch.org/religion",
-                        "emoji": "📊"
+                        "emoji": "📊",
+                        "tag": "DATA"
                       }
                     ],
                     "topPills": [],
@@ -13119,12 +13475,14 @@ const LAYERS = [
                       {
                         "label": "Al Jazeera — Islam in Africa",
                         "url": "https://www.aljazeera.com",
-                        "emoji": "🌍"
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
                       },
                       {
                         "label": "Pew Research — Islam in sub-Saharan Africa",
                         "url": "https://www.pewresearch.org/religion",
-                        "emoji": "📊"
+                        "emoji": "📊",
+                        "tag": "DATA"
                       }
                     ],
                     "topPills": [],
@@ -13335,12 +13693,14 @@ const LAYERS = [
                   {
                     "label": "National Museum of the American Indian",
                     "url": "https://americanindian.si.edu",
-                    "emoji": "🏛️"
+                    "emoji": "🌍",
+                    "tag": "CULTURE"
                   },
                   {
                     "label": "Native Land Digital",
                     "url": "https://native-land.ca",
-                    "emoji": "🗺️"
+                    "emoji": "🌍",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [
@@ -13389,7 +13749,8 @@ const LAYERS = [
                       {
                         "label": "Native Land Digital",
                         "url": "https://native-land.ca",
-                        "emoji": "🗺️"
+                        "emoji": "🌍",
+                        "tag": "CULTURE"
                       }
                     ],
                     "topPills": [],
@@ -13982,12 +14343,14 @@ const LAYERS = [
           {
             "label": "Aeon — philosophy of existence",
             "url": "https://aeon.co",
-            "emoji": "💭"
+            "emoji": "🧠",
+            "tag": "MIND"
           },
           {
             "label": "Nautilus — cosmology",
             "url": "https://nautil.us",
-            "emoji": "🔬"
+            "emoji": "🔬",
+            "tag": "COSMOS"
           }
         ],
         "topPills": [],
@@ -14003,7 +14366,8 @@ const LAYERS = [
           {
             "label": "On Being — beyond language",
             "url": "https://onbeing.org",
-            "emoji": "🕊️"
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           }
         ],
         "topPills": [],
@@ -14029,12 +14393,14 @@ const LAYERS = [
           {
             "label": "On Being — contemplative traditions",
             "url": "https://onbeing.org",
-            "emoji": "🕊️"
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           },
           {
             "label": "Aeon — mysticism & philosophy",
             "url": "https://aeon.co",
-            "emoji": "💭"
+            "emoji": "🧠",
+            "tag": "MIND"
           }
         ],
         "topPills": [],
@@ -14050,7 +14416,8 @@ const LAYERS = [
           {
             "label": "NASA — cosmology",
             "url": "https://apod.nasa.gov",
-            "emoji": "🔭"
+            "emoji": "🔬",
+            "tag": "COSMOS"
           }
         ],
         "topPills": [],
@@ -14070,12 +14437,14 @@ const LAYERS = [
                   {
                     "label": "Aeon — history of astrology",
                     "url": "https://aeon.co",
-                    "emoji": "💭"
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   },
                   {
                     "label": "NASA Astronomy Picture of the Day",
                     "url": "https://apod.nasa.gov",
-                    "emoji": "🔭"
+                    "emoji": "🔬",
+                    "tag": "COSMOS"
                   }
                 ],
                 "topPills": [
@@ -14281,12 +14650,14 @@ const LAYERS = [
           {
             "label": "Aeon — the hard problem",
             "url": "https://aeon.co",
-            "emoji": "💭"
+            "emoji": "🧠",
+            "tag": "MIND"
           },
           {
             "label": "On Being — consciousness & cosmos",
             "url": "https://onbeing.org",
-            "emoji": "🕊️"
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           }
         ],
         "topPills": [],
