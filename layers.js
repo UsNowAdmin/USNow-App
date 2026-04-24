@@ -9330,7 +9330,80 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
+            "bottomPills": [
+          {
+            "id": "x5",
+            "label": "Religion",
+            "desc": "",
+            "links": [],
+            "topPills": [],
             "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x1",
+            "label": "Myth",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x2",
+            "label": "Death",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1",
+            "label": "Nations & Empire",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_megalomania",
+            "label": "Megalomania & the Crown",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "occ_secret_societies",
+            "label": "Other Secret Societies",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "glories_deepstate",
+            "label": "The Deep State",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "orb_corruption",
+            "label": "Corruption Tracker",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
             "orbs": []
           }
         ],
@@ -9365,7 +9438,71 @@ const LAYERS = [
           }
         ],
         "topPills": [],
-        "bottomPills": [],
+        "bottomPills": [
+          {
+            "id": "x5",
+            "label": "Religion",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x1",
+            "label": "Myth",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x4",
+            "label": "The Occult",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h3_genocide",
+            "label": "Genocide",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_meg_record",
+            "label": "The Historical Record",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "p_mil",
+            "label": "Military",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "occ_mys_eleusinian",
+            "label": "Eleusinian Mysteries",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
         "orbs": [],
         "inProgress": true
       },
@@ -10759,7 +10896,71 @@ const LAYERS = [
             "desc": "",
             "links": [],
             "topPills": [],
+            "bottomPills": [
+          {
+            "id": "h1_medieval",
+            "label": "The Medieval Order",
+            "desc": "",
+            "links": [],
+            "topPills": [],
             "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_empires",
+            "label": "The Age of Empires",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h1_meg_record",
+            "label": "The Historical Record",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x4",
+            "label": "The Occult",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h3_genocide",
+            "label": "Genocide",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "hist_first_nations",
+            "label": "First Nations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "f_rc",
+            "label": "Race & Ethnicity",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
             "orbs": []
           }
         ],
