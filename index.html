@@ -237,8 +237,8 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div id="card-nav-bar" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:8px;">
       <div id="modal-layer-tag" style="font-size:10px;letter-spacing:0.3em;font-family:'Courier New',monospace;opacity:1;line-height:1.6;"></div>
       <div id="modal-node-id" style="font-size:9px;letter-spacing:0.12em;font-family:'Courier New',monospace;opacity:0.28;margin-left:auto;white-space:nowrap;"></div>
-      <button id="thought-btn" onclick="openThoughtPanel()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:transparent;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;" onmouseenter="this.style.borderColor='#c9a84c';this.style.boxShadow='0 0 10px rgba(201,168,76,0.18)';" onmouseleave="this.style.borderColor='rgba(201,168,76,0.4)';this.style.boxShadow='none';">Thought?</button>
-      <button id="modal-close" onclick="cardNavBack()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:transparent;border:1px solid transparent;padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;"></button>
+      <button id="thought-btn" onclick="openThoughtPanel()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:transparent;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;line-height:1.4;" onmouseenter="this.style.borderColor='#c9a84c';this.style.boxShadow='0 0 10px rgba(201,168,76,0.18)';" onmouseleave="this.style.borderColor='rgba(201,168,76,0.4)';this.style.boxShadow='none';">Thoughts?</button>
+      <button id="modal-close" onclick="cardNavBack()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:transparent;border:1px solid rgba(255,255,255,0.15);padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;line-height:1.4;"></button>
     </div>
 
     <!-- Thought? panel — overlays modal content, same card colors applied by JS -->
@@ -888,6 +888,9 @@ function openThoughtPanel(){
   document.querySelectorAll('.tp-field').forEach(f=>f.style.display='flex');
   document.getElementById('tp-thought').value='';
   document.getElementById('tp-name').value='';
+  // Hide card content behind panel
+  const cardContent=['modal-title','modal-sub','modal-toppills-section','modal-desc','modal-bottompills-section','modal-links','modal-inprogress','modal-node-id'];
+  cardContent.forEach(id=>{const el=document.getElementById(id);if(el)el.style.visibility='hidden';});
   // Show panel, scroll to top
   panel.classList.add('open');
   box.scrollTop=0;
@@ -895,6 +898,9 @@ function openThoughtPanel(){
 
 function closeThoughtPanel(){
   document.getElementById('thought-panel').classList.remove('open');
+  // Restore card content
+  const cardContent=['modal-title','modal-sub','modal-toppills-section','modal-desc','modal-bottompills-section','modal-links','modal-inprogress','modal-node-id'];
+  cardContent.forEach(id=>{const el=document.getElementById(id);if(el)el.style.visibility='';});
   const box=document.getElementById('modal-box');
   if(box) box.scrollTop=0;
 }
@@ -932,7 +938,7 @@ window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setT
 
 <style>
 /* ── Thought? panel ── */
-#thought-panel{display:none;position:absolute;inset:0;border-radius:28px 28px 18px 18px;z-index:10;padding:32px 26px 28px;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+#thought-panel{display:none;position:absolute;inset:0;border-radius:28px 28px 18px 18px;z-index:10;padding:72px 26px 28px;overflow-y:auto;-webkit-overflow-scrolling:touch;top:0;left:0;right:0;bottom:0;}
 #thought-panel.open{display:flex;flex-direction:column;gap:18px;}
 .tp-eyebrow{font-size:9px;letter-spacing:0.35em;font-family:'Courier New',monospace;opacity:0.6;text-transform:uppercase;}
 .tp-headline{font-size:clamp(20px,4.5vw,26px);font-weight:400;font-family:'Georgia',serif;line-height:1.25;margin:0;}
