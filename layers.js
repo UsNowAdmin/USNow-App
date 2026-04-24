@@ -6724,7 +6724,13 @@ const LAYERS = [
                 "url": "https://www.jstor.org",
                 "emoji": "📚"
               }
-            ],
+            ,
+              {
+                "label": "Who Rules the World — The Architecture of Power",
+                "url": "https://usnow.app/graphics/who-rules-the-world",
+                "emoji": "📊",
+                "tag": "GRAPHIC"
+              }],
             "topPills": [
               {
                 "id": "h1_meg_pattern",
