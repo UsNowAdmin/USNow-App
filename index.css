@@ -60,14 +60,12 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .foundation-moon{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:298;transition:transform 0.22s ease,box-shadow 0.22s ease;text-decoration:none;animation:pulseFoundation 3.8s ease-in-out infinite;pointer-events:all;}
 .foundation-moon:hover{transform:translateY(-6px) scale(1.08);}
 .foundation-moon span{font-size:9.5px;font-weight:700;letter-spacing:0.04em;color:#3a1e08;font-family:'Georgia','Times New Roman',serif;text-align:center;line-height:1.3;pointer-events:none;text-shadow:0 -1px 1px rgba(255,255,255,0.45),0 1px 0 rgba(0,0,0,0.4),0 2px 6px rgba(255,180,60,0.55),0 0 12px rgba(255,150,40,0.3),0 0 22px rgba(201,168,76,0.18);position:absolute;top:7px;left:50%;transform:translateX(-50%);white-space:nowrap;}
-#modal-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(2,4,10,0.78);backdrop-filter:blur(14px);align-items:flex-end;justify-content:center;padding:0 10px 16px;}
+#modal-overlay{display:none;position:fixed;inset:0;z-index:3000;background:rgba(2,4,10,0.84);align-items:flex-end;justify-content:center;padding:0 10px calc(12px + env(safe-area-inset-bottom));}
 #modal-overlay.open{display:flex;}
-#modal-overlay.zoomed-safari{align-items:center;padding:12px;background:rgba(2,4,10,0.92);backdrop-filter:none;-webkit-backdrop-filter:none;}
-#modal-overlay.zoomed-safari #modal-glow-halo{display:none!important;opacity:0!important;}
-#modal-overlay.zoomed-safari #modal-box{max-height:78vh;border-radius:20px;}
-#modal-glow-halo{position:fixed;bottom:-60px;left:50%;transform:translateX(-50%);width:720px;height:420px;border-radius:50%;pointer-events:none;z-index:2999;transition:background 0.4s ease,opacity 0.45s ease;opacity:0;filter:blur(80px);}
-#modal-overlay.open #modal-glow-halo{opacity:1;}
-#modal-box{background:radial-gradient(ellipse 120% 60% at 50% 0%,rgba(255,255,255,0.09) 0%,rgba(255,255,255,0.02) 35%,transparent 65%),linear-gradient(160deg,#131e35 0%,#0c1228 100%);border-radius:28px 28px 18px 18px;padding:40px 26px 28px;max-width:560px;width:100%;position:relative;max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch;transition:box-shadow 0.4s ease,border-color 0.4s ease;}
+#modal-overlay.zoomed-safari{align-items:center;padding:12px;background:rgba(2,4,10,0.92);}
+#modal-overlay.zoomed-safari #modal-box{max-height:calc(100dvh - 24px);border-radius:20px;}
+#modal-glow-halo{display:none;}
+#modal-box{background:radial-gradient(ellipse 120% 60% at 50% 0%,rgba(255,255,255,0.09) 0%,rgba(255,255,255,0.02) 35%,transparent 65%),linear-gradient(160deg,#131e35 0%,#0c1228 100%);border-radius:28px 28px 18px 18px;padding:40px 26px 28px;width:min(100%,560px);position:relative;max-height:min(88dvh,calc(100dvh - 96px));overflow-y:auto;-webkit-overflow-scrolling:touch;transition:box-shadow 0.4s ease,border-color 0.4s ease;}
 #modal-box::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.35) 50%,transparent 100%);border-radius:28px 28px 0 0;pointer-events:none;z-index:1;}
 #modal-box::after{content:'';position:absolute;inset:0;border-radius:28px 28px 18px 18px;pointer-events:none;box-shadow:inset 0 -40px 60px -20px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.06);z-index:0;}
 #modal-box>*{position:relative;z-index:2;}
@@ -83,7 +81,7 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .modal-link .arrow{opacity:0.75;}
 #modal-bottompills-section{margin-top:18px;padding-top:16px;}
 .modal-bottompills-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;}
-.modal-orb-tag{font-size:13px;letter-spacing:0.05em;font-family:'Courier New',monospace;font-weight:500;border-radius:24px;padding:9px 18px 9px 11px;display:flex;align-items:flex-start;gap:9px;margin:0 6px 9px 0;cursor:pointer;transition:all 0.2s;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 1px 3px rgba(0,0,0,0.25);width:100%;box-sizing:border-box;min-width:0;overflow:hidden;word-break:break-word;}
+.modal-orb-tag{font-size:13px;letter-spacing:0.05em;font-family:'Courier New',monospace;font-weight:500;border-radius:24px;padding:9px 18px 9px 11px;display:flex;align-items:flex-start;gap:9px;margin:0 6px 9px 0;cursor:pointer;transition:all 0.2s;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 1px 3px rgba(0,0,0,0.25);width:100%;box-sizing:border-box;min-width:0;overflow:hidden;}
 .modal-orb-tag:hover{filter:brightness(1.3);transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),0 4px 12px rgba(0,0,0,0.35);}
 .modal-orb-dot{width:20px;height:20px;border-radius:50%;flex-shrink:0;display:inline-block;position:relative;box-shadow:inset -2px -3px 5px rgba(0,0,0,0.45),0 0 5px rgba(0,0,0,0.3);margin-top:2px;}
 .modal-orb-dot::before{content:'';position:absolute;top:16%;left:20%;width:32%;height:30%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.95) 0%,rgba(255,255,255,0.3) 45%,transparent 75%);pointer-events:none;}
@@ -156,3 +154,10 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 #glory-pop .gp-def{font-size:12px;line-height:1.6;color:#8898b0;font-family:'Georgia',serif;font-style:italic;margin-bottom:10px;}
 #glory-pop .gp-link{font-size:9px;letter-spacing:0.15em;color:rgba(201,168,76,0.6);font-family:'Courier New',monospace;text-decoration:none;transition:color 0.2s;}
 #glory-pop .gp-link:hover{color:#c9a84c;}
+
+/* ===== Modal pill grid containment (surgical fix) ===== */
+#modal-toppills-list,#modal-bottompills-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;min-width:0;max-width:100%;}
+#modal-toppills-list .modal-orb-tag{margin:0;min-width:0;max-width:100%;overflow-wrap:anywhere;white-space:normal;font-size:12px;line-height:1.3;padding:8px 10px;align-items:center;}
+#modal-toppills-list .modal-orb-dot{width:18px;height:18px;flex:0 0 18px;margin-top:0;}
+#modal-bottompills-list .modal-orb-tag{margin:0;}
+@media(max-width:390px){#modal-toppills-list{grid-template-columns:1fr;}}
