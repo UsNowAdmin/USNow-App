@@ -4284,18 +4284,18 @@ const LAYERS = [
         "x": 50,
         "y": 44,
         "color": "#3858c8",
-        "desc": "The record of what it has felt like to be human — across every culture, in every age. Art, music, film, and literature are not decoration. They are how civilizations process what they cannot yet say in plain language. What a society funds, teaches, and preserves tells you exactly what it believes matters.",
+        "desc": "This is where knowledge began. Before science had a method, before schools had buildings, before writing had an alphabet — there was image, music, story, and argument. The arts and humanities are not a softer version of knowing. They are the original form of it. Every discipline that came after is a specialization of something that started here. What a civilization funds, teaches, and preserves tells you exactly what it believes is worth passing forward.",
         "links": [
           {
             "label": "Khan Academy — Art History",
             "url": "https://www.khanacademy.org/humanities/art-history",
-            "emoji": "📚",
+            "emoji": "🎨",
             "tag": "CULTURE"
           },
           {
             "label": "The Marginalian — ideas through culture",
             "url": "https://www.themarginalian.org",
-            "emoji": "📚",
+            "emoji": "🕊️",
             "tag": "CULTURE"
           },
           {
@@ -4303,93 +4303,1243 @@ const LAYERS = [
             "url": "https://longreads.com",
             "emoji": "📚",
             "tag": "CULTURE"
+          },
+          {
+            "label": "Aeon — philosophy & the humanities",
+            "url": "https://aeon.co",
+            "emoji": "🧠",
+            "tag": "IDEAS"
+          },
+          {
+            "label": "Internet Archive — texts, audio, film",
+            "url": "https://archive.org",
+            "emoji": "🗄️",
+            "tag": "ARCHIVE"
           }
         ],
         "topPills": [
           {
-            "id": "e_ah_d1",
-            "label": "Art",
+            "id": "e_ah_classical",
+            "label": "Classical Curriculum",
+            "color": "#5870d8",
+            "desc": "Before the modern university split knowledge into departments, there was one curriculum. The trivium taught you how to think and communicate. The quadrivium taught you how to read the structure of the world. Together — seven disciplines, one project. The unified model of education that organized Western thought for a thousand years and seeded every academic field that followed.",
+            "links": [
+              {
+                "label": "Khan Academy — classical education",
+                "url": "https://www.khanacademy.org/humanities",
+                "emoji": "🏛️",
+                "tag": "EDUCATION"
+              },
+              {
+                "label": "Aeon — history of knowledge",
+                "url": "https://aeon.co",
+                "emoji": "🧠",
+                "tag": "IDEAS"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "e_ah_trivium",
+                "label": "The Trivium",
+                "color": "#4868c8",
+                "desc": "The first three. Grammar, Logic, Rhetoric. How to receive knowledge, test it, and transmit it. The medieval university required mastery of all three before a student could proceed. The idea: you cannot think clearly without language, you cannot reason without logic, and you cannot act on what you know without the ability to communicate it. Everything downstream depends on these three.",
+                "links": [
+                  {
+                    "label": "Aeon — language and thought",
+                    "url": "https://aeon.co",
+                    "emoji": "🧠",
+                    "tag": "IDEAS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "e_ah_grammar",
+                    "label": "Grammar",
+                    "color": "#4060c0",
+                    "desc": "Not punctuation rules. The structure of language itself — how symbols carry meaning, how sentences encode reality, how the categories built into a language shape what its speakers can think. Every language is a different map of the world. Grammar is the map key.",
+                    "links": [
+                      {
+                        "label": "Linguistic Society of America",
+                        "url": "https://www.linguisticsociety.org",
+                        "emoji": "🔤",
+                        "tag": "LANGUAGE"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "e_ah_lang",
+                        "label": "Language & Linguistics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e_fe",
+                        "label": "Formal Education",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_logic",
+                    "label": "Logic",
+                    "color": "#3858b8",
+                    "desc": "The discipline of valid reasoning. What follows from what. How to test whether an argument holds — not whether its conclusion feels right, but whether the structure is sound. Logic is the backbone of mathematics, law, science, and philosophy. It is also the most reliable tool for detecting when someone is trying to mislead you.",
+                    "links": [
+                      {
+                        "label": "Stanford Encyclopedia of Philosophy — Logic",
+                        "url": "https://plato.stanford.edu/entries/logic-classical/",
+                        "emoji": "🧠",
+                        "tag": "PHILOSOPHY"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "e_ah_phil",
+                        "label": "Philosophy & Ideas",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_method",
+                        "label": "Scientific Method",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_psych",
+                        "label": "Psychology",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_rhetoric",
+                    "label": "Rhetoric",
+                    "color": "#5068c8",
+                    "desc": "The art of persuasion. How to make an argument that moves people — not just one that is technically correct. Rhetoric was considered the capstone of the trivium because knowledge that cannot be communicated cannot act in the world. It is also the discipline most easily weaponized. Every demagogue in history has been, at minimum, an intuitive rhetorician.",
+                    "links": [
+                      {
+                        "label": "Aeon — rhetoric and persuasion",
+                        "url": "https://aeon.co",
+                        "emoji": "🗣️",
+                        "tag": "IDEAS"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "com_tp5",
+                        "label": "The Algorithm",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e_ah_lang",
+                        "label": "Language & Linguistics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e_ah_phil",
+                        "label": "Philosophy & Ideas",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_classical",
+                    "label": "Classical Curriculum",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_quadrivium",
+                "label": "The Quadrivium",
+                "color": "#6878d8",
+                "desc": "The second four. Arithmetic, Geometry, Music, Astronomy. Number in itself, number in space, number in time, number in space and time. The quadrivium was the mathematical half of the classical curriculum — the part that proves the split between arts and sciences is a modern invention. These were liberal arts. They were considered essential to a free person's education, not the property of specialists.",
+                "links": [
+                  {
+                    "label": "Khan Academy — mathematics",
+                    "url": "https://www.khanacademy.org/math",
+                    "emoji": "📐",
+                    "tag": "MATH"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "e_ah_arithmetic",
+                    "label": "Arithmetic",
+                    "color": "#5868c8",
+                    "desc": "Number in itself — the most abstract of the four. Not calculation for practical ends but the study of number as a thing that exists independently of the objects being counted. The Pythagoreans believed number was the fundamental substance of reality. Modern physics has not entirely disagreed.",
+                    "links": [
+                      {
+                        "label": "Khan Academy — arithmetic",
+                        "url": "https://www.khanacademy.org/math/arithmetic",
+                        "emoji": "🔢",
+                        "tag": "MATH"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "e2_math",
+                        "label": "Mathematics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_math_arith",
+                        "label": "Arithmetic",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_geometry",
+                    "label": "Geometry",
+                    "color": "#4858b8",
+                    "desc": "Number in space. The study of shape, form, proportion, and spatial relationship. Geometry was considered the discipline that trained the mind to think about what is eternal and unchanging — because a triangle is a triangle in every culture, in every century, on every planet. It was the classical gateway to philosophy.",
+                    "links": [
+                      {
+                        "label": "Khan Academy — geometry",
+                        "url": "https://www.khanacademy.org/math/geometry",
+                        "emoji": "📐",
+                        "tag": "MATH"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "e2_math",
+                        "label": "Mathematics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_math_geo",
+                        "label": "Geometry",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e_ah_phil",
+                        "label": "Philosophy & Ideas",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_music_quad",
+                    "label": "Music",
+                    "color": "#3858c0",
+                    "desc": "Number in time — the quadrivium's entry for music was not about composition or performance but about harmony as a mathematical relationship. The ratio between frequencies. The structure of consonance and dissonance. The Pythagoreans discovered that musical intervals correspond to simple whole-number ratios, and concluded that the universe itself was organized on the same principle. The music of the spheres was not a metaphor to them.",
+                    "links": [
+                      {
+                        "label": "The Marginalian — music and mathematics",
+                        "url": "https://www.themarginalian.org",
+                        "emoji": "🎵",
+                        "tag": "CULTURE"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "e_ah_perform",
+                        "label": "Performing Arts",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x3_histtime",
+                        "label": "History of Time",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_math",
+                        "label": "Mathematics",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_astronomy_quad",
+                    "label": "Astronomy",
+                    "color": "#2848b0",
+                    "desc": "Number in space and time — the capstone of the quadrivium. The observation of celestial cycles and the mathematical modeling of their motion. Astronomy was the discipline where the other three converged: arithmetic to count, geometry to map, music's ratios to describe orbital harmony. Kepler still used musical ratios to describe planetary motion. The line between astronomy and astrology was not drawn until the Scientific Revolution — and even then, it was contested.",
+                    "links": [
+                      {
+                        "label": "NASA — open science",
+                        "url": "https://science.nasa.gov",
+                        "emoji": "🔭",
+                        "tag": "SCIENCE"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "e2_astron",
+                        "label": "Astronomy",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x3_histtime",
+                        "label": "History of Time",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_scirev",
+                        "label": "The Scientific Revolution",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_classical",
+                    "label": "Classical Curriculum",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e2",
+                    "label": "Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "e2",
+                "label": "Science",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e_fe",
+                "label": "Formal Education",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "e_ah_visual",
+            "label": "Visual Arts",
             "color": "#4060d0",
-            "desc": "Visual art, design, and image-making — the oldest human record. Before writing, there was drawing. Before history, there was image.",
+            "desc": "The oldest human record. Before writing, there was drawing. Before history, there was image. Visual art is how human beings have always externalized inner experience — making the invisible visible, the fleeting permanent. Cave paintings to cathedrals to digital media: the impulse is the same. The medium changes. The need doesn't.",
             "links": [
               {
-                "label": "Khan Academy: Art History",
+                "label": "Khan Academy — Art History",
                 "url": "https://www.khanacademy.org/humanities/art-history",
-                "emoji": "📚",
+                "emoji": "🎨",
+                "tag": "CULTURE"
+              },
+              {
+                "label": "Smarthistory — free art history",
+                "url": "https://smarthistory.org",
+                "emoji": "🖼️",
                 "tag": "CULTURE"
               }
             ],
-            "topPills": [],
-            "bottomPills": [],
+            "topPills": [
+              {
+                "id": "e_ah_d1",
+                "label": "Art",
+                "color": "#3858c8",
+                "desc": "Visual art across all media and all eras — painting, drawing, printmaking, collage, digital. The record of what the eye has seen and the mind has needed to externalize. Every era's art tells you what that era could not say any other way.",
+                "links": [
+                  {
+                    "label": "Khan Academy: Art History",
+                    "url": "https://www.khanacademy.org/humanities/art-history",
+                    "emoji": "🎨",
+                    "tag": "CULTURE"
+                  },
+                  {
+                    "label": "Smarthistory",
+                    "url": "https://smarthistory.org",
+                    "emoji": "🖼️",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_visual",
+                    "label": "Visual Arts",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_sculpture",
+                "label": "Sculpture",
+                "color": "#4868c8",
+                "desc": "Art that occupies space. Three-dimensional, physical, present in the world in a way a painting is not. Public sculpture is one of the oldest forms of political communication — who gets a monument, who gets a plaza, whose likeness endures in stone says everything about who a culture decided mattered.",
+                "links": [
+                  {
+                    "label": "Smarthistory — sculpture",
+                    "url": "https://smarthistory.org",
+                    "emoji": "🗿",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_visual",
+                    "label": "Visual Arts",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_architecture",
+                "label": "Architecture",
+                "color": "#5070c8",
+                "desc": "The art form you cannot avoid. Buildings are the most public of all creative acts — they shape how people move, gather, work, worship, and understand their place in a civic order. Every significant building is also a statement of power. Who commissioned it. What it was meant to say. What it forced everyone around it to feel.",
+                "links": [
+                  {
+                    "label": "Archdaily — architecture culture",
+                    "url": "https://www.archdaily.com",
+                    "emoji": "🏛️",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_visual",
+                    "label": "Visual Arts",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_geometry",
+                    "label": "Geometry",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_design",
+                "label": "Design & Craft",
+                "color": "#3850b8",
+                "desc": "The applied arts — where beauty meets function. Design shapes every object you interact with, every interface you navigate, every environment you inhabit. Craft is the knowledge that lives in the hands — accumulated over generations, disappearing when it isn't passed down. Both challenge the boundary between art and utility that high culture invented and that most of the world has never recognized.",
+                "links": [
+                  {
+                    "label": "Design Observer — design & culture",
+                    "url": "https://designobserver.com",
+                    "emoji": "✏️",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_visual",
+                    "label": "Visual Arts",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "e_ah_classical",
+                "label": "Classical Curriculum",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
             "orbs": []
           },
           {
-            "id": "e_ah_d2",
-            "label": "Music",
+            "id": "e_ah_perform",
+            "label": "Performing Arts",
             "color": "#3050b8",
-            "desc": "The universal language — which means every culture speaks it differently. Music carries memory, identity, protest, and joy in ways nothing else can.",
+            "desc": "Art that exists only in the moment of performance. It cannot be stored, only recorded — and the recording is never the thing itself. Theater, music, dance, and film all share this: the audience is present, the artists are present, and what happens between them is unrepeatable. Every performance is a live argument about what it means to be human.",
             "links": [
               {
-                "label": "The Marginalian — music & meaning",
+                "label": "The Marginalian — performance & meaning",
                 "url": "https://www.themarginalian.org",
-                "emoji": "🕊️",
+                "emoji": "🎭",
                 "tag": "CULTURE"
               },
               {
-                "label": "Longreads — music writing",
+                "label": "Longreads — arts writing",
                 "url": "https://longreads.com",
                 "emoji": "📰",
                 "tag": "CULTURE"
               }
             ],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "e_ah_d3",
-            "label": "Film",
-            "color": "#2848a8",
-            "desc": "The defining art form of the 20th century and the most powerful propaganda machine ever invented — in the best and worst senses. What gets made, funded, and distributed shapes what a culture sees as real.",
-            "links": [
+            "topPills": [
               {
-                "label": "Longreads — film criticism",
-                "url": "https://longreads.com",
-                "emoji": "📰",
-                "tag": "CULTURE"
+                "id": "e_ah_d2",
+                "label": "Music",
+                "color": "#2848b0",
+                "desc": "The universal language — which means every culture speaks it differently. Music is organized sound and organized time. It carries memory, identity, protest, grief, and joy in ways nothing else can reach. It crosses language barriers because it bypasses language entirely.",
+                "links": [
+                  {
+                    "label": "The Marginalian — music & meaning",
+                    "url": "https://www.themarginalian.org",
+                    "emoji": "🎵",
+                    "tag": "CULTURE"
+                  },
+                  {
+                    "label": "Longreads — music writing",
+                    "url": "https://longreads.com",
+                    "emoji": "📰",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_music_quad",
+                    "label": "Music (Quadrivium)",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x3_histtime",
+                    "label": "History of Time",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
               },
               {
-                "label": "The Marginalian — film & ideas",
-                "url": "https://www.themarginalian.org",
-                "emoji": "🕊️",
-                "tag": "CULTURE"
+                "id": "e_ah_d3",
+                "label": "Film",
+                "color": "#2040a8",
+                "desc": "The defining art form of the 20th century and the most powerful storytelling machine ever built — which also makes it the most powerful propaganda machine ever built. What gets made, funded, and distributed shapes what a culture accepts as real. Who is the hero. Who is the threat. What counts as a normal life.",
+                "links": [
+                  {
+                    "label": "Longreads — film criticism",
+                    "url": "https://longreads.com",
+                    "emoji": "🎬",
+                    "tag": "CULTURE"
+                  },
+                  {
+                    "label": "The Marginalian — film & ideas",
+                    "url": "https://www.themarginalian.org",
+                    "emoji": "🕊️",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "com_tp5",
+                    "label": "The Algorithm",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_theater",
+                "label": "Theater",
+                "color": "#3858c0",
+                "desc": "The original public forum. Greek tragedy was civic education — the polis gathered to watch what happens when power collides with fate and pride and necessity. Theater has always been the art form that puts the dangerous questions in a room where everyone has to sit with them. What we do to each other. What we owe each other. What happens when the rules break down.",
+                "links": [
+                  {
+                    "label": "The Marginalian — theater & meaning",
+                    "url": "https://www.themarginalian.org",
+                    "emoji": "🎭",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_rhetoric",
+                    "label": "Rhetoric",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_dance",
+                "label": "Dance",
+                "color": "#4060b8",
+                "desc": "The body as instrument and argument. Dance is the art form that predates every other — before the cave painting, before the drum, there was movement in response to the world. Every culture has it. No culture has ever not had it. It is the most direct expression of what a body knows that a mind cannot yet say.",
+                "links": [
+                  {
+                    "label": "The Marginalian — movement & meaning",
+                    "url": "https://www.themarginalian.org",
+                    "emoji": "💃",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "s2",
+                    "label": "Body",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
               }
             ],
-            "topPills": [],
             "bottomPills": [],
             "orbs": []
           },
           {
-            "id": "e_ah_d4",
-            "label": "Literature",
+            "id": "e_ah_lit",
+            "label": "Literature & Storytelling",
             "color": "#4068c0",
-            "desc": "The written transmission of human experience. Every book is an argument about what deserves to be remembered. What gets published, taught, and canonized is always a political decision.",
+            "desc": "Story is the oldest technology for transmitting what cannot be explained. Before data, before argument, before doctrine — there was narrative. The human brain is wired for it. Every culture has used story to carry its values, its warnings, its grief, and its hope across generations. What gets written, published, taught, and canonized is always a choice. That choice is always political.",
             "links": [
               {
-                "label": "Longreads",
+                "label": "Longreads — long-form literature",
                 "url": "https://longreads.com",
                 "emoji": "📚",
                 "tag": "CULTURE"
+              },
+              {
+                "label": "The Marginalian — books & ideas",
+                "url": "https://www.themarginalian.org",
+                "emoji": "🕊️",
+                "tag": "CULTURE"
+              },
+              {
+                "label": "Project Gutenberg — free classic literature",
+                "url": "https://www.gutenberg.org",
+                "emoji": "📖",
+                "tag": "ARCHIVE"
               }
             ],
+            "topPills": [
+              {
+                "id": "e_ah_d4",
+                "label": "Literature",
+                "color": "#3860b8",
+                "desc": "The written transmission of human experience. Every book is an argument about what deserves to be remembered. What gets published, taught, and preserved in the canon is a set of decisions made by people with power about whose experience counts. The canon has always been contested. That contest is part of what literature is.",
+                "links": [
+                  {
+                    "label": "Longreads",
+                    "url": "https://longreads.com",
+                    "emoji": "📚",
+                    "tag": "CULTURE"
+                  },
+                  {
+                    "label": "Project Gutenberg",
+                    "url": "https://www.gutenberg.org",
+                    "emoji": "📖",
+                    "tag": "ARCHIVE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_lit",
+                    "label": "Literature & Storytelling",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_poetry",
+                "label": "Poetry",
+                "color": "#4870c0",
+                "desc": "Language compressed until it carries more than language can. Poetry is not a decorative form of prose — it is a different instrument entirely. It operates on sound, rhythm, image, and the white space around the words. What it can do cannot be done any other way. Every culture has it. Some have had nothing else.",
+                "links": [
+                  {
+                    "label": "Poetry Foundation — free archive",
+                    "url": "https://www.poetryfoundation.org",
+                    "emoji": "✍️",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_rhetoric",
+                    "label": "Rhetoric",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_lang",
+                    "label": "Language & Linguistics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_oral",
+                "label": "Oral Tradition & Myth",
+                "color": "#5878c8",
+                "desc": "The original archive. Before writing, knowledge was held in the body and the voice — in song, in story, in the repeated recitation of what a people needed to remember. Oral traditions are not primitive preludes to literacy. They are sophisticated systems for encoding and transmitting knowledge across generations without a page. Homer was oral tradition. So was the Torah, before it was written. So is every creation myth that has ever survived.",
+                "links": [
+                  {
+                    "label": "Aeon — myth and meaning",
+                    "url": "https://aeon.co",
+                    "emoji": "🌀",
+                    "tag": "IDEAS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_lang",
+                    "label": "Language & Linguistics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_nonfiction",
+                "label": "Narrative Nonfiction",
+                "color": "#3050b0",
+                "desc": "The discipline at the border between journalism and literature. The tools of the novelist — scene, character, voice, pacing — applied to events that actually happened. At its best it is the most powerful form of truth-telling that exists. At its worst it is the most elegant form of distortion. The line between them is thinner than it appears.",
+                "links": [
+                  {
+                    "label": "Longreads — narrative nonfiction",
+                    "url": "https://longreads.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
+                  },
+                  {
+                    "label": "The Atavist — long-form narrative",
+                    "url": "https://magazine.atavist.com",
+                    "emoji": "📖",
+                    "tag": "JOURNALISM"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "com_tp1",
+                    "label": "Journalism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "e_ah_phil",
+            "label": "Philosophy & Ideas",
+            "color": "#6070d0",
+            "desc": "The discipline that asks the questions every other discipline takes for granted. What is real. What is true. What is good. What is just. What is beauty. Philosophy does not produce facts — it produces frameworks. The frameworks we use to organize facts. Every political system, every legal code, every scientific paradigm is downstream of philosophical assumptions that mostly go unexamined. Examining them is the work.",
+            "links": [
+              {
+                "label": "Stanford Encyclopedia of Philosophy",
+                "url": "https://plato.stanford.edu",
+                "emoji": "🏛️",
+                "tag": "PHILOSOPHY"
+              },
+              {
+                "label": "Aeon — philosophy & ideas",
+                "url": "https://aeon.co",
+                "emoji": "🧠",
+                "tag": "IDEAS"
+              },
+              {
+                "label": "The Marginalian — philosophy in culture",
+                "url": "https://www.themarginalian.org",
+                "emoji": "🕊️",
+                "tag": "IDEAS"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "e_ah_ethics",
+                "label": "Ethics",
+                "color": "#5868c8",
+                "desc": "The branch of philosophy that asks how we ought to act — toward each other, toward the natural world, toward future generations. Ethics does not tell you what to do. It gives you a framework for thinking about what to do. The major traditions — consequentialism, deontology, virtue ethics, care ethics — reach different conclusions from different starting assumptions. Understanding them is the beginning of moral reasoning.",
+                "links": [
+                  {
+                    "label": "Stanford Encyclopedia — ethics",
+                    "url": "https://plato.stanford.edu/entries/ethics/",
+                    "emoji": "⚖️",
+                    "tag": "PHILOSOPHY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_phil",
+                    "label": "Philosophy & Ideas",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e2_psych",
+                    "label": "Psychology",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_aesthetics",
+                "label": "Aesthetics",
+                "color": "#6878d0",
+                "desc": "The philosophy of beauty, taste, and art. What makes something beautiful — and whether that question has an answer that isn't just personal preference. Aesthetics is the bridge between philosophy and the arts: it asks why certain arrangements of sound, image, word, or form move us the way they do, and whether there is anything universal in that response or only the accumulated habits of culture.",
+                "links": [
+                  {
+                    "label": "Stanford Encyclopedia — aesthetics",
+                    "url": "https://plato.stanford.edu/entries/aesthetics/",
+                    "emoji": "🎨",
+                    "tag": "PHILOSOPHY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_phil",
+                    "label": "Philosophy & Ideas",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_visual",
+                    "label": "Visual Arts",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_polphil",
+                "label": "Political Philosophy",
+                "color": "#4860c0",
+                "desc": "The branch of philosophy that asks what a just society looks like and how power ought to be organized. Plato, Aristotle, Locke, Rousseau, Hobbes, Marx, Rawls, Arendt — they disagree about almost everything. But they are all asking the same question: what do we owe each other, and who decides? Every political system alive today is an answer — usually an unacknowledged one — to that question.",
+                "links": [
+                  {
+                    "label": "Stanford Encyclopedia — political philosophy",
+                    "url": "https://plato.stanford.edu/entries/political-philosophy/",
+                    "emoji": "⚖️",
+                    "tag": "PHILOSOPHY"
+                  },
+                  {
+                    "label": "Aeon — politics & ideas",
+                    "url": "https://aeon.co",
+                    "emoji": "🧠",
+                    "tag": "IDEAS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e2_polisci",
+                    "label": "Political Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_ethics",
+                    "label": "Ethics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "e_ah_classical",
+                "label": "Classical Curriculum",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e2_social",
+                "label": "Social Sciences",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "e_ah_lang",
+            "label": "Language & Linguistics",
+            "color": "#3858b8",
+            "desc": "Language is not just how we communicate — it is how we think. The categories a language builds into its grammar shape what its speakers can easily perceive and say. To learn a new language is to gain access to a different model of reality. To lose a language is to lose that model permanently. There are roughly 7,000 languages alive today. Half will be gone by 2100.",
+            "links": [
+              {
+                "label": "Linguistic Society of America",
+                "url": "https://www.linguisticsociety.org",
+                "emoji": "🔤",
+                "tag": "LANGUAGE"
+              },
+              {
+                "label": "Endangered Language Fund",
+                "url": "https://endangeredlanguagefund.org",
+                "emoji": "🌍",
+                "tag": "CULTURE"
+              },
+              {
+                "label": "Aeon — language & mind",
+                "url": "https://aeon.co",
+                "emoji": "🧠",
+                "tag": "IDEAS"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "e_ah_etymology",
+                "label": "Etymology",
+                "color": "#3050b0",
+                "desc": "The history of words — where they came from, how they changed, what they used to mean. Etymology is archaeology applied to language. Every word in common use carries a fossil record of the cultures, migrations, conquests, and ideas that shaped it. The word 'salary' comes from salt. 'Disaster' from misaligned stars. 'Hysteria' from the Greek word for uterus. The history of a word is never innocent.",
+                "links": [
+                  {
+                    "label": "Online Etymology Dictionary",
+                    "url": "https://www.etymonline.com",
+                    "emoji": "🔤",
+                    "tag": "LANGUAGE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_grammar",
+                    "label": "Grammar",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_endangered",
+                "label": "Lost & Endangered Languages",
+                "color": "#4060b8",
+                "desc": "When a language dies, it doesn't just take words with it — it takes an entire way of organizing reality. A vocabulary for distinctions no other language makes. A grammar that encodes a different relationship to time, space, or agency. Language death is accelerating. The last speakers of thousands of languages are alive right now, and when they go, something irreplaceable goes with them.",
+                "links": [
+                  {
+                    "label": "Endangered Language Fund",
+                    "url": "https://endangeredlanguagefund.org",
+                    "emoji": "🌍",
+                    "tag": "CULTURE"
+                  },
+                  {
+                    "label": "UNESCO — endangered languages",
+                    "url": "https://www.unesco.org/en/articles/endangered-languages",
+                    "emoji": "🌐",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_oral",
+                    "label": "Oral Tradition & Myth",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_translation",
+                "label": "Translation & Interpretation",
+                "color": "#5068c0",
+                "desc": "The impossible art. Every translation is an interpretation — a set of choices about which meanings to preserve and which to sacrifice. There is no neutral translation. The translator is always making decisions about what the original means, and those decisions carry the translator's own time, culture, and assumptions into the text. That is also why translation is one of the most creative acts in human culture.",
+                "links": [
+                  {
+                    "label": "Words Without Borders — literature in translation",
+                    "url": "https://wordswithoutborders.org",
+                    "emoji": "🌐",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e_ah_grammar",
+                    "label": "Grammar",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_ah_lit",
+                    "label": "Literature & Storytelling",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "e_ah_grammar",
+                "label": "Grammar",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e_ah_rhetoric",
+                "label": "Rhetoric",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          }
+        ],
+        "bottomPills": [
+          {
+            "id": "e2",
+            "label": "Science",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "e_fe",
+            "label": "Formal Education",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x3_histtime",
+            "label": "History of Time",
+            "desc": "",
+            "links": [],
             "topPills": [],
             "bottomPills": [],
             "orbs": []
           }
         ],
-        "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "e_fe",
