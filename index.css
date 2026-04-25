@@ -160,7 +160,6 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 #modal-toppills-list .modal-orb-tag{margin:0;min-width:0;max-width:100%;overflow-wrap:anywhere;white-space:normal;font-size:12px;line-height:1.3;padding:8px 10px;align-items:center;}
 #modal-toppills-list .modal-orb-dot{width:18px;height:18px;flex:0 0 18px;margin-top:0;}
 #modal-bottompills-list .modal-orb-tag{margin:0;}
-@media(max-width:390px){#modal-toppills-list{grid-template-columns:1fr;}}
 @media (hover: hover) {
   #thought-btn:hover {
     border-color: #c9a84c;
