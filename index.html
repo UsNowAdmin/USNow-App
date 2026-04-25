@@ -787,7 +787,7 @@ function renderCard(data){
   // OTHER LINKS & CONNECTIONS — links[] merged with beyond[] (tagged items shown with tag)
   const linksDiv=document.getElementById('modal-links');
   document.getElementById('modal-links-label').style.color=lc;
-  const allLinks=[...(data.links||[]),...(data.beyond||[])];
+ const allLinks=[...(data.links||[]),...(data.beyond||[])];
   if(allLinks.length>0){
     linksDiv.style.display='block';
     document.getElementById('modal-links-list').innerHTML=allLinks.map(l=>{
