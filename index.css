@@ -161,3 +161,9 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 #modal-toppills-list .modal-orb-dot{width:18px;height:18px;flex:0 0 18px;margin-top:0;}
 #modal-bottompills-list .modal-orb-tag{margin:0;}
 @media(max-width:390px){#modal-toppills-list{grid-template-columns:1fr;}}
+@media (hover: hover) {
+  #thought-btn:hover {
+    border-color: #c9a84c;
+    box-shadow: 0 0 8px rgba(201,168,76,0.15);
+  }
+}
