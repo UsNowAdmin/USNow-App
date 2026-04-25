@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>USNow — The Log</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta name="theme-color" content="#04080f">
+<style>
+:root{
+  --bg:#04080f; --bg2:#020508; --ink:#15100a;
+  --paper:#d8c7a2; --paper2:#c9b88f; --paper3:#eee2bf;
+  --gold:#c9a84c; --blue:#8aa0b8; --muted:#6a7888;
+  --line:rgba(122,96,48,0.42); --red:#8a3d28; --green:#4a9a70;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%,rgba(201,168,76,.06),transparent 65%),
+    radial-gradient(ellipse 60% 50% at 50% 100%,rgba(74,90,120,.10),transparent 70%),
+    var(--bg);
+  color:#f0ece4;
+  font-family:Georgia,'Times New Roman',serif;
+}
+a{color:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#040810}
+::-webkit-scrollbar-thumb{background:#26354a;border-radius:3px}
+*{scrollbar-width:thin;scrollbar-color:#26354a #040810}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 8px rgba(201,168,76,.10)}50%{box-shadow:0 0 18px rgba(201,168,76,.24),0 0 40px rgba(201,168,76,.08)}}
+@keyframes stampIn{from{opacity:0;transform:rotate(-6deg) scale(1.1)}to{opacity:.68;transform:rotate(-6deg) scale(1)}}
+#ticker{
+  position:fixed;top:0;left:0;right:0;z-index:800;height:30px;
+  display:flex;align-items:center;overflow:hidden;
+  background:#030609;border-bottom:1px solid rgba(122,96,48,.44)
+}
+#ticker-inner{display:flex;gap:56px;white-space:nowrap;animation:ticker 74s linear infinite}
+#ticker-inner span{font-size:9px;letter-spacing:.22em;color:var(--gold);font-family:'Courier New',monospace;opacity:.75;text-transform:uppercase}
+nav{
+  position:fixed;top:30px;left:0;right:0;z-index:700;height:44px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:0 18px;background:rgba(4,8,15,.95);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(122,96,48,.33)
+}
+.logo-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-decoration:none;line-height:1}
+.logo-main{display:flex;align-items:center;gap:8px}
+.logo-us{font-size:19px;font-weight:700;letter-spacing:.18em;color:var(--gold);font-family:'Courier New',monospace}
+.logo-now{font-size:11px;letter-spacing:.4em;color:var(--blue);font-family:'Courier New',monospace;opacity:.88}
+.logo-sub{font-size:7px;letter-spacing:.13em;color:rgba(201,168,76,.48);font-family:'Courier New',monospace;margin-top:3px;white-space:nowrap}
+.nav-center{flex:1;display:flex;justify-content:center;min-width:0}
+.nav-plaque{
+  display:inline-flex;align-items:center;justify-content:center;height:21px;padding:0 10px;
+  border:1px solid rgba(201,168,76,.38);border-radius:3px;background:rgba(201,168,76,.04);
+  color:var(--gold);font-size:10px;letter-spacing:.22em;font-family:'Courier New',monospace;white-space:nowrap;
+  animation:glowPulse 4.5s ease-in-out infinite
+}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.nav-link,.nav-cta{font-size:9px;letter-spacing:.18em;font-family:'Courier New',monospace;text-decoration:none;white-space:nowrap}
+.nav-link{color:var(--blue);opacity:.9}
+.nav-cta{color:#04080f;background:var(--gold);font-weight:700;padding:7px 13px;border-radius:16px}
+.page-shell{padding-top:74px}
+.hero{
+  position:relative;min-height:430px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  border-bottom:1px solid rgba(122,96,48,.22);
+  background:linear-gradient(180deg,rgba(4,8,15,.1),rgba(2,5,8,.98)),radial-gradient(ellipse 85% 70% at 50% 18%,rgba(201,168,76,.12),transparent 70%)
+}
+.hero:before{
+  content:"";position:absolute;inset:0;opacity:.22;pointer-events:none;
+  background-image:linear-gradient(rgba(201,168,76,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.055) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:linear-gradient(180deg,transparent 0%,black 18%,black 75%,transparent 100%)
+}
+.hero:after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;
+  background:radial-gradient(circle at 18% 30%,rgba(138,160,184,.18),transparent 18%),radial-gradient(circle at 82% 62%,rgba(201,168,76,.14),transparent 20%)
+}
+.hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto;text-align:center;padding:70px 24px 58px;animation:fadeUp .7s ease both}
+.kicker{font-size:10px;letter-spacing:.5em;color:#9a7840;font-family:'Courier New',monospace;text-transform:uppercase;margin-bottom:24px}
+h1{font-size:clamp(46px,10vw,104px);font-weight:300;line-height:.92;letter-spacing:.06em;color:#f0ece4;text-transform:uppercase}
+h1 span{color:var(--gold)}
+.hero-deck{max-width:680px;margin:26px auto 0;font-size:clamp(16px,2.2vw,20px);line-height:1.75;color:rgba(240,236,228,.78)}
+.hero-rule{width:92px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto;opacity:.6}
+.hero-note{font-size:10px;letter-spacing:.24em;line-height:1.8;color:rgba(138,160,184,.82);font-family:'Courier New',monospace;text-transform:uppercase}
+.intro{background:#050a14;border-top:1px solid rgba(122,96,48,.12);border-bottom:1px solid rgba(122,96,48,.18);padding:42px 24px}
+.intro-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+.intro-card{border:1px solid rgba(122,96,48,.35);border-radius:16px;background:linear-gradient(145deg,rgba(13,16,19,.92),rgba(5,8,14,.92));padding:28px;box-shadow:0 18px 45px rgba(0,0,0,.28)}
+.intro-card h2{font-size:clamp(24px,4vw,38px);font-weight:300;line-height:1.2;color:#f0ece4;margin-bottom:16px}
+.intro-card h2 em{color:var(--gold);font-style:normal}
+.intro-card p{font-size:15px;line-height:1.85;color:#8796aa;margin-bottom:14px}
+.intro-card p:last-child{margin-bottom:0}
+.ledger-side{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(122,96,48,.42);background:linear-gradient(155deg,#18130b,#0c1018 64%,#070b12);padding:24px;min-height:260px}
+.ledger-side:before{content:"";position:absolute;inset:14px;border:1px solid rgba(201,168,76,.18);border-radius:10px;pointer-events:none}
+.ledger-side .folio{font-size:10px;letter-spacing:.28em;color:rgba(201,168,76,.72);font-family:'Courier New',monospace;text-transform:uppercase;margin-bottom:28px}
+.ledger-side .big-num{font-size:58px;letter-spacing:.04em;color:var(--gold);font-family:'Courier New',monospace;font-weight:700;line-height:1}
+.ledger-side .label{font-size:12px;letter-spacing:.18em;color:var(--blue);font-family:'Courier New',monospace;text-transform:uppercase;margin-top:8px}
+.ledger-side .small{font-size:13px;line-height:1.65;color:#728195;margin-top:24px}
+.controls-wrap{position:sticky;top:74px;z-index:500;background:rgba(2,5,8,.92);backdrop-filter:blur(14px);border-top:1px solid rgba(122,96,48,.18);border-bottom:1px solid rgba(122,96,48,.26)}
+.controls{max-width:1120px;margin:0 auto;padding:16px 24px;display:grid;grid-template-columns:minmax(180px,1fr) 160px 190px 150px 140px;gap:10px;align-items:center}
+.control input,.control select{width:100%;appearance:none;background:rgba(255,255,255,.045);border:1px solid rgba(122,96,48,.36);border-radius:12px;color:#d8e1ec;font-size:12px;font-family:'Courier New',monospace;letter-spacing:.04em;padding:11px 12px;outline:none}
+.control input:focus,.control select:focus{border-color:rgba(201,168,76,.78);box-shadow:0 0 0 2px rgba(201,168,76,.09)}
+.control select{cursor:pointer}
+.count-line{max-width:1120px;margin:0 auto;padding:0 24px 14px;color:#69798d;font-size:10px;letter-spacing:.16em;font-family:'Courier New',monospace;text-transform:uppercase}
+.log-area{padding:42px 24px 70px;background:linear-gradient(180deg,#020508,#04080f)}
+.book{max-width:1120px;margin:0 auto;position:relative;padding:30px clamp(12px,3vw,34px);background:linear-gradient(90deg,rgba(72,46,20,.18),transparent 4%,transparent 96%,rgba(72,46,20,.14)),radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.14),transparent 55%),#0b0a08;border:1px solid rgba(122,96,48,.44);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.5), inset 0 0 60px rgba(201,168,76,.035)}
+.book:before{content:"";position:absolute;top:18px;bottom:18px;left:50%;width:1px;background:linear-gradient(180deg,transparent,rgba(201,168,76,.17),transparent);pointer-events:none}
+.book-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;margin-bottom:22px;padding:0 4px}
+.book-title{font-size:10px;letter-spacing:.32em;color:rgba(201,168,76,.74);font-family:'Courier New',monospace;text-transform:uppercase}
+.book-date{font-size:10px;letter-spacing:.14em;color:rgba(138,160,184,.65);font-family:'Courier New',monospace;text-align:right}
+.entries{display:flex;flex-direction:column;gap:18px}
+.record-card{position:relative;overflow:hidden;border-radius:13px;color:var(--ink);background:linear-gradient(90deg,rgba(90,65,30,.12) 1px,transparent 1px),linear-gradient(rgba(90,65,30,.085) 1px,transparent 1px),radial-gradient(circle at 30% 5%,rgba(255,255,255,.36),transparent 25%),linear-gradient(180deg,var(--paper3),var(--paper) 58%,var(--paper2));background-size:34px 34px,34px 34px,100% 100%,100% 100%;border:1px solid rgba(90,58,21,.58);box-shadow:0 8px 24px rgba(0,0,0,.35), inset 0 0 28px rgba(85,50,15,.08);padding:0}
+.record-card:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(60,32,9,.12),transparent 10%,transparent 90%,rgba(255,255,255,.10));pointer-events:none}
+.record-card.reviewed:after,.record-card.added:after,.record-card.received:after,.record-card.flagged:after{position:absolute;right:22px;top:20px;z-index:1;transform:rotate(-6deg);font-family:'Courier New',monospace;font-weight:700;font-size:13px;letter-spacing:.16em;border:2px solid currentColor;border-radius:3px;padding:5px 8px;opacity:.68;animation:stampIn .35s ease both;pointer-events:none}
+.record-card.reviewed:after{content:"REVIEWED";color:#5b5f39}
+.record-card.added:after{content:"ADDED TO MAP";color:#2d6b48}
+.record-card.received:after{content:"RECEIVED";color:#6d5131}
+.record-card.flagged:after{content:"NEEDS REVIEW";color:#8a3d28}
+.record-inner{position:relative;z-index:2;display:grid;grid-template-columns:190px 1fr;min-height:170px}
+.record-meta{border-right:1px solid rgba(90,58,21,.34);padding:20px 18px;background:linear-gradient(180deg,rgba(82,49,15,.10),rgba(255,255,255,.06))}
+.entry-no{font-family:'Courier New',monospace;font-size:10px;letter-spacing:.18em;color:#73512a;text-transform:uppercase;margin-bottom:18px}
+.meta-row{margin-bottom:14px}
+.meta-label{font-family:'Courier New',monospace;font-size:8px;letter-spacing:.2em;color:#7b6743;text-transform:uppercase;margin-bottom:4px}
+.meta-val{font-size:13px;line-height:1.35;color:#271a0d}
+.meta-val.mono{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.04em}
+.record-body{padding:22px 24px 18px}
+.record-topline{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding-right:150px;margin-bottom:12px}
+.badge{font-family:'Courier New',monospace;font-size:8px;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(90,58,21,.36);border-radius:999px;padding:5px 8px;color:#55391c;background:rgba(255,255,255,.18)}
+.badge.gold{border-color:rgba(121,88,30,.55);background:rgba(201,168,76,.16)}
+.record-title{font-size:clamp(20px,3vw,30px);font-weight:400;line-height:1.18;color:#1d1309;margin-bottom:12px}
+.record-text{font-size:16px;line-height:1.72;color:#261a0f;white-space:pre-wrap}
+.record-footer{margin-top:18px;padding-top:13px;border-top:1px solid rgba(90,58,21,.24);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.source-link{font-size:10px;letter-spacing:.12em;font-family:'Courier New',monospace;color:#6a421d;text-transform:uppercase;text-decoration:none;border-bottom:1px dotted rgba(90,58,21,.45)}
+.status-note{font-size:10px;letter-spacing:.12em;font-family:'Courier New',monospace;color:#785f3c;text-transform:uppercase}
+.sample-stamp{display:inline-block;font-family:'Courier New',monospace;font-weight:700;font-size:9px;letter-spacing:.18em;border:1.5px solid rgba(109,81,49,.55);border-radius:3px;padding:3px 6px;color:rgba(109,81,49,.62);text-transform:uppercase;transform:rotate(-4deg);opacity:.58;margin-left:10px;vertical-align:middle;pointer-events:none;animation:stampIn .35s ease both}
+.empty-state{display:none;text-align:center;padding:46px 20px;color:#7a8797;font-size:15px;line-height:1.8}
+.empty-state.show{display:block}
+.data-note{max-width:1120px;margin:24px auto 0;border:1px dashed rgba(122,96,48,.32);border-radius:14px;padding:18px 20px;color:#6f7d90;font-size:12px;line-height:1.7;background:rgba(255,255,255,.025)}
+.data-note code{color:#c9a84c;font-family:'Courier New',monospace;font-size:11px}
+.submit-band{padding:52px 24px;background:#050a14;border-top:1px solid rgba(122,96,48,.22)}
+.submit-inner{max-width:760px;margin:0 auto;text-align:center}
+.submit-inner h2{font-size:clamp(26px,5vw,46px);font-weight:300;color:#f0ece4;margin-bottom:14px}
+.submit-inner h2 em{font-style:normal;color:var(--gold)}
+.submit-inner p{font-size:15px;line-height:1.75;color:#8190a5;margin-bottom:24px}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{font-size:9px;letter-spacing:.2em;font-family:'Courier New',monospace;text-decoration:none;border-radius:24px;padding:11px 20px;text-transform:uppercase}
+.btn.primary{background:var(--gold);color:#04080f;font-weight:700}
+.btn.secondary{border:1px solid rgba(122,96,48,.44);color:var(--gold)}
+footer{background:#020508;padding:32px 22px;border-top:1px solid rgba(58,74,90,.25)}
+footer .inner{max-width:840px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.footer-logo{font-size:26px;font-weight:700;letter-spacing:.22em;font-family:'Courier New',monospace}
+.footer-tags{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;align-items:baseline}
+.footer-tags span{font-size:10px;letter-spacing:.18em;color:#6a7a8a;font-family:'Courier New',monospace}
+.footer-small{font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:.1em;line-height:2}
+@media(max-width:900px){.controls{grid-template-columns:1fr 1fr}}
+@media(max-width:780px){
+  .nav-center{display:none}.nav-link{display:none}.intro-grid{grid-template-columns:1fr}
+  .book:before{display:none}.record-inner{grid-template-columns:1fr}
+  .record-meta{border-right:none;border-bottom:1px solid rgba(90,58,21,.34);display:grid;grid-template-columns:1fr 1fr;gap:4px 14px}
+  .entry-no{grid-column:1/-1;margin-bottom:8px}.record-topline{padding-right:0}
+  .record-card.reviewed:after,.record-card.added:after,.record-card.received:after,.record-card.flagged:after{position:static;display:inline-block;margin:16px 0 0 20px}
+}
+@media(max-width:520px){
+  nav{padding:0 12px}.logo-now{letter-spacing:.22em}.nav-cta{padding:7px 10px;font-size:8px}
+  .hero-inner{padding:58px 18px 46px}.controls{grid-template-columns:1fr}
+  .record-meta{grid-template-columns:1fr}.record-body{padding:20px 18px 18px}.book{padding:18px 10px;border-radius:16px}
+  .footer-tags{gap:12px}
+}
+</style>
+</head>
+<body>
+<div id="ticker"><div id="ticker-inner">
+  <span>◎ THE LOG · A CONTINUING PUBLIC RECORD</span>
+  <span>◎ EVERY NODE CAN BE QUESTIONED · EVERY SECTION CAN BE EXPANDED</span>
+  <span>◎ PERSPECTIVE · CLARITY · SCALE · TRUST</span>
+  <span>◎ THE QUESTION IS THE ANSWER · THE RECORD REMAINS</span>
+  <span>◎ THE LOG · A CONTINUING PUBLIC RECORD</span>
+  <span>◎ EVERY NODE CAN BE QUESTIONED · EVERY SECTION CAN BE EXPANDED</span>
+  <span>◎ PERSPECTIVE · CLARITY · SCALE · TRUST</span>
+  <span>◎ THE QUESTION IS THE ANSWER · THE RECORD REMAINS</span>
+</div></div>
+
+<nav>
+  <a class="logo-wrap" href="/" title="USNow home">
+    <span class="logo-main"><span class="logo-us">US</span><span class="logo-now">NOW</span></span>
+    <span class="logo-sub">THE QUESTION IS THE ANSWER.</span>
+  </a>
+  <div class="nav-center"><div class="nav-plaque">THE LOG · PUBLIC RECORD</div></div>
+  <div class="nav-actions">
+    <a class="nav-link" href="/">SCALE</a>
+    <a class="nav-link" href="/compendium">COMPENDIUM</a>
+    <a class="nav-cta" href="/#thoughts">ADD YOUR VOICE</a>
+  </div>
+</nav>
+
+<main class="page-shell">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="kicker">USNOW PUBLIC REGISTER</div>
+      <h1>The <span>Log</span></h1>
+      <div class="hero-rule"></div>
+      <p class="hero-deck">A continuing record of public response — additions, corrections, objections, source suggestions, lived experiences, and connections submitted across the USNow map.</p>
+      <p class="hero-note">This is not a comment section. It is a record.</p>
+    </div>
+  </section>
+
+  <section class="intro" id="about-log">
+    <div class="intro-grid">
+      <article class="intro-card">
+        <h2>Every node can be <em>questioned</em>.</h2>
+        <p>USNow is built as a map: personal, social, political, historical, and further back. The Log is where that map stays open.</p>
+        <p>Each entry is filed to the record with its topic, node, date, and status. Some entries may correct information. Some may add context. Some may point to sources, contradictions, omissions, or connections that belong somewhere else in the structure.</p>
+        <p>The purpose is not noise. The purpose is a permanent, searchable public record of what people noticed, challenged, added, remembered, or refused to let disappear.</p>
+      </article>
+      <aside class="ledger-side">
+        <div class="folio">Register Summary</div>
+        <div class="big-num" id="summary-total">0</div>
+        <div class="label">entries displayed</div>
+        <p class="small">Filed by node, layer, type, date, and status. Searchable now by visible text; ready for richer collected fields later.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="controls-wrap" aria-label="Search and filter the public record">
+    <div class="controls">
+      <div class="control"><input id="searchInput" type="search" placeholder="SEARCH THE RECORD" autocomplete="off"></div>
+      <div class="control"><select id="layerFilter"><option value="all">ALL LAYERS</option></select></div>
+      <div class="control"><select id="nodeFilter"><option value="all">ALL NODES</option></select></div>
+      <div class="control"><select id="typeFilter"><option value="all">ALL TYPES</option></select></div>
+      <div class="control"><select id="sortFilter"><option value="newest">NEWEST FIRST</option><option value="oldest">OLDEST FIRST</option></select></div>
+    </div>
+    <div class="count-line" id="countLine">Loading the record…</div>
+  </section>
+
+  <section class="log-area">
+    <div class="book">
+      <div class="book-head">
+        <div class="book-title">Journal of Entries</div>
+        <div class="book-date" id="bookDate">Filed record · USNow.app</div>
+      </div>
+      <div class="entries" id="entries"></div>
+      <div class="empty-state" id="emptyState">No records match this search. Try another word, layer, or category.</div>
+    </div>
+
+    <div class="data-note">
+      <strong>Data hook:</strong> this page uses sample records unless you set <code>LOG_DATA_URL</code> to a local <code>log-data.json</code> file or a published Google Sheet CSV. It also loads <code>layers.js</code> from the same folder and builds the layer/node filters from the current tree.
+    </div>
+  </section>
+
+  <section class="submit-band">
+    <div class="submit-inner">
+      <h2>Add to the <em>record</em>.</h2>
+      <p>The strongest entries are specific: what should be corrected, added, sourced, connected, clarified, or preserved?</p>
+      <div class="btns">
+        <a class="btn primary" href="/">Return to the Scale</a>
+        <a class="btn secondary" href="/#thoughts">Leave a general note</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="footer-logo"><span style="color:#c9a84c;">Us</span><span style="color:#8aa0b8;">Now</span></div>
+    <div class="footer-tags"><span>PERSPECTIVE</span><span>FOCUS</span><span>SCALE</span><span>TRUST</span></div>
+    <div class="footer-small">NON-PARTISAN · NON-DENOMINATIONAL · NON-NEGOTIABLE</div>
+    <div class="footer-small">The Log · A continuing public record · © 2026 USNow.app</div>
+  </div>
+</footer>
+
+<script src="layers.js"></script>
+<script>
+/*
+  DATA SETUP:
+  - Leave LOG_DATA_URL empty to use sample records.
+  - Use '/log-data.json' for a JSON file.
+  - Use a published Google Sheet CSV URL when ready.
+*/
+const LOG_DATA_URL = '';
+
+function buildNodeIndexFromLayers(layers){
+  const byId={}, byLabel={}, nodes=[], layersList=[];
+  function addNode(item,layer,parent,kind){
+    if(!item || !item.id) return;
+    const node={
+      id:item.id,
+      label:item.label || item.id,
+      layerId:layer?.id || '',
+      layerLabel:layer?.label || 'Unfiled',
+      parentId:parent?.id || '',
+      parentLabel:parent?.label || '',
+      kind:kind || 'node',
+      color:item.color || layer?.color || '#c9a84c'
+    };
+    byId[node.id]=node;
+    if(!byLabel[String(node.label).toLowerCase()]) byLabel[String(node.label).toLowerCase()]=node;
+    nodes.push(node);
+  }
+  function walk(items,layer,parent,kind){
+    if(!Array.isArray(items)) return;
+    items.forEach(item=>{
+      addNode(item,layer,parent,kind);
+      walk(item.orbs,layer,item,'orb');
+      walk(item.topPills,layer,item,'topPill');
+      walk(item.bottomPills,layer,item,'bottomPill');
+    });
+  }
+  if(Array.isArray(layers)){
+    layers.forEach(layer=>{
+      if(!layer) return;
+      layersList.push({id:layer.id,label:layer.label || layer.id,color:layer.color || '#c9a84c'});
+      addNode(layer,layer,null,'layer');
+      walk(layer.orbs,layer,layer,'orb');
+      walk(layer.topPills,layer,layer,'topPill');
+      walk(layer.bottomPills,layer,layer,'bottomPill');
+    });
+  }
+  return {layers:layersList,nodes,byId,byLabel};
+}
+
+const NODE_INDEX = buildNodeIndexFromLayers(window.LAYERS || []);
+
+const SAMPLE_LOG_ENTRIES = [
+  {entryId:'USN-0007',submitted:'2026-04-25T18:32:00.000Z',name:'Anonymous',topic:'Social Mobility',nodeId:'social-mobility',nodeLabel:'Social Mobility',layerLabel:'Power and Politics',entryType:'Addition',status:'received',why:'The American Dream should probably stay here, but it should also connect to class, labor, housing, education, and inherited advantage. The garage myth is useful because it shows the story people tell about mobility, but the record should also show what conditions made mobility possible or impossible.',sources:'The Log',sourceUrl:''},
+  {entryId:'USN-0006',submitted:'2026-04-24T21:11:00.000Z',name:'J.T.',topic:'Government',nodeId:'p_gov',nodeLabel:'Government',layerLabel:'Power and Politics',entryType:'Correction',status:'reviewed',why:'This section should separate normal institutional power from corruption, abuse of power, and manipulation. Those are not the same thing, but they can appear across government, corporations, media, military, and money.',sources:'The Log',sourceUrl:''},
+  {entryId:'USN-0005',submitted:'2026-04-24T13:05:00.000Z',name:'Anonymous',topic:'Libraries and the Internet',nodeId:'e_lib',nodeLabel:'Libraries and the Internet',layerLabel:'Knowledge and Learning',entryType:'Connection',status:'added',why:'The Internet should not only be treated as technology. It is also an inheritance system for knowledge, similar to libraries, schools, archives, and oral tradition. It changes who can know what and how quickly.',sources:'The Log',sourceUrl:''},
+  {entryId:'USN-0004',submitted:'2026-04-23T17:42:00.000Z',name:'Anonymous',topic:'Identity',nodeId:'s1',nodeLabel:'Identity',layerLabel:'ME, MYSELF & I',entryType:'Lived Experience',status:'received',why:'Identity is not just something inside a person. Other people keep reflecting it back, naming it, challenging it, or simplifying it. The card should probably show that identity is partly internal and partly social.',sources:'The Log',sourceUrl:''},
+  {entryId:'USN-0003',submitted:'2026-04-22T20:17:00.000Z',name:'Anonymous',topic:'Empire',nodeId:'h_empire',nodeLabel:'Empire',layerLabel:'History and Civilization',entryType:'Source Suggestion',status:'flagged',why:'This entry needs sources before it should be added to the main map, but the idea is that empire should include formal empires and informal economic or military dominance.',sources:'The Log',sourceUrl:''}
+];
+
+let allEntries=[];
+const els={
+  entries:document.getElementById('entries'),
+  empty:document.getElementById('emptyState'),
+  search:document.getElementById('searchInput'),
+  layer:document.getElementById('layerFilter'),
+  node:document.getElementById('nodeFilter'),
+  type:document.getElementById('typeFilter'),
+  sort:document.getElementById('sortFilter'),
+  count:document.getElementById('countLine'),
+  total:document.getElementById('summary-total'),
+  date:document.getElementById('bookDate')
+};
+
+function escapeHtml(value){return String(value ?? '').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[ch]))}
+function safeDate(value){const d=value?new Date(value):new Date();return Number.isNaN(d.getTime())?new Date():d}
+function formatDate(value){return safeDate(value).toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})}
+function formatTime(value){return safeDate(value).toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}
+function normalizeStatus(value){
+  const v=String(value || 'received').toLowerCase().trim();
+  if(['reviewed','added','flagged','received'].includes(v)) return v;
+  if(v.includes('map')) return 'added';
+  if(v.includes('review')) return 'reviewed';
+  if(v.includes('flag') || v.includes('source')) return 'flagged';
+  return 'received';
+}
+function findNode(raw){
+  const id=raw.nodeId || raw.id || '';
+  const label=raw.nodeLabel || raw.topic || raw.node || raw.section || '';
+  return NODE_INDEX.byId[id] || NODE_INDEX.byLabel[String(label).toLowerCase()] || null;
+}
+function normalizeEntry(raw,index){
+  const matchedNode=findNode(raw);
+  const entryId=raw.entryId || raw.id || raw.record || `USN-${String(index+1).padStart(4,'0')}`;
+  const body=raw.body || raw.why || raw.thought || raw.comment || raw.note || '';
+  const topic=raw.topic || raw.nodeLabel || raw.node || raw.section || matchedNode?.label || 'General';
+  return {
+    entryId,
+    submitted:raw.submitted || raw.submittedAt || raw.date || new Date().toISOString(),
+    name:raw.displayName || raw.name || 'Anonymous',
+    topic,
+    nodeId:raw.nodeId || matchedNode?.id || '',
+    nodeLabel:raw.nodeLabel || matchedNode?.label || topic,
+    layerLabel:raw.layerLabel || raw.layer || matchedNode?.layerLabel || 'Unfiled',
+    parentLabel:raw.parentLabel || matchedNode?.parentLabel || '',
+    nodeKind:raw.nodeKind || matchedNode?.kind || '',
+    entryType:raw.entryType || raw.type || 'Entry',
+    status:normalizeStatus(raw.status),
+    body,
+    sources:raw.sources || raw.source || '',
+    sourceUrl:raw.sourceUrl || raw.url || '',
+    published:raw.published ?? true,
+    reviewedAt:raw.reviewedAt || ''
+  };
+}
+function parseCSV(text){
+  const rows=[]; let row=[],cell='',quote=false;
+  for(let i=0;i<text.length;i++){
+    const ch=text[i],next=text[i+1];
+    if(ch=='"' && quote && next=='"'){cell+='"';i++;continue}
+    if(ch=='"'){quote=!quote;continue}
+    if(ch==',' && !quote){row.push(cell);cell='';continue}
+    if((ch=='\n'||ch=='\r') && !quote){
+      if(ch=='\r' && next=='\n') i++;
+      row.push(cell);cell='';
+      if(row.some(v=>v.trim()!=='')) rows.push(row);
+      row=[];continue
+    }
+    cell+=ch
+  }
+  row.push(cell); if(row.some(v=>v.trim()!=='')) rows.push(row);
+  if(!rows.length) return [];
+  const headers=rows.shift().map(h=>h.trim());
+  return rows.map(r=>{const obj={};headers.forEach((h,i)=>obj[h]=r[i] || '');return obj});
+}
+async function loadEntries(){
+  if(!LOG_DATA_URL) return SAMPLE_LOG_ENTRIES.map(normalizeEntry);
+  const res=await fetch(LOG_DATA_URL,{cache:'no-store'});
+  const text=await res.text();
+  const contentType=res.headers.get('content-type') || '';
+  const raw=contentType.includes('json') || LOG_DATA_URL.endsWith('.json') ? JSON.parse(text) : parseCSV(text);
+  const rows=Array.isArray(raw) ? raw : (raw.entries || []);
+  return rows.map(normalizeEntry).filter(e=>String(e.published).toLowerCase()!=='false');
+}
+function fillFilters(entries){
+  const layerSet=new Map();
+  NODE_INDEX.layers.forEach(l=>layerSet.set(l.label,l.label));
+  entries.map(e=>e.layerLabel).filter(Boolean).forEach(v=>layerSet.set(v,v));
+  const layers=[...layerSet.values()].sort();
+
+  const nodeSet=new Map();
+  NODE_INDEX.nodes
+    .filter(n=>n.kind !== 'bottomPill')
+    .forEach(n=>nodeSet.set(n.id,{id:n.id,label:n.label,layer:n.layerLabel}));
+  entries.forEach(e=>{
+    if(e.nodeId || e.nodeLabel) nodeSet.set(e.nodeId || e.nodeLabel,{id:e.nodeId || e.nodeLabel,label:e.nodeLabel || e.topic || e.nodeId,layer:e.layerLabel});
+  });
+  const nodes=[...nodeSet.values()].sort((a,b)=>String(a.label).localeCompare(String(b.label)));
+  const types=[...new Set(entries.map(e=>e.entryType).filter(Boolean))].sort();
+
+  els.layer.innerHTML='<option value="all">ALL LAYERS</option>'+layers.map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v).toUpperCase()}</option>`).join('');
+  els.node.innerHTML='<option value="all">ALL NODES</option>'+nodes.map(n=>`<option value="${escapeHtml(n.id)}">${escapeHtml(n.label)}${n.layer ? ' · '+escapeHtml(n.layer) : ''}</option>`).join('');
+  els.type.innerHTML='<option value="all">ALL TYPES</option>'+types.map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v).toUpperCase()}</option>`).join('');
+}
+const SAMPLE_IDS=new Set(SAMPLE_LOG_ENTRIES.map(e=>e.entryId));
+function renderEntry(entry){
+  const status=normalizeStatus(entry.status);
+  const isSample=SAMPLE_IDS.has(entry.entryId);
+  const sampleStamp=isSample ? `<span class="sample-stamp">SAMPLE</span>` : '';
+  const source=entry.sourceUrl ? `<a class="source-link" href="${escapeHtml(entry.sourceUrl)}" target="_blank" rel="noopener">Source attached</a>` : `<span class="status-note">${escapeHtml(entry.sources || 'Filed without source')}</span>`;
+  return `
+    <article class="record-card ${status}" data-layer="${escapeHtml(entry.layerLabel)}" data-type="${escapeHtml(entry.entryType)}">
+      <div class="record-inner">
+        <aside class="record-meta">
+          <div class="entry-no">Entry No. ${escapeHtml(entry.entryId)}${sampleStamp}</div>
+          <div class="meta-row"><div class="meta-label">Entered</div><div class="meta-val">${escapeHtml(formatDate(entry.submitted))}</div></div>
+          <div class="meta-row"><div class="meta-label">Time</div><div class="meta-val mono">${escapeHtml(formatTime(entry.submitted))}</div></div>
+          <div class="meta-row"><div class="meta-label">Submitted by</div><div class="meta-val">${escapeHtml(entry.name || 'Anonymous')}</div></div>
+          <div class="meta-row"><div class="meta-label">Node ID</div><div class="meta-val mono">${escapeHtml(entry.nodeId || 'general')}</div></div>
+        </aside>
+        <section class="record-body">
+          <div class="record-topline">
+            <span class="badge gold">${escapeHtml(entry.layerLabel || 'Unfiled')}</span>
+            <span class="badge">${escapeHtml(entry.entryType || 'Entry')}</span>
+            <span class="badge">${escapeHtml(status)}</span>
+          </div>
+          <h2 class="record-title">${escapeHtml(entry.nodeLabel || entry.topic || 'General Record')}</h2>
+          <div class="record-text">${escapeHtml(entry.body)}</div>
+          <div class="record-footer">
+            ${source}
+            <span class="status-note">Filed under: ${escapeHtml(entry.topic || entry.nodeLabel || 'General')}</span>
+          </div>
+        </section>
+      </div>
+    </article>`;
+}
+function applyFilters(){
+  const q=els.search.value.toLowerCase().trim();
+  const layer=els.layer.value, node=els.node.value, type=els.type.value, sort=els.sort.value;
+  let filtered=allEntries.filter(e=>{
+    const haystack=[e.entryId,e.name,e.topic,e.nodeId,e.nodeLabel,e.layerLabel,e.parentLabel,e.nodeKind,e.entryType,e.status,e.body,e.sources].join(' ').toLowerCase();
+    return (!q || haystack.includes(q)) &&
+      (layer==='all' || e.layerLabel===layer) &&
+      (node==='all' || e.nodeId===node || e.nodeLabel===node) &&
+      (type==='all' || e.entryType===type);
+  });
+  filtered.sort((a,b)=>sort==='oldest' ? safeDate(a.submitted)-safeDate(b.submitted) : safeDate(b.submitted)-safeDate(a.submitted));
+  els.entries.innerHTML=filtered.map(renderEntry).join('');
+  els.empty.classList.toggle('show',filtered.length===0);
+  els.total.textContent=filtered.length;
+  els.count.textContent=`${filtered.length} of ${allEntries.length} entries displayed · ${NODE_INDEX.nodes.length} current nodes indexed`;
+}
+function setBookDate(){
+  const d=new Date();
+  els.date.textContent=`Filed record · ${d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'})}`;
+}
+['input','change'].forEach(evt=>{
+  els.search.addEventListener(evt,applyFilters);
+  els.layer.addEventListener(evt,applyFilters);
+  els.node.addEventListener(evt,applyFilters);
+  els.type.addEventListener(evt,applyFilters);
+  els.sort.addEventListener(evt,applyFilters);
+});
+(async function init(){
+  setBookDate();
+  try{
+    allEntries=await loadEntries();
+    fillFilters(allEntries);
+    applyFilters();
+  }catch(err){
+    console.error(err);
+    allEntries=SAMPLE_LOG_ENTRIES.map(normalizeEntry);
+    fillFilters(allEntries);
+    applyFilters();
+    els.count.textContent='Showing sample records. Data source could not be loaded.';
+  }
+})();
+</script>
+</body>
+</html>
