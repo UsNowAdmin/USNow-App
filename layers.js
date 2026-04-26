@@ -32509,483 +32509,2079 @@ const LAYERS = [
         "x": 38,
         "y": 28,
         "color": "#7060c8",
-        "desc": "Codified power. The rules written by those who had the power to write rules. Sometimes just. Often not. Always contested by those the rules were not written for. Law is civilization's written memory — the record of every power structure that has tried to make itself permanent.",
+        "desc": "Codified power. The rules written by those who had the power to write rules. Sometimes just. Often not. Always contested by those the rules were not written for. Law is civilization's written memory — the record of every power structure that has tried to make itself permanent. Understanding how law actually works, not how civics class described it, is the prerequisite for changing any of it.",
         "links": [
           {
-            "label": "Congress.gov",
-            "url": "https://congress.gov",
-            "emoji": "🏛️",
-            "tag": "CONGRESS"
+            "label": "Cornell Legal Information Institute — free legal text",
+            "url": "https://www.law.cornell.edu",
+            "emoji": "⚖️",
+            "tag": "LAW"
           },
           {
-            "label": "GovTrack",
-            "url": "https://govtrack.us",
+            "label": "Oyez — Supreme Court cases & audio",
+            "url": "https://www.oyez.org",
+            "emoji": "🏛️",
+            "tag": "LAW"
+          },
+          {
+            "label": "Brennan Center for Justice",
+            "url": "https://www.brennancenter.org",
+            "emoji": "⚖️",
+            "tag": "LAW"
+          },
+          {
+            "label": "ACLU — civil liberties tracker",
+            "url": "https://www.aclu.org",
+            "emoji": "⚖️",
+            "tag": "RIGHTS"
+          },
+          {
+            "label": "SCOTUSblog — Supreme Court analysis",
+            "url": "https://www.scotusblog.com",
+            "emoji": "🏛️",
+            "tag": "LAW"
+          },
+          {
+            "label": "GovTrack — legislation and votes",
+            "url": "https://www.govtrack.us",
             "emoji": "🏛️",
             "tag": "CONGRESS"
           }
         ],
         "topPills": [
           {
-            "id": "h6_rights_and_duties",
+            "id": "h6_rt",
             "label": "Rights & Duties",
-            "color": "#7a6cc6",
-            "desc": "The claims people have and the responsibilities a legal order assigns. Rights without enforcement are fragile; duties without rights can become domination.",
-            "links": [],
+            "color": "#386898",
+            "desc": "What citizens are owed and what they owe back. The American conversation about rights is loud. The conversation about duties is quieter. Both are part of the deal — and the deal has been renegotiated repeatedly across the country's history, mostly in the direction of expanding who counts as a full participant in it.",
+            "links": [
+              {
+                "label": "ACLU — know your rights",
+                "url": "https://www.aclu.org/know-your-rights",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
+              },
+              {
+                "label": "Cornell Legal Information Institute",
+                "url": "https://www.law.cornell.edu",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "Brennan Center — voting and civil rights",
+                "url": "https://www.brennancenter.org",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "USA.gov — rights and responsibilities",
+                "url": "https://www.usa.gov/rights",
+                "emoji": "🏛️",
+                "tag": "CIVIC"
+              }
+            ],
             "topPills": [
               {
-                "id": "f_rc_d2_civil_rights",
+                "id": "h6_r_civ",
                 "label": "Civil Rights",
-                "color": "#8377c5",
-                "desc": "Civil Rights is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
+                "color": "#286088",
+                "desc": "What you are entitled to as a person under the law — the right to vote, speak, assemble, and be free from discrimination. American civil rights have expanded across two centuries through court rulings, legislation, and movements that did not take no for an answer. The gains are real. The rollback is also real and ongoing.",
+                "links": [
+                  {
+                    "label": "ACLU — civil rights",
+                    "url": "https://www.aclu.org/civil-rights",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Civil Rights.gov — federal resources",
+                    "url": "https://www.civilrights.gov",
+                    "emoji": "🏛️",
+                    "tag": "RIGHTS"
+                  }
+                ],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "frc_rp_jc",
+                    "label": "Jim Crow",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6_const",
+                    "label": "Constitutional Law",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_cr",
+                    "label": "Civil Rights & Human Rights",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
-                "id": "h6_rights_and_duties_speech",
-                "label": "Speech",
-                "color": "#6b5cbc",
-                "desc": "Speech is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "c2_surveillance_and_data_privacy",
-                "label": "Privacy",
-                "color": "#8e82ce",
-                "desc": "Privacy is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "glories_dueprocess",
-                "label": "Due Process",
-                "color": "#5f50b4",
-                "desc": "Due Process is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "f_rc_d2_equal_protection",
-                "label": "Equal Protection",
-                "color": "#9c92d3",
-                "desc": "Equal Protection is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_rights_and_duties_civic_responsibility",
-                "label": "Civic Responsibility",
-                "color": "#5645b0",
-                "desc": "Civic Responsibility is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h6_courts_and_judges",
-            "label": "Courts & Judges",
-            "color": "#6150bf",
-            "desc": "The institutions that interpret law and settle disputes. Courts can protect rights, preserve power, correct injustice, or give old rules new life.",
-            "links": [],
-            "topPills": [
-              {
-                "id": "h6_courts_and_judges_trial_courts",
-                "label": "Trial Courts",
-                "color": "#6b5cbd",
-                "desc": "Trial Courts is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_courts_and_judges_appeals",
-                "label": "Appeals",
-                "color": "#5545b1",
-                "desc": "Appeals is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_courts_and_judges_supreme_court",
-                "label": "Supreme Court",
-                "color": "#7667c7",
-                "desc": "Supreme Court is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_courts_and_judges_precedent",
-                "label": "Precedent",
-                "color": "#5041a0",
-                "desc": "Precedent is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_courts_and_judges_judicial_review",
-                "label": "Judicial Review",
-                "color": "#8478ca",
-                "desc": "Judicial Review is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_courts_and_judges_legal_interpretation",
-                "label": "Legal Interpretation",
-                "color": "#473999",
-                "desc": "Legal Interpretation is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h6_crime_and_punishment",
-            "label": "Crime & Punishment",
-            "color": "#8577cf",
-            "desc": "How a society defines wrongdoing and what it does to those accused of it. Crime and punishment reveal fear, morality, inequality, and state power.",
-            "links": [],
-            "topPills": [
-              {
-                "id": "f_rc_d1_policing",
-                "label": "Policing",
-                "color": "#8e82ce",
-                "desc": "Policing is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_crime_and_punishment_prisons",
-                "label": "Prisons",
-                "color": "#7667c6",
-                "desc": "Prisons is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_crime_and_punishment_sentencing",
-                "label": "Sentencing",
-                "color": "#9a8ed7",
-                "desc": "Sentencing is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_crime_and_punishment_bail",
-                "label": "Bail",
-                "color": "#6a5abe",
-                "desc": "Bail is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_crime_and_punishment_prosecutors",
-                "label": "Prosecutors",
-                "color": "#a197d8",
-                "desc": "Prosecutors is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_crime_and_punishment_criminal_records",
-                "label": "Criminal Records",
-                "color": "#5d4abe",
-                "desc": "Criminal Records is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h6_property_and_contracts",
-            "label": "Property & Contracts",
-            "color": "#5746b4",
-            "desc": "The legal architecture of ownership and agreement. Property and contract law decide who can hold, sell, inherit, borrow, rent, and enforce.",
-            "links": [],
-            "topPills": [
-              {
-                "id": "f_class_wealth_and_income_ownership",
-                "label": "Ownership",
-                "color": "#6050b4",
-                "desc": "Ownership is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_property_and_contracts_land",
-                "label": "Land",
-                "color": "#50419f",
-                "desc": "Land is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_property_and_contracts_housing",
-                "label": "Housing",
-                "color": "#6a5abe",
-                "desc": "Housing is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "f_class_wealth_and_income_debt",
-                "label": "Debt",
-                "color": "#4a3d8f",
-                "desc": "Debt is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_property_and_contracts_business_contracts",
-                "label": "Business Contracts",
-                "color": "#786bc2",
-                "desc": "Business Contracts is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "f3",
-                "label": "Inheritance",
-                "color": "#423588",
-                "desc": "Not just money and property — though those too, and their absence. The silences passed down like heirlooms. The rages that skipped a generation and landed in you anyway. The tenderness nobody could name. The prejudices absorbed before you had the language to question them. You carry it all forward — the wound and the wonder both — unless you make the deliberate choice to set something down.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h6_constitutional_law",
-            "label": "Constitutional Law",
-            "color": "#9388d3",
-            "desc": "The rules for how government itself is allowed to operate. Constitutional law turns political power into boundaries, arguments, rights, and institutions.",
-            "links": [],
-            "topPills": [
-              {
-                "id": "p_gov_sep",
-                "label": "Separation of Powers",
-                "color": "#9c93d3",
-                "desc": "The constitutional design that divides federal power among three branches — legislative, executive, and judicial — so that no single person or institution can accumulate unchecked authority. Each branch has tools to limit the others. Congress passes laws; the President can veto; courts can strike down. The system works when each branch defends its own power. It fails when one branch defers.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_constitutional_law_federalism",
-                "label": "Federalism",
-                "color": "#8478ca",
-                "desc": "Federalism is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_constitutional_law_amendments",
-                "label": "Amendments",
-                "color": "#a197d8",
-                "desc": "Amendments is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "p_gov_vote_rights",
-                "label": "Voting Rights",
-                "color": "#786bc2",
-                "desc": "The history of who gets to vote in America is a history of expansion and contraction. Property requirements, race restrictions, poll taxes, literacy tests — and the movements that dismantled them. The Voting Rights Act of 1965 was the high-water mark. Its gutting by the Supreme Court in 2013 opened the door to a new wave of restrictions.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_constitutional_law_executive_power",
-                "label": "Executive Power",
-                "color": "#a298d7",
-                "desc": "Executive Power is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_constitutional_law_judicial_power",
-                "label": "Judicial Power",
-                "color": "#6b5cc2",
-                "desc": "Judicial Power is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h6_international_law",
-            "label": "International Law",
-            "color": "#4e3dae",
-            "desc": "The fragile attempt to put rules around nations. Treaties, human rights, sovereignty, refugees, and war crimes all live where law meets power without a single world government.",
-            "links": [],
-            "topPills": [
-              {
-                "id": "h6_international_law_treaties",
-                "label": "Treaties",
-                "color": "#5545b0",
-                "desc": "Treaties is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_international_law_war_crimes",
-                "label": "War Crimes",
-                "color": "#473999",
-                "desc": "War Crimes is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_international_law_human_rights",
+                "id": "h6_r_hum",
                 "label": "Human Rights",
-                "color": "#5c4bbf",
-                "desc": "Human Rights is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "color": "#387098",
+                "desc": "The rights people are owed because they are people — not because of their citizenship, country of birth, or legal status. The Universal Declaration in 1948 set the framework. The U.S. helped write it and has had a complicated relationship with it ever since, often invoking it abroad and resisting its application at home.",
+                "links": [
+                  {
+                    "label": "UN Human Rights — OHCHR",
+                    "url": "https://www.ohchr.org",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
+                  },
+                  {
+                    "label": "Human Rights Watch",
+                    "url": "https://www.hrw.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Amnesty International",
+                    "url": "https://www.amnesty.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_int",
+                    "label": "International Law",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_cr",
+                    "label": "Civil Rights & Human Rights",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_r_du",
+                "label": "Civic Duties",
+                "color": "#3878a8",
+                "desc": "The other side of the deal. Vote. Pay taxes. Serve on juries when called. Show up. American civic culture has gotten noticeably thinner on the duties side over living memory — at the same time as it has gotten louder about rights. The two trends are connected.",
+                "links": [
+                  {
+                    "label": "USA.gov — civic responsibilities",
+                    "url": "https://www.usa.gov/citizenship",
+                    "emoji": "🏛️",
+                    "tag": "CIVIC"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "ATJon on Substack",
+                    "url": "https://atjon.substack.com",
+                    "emoji": "⭐",
+                    "tag": "USNOW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_vote",
+                    "label": "Elections & Voting",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_r_vot",
+                "label": "Voting Rights",
+                "color": "#286898",
+                "desc": "The right that protects the others. When people can vote, they can change everything else. American voting rights have expanded and contracted across cycles — the Voting Rights Act of 1965 was the high water mark. The Supreme Court gutted its core enforcement mechanism in 2013. State legislatures noticed immediately.",
+                "links": [
+                  {
+                    "label": "Brennan Center — voting rights",
+                    "url": "https://www.brennancenter.org/voting-rights",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "ACLU — voting rights",
+                    "url": "https://www.aclu.org/voting-rights",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Ballotpedia — elections and voting",
+                    "url": "https://ballotpedia.org",
+                    "emoji": "🗳️",
+                    "tag": "VOTE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov_vote",
+                    "label": "Elections & Voting",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_r_pri",
+                "label": "Privacy",
+                "color": "#487898",
+                "desc": "The right not enumerated in the Constitution and largely constructed by the courts — reading between lines written in 1787 for a world without phones, algorithms, or facial recognition. American privacy law is uneven, mostly weaker than European equivalents, and increasingly outpaced by technology that arrived decades after the relevant precedents.",
+                "links": [
+                  {
+                    "label": "Electronic Frontier Foundation",
+                    "url": "https://www.eff.org",
+                    "emoji": "🛡️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "ACLU — privacy rights",
+                    "url": "https://www.aclu.org/privacy-technology",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Privacy Rights Clearinghouse",
+                    "url": "https://privacyrights.org",
+                    "emoji": "🛡️",
+                    "tag": "RIGHTS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c2_su_priv",
+                    "label": "Privacy",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c7_data",
+                    "label": "Data & Surveillance",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_r_due",
+                "label": "Due Process",
+                "color": "#4878a0",
+                "desc": "The promise that the government cannot take your life, liberty, or property without proper procedure. It sounds simple. It is not. American due process is real and uneven — better resourced in some courtrooms than others, applied more strictly for some defendants than others, and hollowed out in practice by the plea bargain system that handles 97% of criminal cases.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute — due process",
+                    "url": "https://www.law.cornell.edu/constitution/fifth_amendment",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "ACLU — due process",
+                    "url": "https://www.aclu.org/due-process",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_crim",
+                    "label": "Crime & Punishment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "glories_dueprocess",
+                    "label": "Due Process",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
                 "links": [],
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
               },
               {
-                "id": "h6_international_law_sovereignty",
-                "label": "Sovereignty",
-                "color": "#423588",
-                "desc": "Sovereignty is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "id": "frc_struct",
+                "label": "Race as Structure",
+                "desc": "",
                 "links": [],
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
               },
               {
-                "id": "h6_international_law_refugees",
-                "label": "Refugees",
-                "color": "#6b5cc2",
-                "desc": "Refugees is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h6_international_law_international_courts",
-                "label": "International Courts",
-                "color": "#3a2e80",
-                "desc": "International Courts is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "id": "p_gov_cr",
+                "label": "Civil Rights & Human Rights",
+                "desc": "",
                 "links": [],
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
               }
             ],
-            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h6_court",
+            "label": "Courts & Judges",
+            "color": "#5878a8",
+            "desc": "Where the law gets interpreted in practice — which is a different thing from what the law says on paper. American courts are the most powerful judiciary in the world. They can strike down laws passed by elected legislatures. They have. The Supreme Court is the apex. The lower courts do most of the actual work, for most of the actual people.",
+            "links": [
+              {
+                "label": "Oyez — Supreme Court cases & oral arguments",
+                "url": "https://www.oyez.org",
+                "emoji": "🏛️",
+                "tag": "LAW"
+              },
+              {
+                "label": "SCOTUSblog — case tracking and analysis",
+                "url": "https://www.scotusblog.com",
+                "emoji": "🏛️",
+                "tag": "LAW"
+              },
+              {
+                "label": "Cornell Legal Information Institute",
+                "url": "https://www.law.cornell.edu",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "Brennan Center for Justice",
+                "url": "https://www.brennancenter.org",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h6_co_sct",
+                "label": "Supreme Court",
+                "color": "#487098",
+                "desc": "Nine justices. Lifetime appointments. The most consequential court in the world. Composition shifts political weight for decades at a time — a single vacancy, timed well, can reshape the country's legal landscape for a generation. The current court is the most conservative since before the New Deal. What it does with that power will define the next thirty years.",
+                "links": [
+                  {
+                    "label": "Oyez — Supreme Court audio archive",
+                    "url": "https://www.oyez.org",
+                    "emoji": "🏛️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "SCOTUSblog — live case tracking",
+                    "url": "https://www.scotusblog.com",
+                    "emoji": "🏛️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov_jud",
+                    "label": "The Judiciary",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6_const",
+                    "label": "Constitutional Law",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_app",
+                "label": "Appellate Courts",
+                "color": "#5878a8",
+                "desc": "The federal circuit courts of appeal. Most cases that actually matter — the ones that set binding precedent — get decided here, not at the Supreme Court. The circuits have developed distinct legal cultures. The Ninth Circuit and the Fifth Circuit read the same Constitution and reach different answers, regularly.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute",
+                    "url": "https://www.law.cornell.edu",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "US Courts — federal court finder",
+                    "url": "https://www.uscourts.gov/court-locator",
+                    "emoji": "🏛️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_co_sct",
+                    "label": "Supreme Court",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6",
+                    "label": "Law",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_dis",
+                "label": "District Courts",
+                "color": "#6888b8",
+                "desc": "The federal trial courts — where evidence gets heard, witnesses testify, and verdicts come in. Ninety-four districts covering the country. This is where the law meets the person. Most federal cases never go higher than this, which makes the district court judge the most consequential legal figure most defendants will ever encounter.",
+                "links": [
+                  {
+                    "label": "US Courts — understanding federal courts",
+                    "url": "https://www.uscourts.gov/about-federal-courts",
+                    "emoji": "🏛️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Cornell Legal Information Institute",
+                    "url": "https://www.law.cornell.edu",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_crim",
+                    "label": "Crime & Punishment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6",
+                    "label": "Law",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_st",
+                "label": "State Courts",
+                "color": "#7898c8",
+                "desc": "Where most American litigation actually happens. State courts handle the overwhelming majority of criminal prosecutions, family law, contract disputes, landlord-tenant cases, and small claims. The quality, consistency, and fairness of state courts varies enormously by state — and by county.",
+                "links": [
+                  {
+                    "label": "NCSC — National Center for State Courts",
+                    "url": "https://www.ncsc.org",
+                    "emoji": "🏛️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Cornell Legal Information Institute",
+                    "url": "https://www.law.cornell.edu",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_crim",
+                    "label": "Crime & Punishment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "f4",
+                    "label": "Family",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_jud",
+                "label": "How Judges Get There",
+                "color": "#5878a0",
+                "desc": "Federal judges are nominated by the president and confirmed by the Senate. State judges in most states are elected — a practice almost unique among democracies. The political weight of judicial elections has grown dramatically in step with the courts' policy importance. Campaign money now flows into state supreme court races at levels that would have seemed absurd a generation ago.",
+                "links": [
+                  {
+                    "label": "Brennan Center — judicial independence",
+                    "url": "https://www.brennancenter.org/judicial-selection",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "OpenSecrets — judicial election money",
+                    "url": "https://www.opensecrets.org",
+                    "emoji": "💰",
+                    "tag": "MONEY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov_jud",
+                    "label": "The Judiciary",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_campaign",
+                    "label": "Campaign Finance",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_jur",
+                "label": "Juries",
+                "color": "#6888b8",
+                "desc": "Twelve neighbors deciding the fate of one defendant. The jury trial is constitutionally guaranteed and practically rare — most criminal cases now resolve through plea bargains where no jury is ever seated. Fewer than 2% of federal criminal cases go to trial. The constitutional right remains. Its exercise has been systematically bargained away by a system that rewards guilty pleas and punishes those who insist on their day in court.",
+                "links": [
+                  {
+                    "label": "ACLU — plea bargaining and trial rights",
+                    "url": "https://www.aclu.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_crim",
+                    "label": "Crime & Punishment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6_r_due",
+                    "label": "Due Process",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p_gov_jud",
+                "label": "The Judiciary",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6",
+                "label": "Law",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "h6_crim",
+            "label": "Crime & Punishment",
+            "color": "#583020",
+            "desc": "What the state does about wrongdoing — and who it decides is doing wrong. The American criminal legal system holds more people in prison than any country on earth, in raw numbers and per capita. It disproportionately targets poor people and people of color. The data is not contested. What to do about it is.",
+            "links": [
+              {
+                "label": "Prison Policy Initiative — incarceration data",
+                "url": "https://www.prisonpolicy.org",
+                "emoji": "📊",
+                "tag": "DATA"
+              },
+              {
+                "label": "ACLU — criminal justice reform",
+                "url": "https://www.aclu.org/criminal-law-reform",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
+              },
+              {
+                "label": "Brennan Center — criminal justice",
+                "url": "https://www.brennancenter.org/criminal-justice",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "The Marshall Project — criminal justice journalism",
+                "url": "https://www.themarshallproject.org",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h6_cr_law",
+                "label": "Criminal Law",
+                "color": "#482018",
+                "desc": "The body of statutes that define crimes and assign penalties. American criminal law has expanded enormously over the last fifty years — mandatory minimums, three-strikes laws, the drug war's legislative legacy. Many things that were once handled administratively are now felonies. The expansion has not made the country safer in proportion to its costs.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute",
+                    "url": "https://www.law.cornell.edu/wex/criminal_law",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Brennan Center — overcriminalization",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_co_st",
+                    "label": "State Courts",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_cr_pol",
+                "label": "Police",
+                "color": "#583020",
+                "desc": "The frontline of the system. American policing operates with more discretion, more military equipment, stronger legal protections from accountability, and weaker civilian oversight than most peer countries. The conversation about reform has been loud and the structural changes have been incremental. Qualified immunity has protected officers from civil liability in cases where other professionals would face consequences.",
+                "links": [
+                  {
+                    "label": "ACLU — police accountability",
+                    "url": "https://www.aclu.org/police-practices",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "The Marshall Project — policing",
+                    "url": "https://www.themarshallproject.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
+                  },
+                  {
+                    "label": "Brennan Center — policing reform",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "frc_struct",
+                    "label": "Race as Structure",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_cr_pris",
+                "label": "Prisons",
+                "color": "#382018",
+                "desc": "Roughly 2 million people held. Hundreds of thousands more on parole or probation. American incarceration rates are five to seven times higher per capita than European peer countries. The financial cost to states runs into the hundreds of billions. The human cost — in families broken, careers ended, communities destabilized — is incalculable. Neither political party has made reversing it a priority.",
+                "links": [
+                  {
+                    "label": "Prison Policy Initiative — data and maps",
+                    "url": "https://www.prisonpolicy.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
+                  },
+                  {
+                    "label": "The Marshall Project — incarceration journalism",
+                    "url": "https://www.themarshallproject.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
+                  },
+                  {
+                    "label": "ACLU — mass incarceration",
+                    "url": "https://www.aclu.org/mass-incarceration",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "frc_struct",
+                    "label": "Race as Structure",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "f_class",
+                    "label": "Class",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h3_aw_drugwar",
+                    "label": "The War on Drugs",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_cr_cap",
+                "label": "Capital Punishment",
+                "color": "#181008",
+                "desc": "The death penalty. Twenty-three states have abolished it. Most peer democracies ended it decades ago. The U.S. continues to use it — unevenly, slowly, and with a documented error rate. The Innocence Project has exonerated more than 200 death row inmates since 1992. Some who were not exonerated in time have been executed. The system does not acknowledge this cleanly.",
+                "links": [
+                  {
+                    "label": "Innocence Project — wrongful convictions",
+                    "url": "https://innocenceproject.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "ACLU — death penalty",
+                    "url": "https://www.aclu.org/capital-punishment",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Death Penalty Information Center",
+                    "url": "https://deathpenaltyinfo.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_r_due",
+                    "label": "Due Process",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "frc_struct",
+                    "label": "Race as Structure",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_cr_juv",
+                "label": "Juvenile Justice",
+                "color": "#582828",
+                "desc": "The system for people under 18. The U.S. has rolled back some of its most punitive practices — the Supreme Court has banned life without parole for most juvenile offenses. The system still disproportionately captures Black and Latino youth and treats them more harshly than white kids for equivalent conduct. The school-to-prison pipeline is documented and persistent.",
+                "links": [
+                  {
+                    "label": "ACLU — juvenile justice",
+                    "url": "https://www.aclu.org/juvenile-justice",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "The Marshall Project — youth justice",
+                    "url": "https://www.themarshallproject.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "frc_struct",
+                    "label": "Race as Structure",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "f_class",
+                    "label": "Class",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_cr_re",
+                "label": "Reentry & Recidivism",
+                "color": "#683028",
+                "desc": "What happens after release. Two-thirds of released prisoners are rearrested within three years. The barriers to housing, employment, voting, and professional licensing that follow a conviction are extensive — and most are political choices, not operational necessities. A country serious about reducing crime would make reentry easier. The current system is not designed around that goal.",
+                "links": [
+                  {
+                    "label": "Brennan Center — reentry and barriers",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Prison Policy Initiative — reentry data",
+                    "url": "https://www.prisonpolicy.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
+                  },
+                  {
+                    "label": "The Marshall Project — life after prison",
+                    "url": "https://www.themarshallproject.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "fc_h_homeless",
+                    "label": "Homelessness",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_work",
+                    "label": "Work & Labor",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_vote_rights",
+                    "label": "Voting Rights",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "frc_struct",
+                "label": "Race as Structure",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "f_class",
+                "label": "Class",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h3_aw_drugwar",
+                "label": "The War on Drugs",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "h6_prop",
+            "label": "Property & Contracts",
+            "color": "#785838",
+            "desc": "The legal scaffolding of the private economy. Most of what private law does is define what can be owned and enforce agreements between parties. The choices about what counts as property and which contracts courts will enforce are not neutral — they reflect who had power when the rules were written, and they compound that power over time.",
+            "links": [
+              {
+                "label": "Cornell Legal Information Institute",
+                "url": "https://www.law.cornell.edu/wex/property",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "FollowTheMoney — property and influence",
+                "url": "https://www.followthemoney.org",
+                "emoji": "💰",
+                "tag": "MONEY"
+              },
+              {
+                "label": "ProPublica — property and power",
+                "url": "https://www.propublica.org",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h6_p_pro",
+                "label": "Property",
+                "color": "#684828",
+                "desc": "What you can own — and who decided. American property law evolved to enable extraction: of land from indigenous nations through treaty and seizure, of labor from enslaved people, of resources from public lands at below-market rates. The forms have changed. Some of the patterns that produced concentrated ownership have not.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute",
+                    "url": "https://www.law.cornell.edu/wex/property",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Internet Archive — historical property law",
+                    "url": "https://archive.org",
+                    "emoji": "📚",
+                    "tag": "CULTURE"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "frc_rp_col",
+                    "label": "Colonialism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h5_set",
+                    "label": "Resources & Settlement",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "hist_first_nations",
+                    "label": "First Nations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_p_real",
+                "label": "Real Property",
+                "color": "#785838",
+                "desc": "Land — and the law that governs it. Zoning, easements, eminent domain, deed restrictions, mortgages — all the structures that determine who lives where, what gets built, and who bears the cost of development decisions made by people who don't live there. Zoning in particular has been used to enforce racial and economic segregation long after explicit discrimination became illegal.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute — property law",
+                    "url": "https://www.law.cornell.edu/wex/real_property",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Brennan Center — housing and law",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "fc_h_own",
+                    "label": "Homeownership",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_h_seg",
+                    "label": "Segregation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_p_int",
+                "label": "Intellectual Property",
+                "color": "#886038",
+                "desc": "Copyrights, patents, trademarks — and increasingly, genetic sequences, algorithms, and brand identities. The category has expanded to cover things the original framers of IP law never imagined. Each extension was argued as protecting creators. Each has ended up primarily protecting the corporations that acquired the creators' rights.",
+                "links": [
+                  {
+                    "label": "Electronic Frontier Foundation — IP and digital rights",
+                    "url": "https://www.eff.org/issues/intellectual-property",
+                    "emoji": "🛡️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Creative Commons — open licensing",
+                    "url": "https://creativecommons.org",
+                    "emoji": "🌐",
+                    "tag": "WEB"
+                  },
+                  {
+                    "label": "Cornell Legal Information Institute",
+                    "url": "https://www.law.cornell.edu/wex/intellectual_property",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e1_open",
+                    "label": "The Open Web",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_p_con",
+                "label": "Contracts",
+                "color": "#785030",
+                "desc": "Promises the law will enforce. The classical theory requires offer, acceptance, and consideration freely given by parties of roughly equal standing. Most modern contracts are not negotiated — they are presented. Click accept or don't use the service. The legal fiction of mutual agreement between equals has never been thinner.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute — contracts",
+                    "url": "https://www.law.cornell.edu/wex/contract",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6_p_arb",
+                    "label": "Arbitration",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_p_arb",
+                "label": "Arbitration",
+                "color": "#583018",
+                "desc": "How disputes get resolved when the contract requires it — which almost all consumer and employment contracts now do. Arbitration moves disputes out of courts and into private proceedings run by firms that depend on corporate repeat business. Studies consistently show outcomes favor the corporate party. The Supreme Court has expanded enforcement of mandatory arbitration clauses across four decades, over repeated congressional attempts to limit it.",
+                "links": [
+                  {
+                    "label": "ACLU — forced arbitration",
+                    "url": "https://www.aclu.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Electronic Frontier Foundation",
+                    "url": "https://www.eff.org",
+                    "emoji": "🛡️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_co_sct",
+                    "label": "Supreme Court",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_p_bk",
+                "label": "Bankruptcy",
+                "color": "#684830",
+                "desc": "The legal escape valve — and a window into what the system actually values. Bankruptcy law in the U.S. is more generous to corporations than to individuals. A company can shed debts, renegotiate contracts, and emerge reorganized. An individual carrying student loan debt cannot discharge it. Most medical debt can be discharged. Student debt cannot. That asymmetry is a policy choice, not an economic law.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute — bankruptcy",
+                    "url": "https://www.law.cornell.edu/wex/bankruptcy",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Consumer Financial Protection Bureau",
+                    "url": "https://www.consumerfinance.gov",
+                    "emoji": "💰",
+                    "tag": "MONEY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p2_debt",
+                    "label": "Debt & Credit",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2_d_stu",
+                    "label": "Student Debt",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p2",
+                "label": "Economy & Money",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p_corp",
+                "label": "Corporations",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "h6_const",
+            "label": "Constitutional Law",
+            "color": "#5878b8",
+            "desc": "The text everything is supposed to flow from. The U.S. Constitution is short, old, and contested at every significant clause. What it means is mostly what nine people in lifetime-appointed robes say it means at any given moment. That is more interpretive power for a smaller group of unelected people than the framers — who feared concentrated power — probably intended to create.",
+            "links": [
+              {
+                "label": "Constitution annotated — Congress.gov",
+                "url": "https://constitution.congress.gov",
+                "emoji": "🏛️",
+                "tag": "CONGRESS"
+              },
+              {
+                "label": "Oyez — Supreme Court oral arguments",
+                "url": "https://www.oyez.org",
+                "emoji": "🏛️",
+                "tag": "LAW"
+              },
+              {
+                "label": "Brennan Center for Justice",
+                "url": "https://www.brennancenter.org",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "National Constitution Center — interactive",
+                "url": "https://constitutioncenter.org",
+                "emoji": "🏛️",
+                "tag": "HISTORY"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h6_co_text",
+                "label": "The Text",
+                "color": "#4878a8",
+                "desc": "Seven articles. Twenty-seven amendments. Roughly 4,500 words in the original. The entire document fits on a few pages — which is part of why it has been fought over for two and a half centuries. Most of the live constitutional arguments are about what the words mean, what they meant when written, and which interpretive theory gets to decide.",
+                "links": [
+                  {
+                    "label": "Full text — Constitution of the United States",
+                    "url": "https://constitution.congress.gov/constitution/",
+                    "emoji": "🏛️",
+                    "tag": "CONGRESS"
+                  },
+                  {
+                    "label": "National Constitution Center — interactive constitution",
+                    "url": "https://constitutioncenter.org/the-constitution",
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e6p",
+                    "label": "The U.S. Constitution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "history",
+                    "label": "History",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_orig",
+                "label": "Originalism",
+                "color": "#586898",
+                "desc": "The interpretive theory that the Constitution means what it meant when ratified — or what the framers intended it to mean. Has been the dominant theory on the right for forty years and now commands a majority of the Supreme Court. Has been used to reach conclusions about guns, religion, and administrative power that the framers themselves probably would not have recognized as their intent.",
+                "links": [
+                  {
+                    "label": "Brennan Center — originalism and the courts",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "SCOTUSblog — constitutional interpretation",
+                    "url": "https://www.scotusblog.com",
+                    "emoji": "🏛️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_co_sct",
+                    "label": "Supreme Court",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6_co_liv",
+                    "label": "Living Constitution",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_liv",
+                "label": "Living Constitution",
+                "color": "#6888c8",
+                "desc": "The competing theory: the Constitution evolves with American society, and its principles must be applied to circumstances the framers never encountered. Most of the rights expansions of the 20th century — privacy, reproductive rights, same-sex relationships — rested on this approach. It is currently out of favor at the Court, which does not mean it is wrong.",
+                "links": [
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "National Constitution Center — constitutional debate",
+                    "url": "https://constitutioncenter.org",
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_co_sct",
+                    "label": "Supreme Court",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h6_r_civ",
+                    "label": "Civil Rights",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_amd",
+                "label": "Amendments",
+                "color": "#5878b0",
+                "desc": "How the document changes officially — slowly, deliberately, and rarely. Amendment requires two-thirds of both congressional chambers and ratification by three-quarters of states. Most amendments came in clusters tied to national crises: the Bill of Rights, the Civil War amendments, the Progressive Era. The country has not successfully amended the Constitution in more than fifty years.",
+                "links": [
+                  {
+                    "label": "Constitution annotated — amendments",
+                    "url": "https://constitution.congress.gov/constitution/",
+                    "emoji": "🏛️",
+                    "tag": "CONGRESS"
+                  },
+                  {
+                    "label": "National Archives — Bill of Rights",
+                    "url": "https://www.archives.gov/founding-docs/bill-of-rights",
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "e6p_amend",
+                    "label": "The Amendments",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_judr",
+                "label": "Judicial Review",
+                "color": "#487898",
+                "desc": "The power the Court claimed for itself in Marbury v. Madison in 1803 and has held ever since — the authority to declare acts of Congress or the president unconstitutional and void them. It is not in the Constitution. John Marshall asserted it and built the argument for why it had to exist. No one stopped him. It is now one of the most consequential judicial powers in the world.",
+                "links": [
+                  {
+                    "label": "Oyez — Marbury v. Madison",
+                    "url": "https://www.oyez.org/cases/1789-1850/5us137",
+                    "emoji": "🏛️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov_jud",
+                    "label": "The Judiciary",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_checks",
+                    "label": "Checks & Balances",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_co_fed",
+                "label": "Federalism",
+                "color": "#586898",
+                "desc": "The constitutional division of power between the federal government and the states. The line has always moved — the Civil War moved it dramatically toward federal supremacy, the New Deal moved it further, and the Court has been moving it back toward states for forty years. The consequences for civil rights enforcement, environmental protection, and reproductive rights are concrete and large.",
+                "links": [
+                  {
+                    "label": "Cornell Legal Information Institute — federalism",
+                    "url": "https://www.law.cornell.edu/wex/federalism",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Brennan Center for Justice",
+                    "url": "https://www.brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov_sep",
+                    "label": "Separation of Powers",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_court",
+                "label": "Courts & Judges",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e6p",
+                "label": "The U.S. Constitution",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "h6_int",
+            "label": "International Law",
+            "color": "#386878",
+            "desc": "The law between nations — treaties, custom, and the institutions of the post-1945 order. International law has fewer enforcement teeth than domestic law and matters anyway, until a powerful country decides it doesn't. The U.S. helped write most of the current framework and is among its most selective followers.",
+            "links": [
+              {
+                "label": "UN Treaty Collection",
+                "url": "https://treaties.un.org",
+                "emoji": "🌍",
+                "tag": "GLOBAL"
+              },
+              {
+                "label": "International Court of Justice",
+                "url": "https://www.icj-cij.org",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
+              },
+              {
+                "label": "Foreign Affairs — international law and order",
+                "url": "https://www.foreignaffairs.com",
+                "emoji": "📰",
+                "tag": "GEOPOLITICS"
+              },
+              {
+                "label": "Human Rights Watch — international accountability",
+                "url": "https://www.hrw.org",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h6_i_treat",
+                "label": "Treaties",
+                "color": "#286068",
+                "desc": "Formal agreements between states — the primary source of international legal obligation. The U.S. signs many and ratifies fewer than most peer democracies. The Senate's two-thirds ratification requirement has become a structural obstacle. Several significant international agreements — the Law of the Sea, the Convention on the Rights of the Child, the Rome Statute — have been signed but never ratified by the U.S.",
+                "links": [
+                  {
+                    "label": "UN Treaty Collection — searchable database",
+                    "url": "https://treaties.un.org",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
+                  },
+                  {
+                    "label": "US Senate — treaty process",
+                    "url": "https://www.senate.gov/about/powers-procedures/treaties.htm",
+                    "emoji": "🏛️",
+                    "tag": "CONGRESS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_treaties",
+                    "label": "Treaties & International Law",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_i_un",
+                "label": "United Nations",
+                "color": "#386878",
+                "desc": "Founded in 1945 after the second catastrophic war in thirty years, with the explicit purpose of preventing a third. The UN provides a forum for diplomacy, coordinates humanitarian response, and establishes international norms. Its core limitation is built in: the five permanent Security Council members — U.S., UK, France, Russia, China — each hold a veto, ensuring that the countries most capable of starting a world war cannot be stopped by the body designed to prevent one.",
+                "links": [
+                  {
+                    "label": "United Nations — official data and documents",
+                    "url": "https://www.un.org",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
+                  },
+                  {
+                    "label": "UN data — open statistics",
+                    "url": "https://data.un.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1",
+                    "label": "Nations & Empire",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov_un",
+                    "label": "The United Nations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_i_war",
+                "label": "Laws of War",
+                "color": "#382828",
+                "desc": "The rules nations have agreed apply even in armed conflict — the Geneva Conventions, the Hague Regulations, and the body of international humanitarian law that has developed since. They prohibit targeting civilians, torture, and certain weapons. They are honored more than they used to be. They are violated routinely, including by parties that helped write them.",
+                "links": [
+                  {
+                    "label": "ICRC — international humanitarian law",
+                    "url": "https://www.icrc.org/en/war-and-law",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Federation of American Scientists",
+                    "url": "https://fas.org",
+                    "emoji": "🔬",
+                    "tag": "POLICY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h3",
+                    "label": "War & Revolutions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_i_hr",
+                "label": "International Human Rights",
+                "color": "#387088",
+                "desc": "The framework built since 1948 — the Universal Declaration, followed by binding conventions on civil and political rights, economic and social rights, torture, the rights of the child, and discrimination. The U.S. helped draft the core documents and has ratified fewer of them than most peer democracies. Enforcement is largely by diplomatic pressure, reputational cost, and the leverage that comes with aid and trade relationships.",
+                "links": [
+                  {
+                    "label": "OHCHR — UN Human Rights",
+                    "url": "https://www.ohchr.org",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
+                  },
+                  {
+                    "label": "Human Rights Watch",
+                    "url": "https://www.hrw.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Amnesty International",
+                    "url": "https://www.amnesty.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h6_r_hum",
+                    "label": "Human Rights",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_shift_globalsouth",
+                    "label": "The Global South",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_i_cr",
+                "label": "International Criminal Law",
+                "color": "#383028",
+                "desc": "The International Criminal Court, established in 2002, prosecutes individuals — not states — for war crimes, crimes against humanity, and genocide. The U.S. signed the Rome Statute and unsigned it. China and Russia are not parties. The court has prosecuted mostly African leaders, which is part of why the African Union has been hostile to it. The pattern of selective accountability is noted by everyone who is selected.",
+                "links": [
+                  {
+                    "label": "International Criminal Court",
+                    "url": "https://www.icc-cpi.int",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "International Court of Justice",
+                    "url": "https://www.icj-cij.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1",
+                    "label": "Nations & Empire",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h6_i_trade",
+                "label": "Trade Law",
+                "color": "#387880",
+                "desc": "The WTO, bilateral trade agreements, and the framework that governs how goods, services, capital, and increasingly data cross borders. The post-war trading order was built around American leadership and has functioned — imperfectly — to expand global commerce. American ambivalence about that order in the last decade has left the WTO dispute resolution system paralyzed and the global trading framework under strain.",
+                "links": [
+                  {
+                    "label": "World Trade Organization",
+                    "url": "https://www.wto.org",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
+                  },
+                  {
+                    "label": "Bureau of Economic Analysis — trade data",
+                    "url": "https://www.bea.gov",
+                    "emoji": "📊",
+                    "tag": "DATA"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "p2_m_trade",
+                    "label": "Trade",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1",
+                    "label": "Nations & Empire",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "h1",
+                "label": "Nations & Empire",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p_gov",
+                "label": "Government",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h3",
+                "label": "War & Revolutions",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "hist_geopolitics",
+                "label": "Geopolitics",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
             "orbs": []
           }
         ],
-        "bottomPills": [
-          {
-            "id": "p_gov",
-            "label": "Government",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "f_rc",
-            "label": "Race & Ethnicity",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "p_corp",
-            "label": "Corporations",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "p_mil",
-            "label": "Military",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          }
-        ],
+        "bottomPills": [],
         "orbs": []
       },
       {
