@@ -115,11 +115,17 @@ h1 span{color:var(--gold)}
 .entries{display:flex;flex-direction:column;gap:18px}
 .record-card{position:relative;overflow:hidden;border-radius:13px;color:var(--ink);background:linear-gradient(90deg,rgba(90,65,30,.12) 1px,transparent 1px),linear-gradient(rgba(90,65,30,.085) 1px,transparent 1px),radial-gradient(circle at 30% 5%,rgba(255,255,255,.36),transparent 25%),linear-gradient(180deg,var(--paper3),var(--paper) 58%,var(--paper2));background-size:34px 34px,34px 34px,100% 100%,100% 100%;border:1px solid rgba(90,58,21,.58);box-shadow:0 8px 24px rgba(0,0,0,.35), inset 0 0 28px rgba(85,50,15,.08);padding:0}
 .record-card:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(60,32,9,.12),transparent 10%,transparent 90%,rgba(255,255,255,.10));pointer-events:none}
-.record-card.reviewed:after,.record-card.added:after,.record-card.received:after,.record-card.flagged:after{position:absolute;right:22px;top:20px;z-index:1;transform:rotate(-6deg);font-family:'Courier New',monospace;font-weight:700;font-size:13px;letter-spacing:.16em;border:2px solid currentColor;border-radius:3px;padding:5px 8px;opacity:.68;animation:stampIn .35s ease both;pointer-events:none}
+.record-card.reviewed:after,.record-card.added:after,.record-card.received:after,.record-card.flagged:after,.record-card.censored:after,.record-card.noise:after{position:absolute;right:22px;top:20px;z-index:1;transform:rotate(-6deg);font-family:'Courier New',monospace;font-weight:700;font-size:13px;letter-spacing:.16em;border:2px solid currentColor;border-radius:3px;padding:5px 8px;opacity:.68;animation:stampIn .35s ease both;pointer-events:none}
 .record-card.reviewed:after{content:"REVIEWED";color:#5b5f39}
 .record-card.added:after{content:"ADDED TO MAP";color:#2d6b48}
 .record-card.received:after{content:"RECEIVED";color:#6d5131}
 .record-card.flagged:after{content:"NEEDS REVIEW";color:#8a3d28}
+.record-card.censored:after{content:"CENSORED";color:#5a2020}
+.record-card.noise:after{content:"NOISE";color:#4a4040}
+.record-card.noise{opacity:.32;filter:grayscale(.7)}
+.redacted{display:inline;background:#1c0a0a;color:transparent;border-radius:1px;padding:1px 4px;margin:0 1px;user-select:none;font-size:.95em;vertical-align:baseline}
+.censored-reason{font-size:11px;letter-spacing:.11em;font-family:'Courier New',monospace;color:#8a3d28;margin-top:12px;padding:7px 10px;border-left:2px solid rgba(138,61,40,.38);background:rgba(138,61,40,.05);border-radius:0 4px 4px 0;line-height:1.6}
+.noise-collapsed{font-size:11px;letter-spacing:.14em;font-family:'Courier New',monospace;color:#7a6a6a;font-style:italic}
 .record-inner{position:relative;z-index:2;display:grid;grid-template-columns:190px 1fr;min-height:170px}
 .record-meta{border-right:1px solid rgba(90,58,21,.34);padding:20px 18px;background:linear-gradient(180deg,rgba(82,49,15,.10),rgba(255,255,255,.06))}
 .entry-no{font-family:'Courier New',monospace;font-size:10px;letter-spacing:.18em;color:#73512a;text-transform:uppercase;margin-bottom:18px}
@@ -162,7 +168,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;flex-direction:column;a
   .book:before{display:none}.record-inner{grid-template-columns:1fr}
   .record-meta{border-right:none;border-bottom:1px solid rgba(90,58,21,.34);display:grid;grid-template-columns:1fr 1fr;gap:4px 14px}
   .entry-no{grid-column:1/-1;margin-bottom:8px}.record-topline{padding-right:0}
-  .record-card.reviewed:after,.record-card.added:after,.record-card.received:after,.record-card.flagged:after{position:static;display:inline-block;margin:16px 0 0 20px}
+  .record-card.reviewed:after,.record-card.added:after,.record-card.received:after,.record-card.flagged:after,.record-card.censored:after,.record-card.noise:after{position:static;display:inline-block;margin:16px 0 0 20px}
 }
 @media(max-width:520px){
   nav{padding:0 12px}.logo-now{letter-spacing:.22em}.nav-cta{padding:7px 10px;font-size:8px}
@@ -352,11 +358,20 @@ function formatDate(value){return safeDate(value).toLocaleDateString(undefined,{
 function formatTime(value){return safeDate(value).toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}
 function normalizeStatus(value){
   const v=String(value || 'received').toLowerCase().trim();
-  if(['reviewed','added','flagged','received'].includes(v)) return v;
+  if(['reviewed','added','flagged','received','censored','noise'].includes(v)) return v;
   if(v.includes('map')) return 'added';
   if(v.includes('review')) return 'reviewed';
   if(v.includes('flag') || v.includes('source')) return 'flagged';
+  if(v.includes('censor')) return 'censored';
+  if(v.includes('noise') || v.includes('spam')) return 'noise';
   return 'received';
+}
+function applyRedaction(text){
+  // Replace [REDACT]...[/REDACT] with a black bar span
+  return escapeHtml(text).replace(/\[REDACT\](.*?)\[\/REDACT\]/gs, (_,inner)=>{
+    const bar='█'.repeat(Math.max(8,inner.length));
+    return `<span class="redacted" title="Redacted">${bar}</span>`;
+  });
 }
 function findNode(raw){
   const id=raw.nodeId || raw.id || '';
@@ -434,7 +449,9 @@ function fillFilters(entries){
 
   els.layer.innerHTML='<option value="all">ALL LAYERS</option>'+layers.map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v).toUpperCase()}</option>`).join('');
   els.node.innerHTML='<option value="all">ALL NODES</option>'+nodes.map(n=>`<option value="${escapeHtml(n.id)}">${escapeHtml(n.label)}${n.layer ? ' · '+escapeHtml(n.layer) : ''}</option>`).join('');
-  els.type.innerHTML='<option value="all">ALL TYPES</option>'+types.map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v).toUpperCase()}</option>`).join('');
+  const standardTypes=['Addition','Correction','Connection','Lived Experience','Source Suggestion','Dispute','Expansion'];
+  const allTypes=[...new Set([...standardTypes,...types])].sort();
+  els.type.innerHTML='<option value="all">ALL TYPES</option>'+allTypes.map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v).toUpperCase()}</option>`).join('');
 }
 const SAMPLE_IDS=new Set(SAMPLE_LOG_ENTRIES.map(e=>e.entryId));
 function renderEntry(entry){
@@ -459,7 +476,13 @@ function renderEntry(entry){
             <span class="badge">${escapeHtml(status)}</span>
           </div>
           <h2 class="record-title">${escapeHtml(entry.nodeLabel || entry.topic || 'General Record')}</h2>
-          <div class="record-text">${escapeHtml(entry.body)}</div>
+          <div class="record-text">${
+            status==='noise'
+              ? `<span class="noise-collapsed">Filed as noise. No content displayed.</span>`
+              : status==='censored'
+                ? applyRedaction(entry.body) + (entry.statusNote ? `<div class="censored-reason">Editorial note: ${escapeHtml(entry.statusNote)}</div>` : '')
+                : applyRedaction(entry.body)
+          }</div>
           <div class="record-footer">
             ${source}
             <span class="status-note">Filed under: ${escapeHtml(entry.topic || entry.nodeLabel || 'General')}</span>
