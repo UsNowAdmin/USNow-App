@@ -1901,6 +1901,15 @@ const LAYERS = [
         "topPills": [],
         "bottomPills": [],
         "orbs": []
+      },
+      {
+        "id": "e2_psych",
+        "label": "Psychology",
+        "desc": "",
+        "links": [],
+        "topPills": [],
+        "bottomPills": [],
+        "orbs": []
       }
     ]
   },
@@ -9524,6 +9533,24 @@ const LAYERS = [
                 "orbs": []
               }
             ],
+            "orbs": []
+          },
+          {
+            "id": "f_rc_d1",
+            "label": "Place",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "f_rc_d2",
+            "label": "Rights & Responsibilities",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
             "orbs": []
           }
         ],
@@ -32497,8 +32524,468 @@ const LAYERS = [
             "tag": "CONGRESS"
           }
         ],
-        "topPills": [],
-        "bottomPills": [],
+        "topPills": [
+          {
+            "id": "h6_rights_and_duties",
+            "label": "Rights & Duties",
+            "color": "#7a6cc6",
+            "desc": "The claims people have and the responsibilities a legal order assigns. Rights without enforcement are fragile; duties without rights can become domination.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "f_rc_d2_civil_rights",
+                "label": "Civil Rights",
+                "color": "#8377c5",
+                "desc": "Civil Rights is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_rights_and_duties_speech",
+                "label": "Speech",
+                "color": "#6b5cbc",
+                "desc": "Speech is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "c2_surveillance_and_data_privacy",
+                "label": "Privacy",
+                "color": "#8e82ce",
+                "desc": "Privacy is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "glories_dueprocess",
+                "label": "Due Process",
+                "color": "#5f50b4",
+                "desc": "Due Process is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "f_rc_d2_equal_protection",
+                "label": "Equal Protection",
+                "color": "#9c92d3",
+                "desc": "Equal Protection is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_rights_and_duties_civic_responsibility",
+                "label": "Civic Responsibility",
+                "color": "#5645b0",
+                "desc": "Civic Responsibility is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h6_courts_and_judges",
+            "label": "Courts & Judges",
+            "color": "#6150bf",
+            "desc": "The institutions that interpret law and settle disputes. Courts can protect rights, preserve power, correct injustice, or give old rules new life.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "h6_courts_and_judges_trial_courts",
+                "label": "Trial Courts",
+                "color": "#6b5cbd",
+                "desc": "Trial Courts is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_courts_and_judges_appeals",
+                "label": "Appeals",
+                "color": "#5545b1",
+                "desc": "Appeals is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_courts_and_judges_supreme_court",
+                "label": "Supreme Court",
+                "color": "#7667c7",
+                "desc": "Supreme Court is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_courts_and_judges_precedent",
+                "label": "Precedent",
+                "color": "#5041a0",
+                "desc": "Precedent is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_courts_and_judges_judicial_review",
+                "label": "Judicial Review",
+                "color": "#8478ca",
+                "desc": "Judicial Review is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_courts_and_judges_legal_interpretation",
+                "label": "Legal Interpretation",
+                "color": "#473999",
+                "desc": "Legal Interpretation is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h6_crime_and_punishment",
+            "label": "Crime & Punishment",
+            "color": "#8577cf",
+            "desc": "How a society defines wrongdoing and what it does to those accused of it. Crime and punishment reveal fear, morality, inequality, and state power.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "f_rc_d1_policing",
+                "label": "Policing",
+                "color": "#8e82ce",
+                "desc": "Policing is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_crime_and_punishment_prisons",
+                "label": "Prisons",
+                "color": "#7667c6",
+                "desc": "Prisons is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_crime_and_punishment_sentencing",
+                "label": "Sentencing",
+                "color": "#9a8ed7",
+                "desc": "Sentencing is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_crime_and_punishment_bail",
+                "label": "Bail",
+                "color": "#6a5abe",
+                "desc": "Bail is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_crime_and_punishment_prosecutors",
+                "label": "Prosecutors",
+                "color": "#a197d8",
+                "desc": "Prosecutors is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_crime_and_punishment_criminal_records",
+                "label": "Criminal Records",
+                "color": "#5d4abe",
+                "desc": "Criminal Records is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h6_property_and_contracts",
+            "label": "Property & Contracts",
+            "color": "#5746b4",
+            "desc": "The legal architecture of ownership and agreement. Property and contract law decide who can hold, sell, inherit, borrow, rent, and enforce.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "f_class_wealth_and_income_ownership",
+                "label": "Ownership",
+                "color": "#6050b4",
+                "desc": "Ownership is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_property_and_contracts_land",
+                "label": "Land",
+                "color": "#50419f",
+                "desc": "Land is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_property_and_contracts_housing",
+                "label": "Housing",
+                "color": "#6a5abe",
+                "desc": "Housing is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "f_class_wealth_and_income_debt",
+                "label": "Debt",
+                "color": "#4a3d8f",
+                "desc": "Debt is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_property_and_contracts_business_contracts",
+                "label": "Business Contracts",
+                "color": "#786bc2",
+                "desc": "Business Contracts is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "f3",
+                "label": "Inheritance",
+                "color": "#423588",
+                "desc": "Not just money and property — though those too, and their absence. The silences passed down like heirlooms. The rages that skipped a generation and landed in you anyway. The tenderness nobody could name. The prejudices absorbed before you had the language to question them. You carry it all forward — the wound and the wonder both — unless you make the deliberate choice to set something down.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h6_constitutional_law",
+            "label": "Constitutional Law",
+            "color": "#9388d3",
+            "desc": "The rules for how government itself is allowed to operate. Constitutional law turns political power into boundaries, arguments, rights, and institutions.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "p_gov_sep",
+                "label": "Separation of Powers",
+                "color": "#9c93d3",
+                "desc": "The constitutional design that divides federal power among three branches — legislative, executive, and judicial — so that no single person or institution can accumulate unchecked authority. Each branch has tools to limit the others. Congress passes laws; the President can veto; courts can strike down. The system works when each branch defends its own power. It fails when one branch defers.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_constitutional_law_federalism",
+                "label": "Federalism",
+                "color": "#8478ca",
+                "desc": "Federalism is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_constitutional_law_amendments",
+                "label": "Amendments",
+                "color": "#a197d8",
+                "desc": "Amendments is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p_gov_vote_rights",
+                "label": "Voting Rights",
+                "color": "#786bc2",
+                "desc": "The history of who gets to vote in America is a history of expansion and contraction. Property requirements, race restrictions, poll taxes, literacy tests — and the movements that dismantled them. The Voting Rights Act of 1965 was the high-water mark. Its gutting by the Supreme Court in 2013 opened the door to a new wave of restrictions.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_constitutional_law_executive_power",
+                "label": "Executive Power",
+                "color": "#a298d7",
+                "desc": "Executive Power is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_constitutional_law_judicial_power",
+                "label": "Judicial Power",
+                "color": "#6b5cc2",
+                "desc": "Judicial Power is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "h6_international_law",
+            "label": "International Law",
+            "color": "#4e3dae",
+            "desc": "The fragile attempt to put rules around nations. Treaties, human rights, sovereignty, refugees, and war crimes all live where law meets power without a single world government.",
+            "links": [],
+            "topPills": [
+              {
+                "id": "h6_international_law_treaties",
+                "label": "Treaties",
+                "color": "#5545b0",
+                "desc": "Treaties is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_international_law_war_crimes",
+                "label": "War Crimes",
+                "color": "#473999",
+                "desc": "War Crimes is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_international_law_human_rights",
+                "label": "Human Rights",
+                "color": "#5c4bbf",
+                "desc": "Human Rights is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_international_law_sovereignty",
+                "label": "Sovereignty",
+                "color": "#423588",
+                "desc": "Sovereignty is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_international_law_refugees",
+                "label": "Refugees",
+                "color": "#6b5cc2",
+                "desc": "Refugees is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h6_international_law_international_courts",
+                "label": "International Courts",
+                "color": "#3a2e80",
+                "desc": "International Courts is one branch of this subject: a place to gather the basic facts, tensions, examples, and lived meaning that make the topic understandable. It can be expanded, corrected, and connected as the map grows.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [],
+            "orbs": []
+          }
+        ],
+        "bottomPills": [
+          {
+            "id": "p_gov",
+            "label": "Government",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "f_rc",
+            "label": "Race & Ethnicity",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_corp",
+            "label": "Corporations",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_mil",
+            "label": "Military",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ],
         "orbs": []
       },
       {
@@ -38802,6 +39289,14 @@ const LAYERS = [
             "bottomPills": []
           },
           {
+            "id": "cosmos_tp5",
+            "label": "The Observer",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
             "id": "e2_psych",
             "label": "Psychology",
             "desc": "",
@@ -40315,6 +40810,15 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "p2_we_inh",
+                    "label": "Inheritance",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -41559,6 +42063,42 @@ const LAYERS = [
             "topPills": [],
             "bottomPills": [],
             "orbs": []
+          },
+          {
+            "id": "x1_norse",
+            "label": "Norse, Celtic & Slavic",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x1_egyptian",
+            "label": "Egyptian & Mesopotamian",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x1_creation",
+            "label": "Creation Myths",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "x3_astro",
+            "label": "Astrology",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
           }
         ],
         "bottomPills": [
@@ -42482,6 +43022,15 @@ const LAYERS = [
                     "bottomPills": []
                   }
                 ]
+              },
+              {
+                "id": "x5_judaism",
+                "label": "Judaism",
+                "desc": "",
+                "color": "#6a58a0",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
               },
               {
                 "id": "x5_mandaean",
@@ -43628,5 +44177,3 @@ const LAYERS = [
     "bottomPills": []
   }
 ];
-
-const FOUNDATIONS=[{"id":"graphic-info","label":"GRAPHIC\nIMAGES","href":"graphic-info.html","color":"#7a1808","glow":"#c03010cc","border":"#e84020","grad":"radial-gradient(circle at 38% 28%, #ff7020 0%, #c03010 28%, #7a1808 58%, #3a0808 85%, #1a0404 100%)","offsetX":-315,"bottomPct":30,"size":88,"delay":0},{"id":"gallery","label":"THE\nGALLERY","href":"gallery.html","color":"#6a1828","glow":"#a02038cc","border":"#c84050","grad":"radial-gradient(circle at 38% 28%, #e05030 0%, #902030 30%, #5a1020 60%, #2a0810 85%, #100408 100%)","offsetX":-155,"bottomPct":32,"size":82,"delay":0.3},{"id":"journal","label":"THE\nJOURNAL","href":"journal.html","color":"#8a3010","glow":"#c04818cc","border":"#e06828","grad":"radial-gradient(circle at 38% 28%, #ff9040 0%, #c04818 28%, #8a3010 55%, #401808 82%, #180a04 100%)","offsetX":155,"bottomPct":28,"size":82,"delay":0.6},{"id":"glossary","label":"WORLD\nCOMPENDIUM","href":"compendium.html","color":"#5a1030","glow":"#901848cc","border":"#b83858","grad":"radial-gradient(circle at 38% 28%, #c04858 0%, #802038 28%, #5a1030 55%, #280818 82%, #100408 100%)","offsetX":315,"bottomPct":31,"size":88,"delay":0.9}];
