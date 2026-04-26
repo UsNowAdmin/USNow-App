@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>USNow — The Question is the Answer.</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" type="image/png" href="/icon.png">
@@ -855,16 +855,10 @@ function submitToLog(){
     document.getElementById('tp-thought').style.borderBottomColor='rgba(212,98,26,0.8)';
     return;
   }
-  const _logStack=window._cardStack||[];
-  const _logCurrent=_logStack[_logStack.length-1]||{};
   const payload={
     name: document.getElementById('tp-name').value.trim()||'Anonymous',
     topic: document.getElementById('tp-node-label').value||'General',
     nodeId: document.getElementById('tp-node-id').value||'',
-    nodeLabel: document.getElementById('tp-node-label').value||'',
-    layerLabel: _logCurrent.tag||'',
-    entryType: 'Thought',
-    status: 'received',
     why: thought,
     sources: 'The Log',
     submitted: new Date().toISOString()
