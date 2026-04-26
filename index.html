@@ -855,10 +855,16 @@ function submitToLog(){
     document.getElementById('tp-thought').style.borderBottomColor='rgba(212,98,26,0.8)';
     return;
   }
+  const _logStack=window._cardStack||[];
+  const _logCurrent=_logStack[_logStack.length-1]||{};
   const payload={
     name: document.getElementById('tp-name').value.trim()||'Anonymous',
     topic: document.getElementById('tp-node-label').value||'General',
     nodeId: document.getElementById('tp-node-id').value||'',
+    nodeLabel: document.getElementById('tp-node-label').value||'',
+    layerLabel: _logCurrent.tag||'',
+    entryType: 'Thought',
+    status: 'received',
     why: thought,
     sources: 'The Log',
     submitted: new Date().toISOString()
