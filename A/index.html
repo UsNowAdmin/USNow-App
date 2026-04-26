@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Household Tribunal</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0f0c08;
+  --parchment: #f7f2e9;
+  --parchment-dark: #ede4d0;
+  --seal: #8b1a1a;
+  --seal-light: #c0282828;
+  --seal-rgb: 139,26,26;
+  --seal-bg: rgba(139,26,26,0.08);
+  --gold: #b8841e;
+  --gold-light: #d4a030;
+  --gold-bg: rgba(184,132,30,0.1);
+  --green: #1a4a28;
+  --green-light: #236635;
+  --green-bg: rgba(26,74,40,0.08);
+  --slate: #2a3040;
+  --muted: #7a6e58;
+  --border: rgba(90,70,30,0.2);
+  --border-strong: rgba(90,70,30,0.4);
+  --shadow: 0 2px 16px rgba(15,12,8,0.12);
+  --radius: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; user-select: none; }
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: 'IM Fell English', serif;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
+  overscroll-behavior: none;
+}
+
+/* ── SCREENS ── */
+.screen { display: none; min-height: 100vh; flex-direction: column; }
+.screen.active { display: flex; }
+
+/* ── HEADER ── */
+.hdr {
+  background: var(--ink); color: var(--parchment);
+  padding: 15px 18px 11px; text-align: center;
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 2px solid var(--gold);
+}
+.hdr-seal { font-size: 10px; letter-spacing: 0.22em; color: var(--gold); font-family: 'DM Mono', monospace; margin-bottom: 3px; }
+.hdr-title { font-size: 20px; }
+.hdr-user {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.hdr-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--gold-bg); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.hdr-name { font-size: 9px; color: var(--gold); font-family: 'DM Mono', monospace; letter-spacing: 0.08em; }
+
+/* ── TABS ── */
+.tab-bar {
+  display: flex; background: var(--ink);
+  border-bottom: 2px solid var(--gold);
+  position: sticky; top: 60px; z-index: 90;
+}
+.tab-btn {
+  flex: 1; padding: 10px 4px; text-align: center;
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.1em; color: rgba(247,242,233,0.4);
+  cursor: pointer; border-bottom: 2px solid transparent;
+  margin-bottom: -2px; transition: all 0.2s;
+}
+.tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+.tab-icon { font-size: 15px; display: block; margin-bottom: 2px; }
+.tab-content { display: none; flex: 1; overflow-y: auto; padding: 14px 14px 110px; }
+.tab-content.active { display: block; }
+
+/* ── LOGIN SCREEN ── */
+#screen-login { background: var(--ink); align-items: center; justify-content: center; padding: 36px 24px; }
+.login-icon { font-size: 50px; margin-bottom: 10px; animation: pulse 2.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.6} }
+.login-title { font-size: 26px; color: var(--parchment); text-align: center; margin-bottom: 4px; }
+.login-sub { font-size: 10px; color: var(--gold); font-family: 'DM Mono', monospace; letter-spacing: 0.2em; text-align: center; margin-bottom: 32px; }
+.login-prompt { font-size: 12px; color: rgba(247,242,233,0.5); font-family: 'DM Mono', monospace; letter-spacing: 0.1em; text-align: center; margin-bottom: 16px; min-height: 20px; transition: all 0.2s; }
+
+/* Member grid with badges */
+.member-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; max-width: 320px; margin-bottom: 28px; }
+.member-btn {
+  background: rgba(247,242,233,0.05);
+  border: 1.5px solid rgba(247,242,233,0.12);
+  border-radius: var(--radius); padding: 16px 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  cursor: pointer; transition: all 0.15s; position: relative;
+}
+.member-btn.selected { border-color: var(--gold); background: rgba(184,132,30,0.1); }
+.member-emoji { font-size: 30px; }
+.member-name { font-size: 12px; color: var(--parchment); font-family: 'DM Mono', monospace; letter-spacing: 0.06em; }
+
+/* Violation badge on avatar */
+.member-badge {
+  position: absolute; top: 8px; right: 8px;
+  background: #c0282828; background: rgb(192,40,40);
+  color: white; font-family: 'DM Mono', monospace;
+  font-size: 11px; font-weight: 700;
+  width: 20px; height: 20px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--ink);
+  animation: badge-pop 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes badge-pop { from{transform:scale(0)}to{transform:scale(1)} }
+
+/* ── PIN PAD ── */
+.pin-section { width: 100%; max-width: 300px; display: none; }
+.pin-dots { display: flex; justify-content: center; gap: 14px; margin-bottom: 22px; }
+.pin-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid rgba(247,242,233,0.25); transition: all 0.12s;
+}
+.pin-dot.filled { background: var(--gold); border-color: var(--gold); transform: scale(1.1); }
+.pin-dot.error { background: #c03030; border-color: #c03030; animation: shake 0.4s ease; }
+.pin-dot.success { background: var(--green-light); border-color: var(--green-light); }
+@keyframes shake { 0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)} }
+
+.pin-pad { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.pin-key {
+  background: rgba(247,242,233,0.07);
+  border: 1px solid rgba(247,242,233,0.1);
+  border-radius: 12px; padding: 17px 8px;
+  font-size: 22px; color: var(--parchment);
+  font-family: 'DM Mono', monospace;
+  cursor: pointer; text-align: center;
+  transition: background 0.08s, transform 0.08s;
+  touch-action: manipulation;
+}
+.pin-key:active { background: rgba(247,242,233,0.2); transform: scale(0.92); }
+.pin-key.del { font-size: 18px; color: rgba(247,242,233,0.4); }
+.pin-key.enter {
+  background: rgba(184,132,30,0.15); border-color: rgba(184,132,30,0.4);
+  color: var(--gold); font-size: 11px; letter-spacing: 0.1em;
+}
+.pin-key.enter:active { background: rgba(184,132,30,0.3); }
+.pin-key.spacer { visibility: hidden; pointer-events: none; }
+.pin-error { text-align: center; color: #c03030; font-family: 'DM Mono', monospace; font-size: 11px; margin-top: 14px; min-height: 16px; letter-spacing: 0.06em; transition: all 0.2s; }
+
+/* ── SECTION LABELS ── */
+.section-label {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.2em; color: var(--muted);
+  margin: 16px 0 8px; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-label::after { content:''; flex:1; height:1px; background:var(--border); }
+
+/* ── CASE CARDS ── */
+.case-card {
+  background: white; border: 1px solid var(--border);
+  border-radius: var(--radius); margin-bottom: 10px;
+  overflow: hidden; box-shadow: var(--shadow);
+}
+.case-top {
+  padding: 12px 14px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.case-num { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 0.08em; white-space: nowrap; margin-top: 2px; }
+.case-block { flex: 1; min-width: 0; }
+.case-parties { font-size: 14px; line-height: 1.3; margin-bottom: 3px; }
+.case-vs { color: var(--muted); font-style: italic; font-size: 12px; }
+.case-charge { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.04em; }
+
+.badge {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.07em; padding: 4px 8px; border-radius: 20px;
+  white-space: nowrap; flex-shrink: 0;
+}
+.badge-allegation  { background: var(--gold-bg); color: var(--gold); border: 1px solid rgba(184,132,30,0.3); }
+.badge-indicted    { background: var(--seal-bg); color: #c03030; border: 1px solid rgba(139,26,26,0.3); }
+.badge-resolved    { background: var(--green-bg); color: var(--green-light); border: 1px solid rgba(26,74,40,0.25); }
+.badge-unresolved  { background: var(--seal-bg); color: #c03030; border: 1px solid rgba(139,26,26,0.2); }
+.badge-dismissed_w  { background: rgba(42,48,64,0.08); color: var(--slate); border: 1px solid rgba(42,48,64,0.2); }
+.badge-dismissed_wo { background: rgba(122,110,88,0.07); color: var(--muted); border: 1px solid var(--border); }
+.badge-nobill       { background: rgba(122,110,88,0.07); color: var(--muted); border: 1px solid var(--border); }
+
+.case-bottom {
+  padding: 9px 14px; display: flex;
+  align-items: center; justify-content: space-between; gap: 8px;
+}
+.case-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); line-height: 1.6; flex: 1; }
+.timer-bar { height: 3px; background: var(--parchment-dark); border-radius: 2px; margin-top: 5px; overflow: hidden; }
+.timer-fill { height: 100%; border-radius: 2px; }
+.timer-gold { background: var(--gold); }
+.timer-seal { background: #c03030; }
+
+.btn {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  padding: 7px 13px; border-radius: 8px; cursor: pointer;
+  border: none; letter-spacing: 0.05em; transition: all 0.12s; white-space: nowrap;
+  touch-action: manipulation;
+}
+.btn:active { transform: scale(0.94); }
+.btn-ghost { background: var(--parchment-dark); color: var(--ink); }
+.btn-seal  { background: #8b1a1a; color: var(--parchment); }
+.btn-gold  { background: var(--gold-bg); color: var(--gold); border: 1px solid rgba(184,132,30,0.3); }
+.btn-green { background: var(--green-bg); color: var(--green-light); border: 1px solid rgba(26,74,40,0.3); }
+
+/* ── FABs ── */
+.fab-right, .fab-left {
+  position: fixed; bottom: 24px;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; cursor: pointer; z-index: 200; border: none;
+  transition: all 0.15s; touch-action: manipulation;
+}
+.fab-right:active, .fab-left:active { transform: scale(0.91); }
+.fab-right {
+  right: 18px;
+  background: #8b1a1a; color: var(--parchment);
+  box-shadow: 0 4px 20px rgba(139,26,26,0.4);
+}
+.fab-left {
+  left: 18px;
+  background: var(--ink); color: var(--gold);
+  box-shadow: 0 4px 20px rgba(15,12,8,0.35);
+  border: 1px solid rgba(184,132,30,0.4);
+  font-size: 18px;
+}
+.fab-label {
+  position: fixed; bottom: 10px;
+  font-family: 'DM Mono', monospace; font-size: 8px;
+  letter-spacing: 0.1em; text-align: center;
+  pointer-events: none; z-index: 200;
+}
+.fab-label-right { right: 5px; color: rgba(139,26,26,0.7); width: 66px; }
+.fab-label-left  { left: 5px;  color: rgba(184,132,30,0.6); width: 66px; }
+
+/* ── SCOREBOARD ── */
+.score-card {
+  background: white; border: 1px solid var(--border);
+  border-radius: var(--radius); margin-bottom: 10px;
+  overflow: hidden; box-shadow: var(--shadow);
+}
+.score-inner { padding: 14px 16px; display: flex; align-items: center; gap: 14px; }
+.score-emoji { font-size: 34px; flex-shrink: 0; }
+.score-info { flex: 1; }
+.score-name { font-size: 18px; margin-bottom: 1px; }
+.score-sub { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); }
+.score-num { font-family: 'DM Mono', monospace; font-size: 34px; font-weight: 700; color: #8b1a1a; line-height: 1; }
+.score-lbl { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); text-align: right; }
+.score-bar { height: 3px; background: var(--parchment-dark); margin: 0 16px 14px; }
+.score-bar-fill { height: 100%; background: #8b1a1a; border-radius: 2px; transition: width 0.6s ease; }
+
+.stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 14px; }
+.stat-pill { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 12px 8px; text-align: center; box-shadow: var(--shadow); }
+.stat-num { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 700; color: var(--ink); }
+.stat-lbl { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 0.06em; margin-top: 2px; }
+
+/* ── DRAWERS ── */
+.overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(15,12,8,0.6); z-index: 300;
+  align-items: flex-end;
+}
+.overlay.open { display: flex; }
+.drawer {
+  background: var(--parchment); border-radius: 20px 20px 0 0;
+  width: 100%; max-height: 91vh; overflow-y: auto;
+  border-top: 3px solid var(--gold);
+  box-shadow: 0 -8px 40px rgba(15,12,8,0.28);
+  animation: slideUp 0.28s ease;
+}
+@keyframes slideUp { from{transform:translateY(100%)} to{transform:translateY(0)} }
+.drawer-handle { width: 38px; height: 4px; background: var(--border-strong); border-radius: 2px; margin: 12px auto 0; }
+.drawer-hdr {
+  padding: 14px 18px 12px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.drawer-title { font-size: 18px; }
+.drawer-close {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--parchment-dark); border: none;
+  font-size: 18px; cursor: pointer; color: var(--muted);
+  display: flex; align-items: center; justify-content: center;
+  touch-action: manipulation;
+}
+.drawer-body { padding: 16px 18px 32px; }
+
+/* Constitution link inside drawers */
+.code-link {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px; margin-bottom: 16px;
+  background: rgba(184,132,30,0.07);
+  border: 1px solid rgba(184,132,30,0.2);
+  border-radius: 10px; cursor: pointer;
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  color: var(--gold); letter-spacing: 0.08em;
+  text-decoration: none; touch-action: manipulation;
+}
+.code-link:active { background: rgba(184,132,30,0.15); }
+
+/* ── FORM ELEMENTS ── */
+.field-group { margin-bottom: 20px; }
+.field-lbl { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
+
+.member-sel-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
+.msel {
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 10px; padding: 10px 4px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  cursor: pointer; transition: all 0.12s; touch-action: manipulation;
+}
+.msel:active { transform: scale(0.93); }
+.msel.selected { border-color: #8b1a1a; background: var(--seal-bg); }
+.msel.disabled { opacity: 0.28; pointer-events: none; }
+.msel-emoji { font-size: 22px; }
+.msel-name { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); }
+
+.viol-list { display: flex; flex-direction: column; gap: 6px; }
+.viol-item {
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 10px; padding: 11px 13px;
+  cursor: pointer; transition: all 0.12s; touch-action: manipulation;
+}
+.viol-item:active { transform: scale(0.98); }
+.viol-item.selected { border-color: var(--gold); background: var(--gold-bg); }
+.viol-code { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.06em; margin-bottom: 1px; }
+.viol-name { font-size: 14px; }
+.viol-note { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 1px; }
+
+textarea {
+  width: 100%; background: white;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  padding: 12px 14px; font-family: 'IM Fell English', serif;
+  font-size: 15px; color: var(--ink); resize: none;
+  outline: none; transition: border-color 0.2s;
+  -webkit-appearance: none; user-select: text;
+}
+textarea:focus { border-color: var(--gold); }
+
+.submit-btn {
+  width: 100%; background: #8b1a1a; color: var(--parchment);
+  border: none; border-radius: 12px; padding: 15px;
+  font-family: 'DM Mono', monospace; font-size: 12px;
+  letter-spacing: 0.14em; cursor: pointer; transition: all 0.15s; margin-top: 4px;
+  touch-action: manipulation;
+}
+.submit-btn:active { transform: scale(0.97); }
+
+/* ── DETAIL ── */
+.detail-sec { padding: 13px 18px; border-bottom: 1px solid var(--border); }
+.detail-lbl { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 5px; }
+.detail-val { font-size: 15px; line-height: 1.5; }
+.detail-sub { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 2px; }
+.detail-quote {
+  font-style: italic; color: var(--muted); font-size: 14px; line-height: 1.6;
+  padding: 10px 13px; background: var(--parchment-dark);
+  border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; margin-top: 7px;
+}
+.action-col { padding: 14px 18px; display: flex; flex-direction: column; gap: 9px; }
+.btn-full {
+  width: 100%; padding: 14px; border-radius: 12px; border: none;
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  letter-spacing: 0.1em; cursor: pointer; transition: all 0.13s; line-height: 1.5;
+  touch-action: manipulation;
+}
+.btn-full:active { transform: scale(0.97); }
+.btn-full-seal   { background: #8b1a1a; color: var(--parchment); }
+.btn-full-slate  { background: var(--slate); color: var(--parchment); }
+.btn-full-ghost  { background: var(--parchment-dark); color: var(--muted); border: 1px solid var(--border); }
+.btn-full-gold   { background: var(--gold-bg); color: var(--gold); border: 1px solid rgba(184,132,30,0.35); }
+.btn-full-green  { background: var(--green-bg); color: var(--green); border: 1px solid rgba(26,74,40,0.3); }
+.btn-full-unsealed { background: var(--seal-bg); color: #c03030; border: 1px solid rgba(139,26,26,0.25); }
+.btn-note { font-size: 9px; opacity: 0.65; display: block; margin-top: 2px; }
+.neutral-note { text-align:center; font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); padding:12px 0; }
+
+/* ── DISPOSE ── */
+.choice-body { padding: 18px; }
+.choice-title { font-size: 17px; margin-bottom: 5px; }
+.choice-sub { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 18px; line-height: 1.6; }
+
+/* ── EMPTY ── */
+.empty { text-align: center; padding: 56px 24px; }
+.empty-icon { font-size: 38px; opacity: 0.35; margin-bottom: 10px; }
+.empty-text { font-style: italic; color: var(--muted); font-size: 15px; }
+.empty-sub { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 6px; letter-spacing: 0.08em; }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 92px; left: 50%; transform: translateX(-50%) translateY(10px);
+  background: var(--ink); color: var(--parchment);
+  padding: 9px 20px; border-radius: 20px;
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.07em;
+  opacity: 0; transition: all 0.25s; pointer-events: none; z-index: 500;
+  white-space: nowrap; border: 1px solid var(--gold);
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════ LOGIN ════════════════════════ -->
+<div class="screen active" id="screen-login">
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:36px 24px;background:var(--ink);">
+
+    <div class="login-icon">⚖️</div>
+    <div class="login-title">The Household Tribunal</div>
+    <div class="login-sub">FAMILY TERM · IN SESSION</div>
+    <div class="login-prompt" id="login-prompt">IDENTIFY YOURSELF</div>
+
+    <div class="member-grid" id="member-grid">
+      <div class="member-btn" id="btn-jon" onclick="selectMember('jon')">
+        <div class="member-emoji">👨‍⚖️</div>
+        <div class="member-name">JON</div>
+      </div>
+      <div class="member-btn" id="btn-jaime" onclick="selectMember('jaime')">
+        <div class="member-emoji">👩</div>
+        <div class="member-name">JAIME</div>
+      </div>
+      <div class="member-btn" id="btn-jacob" onclick="selectMember('jacob')">
+        <div class="member-emoji">🧑</div>
+        <div class="member-name">JACOB</div>
+      </div>
+      <div class="member-btn" id="btn-lucy" onclick="selectMember('lucy')">
+        <div class="member-emoji">🐕</div>
+        <div class="member-name">LUCY</div>
+      </div>
+    </div>
+
+    <!-- PIN PAD -->
+    <div class="pin-section" id="pin-section">
+      <div class="pin-dots" id="pin-dots">
+        <div class="pin-dot" id="pd0"></div>
+        <div class="pin-dot" id="pd1"></div>
+        <div class="pin-dot" id="pd2"></div>
+        <div class="pin-dot" id="pd3"></div>
+      </div>
+      <div class="pin-pad">
+        <div class="pin-key" onclick="pinKey('1')">1</div>
+        <div class="pin-key" onclick="pinKey('2')">2</div>
+        <div class="pin-key" onclick="pinKey('3')">3</div>
+        <div class="pin-key" onclick="pinKey('4')">4</div>
+        <div class="pin-key" onclick="pinKey('5')">5</div>
+        <div class="pin-key" onclick="pinKey('6')">6</div>
+        <div class="pin-key" onclick="pinKey('7')">7</div>
+        <div class="pin-key" onclick="pinKey('8')">8</div>
+        <div class="pin-key" onclick="pinKey('9')">9</div>
+        <div class="pin-key spacer"></div>
+        <div class="pin-key" onclick="pinKey('0')">0</div>
+        <div class="pin-key del" onclick="pinDel()">⌫</div>
+      </div>
+      <div class="pin-error" id="pin-error"></div>
+      <!-- Visible enter button as backup -->
+      <button onclick="pinEnter()" style="margin-top:14px;width:100%;padding:14px;background:rgba(184,132,30,0.12);border:1px solid rgba(184,132,30,0.35);border-radius:12px;color:var(--gold);font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.14em;cursor:pointer;touch-action:manipulation;">ENTER</button>
+    </div>
+
+    <!-- Constitution link on login -->
+    <a href="household_code.html" target="_blank" style="margin-top:24px;font-family:'DM Mono',monospace;font-size:10px;color:rgba(184,132,30,0.5);letter-spacing:0.12em;text-decoration:none;">📜 THE HOUSEHOLD CODE</a>
+
+  </div>
+</div>
+
+<!-- ════════════════════════ MAIN ════════════════════════ -->
+<div class="screen" id="screen-main">
+
+  <div class="hdr">
+    <div class="hdr-seal">THE HOUSEHOLD TRIBUNAL</div>
+    <div class="hdr-title">Active Docket</div>
+    <div class="hdr-user">
+      <div class="hdr-avatar" id="hdr-avatar">⚖️</div>
+      <div class="hdr-name" id="hdr-name">—</div>
+    </div>
+  </div>
+
+  <div class="tab-bar">
+    <div class="tab-btn active" data-tab="docket" onclick="switchTab('docket')">
+      <span class="tab-icon">📋</span>DOCKET
+    </div>
+    <div class="tab-btn" data-tab="record" onclick="switchTab('record')">
+      <span class="tab-icon">⚖️</span>RECORD
+    </div>
+    <div class="tab-btn" data-tab="archive" onclick="switchTab('archive')">
+      <span class="tab-icon">🗄️</span>ARCHIVE
+    </div>
+    <div class="tab-btn" data-tab="exit" onclick="doLogout()">
+      <span class="tab-icon">🚪</span>EXIT
+    </div>
+  </div>
+
+  <div class="tab-content active" id="tab-docket"></div>
+  <div class="tab-content" id="tab-record"></div>
+  <div class="tab-content" id="tab-archive"></div>
+
+  <!-- FAB RIGHT — File violation -->
+  <button class="fab-right" onclick="openFileDrawer()" title="File Allegation">⚖</button>
+  <div class="fab-label fab-label-right">FILE</div>
+
+  <!-- FAB LEFT — The Code -->
+  <a href="household_code.html" target="_blank" class="fab-left" title="The Household Code">📜</a>
+  <div class="fab-label fab-label-left">THE CODE</div>
+
+</div>
+
+<!-- ════════════════ FILE ALLEGATION DRAWER ════════════════ -->
+<div class="overlay" id="file-overlay" onclick="overlayTap(event,'file-overlay')">
+  <div class="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-hdr">
+      <div class="drawer-title">File an Allegation</div>
+      <button class="drawer-close" onclick="closeDrawer('file-overlay')">×</button>
+    </div>
+    <div class="drawer-body">
+      <a href="household_code.html" target="_blank" class="code-link">📜 Reference The Household Code</a>
+      <div class="field-group">
+        <div class="field-lbl">PETITIONER</div>
+        <div id="filer-display" style="font-size:16px;padding:6px 0;"></div>
+      </div>
+      <div class="field-group">
+        <div class="field-lbl">ACCUSED PARTY</div>
+        <div class="member-sel-grid" id="accused-grid"></div>
+      </div>
+      <div class="field-group">
+        <div class="field-lbl">VIOLATION CODE</div>
+        <div class="viol-list" id="viol-list"></div>
+      </div>
+      <div class="field-group">
+        <div class="field-lbl">STATEMENT OF FACTS <span style="font-size:9px;opacity:0.5;">(OPTIONAL)</span></div>
+        <textarea id="allegation-note" placeholder="Describe the incident…" rows="3"></textarea>
+      </div>
+      <button class="submit-btn" onclick="submitAllegation()">FILE ALLEGATION</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ CASE DETAIL DRAWER ════════════════ -->
+<div class="overlay" id="detail-overlay" onclick="overlayTap(event,'detail-overlay')">
+  <div class="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-hdr">
+      <div class="drawer-title" id="detail-case-num">—</div>
+      <button class="drawer-close" onclick="closeDrawer('detail-overlay')">×</button>
+    </div>
+    <div id="detail-body"></div>
+  </div>
+</div>
+
+<!-- ════════════════ RESPOND DRAWER ════════════════ -->
+<div class="overlay" id="respond-overlay" onclick="overlayTap(event,'respond-overlay')">
+  <div class="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-hdr">
+      <div class="drawer-title">Enter Statement</div>
+      <button class="drawer-close" onclick="closeDrawer('respond-overlay')">×</button>
+    </div>
+    <div class="drawer-body">
+      <div class="field-lbl" style="margin-bottom:10px;">YOUR RESPONSE / APPEAL</div>
+      <textarea id="respond-text" placeholder="Enter your statement for the record…" rows="5"></textarea>
+      <button class="submit-btn" style="margin-top:14px;" onclick="submitResponse()">SUBMIT TO RECORD</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ DISPOSE DRAWER ════════════════ -->
+<div class="overlay" id="dispose-overlay" onclick="overlayTap(event,'dispose-overlay')">
+  <div class="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-hdr">
+      <div class="drawer-title">Dispose Matter</div>
+      <button class="drawer-close" onclick="closeDrawer('dispose-overlay')">×</button>
+    </div>
+    <div class="choice-body">
+      <div class="choice-title">Mark this matter disposed.</div>
+      <div class="choice-sub">As the aggrieved party, you determine the final disposition.</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <button class="btn-full btn-full-green" onclick="disposeCase('resolved')">
+          ✓ DISPOSED — RESOLVED
+          <span class="btn-note">Matter addressed. Case closed with satisfaction.</span>
+        </button>
+        <button class="btn-full btn-full-unsealed" onclick="disposeCase('unresolved')">
+          ✗ DISPOSED — UNRESOLVED
+          <span class="btn-note">Noted for the record. Conduct remains unaddressed.</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════
+//  CONFIG — edit PINs here
+// ═══════════════════════════════════════════
+const PINS = {
+  jon:   '0000',
+  jaime: '0000',
+  jacob: '0000',
+};
+
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxKP3LIT2a7jde5yximJ-0l90IpF-PXMwhUpHPnqvYhd0G15fiKuojJEcbkslqEHyNjeA/exec';
+
+const MEMBERS = {
+  jon:   { name:'Jon',   emoji:'👨‍⚖️', short:'JON'   },
+  jaime: { name:'Jaime', emoji:'👩',   short:'JAIME' },
+  jacob: { name:'Jacob', emoji:'🧑',   short:'JACOB' },
+  lucy:  { name:'Lucy',  emoji:'🐕',   short:'LUCY',  passive:true }
+};
+
+const VIOLATIONS = [
+  { code:'§1',  name:'Dereliction of Duties',     note:'Chores, follow-through, play before work — specify' },
+  { code:'§2',  name:'Conduct Unbecoming',         note:'Mean behavior, name calling' },
+  { code:'§3',  name:'Disproportionate Response',  note:'Overreaction' },
+  { code:'§4',  name:'Willful Unresponsiveness',   note:'No reason given' },
+  { code:'§5',  name:'Material Misrepresentation', note:'Lying' },
+  { code:'§6',  name:'Contemptuous Conduct',       note:'Eye rolls, door slams, passive aggression' },
+  { code:'§7',  name:'Selective Receipt',          note:'Claims not to have been told' },
+  { code:'§8',  name:'Proximate Mess',             note:'Specify location in statement' },
+  { code:'§9',  name:'Chronic Lateness',           note:'' },
+  { code:'§10', name:'Device Misconduct',          note:'Phone at table' },
+  { code:'§11', name:'Blame Transference',         note:'Blame shifting' },
+  { code:'§12', name:'Canine Conduct',             note:'Lucy only — filed by humans' },
+];
+
+// ═══════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════
+let currentUser  = null;
+let activeCaseId = null;
+let selAccused   = null;
+let selViolation = null;
+let pinBuffer    = '';
+let selMember    = null;
+
+function getState() {
+  return JSON.parse(localStorage.getItem('tribunal_v4') || JSON.stringify({ cases:[], nextId:1 }));
+}
+function saveState(s) {
+  localStorage.setItem('tribunal_v4', JSON.stringify(s));
+  syncToSheets(s);
+}
+
+// ═══════════════════════════════════════════
+//  SHEETS SYNC
+// ═══════════════════════════════════════════
+async function syncToSheets(state) {
+  if (!SHEETS_URL) return;
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action:'sync', cases:state.cases, nextId:state.nextId }),
+    });
+  } catch(e) {}
+}
+async function loadFromSheets() {
+  if (!SHEETS_URL) return null;
+  try {
+    const r = await fetch(SHEETS_URL + '?action=load');
+    const d = await r.json();
+    return d;
+  } catch(e) { return null; }
+}
+
+// ═══════════════════════════════════════════
+//  LOGIN BADGES
+// ═══════════════════════════════════════════
+function renderLoginBadges() {
+  const state = getState();
+  // Count active indictments against each member
+  ['jon','jaime','jacob','lucy'].forEach(id => {
+    const count = state.cases.filter(c =>
+      c.accused === id && ['allegation','indicted'].includes(c.status)
+    ).length;
+    const btn = document.getElementById(`btn-${id}`);
+    const existing = btn.querySelector('.member-badge');
+    if (existing) existing.remove();
+    if (count > 0) {
+      const badge = document.createElement('div');
+      badge.className = 'member-badge';
+      badge.textContent = count;
+      btn.appendChild(badge);
+    }
+  });
+}
+
+// ═══════════════════════════════════════════
+//  PIN LOGIC — clean, one-tap, auto-submit
+// ═══════════════════════════════════════════
+function selectMember(id) {
+  if (id === 'lucy') { showToast('Lucy has no thumbs.'); return; }
+  selMember = id;
+  pinBuffer = '';
+  document.querySelectorAll('.member-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById(`btn-${id}`).classList.add('selected');
+  document.getElementById('pin-section').style.display = 'block';
+  document.getElementById('login-prompt').textContent = `ENTER PIN · ${MEMBERS[id].name.toUpperCase()}`;
+  document.getElementById('pin-error').textContent = '';
+  updateDots();
+}
+
+function pinKey(digit) {
+  if (!selMember || pinBuffer.length >= 4) return;
+  pinBuffer += digit;
+  updateDots();
+  // Auto-submit on 4th digit
+  if (pinBuffer.length === 4) {
+    setTimeout(checkPin, 120); // tiny delay so dot animates first
+  }
+}
+
+function pinDel() {
+  if (!pinBuffer.length) return;
+  pinBuffer = pinBuffer.slice(0,-1);
+  updateDots();
+  document.getElementById('pin-error').textContent = '';
+}
+
+function pinEnter() {
+  if (!selMember) return;
+  if (pinBuffer.length < 4) {
+    document.getElementById('pin-error').textContent = 'ENTER 4 DIGITS';
+    return;
+  }
+  checkPin();
+}
+
+function updateDots() {
+  for (let i=0;i<4;i++) {
+    const d = document.getElementById(`pd${i}`);
+    d.className = 'pin-dot' + (i < pinBuffer.length ? ' filled' : '');
+  }
+}
+
+function checkPin() {
+  if (pinBuffer === PINS[selMember]) {
+    // Flash green
+    for (let i=0;i<4;i++) document.getElementById(`pd${i}`).className = 'pin-dot success';
+    setTimeout(() => loginAs(selMember), 300);
+  } else {
+    // Flash red, shake, reset
+    for (let i=0;i<4;i++) document.getElementById(`pd${i}`).className = 'pin-dot error';
+    document.getElementById('pin-error').textContent = 'INCORRECT PIN — TRY AGAIN';
+    setTimeout(() => {
+      pinBuffer = '';
+      updateDots();
+      document.getElementById('pin-error').textContent = '';
+    }, 1000);
+  }
+}
+
+async function loginAs(id) {
+  currentUser = id;
+  // Load fresh from Sheets
+  const remote = await loadFromSheets();
+  if (remote && remote.cases) {
+    const state = getState();
+    state.cases = remote.cases;
+    if (remote.nextId) state.nextId = remote.nextId;
+    localStorage.setItem('tribunal_v4', JSON.stringify(state));
+  }
+  document.getElementById('screen-login').classList.remove('active');
+  document.getElementById('screen-main').classList.add('active');
+  document.getElementById('hdr-avatar').textContent = MEMBERS[id].emoji;
+  document.getElementById('hdr-name').textContent = MEMBERS[id].short;
+  autoExpire();
+  renderAll();
+}
+
+function doLogout() {
+  currentUser = null; selMember = null; pinBuffer = '';
+  document.getElementById('screen-main').classList.remove('active');
+  document.getElementById('screen-login').classList.add('active');
+  document.querySelectorAll('.member-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('pin-section').style.display = 'none';
+  document.getElementById('login-prompt').textContent = 'IDENTIFY YOURSELF';
+  pinBuffer = ''; updateDots();
+  renderLoginBadges();
+  switchTab('docket');
+}
+
+// ═══════════════════════════════════════════
+//  AUTO-EXPIRE
+// ═══════════════════════════════════════════
+function autoExpire() {
+  const state = getState();
+  const now = Date.now();
+  let changed = false;
+  state.cases.forEach(c => {
+    if (c.status==='allegation' && (now-c.filedAt)>86400000) {
+      c.status='nobill'; c.closedAt=now; changed=true;
+    }
+    if (c.status==='indicted' && (now-c.indictedAt)>604800000) {
+      c.status='resolved'; c.closedAt=now; c.autoDisposed=true; changed=true;
+    }
+  });
+  if (changed) saveState(state);
+}
+
+// ═══════════════════════════════════════════
+//  RENDER
+// ═══════════════════════════════════════════
+function renderAll() { renderDocket(); renderRecord(); renderArchive(); }
+
+function switchTab(id) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab===id));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id===`tab-${id}`));
+}
+
+function renderDocket() {
+  const state = getState();
+  const active = state.cases.filter(c => ['allegation','indicted'].includes(c.status));
+  const el = document.getElementById('tab-docket');
+  if (!active.length) {
+    el.innerHTML = `<div class="empty"><div class="empty-icon">⚖️</div><div class="empty-text">The docket is clear.</div><div class="empty-sub">NO ACTIVE MATTERS · TAP ⚖ TO FILE</div></div>`;
+    return;
+  }
+  const pending  = active.filter(c => c.status==='allegation');
+  const indicted = active.filter(c => c.status==='indicted');
+  let html = '';
+  if (pending.length)  { html += `<div class="section-label">AWAITING CONFIRMATION</div>`; pending.forEach(c  => html += cardHTML(c)); }
+  if (indicted.length) { html += `<div class="section-label">INDICTED · PENDING DISPOSITION</div>`; indicted.forEach(c => html += cardHTML(c)); }
+  el.innerHTML = html;
+}
+
+function cardHTML(c) {
+  const v = VIOLATIONS.find(x => x.code===c.violation);
+  const filer = MEMBERS[c.filer];
+  const accused = MEMBERS[c.accused];
+  const now = Date.now();
+  let timerHTML = '';
+  if (c.status==='allegation') {
+    const rem = Math.max(0,86400000-(now-c.filedAt));
+    timerHTML = `<div class="timer-bar"><div class="timer-fill timer-gold" style="width:${(rem/86400000)*100}%"></div></div><div style="font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:3px;">Confirmation: ${fmtTimer(rem)}</div>`;
+  } else {
+    const rem = Math.max(0,604800000-(now-c.indictedAt));
+    timerHTML = `<div class="timer-bar"><div class="timer-fill timer-seal" style="width:${(rem/604800000)*100}%"></div></div><div style="font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:3px;">Disposition: ${fmtTimer(rem)}</div>`;
+  }
+  return `<div class="case-card">
+    <div class="case-top">
+      <div class="case-num">${c.id}</div>
+      <div class="case-block">
+        <div class="case-parties">${filer.emoji} ${filer.name} <span class="case-vs">v.</span> ${accused.emoji} ${accused.name}</div>
+        <div class="case-charge">${c.violation} · ${v?.name}</div>
+      </div>
+      <span class="badge badge-${c.status}">${statusLabel(c.status)}</span>
+    </div>
+    <div class="case-bottom">
+      <div class="case-meta">Filed ${timeSince(c.filedAt)} ago${timerHTML}</div>
+      <button class="btn btn-ghost" onclick="openCase('${c.id}')">VIEW</button>
+    </div>
+  </div>`;
+}
+
+function renderRecord() {
+  const state = getState();
+  const humans = Object.entries(MEMBERS).filter(([id,m]) => !m.passive);
+  const counts = {};
+  humans.forEach(([id]) => counts[id]=0);
+  state.cases.forEach(c => {
+    if (['indicted','resolved','unresolved'].includes(c.status) && counts[c.accused]!==undefined)
+      counts[c.accused]++;
+  });
+  const max = Math.max(1,...Object.values(counts));
+  const total = state.cases.length;
+  const open  = state.cases.filter(c => ['allegation','indicted'].includes(c.status)).length;
+  const closed = state.cases.filter(c => !['allegation','indicted'].includes(c.status)).length;
+  let html = `<div class="stats-row">
+    <div class="stat-pill"><div class="stat-num">${total}</div><div class="stat-lbl">TOTAL</div></div>
+    <div class="stat-pill"><div class="stat-num">${open}</div><div class="stat-lbl">OPEN</div></div>
+    <div class="stat-pill"><div class="stat-num">${closed}</div><div class="stat-lbl">CLOSED</div></div>
+  </div>`;
+  humans.sort((a,b)=>counts[b[0]]-counts[a[0]]).forEach(([id,m]) => {
+    const pct = (counts[id]/max)*100;
+    html += `<div class="score-card">
+      <div class="score-inner">
+        <div class="score-emoji">${m.emoji}</div>
+        <div class="score-info"><div class="score-name">${m.name}</div><div class="score-sub">ACTIVE INDICTMENTS</div></div>
+        <div><div class="score-num">${counts[id]}</div><div class="score-lbl">CHARGES</div></div>
+      </div>
+      <div class="score-bar"><div class="score-bar-fill" style="width:${pct}%"></div></div>
+    </div>`;
+  });
+  document.getElementById('tab-record').innerHTML = html;
+}
+
+function renderArchive() {
+  const state = getState();
+  const closed = state.cases.filter(c => !['allegation','indicted'].includes(c.status))
+    .sort((a,b)=>(b.closedAt||0)-(a.closedAt||0));
+  const el = document.getElementById('tab-archive');
+  if (!closed.length) {
+    el.innerHTML = `<div class="empty"><div class="empty-icon">🗄️</div><div class="empty-text">Archive is empty.</div><div class="empty-sub">CLOSED MATTERS APPEAR HERE</div></div>`;
+    return;
+  }
+  const groups = [
+    ['resolved','DISPOSED — RESOLVED'],['unresolved','DISPOSED — UNRESOLVED'],
+    ['dismissed_w','DISMISSED WITH PREJUDICE'],['dismissed_wo','DISMISSED WITHOUT PREJUDICE'],
+    ['nobill','NO BILL'],
+  ];
+  let html = '';
+  groups.forEach(([status,label]) => {
+    const items = closed.filter(c=>c.status===status);
+    if (!items.length) return;
+    html += `<div class="section-label">${label}</div>`;
+    items.forEach(c => {
+      const v = VIOLATIONS.find(x=>x.code===c.violation);
+      const filer=MEMBERS[c.filer], accused=MEMBERS[c.accused];
+      html += `<div class="case-card">
+        <div class="case-top">
+          <div class="case-num">${c.id}</div>
+          <div class="case-block">
+            <div class="case-parties">${filer.name} <span class="case-vs">v.</span> ${accused.name}</div>
+            <div class="case-charge">${c.violation} · ${v?.name}</div>
+          </div>
+          <span class="badge badge-${status}">${statusLabel(status).split('—')[0].trim()}</span>
+        </div>
+        <div class="case-bottom">
+          <div class="case-meta">${new Date(c.closedAt||c.filedAt).toLocaleDateString()}</div>
+          <button class="btn btn-ghost" onclick="openCase('${c.id}')">VIEW</button>
+        </div>
+      </div>`;
+    });
+  });
+  el.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════
+//  CASE DETAIL
+// ═══════════════════════════════════════════
+function openCase(id) {
+  const state = getState();
+  const c = state.cases.find(x=>x.id===id);
+  if (!c) return;
+  activeCaseId = id;
+  const v = VIOLATIONS.find(x=>x.code===c.violation);
+  const filer=MEMBERS[c.filer], accused=MEMBERS[c.accused];
+  const canConfirm = currentUser!==c.filer && currentUser!==c.accused && !MEMBERS[currentUser]?.passive;
+  const isAccused  = currentUser===c.accused;
+  const isVictim   = currentUser===c.filer;
+
+  let html = `
+    <div class="detail-sec">
+      <a href="household_code.html" target="_blank" class="code-link" style="margin:0;">📜 Reference The Household Code</a>
+    </div>
+    <div class="detail-sec">
+      <div class="detail-lbl">MATTER</div>
+      <div class="detail-val">${filer.emoji} ${filer.name} <em>v.</em> ${accused.emoji} ${accused.name}</div>
+      <div class="detail-sub">${c.violation} · ${v?.name}</div>
+    </div>
+    <div class="detail-sec">
+      <div class="detail-lbl">STATUS</div>
+      <span class="badge badge-${c.status}">${statusLabel(c.status)}</span>
+      <div class="detail-sub" style="margin-top:6px;">Filed ${new Date(c.filedAt).toLocaleString()}</div>
+    </div>`;
+
+  if (c.note) html += `<div class="detail-sec"><div class="detail-lbl">STATEMENT OF FACTS</div><div class="detail-quote">${c.note}</div></div>`;
+  if (c.response) html += `<div class="detail-sec"><div class="detail-lbl">ACCUSED RESPONSE</div><div class="detail-quote">${c.response}</div></div>`;
+  if (c.indictedBy) html += `<div class="detail-sec"><div class="detail-lbl">CONFIRMED BY</div><div class="detail-val">${MEMBERS[c.indictedBy]?.emoji} ${MEMBERS[c.indictedBy]?.name}</div><div class="detail-sub">${new Date(c.indictedAt).toLocaleString()}</div></div>`;
+
+  html += `<div class="action-col">`;
+  if (c.status==='allegation') {
+    if (canConfirm) {
+      html += `<button class="btn-full btn-full-seal" onclick="indictCase()">⚖ INDICT — CONFIRM ALLEGATION</button>`;
+      html += `<button class="btn-full btn-full-slate" onclick="dismissCase('dismissed_w')">DISMISS WITH PREJUDICE</button>`;
+      html += `<button class="btn-full btn-full-ghost" onclick="dismissCase('dismissed_wo')">DISMISS WITHOUT PREJUDICE</button>`;
+    }
+    if (isAccused && !c.response) html += `<button class="btn-full btn-full-gold" onclick="openRespondDrawer()">✍ ENTER STATEMENT / APPEAL</button>`;
+    if (!canConfirm && !isAccused) html += `<div class="neutral-note">You are a party to this matter.</div>`;
+  } else if (c.status==='indicted') {
+    if (isAccused && !c.response) html += `<button class="btn-full btn-full-gold" onclick="openRespondDrawer()">✍ ENTER STATEMENT / APPEAL</button>`;
+    if (isVictim) html += `<button class="btn-full btn-full-green" onclick="openDisposeDrawer()">DISPOSE THIS MATTER</button>`;
+    if (!isVictim && !isAccused) html += `<div class="neutral-note">This matter is under review.</div>`;
+  } else {
+    html += `<div class="neutral-note">This matter is closed.</div>`;
+  }
+  html += `</div>`;
+
+  document.getElementById('detail-case-num').textContent = c.id;
+  document.getElementById('detail-body').innerHTML = html;
+  openDrawer('detail-overlay');
+}
+
+// ═══════════════════════════════════════════
+//  ACTIONS
+// ═══════════════════════════════════════════
+function indictCase() {
+  const state=getState(), c=state.cases.find(x=>x.id===activeCaseId);
+  if (!c) return;
+  c.status='indicted'; c.indictedBy=currentUser; c.indictedAt=Date.now();
+  saveState(state); closeDrawer('detail-overlay'); renderAll();
+  showToast(`${MEMBERS[c.accused].name} has been indicted.`);
+}
+function dismissCase(type) {
+  const state=getState(), c=state.cases.find(x=>x.id===activeCaseId);
+  if (!c) return;
+  c.status=type; c.closedAt=Date.now(); c.closedBy=currentUser;
+  saveState(state); closeDrawer('detail-overlay'); renderAll();
+  showToast(type==='dismissed_w'?'Dismissed with prejudice.':'Dismissed without prejudice.');
+}
+function openRespondDrawer() {
+  document.getElementById('respond-text').value='';
+  closeDrawer('detail-overlay');
+  openDrawer('respond-overlay');
+}
+function submitResponse() {
+  const text=document.getElementById('respond-text').value.trim();
+  if (!text) { showToast('Enter your statement.'); return; }
+  const state=getState(), c=state.cases.find(x=>x.id===activeCaseId);
+  if (!c) return;
+  c.response=text; c.respondedAt=Date.now();
+  saveState(state); closeDrawer('respond-overlay');
+  openCase(activeCaseId);
+  showToast('Statement entered into the record.');
+}
+function openDisposeDrawer() {
+  closeDrawer('detail-overlay');
+  openDrawer('dispose-overlay');
+}
+function disposeCase(type) {
+  const state=getState(), c=state.cases.find(x=>x.id===activeCaseId);
+  if (!c) return;
+  c.status=type; c.closedAt=Date.now(); c.disposedBy=currentUser;
+  saveState(state); closeDrawer('dispose-overlay'); renderAll();
+  showToast(type==='resolved'?'Disposed — Resolved.':'Disposed — Unresolved.');
+}
+
+// ═══════════════════════════════════════════
+//  FILE ALLEGATION
+// ═══════════════════════════════════════════
+function openFileDrawer() {
+  selAccused=null; selViolation=null;
+  const m=MEMBERS[currentUser];
+  document.getElementById('filer-display').innerHTML=`${m.emoji} ${m.name}`;
+  document.getElementById('accused-grid').innerHTML=Object.entries(MEMBERS).map(([id,mem])=>
+    `<div class="msel${id===currentUser?' disabled':''}" onclick="pickAccused('${id}')">
+      <div class="msel-emoji">${mem.emoji}</div>
+      <div class="msel-name">${mem.short}</div>
+    </div>`
+  ).join('');
+  document.getElementById('viol-list').innerHTML=VIOLATIONS.map(v=>
+    `<div class="viol-item" onclick="pickViolation('${v.code}')">
+      <div class="viol-code">${v.code}</div>
+      <div class="viol-name">${v.name}</div>
+      ${v.note?`<div class="viol-note">${v.note}</div>`:''}
+    </div>`
+  ).join('');
+  document.getElementById('allegation-note').value='';
+  openDrawer('file-overlay');
+}
+function pickAccused(id) {
+  selAccused=id;
+  document.querySelectorAll('.msel').forEach(b=>b.classList.remove('selected'));
+  event.currentTarget.classList.add('selected');
+}
+function pickViolation(code) {
+  selViolation=code;
+  document.querySelectorAll('.viol-item').forEach(b=>b.classList.remove('selected'));
+  event.currentTarget.classList.add('selected');
+}
+function submitAllegation() {
+  if (!selAccused)   { showToast('Select the accused party.'); return; }
+  if (!selViolation) { showToast('Select a violation code.');  return; }
+  const state=getState();
+  const id=`CASE-${String(state.nextId).padStart(4,'0')}`;
+  state.nextId++;
+  state.cases.push({
+    id, filer:currentUser, accused:selAccused,
+    violation:selViolation, note:document.getElementById('allegation-note').value.trim(),
+    status:'allegation', filedAt:Date.now(),
+    response:null, respondedAt:null,
+    indictedBy:null, indictedAt:null,
+    closedAt:null, closedBy:null, disposedBy:null
+  });
+  saveState(state); closeDrawer('file-overlay'); renderAll();
+  showToast(`Filed — ${id}`);
+}
+
+// ═══════════════════════════════════════════
+//  DRAWER HELPERS
+// ═══════════════════════════════════════════
+function openDrawer(id)  { document.getElementById(id).classList.add('open'); }
+function closeDrawer(id) { document.getElementById(id).classList.remove('open'); }
+function overlayTap(e,id) { if (e.target===document.getElementById(id)) closeDrawer(id); }
+
+// ═══════════════════════════════════════════
+//  UTILS
+// ═══════════════════════════════════════════
+function statusLabel(s) {
+  return ({
+    allegation:'ALLEGATION', indicted:'INDICTED',
+    resolved:'DISPOSED — RESOLVED', unresolved:'DISPOSED — UNRESOLVED',
+    dismissed_w:'DISMISSED W/ PREJUDICE', dismissed_wo:'DISMISSED W/O PREJUDICE',
+    nobill:'NO BILL'
+  })[s]||s.toUpperCase();
+}
+function timeSince(ts) {
+  const d=Date.now()-ts;
+  if (d<3600000) return `${Math.floor(d/60000)}m`;
+  if (d<86400000) return `${Math.floor(d/3600000)}h`;
+  return `${Math.floor(d/86400000)}d`;
+}
+function fmtTimer(ms) {
+  if (ms<=0) return 'EXPIRED';
+  const h=Math.floor(ms/3600000),m=Math.floor((ms%3600000)/60000);
+  if (h>=24) return `${Math.floor(h/24)}d ${h%24}h`;
+  return `${h}h ${m}m`;
+}
+function showToast(msg) {
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2600);
+}
+
+// Init badges on page load
+renderLoginBadges();
+</script>
+</body>
+</html>

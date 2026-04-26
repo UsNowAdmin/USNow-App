@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>The Household Code</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IM+Fell+DW+Pica:ital@0;1&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  background: #2c1f0e;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, #3d2a10 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, #1a0f05 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  overflow-x: hidden;
+}
+
+/* ── VIEW TOGGLE ── */
+.view-toggle {
+  position: fixed; top: 16px; right: 16px; z-index: 200;
+  display: flex; gap: 8px;
+}
+.toggle-btn {
+  background: rgba(44,31,14,0.85);
+  border: 1px solid rgba(200,160,60,0.4);
+  color: #c8a03c;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 11px; letter-spacing: 0.1em;
+  padding: 7px 14px; border-radius: 4px;
+  cursor: pointer; backdrop-filter: blur(4px);
+  transition: all 0.2s;
+}
+.toggle-btn:hover { background: rgba(200,160,60,0.15); border-color: rgba(200,160,60,0.7); }
+.toggle-btn.active { background: rgba(200,160,60,0.2); border-color: #c8a03c; color: #e8c86a; }
+
+/* ── PARCHMENT VIEW ── */
+#view-parchment { display: block; }
+#view-plain     { display: none; }
+
+.parchment-outer {
+  display: flex; justify-content: center;
+  padding: 60px 16px 80px;
+  min-height: 100vh;
+}
+
+.parchment-roll {
+  width: 100%; max-width: 780px;
+  position: relative;
+}
+
+/* Top roll */
+.roll-cap {
+  width: 100%;
+  height: 36px;
+  background: linear-gradient(to bottom,
+    #b8945a 0%, #d4aa6a 20%, #c8a055 50%, #b08040 80%, #8b6030 100%);
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 -3px 12px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,240,180,0.3);
+  position: relative; overflow: hidden;
+}
+.roll-cap::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg,
+    transparent 0px, transparent 18px,
+    rgba(0,0,0,0.06) 18px, rgba(0,0,0,0.06) 20px);
+}
+.roll-cap-shadow {
+  height: 18px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 100%);
+  position: relative; z-index: 2;
+}
+
+/* Parchment body */
+.parchment-body {
+  background:
+    linear-gradient(160deg, #f5ead0 0%, #efe0b8 30%, #f0e2c0 60%, #ede0b5 100%);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='500' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E"),
+    linear-gradient(160deg, #f5ead0 0%, #efe0b8 30%, #f0e2c0 60%, #ede0b5 100%);
+  padding: 48px 52px 56px;
+  border-left: 6px solid #c4995a;
+  border-right: 6px solid #c4995a;
+  box-shadow:
+    inset 6px 0 18px rgba(139,90,40,0.12),
+    inset -6px 0 18px rgba(139,90,40,0.12),
+    inset 0 0 60px rgba(180,130,60,0.08);
+  position: relative;
+}
+
+/* Aged edge vignette */
+.parchment-body::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 0% 50%, rgba(139,90,30,0.12) 0%, transparent 40%),
+    radial-gradient(ellipse at 100% 50%, rgba(139,90,30,0.12) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 0%, rgba(100,60,20,0.1) 0%, transparent 30%),
+    radial-gradient(ellipse at 50% 100%, rgba(100,60,20,0.1) 0%, transparent 30%);
+}
+
+/* Ruling lines — very subtle */
+.parchment-body::after {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px, transparent 31px,
+    rgba(160,120,60,0.07) 31px, rgba(160,120,60,0.07) 32px
+  );
+}
+
+/* Bottom roll */
+.roll-cap-bottom {
+  background: linear-gradient(to top,
+    #b8945a 0%, #d4aa6a 20%, #c8a055 50%, #b08040 80%, #8b6030 100%);
+  height: 36px; border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5), inset 0 -2px 4px rgba(255,240,180,0.2);
+  position: relative; overflow: hidden;
+}
+.roll-cap-bottom::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg,
+    transparent 0px, transparent 18px,
+    rgba(0,0,0,0.06) 18px, rgba(0,0,0,0.06) 20px);
+}
+.roll-shadow-bottom {
+  height: 18px;
+  background: linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 100%);
+}
+
+/* ── TYPOGRAPHY ── */
+.doc-masthead {
+  text-align: center;
+  margin-bottom: 32px;
+  position: relative; z-index: 1;
+}
+.doc-title {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: clamp(28px, 6vw, 52px);
+  color: #3a1f08;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0 rgba(200,160,60,0.3);
+  letter-spacing: 0.02em;
+}
+.doc-subtitle {
+  font-family: 'IM Fell DW Pica', serif;
+  font-style: italic;
+  font-size: clamp(13px, 2.5vw, 17px);
+  color: #6b4520;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.doc-byline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(11px, 2vw, 14px);
+  color: #8b6030;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.doc-divider {
+  width: 100%; margin: 22px 0;
+  position: relative; z-index: 1;
+  display: flex; align-items: center; gap: 10px;
+  color: #b8902a;
+}
+.doc-divider::before, .doc-divider::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, transparent, #b8902a, transparent);
+}
+.doc-divider-ornament {
+  font-size: 16px; opacity: 0.7; letter-spacing: 6px;
+}
+
+.intro-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 2.5vw, 18px);
+  color: #2a1508;
+  line-height: 1.85;
+  text-align: justify;
+  margin-bottom: 14px;
+  position: relative; z-index: 1;
+}
+.intro-text.emphasis {
+  text-align: center;
+  font-style: italic;
+  font-size: clamp(16px, 2.8vw, 20px);
+  color: #3a1f08;
+  font-weight: 600;
+  margin: 18px 0;
+}
+
+/* Drop cap on first paragraph */
+.intro-text.dropcap::first-letter {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 5em;
+  float: left;
+  line-height: 0.72;
+  margin: 6px 8px 0 0;
+  color: #8b1a1a;
+  text-shadow: 1px 1px 0 rgba(139,26,26,0.2);
+}
+
+/* Section rules */
+.section {
+  margin: 32px 0 0;
+  position: relative; z-index: 1;
+}
+.section-header {
+  margin-bottom: 10px;
+}
+.section-code {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: clamp(20px, 4vw, 30px);
+  color: #8b1a1a;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.section-name {
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: clamp(13px, 2.2vw, 16px);
+  color: #5c3d11;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+}
+.section-short {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(13px, 2.2vw, 16px);
+  color: #7a5520;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.section-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 2.3vw, 17px);
+  color: #1e1006;
+  line-height: 1.9;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.section-examples {
+  font-family: 'IM Fell DW Pica', serif;
+  font-style: italic;
+  font-size: clamp(12px, 2vw, 15px);
+  color: #6b4a1a;
+  line-height: 1.7;
+  padding-left: 22px;
+  border-left: 2px solid rgba(184,144,42,0.35);
+  margin: 10px 0;
+}
+.section-note {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(12px, 1.9vw, 14px);
+  color: #7a5520;
+  font-weight: 600;
+  padding-left: 22px;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+.closing-head {
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: clamp(14px, 2.5vw, 18px);
+  text-align: center;
+  color: #3a1f08;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+.closing-final {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: clamp(18px, 4vw, 28px);
+  text-align: center;
+  color: #3a1f08;
+  margin-top: 24px;
+  line-height: 1.4;
+}
+
+/* Wax seal decoration */
+.wax-seal {
+  text-align: center;
+  margin: 28px 0 8px;
+  font-size: 48px;
+  opacity: 0.75;
+  filter: sepia(0.4);
+}
+
+/* ── PLAIN TEXT VIEW ── */
+#view-plain {
+  max-width: 720px; margin: 0 auto;
+  padding: 80px 24px 80px;
+  color: #1a1208;
+}
+.plain-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 700;
+  text-align: center; color: #f5ead0;
+  margin-bottom: 6px;
+}
+.plain-sub {
+  font-family: 'IM Fell DW Pica', serif;
+  font-style: italic; font-size: 15px;
+  text-align: center; color: #c8a03c;
+  margin-bottom: 36px;
+}
+.plain-section-code {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px; font-weight: 700;
+  color: #e8a040; margin-top: 32px; margin-bottom: 4px;
+}
+.plain-section-short {
+  font-size: 14px; font-style: italic;
+  color: #c8a870; margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.plain-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; color: #e8dcc8;
+  line-height: 1.85; margin-bottom: 10px; text-align: justify;
+}
+.plain-examples {
+  font-style: italic; font-size: 14px;
+  color: #b8a880; padding-left: 18px;
+  border-left: 2px solid rgba(200,160,60,0.3);
+  margin: 8px 0; font-family: 'Cormorant Garamond', serif;
+  line-height: 1.7;
+}
+.plain-note {
+  font-size: 13px; color: #c8a03c; font-weight: 600;
+  padding-left: 18px; margin-top: 5px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.plain-divider {
+  border: none; border-top: 1px solid rgba(200,160,60,0.2);
+  margin: 28px 0;
+}
+.plain-closing {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-style: italic; font-weight: 700;
+  text-align: center; color: #e8c86a;
+  margin-top: 32px;
+}
+
+@media (max-width: 600px) {
+  .parchment-body { padding: 32px 24px 40px; }
+  .doc-title { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- VIEW TOGGLE -->
+<div class="view-toggle">
+  <button class="toggle-btn active" id="btn-parchment" onclick="setView('parchment')">📜 Parchment</button>
+  <button class="toggle-btn" id="btn-plain" onclick="setView('plain')">📄 Plain Text</button>
+</div>
+
+<!-- ════════════════ PARCHMENT VIEW ════════════════ -->
+<div id="view-parchment">
+  <div class="parchment-outer">
+    <div class="parchment-roll">
+
+      <div class="roll-cap"></div>
+      <div class="roll-cap-shadow"></div>
+
+      <div class="parchment-body">
+
+        <div class="doc-masthead">
+          <div class="doc-title">The Household Code</div>
+          <div class="doc-subtitle">A Statement of Rules, Reasons, and Expectations</div>
+          <div class="doc-byline">Adopted by the Members of This Household</div>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">✦ ✦ ✦</span></div>
+
+        <p class="intro-text dropcap">These rules are not punishments waiting to happen. They are a description of the kind of people we are trying to be — to each other, and to everyone we will ever meet. Most of them are obvious. That is the point. The obvious things are the ones that slip. The ones we negotiate down when we are tired or selfish or convinced that just this once it doesn't matter.</p>
+        <p class="intro-text emphasis">It matters. Every time.</p>
+        <p class="intro-text">What follows is not a list of restrictions. It is a map of a person worth becoming.</p>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">✦ ✦ ✦</span></div>
+
+        <!-- §1 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§1 — Dereliction of Duties</span>
+            <span class="section-name"></span>
+          </div>
+          <p class="section-short">Chores not done. Commitments not met. Work deferred for play without cause or communication.</p>
+          <p class="section-body">A duty is a promise without the ceremony. When someone takes on a task — cleaning a room, handling the dishes, finishing an assignment before anything else — they have made an agreement with the people around them. The agreement does not require a formal contract. It requires only that you showed up to the life you share with others.</p>
+          <p class="section-body">Dereliction is not laziness alone. It is also the moment when someone does half a job and calls it done, or waits to be asked twice, or disappears into their phone while the kitchen sits undone. The world outside these walls is full of people who will not wait for you to feel like it. The habit of follow-through — built here, in small things, on ordinary days — is the exact skill that earns trust everywhere a person goes.</p>
+          <p class="section-examples">Examples: dishes left after a reasonable time; a chore skipped without mention; homework set aside for a screen; a task agreed to and quietly forgotten; half-cleaned and walked away from.</p>
+          <p class="section-note">Note: When work is genuinely blocked or competing demands arise, say so. Communication is not dereliction. Silence is.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §2 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§2 — Conduct Unbecoming</span>
+          </div>
+          <p class="section-short">Mean behavior. Name calling. Deliberate cruelty in word or action.</p>
+          <p class="section-body">There is no version of this that is acceptable. Not when provoked. Not when tired. Not as a joke that went too far after it already went too far. The words we aim at the people closest to us travel farther and last longer than we think they do.</p>
+          <p class="section-body">Conduct unbecoming is not about conflict. Conflict is normal. Conflict is healthy. This rule is about the weaponization of words — the choice to wound rather than to resolve, to humiliate rather than to address. The person who learns to disagree, to argue, to be genuinely angry without becoming cruel has learned something that most adults never fully figure out. That skill develops here, when it is hard, with the people you love.</p>
+          <p class="section-examples">Examples: name calling in anger; mocking someone's appearance, ability, or feelings; deliberate humiliation; language designed to hurt rather than to communicate.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §3 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§3 — Disproportionate Response</span>
+          </div>
+          <p class="section-short">Overreaction. Escalating a small thing into a large one.</p>
+          <p class="section-body">Not every inconvenience is a crisis. Not every criticism is an attack. Not every request is an imposition. One of the most practical skills a person can develop is the ability to match their response to what actually happened — not to what they feared might happen, not to what happened last time, not to the accumulated weight of everything that has been bothering them for a week.</p>
+          <p class="section-body">Disproportionate response is contagious in the wrong direction. One overreaction invites another. The room escalates. The original issue — often small, often solvable — disappears under the noise. Households, workplaces, governments — all of them suffer from the same pattern. The discipline of proportionality is one of the quieter forms of strength.</p>
+          <p class="section-examples">Examples: yelling over a minor inconvenience; crying or shutting down over a reasonable request; threatening large consequences for small situations; treating a mistake as a character indictment.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §4 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§4 — Willful Unresponsiveness</span>
+          </div>
+          <p class="section-short">Not answering. Not acknowledging. Going silent without reason when someone needs a response.</p>
+          <p class="section-body">Being reachable is a form of respect. It does not mean being available every second. It means that when someone in your household reaches out — by text, by call, by simply saying your name in a room — they are not left standing in the void wondering whether they were heard.</p>
+          <p class="section-body">Unresponsiveness without explanation is not neutral. It is a choice. The habit of responding, of acknowledging, of saying "I'm here but I need a minute" instead of nothing at all, is one of the simplest and most underestimated forms of decency. It tells the people around you that they are real to you.</p>
+          <p class="section-examples">Examples: not responding to texts for an extended period without explanation; walking away mid-conversation; ignoring a direct question; being in the house and unreachable without cause.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §5 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§5 — Material Misrepresentation</span>
+          </div>
+          <p class="section-short">Lying. Distorting the truth. Leaving out the part that changes everything.</p>
+          <p class="section-body">Lies do not have to be large to do damage. The small ones — the "I already did it" that is slightly not true, the "I don't know" that is mostly not true, the story told in a way that makes the other person the problem — build up. They build up until the people around you are no longer quite sure what to believe, and then they stop asking because they have stopped expecting an honest answer.</p>
+          <p class="section-body">Trust is not a feeling. It is a track record. The person who tells the truth when it is inconvenient, who says "I made a mistake" instead of "that's not what happened," who does not edit their account of events to protect their position — that person is trusted. And trusted people are given more.</p>
+          <p class="section-examples">Examples: denying something that happened; omitting key facts; deflecting with a half-truth; saying yes when the honest answer is no.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §6 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§6 — Contemptuous Conduct</span>
+          </div>
+          <p class="section-short">Eye rolls. Sighs designed to be heard. Door slams. Passive aggression.</p>
+          <p class="section-body">Contempt is different from anger. Anger says: this matters and I am upset. Contempt says: you are beneath the effort of a real response. Of all the behaviors that corrode a relationship, contempt is among the most efficient. It signals that the other person's dignity is not worth protecting.</p>
+          <p class="section-body">The eye roll is not harmless. It teaches the person on the receiving end that their feelings are ridiculous. The alternative — direct expression, honest discomfort, even a clean "I'm frustrated and I need a minute" — is harder but also more honest, more effective, and more respectful of everyone in the room.</p>
+          <p class="section-examples">Examples: audible sighs as commentary; eye rolls visible enough to serve as communication; slamming a door to make a point; giving the cold shoulder rather than naming the problem; sarcasm used as a weapon.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §7 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§7 — Selective Receipt</span>
+          </div>
+          <p class="section-short">Claiming not to have been told something that was, in fact, communicated.</p>
+          <p class="section-body">This one is subtle. Sometimes it is genuine — we miss things, we forget, we hear without processing. That is human. This rule is about the pattern. The pattern of consistently not hearing the things that would require action. The pattern of remembering selectively in a way that always, somehow, lands in your favor.</p>
+          <p class="section-body">The world will not accommodate selective receipt. The discipline of actually listening, of confirming what you understood, of saying "I'm not sure I caught that" instead of nodding and forgetting, is the foundation of being someone people can rely on.</p>
+          <p class="section-examples">Examples: "You never told me" when the conversation is remembered by everyone else; consistently missing the instructions that were inconvenient; nodding in a conversation that clearly wasn't being absorbed.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §8 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§8 — Proximate Mess</span>
+          </div>
+          <p class="section-short">Leaving a mess in a shared space without addressing it.</p>
+          <p class="section-body">A shared space is a shared responsibility. The mess you leave is not invisible to the people who live around it. It communicates something — about how much you value the space, about how much you are thinking of the people you share it with.</p>
+          <p class="section-body">In the larger world, this is called stewardship. The person who cares for shared things — who leaves a place better than they found it — is the person other people want around. That reputation is built in kitchens and living rooms before it is built anywhere else.</p>
+          <p class="section-examples">Examples: dishes left in a sink after a reasonable window; belongings spread across shared space; messes in common areas left for others; bathroom left in a state you would not have found it.</p>
+          <p class="section-note">Note: Specify location when filing.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §9 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§9 — Chronic Lateness</span>
+          </div>
+          <p class="section-short">Consistent and unexplained failure to arrive or deliver on time.</p>
+          <p class="section-body">Being late is not just a logistical failure. It is a communication. It says that your time is more valuable than the time of the person waiting for you. Said once, it is understandable. Said as a pattern, it is a policy.</p>
+          <p class="section-body">Punctuality is not rigidity. Life is unpredictable. But the person who is consistently late has made a choice — usually unconsciously — to undervalue the time and patience of the people counting on them. Reliable people are trusted. Trusted people are free.</p>
+          <p class="section-examples">Examples: consistently arriving late without communication; missing agreed deadlines repeatedly; showing up after others have waited with no acknowledgment of the delay.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §10 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§10 — Device Misconduct</span>
+          </div>
+          <p class="section-short">Phone at the table. Screen during conversations. Physical presence without actual presence.</p>
+          <p class="section-body">A device in your hand during a meal or a conversation is a statement. It says: whatever is on this screen is more important than you. Most of the time that is not what the person means. It does not matter. What we communicate without intending to is still communication.</p>
+          <p class="section-body">The table is the oldest civic institution in any home. The discipline of putting the phone down, of being in the room rather than merely near it, is one of the most powerful things one person can model for another.</p>
+          <p class="section-examples">Examples: phone visible and in use during meals; earbuds in during a conversation; scrolling while someone is speaking; physical presence with complete mental absence.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §11 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§11 — Blame Transference</span>
+          </div>
+          <p class="section-short">Shifting responsibility for your actions, choices, or failures onto someone or something else.</p>
+          <p class="section-body">Something went wrong. That is inevitable. What is not inevitable is the decision about what to do next. The person who looks first at their own role — who asks what they contributed before they ask what others failed to do — is the person who grows. The person who always finds the explanation elsewhere does not.</p>
+          <p class="section-body">Blame transference is not just a relationship problem. It is a development problem. The habit of owning your part, even when others also have a part, is the exact habit that turns a mistake into a lesson rather than a grievance.</p>
+          <p class="section-examples">Examples: "It's not my fault because you distracted me"; explaining a failure entirely in terms of external causes; consistently framing every problem as something done to you; making the other person feel responsible for your response.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">— ✦ —</span></div>
+
+        <!-- §12 -->
+        <div class="section">
+          <div class="section-header">
+            <span class="section-code">§12 — Canine Conduct</span>
+          </div>
+          <p class="section-short">Lucy's welfare is a household responsibility. Neglect of that responsibility is a violation.</p>
+          <p class="section-body">Lucy does not speak. She does not file. She does not escalate. She waits at the door and she trusts. That trust is not a small thing. It is a complete thing — unconditional, patient, offered without reservation every single day regardless of what happened the day before.</p>
+          <p class="section-body">The obligation to her is simple: food, water, walks, warmth, reasonable handling, and basic kindness. How we treat the ones who cannot advocate for themselves says more about who we are than almost anything else.</p>
+          <p class="section-examples">Applicable violations: missed feeding; missed walk without alternative arrangement; rough handling; leaving outside in weather without attention; ignoring evident distress.</p>
+          <p class="section-note">Note: Lucy cannot be a petitioner or a confirmer. She can only be the subject of a complaint filed on her behalf. She is, however, always right.</p>
+        </div>
+
+        <div class="doc-divider"><span class="doc-divider-ornament">✦ ✦ ✦</span></div>
+
+        <!-- Closing -->
+        <p class="closing-head">A Note on Why This Exists</p>
+        <p class="section-body">None of these rules require a legal system to be true. They are obvious. They are the things decent people do without being asked, in households and workplaces and communities where people are trying to be good to each other.</p>
+        <p class="section-body">The system — the docket, the indictments, the dispositions — is not here because we distrust each other. It is here because naming things matters. Because a violation that is observed, recorded, and addressed is a violation that does not quietly compound. Because the process of filing, responding, and resolving is itself a practice in the skills these rules are trying to build: honesty, accountability, fairness, and the willingness to sit with an uncomfortable truth long enough to do something about it.</p>
+        <p class="section-body">These rules apply to everyone here equally. They do not suspend for status, for age, for who is having a hard week, or for who made dinner. They are the floor of how we treat each other. Everything above that floor is grace.</p>
+
+        <div class="wax-seal">🔴</div>
+        <p class="closing-final">Build the floor first. The grace follows.</p>
+
+        <div class="doc-divider" style="margin-top:28px;"><span class="doc-divider-ornament">✦ ✦ ✦</span></div>
+
+      </div><!-- /parchment-body -->
+
+      <div class="roll-shadow-bottom"></div>
+      <div class="roll-cap-bottom"></div>
+
+    </div><!-- /parchment-roll -->
+  </div><!-- /parchment-outer -->
+</div><!-- /view-parchment -->
+
+<!-- ════════════════ PLAIN TEXT VIEW ════════════════ -->
+<div id="view-plain">
+  <div class="plain-title">The Household Code</div>
+  <div class="plain-sub">A Statement of Rules, Reasons, and Expectations</div>
+  <hr class="plain-divider">
+  <p class="plain-body" style="color:#e8dcc8;text-align:center;font-style:italic;">These rules are not punishments waiting to happen. They are a description of the kind of people we are trying to be — to each other, and to everyone we will ever meet. Most of them are obvious. That is the point.</p>
+  <p class="plain-body" style="text-align:center;font-weight:700;color:#e8c86a;font-size:18px;font-style:italic;">It matters. Every time.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§1 — Dereliction of Duties</div>
+  <div class="plain-section-short">Chores not done. Commitments not met. Work deferred for play without cause or communication.</div>
+  <p class="plain-body">A duty is a promise without the ceremony. When someone takes on a task — cleaning a room, handling the dishes, finishing an assignment before anything else — they have made an agreement with the people around them. The agreement does not require a formal contract. It requires only that you showed up to the life you share with others.</p>
+  <p class="plain-body">Dereliction is not laziness alone. It is also the moment when someone does half a job and calls it done, or waits to be asked twice, or disappears into their phone while the kitchen sits undone. The habit of follow-through — built here, in small things, on ordinary days — is the exact skill that earns trust everywhere a person goes.</p>
+  <p class="plain-examples">Examples: dishes left after a reasonable time; a chore skipped without mention; homework set aside for a screen; a task agreed to and quietly forgotten.</p>
+  <p class="plain-note">Note: Communication is not dereliction. Silence is.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§2 — Conduct Unbecoming</div>
+  <div class="plain-section-short">Mean behavior. Name calling. Deliberate cruelty in word or action.</div>
+  <p class="plain-body">There is no version of this that is acceptable. Not when provoked. Not when tired. Not as a joke that went too far. The words we aim at the people closest to us travel farther and last longer than we think they do.</p>
+  <p class="plain-body">This rule is about the weaponization of words — the choice to wound rather than to resolve, to humiliate rather than to address. The person who learns to be genuinely angry without becoming cruel has learned something most adults never fully figure out.</p>
+  <p class="plain-examples">Examples: name calling in anger; mocking someone's appearance or feelings; deliberate humiliation; language designed to hurt rather than to communicate.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§3 — Disproportionate Response</div>
+  <div class="plain-section-short">Overreaction. Escalating a small thing into a large one.</div>
+  <p class="plain-body">Not every inconvenience is a crisis. Not every criticism is an attack. One of the most practical skills a person can develop is the ability to match their response to what actually happened — not to what they feared, not to last time, not to the accumulated weight of a bad week.</p>
+  <p class="plain-body">Disproportionate response is contagious in the wrong direction. The discipline of proportionality is one of the quieter forms of strength.</p>
+  <p class="plain-examples">Examples: yelling over a minor inconvenience; threatening large consequences for small situations; treating a mistake as a character indictment.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§4 — Willful Unresponsiveness</div>
+  <div class="plain-section-short">Not answering. Going silent without reason when someone needs a response.</div>
+  <p class="plain-body">Being reachable is a form of respect. When someone in your household reaches out — by text, by call, by saying your name — they should not be left wondering whether they were heard.</p>
+  <p class="plain-body">Unresponsiveness without explanation is not neutral. It is a choice. Saying "I need a minute" instead of nothing at all tells the people around you that they are real to you.</p>
+  <p class="plain-examples">Examples: not responding to texts for an extended period; walking away mid-conversation; ignoring a direct question; being home and unreachable without cause.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§5 — Material Misrepresentation</div>
+  <div class="plain-section-short">Lying. Distorting the truth. Leaving out the part that changes everything.</div>
+  <p class="plain-body">Lies do not have to be large to do damage. The small ones build up until the people around you stop asking because they have stopped expecting an honest answer.</p>
+  <p class="plain-body">Trust is not a feeling. It is a track record. The person who tells the truth when it is inconvenient is trusted. And trusted people are given more.</p>
+  <p class="plain-examples">Examples: denying something that happened; omitting key facts; deflecting with a half-truth; saying yes when the honest answer is no.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§6 — Contemptuous Conduct</div>
+  <div class="plain-section-short">Eye rolls. Sighs designed to be heard. Door slams. Passive aggression.</div>
+  <p class="plain-body">Contempt says: you are beneath the effort of a real response. Of all behaviors that corrode a relationship, contempt is among the most efficient. It signals that the other person's dignity is not worth protecting.</p>
+  <p class="plain-body">Direct expression — even a clean "I'm frustrated and I need a minute" — is harder but more honest and more respectful of everyone in the room.</p>
+  <p class="plain-examples">Examples: audible sighs as commentary; eye rolls used as communication; slamming a door to make a point; sarcasm used as a weapon.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§7 — Selective Receipt</div>
+  <div class="plain-section-short">Claiming not to have been told something that was, in fact, communicated.</div>
+  <p class="plain-body">This rule is about the pattern. The pattern of consistently not hearing the things that would require action. The pattern of remembering selectively in a way that always, somehow, lands in your favor.</p>
+  <p class="plain-body">The discipline of actually listening, of confirming what you understood, is the foundation of being someone people can rely on.</p>
+  <p class="plain-examples">Examples: "You never told me" when everyone else remembers; consistently missing inconvenient instructions; nodding in a conversation that wasn't being absorbed.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§8 — Proximate Mess</div>
+  <div class="plain-section-short">Leaving a mess in a shared space without addressing it.</div>
+  <p class="plain-body">A shared space is a shared responsibility. The mess you leave communicates something. The person who leaves a place better than they found it is the person other people want around.</p>
+  <p class="plain-examples">Examples: dishes left in a sink; belongings spread across shared space; bathroom left in a state you would not have found it.</p>
+  <p class="plain-note">Note: Specify location when filing.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§9 — Chronic Lateness</div>
+  <div class="plain-section-short">Consistent and unexplained failure to arrive or deliver on time.</div>
+  <p class="plain-body">Being late is a communication. It says your time is more valuable than the time of the person waiting. Said once, understandable. Said as a pattern, it is a policy.</p>
+  <p class="plain-body">Reliable people are trusted. Trusted people are free.</p>
+  <p class="plain-examples">Examples: consistently arriving late without communication; missing agreed deadlines; showing up after others waited with no acknowledgment.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§10 — Device Misconduct</div>
+  <div class="plain-section-short">Phone at the table. Screen during conversations. Physical presence without actual presence.</div>
+  <p class="plain-body">A device in your hand during a meal or conversation says: whatever is on this screen is more important than you. Most of the time that is not what the person means. It does not matter. What we communicate without intending to is still communication.</p>
+  <p class="plain-examples">Examples: phone in use during meals; earbuds in during a conversation; scrolling while someone is speaking.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§11 — Blame Transference</div>
+  <div class="plain-section-short">Shifting responsibility for your actions or failures onto someone or something else.</div>
+  <p class="plain-body">The person who looks first at their own role — who asks what they contributed before asking what others failed to do — is the person who grows.</p>
+  <p class="plain-body">The habit of owning your part, even when others also have a part, turns a mistake into a lesson rather than a grievance.</p>
+  <p class="plain-examples">Examples: "It's not my fault because you distracted me"; framing every problem as something done to you; making the other person feel responsible for your response.</p>
+  <hr class="plain-divider">
+
+  <div class="plain-section-code">§12 — Canine Conduct</div>
+  <div class="plain-section-short">Lucy's welfare is a household responsibility.</div>
+  <p class="plain-body">Lucy does not speak. She does not file. She waits at the door and she trusts. That trust is unconditional, patient, offered without reservation every day regardless of what happened the day before.</p>
+  <p class="plain-body">How we treat the ones who cannot advocate for themselves says more about who we are than almost anything else.</p>
+  <p class="plain-examples">Applicable violations: missed feeding; missed walk without alternative; rough handling; leaving outside in weather; ignoring evident distress.</p>
+  <p class="plain-note">Note: Lucy is always right.</p>
+  <hr class="plain-divider">
+
+  <p class="plain-body" style="color:#c8b890;text-align:center;">These rules apply to everyone equally. They are the floor of how we treat each other. Everything above that floor is grace.</p>
+  <p class="plain-closing">Build the floor first. The grace follows.</p>
+</div>
+
+<script>
+function setView(v) {
+  document.getElementById('view-parchment').style.display = v === 'parchment' ? 'block' : 'none';
+  document.getElementById('view-plain').style.display     = v === 'plain'     ? 'block' : 'none';
+  document.getElementById('btn-parchment').classList.toggle('active', v === 'parchment');
+  document.getElementById('btn-plain').classList.toggle('active', v === 'plain');
+}
+</script>
+</body>
+</html>
