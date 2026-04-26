@@ -1108,8 +1108,18 @@ function showToast(msg) {
   setTimeout(()=>t.classList.remove('show'),2600);
 }
 
-// Init badges on page load
-renderLoginBadges();
+// Init — load from Sheets first, then render badges
+async function initApp() {
+  const remote = await loadFromSheets();
+  if (remote && remote.cases) {
+    const state = getState();
+    state.cases = remote.cases;
+    if (remote.nextId) state.nextId = remote.nextId;
+    localStorage.setItem('tribunal_v4', JSON.stringify(state));
+  }
+  renderLoginBadges();
+}
+initApp();
 </script>
 </body>
 </html>
