@@ -1901,18 +1901,8 @@ const LAYERS = [
         "topPills": [],
         "bottomPills": [],
         "orbs": []
-      },
-      {
-        "id": "e2_psych",
-        "label": "Psychology",
-        "desc": "",
-        "links": [],
-        "topPills": [],
-        "bottomPills": [],
-        "orbs": []
       }
-    ],
-    "inProgress": true
+    ]
   },
   {
     "id": "family",
@@ -3843,8 +3833,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "f4",
@@ -4893,8 +4882,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "f_class",
@@ -6846,8 +6834,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "f_rc",
@@ -9538,24 +9525,6 @@ const LAYERS = [
               }
             ],
             "orbs": []
-          },
-          {
-            "id": "f_rc_d1",
-            "label": "Place",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "f_rc_d2",
-            "label": "Rights & Responsibilities",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
           }
         ],
         "bottomPills": [
@@ -9600,8 +9569,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -11285,8 +11253,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "c_env",
@@ -13871,8 +13838,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "c4",
@@ -15286,8 +15252,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       }
     ],
     "topPills": [
@@ -16478,8 +16443,7 @@ const LAYERS = [
                 "bottomPills": []
               }
             ],
-            "orbs": [],
-            "inProgress": true
+            "orbs": []
           },
           {
             "id": "e1_open",
@@ -21103,8 +21067,7 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "c7",
@@ -22300,8 +22263,7 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       }
     ],
     "topPills": [
@@ -25172,8 +25134,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "p5",
@@ -28234,8 +28195,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "p2",
@@ -30052,8 +30012,7 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       }
     ],
     "bottomPills": []
@@ -31568,8 +31527,7 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "h3",
@@ -32541,8 +32499,7 @@ const LAYERS = [
         ],
         "topPills": [],
         "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "h1",
@@ -34855,8 +34812,7 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "h2",
@@ -35698,51 +35654,6 @@ const LAYERS = [
               }
             ],
             "orbs": []
-          },
-          {
-            "id": "h2_origin",
-            "label": "Origin of Language",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h2_diversity",
-            "label": "Language Diversity",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h2_power",
-            "label": "Language & Power",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h2_writing_link",
-            "label": "Writing Systems",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "h2_endangered",
-            "label": "Endangered Languages",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
           }
         ],
         "bottomPills": [],
@@ -35750,8 +35661,7 @@ const LAYERS = [
         "color": "#7858a0",
         "x": 88,
         "y": 54,
-        "size": 46,
-        "inProgress": true
+        "size": 46
       }
     ],
     "topPills": [
@@ -38892,14 +38802,6 @@ const LAYERS = [
             "bottomPills": []
           },
           {
-            "id": "cosmos_tp5",
-            "label": "The Observer",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
             "id": "e2_psych",
             "label": "Psychology",
             "desc": "",
@@ -40413,15 +40315,6 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
-                  },
-                  {
-                    "id": "p2_we_inh",
-                    "label": "Inheritance",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -40774,8 +40667,7 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "x1",
@@ -41667,42 +41559,6 @@ const LAYERS = [
             "topPills": [],
             "bottomPills": [],
             "orbs": []
-          },
-          {
-            "id": "x1_norse",
-            "label": "Norse, Celtic & Slavic",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_egyptian",
-            "label": "Egyptian & Mesopotamian",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_creation",
-            "label": "Creation Myths",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x3_astro",
-            "label": "Astrology",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
           }
         ],
         "bottomPills": [
@@ -41725,8 +41581,7 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "orbs": [],
-        "inProgress": true
+        "orbs": []
       },
       {
         "id": "x5",
@@ -42627,15 +42482,6 @@ const LAYERS = [
                     "bottomPills": []
                   }
                 ]
-              },
-              {
-                "id": "x5_judaism",
-                "label": "Judaism",
-                "desc": "",
-                "color": "#6a58a0",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
               },
               {
                 "id": "x5_mandaean",
