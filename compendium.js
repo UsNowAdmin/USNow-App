@@ -273,7 +273,7 @@ function submitSuggestion() {
   fetch(ENDPOINT, {
     method: 'POST', mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name: 'compendium-suggestion', topic: word, why: def, sources: '', submitted: new Date().toISOString() })
+    body: JSON.stringify({ name: 'compendium-suggestion', topic: word, why: def, sources: 'Compendium', entryType: 'Glory Suggestion', submitted: new Date().toISOString() })
   });
   document.getElementById('sg-word').value = '';
   document.getElementById('sg-def').value  = '';
