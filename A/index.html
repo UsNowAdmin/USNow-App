@@ -404,9 +404,7 @@ textarea:focus { border-color: var(--gold); }
     <div class="login-icon">⚖️</div>
     <div class="login-title">The Household Tribunal</div>
     <div class="login-sub">FAMILY TERM · IN SESSION</div>
-    <div class="login-prompt" id="login-prompt">IDENTIFY YOURSELF</div>
-
-    <div class="member-grid" id="member-grid">
+    <a href="household_code.html" target="_blank" style="margin-bottom:18px;font-family:'DM Mono',monospace;font-size:10px;color:rgba id="member-grid">
       <div class="member-btn" id="btn-jon" onclick="selectMember('jon')">
         <div class="member-emoji">👨‍⚖️</div>
         <div class="member-name">JON</div>
@@ -1108,16 +1106,17 @@ function showToast(msg) {
   setTimeout(()=>t.classList.remove('show'),2600);
 }
 
-// Init — load from Sheets first, then render badges
+// Init — paint from cache immediately, then refresh from Sheets
 async function initApp() {
+  renderLoginBadges(); // instant from local cache
   const remote = await loadFromSheets();
   if (remote && remote.cases) {
     const state = getState();
     state.cases = remote.cases;
     if (remote.nextId) state.nextId = remote.nextId;
     localStorage.setItem('tribunal_v4', JSON.stringify(state));
+    renderLoginBadges(); // repaint with live data
   }
-  renderLoginBadges();
 }
 initApp();
 </script>
