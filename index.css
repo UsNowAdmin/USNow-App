@@ -70,18 +70,18 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 #modal-box::after{content:'';position:absolute;inset:0;border-radius:28px 28px 18px 18px;pointer-events:none;box-shadow:inset 0 -40px 60px -20px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.06);z-index:0;}
 #modal-box>*{position:relative;z-index:2;}
 .modal-drag{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34px;height:3px;border-radius:2px;}
-.modal-layer-tag{font-size:10px;letter-spacing:0.3em;font-family:'Courier New',monospace;opacity:1;margin-bottom:8px;}
+.modal-layer-tag{font-size:10px;letter-spacing:0.3em;font-family:'Courier New',monospace;opacity:1;margin-bottom:8px;color:#c9a84c;}
 #modal-title{font-size:clamp(24px,5vw,32px);font-weight:400;color:#ffffff;margin:0 0 10px;font-family:'Georgia',serif;letter-spacing:0.03em;line-height:1.2;}
 #modal-sub{font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:20px;}
 #modal-desc{font-size:clamp(17px,2.2vw,19px);line-height:1.8;color:#e4eef8;font-family:'Georgia',serif;margin:0;}
 #modal-links{margin-top:20px;padding-top:16px;}
-.modal-links-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;}
+.modal-links-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;color:#c9a84c;}
 .modal-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(58,74,90,0.15);border-radius:8px;overflow:hidden;margin-top:4px;}.modal-link{display:flex;align-items:center;gap:10px;padding:13px 14px;background:#060b18;text-decoration:none;transition:background 0.2s;line-height:1.3;}@media(max-width:480px){.modal-links-grid{grid-template-columns:1fr;}}
 .modal-link:hover{background:#0d1525;}
 .modal-link .arrow{opacity:0.75;}
 #modal-bottompills-section{margin-top:18px;padding-top:16px;}
-.modal-bottompills-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;}
-.modal-orb-tag{font-size:13px;letter-spacing:0.05em;font-family:'Courier New',monospace;font-weight:500;border-radius:24px;padding:9px 18px 9px 11px;display:flex;align-items:flex-start;gap:9px;margin:0 6px 9px 0;cursor:pointer;transition:all 0.2s;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 1px 3px rgba(0,0,0,0.25);width:100%;box-sizing:border-box;min-width:0;overflow:hidden;}
+.modal-bottompills-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;color:#c9a84c;}
+.modal-orb-tag{font-size:13px;letter-spacing:0.05em;font-family:'Courier New',monospace;font-weight:500;border-radius:24px;padding:9px 18px 9px 11px;display:flex;align-items:flex-start;gap:9px;margin:0 6px 9px 0;cursor:pointer;transition:all 0.2s;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 1px 3px rgba(0,0,0,0.25);width:100%;box-sizing:border-box;min-width:0;overflow:hidden;color:#ffffff;}
 .modal-orb-tag:hover{filter:brightness(1.3);transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),0 4px 12px rgba(0,0,0,0.35);}
 .modal-orb-dot{width:20px;height:20px;border-radius:50%;flex-shrink:0;display:inline-block;position:relative;box-shadow:inset -2px -3px 5px rgba(0,0,0,0.45),0 0 5px rgba(0,0,0,0.3);margin-top:2px;}
 .modal-orb-dot::before{content:'';position:absolute;top:16%;left:20%;width:32%;height:30%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.95) 0%,rgba(255,255,255,0.3) 45%,transparent 75%);pointer-events:none;}
