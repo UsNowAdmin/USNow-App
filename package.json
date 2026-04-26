@@ -1,0 +1,27 @@
+{
+  "name": "usnow-app",
+  "version": "1.0.0",
+  "description": "USNow - The Question is the Answer",
+  "main": "index.js",
+  "scripts": {
+    "build:analytics": "esbuild analytics.js --bundle --outfile=analytics.bundle.js --format=iife --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://x-access-token:ghs_FONhdw6YKS1GLZga03ojzY8JSiZPXd13TXPJ@github.com/UsNowAdmin/USNow-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UsNowAdmin/USNow-App/issues"
+  },
+  "homepage": "https://github.com/UsNowAdmin/USNow-App#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
