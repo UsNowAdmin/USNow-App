@@ -435,31 +435,20 @@ nav.usnow-nav {
   color: var(--amber);
 }
 
-/* ── COMPANION IMAGE — sized to the article column, inline with the essay ─
-   Sits like the closing photograph of a magazine essay: same width as the
-   reading column, modest shadow, no full-bleed presentation. The big
-   panable view lives in the gallery entry, one tap away. */
-.companion-image-wrap {
-  background: var(--paper);
-  padding: 0 24px 56px;
-}
-.companion-image-inner {
-  max-width: 680px;
-  margin: 0 auto;
+/* ── COMPANION IMAGE — lives inside the article-body column ──
+   Inherits the column's left/right alignment so it visually sits
+   under the last paragraph as the closing image of the essay.
+   No separator rule above; whitespace + the preceding declaration
+   or pullquote already provide visual punctuation. */
+.companion-figure {
+  margin: 56px 0 0;
+  padding: 0;
   text-align: center;
-}
-.companion-rule {
-  width: 50%;
-  max-width: 200px;
-  height: 1px;
-  background: var(--rule);
-  margin: 0 auto 40px;
 }
 .companion-frame {
   display: block;
   width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
+  margin: 0;
   border: 1px solid rgba(14,12,10,0.15);
   border-radius: 3px;
   overflow: hidden;
@@ -492,7 +481,7 @@ a.companion-frame:hover {
   color: var(--muted);
   text-transform: uppercase;
   margin-top: 14px;
-  padding: 0 12px;
+  padding: 0 8px;
 }
 .companion-caption a {
   color: var(--ink);
@@ -826,8 +815,7 @@ footer.usnow-footer a:hover { color: var(--cosmic-gold); }
   body { font-size: 18px; }
   .hero { padding: 72px 22px 56px; }
   .article-wrap { padding: 48px 20px 32px; }
-  .companion-image-wrap { padding: 0 20px 56px; }
-  .companion-rule { margin-bottom: 40px; }
+  .companion-figure { margin-top: 44px; }
   .article-body p { font-size: 18px; }
   .article-body .pullquote { margin: 36px 0; padding: 24px 24px; }
   .article-body .capture-block { margin: 44px -16px; padding: 36px 28px; }
@@ -1007,7 +995,10 @@ function renderArticleKind(entry) {
                      entry.external_url;
   const sidebarHtml = hasSidebar ? renderSidebar(entry, 'article') : '';
 
-  // Companion image at end of article — "cover of the book at the end"
+  // Companion image — sits inside the article column as the closing beat
+  // of the essay. No separator rule above it (the preceding pullquote or
+  // declaration provides plenty of visual punctuation). Whitespace does
+  // the work of "the essay is ending, here is the image."
   let companionHtml = '';
   if (entry.companion_image && entry.companion_image.src) {
     const ci = entry.companion_image;
@@ -1034,15 +1025,12 @@ function renderArticleKind(entry) {
     }
 
     companionHtml = `
-      <section class="companion-image-wrap">
-        <div class="companion-image-inner">
-          <div class="companion-rule"></div>
-          <${tag} class="companion-frame" ${href}>
-            <img src="${escapeHtml(ci.src)}" alt="${escapeHtml(ci.alt || '')}"/>
-          </${tag}>
-          ${captionHtml}
-        </div>
-      </section>
+      <figure class="companion-figure">
+        <${tag} class="companion-frame" ${href}>
+          <img src="${escapeHtml(ci.src)}" alt="${escapeHtml(ci.alt || '')}"/>
+        </${tag}>
+        ${captionHtml}
+      </figure>
     `;
   }
 
@@ -1051,11 +1039,11 @@ function renderArticleKind(entry) {
       <div class="article-grid ${hasSidebar ? '' : 'no-sidebar'}">
         <article class="article-body">
           ${entry.body || ''}
+          ${companionHtml}
         </article>
         ${sidebarHtml}
       </div>
     </section>
-    ${companionHtml}
     <div class="byline-wrap">
       ${renderByline()}
     </div>
@@ -1120,8 +1108,11 @@ function renderSidebar(entry, mode) {
   const nodeLinks = (entry.related_nodes || []).map(n =>
     `<a class="sidebar-pill" href="index.html#${escapeHtml(n)}">${escapeHtml(formatLabel(n))}</a>`
   ).join('');
+  // Compendium deep-link uses hash, not query: compendium.html#term-slug
+  // Slug is the term lowercased with spaces → hyphens (matches glories.js
+  // entries via the engine's hash lookup in compendium.js).
   const termLinks = (entry.related_terms || []).map(t =>
-    `<a class="sidebar-pill" href="compendium.html?term=${escapeHtml(t)}">${escapeHtml(formatLabel(t))}</a>`
+    `<a class="sidebar-pill" href="compendium.html#${escapeHtml(t)}">${escapeHtml(formatLabel(t))}</a>`
   ).join('');
 
   let extraSection = '';
