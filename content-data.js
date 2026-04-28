@@ -46,7 +46,18 @@
 
    ── SHARED ──
    related_nodes   array of orb IDs from index.html
-   related_terms   array of compendium term IDs
+   related_terms   array of compendium term slugs.
+                   IMPORTANT: each slug MUST match a real entry in
+                   glories.js. The slug is the entry's `word` field
+                   lowercased, with spaces replaced by hyphens.
+                   Examples:
+                     "Original Sin"               → "original-sin"
+                     "Military Industrial Complex"→ "military-industrial-complex"
+                     "Capitalism"                 → "capitalism"
+                   Links resolve as compendium.html#<slug>, which
+                   the compendium engine uses to deep-link.
+                   If a term doesn't yet exist in glories.js, leave
+                   it out — don't ship pills that link to nothing.
 
    ── DESIGN RULES ──
    • An article's image lives at the END, never the top.
@@ -176,7 +187,7 @@ const CONTENT = {
 <p style="margin-top:2em;">We're not there yet. But that's the threshold. That's the only one worth naming.</p>
 `,
     related_nodes: ["media-power", "corporations", "identity"],
-    related_terms: ["data", "consent", "knowability", "agi"]
+    related_terms: ["capitalism", "power", "privilege", "truth"]
   },
 
   /* ============================================================
@@ -281,7 +292,7 @@ const CONTENT = {
       gallery_id: "indigenous-sin-image"
     },
     related_nodes: ["government", "history", "identity", "media-power"],
-    related_terms: ["debt", "memory", "sovereignty", "trauma"],
+    related_terms: ["indigenous", "history", "violence", "memory", "original-sin", "reconstruction"],
     external_url: "https://open.substack.com/pub/atjon27/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
     external_label: "ALSO ON SUBSTACK →"
   },
@@ -311,7 +322,7 @@ const CONTENT = {
     },
     related_article: "indigenous-sin",
     related_nodes: ["government", "history", "identity"],
-    related_terms: ["debt", "memory", "trauma"]
+    related_terms: ["indigenous", "history", "memory", "original-sin"]
   },
 
   /* ============================================================
@@ -344,7 +355,7 @@ const CONTENT = {
 <p>Two thousand years ago a Roman poet named the technique. <em>Panem et circenses.</em> Give the people enough bread and enough spectacle and they will not ask what is being done in their name. The arrangement worked then. It works now. The bread is cheaper. The spectacle is denser. The empire is broader.</p>
 `,
     related_nodes: ["media-power", "perception", "identity"],
-    related_terms: ["distraction", "spectacle", "consent"]
+    related_terms: ["empire", "propaganda", "narrative"]
   }
 
 };
