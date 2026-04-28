@@ -1186,7 +1186,7 @@ function renderSidebar(entry, mode) {
   // Related Scale Nodes — navigation links to index.html orb anchors.
   // These are not glossary terms; they go to other pages.
   const nodeLinks = (entry.related_nodes || []).map(n =>
-    `<a class="sidebar-pill" href="index.html#${escapeHtml(n)}">${escapeHtml(formatLabel(n))}</a>`
+    `<span class="sidebar-pill">${escapeHtml(formatLabel(n))}</span>`
   ).join('');
 
   // Compendium Terms — popover-trigger spans, NOT links.
