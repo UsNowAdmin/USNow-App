@@ -61,7 +61,21 @@ const CONTENT = {
   /* ============================================================
      1. THE TOLL ROAD
      Journal · article · no companion image yet.
-     (To add one later: insert companion_image object below body.)
+
+     To add a companion image later, paste this block right before
+     the related_nodes line and adjust the values:
+
+       companion_image: {
+         src: "graphics/toll-road.PNG",
+         alt: "Short description of what the image shows",
+         caption: "AI-generated, 2026.",
+         gallery_id: "toll-road-image"  // omit if no gallery entry
+       },
+
+     If gallery_id is set, also create a kind:"image" entry with
+     id matching that gallery_id, and set its related_article to
+     this entry's id ("toll-road"). See indigenous-sin pair below
+     for a working example.
      ============================================================ */
   "toll-road": {
     id: "toll-road",
