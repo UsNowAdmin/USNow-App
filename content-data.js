@@ -7,43 +7,61 @@
 
    FIELD SHAPE
    -----------
-   id            unique slug, becomes URL parameter
-   sections      array of section memberships:
-                 "journal" | "gallery" | "archive"
-                 An entry can appear in multiple sections.
-   kind          rendering emphasis:
-                 "article"  → text-led, sidebar visible
-                 "image"    → media-led, body is short caption
-                 "document" → scan/PDF-led
-                 "entry"    → mixed journal/archive entry
-   hero_style    "dark-amber"   → Toll Road register (warm editorial)
-                 "dark-cosmic"  → USNow landing register (cool gallery)
-                 "dark-paper"   → mixed: dark hero, warm body
-                 default → dark-cosmic
-   eyebrow       small label above title
-   title         main headline (HTML allowed for <em> emphasis)
-   subtitle      one-line below title (optional)
-   date          display date string (e.g. "April 2026")
-   decade        for kicker line ("2020s") — optional
-   meta          array of small pill labels — optional
-   media         { type, src, alt, caption } — optional
-                 type: "image" | "pdf" | "document"
-                 If absent, no framed media block renders.
-   body          HTML string. Editorial CSS classes available:
-                   .dropcap, .section-break, .pullquote,
-                   .callout, .phosphor-block, .capture-block,
-                   .threshold, .declaration
-   related_nodes array of orb IDs from index.html
-   related_terms array of compendium term IDs
-   external_url  optional Substack/external link button
-   external_label optional button label
+   id              unique slug, becomes URL parameter
+   sections        array of section memberships:
+                   "journal" | "gallery" | "archive"
+   kind            rendering emphasis:
+                   "article"  → text-led; NO viewer
+                   "image"    → media-led; full pan/zoom viewer
+                   "document" → scan/PDF-led
+                   "entry"    → mixed journal/archive entry
+   hero_style      "dark-amber" | "dark-cosmic" | "dark-paper"
+                   default → dark-cosmic
+   eyebrow         small label above title
+   title           main headline (HTML allowed for <em>)
+   subtitle        one-line below title (optional)
+   date            display date string
+   decade          for kicker line ("2020s") — optional
+   meta            array of small pill labels — optional
+
+   ── ARTICLE FIELDS (kind:"article") ──
+   body            HTML string. Editorial vocabulary:
+                     .dropcap, .section-break, .pullquote,
+                     .callout, .phosphor-block, .capture-block,
+                     .threshold, .declaration
+   companion_image optional. "Cover of the book at the end."
+                   Renders quietly after body, before byline.
+                   Shape: { src, alt, caption, gallery_id }
+                   • If gallery_id is set, image is tappable —
+                     navigates to that gallery entry.
+                   • If gallery_id is absent, image is decorative.
+   external_url    optional external link button
+   external_label  optional button label
+
+   ── IMAGE-KIND FIELDS (kind:"image") ──
+   media           required. { type, src, alt, caption }
+                   Renders with full pan/zoom viewer.
+   related_article optional. Entry id of the essay this image
+                   accompanies. Adds "Read the essay →" link.
+
+   ── SHARED ──
+   related_nodes   array of orb IDs from index.html
+   related_terms   array of compendium term IDs
+
+   ── DESIGN RULES ──
+   • An article's image lives at the END, never the top.
+   • Articles never get the pan/zoom viewer. Articles read.
+   • Gallery images always get the viewer. Gallery zooms.
+   • An essay and its image are SEPARATE entries, linked via
+     companion_image.gallery_id and related_article.
    ============================================================ */
 
 const CONTENT = {
 
   /* ============================================================
      1. THE TOLL ROAD
-     Journal · article · text-led · dark-amber editorial register
+     Journal · article · no companion image yet.
+     (To add one later: insert companion_image object below body.)
      ============================================================ */
   "toll-road": {
     id: "toll-road",
@@ -148,46 +166,12 @@ const CONTENT = {
   },
 
   /* ============================================================
-     2. BREAD & CIRCUSES
-     Gallery · image · media-led · dark-cosmic register
-     ============================================================ */
-  "bread-and-circuses": {
-    id: "bread-and-circuses",
-    sections: ["gallery"],
-    kind: "image",
-    hero_style: "dark-cosmic",
-    eyebrow: "AI-Generated · 2026",
-    title: "Bread &amp; Circuses",
-    subtitle: "Panem et circenses. The oldest political technology, still running.",
-    date: "April 2026",
-    meta: ["GALLERY", "MEDIA POWER", "PERCEPTION"],
-    media: {
-      type: "image",
-      src: "graphics/bread.PNG",
-      alt: "Bread and Circuses — modern colosseum, BingeFlix, dispensary, distracted citizens",
-      caption: "Tap the image to open the full-resolution viewer. Pinch, scroll, or drag to inspect the details."
-    },
-    body: `
-<p>The colosseum survives in altered form. The gladiator becomes the streamer. The lion becomes the algorithm. The bread becomes the binge.</p>
-
-<p>Liberty pauses for a smoke break. The dispensary is open twenty-four hours. The screens are always on. The crowd has not changed.</p>
-
-<p>Two thousand years ago a Roman poet named the technique. <em>Panem et circenses.</em> Give the people enough bread and enough spectacle and they will not ask what is being done in their name. The arrangement worked then. It works now. The bread is cheaper. The spectacle is denser. The empire is broader.</p>
-
-<p>Look closely. Every element in this image already exists in your week. The point is not what is being depicted. The point is how legible it is.</p>
-`,
-    related_nodes: ["media-power", "perception", "identity"],
-    related_terms: ["distraction", "spectacle", "consent"]
-  },
-
-  /* ============================================================
-     3. AMERICA'S INDIGENOUS SIN
-     Journal AND Gallery — one entry, two memberships.
-     CANONICAL HOME. Substack is now the syndication channel.
+     2. AMERICA'S INDIGENOUS SIN — THE ESSAY
+     Journal · article · companion image at end links to gallery
      ============================================================ */
   "indigenous-sin": {
     id: "indigenous-sin",
-    sections: ["journal", "gallery"],
+    sections: ["journal"],
     kind: "article",
     hero_style: "dark-paper",
     eyebrow: "Essay",
@@ -195,13 +179,7 @@ const CONTENT = {
     subtitle: "The technology evolves. The pattern stays the same.",
     date: "March 28, 2026",
     decade: "2020s",
-    meta: ["JOURNAL", "GALLERY", "HISTORY", "GOVERNMENT"],
-    media: {
-      type: "image",
-      src: "graphics/sin.PNG",
-      alt: "America's Indigenous Sin — symbolic image of generational violence and national trauma",
-      caption: "AI-generated, 2026. Tap to open the full-resolution viewer."
-    },
+    meta: ["JOURNAL", "HISTORY", "GOVERNMENT"],
     body: `
 <p class="dropcap">First we slaughtered the Indians.</p>
 
@@ -282,10 +260,77 @@ const CONTENT = {
   <p>We taught our children something <em>different</em> than what we were taught.</p>
 </div>
 `,
+    companion_image: {
+      src: "graphics/sin.PNG",
+      alt: "America's Indigenous Sin — symbolic image of generational violence and national trauma",
+      caption: "AI-generated, 2026.",
+      gallery_id: "indigenous-sin-image"
+    },
     related_nodes: ["government", "history", "identity", "media-power"],
     related_terms: ["debt", "memory", "sovereignty", "trauma"],
     external_url: "https://open.substack.com/pub/atjon27/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
     external_label: "ALSO ON SUBSTACK →"
+  },
+
+  /* ============================================================
+     3. AMERICA'S INDIGENOUS SIN — THE GALLERY IMAGE
+     Gallery · image · pan/zoom viewer · links back to essay
+     Minimal page: title + image + viewer + sidebar back-link.
+     The essay says the words; the image speaks the same argument
+     visually. No body prose duplicating the essay.
+     ============================================================ */
+  "indigenous-sin-image": {
+    id: "indigenous-sin-image",
+    sections: ["gallery"],
+    kind: "image",
+    hero_style: "dark-cosmic",
+    eyebrow: "AI-Generated · 2026",
+    title: "America's Indigenous Sin",
+    subtitle: "Companion image to the essay.",
+    date: "March 2026",
+    meta: ["GALLERY", "HISTORY"],
+    media: {
+      type: "image",
+      src: "graphics/sin.PNG",
+      alt: "America's Indigenous Sin — symbolic image of generational violence and national trauma",
+      caption: "Tap the image to open the full-resolution viewer. Pinch, scroll, or drag to inspect."
+    },
+    related_article: "indigenous-sin",
+    related_nodes: ["government", "history", "identity"],
+    related_terms: ["debt", "memory", "trauma"]
+  },
+
+  /* ============================================================
+     4. BREAD & CIRCUSES
+     Gallery · image · gallery-only piece (no companion essay)
+     Demonstrates an image with its own argument — short body
+     prose acts as the wall-text, viewer for inspection.
+     ============================================================ */
+  "bread-and-circuses": {
+    id: "bread-and-circuses",
+    sections: ["gallery"],
+    kind: "image",
+    hero_style: "dark-cosmic",
+    eyebrow: "AI-Generated · 2026",
+    title: "Bread &amp; Circuses",
+    subtitle: "Panem et circenses. The oldest political technology, still running.",
+    date: "April 2026",
+    meta: ["GALLERY", "MEDIA POWER", "PERCEPTION"],
+    media: {
+      type: "image",
+      src: "graphics/bread.PNG",
+      alt: "Bread and Circuses — modern colosseum, BingeFlix, dispensary, distracted citizens",
+      caption: "Tap the image to open the full-resolution viewer. Pinch, scroll, or drag to inspect the details."
+    },
+    body: `
+<p>The colosseum survives in altered form. The gladiator becomes the streamer. The lion becomes the algorithm. The bread becomes the binge.</p>
+
+<p>Liberty pauses for a smoke break. The dispensary is open twenty-four hours. The screens are always on. The crowd has not changed.</p>
+
+<p>Two thousand years ago a Roman poet named the technique. <em>Panem et circenses.</em> Give the people enough bread and enough spectacle and they will not ask what is being done in their name. The arrangement worked then. It works now. The bread is cheaper. The spectacle is denser. The empire is broader.</p>
+`,
+    related_nodes: ["media-power", "perception", "identity"],
+    related_terms: ["distraction", "spectacle", "consent"]
   }
 
 };

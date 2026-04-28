@@ -8,9 +8,14 @@
 <style>
 /* ============================================================
    USNOW · CONTENT RENDERER
-   Shared template for all internal Journal/Gallery/Archive items.
-   Hero register varies by entry's `hero_style`. Body register
-   adapts to match. USNow nav is the constant through-line.
+   Shared template for Journal articles and Gallery images.
+   Two render paths:
+     kind:"article" → hero, body, optional companion image at end
+                      (companion image is NOT zoomable here —
+                      it links to its gallery entry instead)
+     kind:"image"   → hero, framed image with full pan/zoom viewer,
+                      optional short body prose, sidebar with
+                      back-link to companion essay
    ============================================================ */
 
 :root {
@@ -34,6 +39,8 @@
   --cosmic-soft: #8aa0b8;
   --cosmic-deep: #1a4a7a;
   --cosmic-rule: rgba(26,74,122,0.35);
+  --cosmic-green: #3a9a70;
+  --cosmic-green-soft: rgba(74,154,112,0.5);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -49,12 +56,18 @@ body {
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
+/* Image-kind pages have dark body */
+body.image-kind {
+  background: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 2px; }
+body.image-kind ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); }
 
-/* ── USNOW NAV — constant across the site ────────────────── */
+/* ── USNOW NAV — constant ─────────────────────────────────── */
 nav.usnow-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -100,7 +113,7 @@ nav.usnow-nav {
 }
 .nav-back:hover { opacity: 1; border-color: var(--cosmic-blue); }
 
-/* ── HERO — register varies by entry ─────────────────────── */
+/* ── HERO ─────────────────────────────────────────────────── */
 .hero {
   padding: 90px 40px 72px;
   text-align: center;
@@ -157,11 +170,8 @@ nav.usnow-nav {
   text-transform: uppercase;
 }
 
-/* HERO STYLE: dark-amber (Toll Road register) */
-.hero.dark-amber {
-  background: var(--ink);
-  color: var(--paper);
-}
+/* HERO STYLE: dark-amber */
+.hero.dark-amber { background: var(--ink); color: var(--paper); }
 .hero.dark-amber::before {
   content: ''; position: absolute; inset: 0;
   background:
@@ -179,28 +189,22 @@ nav.usnow-nav {
   background: rgba(248,244,238,0.04);
 }
 
-/* HERO STYLE: dark-cosmic (USNow gallery register) */
-.hero.dark-cosmic {
-  background: var(--cosmic-bg);
-  color: var(--cosmic-text);
-}
+/* HERO STYLE: dark-cosmic */
+.hero.dark-cosmic { background: var(--cosmic-bg); color: var(--cosmic-text); }
 .hero.dark-cosmic::before {
   content: ''; position: absolute; inset: 0;
   background:
     radial-gradient(ellipse at 50% 0%, rgba(42,120,80,0.10) 0%, transparent 65%),
     radial-gradient(ellipse at 30% 80%, rgba(74,128,184,0.08) 0%, transparent 60%);
 }
-.hero.dark-cosmic .hero-eyebrow {
-  color: var(--cosmic-gold);
-  font-family: 'DM Mono', monospace;
-}
+.hero.dark-cosmic .hero-eyebrow { color: var(--cosmic-gold); }
 .hero.dark-cosmic .hero-title {
   color: var(--cosmic-text);
   font-family: 'Georgia', serif;
   font-weight: 300;
   letter-spacing: 0.01em;
 }
-.hero.dark-cosmic .hero-title em { color: #3a9a70; font-style: normal; }
+.hero.dark-cosmic .hero-title em { color: var(--cosmic-green); font-style: normal; }
 .hero.dark-cosmic .hero-subtitle {
   color: rgba(240,236,228,0.55);
   font-family: 'Georgia', serif;
@@ -216,11 +220,8 @@ nav.usnow-nav {
   background: rgba(255,255,255,0.03);
 }
 
-/* HERO STYLE: dark-paper (mixed — dark hero, paper body) */
-.hero.dark-paper {
-  background: var(--ink);
-  color: var(--paper);
-}
+/* HERO STYLE: dark-paper */
+.hero.dark-paper { background: var(--ink); color: var(--paper); }
 .hero.dark-paper::before {
   content: ''; position: absolute; inset: 0;
   background:
@@ -238,70 +239,16 @@ nav.usnow-nav {
   background: rgba(248,244,238,0.04);
 }
 
-/* ── FRAMED MEDIA — between hero and body ────────────────── */
-.media-frame-wrap {
-  background: var(--paper-dark);
-  padding: 36px 24px;
-  border-bottom: 1px solid var(--rule);
-}
-.media-frame {
-  max-width: 920px;
-  margin: 0 auto;
-  border: 1px solid rgba(14,12,10,0.18);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #1a1a1a;
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.25),
-    0 4px 16px rgba(0,0,0,0.15);
-}
-.media-button {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  width: 100%;
-  display: block;
-  cursor: zoom-in;
-  padding: 0;
-}
-.media-button img {
-  width: 100%;
-  max-height: 78vh;
-  object-fit: contain;
-  display: block;
-  background: #1a1a1a;
-}
-.media-caption {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  color: var(--muted);
-  text-transform: uppercase;
-  text-align: center;
-  margin: 16px auto 0;
-  max-width: 920px;
-  padding: 0 12px;
-}
+/* ============================================================
+   ARTICLE PATH (kind:"article")
+   ============================================================ */
 
-/* When the hero is dark-cosmic, the media wrap continues that mood briefly */
-.media-frame-wrap.cosmic {
-  background: #0a0f18;
-  border-bottom: 1px solid var(--cosmic-rule);
-}
-.media-frame-wrap.cosmic .media-frame {
-  border-color: rgba(201,168,76,0.25);
-  background: #020508;
-}
-.media-frame-wrap.cosmic .media-caption {
-  color: rgba(138,160,184,0.6);
-}
-
-/* ── BODY — editorial paper register ─────────────────────── */
-.body-wrap {
+/* Body container */
+.article-wrap {
   background: var(--paper);
-  padding: 72px 24px 80px;
+  padding: 72px 24px 40px;
 }
-.body-grid {
+.article-grid {
   max-width: 1080px;
   margin: 0 auto;
   display: grid;
@@ -309,7 +256,7 @@ nav.usnow-nav {
   gap: 56px;
   align-items: start;
 }
-.body-grid.no-sidebar {
+.article-grid.no-sidebar {
   grid-template-columns: minmax(0, 1fr);
 }
 .article-body {
@@ -317,19 +264,13 @@ nav.usnow-nav {
   margin: 0 auto;
   width: 100%;
 }
-.body-grid.no-sidebar .article-body {
-  margin: 0 auto;
-}
 
-/* ── EDITORIAL VOCABULARY — available to any entry ──────── */
 .article-body p {
   margin-bottom: 1.6em;
   font-size: 19px;
   line-height: 1.8;
   color: var(--ink);
 }
-
-/* Drop cap */
 .article-body p.dropcap::first-letter {
   font-family: 'Playfair Display', serif;
   font-size: 4.2em;
@@ -339,8 +280,6 @@ nav.usnow-nav {
   margin: 8px 12px 0 0;
   color: var(--amber);
 }
-
-/* Section break */
 .article-body .section-break {
   text-align: center;
   margin: 52px 0;
@@ -350,8 +289,6 @@ nav.usnow-nav {
   opacity: 0.6;
   font-family: 'DM Mono', monospace;
 }
-
-/* Pull quote */
 .article-body .pullquote {
   margin: 48px -12px;
   padding: 32px 36px;
@@ -376,8 +313,6 @@ nav.usnow-nav {
   display: block;
   text-transform: uppercase;
 }
-
-/* Callout box */
 .article-body .callout {
   margin: 44px 0;
   padding: 28px 32px;
@@ -413,8 +348,6 @@ nav.usnow-nav {
   flex-shrink: 0;
   margin-top: 2px;
 }
-
-/* Phosphor block */
 .article-body .phosphor-block {
   margin: 44px -12px;
   padding: 32px 36px;
@@ -437,8 +370,6 @@ nav.usnow-nav {
   margin-bottom: 12px;
   opacity: 0.75;
 }
-
-/* Capture block — the dark hinge */
 .article-body .capture-block {
   margin: 56px -28px;
   padding: 48px 52px;
@@ -460,8 +391,6 @@ nav.usnow-nav {
 }
 .article-body .capture-block p:last-child { margin-bottom: 0; }
 .article-body .capture-block strong { color: var(--amber-light); font-weight: 600; }
-
-/* Threshold list */
 .article-body ul.threshold {
   margin: 36px 0;
   padding: 0;
@@ -484,8 +413,6 @@ nav.usnow-nav {
   font-size: 11px;
   top: 14px;
 }
-
-/* Closing declaration */
 .article-body .declaration {
   margin: 56px 0 0;
   padding: 44px 0;
@@ -508,7 +435,157 @@ nav.usnow-nav {
   color: var(--amber);
 }
 
-/* ── SIDEBAR ─────────────────────────────────────────────── */
+/* ── COMPANION IMAGE — "cover of the book at the end" ────── */
+.companion-image-wrap {
+  background: var(--paper);
+  padding: 0 24px 72px;
+}
+.companion-image-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+.companion-rule {
+  width: 60%;
+  max-width: 280px;
+  height: 1px;
+  background: var(--rule);
+  margin: 0 auto 56px;
+}
+.companion-frame {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  border: 1px solid rgba(14,12,10,0.18);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #1a1a1a;
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.22),
+    0 4px 16px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+a.companion-frame {
+  cursor: pointer;
+  text-decoration: none;
+}
+a.companion-frame:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 32px 70px rgba(0,0,0,0.28),
+    0 6px 20px rgba(0,0,0,0.16);
+}
+.companion-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #1a1a1a;
+}
+.companion-caption {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 18px;
+  padding: 0 12px;
+}
+.companion-caption a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: all 0.18s;
+}
+.companion-caption a:hover {
+  color: var(--amber);
+  border-bottom-color: var(--amber);
+}
+
+/* ============================================================
+   IMAGE-KIND PATH (kind:"image")
+   Full pan/zoom viewer, framed image up top, optional body
+   ============================================================ */
+.gallery-wrap {
+  background: var(--cosmic-bg);
+  padding: 36px 24px 60px;
+}
+.gallery-frame {
+  max-width: 1120px;
+  margin: 0 auto;
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #020508;
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.55),
+    0 6px 20px rgba(0,0,0,0.35),
+    0 0 60px rgba(201,168,76,0.06);
+}
+.gallery-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  display: block;
+  cursor: zoom-in;
+  padding: 0;
+}
+.gallery-button img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  background: #020508;
+}
+.gallery-caption {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(138,160,184,0.6);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 18px auto 0;
+  max-width: 920px;
+  padding: 0 12px;
+}
+
+.gallery-body-wrap {
+  background: var(--cosmic-bg);
+  padding: 40px 24px 60px;
+}
+.gallery-body-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 56px;
+  align-items: start;
+}
+.gallery-body-grid.no-sidebar {
+  grid-template-columns: minmax(0, 1fr);
+}
+.gallery-body {
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+.gallery-body p {
+  font-family: 'Source Serif 4', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(240,236,228,0.85);
+  margin-bottom: 1.4em;
+}
+.gallery-body em {
+  color: var(--cosmic-green);
+  font-style: italic;
+}
+
+/* ============================================================
+   SIDEBAR — different palette per kind
+   ============================================================ */
 .sidebar {
   position: sticky;
   top: 80px;
@@ -568,16 +645,45 @@ nav.usnow-nav {
   color: var(--paper);
 }
 
+/* Image-kind sidebar overrides */
+body.image-kind .sidebar-section { border-top-color: var(--cosmic-rule); }
+body.image-kind .sidebar-label { color: var(--cosmic-soft); }
+body.image-kind .sidebar-pill {
+  color: var(--cosmic-text);
+  border-color: var(--cosmic-rule);
+  background: rgba(255,255,255,0.03);
+}
+body.image-kind .sidebar-pill:hover {
+  border-color: var(--cosmic-green);
+  color: var(--cosmic-green);
+  background: rgba(74,154,112,0.08);
+}
+body.image-kind .external-link {
+  color: var(--cosmic-text);
+  border-color: var(--cosmic-rule);
+  background: transparent;
+}
+body.image-kind .external-link:hover {
+  background: var(--cosmic-text);
+  color: var(--cosmic-bg);
+}
+
 /* ── BYLINE / FOOTER ─────────────────────────────────────── */
 .byline {
   max-width: 680px;
-  margin: 80px auto 0;
-  padding: 28px 0 0;
+  margin: 0 auto;
+  padding: 28px 24px 0;
   border-top: 1px solid var(--rule);
   display: flex;
   align-items: center;
   gap: 16px;
 }
+.byline-wrap {
+  background: var(--paper);
+  padding: 0 0 80px;
+}
+body.image-kind .byline-wrap { background: var(--cosmic-bg); padding-top: 24px; }
+body.image-kind .byline { border-top-color: var(--cosmic-rule); }
 .byline-avatar {
   width: 44px; height: 44px;
   border-radius: 50%;
@@ -586,6 +692,7 @@ nav.usnow-nav {
   font-size: 20px;
   flex-shrink: 0;
 }
+body.image-kind .byline-avatar { background: var(--cosmic-deep); }
 .byline-name {
   font-family: 'DM Mono', monospace;
   font-size: 11px;
@@ -594,12 +701,14 @@ nav.usnow-nav {
   text-transform: uppercase;
   margin-bottom: 3px;
 }
+body.image-kind .byline-name { color: var(--cosmic-text); }
 .byline-pub {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   color: var(--muted);
   letter-spacing: 0.08em;
 }
+body.image-kind .byline-pub { color: var(--cosmic-soft); }
 
 footer.usnow-footer {
   background: var(--cosmic-bg);
@@ -618,7 +727,7 @@ footer.usnow-footer a {
 }
 footer.usnow-footer a:hover { color: var(--cosmic-gold); }
 
-/* ── LIGHTBOX VIEWER — ported from gallery.html ─────────── */
+/* ── LIGHTBOX VIEWER (image-kind only) ───────────────────── */
 #lightbox {
   display: none;
   position: fixed;
@@ -695,7 +804,7 @@ footer.usnow-footer a:hover { color: var(--cosmic-gold); }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .body-grid {
+  .article-grid, .gallery-body-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -707,19 +816,21 @@ footer.usnow-footer a:hover { color: var(--cosmic-gold); }
     border-top: 1px solid var(--rule);
     padding-top: 32px;
   }
+  body.image-kind .sidebar { border-top-color: var(--cosmic-rule); }
   .sidebar-section:first-child { border-top: 0; }
 }
-
 @media (max-width: 600px) {
   body { font-size: 18px; }
   .hero { padding: 72px 22px 56px; }
-  .body-wrap { padding: 48px 20px 64px; }
+  .article-wrap { padding: 48px 20px 32px; }
+  .companion-image-wrap { padding: 0 20px 56px; }
+  .companion-rule { margin-bottom: 40px; }
   .article-body p { font-size: 18px; }
   .article-body .pullquote { margin: 36px 0; padding: 24px 24px; }
   .article-body .capture-block { margin: 44px -16px; padding: 36px 28px; }
   .article-body .phosphor-block { margin: 36px 0; padding: 24px 24px; }
-  .media-frame-wrap { padding: 24px 14px; }
-  .byline { padding: 24px 0 0; }
+  .gallery-wrap { padding: 24px 14px; }
+  .byline { padding: 24px 20px 0; }
 }
 
 /* ── ERROR STATE ─────────────────────────────────────────── */
@@ -779,7 +890,7 @@ footer.usnow-footer a:hover { color: var(--cosmic-gold); }
   <a href="graphic-info.html">Graphic Images</a>
 </footer>
 
-<!-- Full-resolution viewer (ported from gallery.html) -->
+<!-- Lightbox viewer — only used by kind:"image" entries -->
 <div id="lightbox">
   <div id="lightbox-canvas">
     <div id="lightbox-img-viewer"><img id="lightbox-img" src="" alt=""/></div>
@@ -818,10 +929,12 @@ function escapeHtml(s) {
 }
 
 function renderEntry(entry) {
-  // Set page title
   document.title = `${stripHtml(entry.title)} · USNow`;
 
-  // Set back link based on primary section
+  // Body class — image-kind gets dark mode
+  if (entry.kind === 'image') document.body.classList.add('image-kind');
+
+  // Back link
   const backLink = document.getElementById('back-link');
   const primarySection = entry.sections && entry.sections[0];
   if (primarySection === 'gallery') {
@@ -835,18 +948,27 @@ function renderEntry(entry) {
     backLink.textContent = '← BACK TO JOURNAL';
   }
 
-  const heroStyle = entry.hero_style || 'dark-cosmic';
-  const hasMedia = entry.media && entry.media.src;
-  const hasSidebar = (entry.related_nodes && entry.related_nodes.length) ||
-                     (entry.related_terms && entry.related_terms.length) ||
-                     entry.external_url;
+  // Hero
+  const heroHtml = renderHero(entry);
 
-  // Build hero
+  // Body — branches by kind
+  let mainHtml = '';
+  if (entry.kind === 'image') {
+    mainHtml = renderImageKind(entry);
+  } else {
+    mainHtml = renderArticleKind(entry);
+  }
+
+  root.innerHTML = heroHtml + mainHtml;
+}
+
+function renderHero(entry) {
+  const heroStyle = entry.hero_style || 'dark-cosmic';
   const metaPills = (entry.meta || []).map(m =>
     `<span class="pill">${escapeHtml(m)}</span>`
   ).join('');
 
-  const heroHtml = `
+  return `
     <section class="hero ${heroStyle}">
       ${entry.eyebrow ? `<div class="hero-eyebrow">${escapeHtml(entry.eyebrow)}</div>` : ''}
       <h1 class="hero-title">${entry.title}</h1>
@@ -860,75 +982,179 @@ function renderEntry(entry) {
       ` : ''}
     </section>
   `;
+}
 
-  // Build framed media (if present)
-  const mediaHtml = hasMedia ? `
-    <section class="media-frame-wrap ${heroStyle === 'dark-cosmic' ? 'cosmic' : ''}">
-      <div class="media-frame">
-        <button class="media-button" onclick="openLightbox('${escapeHtml(entry.media.src)}', '${escapeHtml(entry.media.alt || '')}')" aria-label="Open full-resolution viewer">
-          <img src="${escapeHtml(entry.media.src)}" alt="${escapeHtml(entry.media.alt || '')}"/>
-        </button>
-      </div>
-      ${entry.media.caption ? `<div class="media-caption">${escapeHtml(entry.media.caption)}</div>` : ''}
-    </section>
-  ` : '';
+function renderArticleKind(entry) {
+  const hasSidebar = (entry.related_nodes && entry.related_nodes.length) ||
+                     (entry.related_terms && entry.related_terms.length) ||
+                     entry.external_url;
+  const sidebarHtml = hasSidebar ? renderSidebar(entry, 'article') : '';
 
-  // Build sidebar
-  let sidebarHtml = '';
-  if (hasSidebar) {
-    const nodeLinks = (entry.related_nodes || []).map(n =>
-      `<a class="sidebar-pill" href="index.html#${escapeHtml(n)}">${escapeHtml(formatLabel(n))}</a>`
-    ).join('');
-    const termLinks = (entry.related_terms || []).map(t =>
-      `<a class="sidebar-pill" href="compendium.html?term=${escapeHtml(t)}">${escapeHtml(formatLabel(t))}</a>`
-    ).join('');
+  // Companion image at end of article — "cover of the book at the end"
+  let companionHtml = '';
+  if (entry.companion_image && entry.companion_image.src) {
+    const ci = entry.companion_image;
+    const tappable = !!ci.gallery_id;
+    const tag = tappable ? 'a' : 'div';
+    const href = tappable ? `href="content.html?id=${escapeHtml(ci.gallery_id)}"` : '';
 
-    sidebarHtml = `
-      <aside class="sidebar">
-        ${nodeLinks ? `
-          <div class="sidebar-section">
-            <div class="sidebar-label">Related Scale Nodes</div>
-            <div class="sidebar-pills">${nodeLinks}</div>
-          </div>
-        ` : ''}
-        ${termLinks ? `
-          <div class="sidebar-section">
-            <div class="sidebar-label">Compendium Terms</div>
-            <div class="sidebar-pills">${termLinks}</div>
-          </div>
-        ` : ''}
-        ${entry.external_url ? `
-          <div class="sidebar-section">
-            <div class="sidebar-label">Also Published</div>
-            <a href="${escapeHtml(entry.external_url)}" target="_blank" rel="noreferrer" class="external-link">
-              ${escapeHtml(entry.external_label || 'READ EXTERNAL →')}
-            </a>
-          </div>
-        ` : ''}
-      </aside>
+    let captionHtml = '';
+    if (ci.caption) {
+      if (tappable) {
+        captionHtml = `
+          <div class="companion-caption">
+            ${escapeHtml(ci.caption)} &nbsp;·&nbsp;
+            <a href="content.html?id=${escapeHtml(ci.gallery_id)}">View in Gallery →</a>
+          </div>`;
+      } else {
+        captionHtml = `<div class="companion-caption">${escapeHtml(ci.caption)}</div>`;
+      }
+    } else if (tappable) {
+      captionHtml = `
+        <div class="companion-caption">
+          <a href="content.html?id=${escapeHtml(ci.gallery_id)}">View in Gallery →</a>
+        </div>`;
+    }
+
+    companionHtml = `
+      <section class="companion-image-wrap">
+        <div class="companion-image-inner">
+          <div class="companion-rule"></div>
+          <${tag} class="companion-frame" ${href}>
+            <img src="${escapeHtml(ci.src)}" alt="${escapeHtml(ci.alt || '')}"/>
+          </${tag}>
+          ${captionHtml}
+        </div>
+      </section>
     `;
   }
 
-  // Build body
-  const bodyHtml = `
-    <section class="body-wrap">
-      <div class="body-grid ${hasSidebar ? '' : 'no-sidebar'}">
+  return `
+    <section class="article-wrap">
+      <div class="article-grid ${hasSidebar ? '' : 'no-sidebar'}">
         <article class="article-body">
           ${entry.body || ''}
-          <div class="byline">
-            <div class="byline-avatar">⚖️</div>
-            <div>
-              <div class="byline-name">ATJon</div>
-              <div class="byline-pub">atjon.substack.com &nbsp;·&nbsp; usnow.app</div>
-            </div>
-          </div>
         </article>
         ${sidebarHtml}
       </div>
     </section>
+    ${companionHtml}
+    <div class="byline-wrap">
+      ${renderByline()}
+    </div>
+  `;
+}
+
+function renderImageKind(entry) {
+  const hasSidebar = (entry.related_nodes && entry.related_nodes.length) ||
+                     (entry.related_terms && entry.related_terms.length) ||
+                     entry.related_article;
+  const sidebarHtml = hasSidebar ? renderSidebar(entry, 'image') : '';
+
+  if (!entry.media || !entry.media.src) {
+    return `<div class="error-state"><h1>Image missing</h1><p>This gallery entry has no media.</p></div>`;
+  }
+
+  const m = entry.media;
+  const galleryHtml = `
+    <section class="gallery-wrap">
+      <div class="gallery-frame">
+        <button class="gallery-button" onclick="openLightbox('${escapeHtml(m.src)}', '${escapeHtml(m.alt || '')}')" aria-label="Open full-resolution viewer">
+          <img src="${escapeHtml(m.src)}" alt="${escapeHtml(m.alt || '')}"/>
+        </button>
+      </div>
+      ${m.caption ? `<div class="gallery-caption">${escapeHtml(m.caption)}</div>` : ''}
+    </section>
   `;
 
-  root.innerHTML = heroHtml + mediaHtml + bodyHtml;
+  const bodyHtml = (entry.body && entry.body.trim()) ? `
+    <section class="gallery-body-wrap">
+      <div class="gallery-body-grid ${hasSidebar ? '' : 'no-sidebar'}">
+        <article class="gallery-body">${entry.body}</article>
+        ${sidebarHtml}
+      </div>
+    </section>
+  ` : (hasSidebar ? `
+    <section class="gallery-body-wrap">
+      <div class="gallery-body-grid">
+        <div></div>
+        ${sidebarHtml}
+      </div>
+    </section>
+  ` : '');
+
+  return `
+    ${galleryHtml}
+    ${bodyHtml}
+    <div class="byline-wrap">
+      ${renderByline()}
+    </div>
+  `;
+}
+
+function renderSidebar(entry, mode) {
+  const nodeLinks = (entry.related_nodes || []).map(n =>
+    `<a class="sidebar-pill" href="index.html#${escapeHtml(n)}">${escapeHtml(formatLabel(n))}</a>`
+  ).join('');
+  const termLinks = (entry.related_terms || []).map(t =>
+    `<a class="sidebar-pill" href="compendium.html?term=${escapeHtml(t)}">${escapeHtml(formatLabel(t))}</a>`
+  ).join('');
+
+  let extraSection = '';
+
+  // For image-kind: link back to the companion essay
+  if (mode === 'image' && entry.related_article) {
+    extraSection = `
+      <div class="sidebar-section">
+        <div class="sidebar-label">The Essay</div>
+        <a href="content.html?id=${escapeHtml(entry.related_article)}" class="external-link">
+          READ THE ESSAY →
+        </a>
+      </div>
+    `;
+  }
+
+  // For article-kind: external link (Substack etc)
+  if (mode === 'article' && entry.external_url) {
+    extraSection = `
+      <div class="sidebar-section">
+        <div class="sidebar-label">Also Published</div>
+        <a href="${escapeHtml(entry.external_url)}" target="_blank" rel="noreferrer" class="external-link">
+          ${escapeHtml(entry.external_label || 'READ EXTERNAL →')}
+        </a>
+      </div>
+    `;
+  }
+
+  return `
+    <aside class="sidebar">
+      ${nodeLinks ? `
+        <div class="sidebar-section">
+          <div class="sidebar-label">Related Scale Nodes</div>
+          <div class="sidebar-pills">${nodeLinks}</div>
+        </div>
+      ` : ''}
+      ${termLinks ? `
+        <div class="sidebar-section">
+          <div class="sidebar-label">Compendium Terms</div>
+          <div class="sidebar-pills">${termLinks}</div>
+        </div>
+      ` : ''}
+      ${extraSection}
+    </aside>
+  `;
+}
+
+function renderByline() {
+  return `
+    <div class="byline">
+      <div class="byline-avatar">⚖️</div>
+      <div>
+        <div class="byline-name">ATJon</div>
+        <div class="byline-pub">atjon.substack.com &nbsp;·&nbsp; usnow.app</div>
+      </div>
+    </div>
+  `;
 }
 
 function formatLabel(slug) {
@@ -942,7 +1168,7 @@ function stripHtml(s) {
 }
 
 /* ============================================================
-   LIGHTBOX VIEWER (ported intact from gallery.html)
+   LIGHTBOX VIEWER (image-kind only) — ported from gallery.html
    ============================================================ */
 const viewer = {
   scale: 1, minScale: 0.5, maxScale: 12,
@@ -964,13 +1190,11 @@ const viewer = {
     this.indicator().textContent = pct + '%';
     this.indicator().style.opacity = pct === 100 ? '0.2' : '0.7';
   },
-
   centerImage() {
     const vw = window.innerWidth, vh = window.innerHeight;
     this.x = (vw - this.imgW * this.scale) / 2;
     this.y = (vh - this.imgH * this.scale) / 2;
   },
-
   clampPan() {
     const vw = window.innerWidth, vh = window.innerHeight;
     const sw = this.imgW * this.scale, sh = this.imgH * this.scale;
@@ -978,7 +1202,6 @@ const viewer = {
     this.x = Math.min(vw - mx, Math.max(-(sw - mx), this.x));
     this.y = Math.min(vh - my, Math.max(-(sh - my), this.y));
   },
-
   zoomAt(clientX, clientY, delta) {
     const oldScale = this.scale;
     this.scale = Math.min(this.maxScale, Math.max(this.minScale, this.scale * delta));
@@ -987,7 +1210,6 @@ const viewer = {
     this.clampPan();
     this.applyTransform(false);
   },
-
   reset() {
     const vw = window.innerWidth, vh = window.innerHeight;
     const fitScale = Math.min(vw / this.imgW, vh / this.imgH);
@@ -995,7 +1217,6 @@ const viewer = {
     this.centerImage();
     this.applyTransform(false);
   },
-
   load(src) {
     const img = this.img();
     this.el().style.opacity = '0';
@@ -1012,10 +1233,8 @@ const viewer = {
     };
     img.src = src;
   },
-
   bindEvents() {
     const canvas = this.canvas();
-
     canvas.addEventListener('mousedown', e => {
       if (e.button !== 0) return;
       this.dragging = true; this.lastX = e.clientX; this.lastY = e.clientY;
@@ -1030,18 +1249,15 @@ const viewer = {
     window.addEventListener('mouseup', () => {
       this.dragging = false; canvas.classList.remove('dragging');
     });
-
     canvas.addEventListener('wheel', e => {
       e.preventDefault();
       const delta = e.deltaY < 0 ? 1.1 : 0.91;
       this.zoomAt(e.clientX, e.clientY, delta);
     }, { passive: false });
-
     canvas.addEventListener('dblclick', e => {
       if (this.scale > this.minScale * 1.5) { this.reset(); }
       else { this.zoomAt(e.clientX, e.clientY, 2.5); }
     });
-
     canvas.addEventListener('touchstart', e => {
       e.preventDefault();
       this.touches = [...e.touches];
@@ -1055,7 +1271,6 @@ const viewer = {
         this.lastX = this.touches[0].clientX; this.lastY = this.touches[0].clientY;
       }
     }, { passive: false });
-
     canvas.addEventListener('touchmove', e => {
       e.preventDefault();
       this.touches = [...e.touches];
@@ -1077,7 +1292,6 @@ const viewer = {
         this.clampPan(); this.applyTransform(false);
       }
     }, { passive: false });
-
     canvas.addEventListener('touchend', e => {
       this.touches = [...e.touches];
     }, { passive: true });
