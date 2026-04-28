@@ -173,8 +173,8 @@ const topEl=document.getElementById('top-pills');
 TOP_PILLS.forEach(p=>buildPill(p,topEl));
 
 const PIECES=[
-  {title:"America's\nIndigenous Sin",caption:"On the wound that doesn't appear in any budget. The debt that accrues without a ledger. AI-generated — 2026.",img:"graphics/sin.PNG",color:"#1a3a5a",border:"#2a6a9a",glowColor:"#2a6a9a",size:148,link:"https://open.substack.com/pub/atjon27/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",linkLabel:"READ THE ESSAY →",delay:0},
-  {title:"Bread &\nCircuses",caption:"The oldest political technology. Still running. AI-generated — 2026.",img:"graphics/bread.PNG",color:"#1a2a4a",border:"#2a4a8a",glowColor:"#2a4a8a",size:138,delay:0.1},
+  {title:"America's\nIndigenous Sin",caption:"On the wound that doesn't appear in any budget. The debt that accrues without a ledger. AI-generated — 2026.",img:"graphics/sin.PNG",color:"#1a3a5a",border:"#2a6a9a",glowColor:"#2a6a9a",size:148,link:"content.html?id=indigenous-sin-image",linkLabel:"VIEW PIECE →",delay:0},
+  {title:"Bread &\nCircuses",caption:"The oldest political technology. Still running. AI-generated — 2026.",img:"graphics/bread.PNG",color:"#1a2a4a",border:"#2a4a8a",glowColor:"#2a4a8a",size:138,link:"content.html?id=bread-and-circuses",linkLabel:"VIEW PIECE →",delay:0.1},
   {title:"What's\nHappening?",caption:"The question that starts everything. AI-generated — 2026.",img:"graphics/what.PNG",color:"#1a3828",border:"#2a6848",glowColor:"#2a6848",size:134,delay:0.3},
   {title:"Some Guy\nWith AI",caption:"A self-portrait of the moment. One person, one tool, everything on the line. AI-generated — 2026.",img:"graphics/guy.png",color:"#162838",border:"#2a5878",glowColor:"#2a5878",size:142,delay:0.2},
   {title:"The Apprentice:\nWashington Edition",caption:"Narrated by Michael Cohen. Reality TV reunion format. Written for the U.S. Semiquincentennial.",img:"graphics/app.PNG",color:"#1a1a3a",border:"#3a3a7a",glowColor:"#4a4aaa",size:110,link:"https://www.usnow.app/apprentice/index.html",linkLabel:"READ THE SERIES →",delay:0.35,plug:true},
@@ -361,7 +361,7 @@ function openModal(p){
   _currentLightboxSrc=p.img;
   document.getElementById('modal-title').textContent=p.title.replace('\n',' ');
   document.getElementById('modal-caption').textContent=p.caption;
-  document.getElementById('modal-link-wrap').innerHTML=p.link?`<a href="${p.link}" target="_blank" rel="noreferrer" class="modal-link">${p.linkLabel||'VIEW →'}</a>`:'';
+  document.getElementById('modal-link-wrap').innerHTML=p.link?`<a href="${p.link}" target="${p.link.startsWith('http')?'_blank':'_self'}" rel="noreferrer" class="modal-link">${p.linkLabel||'VIEW →'}</a>`:'';
   document.getElementById('modal-box').style.borderColor=`${p.border}55`;
   document.getElementById('modal-box').style.boxShadow=`0 0 60px ${p.glowColor}33`;
   document.getElementById('modal-overlay').classList.add('open');document.body.style.overflow='hidden';
