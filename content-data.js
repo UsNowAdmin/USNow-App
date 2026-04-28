@@ -65,7 +65,7 @@
      companion_image.gallery_id and related_article.
    ============================================================ */
 
-const CONTENT = {
+var CONTENT = {
 
   /* ============================================================
      1. THE TOLL ROAD
