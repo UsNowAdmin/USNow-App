@@ -194,7 +194,7 @@ PIECES.forEach(p=>{
     orb.innerHTML=`<div style="text-align:center;padding:8px;"><div style="font-size:${Math.max(8,p.size*0.1)}px;letter-spacing:0.12em;color:rgba(74,154,100,${p.dead?0.25:0.4});font-family:'Courier New',monospace;line-height:1.35;">${p.title.replace('\n','<br>')}</div>${!p.dead?`<div style="font-size:7px;letter-spacing:0.2em;color:rgba(74,154,100,0.22);font-family:'Courier New',monospace;margin-top:5px;animation:blink 2.5s ease-in-out infinite;">COMING SOON</div>`:''}</div>`;
     wrap.appendChild(orb);field.appendChild(wrap);return;
   }
-  const wrap=document.createElement('div');wrap.className='orb-wrap';wrap.style.animationDelay=p.delay+'s';wrap.onclick=()=>openModal(p);
+  const wrap=document.createElement('div');wrap.className='orb-wrap';wrap.style.animationDelay=p.delay+'s';wrap.onclick=()=>{ if(p.link && p.link.startsWith('content.html')){ window.location.href=p.link; } else { openModal(p); } };
   const orb=document.createElement('div');orb.className='gallery-orb';
   orb.style.cssText=`width:${p.size}px;height:${p.size}px;background:radial-gradient(circle at 36% 30%,${p.color}ff,${p.color}cc);border:2px solid ${p.border}88;--gc:${p.glowColor}66;animation:float ${3.8+p.delay}s ease-in-out infinite,emberGlow ${4.5+p.delay*0.5}s ease-in-out infinite;animation-delay:${p.delay}s,${p.delay}s;`;
   const ph=document.createElement('div');ph.className='thumb-placeholder';ph.style.background=`radial-gradient(circle at 36% 28%,${p.color}ff,${p.color}88)`;orb.appendChild(ph);
