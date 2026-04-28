@@ -35,8 +35,6 @@
                    • If gallery_id is set, image is tappable —
                      navigates to that gallery entry.
                    • If gallery_id is absent, image is decorative.
-   external_url    optional external link button
-   external_label  optional button label
 
    ── IMAGE-KIND FIELDS (kind:"image") ──
    media           required. { type, src, alt, caption }
@@ -292,9 +290,7 @@ const CONTENT = {
       gallery_id: "indigenous-sin-image"
     },
     related_nodes: ["government", "history", "identity", "media-power"],
-    related_terms: ["indigenous", "history", "violence", "memory", "original-sin", "reconstruction"],
-    external_url: "https://open.substack.com/pub/atjon27/p/americas-indigenous-sin?r=3gs28j&utm_medium=ios",
-    external_label: "ALSO ON SUBSTACK →"
+    related_terms: ["indigenous", "history", "violence", "memory", "original-sin"]
   },
 
   /* ============================================================

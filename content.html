@@ -618,6 +618,23 @@ a.companion-frame:hover {
   color: var(--amber);
   background: var(--amber-pale);
 }
+
+/* Glory pills (compendium term pills) — trigger #glory-pop popover.
+   Visually distinguished by a faint dotted underline + slight italic on
+   the term text, mirroring index.html's .glory-word convention. The pill
+   itself stays pill-shaped so it reads as part of the sidebar group. */
+.sidebar-pill.glory-pill {
+  cursor: pointer;
+  font-style: italic;
+  user-select: none;
+}
+.sidebar-pill.glory-pill::after {
+  content: ' ›';
+  font-style: normal;
+  opacity: 0.5;
+  margin-left: 2px;
+}
+
 .external-link {
   display: inline-block;
   font-family: 'DM Mono', monospace;
@@ -794,6 +811,49 @@ footer.usnow-footer a:hover { color: var(--cosmic-gold); }
   transition: opacity 0.3s;
 }
 
+/* ── GLORY POPOVER — same visual pattern as index.html ──── */
+#glory-pop {
+  display: none;
+  position: fixed;
+  z-index: 9000;
+  background: linear-gradient(160deg, #0d1525, #070c1a);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 10px;
+  padding: 14px 16px;
+  max-width: 280px;
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.7),
+    0 0 20px rgba(201,168,76,0.12);
+}
+#glory-pop .gp-word {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #e0c060;
+  font-family: 'DM Mono', 'Courier New', monospace;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+#glory-pop .gp-def {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #8898b0;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+#glory-pop .gp-link {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: rgba(201,168,76,0.6);
+  font-family: 'DM Mono', 'Courier New', monospace;
+  text-decoration: none;
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+#glory-pop .gp-link:hover { color: #c9a84c; }
+
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   .article-grid, .gallery-body-grid {
@@ -881,6 +941,14 @@ footer.usnow-footer a:hover { color: var(--cosmic-gold); }
   <a href="graphic-info.html">Graphic Images</a>
 </footer>
 
+<!-- Glory popover — definition lookup for compendium term pills.
+     Triggered by clicking any .glory-pill in the sidebar. -->
+<div id="glory-pop">
+  <div class="gp-word" id="gp-word"></div>
+  <div class="gp-def" id="gp-def"></div>
+  <a class="gp-link" id="gp-link" href="compendium.html" target="_blank">→ THE WORLD COMPENDIUM</a>
+</div>
+
 <!-- Lightbox viewer — only used by kind:"image" entries -->
 <div id="lightbox">
   <div id="lightbox-canvas">
@@ -891,6 +959,7 @@ footer.usnow-footer a:hover { color: var(--cosmic-gold); }
   <div id="lightbox-hint">SCROLL TO ZOOM · DRAG TO PAN · PINCH ON MOBILE · DOUBLE-CLICK TO RESET</div>
 </div>
 
+<script src="glories.js"></script>
 <script src="content-data.js"></script>
 <script>
 /* ============================================================
@@ -1105,37 +1174,30 @@ function renderImageKind(entry) {
 }
 
 function renderSidebar(entry, mode) {
+  // Related Scale Nodes — navigation links to index.html orb anchors.
+  // These are not glossary terms; they go to other pages.
   const nodeLinks = (entry.related_nodes || []).map(n =>
     `<a class="sidebar-pill" href="index.html#${escapeHtml(n)}">${escapeHtml(formatLabel(n))}</a>`
   ).join('');
-  // Compendium deep-link uses hash, not query: compendium.html#term-slug
-  // Slug is the term lowercased with spaces → hyphens (matches glories.js
-  // entries via the engine's hash lookup in compendium.js).
-  const termLinks = (entry.related_terms || []).map(t =>
-    `<a class="sidebar-pill" href="compendium.html#${escapeHtml(t)}">${escapeHtml(formatLabel(t))}</a>`
-  ).join('');
 
+  // Compendium Terms — popover-trigger spans, NOT links.
+  // Click opens #glory-pop with the definition + a deep-link to the
+  // compendium entry. Same UX pattern used in index.html. The data-glory
+  // attribute carries the display-name (matching the GLORIES lookup key);
+  // we resolve slug → display via the GLORY_DATA imported from glories.js.
+  const termLinks = (entry.related_terms || []).map(t => {
+    const display = slugToDisplay(t);
+    return `<span class="sidebar-pill glory-pill" data-glory="${escapeHtml(display)}">${escapeHtml(display)}</span>`;
+  }).join('');
+
+  // Image-kind: link back to the companion essay
   let extraSection = '';
-
-  // For image-kind: link back to the companion essay
   if (mode === 'image' && entry.related_article) {
     extraSection = `
       <div class="sidebar-section">
         <div class="sidebar-label">The Essay</div>
         <a href="content.html?id=${escapeHtml(entry.related_article)}" class="external-link">
           READ THE ESSAY →
-        </a>
-      </div>
-    `;
-  }
-
-  // For article-kind: external link (Substack etc)
-  if (mode === 'article' && entry.external_url) {
-    extraSection = `
-      <div class="sidebar-section">
-        <div class="sidebar-label">Also Published</div>
-        <a href="${escapeHtml(entry.external_url)}" target="_blank" rel="noreferrer" class="external-link">
-          ${escapeHtml(entry.external_label || 'READ EXTERNAL →')}
         </a>
       </div>
     `;
@@ -1174,6 +1236,20 @@ function renderByline() {
 
 function formatLabel(slug) {
   return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// Resolve a compendium slug ("original-sin") to the canonical display
+// name ("Original Sin") by looking it up in GLORY_DATA. Falls back to
+// title-casing the slug if GLORY_DATA isn't loaded or the term isn't
+// found — pill still renders, popover just won't have a definition.
+function slugToDisplay(slug) {
+  if (typeof GLORY_DATA !== 'undefined' && Array.isArray(GLORY_DATA)) {
+    const match = GLORY_DATA.find(g =>
+      g.word.toLowerCase().replace(/\s/g, '-') === slug
+    );
+    if (match) return match.word;
+  }
+  return formatLabel(slug);
 }
 
 function stripHtml(s) {
@@ -1326,11 +1402,73 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closeGloryPop();
+  }
   if (e.key === '0' && document.getElementById('lightbox').classList.contains('open')) {
     viewer.reset();
   }
 });
+
+/* ============================================================
+   GLORY POPOVER — same UX pattern as index.html
+   Triggered by clicking any .glory-pill in the sidebar.
+   Looks up definition from GLORIES (loaded via glories.js).
+   Sets the "→ THE WORLD COMPENDIUM" link to the deep-link anchor
+   so the user can jump to the full compendium entry.
+   ============================================================ */
+const gloryPop = document.getElementById('glory-pop');
+
+function showGloryPop(pill) {
+  const word = pill.dataset.glory;
+  if (!word) return;
+
+  // Look up definition. GLORIES is a flat { "Word": "definition" } object
+  // exported by glories.js. Try exact match first, then case-insensitive.
+  let def = (typeof GLORIES !== 'undefined') ? GLORIES[word] : null;
+  if (!def && typeof GLORIES !== 'undefined') {
+    const key = Object.keys(GLORIES).find(k => k.toLowerCase() === word.toLowerCase());
+    if (key) def = GLORIES[key];
+  }
+  if (!def) return; // term not in compendium — silently do nothing
+
+  document.getElementById('gp-word').textContent = word.toUpperCase();
+  document.getElementById('gp-def').textContent = def;
+  document.getElementById('gp-link').href =
+    'compendium.html#' + word.toLowerCase().replace(/\s/g, '-');
+
+  // Position near the pill (preferring below; flip above if no room)
+  const r = pill.getBoundingClientRect();
+  const pw = 280, ph = 140;
+  let left = r.left;
+  let top = r.bottom + 8;
+  if (left + pw > window.innerWidth - 10) left = window.innerWidth - pw - 10;
+  if (top + ph > window.innerHeight - 10) top = r.top - ph - 8;
+  gloryPop.style.left = Math.max(8, left) + 'px';
+  gloryPop.style.top = Math.max(8, top) + 'px';
+  gloryPop.style.display = 'block';
+}
+
+function closeGloryPop() {
+  gloryPop.style.display = 'none';
+}
+
+// Capture-phase click handler so it fires before any sidebar click logic.
+// Closes popover when clicking outside it. Opens it when clicking a pill.
+document.addEventListener('click', e => {
+  const pill = e.target.closest('.glory-pill');
+  if (pill) {
+    e.stopPropagation();
+    showGloryPop(pill);
+    return;
+  }
+  if (!e.target.closest('#glory-pop')) closeGloryPop();
+}, true);
+
+// Close on scroll — popover stays anchored to the pill it was triggered
+// from; if the pill scrolls off, the popover would be orphaned.
+window.addEventListener('scroll', closeGloryPop, { passive: true });
 </script>
 
 </body>
