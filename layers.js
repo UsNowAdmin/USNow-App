@@ -20582,6 +20582,726 @@ const LAYERS = [
           }
         ],
         "orbs": []
+      },
+      {
+        "id": "hist_geopolitics",
+        "label": "Geopolitics",
+        "color": "#6a5898",
+        "desc": "The study of how geography, resources, and power shape the relationships between nations over time. Geopolitics is not foreign policy — it is the terrain that foreign policy operates on. Mountains, rivers, coastlines, oil fields, trade routes — these things outlast every government that has ever tried to control them. Understanding geopolitics is understanding why certain conflicts recur across centuries regardless of who is in power, and why the map of the world looks the way it does.",
+        "links": [
+          {
+            "label": "Foreign Affairs — geopolitics",
+            "url": "https://www.foreignaffairs.com",
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
+          },
+          {
+            "label": "Quincy Institute — foreign policy",
+            "url": "https://quincyinst.org",
+            "emoji": "🪖",
+            "tag": "MILITARY"
+          },
+          {
+            "label": "Council on Foreign Relations",
+            "url": "https://www.cfr.org",
+            "emoji": "🌐",
+            "tag": "GEOPOLITICS"
+          }
+        ],
+        "topPills": [
+          {
+            "id": "geo_chessboard",
+            "label": "The Chessboard",
+            "color": "#5a4888",
+            "desc": "Zbigniew Brzezinski called Eurasia the grand chessboard — the landmass whose control has defined every great power struggle in modern history. The logic is simple: whoever dominates the Eurasian heartland controls access to the world's largest concentration of resources, population, and trade routes. Britain spent two centuries preventing any single power from doing this. The United States inherited that mission after WWII. China and Russia are the current challengers. The pieces change. The board does not.",
+            "links": [
+              {
+                "label": "Foreign Affairs",
+                "url": "https://www.foreignaffairs.com",
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "geo_chess_theory",
+                "label": "Great Power Competition",
+                "color": "#5a4888",
+                "desc": "The theory that international relations are fundamentally shaped by the competition between a small number of major powers — each seeking security, resources, and influence at the expense of the others. Offensive realism holds that great powers are never satisfied with their current position and always seek to expand. Defensive realism holds that they expand only when threatened. Both agree that the competition is structural — it does not require bad intentions, only the existence of multiple powerful states in an anarchic system with no referee.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_chess_spheres",
+                "label": "Spheres of Influence",
+                "color": "#4a3878",
+                "desc": "The informal but very real zones within which a great power claims dominance and expects deference. The Monroe Doctrine declared the Western Hemisphere a US sphere in 1823. The Soviet Union claimed Eastern Europe after WWII. China claims the South China Sea. Russia claims its near abroad. Spheres of influence are rarely acknowledged publicly by the power claiming them — they are enforced through military presence, economic pressure, covert action, and the implicit threat of intervention.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_chess_heartland",
+                "label": "Heartland & Rimland",
+                "color": "#6a5898",
+                "desc": "Halford Mackinder's 1904 theory: whoever controls the Eurasian heartland — the vast interior stretching from Eastern Europe to Central Asia — controls the world island, and from there, the world. Nicholas Spykman's counter: it is the rimland — the coastal periphery — that matters most. Both theories have shaped US foreign policy for a century. NATO is rimland strategy. The obsession with Central Asia — Afghanistan, Ukraine, the Stans — is heartland strategy. The debate between them is still live.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "geo_players",
+            "label": "The Players",
+            "color": "#7a6898",
+            "desc": "Six regions, six distinct stories, six different relationships to power, colonialism, and the current world order. None of them are monolithic. Each contains multitudes — internal contradictions, competing factions, histories that don't fit the headlines. What they share is that they are all, simultaneously, subjects and objects of geopolitical force. They act and are acted upon. Understanding each one on its own terms is the prerequisite for understanding any of them in relation to the others.",
+            "links": [
+              {
+                "label": "Foreign Affairs",
+                "url": "https://www.foreignaffairs.com",
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
+              },
+              {
+                "label": "Al Jazeera — world coverage",
+                "url": "https://www.aljazeera.com",
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "geo_americas",
+                "label": "The Americas",
+                "color": "#b05050",
+                "desc": "The Western Hemisphere under American hegemony — a dominance so complete that it is often invisible to Americans and never invisible to anyone else. The Monroe Doctrine of 1823 declared Latin America a US sphere of influence before the US had the power to enforce it. By 1900 it did. The century that followed included dozens of coups, interventions, proxy wars, and economic arrangements that extracted wealth northward. Latin America is not poor because it lacks resources. It is poor because its resources have been systematically extracted. The current migration crisis is the invoice.",
+                "links": [
+                  {
+                    "label": "NACLA — Latin America analysis",
+                    "url": "https://nacla.org",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "geo_am_monroe",
+                    "label": "The Monroe Doctrine",
+                    "color": "#b05050",
+                    "desc": "Declared in 1823 by President James Monroe: the Western Hemisphere is closed to European colonization and any European intervention will be treated as a threat to US security. At the time it was largely a bluff — the US lacked the navy to enforce it. Britain's navy actually did the enforcing, because Britain also didn't want European rivals in the hemisphere. Over the following century the US built the power to make the doctrine real. The Roosevelt Corollary of 1904 expanded it: the US reserved the right to intervene in any Latin American country whose affairs it deemed disorderly. It has been intervening ever since.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_am_interventions",
+                    "label": "A Century of Interventions",
+                    "color": "#983838",
+                    "desc": "Guatemala 1954 — CIA overthrows democratically elected Jacobo Árbenz to protect United Fruit Company land. Iran 1953 — CIA overthrows Mosaddegh to restore British oil interests, creating the conditions for the 1979 revolution. Chile 1973 — CIA backs Pinochet's coup against Salvador Allende. Nicaragua, El Salvador, Honduras throughout the 1980s. The pattern: a leftist government threatens US corporate or strategic interests, the CIA destabilizes it, a friendly authoritarian takes over, the population pays the price for decades. This is not conspiracy theory. It is documented history.",
+                    "links": [
+                      {
+                        "label": "National Security Archive — declassified docs",
+                        "url": "https://nsarchive.gwu.edu",
+                        "emoji": "🏛️",
+                        "tag": "HISTORY"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_am_today",
+                    "label": "Latin America Now",
+                    "color": "#c07050",
+                    "desc": "A pink tide of left-leaning governments in the 2000s — Venezuela, Bolivia, Brazil, Ecuador, Argentina — followed by a backlash, followed by a second wave. The region is the most economically unequal on earth despite extraordinary natural wealth. The drug war, fought primarily on Latin American soil with American demand as its engine, has destabilized entire countries. Climate change is making subsistence agriculture impossible across Central America. The people moving north are not moving toward opportunity — they are moving away from the wreckage of a century of decisions made in Washington.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "hist_first_nations",
+                    "label": "First Nations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p_gov_us",
+                    "label": "U.S. Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "geo_europe",
+                "label": "Europe",
+                "color": "#4878b8",
+                "desc": "The continent that invented the modern nation-state, colonized most of the world, fought two world wars that nearly destroyed itself, and then built the most ambitious peace project in history — the European Union. Europe is simultaneously the origin of most of the ideological frameworks that govern the modern world and the cautionary tale about where those frameworks lead when taken to their extremes. It is wealthy, aging, dependent on American military protection it publicly resents, and reckoning with the return of war to its eastern edge.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs — Europe",
+                    "url": "https://www.foreignaffairs.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "geo_eu_project",
+                    "label": "The European Project",
+                    "color": "#4878b8",
+                    "desc": "The European Union is the most successful peace project in human history. The Franco-German border, site of three catastrophic wars between 1870 and 1945, has not seen a shot fired in eighty years. The method: economic integration so deep that war becomes economically unthinkable. It has worked. It has also produced a bureaucratic superstate that millions of Europeans feel no connection to, a democratic deficit that the Brexit vote exposed, and a political backlash that is still accelerating.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_eu_nato",
+                    "label": "NATO & The American Umbrella",
+                    "color": "#3868a8",
+                    "desc": "NATO was founded in 1949 to do one thing: keep the Soviet Union out of Western Europe. It succeeded. When the Soviet Union collapsed in 1991, NATO did not dissolve — it expanded, absorbing former Warsaw Pact members right up to Russia's border. From Moscow's perspective this is an existential provocation. From NATO's perspective it is the free choice of sovereign nations seeking security guarantees. Both things are true simultaneously. Ukraine is where that contradiction became a war.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_eu_ukraine",
+                    "label": "Ukraine & The Return of War",
+                    "color": "#5888c8",
+                    "desc": "Russia's full-scale invasion of Ukraine in February 2022 ended the post-Cold War assumption that large-scale conventional war in Europe was impossible. Ukraine is simultaneously a sovereign nation defending its territory, a proxy battleground for US-Russia competition, a test of Western alliance cohesion, and the site of the largest land war in Europe since WWII. The outcome will shape European security architecture for a generation. The human cost — hundreds of thousands dead, millions displaced — is already historic.",
+                    "links": [
+                      {
+                        "label": "Foreign Affairs — Ukraine",
+                        "url": "https://www.foreignaffairs.com",
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_russia",
+                "label": "Russia",
+                "color": "#a84040",
+                "desc": "A country with no natural defensive borders, surrounded by potential adversaries, with a history of invasion from every direction — the Mongols, Napoleon, Hitler — that has produced a strategic culture of expansionism as defense. Russia is not irrational. It is operating from a threat perception that is genuinely different from the Western one. Understanding that does not mean accepting its actions. It means understanding why containment strategies that worked against the Soviet Union may produce different results against a nationalist Russia that has abandoned communist ideology but retained imperial ambition.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs — Russia",
+                    "url": "https://www.foreignaffairs.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "geo_russia_history",
+                    "label": "The Long Russian Story",
+                    "color": "#a84040",
+                    "desc": "Kievan Rus to Muscovy to the Tsarist empire to the Soviet Union to the Russian Federation — a continuous thread of expansion, contraction, and re-expansion spanning a thousand years. Russia has been invaded from the west repeatedly. It has responded by pushing its borders outward to create buffer zones. The buffer zones become borders that need defending. The pattern repeats. Peter the Great built a navy and a window to Europe. Catherine the Great absorbed Ukraine and Crimea. Stalin absorbed Eastern Europe. Putin is attempting to reverse the contraction of 1991.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_russia_collapse",
+                    "label": "The 1991 Collapse & Its Aftermath",
+                    "color": "#983030",
+                    "desc": "The Soviet Union's dissolution was the largest geopolitical event of the late 20th century and the one the West most thoroughly mismanaged. Shock therapy economics produced hyperinflation, mass poverty, and the rise of oligarchs who looted state assets. NATO expanded eastward despite informal assurances that it would not. The humiliation of the 1990s — economic collapse, the Chechen wars, the loss of superpower status — created the political conditions for Putin. He did not come from nowhere. He came from a specific failure of the post-Cold War settlement.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_russia_putin",
+                    "label": "Putin & Neo-Imperial Russia",
+                    "color": "#b05050",
+                    "desc": "Vladimir Putin has been in effective power since 1999. His worldview: Russia is a great civilization that was temporarily weakened and is now reasserting its natural place. NATO expansion is an existential threat. The West's promotion of democracy is regime change by other means. Ukraine is not a real country — it is a historical part of the Russian world temporarily separated by Soviet administrative decisions. These beliefs are not propaganda for domestic consumption. They are what he appears to actually think. That is what makes the current situation so dangerous.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "geo_eu_ukraine",
+                    "label": "Ukraine",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "geo_mideast",
+                "label": "The Middle East",
+                "color": "#c8a030",
+                "desc": "The most strategically important and most misunderstood region in the world. Three things made it the center of global attention: oil, the creation of Israel, and Islam's holy sites. All three arrived in their modern form within a few decades of each other in the early 20th century. The borders were drawn by Britain and France after WWI with no regard for the peoples living there. The consequences — sectarian conflict, authoritarian states, the Palestinian question, recurring war — are still playing out. The region is not inherently unstable. It was made unstable by specific decisions made by specific people for specific reasons.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs — Middle East",
+                    "url": "https://www.foreignaffairs.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "Al Jazeera",
+                    "url": "https://www.aljazeera.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "geo_me_borders",
+                    "label": "The Lines in the Sand",
+                    "color": "#c8a030",
+                    "desc": "The Sykes-Picot Agreement of 1916 — a secret deal between Britain and France to divide the Ottoman Empire's Arab territories between them after WWI. The borders drawn ignored tribal, ethnic, and sectarian realities that had organized the region for centuries. Iraq was assembled from three Ottoman provinces with no shared identity. Syria's borders cut across tribal lands. Lebanon was carved out to give Christians a majority that demographics would soon erase. Nearly every conflict in the modern Middle East has roots in these lines drawn by two European diplomats on a map.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_me_israel",
+                    "label": "Israel & Palestine",
+                    "color": "#b89030",
+                    "desc": "The most contested piece of land in the world. The Zionist project of establishing a Jewish homeland in Ottoman and then British Palestine collided with the Palestinian Arab population already living there. The 1948 war — Israeli independence, Palestinian Nakba — displaced 700,000 Palestinians and created a refugee crisis that has never been resolved. The occupation of the West Bank and Gaza since 1967 has produced a system that human rights organizations including Israeli ones have described as apartheid. The October 7, 2023 Hamas attack and Israel's subsequent assault on Gaza killed tens of thousands of civilians and radicalized a generation on all sides.",
+                    "links": [
+                      {
+                        "label": "B'Tselem — Israeli human rights org",
+                        "url": "https://www.btselem.org",
+                        "emoji": "🌐",
+                        "tag": "GEOPOLITICS"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_me_oil",
+                    "label": "Oil & The American Bargain",
+                    "color": "#d4a040",
+                    "desc": "The deal: Saudi Arabia prices oil in dollars and keeps its reserves in US Treasury bonds. The US guarantees the Saudi royal family's security. The arrangement, formalized after the 1973 oil shock, made the dollar the world's reserve currency and gave the US extraordinary leverage over the global economy. It also bound American foreign policy to the defense of a monarchy that exports the Wahhabist ideology that produced fifteen of the nineteen September 11 hijackers. The petrodollar system is currently under pressure from China's attempts to price oil in yuan. Its unraveling would be one of the most significant geopolitical shifts of the century.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_me_iran",
+                    "label": "Iran",
+                    "color": "#b87030",
+                    "desc": "The 1953 CIA-backed coup that overthrew Prime Minister Mosaddegh — who had nationalized Iranian oil — and restored the Shah is the original sin of US-Iran relations. The Shah's brutal secret police, SAVAK, radicalized the opposition. The 1979 revolution that followed was not simply Islamic fundamentalism — it was the collision of nationalism, anti-imperialism, and religious politics with a US-backed autocracy. The hostage crisis, the subsequent US support for Saddam Hussein in the Iran-Iraq war, the sanctions regime, the nuclear deal and its collapse — the relationship has never recovered from 1953.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "geo_proxy",
+                    "label": "Proxy Wars",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_resources",
+                    "label": "Resources & Control",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "geo_china",
+                "label": "China & Asia",
+                "color": "#c04040",
+                "desc": "China was the world's largest economy for most of the last two thousand years. The century between the Opium Wars of the 1840s and the Communist revolution of 1949 — when China was carved up by European powers, invaded by Japan, and torn apart by civil war — is called the century of humiliation. The Chinese Communist Party's legitimacy rests partly on ending that humiliation. Xi Jinping's China is not trying to become a great power. It believes it already is one that was temporarily interrupted. That is a fundamentally different posture than a rising power seeking recognition.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs — China",
+                    "url": "https://www.foreignaffairs.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "geo_china_rise",
+                    "label": "The Rise of China",
+                    "color": "#c04040",
+                    "desc": "In 1980 China's GDP was smaller than Belgium's. By 2010 it was the world's second largest economy. By 2030 it is projected to be the largest. The speed of this transformation has no historical precedent. It was made possible by Deng Xiaoping's opening of the economy after Mao, by China's entry into the WTO in 2001, and by decades of American consumer demand for cheap manufactured goods. The US effectively financed China's rise and is now alarmed by what it built. The decoupling project — semiconductor restrictions, tariffs, investment bans — is an attempt to slow a process that American policy helped create.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_china_bri",
+                    "label": "Belt & Road",
+                    "color": "#b03030",
+                    "desc": "The Belt and Road Initiative — Xi Jinping's signature foreign policy project — is the largest infrastructure investment program in history. Ports, railways, pipelines, and fiber optic cables across 140 countries, financed by Chinese loans and built by Chinese firms. Critics call it debt trap diplomacy — countries that cannot repay their loans cede strategic infrastructure to Chinese control, as Sri Lanka did with Hambantota port. Supporters note that the infrastructure is real and fills gaps that Western institutions refused to fund. It is both things simultaneously: genuine development and strategic encirclement.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_china_taiwan",
+                    "label": "Taiwan & The Pacific",
+                    "color": "#d05050",
+                    "desc": "Taiwan produces over 90% of the world's most advanced semiconductors. It is claimed by China as a breakaway province. It is defended by a US commitment that is deliberately ambiguous — strategic ambiguity, designed to deter both Chinese invasion and Taiwanese independence declaration. The Taiwan Strait is the most likely flashpoint for great power conflict in the current era. A Chinese takeover of Taiwan would give Beijing control of the semiconductor supply chain that every modern economy depends on. The logic of US defense of Taiwan is not primarily about Taiwan. It is about that fact.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_asia_others",
+                    "label": "The Rest of Asia",
+                    "color": "#a03030",
+                    "desc": "India — the world's most populous country, a nuclear power, the largest democracy, and a player that refuses to be aligned with either the US or China. Japan — the world's third largest economy, constitutionally pacifist, rearming quietly under US encouragement. South Korea — front line of the last unresolved Cold War standoff, with 28,000 US troops and a nuclear-armed North Korea across a border that has technically been at war since 1950. Southeast Asia — the most dynamic economic region in the world, caught between Chinese economic dominance and US security guarantees, trying to navigate both.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "geo_shifting",
+                    "label": "The Shifting Order",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ]
+              },
+              {
+                "id": "geo_africa",
+                "label": "Africa",
+                "color": "#4a9a58",
+                "desc": "The most resource-rich continent on earth and the most systematically extracted. Africa contains 60% of the world's arable land, 30% of its mineral reserves, and the largest youth population of any continent. It was carved into 54 countries by European powers at the Berlin Conference of 1884 — a meeting to which no African was invited — and the borders drawn that day still govern the continent. The colonial period ended in the 1960s but was followed by neo-colonial arrangements — structural adjustment programs, debt traps, resource extraction by multinational corporations — that have maintained the economic relationship without the administrative inconvenience of formal empire.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs — Africa",
+                    "url": "https://www.foreignaffairs.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "Al Jazeera — Africa",
+                    "url": "https://www.aljazeera.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "geo_africa_scramble",
+                    "label": "The Scramble & Its Legacy",
+                    "color": "#4a9a58",
+                    "desc": "The Berlin Conference of 1884-85 divided Africa among European powers in about three months. Britain, France, Belgium, Germany, Portugal, Italy, and Spain drew lines across a continent they mostly had not visited, creating colonies that grouped hostile ethnic groups together and divided cohesive ones apart. Belgium's Congo — personally owned by King Leopold II, who killed an estimated 10 million Congolese — is the extreme case. The moderate cases are the rest of the continent. The ethnic conflicts, the civil wars, the failed states of the post-independence era are not African pathologies. They are European architecture.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_africa_resources",
+                    "label": "The Resource Curse",
+                    "color": "#3a8a48",
+                    "desc": "Countries with extraordinary natural wealth — oil, diamonds, cobalt, coltan — frequently have worse economic outcomes than resource-poor neighbors. The resource curse: extraction industries create wealth that flows to elites and foreign corporations, fund authoritarian governments, crowd out other economic development, and make the country dependent on commodity prices set in markets they do not control. The Democratic Republic of Congo contains trillions of dollars of mineral wealth including the cobalt that powers every electric vehicle battery. Its people are among the poorest on earth. The math is not a mystery.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "geo_africa_now",
+                    "label": "Africa Now — The New Scramble",
+                    "color": "#5aaa68",
+                    "desc": "A second scramble is underway — quieter, conducted through investment and debt rather than flags and armies. China is the most visible player: $170 billion in loans since 2000, infrastructure across the continent, a military base in Djibouti. But the US maintains AFRICOM, France keeps troops in a dozen former colonies, Russia's Wagner Group has operated in Mali, Central African Republic, Libya, and Sudan. Meanwhile Africa's own institutions — the African Union, regional economic blocs — are trying to build a continental integration project on top of colonial infrastructure. The youngest continent is also the most contested.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": []
+          },
+          {
+            "id": "geo_proxy",
+            "label": "Proxy Wars",
+            "color": "#886888",
+            "desc": "A proxy war is a conflict instigated, funded, or armed by outside powers who fight each other through local combatants rather than directly. The logic: achieve strategic objectives while avoiding the costs of direct confrontation between nuclear-armed or otherwise dangerous states. The costs are borne by the proxy populations. Vietnam was a proxy war. Afghanistan under the Soviets was a proxy war — the US armed the Mujahideen, who became the Taliban. Syria is a proxy war involving the US, Russia, Iran, Turkey, Saudi Arabia, and Israel simultaneously. The proxy populations do not typically get a vote on whether their country becomes the battlefield.",
+            "links": [
+              {
+                "label": "Costs of War Project",
+                "url": "https://watson.brown.edu/costsofwar",
+                "emoji": "🪖",
+                "tag": "MILITARY"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "geo_proxy_cold",
+                "label": "Cold War Proxies",
+                "color": "#786078",
+                "desc": "Korea, Vietnam, Angola, Mozambique, Nicaragua, El Salvador, Afghanistan — the Cold War was fought almost entirely through proxies in the developing world. The US and Soviet Union supplied weapons, advisors, money, and ideology to opposing sides in conflicts that killed millions of people in countries that had no stake in the US-Soviet competition. The Cold War ended in 1991. Many of the proxy conflicts it created did not.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_proxy_current",
+                "label": "Current Proxy Conflicts",
+                "color": "#988098",
+                "desc": "Ukraine is the most visible current proxy conflict — the US and NATO supplying weapons and intelligence to Ukraine fighting Russian forces on Ukrainian soil. Yemen is a proxy war between Saudi Arabia and Iran fought by Yemeni factions, producing the world's worst humanitarian crisis. Syria remains a multi-proxy battlefield. The Sahel in West Africa has become a new arena: Russia through Wagner, France through counterterrorism operations, the US through drone strikes, all operating simultaneously in countries too weak to expel any of them.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p_mil",
+                "label": "Military",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h3",
+                "label": "War & Revolutions",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "geo_resources",
+            "label": "Resources & Control",
+            "color": "#a08840",
+            "desc": "Every major war of the last two centuries has been about resources — territory containing them, routes transporting them, markets consuming them. The framing of wars in ideological terms is almost always a post-hoc justification for conflicts whose actual drivers are material. This does not mean ideology is irrelevant — it shapes how wars are fought and who fights them. But understanding why wars start requires following the resources.",
+            "links": [
+              {
+                "label": "Costs of War — resource conflicts",
+                "url": "https://watson.brown.edu/costsofwar",
+                "emoji": "🪖",
+                "tag": "MILITARY"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "geo_res_oil",
+                "label": "Oil & Energy",
+                "color": "#a08840",
+                "desc": "The 20th century ran on oil. Every major geopolitical arrangement of the past hundred years has been shaped by who controls it. The British Empire's pivot to oil before WWI. The US-Saudi petrodollar deal. The 1973 Arab oil embargo and the strategic panic it produced. The Gulf Wars. The US fracking revolution that made it energy independent and reduced Saudi leverage. The current transition to renewables is not just an environmental project — it is a geopolitical revolution that will redraw the map of who matters.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_res_rare",
+                "label": "Rare Earth & Critical Minerals",
+                "color": "#b09850",
+                "desc": "Electric vehicles, wind turbines, semiconductors, smartphones, precision weapons — all require minerals whose supply chains are dominated by China. China controls 60% of rare earth production and 85% of processing capacity. The lithium for batteries comes primarily from Chile, Argentina, and Bolivia. The cobalt for batteries comes primarily from the DRC. The semiconductor fabrication that ties everything together happens primarily in Taiwan. The green energy transition is not just an environmental project — it is a mineral competition that will define the next century of geopolitics.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_res_water",
+                "label": "Water as Power",
+                "color": "#4888b8",
+                "desc": "Water is the resource nobody talks about until it is gone. The Nile feeds 300 million people across eleven countries and is governed by a treaty that gives Egypt and Sudan rights dating to 1929. Ethiopia's Grand Renaissance Dam is breaking that treaty by diverting water upstream. The Mekong River flows through China, Myanmar, Laos, Thailand, Cambodia, and Vietnam — China controls it at the source and has built eleven dams. The Indus Waters Treaty between India and Pakistan has survived three wars. Water treaties are the most fragile agreements in geopolitics because neither side can afford to lose.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c_env_water_wars",
+                    "label": "Water Wars",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              },
+              {
+                "id": "geo_res_food",
+                "label": "Food as Weapon",
+                "color": "#908038",
+                "desc": "Ukraine and Russia together produce 30% of the world's wheat exports. When Russia invaded Ukraine and blockaded Black Sea ports in 2022, global food prices spiked and food insecurity increased in forty countries across Africa and the Middle East. Food has always been a weapon — Stalin used engineered famine to break Ukrainian resistance, killing millions. Sanctions regimes regularly restrict food imports. The geography of food production is becoming a strategic resource as climate change shifts growing zones and aquifers are depleted.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "c_env_water",
+                "label": "Water",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "p2",
+                "label": "Economy & Money",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          },
+          {
+            "id": "geo_shifting",
+            "label": "The Shifting Order",
+            "color": "#5888a8",
+            "desc": "The international order built after WWII — the UN, the World Bank, the IMF, the dollar as reserve currency, US military dominance — is under more pressure than at any point since it was created. It is not collapsing. But it is no longer unchallenged. The question of what comes after American unipolarity — whether a multipolar world is more or less stable than a unipolar one — is the defining geopolitical question of the current era.",
+            "links": [
+              {
+                "label": "Foreign Affairs — world order",
+                "url": "https://www.foreignaffairs.com",
+                "emoji": "🌐",
+                "tag": "GEOPOLITICS"
+              },
+              {
+                "label": "Quincy Institute",
+                "url": "https://quincyinst.org",
+                "emoji": "🪖",
+                "tag": "MILITARY"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "geo_shift_american",
+                "label": "The American Century",
+                "color": "#5888a8",
+                "desc": "Henry Luce coined the term in 1941, before the US had even entered WWII. The American Century was the period of uncontested US dominance — military, economic, cultural — that ran from 1945 to some point in the early 21st century that historians will eventually date precisely. At its peak the US produced 50% of global GDP, maintained 800 military bases in 70 countries, and set the rules for international trade, finance, and diplomacy. It also fought Korea, Vietnam, Iraq, and Afghanistan. The question of whether the American Century ended with a success or a failure depends entirely on whose century you think it was.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_shift_china_rise",
+                "label": "China's Challenge",
+                "color": "#b04040",
+                "desc": "The Thucydides Trap: when a rising power threatens to displace a ruling power, the result is usually war. Of sixteen historical cases of power transition identified by Graham Allison, twelve ended in war. China is the rising power. The US is the ruling power. Both are nuclear armed. The competition is real — in trade, technology, military capability, and influence — but the stakes of direct conflict are existential for both. Managing this transition without war is the central challenge of 21st century statecraft.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_shift_brics",
+                "label": "BRICS & Multipolarity",
+                "color": "#7898b8",
+                "desc": "Brazil, Russia, India, China, South Africa — plus more recent additions — represent an alternative pole of global organization that rejects Western liberal order as the only framework. BRICS countries now represent a larger share of global GDP than the G7. They are building alternative payment systems to avoid dollar dependence, alternative development banks to bypass the IMF, and alternative diplomatic frameworks that do not require US approval. Whether this becomes a genuine alternative order or remains a loose coalition of countries that dislike American hegemony for different reasons is still being determined.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "geo_shift_next",
+                "label": "What Comes Next",
+                "color": "#4878a8",
+                "desc": "No one knows. The honest answer to what the post-American order looks like is that we are in the middle of finding out. Climate change is introducing a variable that no geopolitical theory accounts for — it does not respect borders, alliances, or spheres of influence, and its effects will redraw the map of where humans can live more dramatically than any war. The countries that adapt fastest, that control the technology of the energy transition, and that manage internal inequality without political collapse will define the next order. That list may not look like the current one.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs",
+                    "url": "https://www.foreignaffairs.com",
+                    "emoji": "🌐",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c_env_climate",
+                    "label": "Climate",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  },
+                  {
+                    "id": "p4",
+                    "label": "Global Capital",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": []
+                  }
+                ]
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "p_mil",
+                "label": "Military",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "h1",
+                "label": "Nations & Empire",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              }
+            ]
+          }
+        ],
+        "bottomPills": [
+          {
+            "id": "h3",
+            "label": "War & Revolutions",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "h1",
+            "label": "Nations & Empire",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          },
+          {
+            "id": "p_mil",
+            "label": "Military",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": []
+          }
+        ]
       }
     ],
     "orbs": [
@@ -36135,726 +36855,6 @@ const LAYERS = [
           }
         ],
         "orbs": []
-      },
-      {
-        "id": "hist_geopolitics",
-        "label": "Geopolitics",
-        "color": "#6a5898",
-        "desc": "The study of how geography, resources, and power shape the relationships between nations over time. Geopolitics is not foreign policy — it is the terrain that foreign policy operates on. Mountains, rivers, coastlines, oil fields, trade routes — these things outlast every government that has ever tried to control them. Understanding geopolitics is understanding why certain conflicts recur across centuries regardless of who is in power, and why the map of the world looks the way it does.",
-        "links": [
-          {
-            "label": "Foreign Affairs — geopolitics",
-            "url": "https://www.foreignaffairs.com",
-            "emoji": "🌐",
-            "tag": "GEOPOLITICS"
-          },
-          {
-            "label": "Quincy Institute — foreign policy",
-            "url": "https://quincyinst.org",
-            "emoji": "🪖",
-            "tag": "MILITARY"
-          },
-          {
-            "label": "Council on Foreign Relations",
-            "url": "https://www.cfr.org",
-            "emoji": "🌐",
-            "tag": "GEOPOLITICS"
-          }
-        ],
-        "topPills": [
-          {
-            "id": "geo_chessboard",
-            "label": "The Chessboard",
-            "color": "#5a4888",
-            "desc": "Zbigniew Brzezinski called Eurasia the grand chessboard — the landmass whose control has defined every great power struggle in modern history. The logic is simple: whoever dominates the Eurasian heartland controls access to the world's largest concentration of resources, population, and trade routes. Britain spent two centuries preventing any single power from doing this. The United States inherited that mission after WWII. China and Russia are the current challengers. The pieces change. The board does not.",
-            "links": [
-              {
-                "label": "Foreign Affairs",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
-                "tag": "GEOPOLITICS"
-              }
-            ],
-            "topPills": [
-              {
-                "id": "geo_chess_theory",
-                "label": "Great Power Competition",
-                "color": "#5a4888",
-                "desc": "The theory that international relations are fundamentally shaped by the competition between a small number of major powers — each seeking security, resources, and influence at the expense of the others. Offensive realism holds that great powers are never satisfied with their current position and always seek to expand. Defensive realism holds that they expand only when threatened. Both agree that the competition is structural — it does not require bad intentions, only the existence of multiple powerful states in an anarchic system with no referee.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_chess_spheres",
-                "label": "Spheres of Influence",
-                "color": "#4a3878",
-                "desc": "The informal but very real zones within which a great power claims dominance and expects deference. The Monroe Doctrine declared the Western Hemisphere a US sphere in 1823. The Soviet Union claimed Eastern Europe after WWII. China claims the South China Sea. Russia claims its near abroad. Spheres of influence are rarely acknowledged publicly by the power claiming them — they are enforced through military presence, economic pressure, covert action, and the implicit threat of intervention.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_chess_heartland",
-                "label": "Heartland & Rimland",
-                "color": "#6a5898",
-                "desc": "Halford Mackinder's 1904 theory: whoever controls the Eurasian heartland — the vast interior stretching from Eastern Europe to Central Asia — controls the world island, and from there, the world. Nicholas Spykman's counter: it is the rimland — the coastal periphery — that matters most. Both theories have shaped US foreign policy for a century. NATO is rimland strategy. The obsession with Central Asia — Afghanistan, Ukraine, the Stans — is heartland strategy. The debate between them is still live.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              }
-            ],
-            "bottomPills": []
-          },
-          {
-            "id": "geo_players",
-            "label": "The Players",
-            "color": "#7a6898",
-            "desc": "Six regions, six distinct stories, six different relationships to power, colonialism, and the current world order. None of them are monolithic. Each contains multitudes — internal contradictions, competing factions, histories that don't fit the headlines. What they share is that they are all, simultaneously, subjects and objects of geopolitical force. They act and are acted upon. Understanding each one on its own terms is the prerequisite for understanding any of them in relation to the others.",
-            "links": [
-              {
-                "label": "Foreign Affairs",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
-                "tag": "GEOPOLITICS"
-              },
-              {
-                "label": "Al Jazeera — world coverage",
-                "url": "https://www.aljazeera.com",
-                "emoji": "🌐",
-                "tag": "GEOPOLITICS"
-              }
-            ],
-            "topPills": [
-              {
-                "id": "geo_americas",
-                "label": "The Americas",
-                "color": "#b05050",
-                "desc": "The Western Hemisphere under American hegemony — a dominance so complete that it is often invisible to Americans and never invisible to anyone else. The Monroe Doctrine of 1823 declared Latin America a US sphere of influence before the US had the power to enforce it. By 1900 it did. The century that followed included dozens of coups, interventions, proxy wars, and economic arrangements that extracted wealth northward. Latin America is not poor because it lacks resources. It is poor because its resources have been systematically extracted. The current migration crisis is the invoice.",
-                "links": [
-                  {
-                    "label": "NACLA — Latin America analysis",
-                    "url": "https://nacla.org",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "geo_am_monroe",
-                    "label": "The Monroe Doctrine",
-                    "color": "#b05050",
-                    "desc": "Declared in 1823 by President James Monroe: the Western Hemisphere is closed to European colonization and any European intervention will be treated as a threat to US security. At the time it was largely a bluff — the US lacked the navy to enforce it. Britain's navy actually did the enforcing, because Britain also didn't want European rivals in the hemisphere. Over the following century the US built the power to make the doctrine real. The Roosevelt Corollary of 1904 expanded it: the US reserved the right to intervene in any Latin American country whose affairs it deemed disorderly. It has been intervening ever since.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_am_interventions",
-                    "label": "A Century of Interventions",
-                    "color": "#983838",
-                    "desc": "Guatemala 1954 — CIA overthrows democratically elected Jacobo Árbenz to protect United Fruit Company land. Iran 1953 — CIA overthrows Mosaddegh to restore British oil interests, creating the conditions for the 1979 revolution. Chile 1973 — CIA backs Pinochet's coup against Salvador Allende. Nicaragua, El Salvador, Honduras throughout the 1980s. The pattern: a leftist government threatens US corporate or strategic interests, the CIA destabilizes it, a friendly authoritarian takes over, the population pays the price for decades. This is not conspiracy theory. It is documented history.",
-                    "links": [
-                      {
-                        "label": "National Security Archive — declassified docs",
-                        "url": "https://nsarchive.gwu.edu",
-                        "emoji": "🏛️",
-                        "tag": "HISTORY"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_am_today",
-                    "label": "Latin America Now",
-                    "color": "#c07050",
-                    "desc": "A pink tide of left-leaning governments in the 2000s — Venezuela, Bolivia, Brazil, Ecuador, Argentina — followed by a backlash, followed by a second wave. The region is the most economically unequal on earth despite extraordinary natural wealth. The drug war, fought primarily on Latin American soil with American demand as its engine, has destabilized entire countries. Climate change is making subsistence agriculture impossible across Central America. The people moving north are not moving toward opportunity — they are moving away from the wreckage of a century of decisions made in Washington.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ],
-                "bottomPills": [
-                  {
-                    "id": "hist_first_nations",
-                    "label": "First Nations",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "p_gov_us",
-                    "label": "U.S. Government",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ]
-              },
-              {
-                "id": "geo_europe",
-                "label": "Europe",
-                "color": "#4878b8",
-                "desc": "The continent that invented the modern nation-state, colonized most of the world, fought two world wars that nearly destroyed itself, and then built the most ambitious peace project in history — the European Union. Europe is simultaneously the origin of most of the ideological frameworks that govern the modern world and the cautionary tale about where those frameworks lead when taken to their extremes. It is wealthy, aging, dependent on American military protection it publicly resents, and reckoning with the return of war to its eastern edge.",
-                "links": [
-                  {
-                    "label": "Foreign Affairs — Europe",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "geo_eu_project",
-                    "label": "The European Project",
-                    "color": "#4878b8",
-                    "desc": "The European Union is the most successful peace project in human history. The Franco-German border, site of three catastrophic wars between 1870 and 1945, has not seen a shot fired in eighty years. The method: economic integration so deep that war becomes economically unthinkable. It has worked. It has also produced a bureaucratic superstate that millions of Europeans feel no connection to, a democratic deficit that the Brexit vote exposed, and a political backlash that is still accelerating.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_eu_nato",
-                    "label": "NATO & The American Umbrella",
-                    "color": "#3868a8",
-                    "desc": "NATO was founded in 1949 to do one thing: keep the Soviet Union out of Western Europe. It succeeded. When the Soviet Union collapsed in 1991, NATO did not dissolve — it expanded, absorbing former Warsaw Pact members right up to Russia's border. From Moscow's perspective this is an existential provocation. From NATO's perspective it is the free choice of sovereign nations seeking security guarantees. Both things are true simultaneously. Ukraine is where that contradiction became a war.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_eu_ukraine",
-                    "label": "Ukraine & The Return of War",
-                    "color": "#5888c8",
-                    "desc": "Russia's full-scale invasion of Ukraine in February 2022 ended the post-Cold War assumption that large-scale conventional war in Europe was impossible. Ukraine is simultaneously a sovereign nation defending its territory, a proxy battleground for US-Russia competition, a test of Western alliance cohesion, and the site of the largest land war in Europe since WWII. The outcome will shape European security architecture for a generation. The human cost — hundreds of thousands dead, millions displaced — is already historic.",
-                    "links": [
-                      {
-                        "label": "Foreign Affairs — Ukraine",
-                        "url": "https://www.foreignaffairs.com",
-                        "emoji": "🌐",
-                        "tag": "GEOPOLITICS"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_russia",
-                "label": "Russia",
-                "color": "#a84040",
-                "desc": "A country with no natural defensive borders, surrounded by potential adversaries, with a history of invasion from every direction — the Mongols, Napoleon, Hitler — that has produced a strategic culture of expansionism as defense. Russia is not irrational. It is operating from a threat perception that is genuinely different from the Western one. Understanding that does not mean accepting its actions. It means understanding why containment strategies that worked against the Soviet Union may produce different results against a nationalist Russia that has abandoned communist ideology but retained imperial ambition.",
-                "links": [
-                  {
-                    "label": "Foreign Affairs — Russia",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "geo_russia_history",
-                    "label": "The Long Russian Story",
-                    "color": "#a84040",
-                    "desc": "Kievan Rus to Muscovy to the Tsarist empire to the Soviet Union to the Russian Federation — a continuous thread of expansion, contraction, and re-expansion spanning a thousand years. Russia has been invaded from the west repeatedly. It has responded by pushing its borders outward to create buffer zones. The buffer zones become borders that need defending. The pattern repeats. Peter the Great built a navy and a window to Europe. Catherine the Great absorbed Ukraine and Crimea. Stalin absorbed Eastern Europe. Putin is attempting to reverse the contraction of 1991.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_russia_collapse",
-                    "label": "The 1991 Collapse & Its Aftermath",
-                    "color": "#983030",
-                    "desc": "The Soviet Union's dissolution was the largest geopolitical event of the late 20th century and the one the West most thoroughly mismanaged. Shock therapy economics produced hyperinflation, mass poverty, and the rise of oligarchs who looted state assets. NATO expanded eastward despite informal assurances that it would not. The humiliation of the 1990s — economic collapse, the Chechen wars, the loss of superpower status — created the political conditions for Putin. He did not come from nowhere. He came from a specific failure of the post-Cold War settlement.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_russia_putin",
-                    "label": "Putin & Neo-Imperial Russia",
-                    "color": "#b05050",
-                    "desc": "Vladimir Putin has been in effective power since 1999. His worldview: Russia is a great civilization that was temporarily weakened and is now reasserting its natural place. NATO expansion is an existential threat. The West's promotion of democracy is regime change by other means. Ukraine is not a real country — it is a historical part of the Russian world temporarily separated by Soviet administrative decisions. These beliefs are not propaganda for domestic consumption. They are what he appears to actually think. That is what makes the current situation so dangerous.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ],
-                "bottomPills": [
-                  {
-                    "id": "geo_eu_ukraine",
-                    "label": "Ukraine",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ]
-              },
-              {
-                "id": "geo_mideast",
-                "label": "The Middle East",
-                "color": "#c8a030",
-                "desc": "The most strategically important and most misunderstood region in the world. Three things made it the center of global attention: oil, the creation of Israel, and Islam's holy sites. All three arrived in their modern form within a few decades of each other in the early 20th century. The borders were drawn by Britain and France after WWI with no regard for the peoples living there. The consequences — sectarian conflict, authoritarian states, the Palestinian question, recurring war — are still playing out. The region is not inherently unstable. It was made unstable by specific decisions made by specific people for specific reasons.",
-                "links": [
-                  {
-                    "label": "Foreign Affairs — Middle East",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  },
-                  {
-                    "label": "Al Jazeera",
-                    "url": "https://www.aljazeera.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "geo_me_borders",
-                    "label": "The Lines in the Sand",
-                    "color": "#c8a030",
-                    "desc": "The Sykes-Picot Agreement of 1916 — a secret deal between Britain and France to divide the Ottoman Empire's Arab territories between them after WWI. The borders drawn ignored tribal, ethnic, and sectarian realities that had organized the region for centuries. Iraq was assembled from three Ottoman provinces with no shared identity. Syria's borders cut across tribal lands. Lebanon was carved out to give Christians a majority that demographics would soon erase. Nearly every conflict in the modern Middle East has roots in these lines drawn by two European diplomats on a map.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_me_israel",
-                    "label": "Israel & Palestine",
-                    "color": "#b89030",
-                    "desc": "The most contested piece of land in the world. The Zionist project of establishing a Jewish homeland in Ottoman and then British Palestine collided with the Palestinian Arab population already living there. The 1948 war — Israeli independence, Palestinian Nakba — displaced 700,000 Palestinians and created a refugee crisis that has never been resolved. The occupation of the West Bank and Gaza since 1967 has produced a system that human rights organizations including Israeli ones have described as apartheid. The October 7, 2023 Hamas attack and Israel's subsequent assault on Gaza killed tens of thousands of civilians and radicalized a generation on all sides.",
-                    "links": [
-                      {
-                        "label": "B'Tselem — Israeli human rights org",
-                        "url": "https://www.btselem.org",
-                        "emoji": "🌐",
-                        "tag": "GEOPOLITICS"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_me_oil",
-                    "label": "Oil & The American Bargain",
-                    "color": "#d4a040",
-                    "desc": "The deal: Saudi Arabia prices oil in dollars and keeps its reserves in US Treasury bonds. The US guarantees the Saudi royal family's security. The arrangement, formalized after the 1973 oil shock, made the dollar the world's reserve currency and gave the US extraordinary leverage over the global economy. It also bound American foreign policy to the defense of a monarchy that exports the Wahhabist ideology that produced fifteen of the nineteen September 11 hijackers. The petrodollar system is currently under pressure from China's attempts to price oil in yuan. Its unraveling would be one of the most significant geopolitical shifts of the century.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_me_iran",
-                    "label": "Iran",
-                    "color": "#b87030",
-                    "desc": "The 1953 CIA-backed coup that overthrew Prime Minister Mosaddegh — who had nationalized Iranian oil — and restored the Shah is the original sin of US-Iran relations. The Shah's brutal secret police, SAVAK, radicalized the opposition. The 1979 revolution that followed was not simply Islamic fundamentalism — it was the collision of nationalism, anti-imperialism, and religious politics with a US-backed autocracy. The hostage crisis, the subsequent US support for Saddam Hussein in the Iran-Iraq war, the sanctions regime, the nuclear deal and its collapse — the relationship has never recovered from 1953.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ],
-                "bottomPills": [
-                  {
-                    "id": "geo_proxy",
-                    "label": "Proxy Wars",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_resources",
-                    "label": "Resources & Control",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ]
-              },
-              {
-                "id": "geo_china",
-                "label": "China & Asia",
-                "color": "#c04040",
-                "desc": "China was the world's largest economy for most of the last two thousand years. The century between the Opium Wars of the 1840s and the Communist revolution of 1949 — when China was carved up by European powers, invaded by Japan, and torn apart by civil war — is called the century of humiliation. The Chinese Communist Party's legitimacy rests partly on ending that humiliation. Xi Jinping's China is not trying to become a great power. It believes it already is one that was temporarily interrupted. That is a fundamentally different posture than a rising power seeking recognition.",
-                "links": [
-                  {
-                    "label": "Foreign Affairs — China",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "geo_china_rise",
-                    "label": "The Rise of China",
-                    "color": "#c04040",
-                    "desc": "In 1980 China's GDP was smaller than Belgium's. By 2010 it was the world's second largest economy. By 2030 it is projected to be the largest. The speed of this transformation has no historical precedent. It was made possible by Deng Xiaoping's opening of the economy after Mao, by China's entry into the WTO in 2001, and by decades of American consumer demand for cheap manufactured goods. The US effectively financed China's rise and is now alarmed by what it built. The decoupling project — semiconductor restrictions, tariffs, investment bans — is an attempt to slow a process that American policy helped create.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_china_bri",
-                    "label": "Belt & Road",
-                    "color": "#b03030",
-                    "desc": "The Belt and Road Initiative — Xi Jinping's signature foreign policy project — is the largest infrastructure investment program in history. Ports, railways, pipelines, and fiber optic cables across 140 countries, financed by Chinese loans and built by Chinese firms. Critics call it debt trap diplomacy — countries that cannot repay their loans cede strategic infrastructure to Chinese control, as Sri Lanka did with Hambantota port. Supporters note that the infrastructure is real and fills gaps that Western institutions refused to fund. It is both things simultaneously: genuine development and strategic encirclement.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_china_taiwan",
-                    "label": "Taiwan & The Pacific",
-                    "color": "#d05050",
-                    "desc": "Taiwan produces over 90% of the world's most advanced semiconductors. It is claimed by China as a breakaway province. It is defended by a US commitment that is deliberately ambiguous — strategic ambiguity, designed to deter both Chinese invasion and Taiwanese independence declaration. The Taiwan Strait is the most likely flashpoint for great power conflict in the current era. A Chinese takeover of Taiwan would give Beijing control of the semiconductor supply chain that every modern economy depends on. The logic of US defense of Taiwan is not primarily about Taiwan. It is about that fact.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_asia_others",
-                    "label": "The Rest of Asia",
-                    "color": "#a03030",
-                    "desc": "India — the world's most populous country, a nuclear power, the largest democracy, and a player that refuses to be aligned with either the US or China. Japan — the world's third largest economy, constitutionally pacifist, rearming quietly under US encouragement. South Korea — front line of the last unresolved Cold War standoff, with 28,000 US troops and a nuclear-armed North Korea across a border that has technically been at war since 1950. Southeast Asia — the most dynamic economic region in the world, caught between Chinese economic dominance and US security guarantees, trying to navigate both.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ],
-                "bottomPills": [
-                  {
-                    "id": "geo_shifting",
-                    "label": "The Shifting Order",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ]
-              },
-              {
-                "id": "geo_africa",
-                "label": "Africa",
-                "color": "#4a9a58",
-                "desc": "The most resource-rich continent on earth and the most systematically extracted. Africa contains 60% of the world's arable land, 30% of its mineral reserves, and the largest youth population of any continent. It was carved into 54 countries by European powers at the Berlin Conference of 1884 — a meeting to which no African was invited — and the borders drawn that day still govern the continent. The colonial period ended in the 1960s but was followed by neo-colonial arrangements — structural adjustment programs, debt traps, resource extraction by multinational corporations — that have maintained the economic relationship without the administrative inconvenience of formal empire.",
-                "links": [
-                  {
-                    "label": "Foreign Affairs — Africa",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  },
-                  {
-                    "label": "Al Jazeera — Africa",
-                    "url": "https://www.aljazeera.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "geo_africa_scramble",
-                    "label": "The Scramble & Its Legacy",
-                    "color": "#4a9a58",
-                    "desc": "The Berlin Conference of 1884-85 divided Africa among European powers in about three months. Britain, France, Belgium, Germany, Portugal, Italy, and Spain drew lines across a continent they mostly had not visited, creating colonies that grouped hostile ethnic groups together and divided cohesive ones apart. Belgium's Congo — personally owned by King Leopold II, who killed an estimated 10 million Congolese — is the extreme case. The moderate cases are the rest of the continent. The ethnic conflicts, the civil wars, the failed states of the post-independence era are not African pathologies. They are European architecture.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_africa_resources",
-                    "label": "The Resource Curse",
-                    "color": "#3a8a48",
-                    "desc": "Countries with extraordinary natural wealth — oil, diamonds, cobalt, coltan — frequently have worse economic outcomes than resource-poor neighbors. The resource curse: extraction industries create wealth that flows to elites and foreign corporations, fund authoritarian governments, crowd out other economic development, and make the country dependent on commodity prices set in markets they do not control. The Democratic Republic of Congo contains trillions of dollars of mineral wealth including the cobalt that powers every electric vehicle battery. Its people are among the poorest on earth. The math is not a mystery.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "geo_africa_now",
-                    "label": "Africa Now — The New Scramble",
-                    "color": "#5aaa68",
-                    "desc": "A second scramble is underway — quieter, conducted through investment and debt rather than flags and armies. China is the most visible player: $170 billion in loans since 2000, infrastructure across the continent, a military base in Djibouti. But the US maintains AFRICOM, France keeps troops in a dozen former colonies, Russia's Wagner Group has operated in Mali, Central African Republic, Libya, and Sudan. Meanwhile Africa's own institutions — the African Union, regional economic blocs — are trying to build a continental integration project on top of colonial infrastructure. The youngest continent is also the most contested.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ],
-                "bottomPills": []
-              }
-            ],
-            "bottomPills": []
-          },
-          {
-            "id": "geo_proxy",
-            "label": "Proxy Wars",
-            "color": "#886888",
-            "desc": "A proxy war is a conflict instigated, funded, or armed by outside powers who fight each other through local combatants rather than directly. The logic: achieve strategic objectives while avoiding the costs of direct confrontation between nuclear-armed or otherwise dangerous states. The costs are borne by the proxy populations. Vietnam was a proxy war. Afghanistan under the Soviets was a proxy war — the US armed the Mujahideen, who became the Taliban. Syria is a proxy war involving the US, Russia, Iran, Turkey, Saudi Arabia, and Israel simultaneously. The proxy populations do not typically get a vote on whether their country becomes the battlefield.",
-            "links": [
-              {
-                "label": "Costs of War Project",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
-                "tag": "MILITARY"
-              }
-            ],
-            "topPills": [
-              {
-                "id": "geo_proxy_cold",
-                "label": "Cold War Proxies",
-                "color": "#786078",
-                "desc": "Korea, Vietnam, Angola, Mozambique, Nicaragua, El Salvador, Afghanistan — the Cold War was fought almost entirely through proxies in the developing world. The US and Soviet Union supplied weapons, advisors, money, and ideology to opposing sides in conflicts that killed millions of people in countries that had no stake in the US-Soviet competition. The Cold War ended in 1991. Many of the proxy conflicts it created did not.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_proxy_current",
-                "label": "Current Proxy Conflicts",
-                "color": "#988098",
-                "desc": "Ukraine is the most visible current proxy conflict — the US and NATO supplying weapons and intelligence to Ukraine fighting Russian forces on Ukrainian soil. Yemen is a proxy war between Saudi Arabia and Iran fought by Yemeni factions, producing the world's worst humanitarian crisis. Syria remains a multi-proxy battlefield. The Sahel in West Africa has become a new arena: Russia through Wagner, France through counterterrorism operations, the US through drone strikes, all operating simultaneously in countries too weak to expel any of them.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              }
-            ],
-            "bottomPills": [
-              {
-                "id": "p_mil",
-                "label": "Military",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "h3",
-                "label": "War & Revolutions",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              }
-            ]
-          },
-          {
-            "id": "geo_resources",
-            "label": "Resources & Control",
-            "color": "#a08840",
-            "desc": "Every major war of the last two centuries has been about resources — territory containing them, routes transporting them, markets consuming them. The framing of wars in ideological terms is almost always a post-hoc justification for conflicts whose actual drivers are material. This does not mean ideology is irrelevant — it shapes how wars are fought and who fights them. But understanding why wars start requires following the resources.",
-            "links": [
-              {
-                "label": "Costs of War — resource conflicts",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
-                "tag": "MILITARY"
-              }
-            ],
-            "topPills": [
-              {
-                "id": "geo_res_oil",
-                "label": "Oil & Energy",
-                "color": "#a08840",
-                "desc": "The 20th century ran on oil. Every major geopolitical arrangement of the past hundred years has been shaped by who controls it. The British Empire's pivot to oil before WWI. The US-Saudi petrodollar deal. The 1973 Arab oil embargo and the strategic panic it produced. The Gulf Wars. The US fracking revolution that made it energy independent and reduced Saudi leverage. The current transition to renewables is not just an environmental project — it is a geopolitical revolution that will redraw the map of who matters.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_res_rare",
-                "label": "Rare Earth & Critical Minerals",
-                "color": "#b09850",
-                "desc": "Electric vehicles, wind turbines, semiconductors, smartphones, precision weapons — all require minerals whose supply chains are dominated by China. China controls 60% of rare earth production and 85% of processing capacity. The lithium for batteries comes primarily from Chile, Argentina, and Bolivia. The cobalt for batteries comes primarily from the DRC. The semiconductor fabrication that ties everything together happens primarily in Taiwan. The green energy transition is not just an environmental project — it is a mineral competition that will define the next century of geopolitics.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_res_water",
-                "label": "Water as Power",
-                "color": "#4888b8",
-                "desc": "Water is the resource nobody talks about until it is gone. The Nile feeds 300 million people across eleven countries and is governed by a treaty that gives Egypt and Sudan rights dating to 1929. Ethiopia's Grand Renaissance Dam is breaking that treaty by diverting water upstream. The Mekong River flows through China, Myanmar, Laos, Thailand, Cambodia, and Vietnam — China controls it at the source and has built eleven dams. The Indus Waters Treaty between India and Pakistan has survived three wars. Water treaties are the most fragile agreements in geopolitics because neither side can afford to lose.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c_env_water_wars",
-                    "label": "Water Wars",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ]
-              },
-              {
-                "id": "geo_res_food",
-                "label": "Food as Weapon",
-                "color": "#908038",
-                "desc": "Ukraine and Russia together produce 30% of the world's wheat exports. When Russia invaded Ukraine and blockaded Black Sea ports in 2022, global food prices spiked and food insecurity increased in forty countries across Africa and the Middle East. Food has always been a weapon — Stalin used engineered famine to break Ukrainian resistance, killing millions. Sanctions regimes regularly restrict food imports. The geography of food production is becoming a strategic resource as climate change shifts growing zones and aquifers are depleted.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              }
-            ],
-            "bottomPills": [
-              {
-                "id": "c_env_water",
-                "label": "Water",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "p2",
-                "label": "Economy & Money",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              }
-            ]
-          },
-          {
-            "id": "geo_shifting",
-            "label": "The Shifting Order",
-            "color": "#5888a8",
-            "desc": "The international order built after WWII — the UN, the World Bank, the IMF, the dollar as reserve currency, US military dominance — is under more pressure than at any point since it was created. It is not collapsing. But it is no longer unchallenged. The question of what comes after American unipolarity — whether a multipolar world is more or less stable than a unipolar one — is the defining geopolitical question of the current era.",
-            "links": [
-              {
-                "label": "Foreign Affairs — world order",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
-                "tag": "GEOPOLITICS"
-              },
-              {
-                "label": "Quincy Institute",
-                "url": "https://quincyinst.org",
-                "emoji": "🪖",
-                "tag": "MILITARY"
-              }
-            ],
-            "topPills": [
-              {
-                "id": "geo_shift_american",
-                "label": "The American Century",
-                "color": "#5888a8",
-                "desc": "Henry Luce coined the term in 1941, before the US had even entered WWII. The American Century was the period of uncontested US dominance — military, economic, cultural — that ran from 1945 to some point in the early 21st century that historians will eventually date precisely. At its peak the US produced 50% of global GDP, maintained 800 military bases in 70 countries, and set the rules for international trade, finance, and diplomacy. It also fought Korea, Vietnam, Iraq, and Afghanistan. The question of whether the American Century ended with a success or a failure depends entirely on whose century you think it was.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_shift_china_rise",
-                "label": "China's Challenge",
-                "color": "#b04040",
-                "desc": "The Thucydides Trap: when a rising power threatens to displace a ruling power, the result is usually war. Of sixteen historical cases of power transition identified by Graham Allison, twelve ended in war. China is the rising power. The US is the ruling power. Both are nuclear armed. The competition is real — in trade, technology, military capability, and influence — but the stakes of direct conflict are existential for both. Managing this transition without war is the central challenge of 21st century statecraft.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_shift_brics",
-                "label": "BRICS & Multipolarity",
-                "color": "#7898b8",
-                "desc": "Brazil, Russia, India, China, South Africa — plus more recent additions — represent an alternative pole of global organization that rejects Western liberal order as the only framework. BRICS countries now represent a larger share of global GDP than the G7. They are building alternative payment systems to avoid dollar dependence, alternative development banks to bypass the IMF, and alternative diplomatic frameworks that do not require US approval. Whether this becomes a genuine alternative order or remains a loose coalition of countries that dislike American hegemony for different reasons is still being determined.",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "geo_shift_next",
-                "label": "What Comes Next",
-                "color": "#4878a8",
-                "desc": "No one knows. The honest answer to what the post-American order looks like is that we are in the middle of finding out. Climate change is introducing a variable that no geopolitical theory accounts for — it does not respect borders, alliances, or spheres of influence, and its effects will redraw the map of where humans can live more dramatically than any war. The countries that adapt fastest, that control the technology of the energy transition, and that manage internal inequality without political collapse will define the next order. That list may not look like the current one.",
-                "links": [
-                  {
-                    "label": "Foreign Affairs",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c_env_climate",
-                    "label": "Climate",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  },
-                  {
-                    "id": "p4",
-                    "label": "Global Capital",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": []
-                  }
-                ]
-              }
-            ],
-            "bottomPills": [
-              {
-                "id": "p_mil",
-                "label": "Military",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
-                "id": "h1",
-                "label": "Nations & Empire",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              }
-            ]
-          }
-        ],
-        "bottomPills": [
-          {
-            "id": "h3",
-            "label": "War & Revolutions",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "h1",
-            "label": "Nations & Empire",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "p_mil",
-            "label": "Military",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          }
-        ]
       }
     ],
     "bottomPills": []
@@ -43270,3 +43270,5 @@ const LAYERS = [
     "bottomPills": []
   }
 ];
+
+const FOUNDATIONS=[{"id":"graphic-info","label":"GRAPHIC\nIMAGES","href":"graphic-info.html","color":"#7a1808","glow":"#c03010cc","border":"#e84020","grad":"radial-gradient(circle at 38% 28%, #ff7020 0%, #c03010 28%, #7a1808 58%, #3a0808 85%, #1a0404 100%)","offsetX":-315,"bottomPct":30,"size":88,"delay":0},{"id":"gallery","label":"THE\nGALLERY","href":"gallery.html","color":"#6a1828","glow":"#a02038cc","border":"#c84050","grad":"radial-gradient(circle at 38% 28%, #e05030 0%, #902030 30%, #5a1020 60%, #2a0810 85%, #100408 100%)","offsetX":-155,"bottomPct":32,"size":82,"delay":0.3},{"id":"journal","label":"THE\nJOURNAL","href":"journal.html","color":"#8a3010","glow":"#c04818cc","border":"#e06828","grad":"radial-gradient(circle at 38% 28%, #ff9040 0%, #c04818 28%, #8a3010 55%, #401808 82%, #180a04 100%)","offsetX":155,"bottomPct":28,"size":82,"delay":0.6},{"id":"glossary","label":"WORLD\nCOMPENDIUM","href":"compendium.html","color":"#5a1030","glow":"#901848cc","border":"#b83858","grad":"radial-gradient(circle at 38% 28%, #c04858 0%, #802038 28%, #5a1030 55%, #280818 82%, #100408 100%)","offsetX":315,"bottomPct":31,"size":88,"delay":0.9}];
