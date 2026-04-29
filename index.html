@@ -147,6 +147,9 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 footer{background:#020508;padding:32px 22px;border-top:1px solid rgba(58,74,90,0.25);}
 footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 @media(max-width:560px){.nav-links a{display:none;}.layer-main-label{letter-spacing:0.15em!important;}.nav-fields{display:none!important;}}
+#modal-overlay{display:none;position:fixed;inset:0;z-index:800;background:rgba(2,4,10,0.82);backdrop-filter:blur(4px);align-items:center;justify-content:center;}
+#modal-overlay.open{display:flex;}
+#modal-box{position:relative;width:92%;max-width:540px;max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:linear-gradient(160deg,#0d1525 0%,#070c18 100%);border-radius:28px 28px 18px 18px;padding:24px 24px 28px;box-sizing:border-box;margin:auto;}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPZHKNB3E9');</script>
@@ -222,7 +225,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
 </section>
 
-<div id="modal-overlay" onclick="cardNavClose()" style="display:none;">
+<div id="modal-overlay" onclick="cardNavClose()">
   <div id="modal-box" onclick="event.stopPropagation()">
     <div class="modal-drag" id="modal-drag"></div>
     <div id="card-nav-bar" style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;gap:8px;">
@@ -354,64 +357,40 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
     <div style="font-family:'Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:0.22em;color:#c9a84c;text-transform:uppercase;margin-bottom:16px;">The Moment We're In</div>
 
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      We are living inside more information than any human being in history has ever had to process.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      News, politics, history, science, war, money, culture — all of it arriving at once, all of it demanding a reaction, and much of it designed to make us <em>feel something before</em> we have had a chance to <em>think about anything</em>.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      USNow is a place to stop and see where we actually are.
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
+      We are each living inside more information than any human being in history has had to process. News, politics, history, science, war, money, culture — all of it arriving simultaneously, all of it demanding a reaction — and much of it designed to make you <em>feel something before</em> you've had a chance to <em>think about anything</em>.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 40px;">
-      Not just in our daily lives, but in the larger picture: what came before this moment — before us — along with what has unfolded since and how we each find ourselves in all of that.
+      USNow is a place to stop and see where we actually are. Not just in the news cycle, but in the larger picture: the one that includes what happened before this moment, what has unfolded from it, and where we each fit inside all of that.
     </p>
 
     <div style="font-family:'Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:0.22em;color:#c9a84c;text-transform:uppercase;margin-bottom:16px;">How It's Organized</div>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      The main screen is a set of <strong style="color:#e8e0d0;">orbs</strong> arranged in <strong style="color:#e8e0d0;">layers</strong>.
+      The main screen is a map of human knowledge. Not alphabetical. Not chronological. No feed. No algorithm deciding what you see first.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      Not alphabetical.<br>Not chronological.<br>No feed.<br>No algorithm deciding what you see first.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      <strong style="color:#e8e0d0;">Orbs</strong> are the subjects themselves: the ideas, experiences, systems, and questions we live through as individuals every day. Some are personal and immediate. Others are cultural, historical, political, scientific, or existential.
+      <strong style="color:#e8e0d0;">Orbs</strong> are the subjects closest to the individual: personal, cultural, immediate, and shaped by what we've been exposed to, what we care about, and what we are trying to understand.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
       <strong style="color:#e8e0d0;">Layers</strong> show the larger story around those subjects: the forces, systems, patterns, and histories that have been operating on us — and on our ancestors — for thousands of years.
     </p>
 
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      There are no steps to follow. The whole arrangement is just a way to explore and see the world from different angles.
-    </p>
-
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 40px;">
-      Where you start is up to you. Where you go is up to you. Each topic opens into branches, related ideas, and other connections across the site.
+      Where you start and where you go is up to you. As you explore, each topic opens into branches, related ideas, and links to other areas of the map.
     </p>
 
     <div style="font-family:'Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:0.22em;color:#c9a84c;text-transform:uppercase;margin-bottom:16px;">The Point</div>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      The goal is not to tell anyone what to think.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      It is to give us enough of the real picture — with perspective and focus — to see more clearly and think for ourselves.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      Not as consumers of someone else's narrative, but as citizens, neighbors, and human beings sharing knowledge with one another.
+      The goal is not to tell anyone what to think. It is to give us enough of the real picture — with perspective and focus — to see more clearly and think for ourselves. Not as consumers of someone else's narrative, but as citizens, neighbors, and human beings sharing knowledge with one another.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 40px;">
-      At our own pace.<br>Without the noise.
+      At our own pace. Without all the noise.
     </p>
 
     <div style="font-family:'Courier New',monospace;font-size:13px;font-weight:700;letter-spacing:0.22em;color:#c9a84c;text-transform:uppercase;margin-bottom:16px;">A Note</div>
@@ -421,27 +400,23 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      Share the site with others. Leave a note in the <strong style="color:#e8e0d0;">&#8220;Thoughts?&#8221;</strong> section of any topic if something moves you, if you disagree, or if you think something is wrong or missing.
+      Share the site with others. Leave a note in the &#8220;Thoughts?&#8221; section of any topic if something moves you, if you disagree, or if you think something is wrong or missing. Submissions are kept in The Log so they can be used for reference, future links, corrections, and additions to the descriptions you see.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      Submissions are kept in <strong style="color:#e8e0d0;">The Log</strong>, where they can be used for reference, future links, corrections, and additions to the descriptions you see.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      You can also explore the built-in glossary — <strong style="color:#e8e0d0;">The World Compendium</strong> — where common terms are defined, cross-referenced, and indexed across the site. These words are clickable wherever they appear, opening instant definitions with links to more context.
+      You can also explore the built-in glossary — The World Compendium — where common terms are defined, cross-referenced, and indexed across the site. These words are clickable wherever they appear, opening instant definitions with links to more context.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
       Your participation is what makes this a site for us — not a feed, not a corporate data tool, not a government directory, and not another system designed to track, sell, or steer attention.
     </p>
 
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);font-style:italic;margin:0 0 20px;">
-      Just knowledge, context, and connection — at human speed.
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 8px;">
+      For us. By us.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0;">
-      For us. By us.<br>Start anywhere.<br>Go anywhere.
+      Enjoy.
     </p>
 
   </div>
@@ -697,7 +672,6 @@ function cardNavOpen(data){
   window._cardStack.push(data);
   renderCard(data);
   applyZoomedSafariModalMode();
-  document.getElementById('modal-overlay').style.display='block';
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
   requestAnimationFrame(()=>{
@@ -726,7 +700,6 @@ function cardNavClose(){
   const overlay=document.getElementById('modal-overlay');
   overlay.classList.remove('open');
   overlay.classList.remove('zoomed-safari');
-  overlay.style.display='none';
   document.body.style.overflow='';
 }
 
