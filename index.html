@@ -222,7 +222,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
 </section>
 
-<div id="modal-overlay" onclick="cardNavClose()">
+<div id="modal-overlay" onclick="cardNavClose()" style="display:none;">
   <div id="modal-box" onclick="event.stopPropagation()">
     <div class="modal-drag" id="modal-drag"></div>
     <div id="card-nav-bar" style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;gap:8px;">
@@ -272,7 +272,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:0;display:none;"></div>
     </div>
     <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div class="modal-section-label">GO FURTHER</div><div id="modal-toppills-list"></div></div>
-    <div class="modal-section-label" id="modal-desc-label">WHAT IT IS</div><p id="modal-desc"></p>
+    <div class="modal-section-label" id="modal-desc-label" style="display:none;">WHAT IT IS</div><p id="modal-desc"></p>
     <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label">RELATED CONNECTIONS</div><div id="modal-bottompills-list"></div></div>
     <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OFF-SITE CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
   </div>
@@ -352,24 +352,68 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
     <div style="position:absolute;left:-20px;top:6px;width:2px;height:calc(100% - 12px);background:linear-gradient(180deg,rgba(201,168,76,0.5),rgba(201,168,76,0.08));border-radius:2px;"></div>
 
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.4em;color:rgba(201,168,76,0.55);text-transform:uppercase;margin-bottom:16px;">The Moment We're In</div>
+
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      You are living inside more information than any human being in history has ever had to process. News, politics, history, science, war, money, culture — all of it arriving simultaneously, all of it demanding a reaction. Much of it is designed to make you <em>feel something</em>, even before you had time to <em>process anything</em>.
+      We are each living inside more information than any human being in history has had to process. News, politics, history, science, war, money, culture — all of it arriving simultaneously, all of it demanding a reaction — and much of it designed to make you <em>feel something before</em> you've had a chance to <em>think about anything</em>.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 40px;">
+      USNow is a place to stop and see where we actually are. Not just in the news cycle, but in the larger picture: the one that includes what happened before this moment, what has unfolded from it, and where we each fit inside all of that.
+    </p>
+
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.4em;color:rgba(201,168,76,0.55);text-transform:uppercase;margin-bottom:16px;">How It's Organized</div>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
+      The main screen is a map of human knowledge. Not alphabetical. Not chronological. No feed. No algorithm deciding what you see first.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
+      <strong style="color:#e8e0d0;">Orbs</strong> are the subjects closest to the individual: personal, cultural, immediate, and shaped by what we've been exposed to, what we care about, and what we are trying to understand.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
+      <strong style="color:#e8e0d0;">Layers</strong> show the larger story around those subjects: the forces, systems, patterns, and histories that have been operating on us — and on our ancestors — for thousands of years.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 40px;">
+      Where you start and where you go is up to you. As you explore, each topic opens into branches, related ideas, and links to other areas of the map.
+    </p>
+
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.4em;color:rgba(201,168,76,0.55);text-transform:uppercase;margin-bottom:16px;">The Point</div>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
+      The goal is not to tell anyone what to think. It is to give us enough of the real picture — with perspective and focus — to see more clearly and think for ourselves. Not as consumers of someone else's narrative, but as citizens, neighbors, and human beings sharing knowledge with one another.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 40px;">
+      At our own pace. Without all the noise.
+    </p>
+
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.4em;color:rgba(201,168,76,0.55);text-transform:uppercase;margin-bottom:16px;">A Note</div>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
+      You're early. This is just getting started, and everything is still changing. Some sections are still being built, expanded, or reorganized.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
+      Share the site with others. Leave a note in the &#8220;Thoughts?&#8221; section of any topic if something moves you, if you disagree, or if you think something is wrong or missing. Submissions are kept in The Log so they can be used for reference, future links, corrections, and additions to the descriptions you see.
+    </p>
+
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
+      You can also explore the built-in glossary — The World Compendium — where common terms are defined, cross-referenced, and indexed across the site. These words are clickable wherever they appear, opening instant definitions with links to more context.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      USNow is a place to stop and see where we actually are. Not just in the news cycle, but in the larger picture — the one that includes everything that happened before this moment and everything that has unfolded from it. And where you fit inside all of that.
+      Your participation is what makes this a site for us — not a feed, not a corporate data tool, not a government directory, and not another system designed to track, sell, or steer attention.
     </p>
 
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      We start with what's documented and work outward toward what it means.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      The goal isn't to tell you what to think. It's to give you enough of the real picture that you can decide for yourself — not as a consumer of someone else's narrative, but as a citizen. As a neighbor. As a human, at your own pace, without all the noise.
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 8px;">
+      For us. By us.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0;">
-      You're Early. This is just getting started and everything is always changing. Some sections have not been completed yet — but check back soon and share with others. Feel free to leave a note, your thoughts, or any proposed content additions or changes.
+      Enjoy.
     </p>
 
   </div>
@@ -625,6 +669,7 @@ function cardNavOpen(data){
   window._cardStack.push(data);
   renderCard(data);
   applyZoomedSafariModalMode();
+  document.getElementById('modal-overlay').style.display='block';
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow='hidden';
   requestAnimationFrame(()=>{
@@ -653,6 +698,7 @@ function cardNavClose(){
   const overlay=document.getElementById('modal-overlay');
   overlay.classList.remove('open');
   overlay.classList.remove('zoomed-safari');
+  overlay.style.display='none';
   document.body.style.overflow='';
 }
 
