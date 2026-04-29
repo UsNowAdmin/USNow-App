@@ -267,8 +267,10 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
         <button class="tp-confirm-back" id="tp-confirm-back-btn" onclick="closeThoughtPanel()">← BACK TO CARD</button>
       </div>
     </div>
+    <div id="modal-title-band" style="margin:-24px -24px 18px -24px;padding:20px 24px 16px 24px;border-radius:12px 12px 0 0;">
     <h2 id="modal-title"></h2>
-    <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:14px;display:none;"></div>
+    <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:0;display:none;"></div>
+    </div>
     <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div class="modal-section-label">GO FURTHER</div><div id="modal-toppills-list"></div></div>
     <div class="modal-section-label" id="modal-desc-label">WHAT IT IS</div><p id="modal-desc"></p>
     <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label">RELATED CONNECTIONS</div><div id="modal-bottompills-list"></div></div>
@@ -701,6 +703,16 @@ function renderCard(data){
   closeBtn.onmouseenter=()=>{closeBtn.style.background=`${data.color}22`;};
   closeBtn.onmouseleave=()=>{closeBtn.style.background='transparent';};
   // Title / subtitle / desc
+  const titleBand = document.getElementById('modal-title-band');
+  if(data.isLayer && data.nodeId !== 'self'){
+    titleBand.style.background = `linear-gradient(135deg, ${data.color}30 0%, ${data.color}18 60%, ${data.color}08 100%)`;
+    titleBand.style.borderBottom = `1px solid ${data.color}44`;
+    titleBand.style.boxShadow = `inset 0 -1px 0 ${data.color}22`;
+  } else {
+    titleBand.style.background = 'none';
+    titleBand.style.borderBottom = 'none';
+    titleBand.style.boxShadow = 'none';
+  }
   document.getElementById('modal-title').textContent=data.title;
   var _ipEl=document.getElementById('modal-inprogress');
   if(!_ipEl){
@@ -714,7 +726,7 @@ function renderCard(data){
   var _idEl=document.getElementById('modal-node-id');
   if(_idEl){_idEl.style.color=lc;_idEl.textContent=data.nodeId?'#'+data.nodeId:'';}
   const subEl=document.getElementById('modal-sub');
-  if(data.sub){subEl.style.color=lc;subEl.style.opacity='0.9';subEl.textContent=data.sub;subEl.style.display='block';}else{subEl.style.display='none';}
+  if(data.sub){subEl.style.color=lc;subEl.style.opacity='0.9';subEl.textContent=data.sub;subEl.style.display='block';subEl.style.marginBottom=(data.isLayer && data.nodeId!=='self')?'0':'14px';}else{subEl.style.display='none';}
   document.getElementById('modal-desc').textContent=data.desc;
   const descLabel=document.getElementById('modal-desc-label');
   if(descLabel){descLabel.style.display=data.desc?'block':'none';}
