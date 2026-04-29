@@ -1911,7 +1911,8 @@ const LAYERS = [
         "bottomPills": [],
         "orbs": []
       }
-    ]
+    ],
+    "inProgress": true
   },
   {
     "id": "family",
@@ -3842,7 +3843,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "f4",
@@ -4829,24 +4831,6 @@ const LAYERS = [
               }
             ],
             "orbs": []
-          },
-          {
-            "id": "fam_tp4",
-            "label": "Ritual & Tradition",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "fam_tp6",
-            "label": "Chosen Family",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
           }
         ],
         "bottomPills": [
@@ -4889,9 +4873,28 @@ const LAYERS = [
             "links": [],
             "topPills": [],
             "bottomPills": []
+          },
+          {
+            "id": "fam_tp4",
+            "label": "Ritual & Tradition",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
+          },
+          {
+            "id": "fam_tp6",
+            "label": "Chosen Family",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [],
+            "orbs": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "f_class",
@@ -6843,7 +6846,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "f_rc",
@@ -7146,1478 +7150,7 @@ const LAYERS = [
                 "label": "Law",
                 "desc": "",
                 "links": [],
-                "topPills": [
-                  {
-                    "id": "h6_rt",
-                    "label": "Rights & Duties",
-                    "color": "#386898",
-                    "desc": "What citizens are owed and what they owe. The American conversation about rights is loud and the conversation about duties is quieter. Both are part of the deal. The deal has been renegotiated repeatedly across the country's history, mostly in the direction of expanding who counts as a citizen.",
-                    "links": [
-                      {
-                        "label": "ACLU",
-                        "url": "https://www.aclu.org",
-                        "emoji": "⚖️",
-                        "tag": "RIGHTS"
-                      },
-                      {
-                        "label": "Brennan Center for Justice",
-                        "url": "https://www.brennancenter.org",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      },
-                      {
-                        "label": "Cornell Legal Information Institute",
-                        "url": "https://www.law.cornell.edu",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "h6_r_civ",
-                        "label": "Civil Rights",
-                        "color": "#286088",
-                        "desc": "What you are entitled to as a person under the law. Vote. Speak. Assemble. Be free of discrimination. American civil rights have expanded across two centuries through court rulings, legislation, and movements that did not take no for an answer.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "frc_rp_jc",
-                            "label": "Jim Crow",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "h6_const",
-                            "label": "Constitutional Law",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_r_hum",
-                        "label": "Human Rights",
-                        "color": "#387098",
-                        "desc": "The rights people are owed because they are people, not because of citizenship. The Universal Declaration in 1948 set the framework. The U.S. has had a complicated relationship with the framework ever since.",
-                        "links": [
-                          {
-                            "label": "United Nations data",
-                            "url": "https://data.un.org",
-                            "emoji": "🌍",
-                            "tag": "GLOBAL"
-                          },
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_int",
-                            "label": "International Law",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_r_du",
-                        "label": "Civic Duties",
-                        "color": "#3878a8",
-                        "desc": "The other side. Vote. Pay taxes. Serve on juries. Show up. American civic culture has gotten thinner on the duties side in living memory.",
-                        "links": [
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "ATJon on Substack",
-                            "url": "https://atjon.substack.com",
-                            "emoji": "⭐",
-                            "tag": "USNOW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_r_vot",
-                        "label": "Voting Rights",
-                        "color": "#286898",
-                        "desc": "The right that protects the others. American voting rights have expanded and contracted across cycles. The Voting Rights Act of 1965 was the high water mark. Recent court decisions and state laws have rolled back significant pieces.",
-                        "links": [
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_r_pri",
-                        "label": "Privacy",
-                        "color": "#487898",
-                        "desc": "The right not enumerated in the Constitution and largely constructed by the courts. Privacy law in the U.S. is uneven, mostly weaker than European peers, and increasingly tested by technology that did not exist when most of the relevant law was written.",
-                        "links": [
-                          {
-                            "label": "Electronic Frontier Foundation",
-                            "url": "https://www.eff.org",
-                            "emoji": "🛡️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "c2_su_priv",
-                            "label": "Privacy",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_r_due",
-                        "label": "Due Process",
-                        "color": "#4878a0",
-                        "desc": "The promise that the government cannot take your life, liberty, or property without proper procedure. American due process is real and uneven — better in some courtrooms than others, weaker for the poor and people of color across the system.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_crim",
-                            "label": "Crime & Punishment",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [
-                      {
-                        "id": "h6",
-                        "label": "Law",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p_gov",
-                        "label": "Government",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "frc_struct",
-                        "label": "Race as Structure",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h6_court",
-                    "label": "Courts & Judges",
-                    "color": "#5878a8",
-                    "desc": "How the law gets interpreted in practice. American courts are the most powerful judiciary in the world — they can strike down laws passed by elected legislatures, and they have. The Supreme Court is the apex. The lower courts do most of the actual work.",
-                    "links": [
-                      {
-                        "label": "Oyez — Supreme Court audio archive",
-                        "url": "https://www.oyez.org",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      },
-                      {
-                        "label": "Cornell Legal Information Institute",
-                        "url": "https://www.law.cornell.edu",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      },
-                      {
-                        "label": "Brennan Center for Justice",
-                        "url": "https://www.brennancenter.org",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "h6_co_sct",
-                        "label": "Supreme Court",
-                        "color": "#487098",
-                        "desc": "Nine justices. Lifetime appointments. The most consequential court in the country. The composition shifts political weight for decades at a time and the current composition is meaningfully different from any in living memory.",
-                        "links": [
-                          {
-                            "label": "Oyez — Supreme Court audio archive",
-                            "url": "https://www.oyez.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_app",
-                        "label": "Appellate Courts",
-                        "color": "#5878a8",
-                        "desc": "The federal courts of appeal. Most cases that matter get decided here, not at the Supreme Court. The geographical circuits have developed distinct legal cultures.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6",
-                            "label": "Law",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_dis",
-                        "label": "District Courts",
-                        "color": "#6888b8",
-                        "desc": "The federal trial courts. Where the evidence gets heard, the witnesses testify, the verdict comes in. Most federal cases never go higher than this.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6",
-                            "label": "Law",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_st",
-                        "label": "State Courts",
-                        "color": "#7898c8",
-                        "desc": "Where most American litigation actually happens. State courts handle the overwhelming majority of criminal cases, family law, contracts, and small claims.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_crim",
-                            "label": "Crime & Punishment",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_jud",
-                        "label": "Judges",
-                        "color": "#5878a0",
-                        "desc": "How they get there and who they are. Federal judges are nominated and confirmed. State judges in most places are elected. The political weight of judicial elections has grown in step with the courts' policy importance.",
-                        "links": [
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "OpenSecrets — money in politics",
-                            "url": "https://www.opensecrets.org",
-                            "emoji": "💰",
-                            "tag": "MONEY"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_jur",
-                        "label": "Juries",
-                        "color": "#6888b8",
-                        "desc": "The other branch. Twelve neighbors deciding the fate of one defendant. Jury trials have shrunk dramatically — most criminal cases now resolve through plea bargains. The constitutional right is more theoretical than practical for most defendants.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_crim",
-                            "label": "Crime & Punishment",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [
-                      {
-                        "id": "p_gov",
-                        "label": "Government",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6",
-                        "label": "Law",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h6_crim",
-                    "label": "Crime & Punishment",
-                    "color": "#583020",
-                    "desc": "What the state does about wrongdoing. The American criminal legal system holds more people in prison than any country on earth — both in raw numbers and per capita. The system disproportionately targets poor people and people of color. The data is not contested.",
-                    "links": [
-                      {
-                        "label": "ACLU",
-                        "url": "https://www.aclu.org",
-                        "emoji": "⚖️",
-                        "tag": "RIGHTS"
-                      },
-                      {
-                        "label": "Brennan Center for Justice",
-                        "url": "https://www.brennancenter.org",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      },
-                      {
-                        "label": "ATJon on Substack",
-                        "url": "https://atjon.substack.com",
-                        "emoji": "⭐",
-                        "tag": "USNOW"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "h6_cr_law",
-                        "label": "Criminal Law",
-                        "color": "#482018",
-                        "desc": "The body of statutes that defines crimes and penalties. American criminal law has expanded enormously across the last fifty years. Many things that used to be regulatory matters are now felonies.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_co_st",
-                            "label": "State Courts",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_cr_pol",
-                        "label": "Police",
-                        "color": "#583020",
-                        "desc": "The frontline of the system. American policing has more discretion, more equipment, more legal protections, and less accountability than most peer countries. Reform efforts have been incremental.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_cr_pris",
-                        "label": "Prisons",
-                        "color": "#382018",
-                        "desc": "Roughly 1.9 million people held. Hundreds of thousands more on parole or probation. American incarceration rates per capita are several times higher than European peers. The financial cost is enormous. The human cost is incalculable.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "ATJon on Substack",
-                            "url": "https://atjon.substack.com",
-                            "emoji": "⭐",
-                            "tag": "USNOW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "frc_struct",
-                            "label": "Race as Structure",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "f_class",
-                            "label": "Class",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_cr_cap",
-                        "label": "Capital Punishment",
-                        "color": "#181008",
-                        "desc": "The death penalty. Twenty-three states have abolished it. Most peer countries have. The U.S. continues to use it. Innocent people have been executed. The error rate is well-documented.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6",
-                            "label": "Law",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_cr_juv",
-                        "label": "Juvenile Justice",
-                        "color": "#582828",
-                        "desc": "The system for kids. The U.S. has rolled back some of its harshest practices. The system still disproportionately captures Black and Latino youth and treats them more harshly than white kids for the same conduct.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "frc_struct",
-                            "label": "Race as Structure",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_cr_re",
-                        "label": "Recidivism & Reentry",
-                        "color": "#683028",
-                        "desc": "What happens after release. Two-thirds of released prisoners are rearrested within three years. The barriers to housing, employment, and voting after release are extensive. Most are political choices, not necessities.",
-                        "links": [
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "fc_h_homeless",
-                            "label": "Homelessness",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "fc_work",
-                            "label": "Work & Labor",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [
-                      {
-                        "id": "p_gov",
-                        "label": "Government",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "frc_struct",
-                        "label": "Race as Structure",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "f_class",
-                        "label": "Class",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h6_prop",
-                    "label": "Property & Contracts",
-                    "color": "#785838",
-                    "desc": "The legal scaffolding of the economy. Most of what private law does is enforce property and contracts. The choices about what counts as property and what contracts will be enforced shape who gets what.",
-                    "links": [
-                      {
-                        "label": "Cornell Legal Information Institute",
-                        "url": "https://www.law.cornell.edu",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      },
-                      {
-                        "label": "FollowTheMoney",
-                        "url": "https://www.followthemoney.org",
-                        "emoji": "💰",
-                        "tag": "MONEY"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "h6_p_pro",
-                        "label": "Property",
-                        "color": "#684828",
-                        "desc": "What you can own. American property law evolved to enable extraction — of land from indigenous nations, of labor from enslaved people, of resources from public lands. The forms have changed. Some of the patterns haven't.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "Internet Archive",
-                            "url": "https://archive.org",
-                            "emoji": "📚",
-                            "tag": "CULTURE"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "frc_rp_col",
-                            "label": "Colonialism",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "h5_set",
-                            "label": "Resources & Settlement",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_p_real",
-                        "label": "Real Property",
-                        "color": "#785838",
-                        "desc": "Land. The most heavily regulated property type. Zoning, easements, eminent domain, mortgages — all the structures that shape who lives where.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "fc_h_own",
-                            "label": "Homeownership",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_p_int",
-                        "label": "Intellectual Property",
-                        "color": "#886038",
-                        "desc": "Copyrights, patents, trademarks. The category has grown enormously to cover ideas, processes, brands, and increasingly genetic information. Each extension was sold as protecting creators. Each ended up mostly protecting corporations.",
-                        "links": [
-                          {
-                            "label": "Electronic Frontier Foundation",
-                            "url": "https://www.eff.org",
-                            "emoji": "🛡️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_corp",
-                            "label": "Corporations",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_p_con",
-                        "label": "Contracts",
-                        "color": "#785030",
-                        "desc": "Promises the law will enforce. Most modern contracts are not negotiated. They are presented. Take it or leave it. The legal fiction of mutual agreement has gotten thin.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_corp",
-                            "label": "Corporations",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_p_arb",
-                        "label": "Arbitration",
-                        "color": "#583018",
-                        "desc": "How disputes get resolved when the contract requires it. Arbitration moves disputes out of courts and into private fora chosen by the corporation. The outcomes favor the corporations. The Supreme Court has expanded enforcement of arbitration clauses across decades.",
-                        "links": [
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          },
-                          {
-                            "label": "Electronic Frontier Foundation",
-                            "url": "https://www.eff.org",
-                            "emoji": "🛡️",
-                            "tag": "RIGHTS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_co_sct",
-                            "label": "Supreme Court",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_p_bk",
-                        "label": "Bankruptcy",
-                        "color": "#684830",
-                        "desc": "The legal escape valve. Bankruptcy law in the U.S. is more generous to corporations than to individuals. Student debt does not discharge. Most medical debt does. The structure says something about the priorities.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p2_debt",
-                            "label": "Debt & Credit",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [
-                      {
-                        "id": "p2",
-                        "label": "Economy & Money",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p_corp",
-                        "label": "Corporations",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p_gov",
-                        "label": "Government",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h6_const",
-                    "label": "Constitutional Law",
-                    "color": "#5878b8",
-                    "desc": "The text everything is supposed to flow from. The U.S. Constitution is short, old, and contested at every clause. What it means is mostly what nine people in robes say it means. That is more power for nine people than the framers probably imagined.",
-                    "links": [
-                      {
-                        "label": "Brennan Center for Justice",
-                        "url": "https://www.brennancenter.org",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      },
-                      {
-                        "label": "Oyez — Supreme Court audio archive",
-                        "url": "https://www.oyez.org",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      },
-                      {
-                        "label": "Cornell Legal Information Institute",
-                        "url": "https://www.law.cornell.edu",
-                        "emoji": "⚖️",
-                        "tag": "LAW"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "h6_co_text",
-                        "label": "The Text",
-                        "color": "#4878a8",
-                        "desc": "Seven articles. Twenty-seven amendments. The original document is roughly 4,500 words. Most of the live arguments are about what the words mean, what they meant when written, and which interpretation gets to win.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "Internet Archive",
-                            "url": "https://archive.org",
-                            "emoji": "📚",
-                            "tag": "CULTURE"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "history",
-                            "label": "History",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_orig",
-                        "label": "Originalism",
-                        "color": "#586898",
-                        "desc": "The interpretive theory that the Constitution means what it meant when ratified. Has been ascendant on the right for forty years. Has been used to reach conclusions the framers themselves probably would not have reached.",
-                        "links": [
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_co_sct",
-                            "label": "Supreme Court",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_liv",
-                        "label": "Living Constitution",
-                        "color": "#6888c8",
-                        "desc": "The competing theory. The Constitution evolves with American society. Most of the rights expansions of the 20th century rested on this approach. It is currently out of fashion at the Court.",
-                        "links": [
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_co_sct",
-                            "label": "Supreme Court",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_amd",
-                        "label": "Amendments",
-                        "color": "#5878b0",
-                        "desc": "How the document changes officially. Amendment is hard. Most of the major ones came in clusters — the first ten, the Civil War amendments, the Progressive Era amendments. The country has not amended successfully in fifty years.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_judr",
-                        "label": "Judicial Review",
-                        "color": "#487898",
-                        "desc": "The power the Court took for itself in 1803 and has held since. The Court can strike down laws passed by Congress and signed by presidents. It is one of the most consequential judicial powers in the world.",
-                        "links": [
-                          {
-                            "label": "Oyez — Supreme Court audio archive",
-                            "url": "https://www.oyez.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_co_fed",
-                        "label": "Federalism",
-                        "color": "#586898",
-                        "desc": "The split between federal and state power. The line moves. The Court has been moving it back toward the states for forty years. The consequences for civil rights, environmental law, and reproductive rights are large.",
-                        "links": [
-                          {
-                            "label": "Cornell Legal Information Institute",
-                            "url": "https://www.law.cornell.edu",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          },
-                          {
-                            "label": "Brennan Center for Justice",
-                            "url": "https://www.brennancenter.org",
-                            "emoji": "⚖️",
-                            "tag": "LAW"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [
-                      {
-                        "id": "p_gov",
-                        "label": "Government",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_court",
-                        "label": "Courts & Judges",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h6_int",
-                    "label": "International Law",
-                    "color": "#386878",
-                    "desc": "The law between nations. Treaties. Custom. The institutions of the post-1945 order. International law has fewer enforcement teeth than domestic law and matters anyway, until it doesn't.",
-                    "links": [
-                      {
-                        "label": "United Nations data",
-                        "url": "https://data.un.org",
-                        "emoji": "🌍",
-                        "tag": "GLOBAL"
-                      },
-                      {
-                        "label": "Foreign Affairs",
-                        "url": "https://www.foreignaffairs.com",
-                        "emoji": "📰",
-                        "tag": "GEOPOLITICS"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "h6_i_treat",
-                        "label": "Treaties",
-                        "color": "#286068",
-                        "desc": "Agreements between states. The U.S. signs many and ratifies fewer than peer countries. The Senate's two-thirds requirement makes ratification politically hard.",
-                        "links": [
-                          {
-                            "label": "United Nations data",
-                            "url": "https://data.un.org",
-                            "emoji": "🌍",
-                            "tag": "GLOBAL"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p_gov",
-                            "label": "Government",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_i_un",
-                        "label": "United Nations",
-                        "color": "#386878",
-                        "desc": "Founded 1945. 193 member states. Limited enforcement power, real coordination function. The Security Council's structure — permanent vetoes for the World War II winners — has not aged well.",
-                        "links": [
-                          {
-                            "label": "United Nations data",
-                            "url": "https://data.un.org",
-                            "emoji": "🌍",
-                            "tag": "GLOBAL"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h1",
-                            "label": "Nations & Empire",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_i_war",
-                        "label": "Laws of War",
-                        "color": "#382828",
-                        "desc": "Geneva Conventions. The rules nations have agreed apply even in armed conflict. Honored more than they used to be. Violated routinely.",
-                        "links": [
-                          {
-                            "label": "United Nations data",
-                            "url": "https://data.un.org",
-                            "emoji": "🌍",
-                            "tag": "GLOBAL"
-                          },
-                          {
-                            "label": "Federation of American Scientists",
-                            "url": "https://fas.org",
-                            "emoji": "🔬",
-                            "tag": "POLICY"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h3",
-                            "label": "War & Revolutions",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_i_hr",
-                        "label": "International Human Rights",
-                        "color": "#387088",
-                        "desc": "The framework built since 1948. Universal Declaration. Various conventions. The U.S. has signed many and ratified fewer. Enforcement is largely by reputation and aid leverage.",
-                        "links": [
-                          {
-                            "label": "United Nations data",
-                            "url": "https://data.un.org",
-                            "emoji": "🌍",
-                            "tag": "GLOBAL"
-                          },
-                          {
-                            "label": "ACLU",
-                            "url": "https://www.aclu.org",
-                            "emoji": "⚖️",
-                            "tag": "RIGHTS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6_r_hum",
-                            "label": "Human Rights",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_i_cr",
-                        "label": "International Criminal Law",
-                        "color": "#383028",
-                        "desc": "The International Criminal Court. War crimes. Crimes against humanity. The U.S. is not a party. Several major powers aren't. The court has prosecuted mostly African leaders, which is part of why those countries aren't parties either.",
-                        "links": [
-                          {
-                            "label": "United Nations data",
-                            "url": "https://data.un.org",
-                            "emoji": "🌍",
-                            "tag": "GLOBAL"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "h6",
-                            "label": "Law",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6_i_trade",
-                        "label": "Trade Law",
-                        "color": "#387880",
-                        "desc": "WTO. Bilateral trade agreements. The framework that governs how goods, services, and capital cross borders. American leadership of the post-war trade order has shifted in the last decade.",
-                        "links": [
-                          {
-                            "label": "United Nations data",
-                            "url": "https://data.un.org",
-                            "emoji": "🌍",
-                            "tag": "GLOBAL"
-                          },
-                          {
-                            "label": "Bureau of Economic Analysis",
-                            "url": "https://www.bea.gov",
-                            "emoji": "📊",
-                            "tag": "DATA"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "p2_m_trade",
-                            "label": "Trade",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "bottomPills": [
-                      {
-                        "id": "h1",
-                        "label": "Nations & Empire",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p_gov",
-                        "label": "Government",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h3",
-                        "label": "War & Revolutions",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  }
-                ],
+                "topPills": [],
                 "bottomPills": [],
                 "orbs": []
               },
@@ -9534,24 +8067,6 @@ const LAYERS = [
               }
             ],
             "orbs": []
-          },
-          {
-            "id": "f_rc_d1",
-            "label": "Place",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "f_rc_d2",
-            "label": "Rights & Responsibilities",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
           }
         ],
         "bottomPills": [
@@ -9596,7 +8111,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       }
     ],
     "bottomPills": []
@@ -11280,7 +9796,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "c_env",
@@ -13865,7 +12382,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "c4",
@@ -15279,7 +13797,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       }
     ],
     "topPills": [
@@ -15899,8 +14418,7 @@ const LAYERS = [
               {
                 "id": "e1_open",
                 "label": "Open Knowledge",
-                "color": "#4868b8",
-                "desc": "Wikipedia. Khan Academy. The Internet Archive. Project Gutenberg. OpenCourseWare. The open knowledge movement holds that information essential to human flourishing should be free, accessible, and maintained by communities rather than owned by corporations. It is one of the more quietly radical ideas of the digital age, and it is working.",
+                "desc": "",
                 "links": [],
                 "topPills": [],
                 "bottomPills": [],
@@ -15939,501 +14457,7 @@ const LAYERS = [
                 "label": "Tools, Tech & AI",
                 "desc": "",
                 "links": [],
-                "topPills": [
-                  {
-                    "id": "c7_ai",
-                    "label": "Artificial Intelligence",
-                    "color": "#4870c8",
-                    "desc": "",
-                    "links": [
-                      {
-                        "label": "What is AI? — MIT explainer",
-                        "url": "https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      },
-                      {
-                        "label": "AI for Everyone — free course, Coursera",
-                        "url": "https://www.coursera.org/learn/ai-for-everyone",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      },
-                      {
-                        "label": "How AI is used to track & control — EFF",
-                        "url": "https://www.eff.org/issues/ai",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      },
-                      {
-                        "label": "AI & democracy — Knight Foundation",
-                        "url": "https://knightfoundation.org/topics/artificial-intelligence/",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      },
-                      {
-                        "label": "USNow AI Infographic — coming soon",
-                        "url": "https://www.usnow.app/#data",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c7_ownership",
-                    "label": "Who Owns the Invention?",
-                    "color": "#3860b8",
-                    "desc": "The technologies that made Silicon Valley possible were almost entirely funded by the public. The internet: DARPA. GPS: the military. The touchscreen: University of Delaware on NSF grants. Siri: DARPA again. Voice recognition, satellite navigation, the browser, fiber optics — the basic research that makes every smartphone possible was paid for by taxpayers and handed to private companies at the moment it became profitable. This is not a conspiracy. It is policy. The question of who should benefit from publicly funded innovation is one of the most important economic questions nobody is asking out loud.",
-                    "links": [
-                      {
-                        "label": "USASpending.gov — federal R&D",
-                        "url": "https://www.usaspending.gov",
-                        "emoji": "💰",
-                        "tag": "BUDGET"
-                      },
-                      {
-                        "label": "Costs of War — defense research",
-                        "url": "https://watson.brown.edu/costsofwar",
-                        "emoji": "🪖",
-                        "tag": "MILITARY"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "p_gov_publicgood",
-                        "label": "The Public Good",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p_mil",
-                        "label": "Military",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p_corp",
-                        "label": "Corporations",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [
-                          {
-                            "id": "p_corp_cor",
-                            "label": "Corruption",
-                            "color": "#883030",
-                            "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "p_corp_monopoly",
-                            "label": "Monopoly & Capture",
-                            "color": "#902828",
-                            "desc": "The Sherman Antitrust Act was passed in 1890 because Americans had seen this movie before — Standard Oil, the railroads, the steel trusts. The lesson was that unchecked market power eventually stops being market power and becomes political power. That lesson was learned, applied, and then gradually forgotten over fifty years of deregulation and the theory that big is efficient. The tech monopolies of the current era are Standard Oil with better PR and a more complicated product.",
-                            "links": [
-                              {
-                                "label": "ProPublica — corporate power",
-                                "url": "https://www.propublica.org",
-                                "emoji": "📰",
-                                "tag": "JOURNALISM"
-                              },
-                              {
-                                "label": "OpenSecrets — corporate lobbying",
-                                "url": "https://www.opensecrets.org",
-                                "emoji": "💰",
-                                "tag": "MONEY"
-                              }
-                            ],
-                            "topPills": [],
-                            "bottomPills": [
-                              {
-                                "id": "p_gov_cor",
-                                "label": "Corruption",
-                                "desc": "",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": [],
-                                "orbs": []
-                              },
-                              {
-                                "id": "c7_platform",
-                                "label": "Platform Capture",
-                                "desc": "",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": [],
-                                "orbs": []
-                              }
-                            ],
-                            "orbs": []
-                          },
-                          {
-                            "id": "p_corp_tech",
-                            "label": "The Tech Giants",
-                            "color": "#7a2828",
-                            "desc": "Five companies now control more of the world's information infrastructure than any empire in history controlled territory. They did not seize it. They built it, product by product, acquisition by acquisition, until the infrastructure was them. Understanding what they are — not just what they sell — is one of the essential literacy requirements of the current era.",
-                            "links": [
-                              {
-                                "label": "EFF — big tech accountability",
-                                "url": "https://www.eff.org",
-                                "emoji": "📡",
-                                "tag": "TECH"
-                              },
-                              {
-                                "label": "MIT Technology Review",
-                                "url": "https://www.technologyreview.com",
-                                "emoji": "📡",
-                                "tag": "TECH"
-                              }
-                            ],
-                            "topPills": [
-                              {
-                                "id": "p_corp_apple",
-                                "label": "Apple",
-                                "color": "#7a2828",
-                                "desc": "The design company that became a religion, then a supply chain, then a surveillance device you carry in your pocket and love. Apple did not invent the smartphone. It invented the smartphone you couldn't imagine not having. The genius was not the technology — it was the experience, the identity, the feeling of belonging to something. Every Apple product is a mirror that shows you a slightly better version of yourself. That is worth a lot of money and it turns out people will pay almost anything for it.",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": [],
-                                "orbs": []
-                              },
-                              {
-                                "id": "p_corp_google",
-                                "label": "Google",
-                                "color": "#6a2020",
-                                "desc": "Started as a search engine — a better way to find things on the internet. Then it became the advertising system the internet runs on. Then the map. Then the email. Then the phone operating system used by 70% of the world. Then the browser. Then the AI. Google did not take over the internet. It became the interface through which most of the world experiences the internet. The search bar is not a tool. It is the front door to a system that knows more about your intentions than you do.",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": [
-                                  {
-                                    "id": "e1_surveillance",
-                                    "label": "Surveillance Capitalism",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  }
-                                ],
-                                "orbs": []
-                              },
-                              {
-                                "id": "p_corp_amazon",
-                                "label": "Amazon",
-                                "color": "#882828",
-                                "desc": "It started with books. Then everything else. Then it became the store that other stores sell through — charging them rent while competing against them with its own products. Then AWS, which now runs a significant portion of the internet including Netflix, the CIA, and most of the startups that consider themselves Amazon's competitors. The everything store became the everything infrastructure. Jeff Bezos started in a garage in Bellevue with $300,000 from his parents and a Princeton degree. The garage was real. The rest of the origin story needs footnotes.",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": [
-                                  {
-                                    "id": "c7_platform",
-                                    "label": "Platform Capture",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "c7_garage",
-                                    "label": "The Garage Myth",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  }
-                                ],
-                                "orbs": []
-                              },
-                              {
-                                "id": "p_corp_meta",
-                                "label": "Meta",
-                                "color": "#782020",
-                                "desc": "Facebook was built to rate the attractiveness of Harvard women and became the public square for three billion people. The pivot from social network to political influence machine was not an accident — it was the product of an engagement algorithm that discovered outrage was more profitable than connection and optimized accordingly. Meta did not create political polarization. It found it, amplified it, sold advertising against it, and called the result community.",
-                                "links": [
-                                  {
-                                    "label": "Pew Research — social media & democracy",
-                                    "url": "https://www.pewresearch.org/internet/",
-                                    "emoji": "📡",
-                                    "tag": "TECH"
-                                  }
-                                ],
-                                "topPills": [],
-                                "bottomPills": [
-                                  {
-                                    "id": "c2",
-                                    "label": "Social Media",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "c7_algo_editor",
-                                    "label": "The Algorithm as Editor",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  }
-                                ],
-                                "orbs": []
-                              },
-                              {
-                                "id": "p_corp_microsoft",
-                                "label": "Microsoft",
-                                "color": "#6a1818",
-                                "desc": "The original tech monopoly — convicted of antitrust violations in 2000 and somehow still here, larger than ever. Microsoft survived its antitrust case, reinvented itself as cloud infrastructure, acquired LinkedIn and GitHub, invested billions in OpenAI, and quietly became the enterprise operating system for most of the world's businesses. The lesson of Microsoft is that a monopoly broken in the courts can reconstitute itself in a different shape faster than regulation can follow.",
-                                "links": [],
-                                "topPills": [],
-                                "bottomPills": [
-                                  {
-                                    "id": "p_corp_monopoly",
-                                    "label": "Monopoly & Capture",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  }
-                                ],
-                                "orbs": []
-                              },
-                              {
-                                "id": "p_corp_openai",
-                                "label": "OpenAI & The AI Race",
-                                "color": "#5a1010",
-                                "desc": "Founded as a nonprofit to ensure artificial intelligence benefits all of humanity. Became a capped-profit company backed by Microsoft. Released ChatGPT and changed the public's relationship to AI overnight. The current chapter of the tech story is being written in real time — who controls the most powerful AI systems, who sets the safety standards, who decides what the technology is for. The garage myth is running at civilizational scale. The stakes have never been higher and the accountability has never been thinner.",
-                                "links": [
-                                  {
-                                    "label": "EFF — AI accountability",
-                                    "url": "https://www.eff.org/issues/ai",
-                                    "emoji": "📡",
-                                    "tag": "TECH"
-                                  },
-                                  {
-                                    "label": "MIT Technology Review — AI",
-                                    "url": "https://www.technologyreview.com",
-                                    "emoji": "📡",
-                                    "tag": "TECH"
-                                  }
-                                ],
-                                "topPills": [],
-                                "bottomPills": [
-                                  {
-                                    "id": "c7_ai",
-                                    "label": "Artificial Intelligence",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  },
-                                  {
-                                    "id": "p_gov_cor",
-                                    "label": "Corruption",
-                                    "desc": "",
-                                    "links": [],
-                                    "topPills": [],
-                                    "bottomPills": [],
-                                    "orbs": []
-                                  }
-                                ],
-                                "orbs": []
-                              }
-                            ],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c7_garage",
-                    "label": "The Garage Myth",
-                    "color": "#4868c0",
-                    "desc": "Amazon started in a garage. Apple started in a garage. Hewlett-Packard started in a garage. The garage is the American creation myth of the technology age — the lone genius, the humble origin, the pure meritocracy of ideas. It is also carefully curated. Bezos had a Princeton degree, a Wall Street salary, and $300,000 from his parents before the garage. Jobs had Wozniak, who actually built the thing. The myth is not entirely false — the work was real, the vision was real. But the myth erases the infrastructure, the capital, the connections, and the publicly funded research that made the garage possible. The dream is real. The story told about it is edited.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "f_class",
-                        "label": "Class",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p2_american_dream",
-                        "label": "The American Dream",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c7_platform",
-                    "label": "Platform Capture",
-                    "color": "#5070c8",
-                    "desc": "Amazon started selling books. Then everything. Then it became the store other stores sell through. Then it became the cloud infrastructure most of the internet runs on. Google started as a search engine. Now it is the advertising system, the email provider, the map, the phone operating system, and the browser for most of the planet. This is not coincidence or pure market efficiency. It is a specific strategy: start with a product, use the data and capital it generates to become the infrastructure, then charge rent on the infrastructure everyone now depends on. The garage became the landlord.",
-                    "links": [
-                      {
-                        "label": "EFF — platform accountability",
-                        "url": "https://www.eff.org",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      },
-                      {
-                        "label": "MIT Technology Review",
-                        "url": "https://www.technologyreview.com",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "p_corp",
-                        "label": "Corporations",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "e1_surveillance",
-                        "label": "Surveillance Capitalism",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c2",
-                        "label": "Social Media",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c7_controlled",
-                    "label": "Controlled Release",
-                    "color": "#3858b0",
-                    "desc": "The technologies that appear suddenly and change everything are rarely as sudden as they appear. GPS was military technology for decades before civilians got access. The internet existed as ARPANET for twenty years before it was public. Voice recognition, facial recognition, autonomous vehicles — these have existed in classified and corporate research for years before their public announcement. The question of when a technology gets released, to whom, and at what price is a political decision. The garage story implies serendipity. The actual history implies strategy.",
-                    "links": [
-                      {
-                        "label": "Quincy Institute — military & technology",
-                        "url": "https://quincyinst.org",
-                        "emoji": "🪖",
-                        "tag": "MILITARY"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "p_mil",
-                        "label": "Military",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c7_ownership",
-                        "label": "Who Owns the Invention?",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c7_algo_editor",
-                    "label": "The Algorithm as Editor",
-                    "color": "#4060b8",
-                    "desc": "Before the algorithm there were editors — human beings who decided what was newsworthy, what was true enough to print, what deserved the front page. They were imperfect and sometimes corrupt. The algorithm replaced them with something that has no concept of truth, only engagement. The most engaging content is not the most accurate content. It is the most emotionally activating content. Outrage travels faster than correction. Fear travels faster than reassurance. The algorithm did not create human division. It found it, monetized it, and scaled it to a billion people simultaneously.",
-                    "links": [
-                      {
-                        "label": "EFF — algorithmic accountability",
-                        "url": "https://www.eff.org",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      },
-                      {
-                        "label": "Pew Research — algorithms & news",
-                        "url": "https://www.pewresearch.org/internet/",
-                        "emoji": "📡",
-                        "tag": "TECH"
-                      }
-                    ],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "c2",
-                        "label": "Social Media",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "edu_tp4",
-                        "label": "Misinformation",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "pol_tp4",
-                        "label": "The Fourth Estate",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  }
-                ],
+                "topPills": [],
                 "bottomPills": [],
                 "orbs": []
               },
@@ -16470,7 +14494,8 @@ const LAYERS = [
                 "bottomPills": []
               }
             ],
-            "orbs": []
+            "orbs": [],
+            "inProgress": true
           },
           {
             "id": "e1_open",
@@ -18342,59 +16367,7 @@ const LAYERS = [
                     "label": "Economy & Money",
                     "desc": "",
                     "links": [],
-                    "topPills": [
-                      {
-                        "id": "p2_american_dream",
-                        "label": "The American Dream",
-                        "color": "#983030",
-                        "desc": "The promise: work hard, play by the rules, and you can make it from anywhere to anywhere. At its best it was true often enough to be believable and motivating. At its worst it is the story told to people being exploited to explain why their exploitation is their own fault. The dream has always been more accessible to some than others — by race, by class, by the zip code you started in. The gap between the dream and the data is not incidental. It is the most revealing fact about American economic life. And yet the dream persists — because sometimes, just often enough, it is true.",
-                        "links": [
-                          {
-                            "label": "Pew Research — economic mobility",
-                            "url": "https://www.pewresearch.org/social-trends/",
-                            "emoji": "📊",
-                            "tag": "DATA"
-                          },
-                          {
-                            "label": "Urban Institute — opportunity & inequality",
-                            "url": "https://www.urban.org",
-                            "emoji": "📊",
-                            "tag": "DATA"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "f_class",
-                            "label": "Class",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "f_rc",
-                            "label": "Race & Ethnicity",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "c7_garage",
-                            "label": "The Garage Myth",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
+                    "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   }
@@ -21094,7 +19067,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "c7",
@@ -21158,12 +19132,6 @@ const LAYERS = [
               {
                 "label": "AI & democracy — Knight Foundation",
                 "url": "https://knightfoundation.org/topics/artificial-intelligence/",
-                "emoji": "📡",
-                "tag": "TECH"
-              },
-              {
-                "label": "USNow AI Infographic — coming soon",
-                "url": "https://www.usnow.app/#data",
                 "emoji": "📡",
                 "tag": "TECH"
               }
@@ -22290,7 +20258,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       }
     ],
     "topPills": [
@@ -25161,7 +23130,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "p5",
@@ -26983,6 +24953,15 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
+              },
+              {
+                "id": "h3_perm_war",
+                "label": "The Permanent War Economy",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
               }
             ],
             "orbs": []
@@ -28222,7 +26201,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "p2",
@@ -30039,7 +28019,8 @@ const LAYERS = [
             "bottomPills": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       }
     ],
     "bottomPills": []
@@ -31554,7 +29535,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "h3",
@@ -32408,6 +30390,15 @@ const LAYERS = [
                 "links": [],
                 "topPills": [],
                 "bottomPills": []
+              },
+              {
+                "id": "pmil_mic",
+                "label": "Military-Industrial Complex",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
               }
             ]
           },
@@ -32553,7 +30544,7 @@ const LAYERS = [
             "id": "h6_rt",
             "label": "Rights & Duties",
             "color": "#386898",
-            "desc": "What citizens are owed and what they owe back. The American conversation about rights is loud. The conversation about duties is quieter. Both are part of the deal — and the deal has been renegotiated repeatedly across the country's history, mostly in the direction of expanding who counts as a full participant in it.",
+            "desc": "What citizens are owed and what they owe. The American conversation about rights is loud and the conversation about duties is quieter. Both are part of the deal. The deal has been renegotiated repeatedly across the country's history, mostly in the direction of expanding who counts as a citizen.",
             "links": [
               {
                 "label": "ACLU — know your rights",
@@ -32585,7 +30576,7 @@ const LAYERS = [
                 "id": "h6_r_civ",
                 "label": "Civil Rights",
                 "color": "#286088",
-                "desc": "What you are entitled to as a person under the law — the right to vote, speak, assemble, and be free from discrimination. American civil rights have expanded across two centuries through court rulings, legislation, and movements that did not take no for an answer. The gains are real. The rollback is also real and ongoing.",
+                "desc": "What you are entitled to as a person under the law. Vote. Speak. Assemble. Be free of discrimination. American civil rights have expanded across two centuries through court rulings, legislation, and movements that did not take no for an answer.",
                 "links": [
                   {
                     "label": "ACLU — civil rights",
@@ -32642,7 +30633,7 @@ const LAYERS = [
                 "id": "h6_r_hum",
                 "label": "Human Rights",
                 "color": "#387098",
-                "desc": "The rights people are owed because they are people — not because of their citizenship, country of birth, or legal status. The Universal Declaration in 1948 set the framework. The U.S. helped write it and has had a complicated relationship with it ever since, often invoking it abroad and resisting its application at home.",
+                "desc": "The rights people are owed because they are people, not because of citizenship. The Universal Declaration in 1948 set the framework. The U.S. has had a complicated relationship with the framework ever since.",
                 "links": [
                   {
                     "label": "UN Human Rights — OHCHR",
@@ -32690,7 +30681,7 @@ const LAYERS = [
                 "id": "h6_r_du",
                 "label": "Civic Duties",
                 "color": "#3878a8",
-                "desc": "The other side of the deal. Vote. Pay taxes. Serve on juries when called. Show up. American civic culture has gotten noticeably thinner on the duties side over living memory — at the same time as it has gotten louder about rights. The two trends are connected.",
+                "desc": "The other side. Vote. Pay taxes. Serve on juries. Show up. American civic culture has gotten thinner on the duties side in living memory.",
                 "links": [
                   {
                     "label": "USA.gov — civic responsibilities",
@@ -32738,7 +30729,7 @@ const LAYERS = [
                 "id": "h6_r_vot",
                 "label": "Voting Rights",
                 "color": "#286898",
-                "desc": "The right that protects the others. When people can vote, they can change everything else. American voting rights have expanded and contracted across cycles — the Voting Rights Act of 1965 was the high water mark. The Supreme Court gutted its core enforcement mechanism in 2013. State legislatures noticed immediately.",
+                "desc": "The right that protects the others. American voting rights have expanded and contracted across cycles. The Voting Rights Act of 1965 was the high water mark. Recent court decisions and state laws have rolled back significant pieces.",
                 "links": [
                   {
                     "label": "Brennan Center — voting rights",
@@ -32786,7 +30777,7 @@ const LAYERS = [
                 "id": "h6_r_pri",
                 "label": "Privacy",
                 "color": "#487898",
-                "desc": "The right not enumerated in the Constitution and largely constructed by the courts — reading between lines written in 1787 for a world without phones, algorithms, or facial recognition. American privacy law is uneven, mostly weaker than European equivalents, and increasingly outpaced by technology that arrived decades after the relevant precedents.",
+                "desc": "The right not enumerated in the Constitution and largely constructed by the courts. Privacy law in the U.S. is uneven, mostly weaker than European peers, and increasingly tested by technology that did not exist when most of the relevant law was written.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -32834,7 +30825,7 @@ const LAYERS = [
                 "id": "h6_r_due",
                 "label": "Due Process",
                 "color": "#4878a0",
-                "desc": "The promise that the government cannot take your life, liberty, or property without proper procedure. It sounds simple. It is not. American due process is real and uneven — better resourced in some courtrooms than others, applied more strictly for some defendants than others, and hollowed out in practice by the plea bargain system that handles 97% of criminal cases.",
+                "desc": "The promise that the government cannot take your life, liberty, or property without proper procedure. American due process is real and uneven — better in some courtrooms than others, weaker for the poor and people of color across the system.",
                 "links": [
                   {
                     "label": "Cornell Legal Information Institute — due process",
@@ -32914,7 +30905,7 @@ const LAYERS = [
             "id": "h6_court",
             "label": "Courts & Judges",
             "color": "#5878a8",
-            "desc": "Where the law gets interpreted in practice — which is a different thing from what the law says on paper. American courts are the most powerful judiciary in the world. They can strike down laws passed by elected legislatures. They have. The Supreme Court is the apex. The lower courts do most of the actual work, for most of the actual people.",
+            "desc": "How the law gets interpreted in practice. American courts are the most powerful judiciary in the world — they can strike down laws passed by elected legislatures, and they have. The Supreme Court is the apex. The lower courts do most of the actual work.",
             "links": [
               {
                 "label": "Oyez — Supreme Court cases & oral arguments",
@@ -32946,7 +30937,7 @@ const LAYERS = [
                 "id": "h6_co_sct",
                 "label": "Supreme Court",
                 "color": "#487098",
-                "desc": "Nine justices. Lifetime appointments. The most consequential court in the world. Composition shifts political weight for decades at a time — a single vacancy, timed well, can reshape the country's legal landscape for a generation. The current court is the most conservative since before the New Deal. What it does with that power will define the next thirty years.",
+                "desc": "Nine justices. Lifetime appointments. The most consequential court in the country. The composition shifts political weight for decades at a time and the current composition is meaningfully different from any in living memory.",
                 "links": [
                   {
                     "label": "Oyez — Supreme Court audio archive",
@@ -33003,7 +30994,7 @@ const LAYERS = [
                 "id": "h6_co_app",
                 "label": "Appellate Courts",
                 "color": "#5878a8",
-                "desc": "The federal circuit courts of appeal. Most cases that actually matter — the ones that set binding precedent — get decided here, not at the Supreme Court. The circuits have developed distinct legal cultures. The Ninth Circuit and the Fifth Circuit read the same Constitution and reach different answers, regularly.",
+                "desc": "The federal courts of appeal. Most cases that matter get decided here, not at the Supreme Court. The geographical circuits have developed distinct legal cultures.",
                 "links": [
                   {
                     "label": "Cornell Legal Information Institute",
@@ -33045,7 +31036,7 @@ const LAYERS = [
                 "id": "h6_co_dis",
                 "label": "District Courts",
                 "color": "#6888b8",
-                "desc": "The federal trial courts — where evidence gets heard, witnesses testify, and verdicts come in. Ninety-four districts covering the country. This is where the law meets the person. Most federal cases never go higher than this, which makes the district court judge the most consequential legal figure most defendants will ever encounter.",
+                "desc": "The federal trial courts. Where the evidence gets heard, the witnesses testify, the verdict comes in. Most federal cases never go higher than this.",
                 "links": [
                   {
                     "label": "US Courts — understanding federal courts",
@@ -33087,7 +31078,7 @@ const LAYERS = [
                 "id": "h6_co_st",
                 "label": "State Courts",
                 "color": "#7898c8",
-                "desc": "Where most American litigation actually happens. State courts handle the overwhelming majority of criminal prosecutions, family law, contract disputes, landlord-tenant cases, and small claims. The quality, consistency, and fairness of state courts varies enormously by state — and by county.",
+                "desc": "Where most American litigation actually happens. State courts handle the overwhelming majority of criminal cases, family law, contracts, and small claims.",
                 "links": [
                   {
                     "label": "NCSC — National Center for State Courts",
@@ -33129,7 +31120,7 @@ const LAYERS = [
                 "id": "h6_co_jud",
                 "label": "How Judges Get There",
                 "color": "#5878a0",
-                "desc": "Federal judges are nominated by the president and confirmed by the Senate. State judges in most states are elected — a practice almost unique among democracies. The political weight of judicial elections has grown dramatically in step with the courts' policy importance. Campaign money now flows into state supreme court races at levels that would have seemed absurd a generation ago.",
+                "desc": "How they get there and who they are. Federal judges are nominated and confirmed. State judges in most places are elected. The political weight of judicial elections has grown in step with the courts' policy importance.",
                 "links": [
                   {
                     "label": "Brennan Center — judicial independence",
@@ -33171,7 +31162,7 @@ const LAYERS = [
                 "id": "h6_co_jur",
                 "label": "Juries",
                 "color": "#6888b8",
-                "desc": "Twelve neighbors deciding the fate of one defendant. The jury trial is constitutionally guaranteed and practically rare — most criminal cases now resolve through plea bargains where no jury is ever seated. Fewer than 2% of federal criminal cases go to trial. The constitutional right remains. Its exercise has been systematically bargained away by a system that rewards guilty pleas and punishes those who insist on their day in court.",
+                "desc": "The other branch. Twelve neighbors deciding the fate of one defendant. Jury trials have shrunk dramatically — most criminal cases now resolve through plea bargains. The constitutional right is more theoretical than practical for most defendants.",
                 "links": [
                   {
                     "label": "ACLU — plea bargaining and trial rights",
@@ -33244,7 +31235,6 @@ const LAYERS = [
           {
             "id": "h6_crim",
             "label": "Crime & Punishment",
-            "color": "#583020",
             "desc": "What the state does about wrongdoing — and who it decides is doing wrong. The American criminal legal system holds more people in prison than any country on earth, in raw numbers and per capita. It disproportionately targets poor people and people of color. The data is not contested. What to do about it is.",
             "links": [
               {
@@ -33606,13 +31596,14 @@ const LAYERS = [
                 "orbs": []
               }
             ],
-            "orbs": []
+            "orbs": [],
+            "color": "#583020"
           },
           {
             "id": "h6_prop",
             "label": "Property & Contracts",
             "color": "#785838",
-            "desc": "The legal scaffolding of the private economy. Most of what private law does is define what can be owned and enforce agreements between parties. The choices about what counts as property and which contracts courts will enforce are not neutral — they reflect who had power when the rules were written, and they compound that power over time.",
+            "desc": "The legal scaffolding of the economy. Most of what private law does is enforce property and contracts. The choices about what counts as property and what contracts will be enforced shape who gets what.",
             "links": [
               {
                 "label": "Cornell Legal Information Institute",
@@ -33638,7 +31629,7 @@ const LAYERS = [
                 "id": "h6_p_pro",
                 "label": "Property",
                 "color": "#684828",
-                "desc": "What you can own — and who decided. American property law evolved to enable extraction: of land from indigenous nations through treaty and seizure, of labor from enslaved people, of resources from public lands at below-market rates. The forms have changed. Some of the patterns that produced concentrated ownership have not.",
+                "desc": "What you can own. American property law evolved to enable extraction — of land from indigenous nations, of labor from enslaved people, of resources from public lands. The forms have changed. Some of the patterns haven't.",
                 "links": [
                   {
                     "label": "Cornell Legal Information Institute",
@@ -33689,7 +31680,7 @@ const LAYERS = [
                 "id": "h6_p_real",
                 "label": "Real Property",
                 "color": "#785838",
-                "desc": "Land — and the law that governs it. Zoning, easements, eminent domain, deed restrictions, mortgages — all the structures that determine who lives where, what gets built, and who bears the cost of development decisions made by people who don't live there. Zoning in particular has been used to enforce racial and economic segregation long after explicit discrimination became illegal.",
+                "desc": "Land. The most heavily regulated property type. Zoning, easements, eminent domain, mortgages — all the structures that shape who lives where.",
                 "links": [
                   {
                     "label": "Cornell Legal Information Institute — property law",
@@ -33731,7 +31722,7 @@ const LAYERS = [
                 "id": "h6_p_int",
                 "label": "Intellectual Property",
                 "color": "#886038",
-                "desc": "Copyrights, patents, trademarks — and increasingly, genetic sequences, algorithms, and brand identities. The category has expanded to cover things the original framers of IP law never imagined. Each extension was argued as protecting creators. Each has ended up primarily protecting the corporations that acquired the creators' rights.",
+                "desc": "Copyrights, patents, trademarks. The category has grown enormously to cover ideas, processes, brands, and increasingly genetic information. Each extension was sold as protecting creators. Each ended up mostly protecting corporations.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation — IP and digital rights",
@@ -33779,7 +31770,7 @@ const LAYERS = [
                 "id": "h6_p_con",
                 "label": "Contracts",
                 "color": "#785030",
-                "desc": "Promises the law will enforce. The classical theory requires offer, acceptance, and consideration freely given by parties of roughly equal standing. Most modern contracts are not negotiated — they are presented. Click accept or don't use the service. The legal fiction of mutual agreement between equals has never been thinner.",
+                "desc": "Promises the law will enforce. Most modern contracts are not negotiated. They are presented. Take it or leave it. The legal fiction of mutual agreement has gotten thin.",
                 "links": [
                   {
                     "label": "Cornell Legal Information Institute — contracts",
@@ -33802,7 +31793,7 @@ const LAYERS = [
                   {
                     "id": "h6_p_arb",
                     "label": "Arbitration",
-                    "desc": "",
+                    "desc": "How disputes get resolved when the contract requires it. Arbitration moves disputes out of courts and into private fora chosen by the corporation. The outcomes favor the corporations. The Supreme Court has expanded enforcement of arbitration clauses across decades.",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
@@ -33814,56 +31805,17 @@ const LAYERS = [
               {
                 "id": "h6_p_arb",
                 "label": "Arbitration",
-                "color": "#583018",
-                "desc": "How disputes get resolved when the contract requires it — which almost all consumer and employment contracts now do. Arbitration moves disputes out of courts and into private proceedings run by firms that depend on corporate repeat business. Studies consistently show outcomes favor the corporate party. The Supreme Court has expanded enforcement of mandatory arbitration clauses across four decades, over repeated congressional attempts to limit it.",
-                "links": [
-                  {
-                    "label": "ACLU — forced arbitration",
-                    "url": "https://www.aclu.org",
-                    "emoji": "⚖️",
-                    "tag": "RIGHTS"
-                  },
-                  {
-                    "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
-                    "tag": "RIGHTS"
-                  },
-                  {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
-                    "emoji": "⚖️",
-                    "tag": "LAW"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "h6_co_sct",
-                    "label": "Supreme Court",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_corp",
-                    "label": "Corporations",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
                 "id": "h6_p_bk",
                 "label": "Bankruptcy",
                 "color": "#684830",
-                "desc": "The legal escape valve — and a window into what the system actually values. Bankruptcy law in the U.S. is more generous to corporations than to individuals. A company can shed debts, renegotiate contracts, and emerge reorganized. An individual carrying student loan debt cannot discharge it. Most medical debt can be discharged. Student debt cannot. That asymmetry is a policy choice, not an economic law.",
+                "desc": "The legal escape valve. Bankruptcy law in the U.S. is more generous to corporations than to individuals. Student debt does not discharge. Most medical debt does. The structure says something about the priorities.",
                 "links": [
                   {
                     "label": "Cornell Legal Information Institute — bankruptcy",
@@ -33936,7 +31888,6 @@ const LAYERS = [
           {
             "id": "h6_const",
             "label": "Constitutional Law",
-            "color": "#5878b8",
             "desc": "The text everything is supposed to flow from. The U.S. Constitution is short, old, and contested at every significant clause. What it means is mostly what nine people in lifetime-appointed robes say it means at any given moment. That is more interpretive power for a smaller group of unelected people than the framers — who feared concentrated power — probably intended to create.",
             "links": [
               {
@@ -34247,12 +32198,12 @@ const LAYERS = [
                 "orbs": []
               }
             ],
-            "orbs": []
+            "orbs": [],
+            "color": "#5878b8"
           },
           {
             "id": "h6_int",
             "label": "International Law",
-            "color": "#386878",
             "desc": "The law between nations — treaties, custom, and the institutions of the post-1945 order. International law has fewer enforcement teeth than domestic law and matters anyway, until a powerful country decides it doesn't. The U.S. helped write most of the current framework and is among its most selective followers.",
             "links": [
               {
@@ -34578,11 +32529,13 @@ const LAYERS = [
                 "orbs": []
               }
             ],
-            "orbs": []
+            "orbs": [],
+            "color": "#386878"
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "h1",
@@ -36895,7 +34848,8 @@ const LAYERS = [
           }
         ],
         "bottomPills": [],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "h2",
@@ -37744,7 +35698,8 @@ const LAYERS = [
         "color": "#7858a0",
         "x": 88,
         "y": 54,
-        "size": 46
+        "size": 46,
+        "inProgress": true
       }
     ],
     "topPills": [
@@ -38581,219 +36536,11 @@ const LAYERS = [
                   {
                     "id": "geo_shifting",
                     "label": "The Shifting Order",
-                    "desc": "The international order built after WWII — the United Nations, the World Bank, the IMF, the dollar as reserve currency, US military dominance — is under more pressure than at any point since it was created. It is not collapsing. But it is no longer unchallenged. The question of what comes after American unipolarity — whether a multipolar world is more or less stable than a unipolar one — is the defining geopolitical question of the current era.",
-                    "links": [
-                      {
-                        "label": "Foreign Affairs — world order",
-                        "url": "https://www.foreignaffairs.com",
-                        "emoji": "🌐",
-                        "tag": "GEOPOLITICS"
-                      },
-                      {
-                        "label": "Quincy Institute",
-                        "url": "https://quincyinst.org",
-                        "emoji": "🪖",
-                        "tag": "MILITARY"
-                      }
-                    ],
-                    "topPills": [
-                      {
-                        "id": "geo_shift_american",
-                        "label": "The American Century",
-                        "color": "#5888a8",
-                        "desc": "Henry Luce coined the term in 1941, before the US had even entered WWII. The American Century was the period of uncontested US dominance — military, economic, cultural — that ran from 1945 to some point in the early 21st century that historians will eventually date precisely. At its peak the US produced 50% of global GDP, maintained roughly 800 military bases in 70 countries, and set the rules for international trade, finance, and diplomacy. It also fought Korea, Vietnam, Iraq, and Afghanistan. The question of whether the American Century ended with a success or a failure depends entirely on whose century you think it was.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      },
-                      {
-                        "id": "geo_shift_china",
-                        "label": "China's Challenge",
-                        "color": "#b04040",
-                        "desc": "The Thucydides Trap: when a rising power threatens to displace a ruling power, the result is usually war. Of sixteen historical cases of power transition identified by Graham Allison, twelve ended in war. China is the rising power. The US is the ruling power. Both are nuclear armed. The competition is real — in trade, technology, military capability, and influence — but the stakes of direct conflict are existential for both. Managing this transition without war is the central challenge of 21st century statecraft.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      },
-                      {
-                        "id": "geo_shift_brics",
-                        "label": "BRICS & Multipolarity",
-                        "color": "#7898b8",
-                        "desc": "Brazil, Russia, India, China, South Africa — plus more recent additions — represent an alternative pole of global organization that rejects Western liberal order as the only framework. BRICS countries now represent a larger share of global GDP than the G7. They are building alternative payment systems to avoid dollar dependence, alternative development banks to bypass the IMF, and alternative diplomatic frameworks. Whether this becomes a genuine alternative order or remains a loose coalition of countries that dislike American hegemony for different reasons is still being determined.",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      },
-                      {
-                        "id": "geo_shift_globalsouth",
-                        "label": "The Global South",
-                        "color": "#5a9858",
-                        "desc": "The Global South is not a geographic description — it is a political one. It names the nations of Africa, Latin America, South and Southeast Asia, and Oceania that share a history of colonization, economic extraction, and exclusion from the institutions that govern the global order. These nations were not present at Bretton Woods, where the IMF and World Bank were created. They were not equal parties at the negotiations that established the WTO's trade rules. The term replaced Third World after the Cold War ended and the binary it implied dissolved. What it describes did not change much. The Global South represents the majority of the world's population, most of its land area, and a growing share of its economic output — while remaining underrepresented in the institutions that set the rules it lives under. The current moment is specifically about whether that changes.",
-                        "links": [
-                          {
-                            "label": "Foreign Affairs — Global South",
-                            "url": "https://www.foreignaffairs.com",
-                            "emoji": "🌐",
-                            "tag": "GEOPOLITICS"
-                          },
-                          {
-                            "label": "Al Jazeera — Global South coverage",
-                            "url": "https://www.aljazeera.com",
-                            "emoji": "🌐",
-                            "tag": "GEOPOLITICS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "geo_africa",
-                            "label": "Africa",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "geo_americas",
-                            "label": "The Americas",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "h3_rev_decolonization",
-                            "label": "Decolonization",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "geo_shift_brics",
-                            "label": "BRICS & Multipolarity",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "c_env_cc_justice",
-                            "label": "Climate Justice",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "geo_resources",
-                            "label": "Resources & Control",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          }
-                        ]
-                      },
-                      {
-                        "id": "geo_shift_nam",
-                        "label": "Non-Aligned Movement & G77",
-                        "color": "#6a8858",
-                        "desc": "In 1961, leaders of newly independent nations — Jawaharlal Nehru of India, Gamal Abdel Nasser of Egypt, Josip Broz Tito of Yugoslavia, Kwame Nkrumah of Ghana, Sukarno of Indonesia — founded the Non-Aligned Movement. The premise: newly decolonized nations should not be forced to choose between the American and Soviet blocs. They had their own interests. The movement now has 120 member states and is largely symbolic — the Cold War binary it was designed to resist no longer exists. The G77, founded at the United Nations in 1964, is its more functional successor: a coalition of 134 developing nations that coordinates positions within UN bodies and advocates for trade rules, development financing, and climate arrangements that serve the Global South's interests. It is the largest intergovernmental organization within the UN system that most people have never heard of.",
-                        "links": [
-                          {
-                            "label": "G77 — official site",
-                            "url": "https://www.g77.org",
-                            "emoji": "🌐",
-                            "tag": "GEOPOLITICS"
-                          },
-                          {
-                            "label": "Non-Aligned Movement — history",
-                            "url": "https://www.nam.gov.za",
-                            "emoji": "🌐",
-                            "tag": "GEOPOLITICS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "geo_shift_globalsouth",
-                            "label": "The Global South",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "geo_shift_brics",
-                            "label": "BRICS & Multipolarity",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "h3_rev_decolonization",
-                            "label": "Decolonization",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          }
-                        ]
-                      },
-                      {
-                        "id": "geo_shift_next",
-                        "label": "What Comes Next",
-                        "color": "#4878a8",
-                        "desc": "No one knows. The honest answer to what the post-American order looks like is that we are in the middle of finding out. Climate change is introducing a variable that no geopolitical theory fully accounts for — it does not respect borders, alliances, or spheres of influence, and its effects will redraw the map of where humans can live more dramatically than any war. The countries that adapt fastest, that control the technology of the energy transition, and that manage internal inequality without political collapse will define the next order. That list may not look like the current one.",
-                        "links": [
-                          {
-                            "label": "Foreign Affairs",
-                            "url": "https://www.foreignaffairs.com",
-                            "emoji": "🌐",
-                            "tag": "GEOPOLITICS"
-                          }
-                        ],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "c_env_climate",
-                            "label": "Climate",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          },
-                          {
-                            "id": "p4",
-                            "label": "Global Capital",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": []
-                          }
-                        ]
-                      }
-                    ],
-                    "bottomPills": [
-                      {
-                        "id": "p_mil",
-                        "label": "Military",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      },
-                      {
-                        "id": "h1",
-                        "label": "Nations & Empire",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": []
-                      }
-                    ]
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ]
               },
@@ -42767,7 +40514,8 @@ const LAYERS = [
             "orbs": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "x1",
@@ -42848,26 +40596,6 @@ const LAYERS = [
               {
                 "id": "x3_astro",
                 "label": "Astrology",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
-            "orbs": []
-          },
-          {
-            "id": "x3_astro",
-            "label": "Astrology",
-            "color": "#7a6a9a",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [
-              {
-                "id": "x4",
-                "label": "The Occult",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -43650,51 +41378,6 @@ const LAYERS = [
               }
             ],
             "orbs": []
-          },
-          {
-            "id": "x1_greek",
-            "label": "Greek & Roman Mythology",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_norse",
-            "label": "Norse, Celtic & Slavic",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_egyptian",
-            "label": "Egyptian & Mesopotamian",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x1_creation",
-            "label": "Creation Myths",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "x3_astro",
-            "label": "Astrology",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
           }
         ],
         "bottomPills": [
@@ -43715,9 +41398,30 @@ const LAYERS = [
             "topPills": [],
             "bottomPills": [],
             "orbs": []
+          },
+          {
+            "id": "x3_astro",
+            "label": "Astrology",
+            "color": "#7a6a9a",
+            "desc": "",
+            "links": [],
+            "topPills": [],
+            "bottomPills": [
+              {
+                "id": "x4",
+                "label": "The Occult",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+            ],
+            "orbs": []
           }
         ],
-        "orbs": []
+        "orbs": [],
+        "inProgress": true
       },
       {
         "id": "x5",
@@ -44620,15 +42324,6 @@ const LAYERS = [
                 ]
               },
               {
-                "id": "x5_judaism",
-                "label": "Judaism",
-                "desc": "",
-                "color": "#6a58a0",
-                "links": [],
-                "topPills": [],
-                "bottomPills": []
-              },
-              {
                 "id": "x5_mandaean",
                 "label": "Mandaeism",
                 "color": "#7a5c9a",
@@ -45513,205 +43208,7 @@ const LAYERS = [
             "label": "Myth",
             "desc": "",
             "links": [],
-            "topPills": [
-              {
-                "id": "x3_astro",
-                "label": "Astrology",
-                "color": "#7a6a9a",
-                "desc": "The oldest observatory was the open sky. Every civilization that has ever existed looked up and found meaning in what it saw. Not one astrology — many. The Babylonians built the zodiac we still use. The Chinese developed a parallel system based on a sixty-year cycle and five classical planets. The Vedic tradition of India — Jyotisha — predates Greek influence and remains a living practice for hundreds of millions today. The Maya built the most accurate calendar in the ancient world and tracked Venus with a precision that rivals modern instruments. These are not variations on a single theme. They are independent answers to the same human question: if the sky moves in patterns, and we move in patterns, is there a relationship? The question is older than writing. The answers are as varied as the civilizations that asked it. Astrology is where humanity first decided the universe was paying attention. Whether or not it is, the asking changed everything.",
-                "links": [
-                  {
-                    "label": "Aeon — history of astrology",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
-                  },
-                  {
-                    "label": "NASA Astronomy Picture of the Day",
-                    "url": "https://apod.nasa.gov",
-                    "emoji": "🔬",
-                    "tag": "COSMOS"
-                  }
-                ],
-                "topPills": [
-                  {
-                    "id": "x3_astro_babylon",
-                    "label": "Babylonian & Western",
-                    "color": "#9a7a60",
-                    "desc": "The Babylonians of Mesopotamia — modern Iraq — developed the zodiac between 700 and 400 BCE: twelve constellations along the ecliptic, each governing a segment of the year. They tracked the movements of five planets visible to the naked eye and correlated celestial events with earthly ones with extraordinary precision. When Greek astronomers encountered Babylonian records, they had centuries of data to work with. The fusion of Babylonian observation with Greek philosophical theory produced the astrological system that passed through Rome, through the Islamic Golden Age where it was preserved and refined, into medieval Europe and eventually into the horoscope column — a lineage of 2,500 years from clay tablet to newspaper.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "x1_egyptian",
-                        "label": "Egyptian & Mesopotamian",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "e2_astron",
-                        "label": "Astronomy",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x3_astro_vedic",
-                    "label": "Vedic / Jyotisha",
-                    "color": "#c07840",
-                    "desc": "Jyotisha — the eye of the Vedas — is one of the six auxiliary disciplines of the Vedic tradition, dating to at least 1500 BCE and possibly much earlier. It uses a sidereal zodiac — aligned to the actual positions of constellations rather than the seasons — and a different house system than Western astrology. Where Western astrology became increasingly psychological in the 20th century, Vedic astrology remained tightly integrated with medicine, architecture, agriculture, and the timing of major life decisions. It is not a relic. Hundreds of millions of people in South Asia consult Jyotish practitioners for births, marriages, and business decisions today. It is one of the oldest continuously practiced analytical systems on earth.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "x5_hinduism",
-                        "label": "Hinduism",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "x5_dharmic",
-                        "label": "Dharmic Religions",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x3_astro_chinese",
-                    "label": "Chinese Astrology",
-                    "color": "#c04040",
-                    "desc": "The Chinese astrological system is built around a sixty-year cycle — the product of twelve animal signs and five elements — and has been integrated into Chinese governance, medicine, architecture, and daily life for at least 3,000 years. The system tracks Jupiter's approximately twelve-year orbit as its primary clock and organizes time into a recursive pattern of cycles within cycles. Unlike Western astrology's focus on the solar year and individual birth charts, Chinese astrology emphasizes cycles of collective time — the character of a year, a decade, an era. It is embedded in traditional Chinese medicine, in feng shui, in the timing of the Lunar New Year, and in decisions made by a fifth of the world's population.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "x5_taoism",
-                        "label": "Taoism",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "x5_confucianism",
-                        "label": "Confucianism",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x3_astro_maya",
-                    "label": "Maya & Mesoamerican",
-                    "color": "#3a8a50",
-                    "desc": "The Maya built two interlocking calendars — the 260-day Tzolkin and the 365-day Haab — whose fifty-two-year Calendar Round governed ceremony, agriculture, war, and the timing of royal succession. They also maintained the Long Count, a linear calendar tracking time from a fixed mythological origin point — the same impulse that gave us BC and AD. Their tracking of Venus was so precise that their tables predict Venus's heliacal rising to within a day over centuries. Venus was not just a planet to the Maya — it was a war star, whose appearance governed the timing of military campaigns. These were not primitive sky-watchers. They were astronomers who embedded their science in mythology because for them the distinction did not exist.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "x5_meso_rel",
-                        "label": "Mesoamerican",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "x1_creation",
-                        "label": "Creation Myths",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x3_astro_egyptian",
-                    "label": "Egyptian & Hellenistic",
-                    "color": "#c8a030",
-                    "desc": "Egypt contributed the decans — 36 star groups dividing the sky into ten-day periods — and the practice of orienting sacred architecture to celestial alignments. The Great Pyramid's shafts point to specific stars. Dendera's famous zodiac ceiling is the oldest complete horoscope chart known. When Alexander conquered Egypt and Greek culture fused with Egyptian sky religion and Babylonian star-lore in Alexandria, the result was Hellenistic astrology — the most sophisticated synthesis the ancient world produced. It gave us the horoscope as a birth chart, the four elements as astrological qualities, and the philosophical framework that made astrology the queen of the sciences in the ancient world and the framework within which Ptolemy, Copernicus, Kepler, and Galileo all worked before the scientific revolution drew the line between astronomy and astrology.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "x5_egyptian_rel",
-                        "label": "Egyptian",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "x1_egyptian",
-                        "label": "Egyptian & Mesopotamian",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "e2_scirev",
-                        "label": "The Scientific Revolution",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  }
-                ],
-                "bottomPills": [
-                  {
-                    "id": "e2_astron",
-                    "label": "Astronomy",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x3_histtime",
-                    "label": "History of Time",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              }
-            ],
+            "topPills": [],
             "bottomPills": [],
             "orbs": []
           },
@@ -45773,5 +43270,3 @@ const LAYERS = [
     "bottomPills": []
   }
 ];
-
-const FOUNDATIONS=[{"id":"graphic-info","label":"GRAPHIC\nIMAGES","href":"graphic-info.html","color":"#7a1808","glow":"#c03010cc","border":"#e84020","grad":"radial-gradient(circle at 38% 28%, #ff7020 0%, #c03010 28%, #7a1808 58%, #3a0808 85%, #1a0404 100%)","offsetX":-315,"bottomPct":30,"size":88,"delay":0},{"id":"gallery","label":"THE\nGALLERY","href":"gallery.html","color":"#6a1828","glow":"#a02038cc","border":"#c84050","grad":"radial-gradient(circle at 38% 28%, #e05030 0%, #902030 30%, #5a1020 60%, #2a0810 85%, #100408 100%)","offsetX":-155,"bottomPct":32,"size":82,"delay":0.3},{"id":"journal","label":"THE\nJOURNAL","href":"journal.html","color":"#8a3010","glow":"#c04818cc","border":"#e06828","grad":"radial-gradient(circle at 38% 28%, #ff9040 0%, #c04818 28%, #8a3010 55%, #401808 82%, #180a04 100%)","offsetX":155,"bottomPct":28,"size":82,"delay":0.6},{"id":"glossary","label":"WORLD\nCOMPENDIUM","href":"compendium.html","color":"#5a1030","glow":"#901848cc","border":"#b83858","grad":"radial-gradient(circle at 38% 28%, #c04858 0%, #802038 28%, #5a1030 55%, #280818 82%, #100408 100%)","offsetX":315,"bottomPct":31,"size":88,"delay":0.9}];
