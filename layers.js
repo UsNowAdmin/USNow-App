@@ -1912,7 +1912,7 @@ const LAYERS = [
         "orbs": []
       }
     ],
-    "inProgress": true
+    "inProgress": false
   },
   {
     "id": "family",
@@ -3844,7 +3844,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "f4",
@@ -4894,7 +4894,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "f_class",
@@ -6847,7 +6847,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "f_rc",
@@ -8112,7 +8112,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       }
     ],
     "bottomPills": []
@@ -9797,7 +9797,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "c_env",
@@ -12383,7 +12383,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "c4",
@@ -13798,7 +13798,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       }
     ],
     "topPills": [
@@ -14495,7 +14495,7 @@ const LAYERS = [
               }
             ],
             "orbs": [],
-            "inProgress": true
+            "inProgress": false
           },
           {
             "id": "e1_open",
@@ -19068,7 +19068,7 @@ const LAYERS = [
         ],
         "bottomPills": [],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "c7",
@@ -20259,7 +20259,7 @@ const LAYERS = [
         ],
         "bottomPills": [],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       }
     ],
     "topPills": [
@@ -23131,7 +23131,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "p5",
@@ -26202,7 +26202,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "p2",
@@ -28020,7 +28020,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       }
     ],
     "bottomPills": []
@@ -29536,7 +29536,7 @@ const LAYERS = [
         ],
         "bottomPills": [],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "h3",
@@ -32535,7 +32535,7 @@ const LAYERS = [
         ],
         "bottomPills": [],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "h1",
@@ -34849,7 +34849,7 @@ const LAYERS = [
         ],
         "bottomPills": [],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "h2",
@@ -35699,7 +35699,7 @@ const LAYERS = [
         "x": 88,
         "y": 54,
         "size": 46,
-        "inProgress": true
+        "inProgress": false
       }
     ],
     "topPills": [
@@ -40515,7 +40515,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "x1",
@@ -41421,7 +41421,7 @@ const LAYERS = [
           }
         ],
         "orbs": [],
-        "inProgress": true
+        "inProgress": false
       },
       {
         "id": "x5",
