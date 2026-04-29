@@ -66,6 +66,7 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 .layer-band:hover{filter:brightness(1.3);}
 .layer-label-wrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:25;}
 .layer-main-label{font-weight:700;letter-spacing:0.3em;font-family:'Courier New',monospace;white-space:nowrap;transition:text-shadow 0.2s;}
+.modal-section-label{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;margin-bottom:10px;opacity:0.85;}
 .layer-sub-label{display:none;}
 .layer-band:hover .layer-main-label{color:#ffffff!important;text-shadow:0 0 28px rgba(255,255,255,0.55),0 0 60px rgba(255,255,255,0.18),0 2px 8px rgba(0,0,0,0.9)!important;letter-spacing:0.38em!important;}
 .layer-band:hover .layer-label-wrap{z-index:100;}
@@ -268,9 +269,9 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     </div>
     <h2 id="modal-title"></h2>
     <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:14px;display:none;"></div>
-    <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div id="modal-toppills-list"></div></div>
-    <p id="modal-desc"></p>
-    <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label">ON-SITE CONNECTIONS</div><div id="modal-bottompills-list"></div></div>
+    <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div class="modal-section-label">GO FURTHER</div><div id="modal-toppills-list"></div></div>
+    <div class="modal-section-label" id="modal-desc-label">WHAT IT IS</div><p id="modal-desc"></p>
+    <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label">RELATED CONNECTIONS</div><div id="modal-bottompills-list"></div></div>
     <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OFF-SITE CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
   </div>
 </div>
@@ -715,6 +716,8 @@ function renderCard(data){
   const subEl=document.getElementById('modal-sub');
   if(data.sub){subEl.style.color=lc;subEl.style.opacity='0.9';subEl.textContent=data.sub;subEl.style.display='block';}else{subEl.style.display='none';}
   document.getElementById('modal-desc').textContent=data.desc;
+  const descLabel=document.getElementById('modal-desc-label');
+  if(descLabel){descLabel.style.display=data.desc?'block':'none';}
   // TOP PILLS — topPills[] array + legacy subcard
   const topSection=document.getElementById('modal-toppills-section');
   const topList=document.getElementById('modal-toppills-list');
