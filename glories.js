@@ -8,7 +8,7 @@
 
 const GLORY_DATA = [
   { word: "Accident", category: "Not Classified",
-    definition: "An event that appears to happen on its own — distinct from mistake, coincidence, and fate — yet cause or blame can always be traced to human action, the surrounding conditions, or the laws of physics",
+    definition: "An event that appears to happen on its own — distinct from mistake, coincidence, and fate — since cause or blame always exists",
     phonetic: "ak·si·dənt",
     origin: "Latin <em>accidere</em> — 'to fall upon.' From <em>ad-</em> (toward) + <em>cadere</em> (to fall). The word arrived in English through Old French in the 14th century meaning simply 'an event,' without the modern implication of misfortune.",
     howUsed: "Used neutrally for centuries before acquiring its modern association with misfortune and blame. Insurance law, tort law, and media coverage all shape how 'accident' is deployed — often to deflect responsibility. A car 'accident' implies no fault; a car 'crash' implies someone caused it." },
@@ -560,7 +560,7 @@ const GLORY_DATA = [
     howUsed: "'It's just a theory' exploits the gap between the scientific and everyday meanings. In science, a theory is an explanation supported by extensive evidence — evolution, gravity, germ theory. In common use, theory means a guess. The gap is exploited systematically to undermine scientific consensus." },
 
   { word: "They", category: "Origins",
-    definition: "The most dangerous three-letter word",
+    definition: "The most dangerous four-letter word",
     phonetic: "thay",
     origin: "Old Norse <em>þeir</em> — they. Replaced the Old English third-person plural pronoun in the 13th-14th centuries. The singular 'they' — used when gender is unknown or unspecified — has been documented in English since at least the 14th century, appearing in Chaucer.",
     howUsed: "The singular 'they' for non-binary individuals — presented as a modern invention — is actually a return to centuries of English usage. Its recent politicization is about identity recognition, not grammatical innovation. As a third-person plural, 'they' is the pronoun of otherness — whoever is not us." },
