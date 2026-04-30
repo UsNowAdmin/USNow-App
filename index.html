@@ -8,7 +8,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/icon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> 
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index.css?v=20260430">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1009,7 +1009,7 @@ window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setT
   <a class="gp-link" id="gp-link" href="compendium.html" target="_blank">→ THE WORLD COMPENDIUM</a>
 </div>
 
-<script src="glories.js"></script>
+<script src="glories.js?v=20260430"></script>
 <script>
 // ── Glory Highlights — definitions loaded from glories.js ──
 
@@ -1095,11 +1095,7 @@ window.renderCard=function(data){
 };
 </script>
 <script>
-if('serviceWorker' in navigator){
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js');
-  });
-}
+// navigator.serviceWorker.register('/sw.js');
 </script>
 </body>
 </html>
