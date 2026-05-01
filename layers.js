@@ -10,22 +10,22 @@ const LAYERS = [
     "height": 16,
     "links": [
       {
-        "label": "NIH MedlinePlus — body, zero ads",
+        "label": "NIH MedlinePlus",
         "url": "https://medlineplus.gov",
-        "tag": "BODY",
-        "emoji": "🫀"
+        "emoji": "🫀",
+        "tag": "BODY"
       },
       {
-        "label": "Insight Timer — free meditation, 180k sessions",
+        "label": "Insight Timer",
         "url": "https://insighttimer.com",
-        "tag": "SOUL",
-        "emoji": "🧘"
+        "emoji": "🧘",
+        "tag": "SPIRIT"
       },
       {
-        "label": "The Marginalian — ideas & meaning",
-        "url": "https://www.themarginalian.org",
-        "tag": "MIND",
-        "emoji": "🕊️"
+        "label": "The Marginalian",
+        "url": "https://themarginalian.org",
+        "emoji": "🧠",
+        "tag": "MIND"
       },
       {
         "label": "ATJon on Substack — perspective & satire",
@@ -45,42 +45,30 @@ const LAYERS = [
           {
             "label": "NIH MedlinePlus",
             "url": "https://medlineplus.gov",
-            "emoji": "🌱",
+            "emoji": "🫀",
             "tag": "BODY"
           },
           {
-            "label": "CDC WONDER — public health data",
+            "label": "CDC WONDER",
             "url": "https://wonder.cdc.gov",
-            "emoji": "🌱",
+            "emoji": "🫀",
             "tag": "BODY"
           },
           {
-            "label": "National Alliance for Eating Disorders",
-            "url": "https://www.allianceforeatingdisorders.com",
-            "emoji": "🌱",
+            "label": "Alliance for Eating Disorders",
+            "url": "https://allianceforeatingdisorders.com",
+            "emoji": "🫀",
             "tag": "BODY"
           },
           {
-            "label": "Body Dysmorphic Disorder Foundation",
+            "label": "BDD Foundation",
             "url": "https://bddfoundation.org",
-            "emoji": "🌱",
+            "emoji": "🫀",
             "tag": "BODY"
           },
           {
-            "label": "Dove Self-Esteem Project",
-            "url": "https://www.dove.com/us/en/dove-self-esteem-project.html",
-            "emoji": "🌱",
-            "tag": "BODY"
-          },
-          {
-            "label": "NEDA — body image resources",
-            "url": "https://www.nationaleatingdisorders.org/body-image-0",
-            "emoji": "🌱",
-            "tag": "BODY"
-          },
-          {
-            "label": "Pew Research: Health",
-            "url": "https://www.pewresearch.org",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           }
@@ -95,13 +83,13 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
                 "label": "CDC WONDER",
                 "url": "https://wonder.cdc.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -153,16 +141,16 @@ const LAYERS = [
             "desc": "The interior condition — mood, mind, stability, crisis. Undertreated, underfunded, and still carrying a stigma that has no basis in biology. One in five Americans lives with a mental health condition in any given year.",
             "links": [
               {
-                "label": "NAMI — National Alliance on Mental Illness",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
               {
-                "label": "Insight Timer — free practice",
+                "label": "Insight Timer",
                 "url": "https://insighttimer.com",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "emoji": "🧘",
+                "tag": "SPIRIT"
               }
             ],
             "topPills": [],
@@ -214,8 +202,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "NIH — National Institute on Aging",
-                "url": "https://www.nia.nih.gov",
-                "emoji": "🌱",
+                "url": "https://nia.nih.gov",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -269,7 +257,7 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -329,19 +317,19 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
-                "label": "CDC WONDER — public health data",
+                "label": "CDC WONDER",
                 "url": "https://wonder.cdc.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -401,7 +389,7 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -459,21 +447,21 @@ const LAYERS = [
             "desc": "How you see the body and how the world sees it back. Body image is shaped before language arrives — by family, by mirrors, by media, by every offhand comment that lodged. The industries built around making people feel unfit in their own skin are some of the most profitable on earth. The body was never the problem.",
             "links": [
               {
-                "label": "National Alliance for Eating Disorders",
-                "url": "https://www.allianceforeatingdisorders.com",
-                "emoji": "🌱",
+                "label": "Alliance for Eating Disorders",
+                "url": "https://allianceforeatingdisorders.com",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
                 "label": "BDD Foundation",
                 "url": "https://bddfoundation.org",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -598,13 +586,13 @@ const LAYERS = [
             "desc": "The part of you watching you. Who is that? The gap between the thinker and the thought is where every contemplative tradition in human history has planted its flag.",
             "links": [
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
               },
               {
-                "label": "Aeon — philosophy & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
@@ -668,8 +656,8 @@ const LAYERS = [
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -722,12 +710,12 @@ const LAYERS = [
             "links": [
               {
                 "label": "The Marginalian",
-                "url": "https://www.themarginalian.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -787,8 +775,8 @@ const LAYERS = [
                 "tag": "MIND"
               },
               {
-                "label": "NAMI — mental illness alliance",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               }
@@ -853,7 +841,7 @@ const LAYERS = [
                 "tag": "GRIEF"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -908,20 +896,20 @@ const LAYERS = [
             "links": [
               {
                 "label": "The Marginalian",
-                "url": "https://www.themarginalian.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
               },
               {
                 "label": "TED Talks",
-                "url": "https://www.ted.com",
-                "emoji": "🎙️",
+                "url": "https://ted.com",
+                "emoji": "🧠",
                 "tag": "IDEAS"
               }
             ],
@@ -970,13 +958,13 @@ const LAYERS = [
                 "tag": "MIND"
               },
               {
-                "label": "NAMI — mental illness alliance",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -1109,9 +1097,9 @@ const LAYERS = [
                 "tag": "MIND"
               },
               {
-                "label": "National Alliance for Eating Disorders",
-                "url": "https://www.allianceforeatingdisorders.com",
-                "emoji": "🌱",
+                "label": "Alliance for Eating Disorders",
+                "url": "https://allianceforeatingdisorders.com",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -1218,8 +1206,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -1283,7 +1271,7 @@ const LAYERS = [
                 "tag": "RIGHTS"
               },
               {
-                "label": "Aeon — ideas & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
@@ -1338,18 +1326,18 @@ const LAYERS = [
             "links": [
               {
                 "label": "The Marginalian",
-                "url": "https://www.themarginalian.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
               },
               {
-                "label": "Aeon — ideas & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
@@ -1444,21 +1432,21 @@ const LAYERS = [
         "desc": "The edited archive. Selective, revisionist, emotionally weighted. The primary material from which you construct the story of being you.",
         "links": [
           {
-            "label": "Harvard Health — how memory works",
-            "url": "https://www.health.harvard.edu/mind-and-mood",
+            "label": "Harvard Health",
+            "url": "https://health.harvard.edu",
             "emoji": "🫀",
+            "tag": "BODY"
+          },
+          {
+            "label": "Aeon",
+            "url": "https://aeon.co",
+            "emoji": "🧠",
             "tag": "MIND"
           },
           {
-            "label": "Aeon — memory & identity",
-            "url": "https://aeon.co",
-            "emoji": "💭",
-            "tag": "IDEAS"
-          },
-          {
-            "label": "The Marginalian — on remembering",
-            "url": "https://www.themarginalian.org",
-            "emoji": "🕊️",
+            "label": "The Marginalian",
+            "url": "https://themarginalian.org",
+            "emoji": "🧠",
             "tag": "MIND"
           }
         ],
@@ -1471,8 +1459,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -1524,19 +1512,19 @@ const LAYERS = [
             "desc": "What the nervous system could not metabolize at the time. Trauma is not the event — it is what the body did with the event when it had no other options. It does not stay in the past. It hides in the present, in startle responses, in the relationships that don't quite work, in the patterns that repeat without explanation. The work is not to forget. The work is to remember in a way the body can finally hold.",
             "links": [
               {
-                "label": "NAMI — mental illness alliance",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -1591,9 +1579,9 @@ const LAYERS = [
             "links": [
               {
                 "label": "The Marginalian",
-                "url": "https://www.themarginalian.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
                 "label": "Harvard Health",
@@ -1651,8 +1639,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -1695,16 +1683,16 @@ const LAYERS = [
             "desc": "The stories told at dinner. The ones never told at all. Family memory is the first archive most people inherit — incomplete, uncatalogued, and edited by everyone before you. What gets remembered says something. What gets forgotten says more.",
             "links": [
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
               },
               {
                 "label": "The Marginalian",
-                "url": "https://www.themarginalian.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               }
             ],
             "topPills": [],
@@ -1756,15 +1744,15 @@ const LAYERS = [
             "links": [
               {
                 "label": "Library of Congress",
-                "url": "https://www.loc.gov",
-                "emoji": "📚",
+                "url": "https://loc.gov",
+                "emoji": "🗄️",
                 "tag": "CULTURE"
               },
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
                 "label": "Pew Research",
@@ -1894,10 +1882,10 @@ const LAYERS = [
             "desc": "What you point your consciousness at becomes your world. Attention is the most powerful political act you perform — and you perform it thousands of times a day, mostly without deciding to.",
             "links": [
               {
-                "label": "Insight Timer — free meditation",
+                "label": "Insight Timer",
                 "url": "https://insighttimer.com",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "emoji": "🧘",
+                "tag": "SPIRIT"
               }
             ],
             "topPills": [],
@@ -1950,7 +1938,7 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -2006,8 +1994,8 @@ const LAYERS = [
               },
               {
                 "label": "TED Talks",
-                "url": "https://www.ted.com",
-                "emoji": "🎙️",
+                "url": "https://ted.com",
+                "emoji": "🧠",
                 "tag": "IDEAS"
               },
               {
@@ -2073,7 +2061,7 @@ const LAYERS = [
               {
                 "label": "Stanford AI Index",
                 "url": "https://aiindex.stanford.edu",
-                "emoji": "🤖",
+                "emoji": "🔬",
                 "tag": "AI"
               }
             ],
@@ -2123,8 +2111,8 @@ const LAYERS = [
               },
               {
                 "label": "TED Talks",
-                "url": "https://www.ted.com",
-                "emoji": "🎙️",
+                "url": "https://ted.com",
+                "emoji": "🧠",
                 "tag": "IDEAS"
               }
             ],
@@ -2173,8 +2161,8 @@ const LAYERS = [
                 "tag": "SCIENCE"
               },
               {
-                "label": "NAMI — mental illness alliance",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -2337,16 +2325,16 @@ const LAYERS = [
     "height": 12,
     "links": [
       {
-        "label": "On Being — meaning, spirit, becoming",
+        "label": "On Being",
         "url": "https://onbeing.org",
-        "tag": "SOUL",
-        "emoji": "🕊️"
+        "emoji": "🕊️",
+        "tag": "SPIRIT"
       },
       {
-        "label": "The Marginalian — Maria Popova on living",
-        "url": "https://www.themarginalian.org",
-        "tag": "MIND",
-        "emoji": "🕊️"
+        "label": "The Marginalian",
+        "url": "https://themarginalian.org",
+        "emoji": "🧠",
+        "tag": "MIND"
       }
     ],
     "topPills": [
@@ -2567,16 +2555,16 @@ const LAYERS = [
         "desc": "The repeated gestures that encode belonging before you can name belonging. Sunday dinners. Holidays. The way a certain song means a certain person. Ritual is how cultures transmit what cannot be explained — the felt sense of being part of something larger and older than any individual. When rituals disappear, something goes with them that is very hard to name and very hard to replace.",
         "links": [
           {
-            "label": "On Being — ritual and meaning",
+            "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
             "tag": "SPIRIT"
           },
           {
-            "label": "The Marginalian — on tradition",
-            "url": "https://www.themarginalian.org",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "label": "The Marginalian",
+            "url": "https://themarginalian.org",
+            "emoji": "🧠",
+            "tag": "MIND"
           }
         ],
         "topPills": [],
@@ -2795,13 +2783,13 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
-                "label": "arXiv — open scientific preprints",
+                "label": "arXiv",
                 "url": "https://arxiv.org",
-                "emoji": "🧪",
+                "emoji": "🔬",
                 "tag": "SCIENCE"
               }
             ],
@@ -2815,7 +2803,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -2860,7 +2848,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -2905,13 +2893,13 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "arXiv — open scientific preprints",
+                    "label": "arXiv",
                     "url": "https://arxiv.org",
-                    "emoji": "🧪",
+                    "emoji": "🔬",
                     "tag": "SCIENCE"
                   }
                 ],
@@ -2956,7 +2944,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -3001,13 +2989,13 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "arXiv — open scientific preprints",
+                    "label": "arXiv",
                     "url": "https://arxiv.org",
-                    "emoji": "🧪",
+                    "emoji": "🔬",
                     "tag": "SCIENCE"
                   }
                 ],
@@ -3052,7 +3040,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -3129,7 +3117,7 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -3149,7 +3137,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -3194,7 +3182,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -3245,13 +3233,13 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -3295,8 +3283,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -3403,8 +3391,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -3481,7 +3469,7 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -3619,9 +3607,9 @@ const LAYERS = [
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "arXiv — open scientific preprints",
+                    "label": "arXiv",
                     "url": "https://arxiv.org",
-                    "emoji": "🧪",
+                    "emoji": "🔬",
                     "tag": "SCIENCE"
                   }
                 ],
@@ -3878,10 +3866,10 @@ const LAYERS = [
                 "desc": "The constant motion of people across the map. Every population has a migration story. Most have several, layered on top of each other across centuries. The genes carry the receipts.",
                 "links": [
                   {
-                    "label": "IOM — migration data",
-                    "url": "https://www.migrationdataportal.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "Migration Data Portal",
+                    "url": "https://migrationdataportal.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "National Geographic",
@@ -3982,13 +3970,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -4125,19 +4113,19 @@ const LAYERS = [
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
-                "label": "CDC WONDER — public health data",
+                "label": "CDC WONDER",
                 "url": "https://wonder.cdc.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -4151,7 +4139,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -4196,13 +4184,13 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -4247,13 +4235,13 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -4298,13 +4286,13 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -4356,15 +4344,15 @@ const LAYERS = [
                 "desc": "The genetics of conditions like schizophrenia, bipolar disorder, depression, autism. Heritability is real and the search for specific causal variants has been mostly humbling. These are conditions of many small contributions, not single switches. The environment still does enormous work.",
                 "links": [
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -4441,7 +4429,7 @@ const LAYERS = [
               {
                 "label": "Stanford AI Index",
                 "url": "https://aiindex.stanford.edu",
-                "emoji": "🤖",
+                "emoji": "🔬",
                 "tag": "AI"
               },
               {
@@ -4452,8 +4440,8 @@ const LAYERS = [
               },
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               }
             ],
@@ -4465,9 +4453,9 @@ const LAYERS = [
                 "desc": "Cutting and rewriting DNA at specific locations. CRISPR-Cas9 made it cheap, accurate, and accessible. The first human babies born with edited genomes were announced in 2018, in China, in a way that horrified most of the field. The tools work. What we do with them is the question.",
                 "links": [
                   {
-                    "label": "arXiv — open scientific preprints",
+                    "label": "arXiv",
                     "url": "https://arxiv.org",
-                    "emoji": "🧪",
+                    "emoji": "🔬",
                     "tag": "SCIENCE"
                   },
                   {
@@ -4522,10 +4510,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -4569,13 +4557,13 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -4625,8 +4613,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -4669,15 +4657,15 @@ const LAYERS = [
                 "desc": "Building new living systems from the ground up. Engineered yeast that produces medicine. Bacteria that detect toxins. Theoretical organisms with genomes designed rather than evolved. The field is still young. The possibilities range from quietly useful to genuinely alarming.",
                 "links": [
                   {
-                    "label": "arXiv — open scientific preprints",
+                    "label": "arXiv",
                     "url": "https://arxiv.org",
-                    "emoji": "🧪",
+                    "emoji": "🔬",
                     "tag": "SCIENCE"
                   },
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   }
                 ],
@@ -4721,8 +4709,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -4853,14 +4841,14 @@ const LAYERS = [
         "desc": "The family you build and the one you were born into. The people who see you clearly and stay anyway. Sometimes chosen, sometimes blood, sometimes both. Always a statement about who you've decided to become — and where you came from.",
         "links": [
           {
-            "label": "U.S. Census — family & household data",
+            "label": "Census Data Explorer",
             "url": "https://data.census.gov",
             "emoji": "📊",
             "tag": "DATA"
           },
           {
-            "label": "Pew Research — American family trends",
-            "url": "https://www.pewresearch.org/social-trends/topics/family-and-relationships/",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           }
@@ -5018,15 +5006,15 @@ const LAYERS = [
                 "desc": "Sunday dinners. Holidays. Repeated gestures that encoded belonging before you could name belonging. The body remembers ritual the way it remembers how to walk.",
                 "links": [
                   {
-                    "label": "On Being — ritual and meaning",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   },
                   {
-                    "label": "The Marginalian — on habit",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "🕊️",
+                    "label": "The Marginalian",
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
                     "tag": "MIND"
                   }
                 ],
@@ -5106,26 +5094,26 @@ const LAYERS = [
             "desc": "Not one America — many. Families in the U.S. look radically different depending on where you live, what you earn, and what color you are. The gaps in income, health, housing, and opportunity between states and zip codes tell a story that national averages deliberately obscure.",
             "links": [
               {
-                "label": "U.S. Census — family & household data",
+                "label": "Census Data Explorer",
                 "url": "https://data.census.gov",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Pew Research — American family trends",
-                "url": "https://www.pewresearch.org/social-trends/topics/family-and-relationships/",
+                "label": "Pew Research",
+                "url": "https://pewresearch.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Annie E. Casey — Kids Count data by state",
+                "label": "KIDS COUNT Data Center",
                 "url": "https://datacenter.aecf.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Urban Institute — inequality by state",
-                "url": "https://www.urban.org",
+                "label": "Urban Institute",
+                "url": "https://urban.org",
                 "emoji": "📊",
                 "tag": "DATA"
               }
@@ -5188,26 +5176,26 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "World Bank — open data by country",
+                "label": "World Bank Open Data",
                 "url": "https://data.worldbank.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Pew Research — global attitudes & trends",
-                "url": "https://www.pewresearch.org/global/",
+                "label": "Pew Research",
+                "url": "https://pewresearch.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "UNICEF — children around the world",
+                "label": "UNICEF Data",
                 "url": "https://data.unicef.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Gapminder — visualizing global inequality",
-                "url": "https://www.gapminder.org",
+                "label": "Gapminder",
+                "url": "https://gapminder.org",
                 "emoji": "📊",
                 "tag": "DATA"
               }
@@ -5257,8 +5245,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -5283,8 +5271,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -5334,8 +5322,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -5424,8 +5412,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -5475,8 +5463,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -5532,8 +5520,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -5609,8 +5597,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -5620,8 +5608,8 @@ const LAYERS = [
                 "tag": "MIND"
               },
               {
-                "label": "NAMI — mental illness alliance",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               }
@@ -5641,8 +5629,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -5691,8 +5679,8 @@ const LAYERS = [
                     "tag": "MIND"
                   },
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -5737,13 +5725,13 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -5787,15 +5775,15 @@ const LAYERS = [
                 "desc": "The illness that takes the whole family with it. Children of addicts grow up running scripts they didn't write — the rescuer, the enabler, the one who left, the one who stayed and disappeared. The addiction belongs to one person. The system the addiction created belongs to everyone who lived in the house.",
                 "links": [
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -5851,8 +5839,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -5901,7 +5889,7 @@ const LAYERS = [
                     "tag": "MIND"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -6045,28 +6033,28 @@ const LAYERS = [
         "desc": "The variable nobody in America wants to name out loud. Not a rung on a ladder you can climb with enough hustle — a set of structural conditions that determines what you eat, where you live, how long you live, and whether the rules were written for you or around you.",
         "links": [
           {
-            "label": "Pew Research — class in America",
-            "url": "https://www.pewresearch.org/social-trends/",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           },
           {
-            "label": "Urban Institute — income inequality",
-            "url": "https://www.urban.org",
+            "label": "Urban Institute",
+            "url": "https://urban.org",
             "emoji": "📊",
             "tag": "DATA"
           },
           {
-            "label": "ProPublica — class & inequality",
-            "url": "https://www.propublica.org",
+            "label": "ProPublica",
+            "url": "https://propublica.org",
             "emoji": "📰",
             "tag": "JOURNALISM"
           },
           {
             "label": "USASpending.gov",
-            "url": "https://www.usaspending.gov",
+            "url": "https://usaspending.gov",
             "emoji": "📊",
-            "tag": "BUDGET"
+            "tag": "DATA"
           }
         ],
         "topPills": [
@@ -6083,20 +6071,20 @@ const LAYERS = [
                 "tag": "MONEY"
               },
               {
-                "label": "FRED — St. Louis Fed economic data",
+                "label": "FRED Economic Data",
                 "url": "https://fred.stlouisfed.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Inequality.org — Institute for Policy Studies",
+                "label": "Inequality.org",
                 "url": "https://inequality.org",
-                "emoji": "💰",
-                "tag": "MONEY"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
-                "label": "IRS Statistics of Income",
-                "url": "https://www.irs.gov/statistics",
+                "label": "IRS Statistics",
+                "url": "https://irs.gov",
                 "emoji": "📊",
                 "tag": "DATA"
               }
@@ -6248,14 +6236,14 @@ const LAYERS = [
                 "desc": "Who holds the title. Land. Buildings. Companies. Patents. Ownership is the deepest layer of class — the one that does not require you to work to maintain it. The richest Americans do not earn their wealth. They own it.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -6299,10 +6287,10 @@ const LAYERS = [
                 "desc": "The gap. The U.S. has the highest income inequality of any major developed economy. The wealth gap is wider still. Inequality at this level is not a side effect of the economy. It is the economy doing what the rules tell it to do.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Economic Policy Institute",
@@ -6356,8 +6344,8 @@ const LAYERS = [
                 "desc": "How a society decides who pays for the common things. American tax policy across the last fifty years has shifted enormous burden away from capital and toward labor. The richest Americans now pay a lower effective rate than working- and middle-class earners. This was a choice. It can be unmade.",
                 "links": [
                   {
-                    "label": "IRS Statistics of Income",
-                    "url": "https://www.irs.gov/statistics",
+                    "label": "IRS Statistics",
+                    "url": "https://irs.gov",
                     "emoji": "📊",
                     "tag": "DATA"
                   },
@@ -6368,8 +6356,8 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -6528,8 +6516,8 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -6764,7 +6752,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
@@ -7133,7 +7121,7 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "FRED — St. Louis Fed economic data",
+                "label": "FRED Economic Data",
                 "url": "https://fred.stlouisfed.org",
                 "emoji": "📊",
                 "tag": "DATA"
@@ -7153,10 +7141,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -7198,7 +7186,7 @@ const LAYERS = [
                 "desc": "What you pay for the right to keep living somewhere. American rent has outpaced wages for two decades. Roughly half of American renters now spend more than 30% of income on housing. That is a structural problem, not a personal one.",
                 "links": [
                   {
-                    "label": "FRED — St. Louis Fed economic data",
+                    "label": "FRED Economic Data",
                     "url": "https://fred.stlouisfed.org",
                     "emoji": "📊",
                     "tag": "DATA"
@@ -7255,10 +7243,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -7300,10 +7288,10 @@ const LAYERS = [
                 "desc": "Officially ended. Practically ongoing. American neighborhoods, schools, and employment networks are still significantly segregated by race and class. The mechanisms shifted — from law to lending to zoning to school district boundaries — but the outcomes have been remarkably durable.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ACLU",
@@ -7363,10 +7351,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -7563,8 +7551,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Endangered Languages Project",
-                    "url": "https://www.endangeredlanguages.com",
-                    "emoji": "🗣️",
+                    "url": "https://endangeredlanguages.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -7704,9 +7692,9 @@ const LAYERS = [
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -8167,14 +8155,14 @@ const LAYERS = [
         "desc": "You did not choose your race or ethnicity — they were assigned and perceived before you arrived. Both shape what doors open, what rooms you enter, and how you are read when you walk in. They are not personal attributes. They are structural conditions built into the architecture of American life across generations. Knowing that changes what you do with them.",
         "links": [
           {
-            "label": "Pew Research: Race & Ethnicity",
-            "url": "https://www.pewresearch.org",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           },
           {
-            "label": "OpenSecrets: Who Funds What",
-            "url": "https://www.opensecrets.org",
+            "label": "OpenSecrets",
+            "url": "https://opensecrets.org",
             "emoji": "💰",
             "tag": "MONEY"
           }
@@ -8187,19 +8175,19 @@ const LAYERS = [
             "desc": "Geography is not neutral. Where you were born shapes what you believe is possible, what you believe is normal, and who you believe deserves what. ZIP code predicts life expectancy more reliably than almost any individual behavior.",
             "links": [
               {
-                "label": "U.S. Census — geographic data",
+                "label": "Census Data Explorer",
                 "url": "https://data.census.gov",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Urban Institute — place & opportunity",
-                "url": "https://www.urban.org",
+                "label": "Urban Institute",
+                "url": "https://urban.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "Annie E. Casey — Kids Count by state",
+                "label": "KIDS COUNT Data Center",
                 "url": "https://datacenter.aecf.org",
                 "emoji": "📊",
                 "tag": "DATA"
@@ -8249,8 +8237,8 @@ const LAYERS = [
             "desc": "Rights without responsibility are wishes. Responsibility without rights is servitude. The tension between the two is the actual content of civic life — what you are owed, what you owe, and who decides.",
             "links": [
               {
-                "label": "ACLU: Know Your Rights",
-                "url": "https://www.aclu.org/know-your-rights",
+                "label": "ACLU",
+                "url": "https://aclu.org",
                 "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
@@ -8262,8 +8250,8 @@ const LAYERS = [
               },
               {
                 "label": "Congress.gov",
-                "url": "https://www.congress.gov",
-                "emoji": "🏛️",
+                "url": "https://congress.gov",
+                "emoji": "💰",
                 "tag": "CONGRESS"
               }
             ],
@@ -8312,10 +8300,10 @@ const LAYERS = [
                 "tag": "JOURNALISM"
               },
               {
-                "label": "Brennan Center for Justice",
-                "url": "https://www.brennancenter.org",
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
                 "emoji": "⚖️",
-                "tag": "LAW"
+                "tag": "RIGHTS"
               },
               {
                 "label": "U.S. Census",
@@ -8428,10 +8416,10 @@ const LAYERS = [
                 "desc": "The unstated rank order. Codified by law for centuries. Decoded by law in the twentieth. Practiced informally ever since. The hierarchy did not disappear when the law changed. It moved into housing, lending, hiring, policing, healthcare, and the small everyday decisions that shape a life.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ACLU",
@@ -8539,10 +8527,10 @@ const LAYERS = [
                     "tag": "RESEARCH"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -8637,14 +8625,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Endangered Languages Project",
-                    "url": "https://www.endangeredlanguages.com",
-                    "emoji": "🗣️",
+                    "url": "https://endangeredlanguages.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -8694,9 +8682,9 @@ const LAYERS = [
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -8756,10 +8744,10 @@ const LAYERS = [
                 "desc": "The place the diaspora carries in its head, often more vivid than the place that exists now. Homeland in this sense is partly real, partly mythic, and entirely shaping.",
                 "links": [
                   {
-                    "label": "IOM — migration data",
-                    "url": "https://www.migrationdataportal.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "Migration Data Portal",
+                    "url": "https://migrationdataportal.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -9147,10 +9135,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -9224,10 +9212,10 @@ const LAYERS = [
             "desc": "Racism is not the feeling someone has about another person. It is the operation of structures that distribute outcomes by race. Individual prejudice exists. Systemic racism is what scales it into housing, schools, courts, hospitals, and the long shadow of inheritance.",
             "links": [
               {
-                "label": "Brennan Center for Justice",
-                "url": "https://www.brennancenter.org",
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
                 "emoji": "⚖️",
-                "tag": "LAW"
+                "tag": "RIGHTS"
               },
               {
                 "label": "ACLU",
@@ -9252,14 +9240,14 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -9307,10 +9295,10 @@ const LAYERS = [
                     "tag": "HISTORY"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -9352,10 +9340,10 @@ const LAYERS = [
                 "desc": "Eight decades of legal apartheid in the American South after Reconstruction was abandoned. Codified segregation, denied voting rights, disenfranchisement, lynching as enforcement. Officially ended in the 1960s. The descendants of the policies still live in the housing, the schools, and the family balance sheets.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ACLU",
@@ -9409,10 +9397,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "Economic Policy Institute",
@@ -9511,10 +9499,10 @@ const LAYERS = [
                 "desc": "The recurring American pattern. Every advance in civil rights has been followed by organized retreat — Reconstruction, civil rights, the Obama years. Backlash is not a glitch. It is part of the cycle the country keeps running.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -9647,34 +9635,34 @@ const LAYERS = [
     "height": 14,
     "links": [
       {
-        "label": "Longreads — best long-form journalism, free",
+        "label": "Longreads",
         "url": "https://longreads.com",
-        "tag": "CULTURE",
-        "emoji": "📰"
+        "emoji": "📰",
+        "tag": "JOURNALISM"
       },
       {
-        "label": "Rest of World — tech & power beyond the West",
+        "label": "Rest of World",
         "url": "https://restofworld.org",
-        "tag": "WORLD",
-        "emoji": "📰"
+        "emoji": "📰",
+        "tag": "JOURNALISM"
       },
       {
-        "label": "TurboVote — register, ballots, reminders",
+        "label": "TurboVote",
         "url": "https://turbovote.org",
-        "tag": "VOTE",
-        "emoji": "🗳️"
+        "emoji": "🗳️",
+        "tag": "VOTE"
       },
       {
-        "label": "Ballotpedia — elections & candidates",
+        "label": "Ballotpedia",
         "url": "https://ballotpedia.org",
-        "tag": "ELECTIONS",
-        "emoji": "🏛️"
+        "emoji": "🗳️",
+        "tag": "VOTE"
       },
       {
-        "label": "ACLU — know your rights",
-        "url": "https://www.aclu.org/know-your-rights",
-        "tag": "RIGHTS",
-        "emoji": "⚖️"
+        "label": "ACLU",
+        "url": "https://aclu.org",
+        "emoji": "⚖️",
+        "tag": "RIGHTS"
       }
     ],
     "orbs": [
@@ -9715,8 +9703,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -9726,8 +9714,8 @@ const LAYERS = [
                 "tag": "MIND"
               },
               {
-                "label": "NAMI — mental illness alliance",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               }
@@ -9741,8 +9729,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -9830,8 +9818,8 @@ const LAYERS = [
                 "desc": "The other strategy. Closeness becomes a thing to monitor, hold tight, check on. Often built where care was inconsistent.",
                 "links": [
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -9921,8 +9909,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -9972,12 +9960,12 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -10055,8 +10043,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -10080,7 +10068,7 @@ const LAYERS = [
                 "desc": "Just being with someone. Most friendship is this and not advice or rescue or any other dramatic thing. Presence is most of what we need from each other.",
                 "links": [
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -10189,9 +10177,9 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -10371,9 +10359,9 @@ const LAYERS = [
               },
               {
                 "label": "The Marginalian",
-                "url": "https://www.themarginalian.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
                 "label": "Pew Research",
@@ -10435,7 +10423,7 @@ const LAYERS = [
                 "desc": "Being known. The thing most people are looking for when they say they want love. Intimacy is harder than attraction and rarer than romance.",
                 "links": [
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -10481,8 +10469,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -10533,7 +10521,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -10634,8 +10622,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -10711,8 +10699,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -10722,8 +10710,8 @@ const LAYERS = [
                 "tag": "MIND"
               },
               {
-                "label": "NAMI — mental illness alliance",
-                "url": "https://www.nami.org",
+                "label": "NAMI",
+                "url": "https://nami.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               }
@@ -10782,12 +10770,12 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -10832,7 +10820,7 @@ const LAYERS = [
                 "desc": "Not the same as reconciliation. Forgiveness can happen with no further contact. Reconciliation requires the other person. The two get conflated and most people are looking for one when they need the other.",
                 "links": [
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -10883,8 +10871,8 @@ const LAYERS = [
                 "desc": "What you will and will not do, said in advance and held under pressure. Most boundary trouble is people setting them as a request to others rather than as a commitment to themselves.",
                 "links": [
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -10941,8 +10929,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -10991,7 +10979,7 @@ const LAYERS = [
                     "tag": "MIND"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -11075,8 +11063,8 @@ const LAYERS = [
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -11094,7 +11082,7 @@ const LAYERS = [
                     "tag": "MIND"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -11195,8 +11183,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -11251,8 +11239,8 @@ const LAYERS = [
                     "tag": "MIND"
                   },
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -11297,12 +11285,12 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -11380,14 +11368,14 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
-                "label": "CDC WONDER — public health data",
+                "label": "CDC WONDER",
                 "url": "https://wonder.cdc.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -11463,8 +11451,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -11507,15 +11495,15 @@ const LAYERS = [
                 "desc": "The fear that being seen will go badly. Common, treatable, and increasing among young Americans in particular. Social media did not invent it. It did not help.",
                 "links": [
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -11612,16 +11600,16 @@ const LAYERS = [
                 "desc": "The deepest human appetite. Underneath most relationship trouble is some version of this — the want for one person who looks at you and gets it.",
                 "links": [
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -11753,27 +11741,27 @@ const LAYERS = [
         "desc": "Not a cause. A condition. The air, the water, the temperature of the only planet anyone has ever lived on. What happens here isn't separate from politics, economics, or justice — it is all of those things with nowhere left to hide. The environment is not an issue. It is the ground everything else stands on.",
         "links": [
           {
-            "label": "EPA — environmental data",
-            "url": "https://www.epa.gov",
+            "label": "EPA",
+            "url": "https://epa.gov",
+            "emoji": "🌱",
+            "tag": "BODY"
+          },
+          {
+            "label": "IPCC",
+            "url": "https://ipcc.ch",
             "emoji": "🌍",
             "tag": "SCIENCE"
           },
           {
-            "label": "IPCC — climate science",
-            "url": "https://www.ipcc.ch",
-            "emoji": "🌍",
-            "tag": "SCIENCE"
-          },
-          {
-            "label": "EarthDay.org",
-            "url": "https://www.earthday.org",
-            "emoji": "🌍",
+            "label": "Earth Day",
+            "url": "https://earthday.org",
+            "emoji": "🌱",
             "tag": "CULTURE"
           },
           {
-            "label": "NRDC — environmental defense",
-            "url": "https://www.nrdc.org",
-            "emoji": "🌍",
+            "label": "NRDC",
+            "url": "https://nrdc.org",
+            "emoji": "🌱",
             "tag": "SCIENCE"
           }
         ],
@@ -11785,20 +11773,20 @@ const LAYERS = [
             "desc": "The defining condition of the current era. Not a future threat — a present reality, measurable in degrees, in floods, in fire seasons that no longer have seasons. The science has been settled for decades. The politics have not. The gap between what the data shows and what the policy does is the most consequential failure of collective action in human history. It is still in progress.",
             "links": [
               {
-                "label": "IPCC — climate reports",
-                "url": "https://www.ipcc.ch",
+                "label": "IPCC",
+                "url": "https://ipcc.ch",
                 "emoji": "🌍",
                 "tag": "SCIENCE"
               },
               {
-                "label": "NASA — climate data",
+                "label": "NASA Climate",
                 "url": "https://climate.nasa.gov",
                 "emoji": "🌍",
                 "tag": "SCIENCE"
               },
               {
-                "label": "Pew Research — climate attitudes",
-                "url": "https://www.pewresearch.org",
+                "label": "Pew Research",
+                "url": "https://pewresearch.org",
                 "emoji": "📊",
                 "tag": "DATA"
               }
@@ -11811,7 +11799,7 @@ const LAYERS = [
                 "desc": "The planet is warming. The cause is human activity — primarily the burning of fossil fuels that releases carbon dioxide and other greenhouse gases that trap heat in the atmosphere. This is not a theory. It is the conclusion of every major scientific institution on earth, supported by multiple independent lines of evidence: temperature records, ice cores, sea level measurements, ocean heat content, atmospheric CO2 readings. The uncertainty is not whether it is happening. The uncertainty is how bad it will get and how fast.",
                 "links": [
                   {
-                    "label": "NASA — climate change evidence",
+                    "label": "NASA Climate",
                     "url": "https://climate.nasa.gov",
                     "emoji": "🌍",
                     "tag": "SCIENCE"
@@ -11824,9 +11812,9 @@ const LAYERS = [
                   },
                   {
                     "label": "NOAA",
-                    "url": "https://www.noaa.gov",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
-                    "tag": "EARTH"
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "Our World in Data",
@@ -11843,8 +11831,8 @@ const LAYERS = [
                     "desc": "The greenhouse effect was identified in the 1850s. The connection between fossil fuel burning and atmospheric warming was established by the 1950s. The first detailed warnings to the US government came in the 1960s. The science is not new, not contested among scientists, and not complicated in its basic outline: more CO2 means more heat, more heat means more of everything — more drought, more flood, more fire, more storm. The complexity is in the details. The conclusion is not.",
                     "links": [
                       {
-                        "label": "IPCC reports",
-                        "url": "https://www.ipcc.ch",
+                        "label": "IPCC",
+                        "url": "https://ipcc.ch",
                         "emoji": "🌍",
                         "tag": "SCIENCE"
                       }
@@ -11888,8 +11876,8 @@ const LAYERS = [
                     "desc": "The fossil fuel industry knew. Internal documents from Exxon show that their own scientists accurately predicted global warming as early as 1977. The response was not to change course. It was to fund doubt — to create the appearance of scientific controversy where none existed, to support think tanks and politicians who would question the consensus, and to delay action by the decades needed to extract maximum value from existing reserves. The tobacco playbook, applied to the atmosphere.",
                     "links": [
                       {
-                        "label": "ProPublica — fossil fuel accountability",
-                        "url": "https://www.propublica.org",
+                        "label": "ProPublica",
+                        "url": "https://propublica.org",
                         "emoji": "📰",
                         "tag": "JOURNALISM"
                       }
@@ -11933,8 +11921,8 @@ const LAYERS = [
                     "desc": "Climate change became a partisan issue not because the science is partisan but because the solutions threatened specific economic interests that invested heavily in making it partisan. In the 1980s, Republican and Democratic politicians alike supported climate action. The polarization was manufactured. Today the United States is the only major democracy where climate denial is a viable mainstream political position. That is not an accident of culture. It is an outcome of spending.",
                     "links": [
                       {
-                        "label": "OpenSecrets — fossil fuel donations",
-                        "url": "https://www.opensecrets.org",
+                        "label": "OpenSecrets",
+                        "url": "https://opensecrets.org",
                         "emoji": "💰",
                         "tag": "MONEY"
                       }
@@ -11978,8 +11966,8 @@ const LAYERS = [
                     "desc": "The climate system contains thresholds — points past which change becomes self-reinforcing and cannot be reversed by reducing emissions. Permafrost melting releases methane that causes more warming that melts more permafrost. Ice sheets reflecting sunlight melt to reveal dark ocean absorbing heat. Amazon dieback releasing stored carbon. Scientists debate exactly where these thresholds are. The consensus is that some of them are closer than comfortable and that the consequences of crossing them are not linear.",
                     "links": [
                       {
-                        "label": "IPCC — tipping points",
-                        "url": "https://www.ipcc.ch",
+                        "label": "IPCC",
+                        "url": "https://ipcc.ch",
                         "emoji": "🌍",
                         "tag": "SCIENCE"
                       }
@@ -12023,8 +12011,8 @@ const LAYERS = [
                     "desc": "The people who contributed least to climate change are experiencing its worst effects first. Bangladesh floods. Sahel drought. Pacific islands disappearing beneath the sea. Indigenous communities watching ancestral land become unlivable. The carbon was emitted overwhelmingly by wealthy industrialized nations. The consequences are distributed by geography and poverty. Climate justice holds that this is not just an environmental problem. It is a moral one — and the solutions have to reckon with that asymmetry.",
                     "links": [
                       {
-                        "label": "UN — climate justice",
-                        "url": "https://www.un.org/en/climatechange",
+                        "label": "United Nations",
+                        "url": "https://un.org",
                         "emoji": "🌍",
                         "tag": "GLOBAL"
                       }
@@ -12068,7 +12056,7 @@ const LAYERS = [
                     "desc": "2023 was the hottest year in recorded history. 2024 broke that record. The ten hottest years on record have all occurred since 2010. Arctic sea ice is at historic lows. Coral reefs are bleaching at unprecedented rates. Wildfire seasons in North America, Australia, and Southern Europe are longer, more intense, and more destructive than any previous era. The changes predicted by climate models decades ago are arriving on schedule. Some are arriving ahead of schedule.",
                     "links": [
                       {
-                        "label": "NASA — vital signs",
+                        "label": "NASA Climate",
                         "url": "https://climate.nasa.gov",
                         "emoji": "🌍",
                         "tag": "SCIENCE"
@@ -12195,15 +12183,15 @@ const LAYERS = [
             "desc": "The living web. Every species is a node in a network that took billions of years to build and that we are dismantling in centuries. Biodiversity is not a conservation luxury — it is the operating system of the biosphere. When it degrades, the systems that clean water, pollinate crops, regulate climate, and cycle nutrients degrade with it. We are pulling threads from a fabric we don't fully understand.",
             "links": [
               {
-                "label": "IUCN Red List — species status",
-                "url": "https://www.iucnredlist.org",
-                "emoji": "🌍",
+                "label": "IUCN Red List",
+                "url": "https://iucnredlist.org",
+                "emoji": "🌱",
                 "tag": "SCIENCE"
               },
               {
-                "label": "WWF — biodiversity",
-                "url": "https://www.worldwildlife.org",
-                "emoji": "🌍",
+                "label": "WWF",
+                "url": "https://worldwildlife.org",
+                "emoji": "🌱",
                 "tag": "SCIENCE"
               }
             ],
@@ -12279,8 +12267,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "IUCN Red List",
-                    "url": "https://www.iucnredlist.org",
-                    "emoji": "🌍",
+                    "url": "https://iucnredlist.org",
+                    "emoji": "🌱",
                     "tag": "SCIENCE"
                   }
                 ],
@@ -12387,8 +12375,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Global Forest Watch",
-                    "url": "https://www.globalforestwatch.org",
-                    "emoji": "🌍",
+                    "url": "https://globalforestwatch.org",
+                    "emoji": "🌱",
                     "tag": "SCIENCE"
                   },
                   {
@@ -12493,28 +12481,28 @@ const LAYERS = [
             "desc": "The next oil — already scarce, already contested, already being privatized. Every living system on earth requires it. Most political systems treat it as infinite until the moment it isn't, at which point it becomes the thing wars are fought over. The water crisis is not coming. It is already here for the billion people who lack reliable access to clean water today.",
             "links": [
               {
-                "label": "UN Water — global water data",
-                "url": "https://www.unwater.org",
-                "emoji": "🌍",
+                "label": "UN Water",
+                "url": "https://unwater.org",
+                "emoji": "🌱",
                 "tag": "GLOBAL"
               },
               {
-                "label": "Pacific Institute — water conflict",
+                "label": "Pacific Institute",
                 "url": "https://pacinst.org",
-                "emoji": "🌍",
+                "emoji": "🌱",
                 "tag": "SCIENCE"
               },
               {
-                "label": "U.S. Geological Survey",
-                "url": "https://www.usgs.gov",
+                "label": "USGS",
+                "url": "https://usgs.gov",
                 "emoji": "🌍",
                 "tag": "EARTH"
               },
               {
                 "label": "NOAA",
-                "url": "https://www.noaa.gov",
+                "url": "https://noaa.gov",
                 "emoji": "🌍",
-                "tag": "EARTH"
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -12525,8 +12513,8 @@ const LAYERS = [
                 "desc": "Two billion people lack access to safe drinking water. In the United States — the wealthiest nation in history — Flint, Michigan went years with lead-poisoned water while officials denied it. Jackson, Mississippi lost water pressure for weeks in 2022. The communities that lack reliable clean water are not random — they are poor, they are often majority non-white, and they are the communities with the least political power to demand what everyone agrees they deserve.",
                 "links": [
                   {
-                    "label": "EPA — drinking water standards",
-                    "url": "https://www.epa.gov/ground-water-and-drinking-water",
+                    "label": "EPA",
+                    "url": "https://epa.gov",
                     "emoji": "🌱",
                     "tag": "BODY"
                   }
@@ -12570,8 +12558,8 @@ const LAYERS = [
                 "desc": "The ocean covers 71% of the earth's surface, produces half its oxygen, absorbs a third of the CO2 humans emit, and contains 97% of its water. It is also warming, acidifying, and filling with plastic. Ocean acidification — caused by absorbed CO2 — is dissolving the shells of marine organisms at the base of the food chain. Dead zones — areas of oxygen-depleted water caused by agricultural runoff — now number over 400 worldwide. The ocean is not a backdrop. It is a life support system.",
                 "links": [
                   {
-                    "label": "NOAA — ocean data",
-                    "url": "https://www.noaa.gov",
+                    "label": "NOAA",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
                     "tag": "SCIENCE"
                   },
@@ -12864,14 +12852,14 @@ const LAYERS = [
                     "desc": "The Colorado River no longer reaches the sea. Fully consumed before it arrives — diverted across seven US states and Mexico through a system of dams, canals, and compacts written when the river ran higher and the West had fewer people. The Aral Sea, once the fourth largest lake on earth, was reduced to 10% of its original size by Soviet irrigation diversions — the fishing industry gone, the surrounding communities devastated, the exposed lakebed now a salt flat that poisons the air for hundreds of miles. The Jordan River is a trickle. California's Central Valley is sinking as groundwater is pumped faster than it recharges. Water diversion is power diversion. The people who control the upstream have always controlled the downstream — politically, economically, and in terms of survival. The river does not just carry water. It carries everything the communities downstream need to exist.",
                     "links": [
                       {
-                        "label": "Pacific Institute — water conflict",
+                        "label": "Pacific Institute",
                         "url": "https://pacinst.org",
-                        "emoji": "🌍",
+                        "emoji": "🌱",
                         "tag": "SCIENCE"
                       },
                       {
-                        "label": "ProPublica — water rights",
-                        "url": "https://www.propublica.org",
+                        "label": "ProPublica",
+                        "url": "https://propublica.org",
                         "emoji": "📰",
                         "tag": "JOURNALISM"
                       }
@@ -12972,9 +12960,9 @@ const LAYERS = [
                     "desc": "Water conflict is already happening. Ethiopia, Egypt, and Sudan are in a decade-long dispute over the Grand Ethiopian Renaissance Dam and its effect on Nile water flow. India and Pakistan share rivers and a history of war. American states litigate over Colorado River allocations. The UN has identified water scarcity as one of the primary drivers of conflict in the coming decades. Climate change is not creating the competition — it is intensifying competition that already exists.",
                     "links": [
                       {
-                        "label": "Pacific Institute — water conflict chronology",
+                        "label": "Pacific Institute",
                         "url": "https://pacinst.org",
-                        "emoji": "🌍",
+                        "emoji": "🌱",
                         "tag": "SCIENCE"
                       }
                     ],
@@ -13049,8 +13037,8 @@ const LAYERS = [
                 "desc": "Water is being treated as a commodity. Nestlé — now BlueTriton — pumps from drought-stricken aquifers under permits that cost almost nothing and sells the water back at a markup. Municipalities sell their water systems to private equity firms that raise rates and defer maintenance. The argument for privatization is efficiency. The argument against it is that efficiency is not the right frame for something people die without. Water is not a product. It is a condition of existence. The question of who owns it is a question about who owns life.",
                 "links": [
                   {
-                    "label": "ProPublica — water privatization",
-                    "url": "https://www.propublica.org",
+                    "label": "ProPublica",
+                    "url": "https://propublica.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -13153,15 +13141,15 @@ const LAYERS = [
             "desc": "The commons you breathe whether you consent to or not. You can choose not to drink polluted water. You cannot choose not to breathe the air. Air quality is one of the clearest expressions of environmental injustice — who lives near the refinery, who lives downwind of the highway, who gets the asthma and the cancer clusters, is not random. It follows the lines of race and class with a consistency that is too precise to be coincidence.",
             "links": [
               {
-                "label": "EPA — air quality data",
-                "url": "https://www.epa.gov/air-trends",
-                "emoji": "🌍",
-                "tag": "SCIENCE"
+                "label": "EPA",
+                "url": "https://epa.gov",
+                "emoji": "🌱",
+                "tag": "BODY"
               },
               {
-                "label": "AirNow — real-time air quality",
-                "url": "https://www.airnow.gov",
-                "emoji": "🌍",
+                "label": "AirNow",
+                "url": "https://airnow.gov",
+                "emoji": "🌱",
                 "tag": "SCIENCE"
               }
             ],
@@ -13173,10 +13161,10 @@ const LAYERS = [
                 "desc": "The Clean Air Act of 1970 — born from the same Earth Day energy that is still running — dramatically reduced air pollution in the United States and is estimated to have prevented millions of premature deaths. It is one of the clearest examples of environmental regulation working. It is also under constant pressure from the industries it regulates. Air quality improvements are not permanent. They are the result of ongoing political will to maintain them.",
                 "links": [
                   {
-                    "label": "EPA — air quality trends",
-                    "url": "https://www.epa.gov/air-trends",
-                    "emoji": "🌍",
-                    "tag": "SCIENCE"
+                    "label": "EPA",
+                    "url": "https://epa.gov",
+                    "emoji": "🌱",
+                    "tag": "BODY"
                   }
                 ],
                 "topPills": [],
@@ -13250,8 +13238,8 @@ const LAYERS = [
                     "desc": "The communities that live near petrochemical plants, steel mills, coal-fired power plants, and industrial agriculture operations bear the direct health costs of production that benefits people who live nowhere near them. Cancer Alley in Louisiana — an 85-mile stretch of the Mississippi River between Baton Rouge and New Orleans lined with petrochemical facilities — has cancer rates among the highest in the nation. The residents are overwhelmingly Black and poor. The facilities are overwhelmingly profitable.",
                     "links": [
                       {
-                        "label": "ProPublica — pollution mapping",
-                        "url": "https://www.propublica.org",
+                        "label": "ProPublica",
+                        "url": "https://propublica.org",
                         "emoji": "📰",
                         "tag": "JOURNALISM"
                       }
@@ -13388,14 +13376,7 @@ const LAYERS = [
                 "label": "Wildfires",
                 "color": "#c86030",
                 "desc": "Fire is not new. But the fire seasons of the 21st century are not the fire seasons of the 20th. They are longer, more intense, burning in places that rarely burned before, and producing smoke that crosses continents. The 2020 Australian fires burned 46 million acres — an area larger than Syria — and the smoke circled the globe, measurably affecting air quality in South America. California's annual fire season now runs nearly year-round. The forests are drier, the ignition points more frequent, and the communities in the path more numerous. Wildfire is climate change made visible.",
-                "links": [
-                  {
-                    "label": "NASA — fire data",
-                    "url": "https://firms.modaps.eosdis.nasa.gov",
-                    "emoji": "🌍",
-                    "tag": "SCIENCE"
-                  }
-                ],
+                "links": [],
                 "topPills": [],
                 "bottomPills": [
                   {
@@ -13435,10 +13416,10 @@ const LAYERS = [
                 "desc": "The geography of pollution is the geography of power. Freeways were routed through Black neighborhoods not because of traffic planning but because of who had the political power to say no. Refineries, power plants, and chemical facilities are sited in low-income communities and communities of color at rates that cannot be explained by land cost alone. Environmental justice holds that the right to clean air and water is not a middle-class amenity. It is a civil right. The data agrees.",
                 "links": [
                   {
-                    "label": "EPA — environmental justice",
-                    "url": "https://www.epa.gov/environmentaljustice",
-                    "emoji": "🌍",
-                    "tag": "RIGHTS"
+                    "label": "EPA",
+                    "url": "https://epa.gov",
+                    "emoji": "🌱",
+                    "tag": "BODY"
                   }
                 ],
                 "topPills": [],
@@ -13512,15 +13493,15 @@ const LAYERS = [
             "desc": "Environmentalism is not one thing. It is a century of arguments about what the natural world is for, who it belongs to, and what humans owe it. Those arguments have produced some of the most consequential legislation in American history and some of the most effective corporate greenwashing. The movement is currently in its most urgent and most contested chapter.",
             "links": [
               {
-                "label": "EarthDay.org",
-                "url": "https://www.earthday.org",
-                "emoji": "🌍",
+                "label": "Earth Day",
+                "url": "https://earthday.org",
+                "emoji": "🌱",
                 "tag": "CULTURE"
               },
               {
-                "label": "NRDC — environmental history",
-                "url": "https://www.nrdc.org",
-                "emoji": "🌍",
+                "label": "NRDC",
+                "url": "https://nrdc.org",
+                "emoji": "🌱",
                 "tag": "SCIENCE"
               }
             ],
@@ -13595,9 +13576,9 @@ const LAYERS = [
                 "desc": "April 22, 1970. Senator Gaylord Nelson, activist Denis Hayes, 20 million Americans in the streets. The largest civic demonstration in US history at that point — larger than any Vietnam protest — and entirely focused on the environment. Within two years the Clean Air Act, Clean Water Act, and EPA were created. Earth Day is proof that coordinated civic pressure produces policy. It now mobilizes a billion people in 193 countries annually. The theme for 2026: Our Power, Our Planet.",
                 "links": [
                   {
-                    "label": "EarthDay.org",
-                    "url": "https://www.earthday.org",
-                    "emoji": "🌍",
+                    "label": "Earth Day",
+                    "url": "https://earthday.org",
+                    "emoji": "🌱",
                     "tag": "CULTURE"
                   }
                 ],
@@ -13855,13 +13836,13 @@ const LAYERS = [
             "desc": "The theme of Earth Day 2026 — and the actual answer. Environmental progress does not depend on any single administration or election. It is sustained by the daily actions of communities, educators, workers, and families protecting where they live and work. Every movement that has ever changed the physical conditions of human life started with people deciding that the way things were was not the way things had to be. This is still that moment.",
             "links": [
               {
-                "label": "EarthDay.org — take action",
-                "url": "https://www.earthday.org",
-                "emoji": "🌍",
+                "label": "Earth Day",
+                "url": "https://earthday.org",
+                "emoji": "🌱",
                 "tag": "CULTURE"
               },
               {
-                "label": "TurboVote — vote on environment",
+                "label": "TurboVote",
                 "url": "https://turbovote.org",
                 "emoji": "🗳️",
                 "tag": "VOTE"
@@ -13938,7 +13919,7 @@ const LAYERS = [
                     "tag": "VOTE"
                   },
                   {
-                    "label": "Ballotpedia — environmental candidates",
+                    "label": "Ballotpedia",
                     "url": "https://ballotpedia.org",
                     "emoji": "🗳️",
                     "tag": "VOTE"
@@ -14177,27 +14158,27 @@ const LAYERS = [
         "desc": "The synthetic village. Engineered for engagement, which turned out to mean outrage. The loudest voices replace the wisest ones. The algorithms are not neutral — they are optimized for the emotion that keeps you scrolling, which is not joy.",
         "links": [
           {
-            "label": "Pew Research — social media use",
-            "url": "https://www.pewresearch.org/internet/",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           },
           {
-            "label": "Rest of World — tech & society",
+            "label": "Rest of World",
             "url": "https://restofworld.org",
             "emoji": "📰",
-            "tag": "WORLD"
+            "tag": "JOURNALISM"
           },
           {
-            "label": "EFF — digital rights",
-            "url": "https://www.eff.org",
-            "emoji": "🔒",
+            "label": "Electronic Frontier Foundation",
+            "url": "https://eff.org",
+            "emoji": "⚖️",
             "tag": "RIGHTS"
           },
           {
             "label": "MIT Technology Review",
-            "url": "https://www.technologyreview.com",
-            "emoji": "📰",
+            "url": "https://technologyreview.com",
+            "emoji": "🔬",
             "tag": "TECH"
           }
         ],
@@ -14211,13 +14192,13 @@ const LAYERS = [
               {
                 "label": "Stanford AI Index",
                 "url": "https://aiindex.stanford.edu",
-                "emoji": "🤖",
+                "emoji": "🔬",
                 "tag": "AI"
               },
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
@@ -14228,8 +14209,8 @@ const LAYERS = [
               },
               {
                 "label": "MIT Technology Review",
-                "url": "https://www.technologyreview.com",
-                "emoji": "📡",
+                "url": "https://technologyreview.com",
+                "emoji": "🔬",
                 "tag": "TECH"
               }
             ],
@@ -14243,7 +14224,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   }
                 ],
@@ -14288,13 +14269,13 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -14339,7 +14320,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
@@ -14395,8 +14376,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -14497,8 +14478,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -14614,7 +14595,7 @@ const LAYERS = [
               {
                 "label": "Stanford AI Index",
                 "url": "https://aiindex.stanford.edu",
-                "emoji": "🤖",
+                "emoji": "🔬",
                 "tag": "AI"
               }
             ],
@@ -14718,7 +14699,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
@@ -15051,8 +15032,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -15102,8 +15083,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -15230,8 +15211,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -15301,8 +15282,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -15346,14 +15327,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "National Alliance for Eating Disorders",
-                    "url": "https://www.allianceforeatingdisorders.com",
-                    "emoji": "🌱",
+                    "label": "Alliance for Eating Disorders",
+                    "url": "https://allianceforeatingdisorders.com",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -15397,8 +15378,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -15524,10 +15505,10 @@ const LAYERS = [
             "desc": "False or misleading information moving at scale. The platforms did not invent lies. They built infrastructure that makes lies travel faster and cheaper than truth. Every major democratic election since 2016 has been tested by the result.",
             "links": [
               {
-                "label": "Brennan Center for Justice",
-                "url": "https://www.brennancenter.org",
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
                 "emoji": "⚖️",
-                "tag": "LAW"
+                "tag": "RIGHTS"
               },
               {
                 "label": "ATJon on Substack",
@@ -15542,8 +15523,8 @@ const LAYERS = [
                 "tag": "JOURNALISM"
               },
               {
-                "label": "Pew Research — misinformation",
-                "url": "https://www.pewresearch.org",
+                "label": "Pew Research",
+                "url": "https://pewresearch.org",
                 "emoji": "📊",
                 "tag": "DATA"
               }
@@ -15613,10 +15594,10 @@ const LAYERS = [
                     "tag": "USNOW"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -15660,13 +15641,13 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -15760,15 +15741,15 @@ const LAYERS = [
                 "desc": "Claims dressed in lab coats. Vaccine misinformation, miracle cures, alternative medicine empires. The platforms surface these because they engage. The cost shows up in public health data.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -15811,10 +15792,10 @@ const LAYERS = [
                 "desc": "The specific category that has restructured American politics since 2020. Election denial has gone from fringe to platform-level for one of the two major parties. The institutional damage will outlast the cycle that produced it.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -15931,8 +15912,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
@@ -15951,8 +15932,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -16002,8 +15983,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -16047,8 +16028,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -16108,8 +16089,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -16159,8 +16140,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -16427,8 +16408,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -16652,7 +16633,7 @@ const LAYERS = [
                 "desc": "The reason most of fandom exists. People want a we. The team becomes the easy answer.",
                 "links": [
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -17161,8 +17142,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -17296,8 +17277,8 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               }
             ],
             "topPills": [
@@ -17315,9 +17296,9 @@ const LAYERS = [
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -17496,7 +17477,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   }
                 ],
@@ -17541,13 +17522,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -17624,8 +17605,8 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
                 "label": "Longreads",
@@ -17744,8 +17725,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -17789,8 +17770,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -18331,7 +18312,7 @@ const LAYERS = [
         "desc": "The oldest human need after food and shelter. To belong is to be recognized — to have your existence acknowledged by a group that matters to you. The need is real and legitimate. What gets built around it is not always. Belonging has been the foundation of family, church, and community. It has also been the engine of tribalism, exclusion, and every in-group that has ever defined itself by who it keeps out.",
         "links": [
           {
-            "label": "On Being — the need to belong",
+            "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
             "tag": "SPIRIT"
@@ -18381,8 +18362,8 @@ const LAYERS = [
         "desc": "The shared space, the public square, the park, the library, the air. What belongs to everyone and therefore, in a market economy, to no one in particular. The commons is always under pressure — from privatization, from neglect, from the assumption that if something doesn't have a price it doesn't have a value. What a society does with its commons tells you exactly what it believes about its members.",
         "links": [
           {
-            "label": "Pew Research — community & civic life",
-            "url": "https://www.pewresearch.org",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           }
@@ -18431,8 +18412,8 @@ const LAYERS = [
         "desc": "The name given to disputes that are really about power dressed in the language of values. Who decides what gets taught, what gets celebrated, what gets remembered, and what gets erased. Culture wars are rarely about culture. They are about which group's norms get to be the default — whose discomfort gets treated as a problem worth solving and whose gets treated as the price of progress. The heat is real. The stakes are real. The framing is almost always wrong.",
         "links": [
           {
-            "label": "Pew Research — political polarization",
-            "url": "https://www.pewresearch.org",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           }
@@ -18506,40 +18487,40 @@ const LAYERS = [
     "height": 13,
     "links": [
       {
-        "label": "Nautilus — science meets culture, beautifully written",
+        "label": "Nautilus",
         "url": "https://nautil.us",
-        "tag": "MIND",
-        "emoji": "🔬"
+        "emoji": "🔬",
+        "tag": "SCIENCE"
       },
       {
-        "label": "Aeon — philosophy, science & society, free",
+        "label": "Aeon",
         "url": "https://aeon.co",
-        "tag": "IDEAS",
-        "emoji": "💭"
+        "emoji": "🧠",
+        "tag": "MIND"
       },
       {
-        "label": "Khan Academy — free world-class education",
-        "url": "https://www.khanacademy.org",
-        "tag": "LEARN",
-        "emoji": "📚"
+        "label": "Khan Academy",
+        "url": "https://khanacademy.org",
+        "emoji": "🔬",
+        "tag": "LEARN"
       },
       {
-        "label": "ProPublica — investigative journalism",
-        "url": "https://www.propublica.org",
-        "tag": "JOURNALISM",
-        "emoji": "📰"
+        "label": "ProPublica",
+        "url": "https://propublica.org",
+        "emoji": "📰",
+        "tag": "JOURNALISM"
       },
       {
-        "label": "CBO — federal budget data",
-        "url": "https://www.cbo.gov",
-        "tag": "BUDGET",
-        "emoji": "📊"
+        "label": "Congressional Budget Office",
+        "url": "https://cbo.gov",
+        "emoji": "📊",
+        "tag": "DATA"
       },
       {
-        "label": "USASpending.gov — federal contracts & grants",
-        "url": "https://www.usaspending.gov",
-        "tag": "DATA",
-        "emoji": "📊"
+        "label": "USASpending.gov",
+        "url": "https://usaspending.gov",
+        "emoji": "📊",
+        "tag": "DATA"
       }
     ],
     "orbs": [
@@ -18549,28 +18530,28 @@ const LAYERS = [
         "desc": "Not just reading — the capacity to parse power. Every technology that has ever democratized access to information has also democratized the ability to spread misinformation. The library and the internet are the same impulse separated by five centuries: the belief that knowledge should be available to everyone, and the ongoing argument about what that actually means and who it actually serves.",
         "links": [
           {
-            "label": "Internet Archive — the web's memory",
+            "label": "Internet Archive",
             "url": "https://archive.org",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "emoji": "🗄️",
+            "tag": "ARCHIVE"
           },
           {
-            "label": "Khan Academy — free world-class education",
-            "url": "https://www.khanacademy.org",
-            "emoji": "📚",
+            "label": "Khan Academy",
+            "url": "https://khanacademy.org",
+            "emoji": "🔬",
             "tag": "LEARN"
           },
           {
-            "label": "Project Gutenberg — free literature",
-            "url": "https://www.gutenberg.org",
-            "emoji": "📚",
-            "tag": "TEXTS"
+            "label": "Project Gutenberg",
+            "url": "https://gutenberg.org",
+            "emoji": "📖",
+            "tag": "ARCHIVE"
           },
           {
-            "label": "EFF — digital rights & freedom",
-            "url": "https://www.eff.org",
-            "emoji": "📡",
-            "tag": "TECH"
+            "label": "Electronic Frontier Foundation",
+            "url": "https://eff.org",
+            "emoji": "⚖️",
+            "tag": "RIGHTS"
           }
         ],
         "topPills": [
@@ -18581,9 +18562,9 @@ const LAYERS = [
             "desc": "Writing is the original information technology — the moment humanity outsourced memory to a surface. Sumerian cuneiform around 3200 BCE. Egyptian hieroglyphics. The Phoenician alphabet that most modern scripts descend from. Chinese characters with 3,000 years of continuous use. Each writing system is a different theory of how meaning works. The invention of writing did not just preserve information — it changed what information was, what memory meant, and what a civilization could become.",
             "links": [
               {
-                "label": "Encyclopaedia Britannica — history of writing",
-                "url": "https://www.britannica.com/topic/writing",
-                "emoji": "📚",
+                "label": "Britannica",
+                "url": "https://britannica.com",
+                "emoji": "📖",
                 "tag": "CULTURE"
               }
             ],
@@ -18856,14 +18837,14 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
                 "label": "Project Gutenberg",
-                "url": "https://www.gutenberg.org",
-                "emoji": "📚",
-                "tag": "TEXTS"
+                "url": "https://gutenberg.org",
+                "emoji": "📖",
+                "tag": "ARCHIVE"
               }
             ],
             "topPills": [],
@@ -18910,15 +18891,15 @@ const LAYERS = [
             "desc": "The most significant information revolution since the printing press, still unfolding, still not understood. It extended literacy to a billion people and simultaneously buried it under an avalanche of noise. It gave everyone a voice and gave the loudest voices amplifiers the size of continents. It made the sum of human knowledge available to anyone with a connection and made it nearly impossible to know which parts of that knowledge are true. We are still in the first chapter.",
             "links": [
               {
-                "label": "EFF — digital rights",
-                "url": "https://www.eff.org",
-                "emoji": "📡",
-                "tag": "TECH"
+                "label": "Electronic Frontier Foundation",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               },
               {
                 "label": "MIT Technology Review",
-                "url": "https://www.technologyreview.com",
-                "emoji": "📡",
+                "url": "https://technologyreview.com",
+                "emoji": "🔬",
                 "tag": "TECH"
               }
             ],
@@ -18939,10 +18920,10 @@ const LAYERS = [
                 "desc": "The business model of the free internet: your attention and your data are the product. Every search, every click, every pause while scrolling is a data point sold to advertisers, insurance companies, political campaigns, and anyone else willing to pay. The transaction is invisible, which is the point. You are not the customer. You are the inventory.",
                 "links": [
                   {
-                    "label": "EFF — surveillance",
-                    "url": "https://www.eff.org",
-                    "emoji": "📡",
-                    "tag": "TECH"
+                    "label": "Electronic Frontier Foundation",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -19050,8 +19031,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
@@ -19063,8 +19044,8 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               }
             ],
             "topPills": [
@@ -19077,8 +19058,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -19121,8 +19102,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -19212,8 +19193,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -19262,8 +19243,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -19317,8 +19298,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -19393,8 +19374,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
@@ -19413,8 +19394,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -19458,8 +19439,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -19504,7 +19485,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   }
                 ],
@@ -19549,8 +19530,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -19593,8 +19574,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -19638,8 +19619,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -19722,13 +19703,13 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
                 "label": "Library of Congress",
-                "url": "https://www.loc.gov",
-                "emoji": "📚",
+                "url": "https://loc.gov",
+                "emoji": "🗄️",
                 "tag": "CULTURE"
               }
             ],
@@ -19742,13 +19723,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -19792,15 +19773,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -19843,8 +19824,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -19889,8 +19870,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -19933,15 +19914,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -19984,15 +19965,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -20079,8 +20060,8 @@ const LAYERS = [
               },
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               }
             ],
@@ -20189,8 +20170,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -20280,13 +20261,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "JSTOR open content",
-                    "url": "https://www.jstor.org/open",
-                    "emoji": "📚",
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
                     "tag": "RESEARCH"
                   }
                 ],
@@ -20330,14 +20311,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Endangered Languages Project",
-                    "url": "https://www.endangeredlanguages.com",
-                    "emoji": "🗣️",
+                    "url": "https://endangeredlanguages.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -20413,21 +20394,21 @@ const LAYERS = [
             "links": [
               {
                 "label": "Wikipedia",
-                "url": "https://www.wikipedia.org",
-                "emoji": "📚",
+                "url": "https://wikipedia.org",
+                "emoji": "📖",
                 "tag": "CULTURE"
               },
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
-                "label": "OER Commons — open educational resources",
+                "label": "OER Commons",
                 "url": "https://oercommons.org",
-                "emoji": "🎓",
-                "tag": "LEARNING"
+                "emoji": "🔬",
+                "tag": "LEARN"
               }
             ],
             "topPills": [
@@ -20439,15 +20420,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Wikipedia",
-                    "url": "https://www.wikipedia.org",
-                    "emoji": "📚",
+                    "url": "https://wikipedia.org",
+                    "emoji": "📖",
                     "tag": "CULTURE"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -20491,13 +20472,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "arXiv — open scientific preprints",
+                    "label": "arXiv",
                     "url": "https://arxiv.org",
-                    "emoji": "🧪",
+                    "emoji": "🔬",
                     "tag": "SCIENCE"
                   }
                 ],
@@ -20542,8 +20523,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "Mozilla Foundation",
@@ -20593,13 +20574,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -20654,10 +20635,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -20701,8 +20682,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -21620,8 +21601,8 @@ const LAYERS = [
                       {
                         "label": "Stanford Encyclopedia of Philosophy",
                         "url": "https://plato.stanford.edu",
-                        "emoji": "📚",
-                        "tag": "PHILOSOPHY"
+                        "emoji": "🔬",
+                        "tag": "MIND"
                       }
                     ],
                     "topPills": [],
@@ -22603,31 +22584,31 @@ const LAYERS = [
         "desc": "This is where knowledge began. Before science had a method, before schools had buildings, before writing had an alphabet — there was image, music, story, and argument. The arts and humanities are not a softer version of knowing. They are the original form of it. Every discipline that came after is a specialization of something that started here. What a civilization funds, teaches, and preserves tells you exactly what it believes is worth passing forward.",
         "links": [
           {
-            "label": "Khan Academy — Art History",
-            "url": "https://www.khanacademy.org/humanities/art-history",
-            "emoji": "🎨",
-            "tag": "CULTURE"
+            "label": "Khan Academy",
+            "url": "https://khanacademy.org",
+            "emoji": "🔬",
+            "tag": "LEARN"
           },
           {
-            "label": "The Marginalian — ideas through culture",
-            "url": "https://www.themarginalian.org",
-            "emoji": "🕊️",
-            "tag": "CULTURE"
+            "label": "The Marginalian",
+            "url": "https://themarginalian.org",
+            "emoji": "🧠",
+            "tag": "MIND"
           },
           {
-            "label": "Longreads — literature & culture",
+            "label": "Longreads",
             "url": "https://longreads.com",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           },
           {
-            "label": "Aeon — philosophy & the humanities",
+            "label": "Aeon",
             "url": "https://aeon.co",
             "emoji": "🧠",
-            "tag": "IDEAS"
+            "tag": "MIND"
           },
           {
-            "label": "Internet Archive — texts, audio, film",
+            "label": "Internet Archive",
             "url": "https://archive.org",
             "emoji": "🗄️",
             "tag": "ARCHIVE"
@@ -22641,10 +22622,10 @@ const LAYERS = [
             "desc": "Before the modern university split knowledge into departments, there was one curriculum. The trivium taught you how to think and communicate. The quadrivium taught you how to read the structure of the world. Together — seven disciplines, one project. The unified model of education that organized Western thought for a thousand years and seeded every academic field that followed.",
             "links": [
               {
-                "label": "Khan Academy — classical education",
-                "url": "https://www.khanacademy.org/humanities",
-                "emoji": "🏛️",
-                "tag": "EDUCATION"
+                "label": "Khan Academy",
+                "url": "https://khanacademy.org",
+                "emoji": "🔬",
+                "tag": "LEARN"
               },
               {
                 "label": "Smarthistory",
@@ -22676,8 +22657,8 @@ const LAYERS = [
                     "links": [
                       {
                         "label": "Linguistic Society of America",
-                        "url": "https://www.linguisticsociety.org",
-                        "emoji": "🔤",
+                        "url": "https://linguisticsociety.org",
+                        "emoji": "🌐",
                         "tag": "LANGUAGE"
                       }
                     ],
@@ -22720,10 +22701,10 @@ const LAYERS = [
                     "desc": "The discipline of valid reasoning. What follows from what. How to test whether an argument holds — not whether its conclusion feels right, but whether the structure is sound. Logic is the backbone of mathematics, law, science, and philosophy. It is also the most reliable tool for detecting when someone is trying to mislead you.",
                     "links": [
                       {
-                        "label": "Stanford Encyclopedia of Philosophy — Logic",
-                        "url": "https://plato.stanford.edu/entries/logic-classical/",
-                        "emoji": "🧠",
-                        "tag": "PHILOSOPHY"
+                        "label": "Stanford Encyclopedia of Philosophy",
+                        "url": "https://plato.stanford.edu",
+                        "emoji": "🔬",
+                        "tag": "MIND"
                       }
                     ],
                     "topPills": [],
@@ -22842,10 +22823,10 @@ const LAYERS = [
                 "desc": "The second four. Arithmetic, Geometry, Music, Astronomy. Number in itself, number in space, number in time, number in space and time. The quadrivium was the mathematical half of the classical curriculum — the part that proves the split between arts and sciences is a modern invention. These were liberal arts. They were considered essential to a free person's education, not the property of specialists.",
                 "links": [
                   {
-                    "label": "Khan Academy — mathematics",
-                    "url": "https://www.khanacademy.org/math",
-                    "emoji": "📐",
-                    "tag": "MATH"
+                    "label": "Khan Academy",
+                    "url": "https://khanacademy.org",
+                    "emoji": "🔬",
+                    "tag": "LEARN"
                   }
                 ],
                 "topPills": [
@@ -22856,10 +22837,10 @@ const LAYERS = [
                     "desc": "Number in itself — the most abstract of the four. Not calculation for practical ends but the study of number as a thing that exists independently of the objects being counted. The Pythagoreans believed number was the fundamental substance of reality. Modern physics has not entirely disagreed.",
                     "links": [
                       {
-                        "label": "Khan Academy — arithmetic",
-                        "url": "https://www.khanacademy.org/math/arithmetic",
-                        "emoji": "🔢",
-                        "tag": "MATH"
+                        "label": "Khan Academy",
+                        "url": "https://khanacademy.org",
+                        "emoji": "🔬",
+                        "tag": "LEARN"
                       }
                     ],
                     "topPills": [],
@@ -22901,10 +22882,10 @@ const LAYERS = [
                     "desc": "Number in space. The study of shape, form, proportion, and spatial relationship. Geometry was considered the discipline that trained the mind to think about what is eternal and unchanging — because a triangle is a triangle in every culture, in every century, on every planet. It was the classical gateway to philosophy.",
                     "links": [
                       {
-                        "label": "Khan Academy — geometry",
-                        "url": "https://www.khanacademy.org/math/geometry",
-                        "emoji": "📐",
-                        "tag": "MATH"
+                        "label": "Khan Academy",
+                        "url": "https://khanacademy.org",
+                        "emoji": "🔬",
+                        "tag": "LEARN"
                       }
                     ],
                     "topPills": [],
@@ -22946,10 +22927,10 @@ const LAYERS = [
                     "desc": "Number in time — the quadrivium's entry for music was not about composition or performance but about harmony as a mathematical relationship. The ratio between frequencies. The structure of consonance and dissonance. The Pythagoreans discovered that musical intervals correspond to simple whole-number ratios, and concluded that the universe itself was organized on the same principle. The music of the spheres was not a metaphor to them.",
                     "links": [
                       {
-                        "label": "The Marginalian — music and mathematics",
-                        "url": "https://www.themarginalian.org",
-                        "emoji": "🎵",
-                        "tag": "CULTURE"
+                        "label": "The Marginalian",
+                        "url": "https://themarginalian.org",
+                        "emoji": "🧠",
+                        "tag": "MIND"
                       }
                     ],
                     "topPills": [],
@@ -22991,10 +22972,10 @@ const LAYERS = [
                     "desc": "Number in space and time — the capstone of the quadrivium. The observation of celestial cycles and the mathematical modeling of their motion. Astronomy was the discipline where the other three converged: arithmetic to count, geometry to map, music's ratios to describe orbital harmony. Kepler still used musical ratios to describe planetary motion. The line between astronomy and astrology was not drawn until the Scientific Revolution — and even then, it was contested.",
                     "links": [
                       {
-                        "label": "NASA — open science",
+                        "label": "NASA Science",
                         "url": "https://science.nasa.gov",
-                        "emoji": "🔭",
-                        "tag": "SCIENCE"
+                        "emoji": "🌌",
+                        "tag": "COSMOS"
                       }
                     ],
                     "topPills": [],
@@ -23100,15 +23081,15 @@ const LAYERS = [
             "desc": "The oldest human record. Before writing, there was drawing. Before history, there was image. Visual art is how human beings have always externalized inner experience — making the invisible visible, the fleeting permanent. Cave paintings to cathedrals to digital media: the impulse is the same. The medium changes. The need doesn't.",
             "links": [
               {
-                "label": "Khan Academy — Art History",
-                "url": "https://www.khanacademy.org/humanities/art-history",
-                "emoji": "🎨",
-                "tag": "CULTURE"
+                "label": "Khan Academy",
+                "url": "https://khanacademy.org",
+                "emoji": "🔬",
+                "tag": "LEARN"
               },
               {
-                "label": "Smarthistory — free art history",
+                "label": "Smarthistory",
                 "url": "https://smarthistory.org",
-                "emoji": "🖼️",
+                "emoji": "🔬",
                 "tag": "CULTURE"
               }
             ],
@@ -23120,15 +23101,15 @@ const LAYERS = [
                 "desc": "Visual art across all media and all eras — painting, drawing, printmaking, collage, digital. The record of what the eye has seen and the mind has needed to externalize. Every era's art tells you what that era could not say any other way.",
                 "links": [
                   {
-                    "label": "Khan Academy: Art History",
-                    "url": "https://www.khanacademy.org/humanities/art-history",
-                    "emoji": "🎨",
-                    "tag": "CULTURE"
+                    "label": "Khan Academy",
+                    "url": "https://khanacademy.org",
+                    "emoji": "🔬",
+                    "tag": "LEARN"
                   },
                   {
                     "label": "Smarthistory",
                     "url": "https://smarthistory.org",
-                    "emoji": "🖼️",
+                    "emoji": "🔬",
                     "tag": "CULTURE"
                   }
                 ],
@@ -23171,9 +23152,9 @@ const LAYERS = [
                 "desc": "Art that occupies space. Three-dimensional, physical, present in the world in a way a painting is not. Public sculpture is one of the oldest forms of political communication — who gets a monument, who gets a plaza, whose likeness endures in stone says everything about who a culture decided mattered.",
                 "links": [
                   {
-                    "label": "Smarthistory — sculpture",
+                    "label": "Smarthistory",
                     "url": "https://smarthistory.org",
-                    "emoji": "🗿",
+                    "emoji": "🔬",
                     "tag": "CULTURE"
                   }
                 ],
@@ -23216,9 +23197,9 @@ const LAYERS = [
                 "desc": "The art form you cannot avoid. Buildings are the most public of all creative acts — they shape how people move, gather, work, worship, and understand their place in a civic order. Every significant building is also a statement of power. Who commissioned it. What it was meant to say. What it forced everyone around it to feel.",
                 "links": [
                   {
-                    "label": "Archdaily — architecture culture",
-                    "url": "https://www.archdaily.com",
-                    "emoji": "🏛️",
+                    "label": "ArchDaily",
+                    "url": "https://archdaily.com",
+                    "emoji": "🎨",
                     "tag": "CULTURE"
                   }
                 ],
@@ -23261,9 +23242,9 @@ const LAYERS = [
                 "desc": "The applied arts — where beauty meets function. Design shapes every object you interact with, every interface you navigate, every environment you inhabit. Craft is the knowledge that lives in the hands — accumulated over generations, disappearing when it isn't passed down. Both challenge the boundary between art and utility that high culture invented and that most of the world has never recognized.",
                 "links": [
                   {
-                    "label": "Design Observer — design & culture",
+                    "label": "Design Observer",
                     "url": "https://designobserver.com",
-                    "emoji": "✏️",
+                    "emoji": "🎨",
                     "tag": "CULTURE"
                   }
                 ],
@@ -23338,16 +23319,16 @@ const LAYERS = [
             "desc": "Art that exists only in the moment of performance. It cannot be stored, only recorded — and the recording is never the thing itself. Theater, music, dance, and film all share this: the audience is present, the artists are present, and what happens between them is unrepeatable. Every performance is a live argument about what it means to be human.",
             "links": [
               {
-                "label": "The Marginalian — performance & meaning",
-                "url": "https://www.themarginalian.org",
-                "emoji": "🎭",
-                "tag": "CULTURE"
+                "label": "The Marginalian",
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
-                "label": "Longreads — arts writing",
+                "label": "Longreads",
                 "url": "https://longreads.com",
                 "emoji": "📰",
-                "tag": "CULTURE"
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -23358,16 +23339,16 @@ const LAYERS = [
                 "desc": "The universal language — which means every culture speaks it differently. Music is organized sound and organized time. It carries memory, identity, protest, grief, and joy in ways nothing else can reach. It crosses language barriers because it bypasses language entirely.",
                 "links": [
                   {
-                    "label": "The Marginalian — music & meaning",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "🎵",
-                    "tag": "CULTURE"
+                    "label": "The Marginalian",
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   },
                   {
-                    "label": "Longreads — music writing",
+                    "label": "Longreads",
                     "url": "https://longreads.com",
                     "emoji": "📰",
-                    "tag": "CULTURE"
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -23409,16 +23390,16 @@ const LAYERS = [
                 "desc": "The defining art form of the 20th century and the most powerful storytelling machine ever built — which also makes it the most powerful propaganda machine ever built. What gets made, funded, and distributed shapes what a culture accepts as real. Who is the hero. Who is the threat. What counts as a normal life.",
                 "links": [
                   {
-                    "label": "Longreads — film criticism",
+                    "label": "Longreads",
                     "url": "https://longreads.com",
-                    "emoji": "🎬",
-                    "tag": "CULTURE"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
-                    "label": "The Marginalian — film & ideas",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "🕊️",
-                    "tag": "CULTURE"
+                    "label": "The Marginalian",
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -23460,10 +23441,10 @@ const LAYERS = [
                 "desc": "The original public forum. Greek tragedy was civic education — the polis gathered to watch what happens when power collides with fate and pride and necessity. Theater has always been the art form that puts the dangerous questions in a room where everyone has to sit with them. What we do to each other. What we owe each other. What happens when the rules break down.",
                 "links": [
                   {
-                    "label": "The Marginalian — theater & meaning",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "🎭",
-                    "tag": "CULTURE"
+                    "label": "The Marginalian",
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -23505,10 +23486,10 @@ const LAYERS = [
                 "desc": "The body as instrument and argument. Dance is the art form that predates every other — before the cave painting, before the drum, there was movement in response to the world. Every culture has it. No culture has ever not had it. It is the most direct expression of what a body knows that a mind cannot yet say.",
                 "links": [
                   {
-                    "label": "The Marginalian — movement & meaning",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "💃",
-                    "tag": "CULTURE"
+                    "label": "The Marginalian",
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   },
                   {
                     "label": "JSTOR",
@@ -23624,20 +23605,20 @@ const LAYERS = [
             "desc": "Story is the oldest technology for transmitting what cannot be explained. Before data, before argument, before doctrine — there was narrative. The human brain is wired for it. Every culture has used story to carry its values, its warnings, its grief, and its hope across generations. What gets written, published, taught, and canonized is always a choice. That choice is always political.",
             "links": [
               {
-                "label": "Longreads — long-form literature",
+                "label": "Longreads",
                 "url": "https://longreads.com",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               },
               {
-                "label": "The Marginalian — books & ideas",
-                "url": "https://www.themarginalian.org",
-                "emoji": "🕊️",
-                "tag": "CULTURE"
+                "label": "The Marginalian",
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               },
               {
-                "label": "Project Gutenberg — free classic literature",
-                "url": "https://www.gutenberg.org",
+                "label": "Project Gutenberg",
+                "url": "https://gutenberg.org",
                 "emoji": "📖",
                 "tag": "ARCHIVE"
               }
@@ -23652,8 +23633,8 @@ const LAYERS = [
                   {
                     "label": "Longreads",
                     "url": "https://longreads.com",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "Project Gutenberg",
@@ -23701,9 +23682,9 @@ const LAYERS = [
                 "desc": "Language compressed until it carries more than language can. Poetry is not a decorative form of prose — it is a different instrument entirely. It operates on sound, rhythm, image, and the white space around the words. What it can do cannot be done any other way. Every culture has it. Some have had nothing else.",
                 "links": [
                   {
-                    "label": "Poetry Foundation — free archive",
-                    "url": "https://www.poetryfoundation.org",
-                    "emoji": "✍️",
+                    "label": "Poetry Foundation",
+                    "url": "https://poetryfoundation.org",
+                    "emoji": "📖",
                     "tag": "CULTURE"
                   }
                 ],
@@ -23791,13 +23772,13 @@ const LAYERS = [
                 "desc": "The discipline at the border between journalism and literature. The tools of the novelist — scene, character, voice, pacing — applied to events that actually happened. At its best it is the most powerful form of truth-telling that exists. At its worst it is the most elegant form of distortion. The line between them is thinner than it appears.",
                 "links": [
                   {
-                    "label": "Longreads — narrative nonfiction",
+                    "label": "Longreads",
                     "url": "https://longreads.com",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "The Atavist — long-form narrative",
+                    "label": "The Atavist",
                     "url": "https://magazine.atavist.com",
                     "emoji": "📖",
                     "tag": "JOURNALISM"
@@ -23885,20 +23866,20 @@ const LAYERS = [
               {
                 "label": "Stanford Encyclopedia of Philosophy",
                 "url": "https://plato.stanford.edu",
-                "emoji": "🏛️",
-                "tag": "PHILOSOPHY"
+                "emoji": "🔬",
+                "tag": "MIND"
               },
               {
-                "label": "Aeon — philosophy & ideas",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
-                "tag": "IDEAS"
+                "tag": "MIND"
               },
               {
-                "label": "The Marginalian — philosophy in culture",
-                "url": "https://www.themarginalian.org",
-                "emoji": "🕊️",
-                "tag": "IDEAS"
+                "label": "The Marginalian",
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               }
             ],
             "topPills": [
@@ -23909,10 +23890,10 @@ const LAYERS = [
                 "desc": "The branch of philosophy that asks how we ought to act — toward each other, toward the natural world, toward future generations. Ethics does not tell you what to do. It gives you a framework for thinking about what to do. The major traditions — consequentialism, deontology, virtue ethics, care ethics — reach different conclusions from different starting assumptions. Understanding them is the beginning of moral reasoning.",
                 "links": [
                   {
-                    "label": "Stanford Encyclopedia — ethics",
-                    "url": "https://plato.stanford.edu/entries/ethics/",
-                    "emoji": "⚖️",
-                    "tag": "PHILOSOPHY"
+                    "label": "Stanford Encyclopedia of Philosophy",
+                    "url": "https://plato.stanford.edu",
+                    "emoji": "🔬",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -23954,10 +23935,10 @@ const LAYERS = [
                 "desc": "The philosophy of beauty, taste, and art. What makes something beautiful — and whether that question has an answer that isn't just personal preference. Aesthetics is the bridge between philosophy and the arts: it asks why certain arrangements of sound, image, word, or form move us the way they do, and whether there is anything universal in that response or only the accumulated habits of culture.",
                 "links": [
                   {
-                    "label": "Stanford Encyclopedia — aesthetics",
-                    "url": "https://plato.stanford.edu/entries/aesthetics/",
-                    "emoji": "🎨",
-                    "tag": "PHILOSOPHY"
+                    "label": "Stanford Encyclopedia of Philosophy",
+                    "url": "https://plato.stanford.edu",
+                    "emoji": "🔬",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -23999,16 +23980,16 @@ const LAYERS = [
                 "desc": "The branch of philosophy that asks what a just society looks like and how power ought to be organized. Plato, Aristotle, Locke, Rousseau, Hobbes, Marx, Rawls, Arendt — they disagree about almost everything. But they are all asking the same question: what do we owe each other, and who decides? Every political system alive today is an answer — usually an unacknowledged one — to that question.",
                 "links": [
                   {
-                    "label": "Stanford Encyclopedia — political philosophy",
-                    "url": "https://plato.stanford.edu/entries/political-philosophy/",
-                    "emoji": "⚖️",
-                    "tag": "PHILOSOPHY"
+                    "label": "Stanford Encyclopedia of Philosophy",
+                    "url": "https://plato.stanford.edu",
+                    "emoji": "🔬",
+                    "tag": "MIND"
                   },
                   {
-                    "label": "Aeon — politics & ideas",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
-                    "tag": "IDEAS"
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -24092,15 +24073,15 @@ const LAYERS = [
             "links": [
               {
                 "label": "Linguistic Society of America",
-                "url": "https://www.linguisticsociety.org",
-                "emoji": "🔤",
+                "url": "https://linguisticsociety.org",
+                "emoji": "🌐",
                 "tag": "LANGUAGE"
               },
               {
                 "label": "Endangered Language Fund",
                 "url": "https://endangeredlanguagefund.org",
-                "emoji": "🌍",
-                "tag": "CULTURE"
+                "emoji": "🌐",
+                "tag": "LANGUAGE"
               }
             ],
             "topPills": [
@@ -24112,8 +24093,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Online Etymology Dictionary",
-                    "url": "https://www.etymonline.com",
-                    "emoji": "🔤",
+                    "url": "https://etymonline.com",
+                    "emoji": "🗄️",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -24158,14 +24139,14 @@ const LAYERS = [
                   {
                     "label": "Endangered Language Fund",
                     "url": "https://endangeredlanguagefund.org",
-                    "emoji": "🌍",
-                    "tag": "CULTURE"
+                    "emoji": "🌐",
+                    "tag": "LANGUAGE"
                   },
                   {
-                    "label": "UNESCO — endangered languages",
-                    "url": "https://www.unesco.org/en/articles/endangered-languages",
-                    "emoji": "🌐",
-                    "tag": "CULTURE"
+                    "label": "UNESCO",
+                    "url": "https://unesco.org",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
                   }
                 ],
                 "topPills": [],
@@ -24207,9 +24188,9 @@ const LAYERS = [
                 "desc": "The impossible art. Every translation is an interpretation — a set of choices about which meanings to preserve and which to sacrifice. There is no neutral translation. The translator is always making decisions about what the original means, and those decisions carry the translator's own time, culture, and assumptions into the text. That is also why translation is one of the most creative acts in human culture.",
                 "links": [
                   {
-                    "label": "Words Without Borders — literature in translation",
+                    "label": "Words Without Borders",
                     "url": "https://wordswithoutborders.org",
-                    "emoji": "🌐",
+                    "emoji": "📖",
                     "tag": "CULTURE"
                   }
                 ],
@@ -24345,16 +24326,16 @@ const LAYERS = [
             "desc": "The only institution designed to give every child a shared foundation and a common floor. Currently underfunded in poor districts, overstretched everywhere, and politically targeted from multiple directions simultaneously.",
             "links": [
               {
-                "label": "ProPublica: Education",
-                "url": "https://www.propublica.org",
+                "label": "ProPublica",
+                "url": "https://propublica.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
               },
               {
-                "label": "USASpending: Education Budget",
-                "url": "https://www.usaspending.gov",
-                "emoji": "💰",
-                "tag": "BUDGET"
+                "label": "USASpending.gov",
+                "url": "https://usaspending.gov",
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "National Center for Education Statistics",
@@ -24377,21 +24358,21 @@ const LAYERS = [
                 "desc": "What gets taught is what gets remembered as true. Who writes the textbooks writes the national story. This is why curriculum battles are proxy wars for cultural control — and why they are so bitter.",
                 "links": [
                   {
-                    "label": "ProPublica — education & power",
-                    "url": "https://www.propublica.org",
+                    "label": "ProPublica",
+                    "url": "https://propublica.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "USASpending — education budget",
-                    "url": "https://www.usaspending.gov",
+                    "label": "USASpending.gov",
+                    "url": "https://usaspending.gov",
                     "emoji": "📊",
-                    "tag": "BUDGET"
+                    "tag": "DATA"
                   },
                   {
                     "label": "Khan Academy",
-                    "url": "https://www.khanacademy.org",
-                    "emoji": "📚",
+                    "url": "https://khanacademy.org",
+                    "emoji": "🔬",
                     "tag": "LEARN"
                   }
                 ],
@@ -24510,8 +24491,8 @@ const LAYERS = [
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
@@ -24581,8 +24562,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -24638,8 +24619,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -24682,15 +24663,15 @@ const LAYERS = [
                 "desc": "What growing brains need that hungry households don't always provide. WIC, SNAP, and school meals do enormous quiet work. They get cut anyway.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -24988,13 +24969,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "Library of Congress",
-                    "url": "https://www.loc.gov",
-                    "emoji": "📚",
+                    "url": "https://loc.gov",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -25037,10 +25018,10 @@ const LAYERS = [
                 "desc": "How government works and why it matters. Civics education has been thinned out across most curricula. The civic literacy gap shows up in every survey.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -25511,10 +25492,10 @@ const LAYERS = [
             "desc": "The political fight under everything. Curriculum is a fight about which Americans the next generation will see as central, which stories get told, which truths get acknowledged. The fight is louder right now because the underlying demographics are shifting.",
             "links": [
               {
-                "label": "Brennan Center for Justice",
-                "url": "https://www.brennancenter.org",
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
                 "emoji": "⚖️",
-                "tag": "LAW"
+                "tag": "RIGHTS"
               },
               {
                 "label": "ATJon on Substack",
@@ -25544,9 +25525,9 @@ const LAYERS = [
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -25639,10 +25620,10 @@ const LAYERS = [
                 "desc": "What gets included in American history. Slavery's centrality. Native dispossession. Women's invisibility. The wars over how to teach this are being fought in school boards and state legislatures right now.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -25696,10 +25677,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -25741,10 +25722,10 @@ const LAYERS = [
                 "desc": "Whether young Americans are being trained to participate in democracy. Civic literacy among young Americans is alarmingly low and most education systems have not prioritized fixing it.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -25920,22 +25901,22 @@ const LAYERS = [
         "desc": "The great multiplier. Every technology in history has concentrated power in some hands and distributed it to others — the printing press, the telegraph, the internet, and now AI. The question is never whether technology changes things. The question is always: who gets to use it, who controls it, and who gets to decide what it's for.",
         "links": [
           {
-            "label": "MIT Technology Review — free articles",
-            "url": "https://www.technologyreview.com",
-            "emoji": "📡",
+            "label": "MIT Technology Review",
+            "url": "https://technologyreview.com",
+            "emoji": "🔬",
             "tag": "TECH"
           },
           {
-            "label": "Rest of World — tech beyond the West",
+            "label": "Rest of World",
             "url": "https://restofworld.org",
-            "emoji": "📡",
-            "tag": "TECH"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           },
           {
-            "label": "EFF — digital rights & freedom",
-            "url": "https://www.eff.org",
-            "emoji": "📡",
-            "tag": "TECH"
+            "label": "Electronic Frontier Foundation",
+            "url": "https://eff.org",
+            "emoji": "⚖️",
+            "tag": "RIGHTS"
           }
         ],
         "topPills": [
@@ -25946,28 +25927,28 @@ const LAYERS = [
             "desc": "",
             "links": [
               {
-                "label": "What is AI? — MIT explainer",
-                "url": "https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414",
-                "emoji": "📡",
+                "label": "MIT News",
+                "url": "https://news.mit.edu",
+                "emoji": "🔬",
                 "tag": "TECH"
               },
               {
-                "label": "AI for Everyone — free course, Coursera",
-                "url": "https://www.coursera.org/learn/ai-for-everyone",
-                "emoji": "📡",
-                "tag": "TECH"
+                "label": "Coursera",
+                "url": "https://coursera.org",
+                "emoji": "🔬",
+                "tag": "LEARN"
               },
               {
-                "label": "How AI is used to track & control — EFF",
-                "url": "https://www.eff.org/issues/ai",
-                "emoji": "📡",
-                "tag": "TECH"
+                "label": "Electronic Frontier Foundation",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               },
               {
-                "label": "AI & democracy — Knight Foundation",
-                "url": "https://knightfoundation.org/topics/artificial-intelligence/",
-                "emoji": "📡",
-                "tag": "TECH"
+                "label": "Knight Foundation",
+                "url": "https://knightfoundation.org",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [],
@@ -25983,8 +25964,8 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
                 "label": "MIT Technology Review",
@@ -26048,8 +26029,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -26091,8 +26072,8 @@ const LAYERS = [
                 "desc": "The infrastructure layer. Once electricity arrived, every other technology rode on it. The grid is the most consequential invisible system in modern life.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   }
@@ -26187,8 +26168,8 @@ const LAYERS = [
                 "desc": "The systems behind the systems. Roads, sewers, water, power, transit. American infrastructure is now decades behind in maintenance and the costs are starting to come due.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   },
@@ -26317,13 +26298,13 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
-                "label": "arXiv — open scientific preprints",
+                "label": "arXiv",
                 "url": "https://arxiv.org",
-                "emoji": "🧪",
+                "emoji": "🔬",
                 "tag": "SCIENCE"
               }
             ],
@@ -26337,7 +26318,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   }
                 ],
@@ -26381,8 +26362,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -26425,9 +26406,9 @@ const LAYERS = [
                 "desc": "Instructions in language a machine can follow. Most code is written by people who never see the people their code affects.",
                 "links": [
                   {
-                    "label": "arXiv — open scientific preprints",
+                    "label": "arXiv",
                     "url": "https://arxiv.org",
-                    "emoji": "🧪",
+                    "emoji": "🔬",
                     "tag": "SCIENCE"
                   }
                 ],
@@ -26573,8 +26554,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -26650,8 +26631,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
@@ -26671,8 +26652,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -26715,8 +26696,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -26815,8 +26796,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -26860,8 +26841,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -26944,7 +26925,7 @@ const LAYERS = [
               {
                 "label": "Stanford AI Index",
                 "url": "https://aiindex.stanford.edu",
-                "emoji": "🤖",
+                "emoji": "🔬",
                 "tag": "AI"
               },
               {
@@ -27060,7 +27041,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
@@ -27176,7 +27157,7 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "FRED — St. Louis Fed economic data",
+                    "label": "FRED Economic Data",
                     "url": "https://fred.stlouisfed.org",
                     "emoji": "📊",
                     "tag": "DATA"
@@ -27254,8 +27235,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
@@ -27298,8 +27279,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -27344,13 +27325,13 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -27421,8 +27402,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -27472,8 +27453,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -27592,8 +27573,8 @@ const LAYERS = [
         "desc": "The curriculum is never neutral. Every subject included is an argument about what matters. Every subject omitted is an argument about who doesn't. The history taught in schools is a political document — not because educators are propagandists but because every choice about what to include, at what age, with what emphasis, is a decision about the kind of citizens a society is trying to produce. Who writes the textbooks writes the national story.",
         "links": [
           {
-            "label": "ProPublica — education & power",
-            "url": "https://www.propublica.org",
+            "label": "ProPublica",
+            "url": "https://propublica.org",
             "emoji": "📰",
             "tag": "JOURNALISM"
           }
@@ -27712,8 +27693,8 @@ const LAYERS = [
         "desc": "Gutenberg's press did not just make books cheaper. It broke the church's monopoly on knowledge and sparked a century of religious war. The internet did not just make information free. It broke every institution's monopoly on narrative and sparked — something we are still in the middle of. Every revolution in information distribution has been a revolution in power. We are living in one right now and mostly calling it a news cycle.",
         "links": [
           {
-            "label": "Pew Research — media & information",
-            "url": "https://www.pewresearch.org",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           }
@@ -27767,16 +27748,16 @@ const LAYERS = [
         "desc": "Knowledge is what you know. Wisdom is what you do with it. The most credentialed societies in human history have produced weapons capable of ending civilization. Information without judgment is just ammunition. The gap between knowing and understanding — between data and meaning — is where education has always struggled most. And where it matters most.",
         "links": [
           {
-            "label": "Aeon — philosophy of knowledge",
+            "label": "Aeon",
             "url": "https://aeon.co",
             "emoji": "🧠",
             "tag": "MIND"
           },
           {
-            "label": "The Marginalian — on wisdom",
-            "url": "https://www.themarginalian.org",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "label": "The Marginalian",
+            "url": "https://themarginalian.org",
+            "emoji": "🧠",
+            "tag": "MIND"
           }
         ],
         "topPills": [],
@@ -27825,58 +27806,58 @@ const LAYERS = [
     "height": 13,
     "links": [
       {
-        "label": "Al Jazeera — global news outside the US lens",
-        "url": "https://www.aljazeera.com",
-        "tag": "GLOBAL",
-        "emoji": "📰"
+        "label": "Al Jazeera",
+        "url": "https://aljazeera.com",
+        "emoji": "📰",
+        "tag": "JOURNALISM"
       },
       {
-        "label": "Rest of World — tech & power beyond the West",
+        "label": "Rest of World",
         "url": "https://restofworld.org",
-        "tag": "WORLD",
-        "emoji": "📰"
+        "emoji": "📰",
+        "tag": "JOURNALISM"
       },
       {
-        "label": "Foreign Affairs — serious global analysis",
-        "url": "https://www.foreignaffairs.com",
-        "tag": "GEOPOLITICS",
-        "emoji": "📰"
+        "label": "Foreign Affairs",
+        "url": "https://foreignaffairs.com",
+        "emoji": "🌍",
+        "tag": "GEOPOLITICS"
       },
       {
-        "label": "FollowTheMoney — state-level campaign finance",
-        "url": "https://www.followthemoney.org",
-        "tag": "MONEY",
-        "emoji": "💰"
+        "label": "Follow The Money",
+        "url": "https://followthemoney.org",
+        "emoji": "💰",
+        "tag": "MONEY"
       },
       {
-        "label": "TrackAIPAC — congressional donations",
-        "url": "https://www.trackaipac.com",
-        "tag": "LOBBYING",
-        "emoji": "💰"
+        "label": "TrackAIPAC",
+        "url": "https://trackaipac.com",
+        "emoji": "💰",
+        "tag": "MONEY"
       },
       {
-        "label": "GovTrack — bills, votes & records",
-        "url": "https://www.govtrack.us",
-        "tag": "CONGRESS",
-        "emoji": "🏛️"
+        "label": "GovTrack",
+        "url": "https://govtrack.us",
+        "emoji": "💰",
+        "tag": "CONGRESS"
       },
       {
-        "label": "ForeignAssistance.gov — aid data",
+        "label": "Foreign Assistance.gov",
         "url": "https://foreignassistance.gov",
-        "tag": "AID",
-        "emoji": "🌍"
+        "emoji": "🌍",
+        "tag": "GEOPOLITICS"
       },
       {
-        "label": "Quincy Institute — military policy",
+        "label": "Quincy Institute",
         "url": "https://quincyinst.org",
-        "tag": "MILITARY",
-        "emoji": "⚔️"
+        "emoji": "🌍",
+        "tag": "GEOPOLITICS"
       },
       {
-        "label": "Costs of War — Brown University",
-        "url": "https://watson.brown.edu/costsofwar",
-        "tag": "MILITARY",
-        "emoji": "⚔️"
+        "label": "Costs of War",
+        "url": "https://watson.brown.edu",
+        "emoji": "🌍",
+        "tag": "MILITARY"
       }
     ],
     "topPills": [
@@ -27959,10 +27940,10 @@ const LAYERS = [
         "desc": "Whoever controls the story controls the policy. Before the vote, before the law, before the budget — there is the frame. The frame decides what counts as a problem, who counts as a victim, what counts as a solution. Narrative is not spin. It is the prior agreement about reality that makes spin possible. The most powerful political act is not winning an election. It is making your assumptions everyone's assumptions.",
         "links": [
           {
-            "label": "Longreads — politics & narrative",
+            "label": "Longreads",
             "url": "https://longreads.com",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           }
         ],
         "topPills": [],
@@ -28013,14 +27994,14 @@ const LAYERS = [
         "desc": "The civics version leaves out the part where money talks before the vote is called. The lobbying, the riders, the amendments nobody reads, the midnight provisions inserted by people who will never be named in the headline. The actual process is messier, slower, and more instructive than any textbook version. Understanding it is the prerequisite for changing it.",
         "links": [
           {
-            "label": "GovTrack — bills & votes",
-            "url": "https://www.govtrack.us",
-            "emoji": "🏛️",
+            "label": "GovTrack",
+            "url": "https://govtrack.us",
+            "emoji": "💰",
             "tag": "CONGRESS"
           },
           {
-            "label": "OpenSecrets — who funds what",
-            "url": "https://www.opensecrets.org",
+            "label": "OpenSecrets",
+            "url": "https://opensecrets.org",
             "emoji": "💰",
             "tag": "MONEY"
           }
@@ -28073,8 +28054,8 @@ const LAYERS = [
         "desc": "The press was called the fourth estate because it was supposed to be the check on the other three — the branch of power that had no official power except the power to watch, investigate, and tell the truth. At its best it has toppled governments and exposed crimes that would otherwise have stayed buried. At its worst it has been a megaphone for whoever owns it. The distinction between those two things is the most important media literacy question of the current era.",
         "links": [
           {
-            "label": "ProPublica — investigative journalism",
-            "url": "https://www.propublica.org",
+            "label": "ProPublica",
+            "url": "https://propublica.org",
             "emoji": "📰",
             "tag": "JOURNALISM"
           },
@@ -28124,22 +28105,22 @@ const LAYERS = [
         "desc": "The smallest unit of democratic participation — and the one most systematically targeted for suppression when inconvenient people try to use it. A ballot is not just a vote. It is a claim: I am here, I count, this government requires my consent. Every effort to make voting harder is an argument about whose consent is necessary. The history of that argument in America is not subtle.",
         "links": [
           {
-            "label": "TurboVote — register and vote",
+            "label": "TurboVote",
             "url": "https://turbovote.org",
             "emoji": "🗳️",
             "tag": "VOTE"
           },
           {
-            "label": "Ballotpedia — find your ballot",
+            "label": "Ballotpedia",
             "url": "https://ballotpedia.org",
             "emoji": "🗳️",
             "tag": "VOTE"
           },
           {
-            "label": "ACLU — voting rights",
-            "url": "https://www.aclu.org/issues/voting-rights",
-            "emoji": "🗳️",
-            "tag": "VOTE"
+            "label": "ACLU",
+            "url": "https://aclu.org",
+            "emoji": "⚖️",
+            "tag": "RIGHTS"
           }
         ],
         "topPills": [],
@@ -28190,21 +28171,21 @@ const LAYERS = [
         "desc": "The study of how geography, resources, and power shape the relationships between nations over time. Geopolitics is not foreign policy — it is the terrain that foreign policy operates on. Mountains, rivers, coastlines, oil fields, trade routes — these things outlast every government that has ever tried to control them. Understanding geopolitics is understanding why certain conflicts recur across centuries regardless of who is in power, and why the map of the world looks the way it does.",
         "links": [
           {
-            "label": "Foreign Affairs — geopolitics",
-            "url": "https://www.foreignaffairs.com",
-            "emoji": "🌐",
+            "label": "Foreign Affairs",
+            "url": "https://foreignaffairs.com",
+            "emoji": "🌍",
             "tag": "GEOPOLITICS"
           },
           {
-            "label": "Quincy Institute — foreign policy",
+            "label": "Quincy Institute",
             "url": "https://quincyinst.org",
-            "emoji": "🪖",
-            "tag": "MILITARY"
+            "emoji": "🌍",
+            "tag": "GEOPOLITICS"
           },
           {
             "label": "Council on Foreign Relations",
-            "url": "https://www.cfr.org",
-            "emoji": "🌐",
+            "url": "https://cfr.org",
+            "emoji": "🌍",
             "tag": "GEOPOLITICS"
           }
         ],
@@ -28217,8 +28198,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Foreign Affairs",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               }
             ],
@@ -28430,15 +28411,15 @@ const LAYERS = [
             "links": [
               {
                 "label": "Foreign Affairs",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               },
               {
-                "label": "Al Jazeera — world coverage",
-                "url": "https://www.aljazeera.com",
-                "emoji": "🌐",
-                "tag": "GEOPOLITICS"
+                "label": "Al Jazeera",
+                "url": "https://aljazeera.com",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -28449,9 +28430,9 @@ const LAYERS = [
                 "desc": "The Western Hemisphere under American hegemony — a dominance so complete that it is often invisible to Americans and never invisible to anyone else. The Monroe Doctrine of 1823 declared Latin America a US sphere of influence before the US had the power to enforce it. By 1900 it did. The century that followed included dozens of coups, interventions, proxy wars, and economic arrangements that extracted wealth northward. Latin America is not poor because it lacks resources. It is poor because its resources have been systematically extracted. The current migration crisis is the invoice.",
                 "links": [
                   {
-                    "label": "NACLA — Latin America analysis",
+                    "label": "NACLA",
                     "url": "https://nacla.org",
-                    "emoji": "🌐",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -28519,9 +28500,9 @@ const LAYERS = [
                     "desc": "Guatemala 1954 — CIA overthrows democratically elected Jacobo Árbenz to protect United Fruit Company land. Iran 1953 — CIA overthrows Mosaddegh to restore British oil interests, creating the conditions for the 1979 revolution. Chile 1973 — CIA backs Pinochet's coup against Salvador Allende. Nicaragua, El Salvador, Honduras throughout the 1980s. The pattern: a leftist government threatens US corporate or strategic interests, the CIA destabilizes it, a friendly authoritarian takes over, the population pays the price for decades. This is not conspiracy theory. It is documented history.",
                     "links": [
                       {
-                        "label": "National Security Archive — declassified docs",
+                        "label": "National Security Archive",
                         "url": "https://nsarchive.gwu.edu",
-                        "emoji": "🏛️",
+                        "emoji": "🌍",
                         "tag": "HISTORY"
                       }
                     ],
@@ -28656,9 +28637,9 @@ const LAYERS = [
                 "desc": "The continent that invented the modern nation-state, colonized most of the world, fought two world wars that nearly destroyed itself, and then built the most ambitious peace project in history — the European Union. Europe is simultaneously the origin of most of the ideological frameworks that govern the modern world and the cautionary tale about where those frameworks lead when taken to their extremes. It is wealthy, aging, dependent on American military protection it publicly resents, and reckoning with the return of war to its eastern edge.",
                 "links": [
                   {
-                    "label": "Foreign Affairs — Europe",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -28782,9 +28763,9 @@ const LAYERS = [
                     "desc": "Russia's full-scale invasion of Ukraine in February 2022 ended the post-Cold War assumption that large-scale conventional war in Europe was impossible. Ukraine is simultaneously a sovereign nation defending its territory, a proxy battleground for US-Russia competition, a test of Western alliance cohesion, and the site of the largest land war in Europe since WWII. The outcome will shape European security architecture for a generation. The human cost — hundreds of thousands dead, millions displaced — is already historic.",
                     "links": [
                       {
-                        "label": "Foreign Affairs — Ukraine",
-                        "url": "https://www.foreignaffairs.com",
-                        "emoji": "🌐",
+                        "label": "Foreign Affairs",
+                        "url": "https://foreignaffairs.com",
+                        "emoji": "🌍",
                         "tag": "GEOPOLITICS"
                       }
                     ],
@@ -28857,9 +28838,9 @@ const LAYERS = [
                 "desc": "A country with no natural defensive borders, surrounded by potential adversaries, with a history of invasion from every direction — the Mongols, Napoleon, Hitler — that has produced a strategic culture of expansionism as defense. Russia is not irrational. It is operating from a threat perception that is genuinely different from the Western one. Understanding that does not mean accepting its actions. It means understanding why containment strategies that worked against the Soviet Union may produce different results against a nationalist Russia that has abandoned communist ideology but retained imperial ambition.",
                 "links": [
                   {
-                    "label": "Foreign Affairs — Russia",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -29070,16 +29051,16 @@ const LAYERS = [
                 "desc": "The most strategically important and most misunderstood region in the world. Three things made it the center of global attention: oil, the creation of Israel, and Islam's holy sites. All three arrived in their modern form within a few decades of each other in the early 20th century. The borders were drawn by Britain and France after WWI with no regard for the peoples living there. The consequences — sectarian conflict, authoritarian states, the Palestinian question, recurring war — are still playing out. The region is not inherently unstable. It was made unstable by specific decisions made by specific people for specific reasons.",
                 "links": [
                   {
-                    "label": "Foreign Affairs — Middle East",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   },
                   {
                     "label": "Al Jazeera",
-                    "url": "https://www.aljazeera.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
+                    "url": "https://aljazeera.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [
@@ -29148,11 +29129,11 @@ const LAYERS = [
                       {
                         "label": "B'Tselem",
                         "url": "https://btselem.org",
-                        "emoji": "⚖️",
+                        "emoji": "🌍",
                         "tag": "GEOPOLITICS"
                       },
                       {
-                        "label": "CFR — Israel & Palestine",
+                        "label": "Council on Foreign Relations",
                         "url": "https://cfr.org",
                         "emoji": "🌍",
                         "tag": "GEOPOLITICS"
@@ -29351,9 +29332,9 @@ const LAYERS = [
                 "desc": "China was the world's largest economy for most of the last two thousand years. The century between the Opium Wars of the 1840s and the Communist revolution of 1949 — when China was carved up by European powers, invaded by Japan, and torn apart by civil war — is called the century of humiliation. The Chinese Communist Party's legitimacy rests partly on ending that humiliation. Xi Jinping's China is not trying to become a great power. It believes it already is one that was temporarily interrupted. That is a fundamentally different posture than a rising power seeking recognition.",
                 "links": [
                   {
-                    "label": "Foreign Affairs — China",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -29620,16 +29601,16 @@ const LAYERS = [
                 "desc": "The most resource-rich continent on earth and the most systematically extracted. Africa contains 60% of the world's arable land, 30% of its mineral reserves, and the largest youth population of any continent. It was carved into 54 countries by European powers at the Berlin Conference of 1884 — a meeting to which no African was invited — and the borders drawn that day still govern the continent. The colonial period ended in the 1960s but was followed by neo-colonial arrangements — structural adjustment programs, debt traps, resource extraction by multinational corporations — that have maintained the economic relationship without the administrative inconvenience of formal empire.",
                 "links": [
                   {
-                    "label": "Foreign Affairs — Africa",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   },
                   {
-                    "label": "Al Jazeera — Africa",
-                    "url": "https://www.aljazeera.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
+                    "label": "Al Jazeera",
+                    "url": "https://aljazeera.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [
@@ -29876,9 +29857,9 @@ const LAYERS = [
             "desc": "A proxy war is a conflict instigated, funded, or armed by outside powers who fight each other through local combatants rather than directly. The logic: achieve strategic objectives while avoiding the costs of direct confrontation between nuclear-armed or otherwise dangerous states. The costs are borne by the proxy populations. Vietnam was a proxy war. Afghanistan under the Soviets was a proxy war — the US armed the Mujahideen, who became the Taliban. Syria is a proxy war involving the US, Russia, Iran, Turkey, Saudi Arabia, and Israel simultaneously. The proxy populations do not typically get a vote on whether their country becomes the battlefield.",
             "links": [
               {
-                "label": "Costs of War Project",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
+                "label": "Costs of War",
+                "url": "https://watson.brown.edu",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               }
             ],
@@ -30033,9 +30014,9 @@ const LAYERS = [
             "desc": "Every major war of the last two centuries has been about resources — territory containing them, routes transporting them, markets consuming them. The framing of wars in ideological terms is almost always a post-hoc justification for conflicts whose actual drivers are material. This does not mean ideology is irrelevant — it shapes how wars are fought and who fights them. But understanding why wars start requires following the resources.",
             "links": [
               {
-                "label": "Costs of War — resource conflicts",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
+                "label": "Costs of War",
+                "url": "https://watson.brown.edu",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               }
             ],
@@ -30302,16 +30283,16 @@ const LAYERS = [
             "desc": "The international order built after WWII — the UN, the World Bank, the IMF, the dollar as reserve currency, US military dominance — is under more pressure than at any point since it was created. It is not collapsing. But it is no longer unchallenged. The question of what comes after American unipolarity — whether a multipolar world is more or less stable than a unipolar one — is the defining geopolitical question of the current era.",
             "links": [
               {
-                "label": "Foreign Affairs — world order",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
+                "label": "Foreign Affairs",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               },
               {
                 "label": "Quincy Institute",
                 "url": "https://quincyinst.org",
-                "emoji": "🪖",
-                "tag": "MILITARY"
+                "emoji": "🌍",
+                "tag": "GEOPOLITICS"
               }
             ],
             "topPills": [
@@ -30497,8 +30478,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Foreign Affairs",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -31371,21 +31352,21 @@ const LAYERS = [
                 "desc": "The operating system of American government — and one of the most influential political documents in history. Written in 1787, ratified in 1788, amended 27 times. It established a federal republic with three branches, enumerated rights, and a system of checks and balances designed explicitly to prevent the concentration of power. Whether it still does that is the central question of American politics.",
                 "links": [
                   {
-                    "label": "Full text — Constitution of the United States",
-                    "url": "https://constitution.congress.gov/constitution/",
-                    "emoji": "🏛️",
-                    "tag": "CONGRESS"
+                    "label": "Constitution Annotated",
+                    "url": "https://constitution.congress.gov",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
                   },
                   {
-                    "label": "Interactive Constitution — National Constitution Center",
-                    "url": "https://constitutioncenter.org/the-constitution",
-                    "emoji": "🏛️",
-                    "tag": "HISTORY"
+                    "label": "National Constitution Center",
+                    "url": "https://constitutioncenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
                   },
                   {
                     "label": "Founders' Constitution — U Chicago",
-                    "url": "https://press-pubs.uchicago.edu/founders/",
-                    "emoji": "🏛️",
+                    "url": "https://press-pubs.uchicago.edu",
+                    "emoji": "📖",
                     "tag": "HISTORY"
                   }
                 ],
@@ -31434,39 +31415,39 @@ const LAYERS = [
                     "desc": "The Constitution did not arrive from nowhere. It was the product of centuries of argument, rebellion, and hard-won theory. The framers read deeply and argued bitterly. These are the texts and thinkers they were in conversation with when they wrote it.",
                     "links": [
                       {
-                        "label": "Magna Carta (1215) — British Library",
-                        "url": "https://www.bl.uk/magna-carta",
-                        "emoji": "🏛️",
+                        "label": "British Library",
+                        "url": "https://bl.uk",
+                        "emoji": "🗄️",
                         "tag": "HISTORY"
                       },
                       {
-                        "label": "John Locke — Two Treatises of Government",
-                        "url": "https://www.gutenberg.org/ebooks/7370",
-                        "emoji": "📚",
-                        "tag": "TEXTS"
+                        "label": "Project Gutenberg",
+                        "url": "https://gutenberg.org",
+                        "emoji": "📖",
+                        "tag": "ARCHIVE"
                       },
                       {
-                        "label": "Thomas Paine — Common Sense (1776)",
-                        "url": "https://www.gutenberg.org/ebooks/147",
-                        "emoji": "📚",
-                        "tag": "TEXTS"
+                        "label": "Project Gutenberg",
+                        "url": "https://gutenberg.org",
+                        "emoji": "📖",
+                        "tag": "ARCHIVE"
                       },
                       {
-                        "label": "The Federalist Papers — Congress.gov",
-                        "url": "https://www.congress.gov/resources/display/content/The+Federalist+Papers",
-                        "emoji": "🏛️",
+                        "label": "Congress.gov",
+                        "url": "https://congress.gov",
+                        "emoji": "💰",
                         "tag": "CONGRESS"
                       },
                       {
-                        "label": "Montesquieu — The Spirit of the Laws",
-                        "url": "https://www.gutenberg.org/ebooks/27573",
-                        "emoji": "📚",
-                        "tag": "TEXTS"
+                        "label": "Project Gutenberg",
+                        "url": "https://gutenberg.org",
+                        "emoji": "📖",
+                        "tag": "ARCHIVE"
                       },
                       {
-                        "label": "The Declaration of Independence — National Archives",
-                        "url": "https://www.archives.gov/founding-docs/declaration-transcript",
-                        "emoji": "🏛️",
+                        "label": "National Archives",
+                        "url": "https://archives.gov",
+                        "emoji": "🗄️",
                         "tag": "HISTORY"
                       }
                     ],
@@ -31766,9 +31747,9 @@ const LAYERS = [
                     "desc": "At its best: a coalition for working people, civil rights, environmental protection, and the idea that government can be a force for collective good. At its worst: captured by its academic fringe, more comfortable with the language of identity than the language of kitchen tables, and prone to losing elections it should win. Most people who vote Democrat are not ideologues. They are parents, workers, and neighbors who want healthcare, schools that work, and a country that doesn't leave people behind. The party contains multitudes — some of them in open conflict with each other.",
                     "links": [
                       {
-                        "label": "GovTrack — congressional voting records",
-                        "url": "https://www.govtrack.us",
-                        "emoji": "🏛️",
+                        "label": "GovTrack",
+                        "url": "https://govtrack.us",
+                        "emoji": "💰",
                         "tag": "CONGRESS"
                       }
                     ],
@@ -31894,8 +31875,8 @@ const LAYERS = [
                         "desc": "Not communism. Not the Soviet Union. The deliberate conflation of those things is a rhetorical move, not an analysis. Democratic socialism holds that political democracy is incomplete without economic democracy — that you cannot have one person one vote when one person has ten billion dollars and another has none. The agenda: universal healthcare, free public higher education, worker ownership, and the regulation of concentrated capital. Most of the policies poll well when described without the label. The label is the fight.",
                         "links": [
                           {
-                            "label": "Pew Research — economic views",
-                            "url": "https://www.pewresearch.org",
+                            "label": "Pew Research",
+                            "url": "https://pewresearch.org",
                             "emoji": "📊",
                             "tag": "DATA"
                           }
@@ -32085,9 +32066,9 @@ const LAYERS = [
                     "desc": "At its best: a tradition of limited government, individual liberty, fiscal responsibility, and a healthy skepticism of concentrated power — all ideas worth taking seriously. At its worst: a coalition captured by grievance politics, corporate interests dressed as populism, and a fringe that mistakes volume for mandate. Most people who vote Republican are not extremists. They are people who distrust government overreach, value self-reliance, and feel that the culture has moved faster than the conversation allowed. The party contains multitudes — some of them in open conflict with each other.",
                     "links": [
                       {
-                        "label": "GovTrack — congressional voting records",
-                        "url": "https://www.govtrack.us",
-                        "emoji": "🏛️",
+                        "label": "GovTrack",
+                        "url": "https://govtrack.us",
+                        "emoji": "💰",
                         "tag": "CONGRESS"
                       }
                     ],
@@ -32156,8 +32137,8 @@ const LAYERS = [
                         "desc": "The business wing — low taxes, deregulation, free trade, and the reliable delivery of government policy to the industries that fund the campaigns. Often misidentified as conservative in any principled sense. The corporate Republican is not opposed to big government — only to big government that doesn't benefit their donors. The revolving door spins fastest here.",
                         "links": [
                           {
-                            "label": "OpenSecrets — who funds whom",
-                            "url": "https://www.opensecrets.org",
+                            "label": "OpenSecrets",
+                            "url": "https://opensecrets.org",
                             "emoji": "💰",
                             "tag": "MONEY"
                           }
@@ -32201,8 +32182,8 @@ const LAYERS = [
                         "desc": "The coalition that remade the Republican Party beginning in the 1970s — evangelical Christians organized as a political force around abortion, school prayer, and the sense that American culture had drifted from its moral foundations. At its best: a genuine expression of deeply held values entering the democratic process. At its worst: a vehicle for social control that has consistently prioritized cultural grievance over the economic interests of its own members.",
                         "links": [
                           {
-                            "label": "Pew Research — religion & politics",
-                            "url": "https://www.pewresearch.org/religion/",
+                            "label": "Pew Research",
+                            "url": "https://pewresearch.org",
                             "emoji": "📊",
                             "tag": "DATA"
                           }
@@ -32215,8 +32196,8 @@ const LAYERS = [
                             "desc": "The fusion of Christian identity with American political destiny — the belief that the nation was founded as a Christian nation and should be governed as one. Distinct from personal faith, which is private and protected. This is faith as political program. At its edges it rewrites history, reshapes curriculum, and justifies the erosion of the separation of church and state in the name of restoring something that was never quite what they claim it was. Most Christians do not hold this position. The ones who do are organized, well-funded, and currently close to power.",
                             "links": [
                               {
-                                "label": "Pew Research — Christian nationalism",
-                                "url": "https://www.pewresearch.org/religion/",
+                                "label": "Pew Research",
+                                "url": "https://pewresearch.org",
                                 "emoji": "📊",
                                 "tag": "DATA"
                               }
@@ -32438,14 +32419,14 @@ const LAYERS = [
                     "desc": "The United States has had two dominant parties for most of its history — not because two parties is the natural state of democracy, but because the system was built that way. Winner-take-all elections, ballot access laws, and the Electoral College all conspire to crush third parties before they scale. The names have changed. The Federalists became Whigs became Republicans. The Democratic-Republicans became Democrats. The positions have flipped more than once — the party of Lincoln and the party of Jefferson have traded ideological DNA across centuries. What hasn't changed is the binary. Two tents. Everyone inside arguing about who belongs.",
                     "links": [
                       {
-                        "label": "Ballotpedia — party history",
+                        "label": "Ballotpedia",
                         "url": "https://ballotpedia.org",
                         "emoji": "🗳️",
                         "tag": "VOTE"
                       },
                       {
-                        "label": "Pew Research — political polarization",
-                        "url": "https://www.pewresearch.org",
+                        "label": "Pew Research",
+                        "url": "https://pewresearch.org",
                         "emoji": "📊",
                         "tag": "DATA"
                       }
@@ -32546,15 +32527,15 @@ const LAYERS = [
                     "desc": "The belief that the nation — its people, its culture, its borders — is the primary unit of political loyalty and the highest object of collective purpose. Not inherently extreme. Every functioning country runs on some version of it. The question is always what gets included in the 'we' and what gets left outside — and how hard the boundary gets enforced. At low temperature it is civic pride. At high temperature it is a mechanism for exclusion that has repeatedly ended in catastrophe. The distance between those two is shorter than most people think, and the direction of travel is usually one way.",
                     "links": [
                       {
-                        "label": "Pew Research — national identity",
-                        "url": "https://www.pewresearch.org",
+                        "label": "Pew Research",
+                        "url": "https://pewresearch.org",
                         "emoji": "📊",
                         "tag": "DATA"
                       },
                       {
-                        "label": "Foreign Affairs — nationalism & democracy",
-                        "url": "https://www.foreignaffairs.com",
-                        "emoji": "🌐",
+                        "label": "Foreign Affairs",
+                        "url": "https://foreignaffairs.com",
+                        "emoji": "🌍",
                         "tag": "GEOPOLITICS"
                       }
                     ],
@@ -32915,16 +32896,16 @@ const LAYERS = [
                 "desc": "The mechanism by which democratic legitimacy is established and power is transferred peacefully. Elections are not just procedures — they are the foundational act of self-governance. When they are free and fair, democracy functions. When they are manipulated, suppressed, or disputed, the entire system loses its foundation.",
                 "links": [
                   {
-                    "label": "How elections work — USA.gov",
-                    "url": "https://www.usa.gov/election",
+                    "label": "USA.gov",
+                    "url": "https://usa.gov",
                     "emoji": "🗳️",
                     "tag": "VOTE"
                   },
                   {
-                    "label": "Voting rights history — ACLU",
-                    "url": "https://www.aclu.org/issues/voting-rights",
-                    "emoji": "🗳️",
-                    "tag": "VOTE"
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "bottomPills": [
@@ -32982,7 +32963,7 @@ const LAYERS = [
                         "tag": "RIGHTS"
                       },
                       {
-                        "label": "Ballotpedia — elections and voting",
+                        "label": "Ballotpedia",
                         "url": "https://ballotpedia.org",
                         "emoji": "🗳️",
                         "tag": "VOTE"
@@ -33219,8 +33200,8 @@ const LAYERS = [
                 "desc": "The abuse of entrusted power for private gain. Corruption is not an anomaly in political systems — it is a constant pressure that systems must be designed to resist. Where checks are weak, transparency is limited, and accountability is absent, corruption fills the space. It appears in every system, at every level, in every country.",
                 "links": [
                   {
-                    "label": "Corruption Perceptions Index — Transparency International",
-                    "url": "https://www.transparency.org/en/cpi",
+                    "label": "Transparency International",
+                    "url": "https://transparency.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
@@ -34165,14 +34146,14 @@ const LAYERS = [
             "desc": "Who actually owns the companies. Most large American corporations are owned by institutional investors — index funds, pension funds, hedge funds. Three asset managers vote a controlling interest at most major U.S. companies. Power has concentrated in places most people cannot name.",
             "links": [
               {
-                "label": "FollowTheMoney",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
               {
-                "label": "OpenSecrets — money in politics",
-                "url": "https://www.opensecrets.org",
+                "label": "OpenSecrets",
+                "url": "https://opensecrets.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
@@ -34301,8 +34282,8 @@ const LAYERS = [
                 "desc": "BlackRock, Vanguard, State Street. Together they vote roughly a fifth of S&P 500 shares — the largest blocks at most major companies. They are not household names. They should be.",
                 "links": [
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
@@ -34477,10 +34458,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -34589,10 +34570,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -34717,8 +34698,8 @@ const LAYERS = [
             "desc": "Concentration. Most American industries are now dominated by a handful of firms. Meatpacking. Airlines. Mobile carriers. Search. Online retail. Concentrated markets produce higher prices, lower wages, and worse service. The country knows this and the laws are slow.",
             "links": [
               {
-                "label": "FollowTheMoney",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
@@ -34737,8 +34718,8 @@ const LAYERS = [
                 "desc": "When one firm dominates a market. Once the textbook bogeyman of antitrust law, monopoly has crept back into mainstream American commerce in ways the original laws were designed to prevent.",
                 "links": [
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -34782,8 +34763,8 @@ const LAYERS = [
                 "desc": "The more common form. A handful of firms with a comfortable understanding of each other. Most American consumer industries function this way.",
                 "links": [
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -34872,10 +34853,10 @@ const LAYERS = [
                 "desc": "The legal regime meant to constrain market power. American antitrust enforcement weakened across forty years and is now starting to wake up. The DOJ and FTC have brought their most ambitious cases in a generation in the last few years.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -34923,8 +34904,8 @@ const LAYERS = [
                 "desc": "How concentration happens. Big firms buy small firms. Big firms buy each other. The cumulative effect is industry consolidation that no single deal would have triggered alarms over.",
                 "links": [
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -34969,13 +34950,13 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -35051,22 +35032,22 @@ const LAYERS = [
             "desc": "How corporations shape the rules they have to follow. The largest industries spend more on lobbying than the federal regulatory agencies that govern them have in their entire budgets. The asymmetry is the policy.",
             "links": [
               {
-                "label": "OpenSecrets — money in politics",
-                "url": "https://www.opensecrets.org",
+                "label": "OpenSecrets",
+                "url": "https://opensecrets.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
               {
-                "label": "FollowTheMoney",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
               {
-                "label": "Brennan Center for Justice",
-                "url": "https://www.brennancenter.org",
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
                 "emoji": "⚖️",
-                "tag": "LAW"
+                "tag": "RIGHTS"
               }
             ],
             "topPills": [
@@ -35077,8 +35058,8 @@ const LAYERS = [
                 "desc": "The professionals who write legislation, draft regulatory comments, and walk the corridors. There are several lobbyists for every member of Congress. Most are former government officials.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -35122,8 +35103,8 @@ const LAYERS = [
                 "desc": "The career path. Hill staffer becomes lobbyist. Lobbyist becomes regulator. Regulator becomes consultant. The same people end up writing, enforcing, and re-writing the rules they live with.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
@@ -35173,16 +35154,16 @@ const LAYERS = [
                 "desc": "The campaign finance vehicles. Citizens United opened the floodgates in 2010. Most of the largest political donations now come through entities that did not legally exist in their current form before that ruling.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -35240,8 +35221,8 @@ const LAYERS = [
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -35285,10 +35266,10 @@ const LAYERS = [
                 "desc": "Corporate-funded organizations like ALEC produce ready-to-introduce bills that get passed in dozens of state legislatures with minor edits. State law in many places is partly written by people the voters never elected.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -35375,8 +35356,8 @@ const LAYERS = [
               },
               {
                 "label": "Electronic Frontier Foundation",
-                "url": "https://www.eff.org",
-                "emoji": "🛡️",
+                "url": "https://eff.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
@@ -35446,8 +35427,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -35554,8 +35535,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -35721,9 +35702,9 @@ const LAYERS = [
             "links": [
               {
                 "label": "EPA",
-                "url": "https://www.epa.gov",
-                "emoji": "🌍",
-                "tag": "ENV"
+                "url": "https://epa.gov",
+                "emoji": "🌱",
+                "tag": "BODY"
               },
               {
                 "label": "ProPublica",
@@ -35746,9 +35727,9 @@ const LAYERS = [
                 "desc": "What the company puts into the air, water, and soil that isn't on the receipt. American industry has externalized environmental cost for two centuries. Some of that cost is now showing up as cancer rates in specific zip codes.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -35938,15 +35919,15 @@ const LAYERS = [
                 "desc": "Tobacco. Opioids. Lead. Asbestos. PFAS. The pattern is the same across products and decades — the company knows about the harm earlier than the public, sells anyway, and litigates for years before any consequence.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -36128,22 +36109,22 @@ const LAYERS = [
             "tag": "JOURNALISM"
           },
           {
-            "label": "Nieman Lab — journalism research",
-            "url": "https://www.niemanlab.org",
+            "label": "Nieman Lab",
+            "url": "https://niemanlab.org",
             "emoji": "📰",
             "tag": "JOURNALISM"
           },
           {
-            "label": "Reporters Without Borders — press freedom index",
+            "label": "Reporters Without Borders",
             "url": "https://rsf.org",
             "emoji": "📰",
             "tag": "JOURNALISM"
           },
           {
-            "label": "Pew Research — media & news",
-            "url": "https://www.pewresearch.org/journalism",
-            "emoji": "📰",
-            "tag": "JOURNALISM"
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [
@@ -36154,8 +36135,8 @@ const LAYERS = [
             "desc": "The history of journalism is the history of who controlled information and what they did with that control. Every technology that changed how information moved — the printing press, the telegraph, radio, television, the internet — reorganized power. The business model has always shaped the content. Advertising-supported journalism was never purely objective; it served the audiences advertisers wanted to reach. Understanding where media came from explains most of what it is today.",
             "links": [
               {
-                "label": "Nieman Lab — media history",
-                "url": "https://www.niemanlab.org",
+                "label": "Nieman Lab",
+                "url": "https://niemanlab.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
               }
@@ -36336,8 +36317,8 @@ const LAYERS = [
                 "desc": "The Washington Post's investigation of the 1972 Watergate break-in — reported by Bob Woodward and Carl Bernstein, protected by editor Ben Bradlee and publisher Katharine Graham — led directly to the resignation of a sitting US president. It is the clearest example in American history of what investigative journalism can do when done with courage and institutional backing. It also set unrealistic expectations. Most journalism is not Watergate. Most newsrooms do not have the resources, the protection, or the story. The mythology of Watergate has been both an inspiration and a distortion.",
                 "links": [
                   {
-                    "label": "Washington Post — Watergate archive",
-                    "url": "https://www.washingtonpost.com",
+                    "label": "Washington Post",
+                    "url": "https://washingtonpost.com",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -36380,16 +36361,16 @@ const LAYERS = [
                 "desc": "The internet did not just change how news was delivered. It destroyed the economic model that paid for it. Classified advertising — which funded a significant portion of American newspapers — migrated to Craigslist almost overnight. Display advertising moved to Google and Facebook, which could target audiences with precision newspapers couldn't match. Between 2005 and 2023, more than 2,500 American newspapers closed. Local newsrooms — the places that covered city councils, school boards, and county courts — were the hardest hit. The communities that lost their local paper lost their primary accountability mechanism. Nobody replaced it.",
                 "links": [
                   {
-                    "label": "Nieman Lab — local news collapse",
-                    "url": "https://www.niemanlab.org",
+                    "label": "Nieman Lab",
+                    "url": "https://niemanlab.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "Pew Research — news industry trends",
-                    "url": "https://www.pewresearch.org/journalism",
-                    "emoji": "📰",
-                    "tag": "JOURNALISM"
+                    "label": "Pew Research",
+                    "url": "https://pewresearch.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -36461,10 +36442,10 @@ const LAYERS = [
             "desc": "American media in the current era is simultaneously more abundant and less trustworthy than at any previous point in its history. There is more content than anyone can consume. There is less journalism — in the original sense of verified, sourced, accountable reporting — than a generation ago. The consolidation of ownership and the collapse of local news have happened simultaneously, leaving national outlets with enormous reach and local communities with almost none.",
             "links": [
               {
-                "label": "Pew Research — state of the news media",
-                "url": "https://www.pewresearch.org/journalism",
-                "emoji": "📰",
-                "tag": "JOURNALISM"
+                "label": "Pew Research",
+                "url": "https://pewresearch.org",
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -36475,8 +36456,8 @@ const LAYERS = [
                 "desc": "A small number of corporations control most of what Americans see, read, and hear. Comcast owns NBC, MSNBC, and Universal. Disney owns ABC and ESPN. News Corp owns Fox News, the Wall Street Journal, and the New York Post. Warner Bros. Discovery owns CNN and HBO. The consolidation has accelerated since the 1996 Telecommunications Act relaxed ownership limits. The consequence: editorial decisions at the largest news organizations are made within corporate structures that have advertising relationships, political interests, and regulatory exposures that inevitably shape what gets covered and how.",
                 "links": [
                   {
-                    "label": "Free Press — media ownership",
-                    "url": "https://www.freepress.net",
+                    "label": "Free Press",
+                    "url": "https://freepress.net",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   },
@@ -36525,8 +36506,8 @@ const LAYERS = [
                 "desc": "A news desert is a community with no local news coverage. The United States now has hundreds of them — counties and towns where no reporter covers the school board, the county commissioner, the local court, or the police department. Research consistently shows that communities without local news have lower civic participation, higher government corruption, and worse bond ratings. The information gap doesn't stay empty — it fills with rumor, misinformation, and content from sources with no local accountability. The local news collapse is a civic emergency that has received far less attention than national media dysfunction.",
                 "links": [
                   {
-                    "label": "Poynter — local news tracker",
-                    "url": "https://www.poynter.org",
+                    "label": "Poynter Institute",
+                    "url": "https://poynter.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -36569,8 +36550,8 @@ const LAYERS = [
                 "desc": "Not everything collapsed. Nonprofit investigative journalism has grown — ProPublica, The Marshall Project, The Texas Tribune, and dozens of local nonprofit newsrooms have emerged to fill some of the gap. Public radio has maintained audience and resources better than most commercial outlets. A small number of national newspapers — the New York Times, Washington Post, and Wall Street Journal — have built subscription models that sustain significant newsrooms. Substack and independent newsletters have created a path for individual journalists to reach audiences directly. These are not replacements for the local news infrastructure that was lost. They are partial substitutes for a fraction of the audience.",
                 "links": [
                   {
-                    "label": "ProPublica — nonprofit investigative journalism",
-                    "url": "https://www.propublica.org",
+                    "label": "ProPublica",
+                    "url": "https://propublica.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -36644,13 +36625,13 @@ const LAYERS = [
             "desc": "American news media spans a wide range of political perspective, ownership structure, and editorial standard. Understanding where an outlet sits on the spectrum — and why — is a basic literacy skill for navigating the current information environment. The spectrum is real. It is also frequently misused: bias and inaccuracy are different things, and a biased outlet is not necessarily an inaccurate one. The ratings below draw from independent media bias organizations including AllSides and Ad Fontes Media, which publish their methodology publicly.",
             "links": [
               {
-                "label": "AllSides — media bias ratings",
-                "url": "https://www.allsides.com/media-bias/ratings",
+                "label": "AllSides",
+                "url": "https://allsides.com",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
               },
               {
-                "label": "Ad Fontes Media — bias & reliability chart",
+                "label": "Ad Fontes Media",
                 "url": "https://adfontesmedia.com",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
@@ -36664,8 +36645,8 @@ const LAYERS = [
                 "desc": "Bias and inaccuracy are not the same thing. A news outlet can be politically left-leaning and still report accurately. It can be politically right-leaning and still report accurately. The more important question is whether reporting is based on verifiable facts, whether sources are named and accountable, and whether opinion is clearly separated from news. The spectrum describes tendency, not reliability. Every consumer of news should know the editorial perspective of the outlets they rely on — and consult more than one.",
                 "links": [
                   {
-                    "label": "AllSides — understanding media bias",
-                    "url": "https://www.allsides.com",
+                    "label": "AllSides",
+                    "url": "https://allsides.com",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -36764,8 +36745,8 @@ const LAYERS = [
                 "desc": "The Wall Street Journal separates its news coverage — generally rated center — from its opinion pages, which are consistently right-leaning. Fox News is the most-watched cable news network in the United States and is rated right by AllSides and right-center to right by Ad Fontes Media depending on the program. Its opinion programming (Tucker Carlson's former show, Hannity, Ingraham) is rated further right than its news coverage. The New York Post is rated right. Newsmax and OAN are rated further right and have faced defamation judgments related to 2020 election coverage.",
                 "links": [
                   {
-                    "label": "AllSides — outlet ratings",
-                    "url": "https://www.allsides.com",
+                    "label": "AllSides",
+                    "url": "https://allsides.com",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -36808,8 +36789,8 @@ const LAYERS = [
                 "desc": "MSNBC is rated left by most independent organizations. Its opinion programming skews further left than its news coverage. The Guardian US, Mother Jones, and The Nation are rated left-center to left. Democracy Now is rated left. These outlets do original reporting and maintain editorial standards, though their perspective shapes story selection and framing. Being aware of a left-leaning perspective in a source is not a reason to dismiss it — it is a reason to read it knowing what lens is being applied.",
                 "links": [
                   {
-                    "label": "AllSides — outlet ratings",
-                    "url": "https://www.allsides.com",
+                    "label": "AllSides",
+                    "url": "https://allsides.com",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -36947,7 +36928,7 @@ const LAYERS = [
                 "desc": "A growing number of outlets present themselves as news organizations while functioning primarily as advocacy platforms. On the right: Breitbart, The Daily Wire, OAN. On the left: The Young Turks, some Substack newsletters. The distinction worth making: advocacy is not inherently dishonest, and opinion journalism has a long legitimate history. The problem arises when advocacy is presented as neutral reporting, when factual claims are made without verification, and when corrections are not issued. The format of news without the standards of journalism is a specific and documentable phenomenon.",
                 "links": [
                   {
-                    "label": "Ad Fontes Media — reliability ratings",
+                    "label": "Ad Fontes Media",
                     "url": "https://adfontesmedia.com",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
@@ -37134,10 +37115,10 @@ const LAYERS = [
             "desc": "The line between reporting and framing has always existed. What has changed is the scale, the speed, and the sophistication of the tools available to blur it. Every editorial decision — what to cover, what headline to write, what image to use, who to quote — is a framing decision. Most of those decisions are made in good faith by people trying to communicate clearly. Some are not. Understanding the difference requires knowing what the techniques look like.",
             "links": [
               {
-                "label": "Pew Research — media trust",
-                "url": "https://www.pewresearch.org/journalism",
-                "emoji": "📰",
-                "tag": "JOURNALISM"
+                "label": "Pew Research",
+                "url": "https://pewresearch.org",
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -37361,8 +37342,8 @@ const LAYERS = [
                 "desc": "Misinformation is false information spread without intent to deceive — someone repeating something they believe to be true that isn't. Disinformation is false information spread deliberately to deceive. The distinction matters for understanding cause, but both produce the same result: people acting on false beliefs. Research consistently shows that false stories spread faster and wider than corrections on social media. The correction rarely reaches the people who saw the original claim. The asymmetry is structural, not accidental.",
                 "links": [
                   {
-                    "label": "Pew Research — misinformation",
-                    "url": "https://www.pewresearch.org",
+                    "label": "Pew Research",
+                    "url": "https://pewresearch.org",
                     "emoji": "📊",
                     "tag": "DATA"
                   }
@@ -37492,13 +37473,13 @@ const LAYERS = [
             "desc": "Journalism has a specific meaning that is distinct from content, opinion, commentary, and advocacy. It involves the gathering and verification of information, identification of sources, accountability to correction, and separation of fact from interpretation. These standards exist not because journalists are better people than anyone else but because the function journalism serves — holding power accountable and informing democratic participation — requires them. When those standards are abandoned, the format of news continues while the function disappears.",
             "links": [
               {
-                "label": "Society of Professional Journalists — code of ethics",
-                "url": "https://www.spj.org/ethicscode.asp",
+                "label": "Society of Professional Journalists",
+                "url": "https://spj.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
               },
               {
-                "label": "Reporters Without Borders — press freedom index",
+                "label": "Reporters Without Borders",
                 "url": "https://rsf.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
@@ -37512,8 +37493,8 @@ const LAYERS = [
                 "desc": "The Society of Professional Journalists code of ethics identifies four principles: seek truth and report it, minimize harm, act independently, and be accountable and transparent. These are not bureaucratic rules. They are the operating requirements for a function — informing the public accurately — that democracy depends on. Verification means not publishing claims that haven't been confirmed. Attribution means identifying sources so readers can evaluate their credibility. Independence means not serving the interests of the subjects being covered. Accountability means correcting errors when they occur. Each standard has a specific purpose.",
                 "links": [
                   {
-                    "label": "SPJ Code of Ethics",
-                    "url": "https://www.spj.org/ethicscode.asp",
+                    "label": "Society of Professional Journalists",
+                    "url": "https://spj.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -37612,14 +37593,14 @@ const LAYERS = [
                 "desc": "The First Amendment protects press freedom in the United States — the government cannot, in most circumstances, prevent publication or criminally prosecute reporters for their journalism. In practice, press freedom is constrained by shield law gaps (no federal shield law protecting reporters from having to identify sources in federal court), by legal costs of defending against defamation suits, and by the physical safety of journalists covering certain stories. The United States ranks 55th on the Reporters Without Borders 2024 World Press Freedom Index — behind most Western democracies. The ranking reflects legal protections, economic conditions, and political attacks on the press.",
                 "links": [
                   {
-                    "label": "Reporters Without Borders — US ranking",
+                    "label": "Reporters Without Borders",
                     "url": "https://rsf.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "Reporters Committee for Freedom of the Press",
-                    "url": "https://www.rcfp.org",
+                    "label": "Reporters Committee",
+                    "url": "https://rcfp.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -37662,8 +37643,8 @@ const LAYERS = [
                 "desc": "The funding model of a news organization shapes what it covers, how it covers it, and what it avoids. Advertising-supported media serves audiences that advertisers want to reach. Subscription-supported media serves paying readers, which skews toward higher income and education. Foundation-funded journalism serves the foundation's priorities, which may or may not align with the public interest. Billionaire-owned media — Jeff Bezos owns the Washington Post, Rupert Murdoch controls News Corp — brings the owner's interests into the editorial environment. Government-funded media operates under the political pressure of funding cycles. There is no conflict-free funding model. Knowing who pays is part of reading any outlet clearly.",
                 "links": [
                   {
-                    "label": "Columbia Journalism Review — media economics",
-                    "url": "https://www.cjr.org",
+                    "label": "Columbia Journalism Review",
+                    "url": "https://cjr.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -37792,28 +37773,28 @@ const LAYERS = [
         "desc": "The final instrument of state power — and the largest, most expensive one ever assembled. 750 bases across 80 countries, $886 billion a year, and a footprint so normalized it barely registers as a choice anymore. What a country points its military at tells you everything about what that country actually believes.",
         "links": [
           {
-            "label": "Costs of War — Brown University",
-            "url": "https://watson.brown.edu/costsofwar",
-            "emoji": "⚔️",
+            "label": "Costs of War",
+            "url": "https://watson.brown.edu",
+            "emoji": "🌍",
             "tag": "MILITARY"
           },
           {
-            "label": "Quincy Institute — military policy",
+            "label": "Quincy Institute",
             "url": "https://quincyinst.org",
-            "emoji": "⚔️",
-            "tag": "MILITARY"
+            "emoji": "🌍",
+            "tag": "GEOPOLITICS"
           },
           {
-            "label": "ForeignAssistance.gov",
+            "label": "Foreign Assistance.gov",
             "url": "https://foreignassistance.gov",
             "emoji": "🌍",
-            "tag": "AID"
+            "tag": "GEOPOLITICS"
           },
           {
-            "label": "USASpending.gov — defense budget",
-            "url": "https://www.usaspending.gov",
+            "label": "USASpending.gov",
+            "url": "https://usaspending.gov",
             "emoji": "📊",
-            "tag": "BUDGET"
+            "tag": "DATA"
           }
         ],
         "topPills": [
@@ -37825,20 +37806,20 @@ const LAYERS = [
             "links": [
               {
                 "label": "Amnesty International",
-                "url": "https://www.amnesty.org",
-                "emoji": "⚔️",
+                "url": "https://amnesty.org",
+                "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
-                "label": "ProPublica — policing",
-                "url": "https://www.propublica.org",
+                "label": "ProPublica",
+                "url": "https://propublica.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
               },
               {
                 "label": "Costs of War",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "⚔️",
+                "url": "https://watson.brown.edu",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               }
             ],
@@ -37887,20 +37868,20 @@ const LAYERS = [
             "links": [
               {
                 "label": "U.S. Department of Veterans Affairs",
-                "url": "https://www.va.gov",
-                "emoji": "🎖️",
+                "url": "https://va.gov",
+                "emoji": "🌍",
                 "tag": "VETERANS"
               },
               {
-                "label": "SIPRI — arms & military spending",
-                "url": "https://www.sipri.org",
-                "emoji": "⚔️",
+                "label": "SIPRI",
+                "url": "https://sipri.org",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               },
               {
                 "label": "Federation of American Scientists",
                 "url": "https://fas.org",
-                "emoji": "🔬",
+                "emoji": "🌍",
                 "tag": "POLICY"
               }
             ],
@@ -37914,7 +37895,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -37958,8 +37939,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
@@ -38009,8 +37990,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   }
                 ],
@@ -38060,8 +38041,8 @@ const LAYERS = [
                   },
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   }
                 ],
@@ -38105,8 +38086,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   }
                 ],
@@ -38149,15 +38130,15 @@ const LAYERS = [
                 "desc": "The principle that civilians control the military. American civil-military norms have been strained by recent administrations. The principle still holds. The norms are weaker than they were.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -38234,19 +38215,19 @@ const LAYERS = [
               {
                 "label": "Federation of American Scientists",
                 "url": "https://fas.org",
-                "emoji": "🔬",
+                "emoji": "🌍",
                 "tag": "POLICY"
               },
               {
                 "label": "Foreign Affairs",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "📰",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               },
               {
-                "label": "SIPRI — arms & military spending",
-                "url": "https://www.sipri.org",
-                "emoji": "⚔️",
+                "label": "SIPRI",
+                "url": "https://sipri.org",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               }
             ],
@@ -38260,7 +38241,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -38305,13 +38286,13 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
                     "label": "Foreign Affairs",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "📰",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -38356,13 +38337,13 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
-                    "label": "Bellingcat — open-source investigation",
-                    "url": "https://www.bellingcat.com",
-                    "emoji": "🔍",
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
                 ],
@@ -38407,13 +38388,13 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -38458,13 +38439,13 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
-                    "label": "Bellingcat — open-source investigation",
-                    "url": "https://www.bellingcat.com",
-                    "emoji": "🔍",
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
                 ],
@@ -38507,15 +38488,15 @@ const LAYERS = [
                 "desc": "The grim arithmetic. Every war the U.S. has fought in the last twenty-five years has killed civilians at multiples of the combatants killed. The estimates vary by source. The pattern doesn't.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
-                    "label": "Bellingcat — open-source investigation",
-                    "url": "https://www.bellingcat.com",
-                    "emoji": "🔍",
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
                 ],
@@ -38596,15 +38577,15 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "SIPRI — arms & military spending",
-                "url": "https://www.sipri.org",
-                "emoji": "⚔️",
+                "label": "SIPRI",
+                "url": "https://sipri.org",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               },
               {
                 "label": "Federation of American Scientists",
                 "url": "https://fas.org",
-                "emoji": "🔬",
+                "emoji": "🌍",
                 "tag": "POLICY"
               },
               {
@@ -38628,9 +38609,9 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "SIPRI — arms & military spending",
-                    "url": "https://www.sipri.org",
-                    "emoji": "⚔️",
+                    "label": "SIPRI",
+                    "url": "https://sipri.org",
+                    "emoji": "🌍",
                     "tag": "MILITARY"
                   }
                 ],
@@ -38673,14 +38654,14 @@ const LAYERS = [
                 "desc": "What the Pentagon buys and from whom. Procurement is dominated by a handful of contractors who consistently produce systems behind schedule and over budget. The system is not designed to fail. It also is not designed to succeed.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -38731,8 +38712,8 @@ const LAYERS = [
                   },
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   }
                 ],
@@ -38777,7 +38758,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -38872,8 +38853,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
@@ -38954,14 +38935,14 @@ const LAYERS = [
             "desc": "The phrase Eisenhower coined in his 1961 farewell address, warning the country about exactly what then proceeded to happen. A few large defense contractors, a permanent revolving door with Pentagon procurement, and a Congressional incentive structure that distributes the spending across districts so that cancelling anything is locally painful.",
             "links": [
               {
-                "label": "OpenSecrets — money in politics",
-                "url": "https://www.opensecrets.org",
+                "label": "OpenSecrets",
+                "url": "https://opensecrets.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
               {
-                "label": "FollowTheMoney",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
@@ -38980,14 +38961,14 @@ const LAYERS = [
                 "desc": "Lockheed Martin, Boeing, Raytheon, Northrop Grumman, General Dynamics. Five companies do most of the largest contracts. The consolidation happened in the 1990s and was supposed to save money. It did not.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -39031,8 +39012,8 @@ const LAYERS = [
                 "desc": "The defense industry employs roughly one lobbyist for every member of Congress, often more. Most are former military or former Hill staffers. The doors revolve.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -39076,8 +39057,8 @@ const LAYERS = [
                 "desc": "Generals retire into contractor jobs. Contractor executives go into Pentagon roles. The same people negotiate from both sides of the same table over a career. The conflicts are managed on paper.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
@@ -39127,8 +39108,8 @@ const LAYERS = [
                 "desc": "Defense contracts are deliberately spread across as many congressional districts as possible. The point is to make cancellation politically painful. It works.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -39172,15 +39153,15 @@ const LAYERS = [
                 "desc": "The U.S. is the world's largest arms exporter. American weapons end up in conflicts the U.S. did not start and sometimes opposed. The export economy is a separate American foreign policy.",
                 "links": [
                   {
-                    "label": "SIPRI — arms & military spending",
-                    "url": "https://www.sipri.org",
-                    "emoji": "⚔️",
+                    "label": "SIPRI",
+                    "url": "https://sipri.org",
+                    "emoji": "🌍",
                     "tag": "MILITARY"
                   },
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -39225,8 +39206,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -39316,14 +39297,14 @@ const LAYERS = [
             "links": [
               {
                 "label": "U.S. Department of Veterans Affairs",
-                "url": "https://www.va.gov",
-                "emoji": "🎖️",
+                "url": "https://va.gov",
+                "emoji": "🌍",
                 "tag": "VETERANS"
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -39336,14 +39317,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -39387,18 +39368,18 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -39444,13 +39425,13 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -39495,8 +39476,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
@@ -39546,8 +39527,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
@@ -39597,14 +39578,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -39681,7 +39662,7 @@ const LAYERS = [
               {
                 "label": "Federation of American Scientists",
                 "url": "https://fas.org",
-                "emoji": "🔬",
+                "emoji": "🌍",
                 "tag": "POLICY"
               },
               {
@@ -39692,8 +39673,8 @@ const LAYERS = [
               },
               {
                 "label": "Foreign Affairs",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "📰",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               }
             ],
@@ -39707,7 +39688,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
@@ -39757,8 +39738,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Foreign Affairs",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "📰",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -39809,7 +39790,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -39854,7 +39835,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -39899,13 +39880,13 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
-                    "label": "Bellingcat — open-source investigation",
-                    "url": "https://www.bellingcat.com",
-                    "emoji": "🔍",
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
                 ],
@@ -39949,8 +39930,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Foreign Affairs",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "📰",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   },
                   {
@@ -40033,13 +40014,13 @@ const LAYERS = [
               {
                 "label": "Federation of American Scientists",
                 "url": "https://fas.org",
-                "emoji": "🔬",
+                "emoji": "🌍",
                 "tag": "POLICY"
               },
               {
-                "label": "Bellingcat — open-source investigation",
-                "url": "https://www.bellingcat.com",
-                "emoji": "🔍",
+                "label": "Bellingcat",
+                "url": "https://bellingcat.com",
+                "emoji": "📰",
                 "tag": "JOURNALISM"
               },
               {
@@ -40059,14 +40040,14 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -40109,14 +40090,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40161,7 +40142,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40206,7 +40187,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40255,10 +40236,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -40302,13 +40283,13 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
-                    "label": "Bellingcat — open-source investigation",
-                    "url": "https://www.bellingcat.com",
-                    "emoji": "🔍",
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
                 ],
@@ -40353,7 +40334,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40397,14 +40378,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Foreign Affairs",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "📰",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   },
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40449,7 +40430,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40493,14 +40474,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40545,8 +40526,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -40626,8 +40607,8 @@ const LAYERS = [
             "desc": "The category of weapon that can end the species. The U.S. has roughly 5,000 warheads. Russia has roughly the same. The other nuclear states have far fewer. The weapons have not been used in war since 1945. The chance of that staying true depends on factors we are not handling well.",
             "links": [
               {
-                "label": "ICAN — campaign against nuclear weapons",
-                "url": "https://www.icanw.org",
+                "label": "ICAN",
+                "url": "https://icanw.org",
                 "emoji": "☢️",
                 "tag": "NUCLEAR"
               },
@@ -40640,7 +40621,7 @@ const LAYERS = [
               {
                 "label": "Federation of American Scientists",
                 "url": "https://fas.org",
-                "emoji": "🔬",
+                "emoji": "🌍",
                 "tag": "POLICY"
               },
               {
@@ -40660,7 +40641,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
@@ -40711,12 +40692,12 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
-                    "label": "ICAN — campaign against nuclear weapons",
-                    "url": "https://www.icanw.org",
+                    "label": "ICAN",
+                    "url": "https://icanw.org",
                     "emoji": "☢️",
                     "tag": "NUCLEAR"
                   }
@@ -40768,7 +40749,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -40813,14 +40794,14 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -40862,8 +40843,8 @@ const LAYERS = [
                 "desc": "The arms control framework. The treaties that limited nuclear arsenals are mostly expired or expiring. There is currently no serious negotiation underway between the U.S. and Russia.",
                 "links": [
                   {
-                    "label": "ICAN — campaign against nuclear weapons",
-                    "url": "https://www.icanw.org",
+                    "label": "ICAN",
+                    "url": "https://icanw.org",
                     "emoji": "☢️",
                     "tag": "NUCLEAR"
                   },
@@ -40876,7 +40857,7 @@ const LAYERS = [
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -41052,15 +41033,15 @@ const LAYERS = [
         "links": [
           {
             "label": "USASpending.gov",
-            "url": "https://www.usaspending.gov",
-            "emoji": "💰",
-            "tag": "BUDGET"
+            "url": "https://usaspending.gov",
+            "emoji": "📊",
+            "tag": "DATA"
           },
           {
-            "label": "CBO",
-            "url": "https://www.cbo.gov",
-            "emoji": "💰",
-            "tag": "BUDGET"
+            "label": "Congressional Budget Office",
+            "url": "https://cbo.gov",
+            "emoji": "📊",
+            "tag": "DATA"
           }
         ],
         "topPills": [
@@ -41077,16 +41058,16 @@ const LAYERS = [
                 "tag": "MONEY"
               },
               {
-                "label": "FollowTheMoney",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
               {
                 "label": "TrackAIPAC",
-                "url": "https://www.trackaipac.com",
+                "url": "https://trackaipac.com",
                 "emoji": "💰",
-                "tag": "LOBBYING"
+                "tag": "MONEY"
               }
             ],
             "topPills": [],
@@ -41212,18 +41193,18 @@ const LAYERS = [
             "links": [
               {
                 "label": "USASpending.gov",
-                "url": "https://www.usaspending.gov",
+                "url": "https://usaspending.gov",
                 "emoji": "📊",
-                "tag": "BUDGET"
+                "tag": "DATA"
               },
               {
-                "label": "Foreign Affairs — trade policy",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "📰",
+                "label": "Foreign Affairs",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               },
               {
-                "label": "World Bank — trade data",
+                "label": "World Bank Open Data",
                 "url": "https://data.worldbank.org",
                 "emoji": "📊",
                 "tag": "DATA"
@@ -41313,7 +41294,7 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "FRED — St. Louis Fed economic data",
+                "label": "FRED Economic Data",
                 "url": "https://fred.stlouisfed.org",
                 "emoji": "📊",
                 "tag": "DATA"
@@ -41384,7 +41365,7 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "FRED — St. Louis Fed economic data",
+                    "label": "FRED Economic Data",
                     "url": "https://fred.stlouisfed.org",
                     "emoji": "📊",
                     "tag": "DATA"
@@ -41550,7 +41531,7 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "FRED — St. Louis Fed economic data",
+                    "label": "FRED Economic Data",
                     "url": "https://fred.stlouisfed.org",
                     "emoji": "📊",
                     "tag": "DATA"
@@ -41633,14 +41614,14 @@ const LAYERS = [
                 "tag": "MONEY"
               },
               {
-                "label": "Inequality.org — Institute for Policy Studies",
+                "label": "Inequality.org",
                 "url": "https://inequality.org",
-                "emoji": "💰",
-                "tag": "MONEY"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
-                "label": "FollowTheMoney",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               }
@@ -41653,14 +41634,14 @@ const LAYERS = [
                 "desc": "What gets passed down. About a third of the wealth held by the richest Americans came from inheritance, not earnings. The country tells itself a story about merit. The data tells a different one.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
-                    "label": "IRS Statistics of Income",
-                    "url": "https://www.irs.gov/statistics",
+                    "label": "IRS Statistics",
+                    "url": "https://irs.gov",
                     "emoji": "📊",
                     "tag": "DATA"
                   }
@@ -41710,10 +41691,10 @@ const LAYERS = [
                     "tag": "MONEY"
                   },
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -41782,10 +41763,10 @@ const LAYERS = [
                 "desc": "The slice that owns more than the bottom 90%. The concentration has doubled since 1980. It has not stopped accelerating.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Economic Policy Institute",
@@ -41833,10 +41814,10 @@ const LAYERS = [
                 "desc": "The deepest measure. The gap between top and bottom in wealth is several times wider than the gap in income. American wealth inequality is among the highest in the developed world.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Our World in Data",
@@ -41884,10 +41865,10 @@ const LAYERS = [
                 "desc": "The descendant of slavery, Jim Crow, redlining, and a hundred other policies. The median white American household holds roughly seven to ten times the wealth of the median Black household. The gap has barely closed in fifty years.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "Economic Policy Institute",
@@ -41941,14 +41922,14 @@ const LAYERS = [
                 "desc": "The wealthiest American families have held their position across three or four generations. Compounding works. So does the political system that protects compounded wealth.",
                 "links": [
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -42054,10 +42035,10 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "Inequality.org — Institute for Policy Studies",
+                "label": "Inequality.org",
                 "url": "https://inequality.org",
-                "emoji": "💰",
-                "tag": "MONEY"
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -42176,8 +42157,8 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "ProPublica: Student Debt",
-                    "url": "https://www.propublica.org",
+                    "label": "ProPublica",
+                    "url": "https://propublica.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -42265,7 +42246,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -42360,8 +42341,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
@@ -42442,7 +42423,7 @@ const LAYERS = [
             "desc": "How the system moves goods and money. Markets are useful when the rules are honest and the players are roughly comparable in power. American markets are mostly neither.",
             "links": [
               {
-                "label": "FRED — St. Louis Fed economic data",
+                "label": "FRED Economic Data",
                 "url": "https://fred.stlouisfed.org",
                 "emoji": "📊",
                 "tag": "DATA"
@@ -42454,10 +42435,10 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "United Nations data",
+                "label": "UN Data",
                 "url": "https://data.un.org",
-                "emoji": "🌍",
-                "tag": "GLOBAL"
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -42519,10 +42500,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -42574,10 +42555,10 @@ const LAYERS = [
                 "desc": "The global plumbing. The pandemic exposed how fragile and consolidated the chains had become. Most people had not realized how much depended on a small number of choke points.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "World Bank Open Data",
@@ -42625,8 +42606,8 @@ const LAYERS = [
                 "desc": "What the American economy has tolerated for two generations. The big companies got bigger. The middle of the distribution got hollowed out. Antitrust enforcement is starting to wake up after a long sleep.",
                 "links": [
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
@@ -42676,14 +42657,14 @@ const LAYERS = [
                 "desc": "The other end of trade. Many of the cheap goods come from labor and resource extraction in places the U.S. consumer never sees. The cheap is paid for somewhere.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   }
@@ -42765,8 +42746,8 @@ const LAYERS = [
                 "tag": "MONEY"
               },
               {
-                "label": "FollowTheMoney",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
@@ -42791,10 +42772,10 @@ const LAYERS = [
                     "tag": "MONEY"
                   },
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -42887,7 +42868,7 @@ const LAYERS = [
                 "desc": "The visible casino. The market does not measure the economy — it measures expected returns to shareholders. The two have decoupled for long stretches without anyone seeming to notice.",
                 "links": [
                   {
-                    "label": "FRED — St. Louis Fed economic data",
+                    "label": "FRED Economic Data",
                     "url": "https://fred.stlouisfed.org",
                     "emoji": "📊",
                     "tag": "DATA"
@@ -42944,8 +42925,8 @@ const LAYERS = [
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -43016,8 +42997,8 @@ const LAYERS = [
                 "desc": "The theory that companies exist to maximize returns to shareholders. Came from a 1970 essay. Got encoded into corporate law and business school curricula. The country before this theory looked meaningfully different.",
                 "links": [
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
@@ -43085,14 +43066,14 @@ const LAYERS = [
                 "desc": "When the rules get written by the people they regulate. American financial regulation, agricultural subsidies, defense procurement, and tax policy all show heavy fingerprints of the industries they govern.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -43168,10 +43149,10 @@ const LAYERS = [
             "desc": "Where the money went. The gains of forty years of economic growth went disproportionately to the people who already had the most. This was not gravity. This was a series of choices about taxes, labor, finance, and ownership.",
             "links": [
               {
-                "label": "Inequality.org — Institute for Policy Studies",
+                "label": "Inequality.org",
                 "url": "https://inequality.org",
-                "emoji": "💰",
-                "tag": "MONEY"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Economic Policy Institute",
@@ -43194,10 +43175,10 @@ const LAYERS = [
                 "desc": "The standard measure of inequality. The American Gini coefficient is the highest of any major developed economy. It rose every decade since 1980.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Our World in Data",
@@ -43245,10 +43226,10 @@ const LAYERS = [
                 "desc": "Where the gains went. The top 1% now captures roughly 20% of national income, up from about 10% in 1980. The top 0.1% has done even better.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Economic Policy Institute",
@@ -43302,7 +43283,7 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "FRED — St. Louis Fed economic data",
+                    "label": "FRED Economic Data",
                     "url": "https://fred.stlouisfed.org",
                     "emoji": "📊",
                     "tag": "DATA"
@@ -43353,8 +43334,8 @@ const LAYERS = [
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
+                    "label": "Follow The Money",
+                    "url": "https://followthemoney.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -43449,8 +43430,8 @@ const LAYERS = [
                 "desc": "The choices that produced this. Tax cuts for capital. Anti-union law and weak enforcement. Trade deals without worker protection. Financial deregulation. None of it was inevitable.",
                 "links": [
                   {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   },
@@ -43585,28 +43566,28 @@ const LAYERS = [
     "height": 12,
     "links": [
       {
-        "label": "Al Jazeera — history still happening",
-        "url": "https://www.aljazeera.com",
-        "tag": "GLOBAL",
-        "emoji": "📰"
+        "label": "Al Jazeera",
+        "url": "https://aljazeera.com",
+        "emoji": "📰",
+        "tag": "JOURNALISM"
       },
       {
-        "label": "Longreads — long-form history journalism",
+        "label": "Longreads",
         "url": "https://longreads.com",
-        "tag": "CULTURE",
-        "emoji": "📰"
+        "emoji": "📰",
+        "tag": "JOURNALISM"
       },
       {
-        "label": "Foreign Affairs — geopolitics in depth",
-        "url": "https://www.foreignaffairs.com",
-        "tag": "ANALYSIS",
-        "emoji": "📰"
+        "label": "Foreign Affairs",
+        "url": "https://foreignaffairs.com",
+        "emoji": "🌍",
+        "tag": "GEOPOLITICS"
       },
       {
-        "label": "Pew Research — data on society & trends",
-        "url": "https://www.pewresearch.org",
-        "tag": "DATA",
-        "emoji": "📊"
+        "label": "Pew Research",
+        "url": "https://pewresearch.org",
+        "emoji": "📊",
+        "tag": "DATA"
       }
     ],
     "orbs": [
@@ -43627,8 +43608,8 @@ const LAYERS = [
           },
           {
             "label": "Foreign Affairs",
-            "url": "https://www.foreignaffairs.com",
-            "emoji": "🌐",
+            "url": "https://foreignaffairs.com",
+            "emoji": "🌍",
             "tag": "GEOPOLITICS"
           }
         ],
@@ -43640,8 +43621,8 @@ const LAYERS = [
             "desc": "The shape of the earth. Mountains, valleys, plains, plateaus, deserts, coastlines. The shape of the land has decided where humans settled, what they could grow, and which civilizations rose. Geography is destiny in some old senses and not in others.",
             "links": [
               {
-                "label": "U.S. Geological Survey",
-                "url": "https://www.usgs.gov",
+                "label": "USGS",
+                "url": "https://usgs.gov",
                 "emoji": "🌍",
                 "tag": "EARTH"
               },
@@ -43660,8 +43641,8 @@ const LAYERS = [
                 "desc": "Where settlement is hard and culture often preserves longest. Mountain peoples across the world tend to share certain patterns — independence, self-reliance, slower contact with empires.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   },
@@ -43717,8 +43698,8 @@ const LAYERS = [
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   }
@@ -43763,9 +43744,9 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "NOAA",
-                    "url": "https://www.noaa.gov",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
-                    "tag": "EARTH"
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "National Geographic",
@@ -43813,8 +43794,8 @@ const LAYERS = [
                 "desc": "Land short on water. Deserts have shaped every civilization adjacent to them. Their borders shift as the climate shifts.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   },
@@ -43864,8 +43845,8 @@ const LAYERS = [
                 "desc": "Flat, generally fertile, the breadbaskets. Most large agricultural societies sit on plains. The American Midwest is one of the most productive on earth.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   }
@@ -43909,16 +43890,16 @@ const LAYERS = [
                 "desc": "Why the landforms exist. The continents drift. Mountains rise where plates collide. Earthquakes and volcanoes mark the seams.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   },
                   {
                     "label": "NOAA",
-                    "url": "https://www.noaa.gov",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
-                    "tag": "EARTH"
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -43993,9 +43974,9 @@ const LAYERS = [
             "links": [
               {
                 "label": "NOAA",
-                "url": "https://www.noaa.gov",
+                "url": "https://noaa.gov",
                 "emoji": "🌍",
-                "tag": "EARTH"
+                "tag": "SCIENCE"
               },
               {
                 "label": "National Geographic",
@@ -44019,9 +44000,9 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "NOAA",
-                    "url": "https://www.noaa.gov",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
-                    "tag": "EARTH"
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -44125,9 +44106,9 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "NOAA",
-                    "url": "https://www.noaa.gov",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
-                    "tag": "EARTH"
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -44180,13 +44161,13 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "NOAA",
-                    "url": "https://www.noaa.gov",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
-                    "tag": "EARTH"
+                    "tag": "SCIENCE"
                   },
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   }
@@ -44262,16 +44243,16 @@ const LAYERS = [
             "desc": "How the surface of the earth gets drawn. Maps are arguments — about what counts as a country, whose names go on the rivers, which projection makes which continent look bigger. Borders are political fictions that have real consequences for everyone they cross.",
             "links": [
               {
-                "label": "U.S. Geological Survey",
-                "url": "https://www.usgs.gov",
+                "label": "USGS",
+                "url": "https://usgs.gov",
                 "emoji": "🌍",
                 "tag": "EARTH"
               },
               {
-                "label": "United Nations data",
+                "label": "UN Data",
                 "url": "https://data.un.org",
-                "emoji": "🌍",
-                "tag": "GLOBAL"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Our World in Data",
@@ -44288,8 +44269,8 @@ const LAYERS = [
                 "desc": "How a sphere gets onto a flat page. Mercator made Europe look bigger than Africa for centuries. Every projection lies in some specific direction. Choosing the lie is choosing the politics.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   }
@@ -44333,10 +44314,10 @@ const LAYERS = [
                 "desc": "Lines drawn between political units. Most modern borders are colonial. Many are arbitrary. They get enforced anyway.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -44378,10 +44359,10 @@ const LAYERS = [
                 "desc": "What a country claims authority over. Sovereignty is a 17th-century European invention that became the global default. Indigenous nations and oppressed peoples have always had complicated relationships with it.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -44423,15 +44404,15 @@ const LAYERS = [
                 "desc": "Where the maps disagree. Kashmir. Western Sahara. Taiwan. The maps differ by which side's textbooks you read. Real lives are decided by which version gets enforced.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Foreign Affairs",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "📰",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -44476,14 +44457,14 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -44526,15 +44507,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Endangered Languages Project",
-                    "url": "https://www.endangeredlanguages.com",
-                    "emoji": "🗣️",
+                    "url": "https://endangeredlanguages.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -44679,10 +44660,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -44871,10 +44852,10 @@ const LAYERS = [
                 "desc": "How communities carry the old place into the new one. Little Italy. Chinatown. The Cuban neighborhoods of Miami. Place gets reproduced in fragments.",
                 "links": [
                   {
-                    "label": "IOM — migration data",
-                    "url": "https://www.migrationdataportal.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "Migration Data Portal",
+                    "url": "https://migrationdataportal.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -44948,16 +44929,16 @@ const LAYERS = [
             "desc": "Why people live where they live. Water. Soil. Fish. Coal. Oil. Settlement patterns track resources and trade routes. Resources also explain a lot of the world's wars.",
             "links": [
               {
-                "label": "U.S. Geological Survey",
-                "url": "https://www.usgs.gov",
+                "label": "USGS",
+                "url": "https://usgs.gov",
                 "emoji": "🌍",
                 "tag": "EARTH"
               },
               {
-                "label": "United Nations data",
+                "label": "UN Data",
                 "url": "https://data.un.org",
-                "emoji": "🌍",
-                "tag": "GLOBAL"
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "ATJon on Substack",
@@ -44984,10 +44965,10 @@ const LAYERS = [
                 "desc": "Where calories come from. American agriculture is concentrated, subsidized, and dominated by a small number of crops. The food on the average shelf reflects the policy more than the climate.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Bureau of Labor Statistics",
@@ -45035,8 +45016,8 @@ const LAYERS = [
                 "desc": "Where oil, gas, coal, and increasingly solar and wind are found and where they are consumed. The geography of energy has shaped American foreign policy for a century.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   }
@@ -45080,8 +45061,8 @@ const LAYERS = [
                 "desc": "What the country digs out. Copper, lithium, rare earths, coal. The mining communities of the U.S. have a long history of being used and discarded.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   },
@@ -45324,10 +45305,10 @@ const LAYERS = [
                 "desc": "More than half of humanity lives in cities now. Most of the still-coming population growth will be urban. The infrastructure to support it is not yet built.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "U.S. Census",
@@ -45385,8 +45366,8 @@ const LAYERS = [
                 "desc": "The networks humans have built across the surface. Roads, rails, pipelines, transmission lines, ports. The infrastructure of the rich world is older than most of its builders. Maintenance has lagged construction for decades.",
                 "links": [
                   {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
+                    "label": "USGS",
+                    "url": "https://usgs.gov",
                     "emoji": "🌍",
                     "tag": "EARTH"
                   }
@@ -45475,16 +45456,16 @@ const LAYERS = [
                 "desc": "The movement of people away from places becoming uninhabitable. The displacements have started. They will be among the largest migrations in human history.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "IOM — migration data",
-                    "url": "https://www.migrationdataportal.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "Migration Data Portal",
+                    "url": "https://migrationdataportal.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -45595,21 +45576,21 @@ const LAYERS = [
         "desc": "War is the continuation of politics by other means — Clausewitz. Revolutions are the continuation of war by other means — history. The two are inseparable. Every major political order that exists today was produced by violence — by a war won or lost, a revolution that succeeded or failed, a genocide that was allowed to happen. Understanding war and revolution is not a morbid hobby. It is the prerequisite for understanding how the world got to be the way it is and who paid the price for it getting here.",
         "links": [
           {
-            "label": "Costs of War Project — Brown University",
-            "url": "https://watson.brown.edu/costsofwar",
-            "emoji": "🪖",
+            "label": "Costs of War",
+            "url": "https://watson.brown.edu",
+            "emoji": "🌍",
             "tag": "MILITARY"
           },
           {
-            "label": "National Archives — US military history",
-            "url": "https://www.archives.gov/research/military",
-            "emoji": "🪖",
-            "tag": "MILITARY"
+            "label": "National Archives",
+            "url": "https://archives.gov",
+            "emoji": "🗄️",
+            "tag": "HISTORY"
           },
           {
-            "label": "Foreign Affairs — war & conflict",
-            "url": "https://www.foreignaffairs.com",
-            "emoji": "🌐",
+            "label": "Foreign Affairs",
+            "url": "https://foreignaffairs.com",
+            "emoji": "🌍",
             "tag": "GEOPOLITICS"
           }
         ],
@@ -45621,9 +45602,9 @@ const LAYERS = [
             "desc": "War is organized violence between groups for political ends. That definition is simple. What it contains is not. Every element is contested — what counts as organized, what counts as political, where the line between war and massacre and police action and genocide runs. The 20th century killed more people in war than all previous centuries combined, using weapons and logistics that earlier centuries could not imagine, for ideological stakes that previous centuries did not have. The 21st century has not yet clarified whether we are getting better or worse at this.",
             "links": [
               {
-                "label": "Costs of War Project",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
+                "label": "Costs of War",
+                "url": "https://watson.brown.edu",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               }
             ],
@@ -45916,9 +45897,9 @@ const LAYERS = [
                 "desc": "The revolution that produced the most durable political document in modern history also produced the most consequential contradiction: a declaration that all men are created equal, written by slaveholders, ratified by a constitutional system that counted enslaved people as three-fifths of a person for purposes of political representation. The revolution was simultaneously a genuine democratic breakthrough and a land deal — the colonists wanted the West that Britain's Proclamation Line denied them. Both things are true. The tension between them has never been resolved.",
                 "links": [
                   {
-                    "label": "National Archives — Declaration of Independence",
-                    "url": "https://www.archives.gov/founding-docs",
-                    "emoji": "🏛️",
+                    "label": "National Archives",
+                    "url": "https://archives.gov",
+                    "emoji": "🗄️",
                     "tag": "HISTORY"
                   }
                 ],
@@ -46146,9 +46127,9 @@ const LAYERS = [
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "National Security Archive — declassified interventions",
+                    "label": "National Security Archive",
                     "url": "https://nsarchive.gwu.edu",
-                    "emoji": "🏛️",
+                    "emoji": "🌍",
                     "tag": "HISTORY"
                   }
                 ],
@@ -46239,8 +46220,8 @@ const LAYERS = [
             "desc": "Raphael Lemkin coined the word in 1944 — combining the Greek genos (people) with the Latin cide (killing) — because no existing word described what he had witnessed. The UN Convention on the Prevention and Punishment of Genocide, adopted in 1948, defines it as acts committed with intent to destroy, in whole or in part, a national, ethnic, racial, or religious group. The definition is precise. Its application has been consistently political — powerful nations resist the word when applying it would require them to act or implicate their allies.",
             "links": [
               {
-                "label": "United States Holocaust Memorial Museum",
-                "url": "https://www.ushmm.org",
+                "label": "Holocaust Museum",
+                "url": "https://ushmm.org",
                 "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
@@ -46315,15 +46296,15 @@ const LAYERS = [
                 "desc": "Six million Jews — two-thirds of European Jewry — murdered by the Nazi state between 1933 and 1945. Five to six million others: Roma, disabled people, Soviet POWs, political prisoners, gay men, Jehovah's Witnesses. The Holocaust was not a medieval eruption of ancient hatred. It was a modern bureaucratic project — organized by educated people, implemented through industrial infrastructure, documented in meticulous records, carried out in a country that was one of the most culturally and scientifically advanced in the world. The lesson is not that monsters do this. The lesson is that ordinary institutions, in the wrong conditions, can.",
                 "links": [
                   {
-                    "label": "United States Holocaust Memorial Museum",
-                    "url": "https://www.ushmm.org",
+                    "label": "Holocaust Museum",
+                    "url": "https://ushmm.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
                     "label": "Yad Vashem",
-                    "url": "https://www.yadvashem.org",
-                    "emoji": "⚖️",
+                    "url": "https://yadvashem.org",
+                    "emoji": "✡️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -46367,7 +46348,7 @@ const LAYERS = [
                   {
                     "label": "National Museum of the American Indian",
                     "url": "https://americanindian.si.edu",
-                    "emoji": "🌍",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -46745,8 +46726,8 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "ICJ — genocide cases",
-                    "url": "https://www.icj-cij.org",
+                    "label": "International Court of Justice",
+                    "url": "https://icj-cij.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
@@ -46820,16 +46801,16 @@ const LAYERS = [
             "desc": "The United States has been at war — formally or informally — for most of its existence. The American mythology of reluctant superpower, drawn into conflicts it did not start and eager to come home when they end, is contradicted by the record. From the wars against indigenous nations that preceded and accompanied westward expansion, through the Civil War, two World Wars, Korea, Vietnam, and the Forever Wars, to the present day, the United States has maintained a continuous military presence somewhere in the world for over a century. Understanding American wars requires understanding both what they achieved and what they cost — and for whom.",
             "links": [
               {
-                "label": "Costs of War Project",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
+                "label": "Costs of War",
+                "url": "https://watson.brown.edu",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               },
               {
-                "label": "National Archives — military records",
-                "url": "https://www.archives.gov/research/military",
-                "emoji": "🪖",
-                "tag": "MILITARY"
+                "label": "National Archives",
+                "url": "https://archives.gov",
+                "emoji": "🗄️",
+                "tag": "HISTORY"
               }
             ],
             "topPills": [
@@ -46840,9 +46821,9 @@ const LAYERS = [
                 "desc": "The deadliest war in American history — 620,000 to 750,000 dead — was fought over slavery. The Confederate states said so explicitly in their declarations of secession and their new constitution. The states rights framing was constructed after the fact, primarily during the Lost Cause mythology-building of the late 19th and early 20th centuries. The war ended at Appomattox in 1865. The conflict it represented did not. The South lost the military contest and won the political one — through the betrayal of Reconstruction, the terror of the Klan, Jim Crow, mass incarceration, and the ongoing contestation of what the war was actually about. The Civil War is the most important unresolved event in American history.",
                 "links": [
                   {
-                    "label": "National Archives — Civil War records",
-                    "url": "https://www.archives.gov",
-                    "emoji": "🏛️",
+                    "label": "National Archives",
+                    "url": "https://archives.gov",
+                    "emoji": "🗄️",
                     "tag": "HISTORY"
                   }
                 ],
@@ -47391,9 +47372,9 @@ const LAYERS = [
                 "desc": "After September 11, 2001, the United States launched what it called the Global War on Terror — an open-ended military campaign against a tactic rather than a state, with no defined victory condition and no geographic boundary. The Authorization for Use of Military Force passed in 2001 has been used to justify military action in at least 19 countries. The wars in Afghanistan and Iraq lasted 20 and 8 years respectively and ended without achieving their stated objectives. The Costs of War Project at Brown University estimates the total cost at over $8 trillion and 900,000 deaths.",
                 "links": [
                   {
-                    "label": "Costs of War Project",
-                    "url": "https://watson.brown.edu/costsofwar",
-                    "emoji": "🪖",
+                    "label": "Costs of War",
+                    "url": "https://watson.brown.edu",
+                    "emoji": "🌍",
                     "tag": "MILITARY"
                   }
                 ],
@@ -47517,8 +47498,8 @@ const LAYERS = [
                     "desc": "You cannot declare war on a tactic. The War on Terror was from the beginning a category error — an attempt to apply military force to a political and ideological problem. What it produced: the surveillance state (NSA mass surveillance revealed by Snowden), the drone program (extrajudicial killing in countries the US is not at war with), Guantanamo (indefinite detention without trial, still operating), and the normalization of perpetual war as the background condition of American life. The original Al-Qaeda that attacked on September 11 has been largely destroyed. The conditions that produced it have not.",
                     "links": [
                       {
-                        "label": "ACLU — national security",
-                        "url": "https://www.aclu.org/issues/national-security",
+                        "label": "ACLU",
+                        "url": "https://aclu.org",
                         "emoji": "⚖️",
                         "tag": "RIGHTS"
                       }
@@ -47598,8 +47579,8 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "ACLU — mass incarceration",
-                    "url": "https://www.aclu.org",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
@@ -47670,14 +47651,14 @@ const LAYERS = [
             "desc": "Dwight Eisenhower coined the term military-industrial complex in his 1961 farewell address — a warning from the Supreme Commander of Allied Forces in WWII and two-term President about the dangers of a permanent arms industry with a financial interest in perpetual conflict. The United States has not been at peace since. The defense budget exceeds $900 billion annually — more than the next ten countries combined. The Pentagon cannot pass an audit. Defense contractors employ hundreds of thousands of workers in congressional districts across every state, making cuts politically impossible. The complex Eisenhower warned about has become the background condition of American governance.",
             "links": [
               {
-                "label": "Costs of War Project",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
+                "label": "Costs of War",
+                "url": "https://watson.brown.edu",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               },
               {
-                "label": "OpenSecrets — defense lobbying",
-                "url": "https://www.opensecrets.org",
+                "label": "OpenSecrets",
+                "url": "https://opensecrets.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               }
@@ -47690,8 +47671,8 @@ const LAYERS = [
                 "desc": "Eisenhower's warning in full: in the councils of government, we must guard against the acquisition of unwarranted influence, whether sought or unsought, by the military-industrial complex. The potential for the disastrous rise of misplaced power exists and will persist. The complex: defense contractors who profit from war, military brass who rotate into contractor jobs after retirement, politicians who receive contractor donations and protect contractor jobs in their districts, think tanks funded by defense money that produce arguments for military spending. The system is self-reinforcing and largely immune to democratic pressure.",
                 "links": [
                   {
-                    "label": "OpenSecrets — defense industry",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -47734,10 +47715,10 @@ const LAYERS = [
                 "desc": "The US defense budget exceeds $900 billion annually — more than the combined military spending of China, Russia, India, Saudi Arabia, the UK, Germany, France, South Korea, Japan, and Ukraine. It has never been successfully audited. The Pentagon failed its fifth consecutive audit in 2023. The budget funds 800 overseas bases, 11 aircraft carrier groups, the nuclear arsenal, and the largest military bureaucracy in human history. It also funds Lockheed Martin, Raytheon, Boeing, General Dynamics, and Northrop Grumman — the five largest defense contractors — whose combined revenue exceeds the GDP of most countries.",
                 "links": [
                   {
-                    "label": "USASpending.gov — defense",
-                    "url": "https://www.usaspending.gov",
-                    "emoji": "💰",
-                    "tag": "BUDGET"
+                    "label": "USASpending.gov",
+                    "url": "https://usaspending.gov",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -47778,9 +47759,9 @@ const LAYERS = [
                 "desc": "The United States maintains approximately 800 military bases in 70 countries — more than any empire in history. Britain at the height of its empire had 36 bases outside the UK. The US base network costs an estimated $100 billion per year to maintain. Many bases have been there since WWII or the Cold War and have never been reconsidered. The bases project power, protect allies, and provide logistical infrastructure for global military operations. They also generate resentment, produce crimes committed by stationed personnel, and represent a permanent commitment of American treasure and credibility to arrangements that are rarely debated.",
                 "links": [
                   {
-                    "label": "Costs of War — overseas bases",
-                    "url": "https://watson.brown.edu/costsofwar",
-                    "emoji": "🪖",
+                    "label": "Costs of War",
+                    "url": "https://watson.brown.edu",
+                    "emoji": "🌍",
                     "tag": "MILITARY"
                   }
                 ],
@@ -47822,8 +47803,8 @@ const LAYERS = [
                 "desc": "Senior military officers retire and join the boards or advisory staffs of defense contractors. Defense contractor executives become Deputy Secretaries of Defense. Congressional staffers who write defense appropriations bills take jobs with the companies their bills fund. Think tank analysts who argue for defense spending are funded by defense contractors. The revolving door is legal, documented, and universal. It ensures that the people who make decisions about military spending have financial interests in maximum military spending. Eisenhower's warning was not a prediction. It was an observation about something already fully formed.",
                 "links": [
                   {
-                    "label": "OpenSecrets — revolving door",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -48151,39 +48132,39 @@ const LAYERS = [
         "desc": "Codified power. The rules written by those who had the power to write rules. Sometimes just. Often not. Always contested by those the rules were not written for. Law is civilization's written memory — the record of every power structure that has tried to make itself permanent. Understanding how law actually works, not how civics class described it, is the prerequisite for changing any of it.",
         "links": [
           {
-            "label": "Cornell Legal Information Institute — free legal text",
-            "url": "https://www.law.cornell.edu",
+            "label": "Cornell Law — LII",
+            "url": "https://law.cornell.edu",
             "emoji": "⚖️",
             "tag": "LAW"
           },
           {
-            "label": "Oyez — Supreme Court cases & audio",
-            "url": "https://www.oyez.org",
-            "emoji": "🏛️",
-            "tag": "LAW"
-          },
-          {
-            "label": "Brennan Center for Justice",
-            "url": "https://www.brennancenter.org",
+            "label": "Oyez",
+            "url": "https://oyez.org",
             "emoji": "⚖️",
             "tag": "LAW"
           },
           {
-            "label": "ACLU — civil liberties tracker",
-            "url": "https://www.aclu.org",
+            "label": "Brennan Center",
+            "url": "https://brennancenter.org",
             "emoji": "⚖️",
             "tag": "RIGHTS"
           },
           {
-            "label": "SCOTUSblog — Supreme Court analysis",
-            "url": "https://www.scotusblog.com",
-            "emoji": "🏛️",
+            "label": "ACLU",
+            "url": "https://aclu.org",
+            "emoji": "⚖️",
+            "tag": "RIGHTS"
+          },
+          {
+            "label": "SCOTUSblog",
+            "url": "https://scotusblog.com",
+            "emoji": "⚖️",
             "tag": "LAW"
           },
           {
-            "label": "GovTrack — legislation and votes",
-            "url": "https://www.govtrack.us",
-            "emoji": "🏛️",
+            "label": "GovTrack",
+            "url": "https://govtrack.us",
+            "emoji": "💰",
             "tag": "CONGRESS"
           }
         ],
@@ -48195,28 +48176,28 @@ const LAYERS = [
             "desc": "What citizens are owed and what they owe. The American conversation about rights is loud and the conversation about duties is quieter. Both are part of the deal. The deal has been renegotiated repeatedly across the country's history, mostly in the direction of expanding who counts as a citizen.",
             "links": [
               {
-                "label": "ACLU — know your rights",
-                "url": "https://www.aclu.org/know-your-rights",
+                "label": "ACLU",
+                "url": "https://aclu.org",
                 "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
-                "label": "Cornell Legal Information Institute",
-                "url": "https://www.law.cornell.edu",
+                "label": "Cornell Law — LII",
+                "url": "https://law.cornell.edu",
                 "emoji": "⚖️",
                 "tag": "LAW"
               },
               {
-                "label": "Brennan Center — voting and civil rights",
-                "url": "https://www.brennancenter.org",
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
                 "emoji": "⚖️",
-                "tag": "LAW"
+                "tag": "RIGHTS"
               },
               {
-                "label": "USA.gov — rights and responsibilities",
-                "url": "https://www.usa.gov/rights",
-                "emoji": "🏛️",
-                "tag": "CIVIC"
+                "label": "USA.gov",
+                "url": "https://usa.gov",
+                "emoji": "🗳️",
+                "tag": "VOTE"
               }
             ],
             "topPills": [
@@ -48227,21 +48208,21 @@ const LAYERS = [
                 "desc": "What you are entitled to as a person under the law. Vote. Speak. Assemble. Be free of discrimination. American civil rights have expanded across two centuries through court rulings, legislation, and movements that did not take no for an answer.",
                 "links": [
                   {
-                    "label": "ACLU — civil rights",
-                    "url": "https://www.aclu.org/civil-rights",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
-                    "label": "Civil Rights.gov — federal resources",
-                    "url": "https://www.civilrights.gov",
-                    "emoji": "🏛️",
+                    "label": "Civil Rights.gov",
+                    "url": "https://civilrights.gov",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -48284,10 +48265,10 @@ const LAYERS = [
                 "desc": "The rights people are owed because they are people, not because of citizenship. The Universal Declaration in 1948 set the framework. The U.S. has had a complicated relationship with the framework ever since.",
                 "links": [
                   {
-                    "label": "UN Human Rights — OHCHR",
-                    "url": "https://www.ohchr.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "UN Human Rights",
+                    "url": "https://ohchr.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "Human Rights Watch",
@@ -48341,16 +48322,16 @@ const LAYERS = [
                 "desc": "The other side. Vote. Pay taxes. Serve on juries. Show up. American civic culture has gotten thinner on the duties side in living memory.",
                 "links": [
                   {
-                    "label": "USA.gov — civic responsibilities",
-                    "url": "https://www.usa.gov/citizenship",
-                    "emoji": "🏛️",
-                    "tag": "CIVIC"
+                    "label": "USA.gov",
+                    "url": "https://usa.gov",
+                    "emoji": "🗳️",
+                    "tag": "VOTE"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -48409,20 +48390,20 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "ACLU — privacy rights",
-                    "url": "https://www.aclu.org/privacy-technology",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
                     "label": "Privacy Rights Clearinghouse",
                     "url": "https://privacyrights.org",
-                    "emoji": "🛡️",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
                 ],
@@ -48465,22 +48446,22 @@ const LAYERS = [
                 "desc": "The promise that the government cannot take your life, liberty, or property without proper procedure. American due process is real and uneven — better in some courtrooms than others, weaker for the poor and people of color across the system.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute — due process",
-                    "url": "https://www.law.cornell.edu/constitution/fifth_amendment",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "ACLU — due process",
-                    "url": "https://www.aclu.org/due-process",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -48554,28 +48535,28 @@ const LAYERS = [
             "desc": "How the law gets interpreted in practice. American courts are the most powerful judiciary in the world — they can strike down laws passed by elected legislatures, and they have. The Supreme Court is the apex. The lower courts do most of the actual work.",
             "links": [
               {
-                "label": "Oyez — Supreme Court cases & oral arguments",
-                "url": "https://www.oyez.org",
-                "emoji": "🏛️",
-                "tag": "LAW"
-              },
-              {
-                "label": "SCOTUSblog — case tracking and analysis",
-                "url": "https://www.scotusblog.com",
-                "emoji": "🏛️",
-                "tag": "LAW"
-              },
-              {
-                "label": "Cornell Legal Information Institute",
-                "url": "https://www.law.cornell.edu",
+                "label": "Oyez",
+                "url": "https://oyez.org",
                 "emoji": "⚖️",
                 "tag": "LAW"
               },
               {
-                "label": "Brennan Center for Justice",
-                "url": "https://www.brennancenter.org",
+                "label": "SCOTUSblog",
+                "url": "https://scotusblog.com",
                 "emoji": "⚖️",
                 "tag": "LAW"
+              },
+              {
+                "label": "Cornell Law — LII",
+                "url": "https://law.cornell.edu",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               }
             ],
             "topPills": [
@@ -48586,22 +48567,22 @@ const LAYERS = [
                 "desc": "Nine justices. Lifetime appointments. The most consequential court in the country. The composition shifts political weight for decades at a time and the current composition is meaningfully different from any in living memory.",
                 "links": [
                   {
-                    "label": "Oyez — Supreme Court audio archive",
-                    "url": "https://www.oyez.org",
-                    "emoji": "🏛️",
-                    "tag": "LAW"
-                  },
-                  {
-                    "label": "SCOTUSblog — live case tracking",
-                    "url": "https://www.scotusblog.com",
-                    "emoji": "🏛️",
-                    "tag": "LAW"
-                  },
-                  {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Oyez",
+                    "url": "https://oyez.org",
                     "emoji": "⚖️",
                     "tag": "LAW"
+                  },
+                  {
+                    "label": "SCOTUSblog",
+                    "url": "https://scotusblog.com",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
+                  },
+                  {
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -48643,15 +48624,15 @@ const LAYERS = [
                 "desc": "The federal courts of appeal. Most cases that matter get decided here, not at the Supreme Court. The geographical circuits have developed distinct legal cultures.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "US Courts — federal court finder",
-                    "url": "https://www.uscourts.gov/court-locator",
-                    "emoji": "🏛️",
+                    "label": "U.S. Courts",
+                    "url": "https://uscourts.gov",
+                    "emoji": "⚖️",
                     "tag": "LAW"
                   }
                 ],
@@ -48694,14 +48675,14 @@ const LAYERS = [
                 "desc": "The federal trial courts. Where the evidence gets heard, the witnesses testify, the verdict comes in. Most federal cases never go higher than this.",
                 "links": [
                   {
-                    "label": "US Courts — understanding federal courts",
-                    "url": "https://www.uscourts.gov/about-federal-courts",
-                    "emoji": "🏛️",
+                    "label": "U.S. Courts",
+                    "url": "https://uscourts.gov",
+                    "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   }
@@ -48745,14 +48726,14 @@ const LAYERS = [
                 "desc": "Where most American litigation actually happens. State courts handle the overwhelming majority of criminal cases, family law, contracts, and small claims.",
                 "links": [
                   {
-                    "label": "NCSC — National Center for State Courts",
-                    "url": "https://www.ncsc.org",
-                    "emoji": "🏛️",
+                    "label": "National Center for State Courts",
+                    "url": "https://ncsc.org",
+                    "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   }
@@ -48796,14 +48777,14 @@ const LAYERS = [
                 "desc": "How they get there and who they are. Federal judges are nominated and confirmed. State judges in most places are elected. The political weight of judicial elections has grown in step with the courts' policy importance.",
                 "links": [
                   {
-                    "label": "Brennan Center — judicial independence",
-                    "url": "https://www.brennancenter.org/judicial-selection",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
-                    "label": "OpenSecrets — judicial election money",
-                    "url": "https://www.opensecrets.org",
+                    "label": "OpenSecrets",
+                    "url": "https://opensecrets.org",
                     "emoji": "💰",
                     "tag": "MONEY"
                   }
@@ -48847,16 +48828,16 @@ const LAYERS = [
                 "desc": "The other branch. Twelve neighbors deciding the fate of one defendant. Jury trials have shrunk dramatically — most criminal cases now resolve through plea bargains. The constitutional right is more theoretical than practical for most defendants.",
                 "links": [
                   {
-                    "label": "ACLU — plea bargaining and trial rights",
-                    "url": "https://www.aclu.org",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -48929,26 +48910,26 @@ const LAYERS = [
             "desc": "What the state does about wrongdoing — and who it decides is doing wrong. The American criminal legal system holds more people in prison than any country on earth, in raw numbers and per capita. It disproportionately targets poor people and people of color. The data is not contested. What to do about it is.",
             "links": [
               {
-                "label": "Prison Policy Initiative — incarceration data",
-                "url": "https://www.prisonpolicy.org",
+                "label": "Prison Policy Initiative",
+                "url": "https://prisonpolicy.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
               {
-                "label": "ACLU — criminal justice reform",
-                "url": "https://www.aclu.org/criminal-law-reform",
+                "label": "ACLU",
+                "url": "https://aclu.org",
                 "emoji": "⚖️",
                 "tag": "RIGHTS"
               },
               {
-                "label": "Brennan Center — criminal justice",
-                "url": "https://www.brennancenter.org/criminal-justice",
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
                 "emoji": "⚖️",
-                "tag": "LAW"
+                "tag": "RIGHTS"
               },
               {
-                "label": "The Marshall Project — criminal justice journalism",
-                "url": "https://www.themarshallproject.org",
+                "label": "The Marshall Project",
+                "url": "https://themarshallproject.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
               }
@@ -48961,16 +48942,16 @@ const LAYERS = [
                 "desc": "The body of statutes that define crimes and assign penalties. American criminal law has expanded enormously over the last fifty years — mandatory minimums, three-strikes laws, the drug war's legislative legacy. Many things that were once handled administratively are now felonies. The expansion has not made the country safer in proportion to its costs.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu/wex/criminal_law",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "Brennan Center — overcriminalization",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -49012,22 +48993,22 @@ const LAYERS = [
                 "desc": "The frontline of the system. American policing operates with more discretion, more military equipment, stronger legal protections from accountability, and weaker civilian oversight than most peer countries. The conversation about reform has been loud and the structural changes have been incremental. Qualified immunity has protected officers from civil liability in cases where other professionals would face consequences.",
                 "links": [
                   {
-                    "label": "ACLU — police accountability",
-                    "url": "https://www.aclu.org/police-practices",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "The Marshall Project — policing",
-                    "url": "https://www.themarshallproject.org",
+                    "label": "The Marshall Project",
+                    "url": "https://themarshallproject.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "Brennan Center — policing reform",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -49069,20 +49050,20 @@ const LAYERS = [
                 "desc": "Roughly 2 million people held. Hundreds of thousands more on parole or probation. American incarceration rates are five to seven times higher per capita than European peer countries. The financial cost to states runs into the hundreds of billions. The human cost — in families broken, careers ended, communities destabilized — is incalculable. Neither political party has made reversing it a priority.",
                 "links": [
                   {
-                    "label": "Prison Policy Initiative — data and maps",
-                    "url": "https://www.prisonpolicy.org",
+                    "label": "Prison Policy Initiative",
+                    "url": "https://prisonpolicy.org",
                     "emoji": "📊",
                     "tag": "DATA"
                   },
                   {
-                    "label": "The Marshall Project — incarceration journalism",
-                    "url": "https://www.themarshallproject.org",
+                    "label": "The Marshall Project",
+                    "url": "https://themarshallproject.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "ACLU — mass incarceration",
-                    "url": "https://www.aclu.org/mass-incarceration",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   }
@@ -49126,14 +49107,14 @@ const LAYERS = [
                 "desc": "The death penalty. Twenty-three states have abolished it. Most peer democracies ended it decades ago. The U.S. continues to use it — unevenly, slowly, and with a documented error rate. The Innocence Project has exonerated more than 200 death row inmates since 1992. Some who were not exonerated in time have been executed. The system does not acknowledge this cleanly.",
                 "links": [
                   {
-                    "label": "Innocence Project — wrongful convictions",
+                    "label": "Innocence Project",
                     "url": "https://innocenceproject.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "ACLU — death penalty",
-                    "url": "https://www.aclu.org/capital-punishment",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
@@ -49183,14 +49164,14 @@ const LAYERS = [
                 "desc": "The system for people under 18. The U.S. has rolled back some of its most punitive practices — the Supreme Court has banned life without parole for most juvenile offenses. The system still disproportionately captures Black and Latino youth and treats them more harshly than white kids for equivalent conduct. The school-to-prison pipeline is documented and persistent.",
                 "links": [
                   {
-                    "label": "ACLU — juvenile justice",
-                    "url": "https://www.aclu.org/juvenile-justice",
+                    "label": "ACLU",
+                    "url": "https://aclu.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "The Marshall Project — youth justice",
-                    "url": "https://www.themarshallproject.org",
+                    "label": "The Marshall Project",
+                    "url": "https://themarshallproject.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -49234,20 +49215,20 @@ const LAYERS = [
                 "desc": "What happens after release. Two-thirds of released prisoners are rearrested within three years. The barriers to housing, employment, voting, and professional licensing that follow a conviction are extensive — and most are political choices, not operational necessities. A country serious about reducing crime would make reentry easier. The current system is not designed around that goal.",
                 "links": [
                   {
-                    "label": "Brennan Center — reentry and barriers",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
-                    "label": "Prison Policy Initiative — reentry data",
-                    "url": "https://www.prisonpolicy.org",
+                    "label": "Prison Policy Initiative",
+                    "url": "https://prisonpolicy.org",
                     "emoji": "📊",
                     "tag": "DATA"
                   },
                   {
-                    "label": "The Marshall Project — life after prison",
-                    "url": "https://www.themarshallproject.org",
+                    "label": "The Marshall Project",
+                    "url": "https://themarshallproject.org",
                     "emoji": "📰",
                     "tag": "JOURNALISM"
                   }
@@ -49333,20 +49314,20 @@ const LAYERS = [
             "desc": "The legal scaffolding of the economy. Most of what private law does is enforce property and contracts. The choices about what counts as property and what contracts will be enforced shape who gets what.",
             "links": [
               {
-                "label": "Cornell Legal Information Institute",
-                "url": "https://www.law.cornell.edu/wex/property",
+                "label": "Cornell Law — LII",
+                "url": "https://law.cornell.edu",
                 "emoji": "⚖️",
                 "tag": "LAW"
               },
               {
-                "label": "FollowTheMoney — property and influence",
-                "url": "https://www.followthemoney.org",
+                "label": "Follow The Money",
+                "url": "https://followthemoney.org",
                 "emoji": "💰",
                 "tag": "MONEY"
               },
               {
-                "label": "ProPublica — property and power",
-                "url": "https://www.propublica.org",
+                "label": "ProPublica",
+                "url": "https://propublica.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
               }
@@ -49359,16 +49340,16 @@ const LAYERS = [
                 "desc": "What you can own. American property law evolved to enable extraction — of land from indigenous nations, of labor from enslaved people, of resources from public lands. The forms have changed. Some of the patterns haven't.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu/wex/property",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "Internet Archive — historical property law",
+                    "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -49410,16 +49391,16 @@ const LAYERS = [
                 "desc": "Land. The most heavily regulated property type. Zoning, easements, eminent domain, mortgages — all the structures that shape who lives where.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute — property law",
-                    "url": "https://www.law.cornell.edu/wex/real_property",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "Brennan Center — housing and law",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -49461,20 +49442,20 @@ const LAYERS = [
                 "desc": "Copyrights, patents, trademarks. The category has grown enormously to cover ideas, processes, brands, and increasingly genetic information. Each extension was sold as protecting creators. Each ended up mostly protecting corporations.",
                 "links": [
                   {
-                    "label": "Electronic Frontier Foundation — IP and digital rights",
-                    "url": "https://www.eff.org/issues/intellectual-property",
-                    "emoji": "🛡️",
+                    "label": "Electronic Frontier Foundation",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Creative Commons — open licensing",
+                    "label": "Creative Commons",
                     "url": "https://creativecommons.org",
                     "emoji": "🌐",
                     "tag": "WEB"
                   },
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu/wex/intellectual_property",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   }
@@ -49518,8 +49499,8 @@ const LAYERS = [
                 "desc": "Promises the law will enforce. Most modern contracts are not negotiated. They are presented. Take it or leave it. The legal fiction of mutual agreement has gotten thin.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute — contracts",
-                    "url": "https://www.law.cornell.edu/wex/contract",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   }
@@ -49572,8 +49553,8 @@ const LAYERS = [
                 "desc": "The legal escape valve. Bankruptcy law in the U.S. is more generous to corporations than to individuals. Student debt does not discharge. Most medical debt does. The structure says something about the priorities.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute — bankruptcy",
-                    "url": "https://www.law.cornell.edu/wex/bankruptcy",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   },
@@ -49654,28 +49635,28 @@ const LAYERS = [
             "desc": "The text everything is supposed to flow from. The U.S. Constitution is short, old, and contested at every significant clause. What it means is mostly what nine people in lifetime-appointed robes say it means at any given moment. That is more interpretive power for a smaller group of unelected people than the framers — who feared concentrated power — probably intended to create.",
             "links": [
               {
-                "label": "Constitution annotated — Congress.gov",
+                "label": "Constitution Annotated",
                 "url": "https://constitution.congress.gov",
-                "emoji": "🏛️",
-                "tag": "CONGRESS"
-              },
-              {
-                "label": "Oyez — Supreme Court oral arguments",
-                "url": "https://www.oyez.org",
-                "emoji": "🏛️",
-                "tag": "LAW"
-              },
-              {
-                "label": "Brennan Center for Justice",
-                "url": "https://www.brennancenter.org",
                 "emoji": "⚖️",
                 "tag": "LAW"
               },
               {
-                "label": "National Constitution Center — interactive",
+                "label": "Oyez",
+                "url": "https://oyez.org",
+                "emoji": "⚖️",
+                "tag": "LAW"
+              },
+              {
+                "label": "Brennan Center",
+                "url": "https://brennancenter.org",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
+              },
+              {
+                "label": "National Constitution Center",
                 "url": "https://constitutioncenter.org",
-                "emoji": "🏛️",
-                "tag": "HISTORY"
+                "emoji": "⚖️",
+                "tag": "LAW"
               }
             ],
             "topPills": [
@@ -49686,16 +49667,16 @@ const LAYERS = [
                 "desc": "Seven articles. Twenty-seven amendments. Roughly 4,500 words in the original. The entire document fits on a few pages — which is part of why it has been fought over for two and a half centuries. Most of the live constitutional arguments are about what the words mean, what they meant when written, and which interpretive theory gets to decide.",
                 "links": [
                   {
-                    "label": "Full text — Constitution of the United States",
-                    "url": "https://constitution.congress.gov/constitution/",
-                    "emoji": "🏛️",
-                    "tag": "CONGRESS"
+                    "label": "Constitution Annotated",
+                    "url": "https://constitution.congress.gov",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
                   },
                   {
-                    "label": "National Constitution Center — interactive constitution",
-                    "url": "https://constitutioncenter.org/the-constitution",
-                    "emoji": "🏛️",
-                    "tag": "HISTORY"
+                    "label": "National Constitution Center",
+                    "url": "https://constitutioncenter.org",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
                   }
                 ],
                 "topPills": [],
@@ -49737,15 +49718,15 @@ const LAYERS = [
                 "desc": "The interpretive theory that the Constitution means what it meant when ratified — or what the framers intended it to mean. Has been the dominant theory on the right for forty years and now commands a majority of the Supreme Court. Has been used to reach conclusions about guns, religion, and administrative power that the framers themselves probably would not have recognized as their intent.",
                 "links": [
                   {
-                    "label": "Brennan Center — originalism and the courts",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
-                    "label": "SCOTUSblog — constitutional interpretation",
-                    "url": "https://www.scotusblog.com",
-                    "emoji": "🏛️",
+                    "label": "SCOTUSblog",
+                    "url": "https://scotusblog.com",
+                    "emoji": "⚖️",
                     "tag": "LAW"
                   }
                 ],
@@ -49788,16 +49769,16 @@ const LAYERS = [
                 "desc": "The competing theory: the Constitution evolves with American society, and its principles must be applied to circumstances the framers never encountered. Most of the rights expansions of the 20th century — privacy, reproductive rights, same-sex relationships — rested on this approach. It is currently out of favor at the Court, which does not mean it is wrong.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
-                    "label": "National Constitution Center — constitutional debate",
+                    "label": "National Constitution Center",
                     "url": "https://constitutioncenter.org",
-                    "emoji": "🏛️",
-                    "tag": "HISTORY"
+                    "emoji": "⚖️",
+                    "tag": "LAW"
                   }
                 ],
                 "topPills": [],
@@ -49839,15 +49820,15 @@ const LAYERS = [
                 "desc": "How the document changes officially — slowly, deliberately, and rarely. Amendment requires two-thirds of both congressional chambers and ratification by three-quarters of states. Most amendments came in clusters tied to national crises: the Bill of Rights, the Civil War amendments, the Progressive Era. The country has not successfully amended the Constitution in more than fifty years.",
                 "links": [
                   {
-                    "label": "Constitution annotated — amendments",
-                    "url": "https://constitution.congress.gov/constitution/",
-                    "emoji": "🏛️",
-                    "tag": "CONGRESS"
+                    "label": "Constitution Annotated",
+                    "url": "https://constitution.congress.gov",
+                    "emoji": "⚖️",
+                    "tag": "LAW"
                   },
                   {
-                    "label": "National Archives — Bill of Rights",
-                    "url": "https://www.archives.gov/founding-docs/bill-of-rights",
-                    "emoji": "🏛️",
+                    "label": "National Archives",
+                    "url": "https://archives.gov",
+                    "emoji": "🗄️",
                     "tag": "HISTORY"
                   }
                 ],
@@ -49890,16 +49871,16 @@ const LAYERS = [
                 "desc": "The power the Court claimed for itself in Marbury v. Madison in 1803 and has held ever since — the authority to declare acts of Congress or the president unconstitutional and void them. It is not in the Constitution. John Marshall asserted it and built the argument for why it had to exist. No one stopped him. It is now one of the most consequential judicial powers in the world.",
                 "links": [
                   {
-                    "label": "Oyez — Marbury v. Madison",
-                    "url": "https://www.oyez.org/cases/1789-1850/5us137",
-                    "emoji": "🏛️",
+                    "label": "Oyez",
+                    "url": "https://oyez.org",
+                    "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -49941,16 +49922,16 @@ const LAYERS = [
                 "desc": "The constitutional division of power between the federal government and the states. The line has always moved — the Civil War moved it dramatically toward federal supremacy, the New Deal moved it further, and the Court has been moving it back toward states for forty years. The consequences for civil rights enforcement, environmental protection, and reproductive rights are concrete and large.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute — federalism",
-                    "url": "https://www.law.cornell.edu/wex/federalism",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -50036,14 +50017,14 @@ const LAYERS = [
                 "tag": "RIGHTS"
               },
               {
-                "label": "Foreign Affairs — international law and order",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "📰",
+                "label": "Foreign Affairs",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               },
               {
-                "label": "Human Rights Watch — international accountability",
-                "url": "https://www.hrw.org",
+                "label": "Human Rights Watch",
+                "url": "https://hrw.org",
                 "emoji": "⚖️",
                 "tag": "RIGHTS"
               }
@@ -50056,15 +50037,15 @@ const LAYERS = [
                 "desc": "Formal agreements between states — the primary source of international legal obligation. The U.S. signs many and ratifies fewer than most peer democracies. The Senate's two-thirds ratification requirement has become a structural obstacle. Several significant international agreements — the Law of the Sea, the Convention on the Rights of the Child, the Rome Statute — have been signed but never ratified by the U.S.",
                 "links": [
                   {
-                    "label": "UN Treaty Collection — searchable database",
+                    "label": "UN Treaty Collection",
                     "url": "https://treaties.un.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "US Senate — treaty process",
-                    "url": "https://www.senate.gov/about/powers-procedures/treaties.htm",
-                    "emoji": "🏛️",
+                    "label": "U.S. Senate",
+                    "url": "https://senate.gov",
+                    "emoji": "🗳️",
                     "tag": "CONGRESS"
                   }
                 ],
@@ -50107,13 +50088,13 @@ const LAYERS = [
                 "desc": "Founded in 1945 after the second catastrophic war in thirty years, with the explicit purpose of preventing a third. The UN provides a forum for diplomacy, coordinates humanitarian response, and establishes international norms. Its core limitation is built in: the five permanent Security Council members — U.S., UK, France, Russia, China — each hold a veto, ensuring that the countries most capable of starting a world war cannot be stopped by the body designed to prevent one.",
                 "links": [
                   {
-                    "label": "United Nations — official data and documents",
-                    "url": "https://www.un.org",
+                    "label": "United Nations",
+                    "url": "https://un.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "UN data — open statistics",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
                     "emoji": "📊",
                     "tag": "DATA"
@@ -50158,15 +50139,15 @@ const LAYERS = [
                 "desc": "The rules nations have agreed apply even in armed conflict — the Geneva Conventions, the Hague Regulations, and the body of international humanitarian law that has developed since. They prohibit targeting civilians, torture, and certain weapons. They are honored more than they used to be. They are violated routinely, including by parties that helped write them.",
                 "links": [
                   {
-                    "label": "ICRC — international humanitarian law",
-                    "url": "https://www.icrc.org/en/war-and-law",
+                    "label": "ICRC",
+                    "url": "https://icrc.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
                     "label": "Federation of American Scientists",
                     "url": "https://fas.org",
-                    "emoji": "🔬",
+                    "emoji": "🌍",
                     "tag": "POLICY"
                   }
                 ],
@@ -50209,10 +50190,10 @@ const LAYERS = [
                 "desc": "The framework built since 1948 — the Universal Declaration, followed by binding conventions on civil and political rights, economic and social rights, torture, the rights of the child, and discrimination. The U.S. helped draft the core documents and has ratified fewer of them than most peer democracies. Enforcement is largely by diplomatic pressure, reputational cost, and the leverage that comes with aid and trade relationships.",
                 "links": [
                   {
-                    "label": "OHCHR — UN Human Rights",
-                    "url": "https://www.ohchr.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "UN Human Rights",
+                    "url": "https://ohchr.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "Human Rights Watch",
@@ -50323,8 +50304,8 @@ const LAYERS = [
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "Bureau of Economic Analysis — trade data",
-                    "url": "https://www.bea.gov",
+                    "label": "Bureau of Economic Analysis",
+                    "url": "https://bea.gov",
                     "emoji": "📊",
                     "tag": "DATA"
                   }
@@ -50473,15 +50454,15 @@ const LAYERS = [
         "desc": "Nations draw lines. Empires erase them. The line between the two has always been thinner than the people inside either one prefer to believe. What changes across five thousand years of this story is the technology and the justification. The pattern underneath doesn't change at all.",
         "links": [
           {
-            "label": "Foreign Affairs — empire & power",
-            "url": "https://www.foreignaffairs.com",
-            "emoji": "🌐",
+            "label": "Foreign Affairs",
+            "url": "https://foreignaffairs.com",
+            "emoji": "🌍",
             "tag": "GEOPOLITICS"
           },
           {
-            "label": "Lapham's Quarterly — history in primary sources",
-            "url": "https://www.laphamsquarterly.org",
-            "emoji": "📚",
+            "label": "Lapham's Quarterly",
+            "url": "https://laphamsquarterly.org",
+            "emoji": "📖",
             "tag": "HISTORY"
           }
         ],
@@ -50493,9 +50474,9 @@ const LAYERS = [
             "desc": "The first experiments in total organization. Power at this scale had never existed before. Nobody knew the rules because nobody had written them yet. They wrote them in stone and called it divine.",
             "links": [
               {
-                "label": "Lapham's Quarterly — ancient empires",
-                "url": "https://www.laphamsquarterly.org",
-                "emoji": "📚",
+                "label": "Lapham's Quarterly",
+                "url": "https://laphamsquarterly.org",
+                "emoji": "📖",
                 "tag": "HISTORY"
               }
             ],
@@ -50564,9 +50545,9 @@ const LAYERS = [
                 "desc": "The first true multiethnic empire. Cyrus the Great conquered Babylon in 539 BCE and immediately issued what some call the first human rights document — freeing captive peoples, allowing religious practice, returning stolen idols. Whether this was principle or administrative strategy is a debate that applies to every liberal empire since. The Achaemenid Empire stretched from Egypt to India and was governed through a system of satrapies — regional governors accountable to the center — that became the template for every large-scale bureaucratic empire that followed.",
                 "links": [
                   {
-                    "label": "British Museum — Cyrus Cylinder",
-                    "url": "https://www.britishmuseum.org/collection/object/W_1880-0617-1941",
-                    "emoji": "🏛️",
+                    "label": "British Museum",
+                    "url": "https://britishmuseum.org",
+                    "emoji": "🗄️",
                     "tag": "HISTORY"
                   }
                 ],
@@ -50666,9 +50647,9 @@ const LAYERS = [
                 "desc": "The template everything since has borrowed from, consciously or not. The Republic lasted 500 years before becoming the Empire — a cautionary tale the American founders studied carefully and partially misread. Roman law still runs Western legal systems. Roman roads still determine European geography. The fall took 300 years and still surprises people who expect collapse to be an event rather than a process. What Rome proved: that a republic can become an empire without anyone deciding to make it one. It happens one accommodation at a time.",
                 "links": [
                   {
-                    "label": "Encyclopaedia Britannica — Roman Empire",
-                    "url": "https://www.britannica.com/place/Roman-Empire",
-                    "emoji": "📚",
+                    "label": "Britannica",
+                    "url": "https://britannica.com",
+                    "emoji": "📖",
                     "tag": "CULTURE"
                   }
                 ],
@@ -51257,9 +51238,9 @@ const LAYERS = [
             "desc": "Five hundred years of European powers drawing lines on maps they had never seen, across lands they had never visited, over peoples they had never met — and calling it civilization. The infrastructure of that project is still running. We just changed the paperwork.",
             "links": [
               {
-                "label": "World History Encyclopedia — colonialism",
-                "url": "https://www.worldhistory.org",
-                "emoji": "📚",
+                "label": "World History Encyclopedia",
+                "url": "https://worldhistory.org",
+                "emoji": "🗄️",
                 "tag": "HISTORY"
               }
             ],
@@ -51361,9 +51342,9 @@ const LAYERS = [
                 "desc": "At its peak, one quarter of the earth's land surface and one quarter of its population. The East India Company governed India for a century as private profit underwritten by public military force — the original corporation-state. The ideology of improvement justified extraction: we are making you better while taking everything you have. The Bengal famine of 1943 — three million dead while India exported food to Britain — is the clearest case, but not the only one. Mike Davis documented Victorian-era famines that killed 30 to 60 million people under British administration. The legal and institutional architecture the Empire left behind still runs many of the countries it abandoned.",
                 "links": [
                   {
-                    "label": "Oxford Dictionary of National Biography — empire",
-                    "url": "https://www.oxforddnb.com",
-                    "emoji": "🏛️",
+                    "label": "Oxford Dictionary of National Biography",
+                    "url": "https://oxforddnb.com",
+                    "emoji": "📖",
                     "tag": "HISTORY"
                   }
                 ],
@@ -51466,10 +51447,10 @@ const LAYERS = [
                 "desc": "The Dutch East India Company — the VOC — was the first multinational corporation, the first company to issue tradeable stock, and the first to use private military force at global scale. It governed what is now Indonesia for 200 years as a commercial operation. The Belgian Congo under Leopold II was not a colony in any administrative sense — it was a personal property. Leopold never visited it. His private army, the Force Publique, enforced rubber quotas by severing the hands of workers who failed to meet them. An estimated ten million people died. The international outcry that ended Leopold's personal rule was the first modern human rights campaign.",
                 "links": [
                   {
-                    "label": "Adam Hochschild — King Leopold's Ghost",
-                    "url": "https://www.jstor.org",
-                    "emoji": "📚",
-                    "tag": "ACADEMIC"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -51565,7 +51546,7 @@ const LAYERS = [
                 "desc": "1884. Fourteen European powers. No Africans. The entire continent divided in ten weeks. Otto von Bismarck hosted. The stated purpose was to regulate trade and suppress the slave trade. The actual purpose was to prevent European powers from going to war with each other over African territory by formalizing the rules of the scramble. The lines drawn ignored every ethnic, tribal, linguistic, and geographic reality that had organized the continent for centuries. 54 countries still live inside those lines. Nearly every conflict on the continent since has roots in that room.",
                 "links": [
                   {
-                    "label": "African Union — colonial borders & conflict",
+                    "label": "African Union",
                     "url": "https://au.int",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
@@ -51652,9 +51633,9 @@ const LAYERS = [
             "desc": "The 20th century ran four major experiments in total power — fascism, communism, liberal democracy, and colonial independence — simultaneously, on a planet with industrial weapons. The borders it drew, the institutions it built, and the wreckage it left are the world we're currently living in.",
             "links": [
               {
-                "label": "Foreign Affairs — 20th century history",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
+                "label": "Foreign Affairs",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               }
             ],
@@ -51993,9 +51974,9 @@ const LAYERS = [
             "desc": "The largest military and economic footprint in human history, operated by a country that has never called itself an empire and genuinely believes it isn't one. That gap between what it is and what it believes itself to be is the most consequential blind spot in contemporary geopolitics.",
             "links": [
               {
-                "label": "Costs of War — Brown University",
-                "url": "https://watson.brown.edu/costsofwar",
-                "emoji": "🪖",
+                "label": "Costs of War",
+                "url": "https://watson.brown.edu",
+                "emoji": "🌍",
                 "tag": "MILITARY"
               }
             ],
@@ -52064,9 +52045,9 @@ const LAYERS = [
                 "desc": "Approximately 800 bases in 80 countries. More than any empire in history controlled at its peak. Britain at the height of its empire maintained 36 overseas bases. The US base network costs an estimated $100 billion per year. Many bases date to WWII or the Korean War and have never been reconsidered. They project power, protect allies, and provide logistical infrastructure for global operations. They also generate resentment, produce incidents, and represent permanent commitments to arrangements that are never debated by the people paying for them.",
                 "links": [
                   {
-                    "label": "Costs of War — base network analysis",
-                    "url": "https://watson.brown.edu/costsofwar",
-                    "emoji": "🪖",
+                    "label": "Costs of War",
+                    "url": "https://watson.brown.edu",
+                    "emoji": "🌍",
                     "tag": "MILITARY"
                   }
                 ],
@@ -52166,9 +52147,9 @@ const LAYERS = [
                 "desc": "Iran 1953. Guatemala 1954. Congo 1960. Brazil 1964. Chile 1973. Nicaragua through the 1980s. El Salvador through the 1980s. Iraq 2003. Libya 2011. A documented list, not a theory — the operational details are in declassified files at the National Security Archive. What was said each time: communist threat, regional stability, protection of democracy. What actually happened each time: governments that attempted to control their own resources were removed and replaced with governments that didn't. The pattern has no exceptions.",
                 "links": [
                   {
-                    "label": "National Security Archive — declassified records",
+                    "label": "National Security Archive",
                     "url": "https://nsarchive.gwu.edu",
-                    "emoji": "🏛️",
+                    "emoji": "🌍",
                     "tag": "HISTORY"
                   }
                 ],
@@ -52268,9 +52249,9 @@ const LAYERS = [
                 "desc": "The deliberate dismantling of the post-WWII institutional order by the country that built it. Withdrawal from international agreements, tariff wars with allies, pressure on NATO commitments, the weaponization of dollar dominance. The countries that organized their security and economic arrangements around the assumption of American institutional reliability are recalculating. China is offering an alternative architecture. The transition between hegemonic systems is historically the most dangerous period in international relations. We are in one.",
                 "links": [
                   {
-                    "label": "Foreign Affairs — American power",
-                    "url": "https://www.foreignaffairs.com",
-                    "emoji": "🌐",
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   }
                 ],
@@ -52345,16 +52326,10 @@ const LAYERS = [
             "desc": "Power doesn't find megalomaniacs. It makes them. The process is slow and it looks like success the entire time. Deference comes first. Then insulation. Then the removal of consequence. By the time the grandiosity is visible the architecture that would have corrected it is already gone. We call it corruption. It's more like a conversion.",
             "links": [
               {
-                "label": "Hannah Arendt — The Origins of Totalitarianism",
-                "url": "https://www.jstor.org",
-                "emoji": "📚",
-                "tag": "ACADEMIC"
-              },
-              {
-                "label": "Who Rules the World — The Architecture of Power",
-                "url": "https://usnow.app/graphics/who-rules-the-world",
-                "emoji": "📊",
-                "tag": "GRAPHIC"
+                "label": "JSTOR",
+                "url": "https://jstor.org",
+                "emoji": "🔬",
+                "tag": "RESEARCH"
               }
             ],
             "topPills": [
@@ -52422,9 +52397,9 @@ const LAYERS = [
                 "desc": "The names change. The structure doesn't. Caesar crossed the Rubicon with a popular mandate and a Senate that had one structural check left — they used it with knives, and the Republic died anyway because the conditions that produced him were still intact. Caligula and Nero show what happens after the precedent is set: the office becomes the pathology accelerant, and the second generation is always worse because the first one had to fight for it. The Mongol succession problem — when the institution is a person, the institution dies when he does. Napoleon: the revolution that produced him was exhausted and hungry for order, he gave them order and took everything else. Stalin: paranoia as governance, the purges weren't irrational, they were efficient — everyone who could have stopped him was removed before they knew they were a threat. Hitler: a functional democracy dismantled legally, the Enabling Act passed by vote, the people inside the system who could have stopped it mostly decided not to. Mao: true believer first, megalomaniac second, the ideology became the insulation and the body count became negotiable. Amin and Gaddafi: power in the complete absence of institutional friction, which removes even the pretense of constraint. The echo is left to the reader.",
                 "links": [
                   {
-                    "label": "Lapham's Quarterly — tyrants & power",
-                    "url": "https://www.laphamsquarterly.org",
-                    "emoji": "📚",
+                    "label": "Lapham's Quarterly",
+                    "url": "https://laphamsquarterly.org",
+                    "emoji": "📖",
                     "tag": "HISTORY"
                   }
                 ],
@@ -52491,14 +52466,7 @@ const LAYERS = [
                     "label": "Authoritarian Consolidators",
                     "color": "#7a2a3a",
                     "desc": "The slowest and most durable form. Works through existing institutions — courts, media, elections — dismantling them from inside while maintaining the appearance of legitimacy. Nothing looks illegal until it's too late because legality is being redefined in real time. The democratic forms remain; the democratic function is hollowed out. Requires patience, bureaucratic precision, and a population that mistakes procedure for protection. Putin. Orbán. Erdoğan.",
-                    "links": [
-                      {
-                        "label": "Who Rules the World — The Architecture of Power",
-                        "url": "https://usnow.app/graphics/who-rules-the-world",
-                        "emoji": "📊",
-                        "tag": "GRAPHIC"
-                      }
-                    ],
+                    "links": [],
                     "topPills": [],
                     "bottomPills": [
                       {
@@ -52536,14 +52504,7 @@ const LAYERS = [
                     "label": "Opportunistic Disruptors",
                     "color": "#7a4a1a",
                     "desc": "The fastest and loudest form. Doesn't build the conditions — reads them correctly and moves. Genuine institutional failure, genuine economic grievance, genuine cultural anxiety — all real, all pre-existing. The disruptor didn't create the kindling. They brought the match. Potentially less structurally durable than the consolidator because the institutions haven't been fully captured — but durability is not the point. The point is the window, and the window is open. Trump. Milei. Bolsonaro.",
-                    "links": [
-                      {
-                        "label": "Who Rules the World — The Architecture of Power",
-                        "url": "https://usnow.app/graphics/who-rules-the-world",
-                        "emoji": "📊",
-                        "tag": "GRAPHIC"
-                      }
-                    ],
+                    "links": [],
                     "topPills": [],
                     "bottomPills": [
                       {
@@ -52581,14 +52542,7 @@ const LAYERS = [
                     "label": "Inherited Sovereigns",
                     "color": "#5a2a5a",
                     "desc": "Zero-accountability architecture from birth. No path to power meant no friction, no testing, no corrective moment where the system could have said no. The pathology has no origin story because there was never a point it could have been stopped. What the others had to dismantle — checks, oversight, dissent — never existed here. The question is not how they got this way. The question is what a human being becomes when no one has ever said no to them. MBS. Kim Jong-un. The Gulf monarchies.",
-                    "links": [
-                      {
-                        "label": "Who Rules the World — The Architecture of Power",
-                        "url": "https://usnow.app/graphics/who-rules-the-world",
-                        "emoji": "📊",
-                        "tag": "GRAPHIC"
-                      }
-                    ],
+                    "links": [],
                     "topPills": [],
                     "bottomPills": [
                       {
@@ -52654,14 +52608,7 @@ const LAYERS = [
                     "label": "Techno-Feudalists",
                     "color": "#1a3a6a",
                     "desc": "Genuinely new. No historical sub-card fits it because the mechanism didn't exist before. Private capital accumulation reaching the scale of state power, then purchasing proximity to state power without election or inheritance. Satellite internet. AI frontier. Global public discourse infrastructure. The formal democratic process wasn't circumvented — it was made irrelevant by operating in the spaces between it. One private citizen with zero democratic oversight and more direct leverage over daily life than most elected governments. The taxonomy doesn't have a name for this yet because it just arrived. Musk — and whoever comes next.",
-                    "links": [
-                      {
-                        "label": "Who Rules the World — The Architecture of Power",
-                        "url": "https://usnow.app/graphics/who-rules-the-world",
-                        "emoji": "📊",
-                        "tag": "GRAPHIC"
-                      }
-                    ],
+                    "links": [],
                     "topPills": [],
                     "bottomPills": [
                       {
@@ -52731,14 +52678,7 @@ const LAYERS = [
                 "label": "The Structural Failure",
                 "color": "#5a1a2a",
                 "desc": "The checks existed. Most of them. For a while. What failed wasn't just the architecture. It was the assumption underneath it — that the people inside the system shared something basic with the people it was built to protect. The ones who did rarely made it far enough to matter.",
-                "links": [
-                  {
-                    "label": "Checks & Balances — GLORIES",
-                    "url": "https://usnow.app",
-                    "emoji": "🌐",
-                    "tag": "USNOW"
-                  }
-                ],
+                "links": [],
                 "topPills": [],
                 "bottomPills": [
                   {
@@ -52892,22 +52832,22 @@ const LAYERS = [
             "desc": "Why people move. Push factors are what is wrong at home — war, poverty, persecution, climate. Pull factors are what looks better elsewhere — work, safety, family. Most migration is both at once. The framing depends on who is telling the story.",
             "links": [
               {
-                "label": "IOM — migration data",
-                "url": "https://www.migrationdataportal.org",
+                "label": "Migration Data Portal",
+                "url": "https://migrationdataportal.org",
+                "emoji": "📊",
+                "tag": "DATA"
+              },
+              {
+                "label": "UNHCR",
+                "url": "https://unhcr.org",
                 "emoji": "🌍",
                 "tag": "GLOBAL"
               },
               {
-                "label": "UNHCR — refugees",
-                "url": "https://www.unhcr.org",
-                "emoji": "🌍",
-                "tag": "GLOBAL"
-              },
-              {
-                "label": "United Nations data",
+                "label": "UN Data",
                 "url": "https://data.un.org",
-                "emoji": "🌍",
-                "tag": "GLOBAL"
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -52918,16 +52858,16 @@ const LAYERS = [
                 "desc": "The most reliable producer of migrants. Most refugee surges of the last fifty years tracked specific conflicts. The current displacement total is the highest since World War II.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -52969,10 +52909,10 @@ const LAYERS = [
                 "desc": "The slow push. Economic migration is older than war as a category and currently larger in raw numbers. Most economic migrants are not desperate — they are people who looked at the math and made a calculation.",
                 "links": [
                   {
-                    "label": "IOM — migration data",
-                    "url": "https://www.migrationdataportal.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "Migration Data Portal",
+                    "url": "https://migrationdataportal.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "World Bank Open Data",
@@ -53020,8 +52960,8 @@ const LAYERS = [
                 "desc": "The political push. Religious, ethnic, sexual, ideological. The category that the international refugee framework was built around. Each year's persecuted look different from the last.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
@@ -53071,16 +53011,16 @@ const LAYERS = [
                 "desc": "The growing category. Drought, sea level rise, crop failure. Climate migration is just starting and will be among the largest movements of people in human history.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
                   {
                     "label": "NOAA",
-                    "url": "https://www.noaa.gov",
+                    "url": "https://noaa.gov",
                     "emoji": "🌍",
-                    "tag": "EARTH"
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -53128,10 +53068,10 @@ const LAYERS = [
                 "desc": "The pull. Work. Education. Family reunification. Most migrants are not running from. They are running toward.",
                 "links": [
                   {
-                    "label": "IOM — migration data",
-                    "url": "https://www.migrationdataportal.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "Migration Data Portal",
+                    "url": "https://migrationdataportal.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Bureau of Labor Statistics",
@@ -53185,10 +53125,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "IOM — migration data",
-                    "url": "https://www.migrationdataportal.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "label": "Migration Data Portal",
+                    "url": "https://migrationdataportal.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -53274,10 +53214,10 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "IOM — migration data",
-                "url": "https://www.migrationdataportal.org",
-                "emoji": "🌍",
-                "tag": "GLOBAL"
+                "label": "Migration Data Portal",
+                "url": "https://migrationdataportal.org",
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "ATJon on Substack",
@@ -53402,10 +53342,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -53504,10 +53444,10 @@ const LAYERS = [
                     "tag": "USNOW"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -53555,10 +53495,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -53632,16 +53572,16 @@ const LAYERS = [
             "desc": "The protected categories. Refugees flee persecution and apply from outside. Asylum seekers apply from inside or at the border. The legal framework is from 1951 and the current displacement scale exceeds anything the framework was built for.",
             "links": [
               {
-                "label": "UNHCR — refugees",
-                "url": "https://www.unhcr.org",
+                "label": "UNHCR",
+                "url": "https://unhcr.org",
                 "emoji": "🌍",
                 "tag": "GLOBAL"
               },
               {
-                "label": "IOM — migration data",
-                "url": "https://www.migrationdataportal.org",
-                "emoji": "🌍",
-                "tag": "GLOBAL"
+                "label": "Migration Data Portal",
+                "url": "https://migrationdataportal.org",
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "ACLU",
@@ -53658,8 +53598,8 @@ const LAYERS = [
                 "desc": "The 1951 convention. A well-founded fear of persecution on account of race, religion, nationality, political opinion, or membership in a particular social group. Each phrase is litigated.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   }
@@ -53703,8 +53643,8 @@ const LAYERS = [
                 "desc": "The annual ceiling that varies by administration. The number of refugees actually admitted varies more. The program has shrunk substantially in recent years.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
@@ -53760,10 +53700,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -53862,10 +53802,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -53907,16 +53847,16 @@ const LAYERS = [
                 "desc": "More than 100 million people displaced worldwide as of recent counts. The largest figure since World War II. Most stay close to home. A small fraction reach the U.S.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -53990,8 +53930,8 @@ const LAYERS = [
             "desc": "The legal lines and what they mean. Citizenship is the most important legal status a person can hold and the rules for getting it differ enormously between countries. American citizenship rules are mostly inherited or born into.",
             "links": [
               {
-                "label": "Cornell Legal Information Institute",
-                "url": "https://www.law.cornell.edu",
+                "label": "Cornell Law — LII",
+                "url": "https://law.cornell.edu",
                 "emoji": "⚖️",
                 "tag": "LAW"
               },
@@ -54010,8 +53950,8 @@ const LAYERS = [
                 "desc": "The full status. Voting rights, jury duty, the protection of the country abroad. American citizenship can be acquired by birth, by descent, or by naturalization.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   }
@@ -54055,8 +53995,8 @@ const LAYERS = [
                 "desc": "The process of becoming a citizen by application. Roughly a million people naturalize each year. The test is in English and includes civics questions most native-born Americans would fail.",
                 "links": [
                   {
-                    "label": "Cornell Legal Information Institute",
-                    "url": "https://www.law.cornell.edu",
+                    "label": "Cornell Law — LII",
+                    "url": "https://law.cornell.edu",
                     "emoji": "⚖️",
                     "tag": "LAW"
                   }
@@ -54106,10 +54046,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -54151,10 +54091,10 @@ const LAYERS = [
                 "desc": "The documents that determine who can move where. The American passport opens most countries. Most passports do not open America. The privilege is mostly invisible to those who hold it.",
                 "links": [
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -54202,10 +54142,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   }
                 ],
                 "topPills": [],
@@ -54247,16 +54187,16 @@ const LAYERS = [
                 "desc": "People with no recognized citizenship anywhere. Roughly 10 million worldwide. Cannot legally work, travel, marry, or be buried in most places without paperwork.",
                 "links": [
                   {
-                    "label": "UNHCR — refugees",
-                    "url": "https://www.unhcr.org",
+                    "label": "UNHCR",
+                    "url": "https://unhcr.org",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "United Nations data",
+                    "label": "UN Data",
                     "url": "https://data.un.org",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -54351,14 +54291,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Endangered Languages Project",
-                    "url": "https://www.endangeredlanguages.com",
-                    "emoji": "🗣️",
+                    "url": "https://endangeredlanguages.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -54545,10 +54485,10 @@ const LAYERS = [
                 "desc": "What the host culture does. Each wave of American immigration has been met with an organized backlash. The targets change. The pattern doesn't.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ACLU",
@@ -54667,9 +54607,9 @@ const LAYERS = [
         "links": [
           {
             "label": "Endangered Language Fund",
-            "url": "https://www.endangeredlanguagefund.org",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "url": "https://endangeredlanguagefund.org",
+            "emoji": "🌐",
+            "tag": "LANGUAGE"
           },
           {
             "label": "Linguistic Society of America",
@@ -54732,9 +54672,9 @@ const LAYERS = [
             "links": [
               {
                 "label": "Endangered Language Fund",
-                "url": "https://www.endangeredlanguagefund.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://endangeredlanguagefund.org",
+                "emoji": "🌐",
+                "tag": "LANGUAGE"
               }
             ],
             "topPills": [],
@@ -54891,9 +54831,9 @@ const LAYERS = [
             "links": [
               {
                 "label": "Endangered Language Fund",
-                "url": "https://www.endangeredlanguagefund.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://endangeredlanguagefund.org",
+                "emoji": "🌐",
+                "tag": "LANGUAGE"
               }
             ],
             "topPills": [],
@@ -54935,22 +54875,22 @@ const LAYERS = [
             "desc": "How languages relate to each other. Most of the world's roughly 7,000 languages belong to a few large families that share a distant common ancestor. Indo-European. Sino-Tibetan. Niger-Congo. Austronesian. The trees are reconstructed from comparative linguistics.",
             "links": [
               {
-                "label": "Ethnologue — languages of the world",
-                "url": "https://www.ethnologue.com",
-                "emoji": "🗣️",
+                "label": "Ethnologue",
+                "url": "https://ethnologue.com",
+                "emoji": "🌐",
                 "tag": "LANGUAGE"
               },
               {
                 "label": "Endangered Languages Project",
-                "url": "https://www.endangeredlanguages.com",
-                "emoji": "🗣️",
+                "url": "https://endangeredlanguages.com",
+                "emoji": "🌐",
                 "tag": "LANGUAGE"
               },
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               }
             ],
             "topPills": [
@@ -54961,16 +54901,16 @@ const LAYERS = [
                 "desc": "The family that includes English, Spanish, Hindi, Russian, Greek, and most of the languages of Europe and large parts of South Asia. About half the world's people speak an Indo-European language as their first.",
                 "links": [
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -55012,9 +54952,9 @@ const LAYERS = [
                 "desc": "Chinese languages and a wide spread of related tongues across China, Tibet, Southeast Asia. The second-largest family by speakers.",
                 "links": [
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55057,9 +54997,9 @@ const LAYERS = [
                 "desc": "The largest African language family. Hundreds of languages. Includes Swahili, Yoruba, Igbo, Zulu.",
                 "links": [
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55102,9 +55042,9 @@ const LAYERS = [
                 "desc": "The family that spread across the Pacific. Includes Hawaiian, Maori, Tagalog, Indonesian, Malagasy on Madagascar — one of the largest geographic spreads of any language family.",
                 "links": [
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55147,15 +55087,15 @@ const LAYERS = [
                 "desc": "Languages without known relatives. Basque. Korean by some accounts. Burushaski in northern Pakistan. They are clues to histories whose evidence has been lost.",
                 "links": [
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
                     "label": "Endangered Languages Project",
-                    "url": "https://www.endangeredlanguages.com",
-                    "emoji": "🗣️",
+                    "url": "https://endangeredlanguages.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55198,9 +55138,9 @@ const LAYERS = [
                 "desc": "What happens when speakers of different languages have to communicate. Pidgins are simplified contact languages. Creoles are what pidgins become when children grow up speaking them as a first language.",
                 "links": [
                   {
-                    "label": "Ethnologue — languages of the world",
-                    "url": "https://www.ethnologue.com",
-                    "emoji": "🗣️",
+                    "label": "Ethnologue",
+                    "url": "https://ethnologue.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55276,8 +55216,8 @@ const LAYERS = [
             "links": [
               {
                 "label": "Oxford English Dictionary",
-                "url": "https://www.oed.com",
-                "emoji": "📖",
+                "url": "https://oed.com",
+                "emoji": "🌐",
                 "tag": "LANGUAGE"
               },
               {
@@ -55392,8 +55332,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Oxford English Dictionary",
-                    "url": "https://www.oed.com",
-                    "emoji": "📖",
+                    "url": "https://oed.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55481,16 +55421,16 @@ const LAYERS = [
                 "desc": "How language makes the abstract think-able. Most concepts about time, mind, emotion, and morality are structured by metaphors we don't notice. Up is good. Time is a river. The argument is a battle.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -55534,7 +55474,7 @@ const LAYERS = [
                   {
                     "label": "Stanford AI Index",
                     "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
+                    "emoji": "🔬",
                     "tag": "AI"
                   },
                   {
@@ -55616,14 +55556,14 @@ const LAYERS = [
             "links": [
               {
                 "label": "Urban Dictionary",
-                "url": "https://www.urbandictionary.com",
-                "emoji": "🔤",
+                "url": "https://urbandictionary.com",
+                "emoji": "🌐",
                 "tag": "LANGUAGE"
               },
               {
                 "label": "Oxford English Dictionary",
-                "url": "https://www.oed.com",
-                "emoji": "📖",
+                "url": "https://oed.com",
+                "emoji": "🌐",
                 "tag": "LANGUAGE"
               },
               {
@@ -55642,14 +55582,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Urban Dictionary",
-                    "url": "https://www.urbandictionary.com",
-                    "emoji": "🔤",
+                    "url": "https://urbandictionary.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
                     "label": "Oxford English Dictionary",
-                    "url": "https://www.oed.com",
-                    "emoji": "📖",
+                    "url": "https://oed.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55693,15 +55633,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Urban Dictionary",
-                    "url": "https://www.urbandictionary.com",
-                    "emoji": "🔤",
+                    "url": "https://urbandictionary.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -55750,8 +55690,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Endangered Languages Project",
-                    "url": "https://www.endangeredlanguages.com",
-                    "emoji": "🗣️",
+                    "url": "https://endangeredlanguages.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55801,8 +55741,8 @@ const LAYERS = [
                   },
                   {
                     "label": "Urban Dictionary",
-                    "url": "https://www.urbandictionary.com",
-                    "emoji": "🔤",
+                    "url": "https://urbandictionary.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   }
                 ],
@@ -55846,8 +55786,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Urban Dictionary",
-                    "url": "https://www.urbandictionary.com",
-                    "emoji": "🔤",
+                    "url": "https://urbandictionary.com",
+                    "emoji": "🌐",
                     "tag": "LANGUAGE"
                   },
                   {
@@ -56012,16 +55952,16 @@ const LAYERS = [
         "desc": "History doesn't repeat. But it rhymes with an accuracy that should give us pause. The same structures recur — empire overreach, inequality past a breaking point, the scapegoating of minorities in times of stress, the strongman who promises order and delivers something else. These are not coincidences. They are the predictable outputs of certain conditions. Knowing the pattern doesn't guarantee you avoid it. Not knowing it guarantees you don't.",
         "links": [
           {
-            "label": "Foreign Affairs — historical analysis",
-            "url": "https://www.foreignaffairs.com",
-            "emoji": "🌐",
+            "label": "Foreign Affairs",
+            "url": "https://foreignaffairs.com",
+            "emoji": "🌍",
             "tag": "GEOPOLITICS"
           },
           {
-            "label": "Longreads — history journalism",
+            "label": "Longreads",
             "url": "https://longreads.com",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           }
         ],
         "topPills": [],
@@ -56072,10 +56012,10 @@ const LAYERS = [
         "desc": "The victors write the history. So do the colonizers, the land-owners, the people who controlled the printing presses and the schools and the archives. The history that gets taught is always partial — not always deliberately dishonest, but always incomplete. The recovery of erased histories — of women, of enslaved people, of colonized populations, of anyone who lost — is not a revision of history. It is the completion of it.",
         "links": [
           {
-            "label": "Longreads — history & memory",
+            "label": "Longreads",
             "url": "https://longreads.com",
-            "emoji": "📚",
-            "tag": "CULTURE"
+            "emoji": "📰",
+            "tag": "JOURNALISM"
           }
         ],
         "topPills": [],
@@ -56117,9 +56057,9 @@ const LAYERS = [
         "desc": "Every civilization in history has ended. Rome lasted a thousand years and then didn't. The Maya built cities of extraordinary sophistication and then the cities emptied. The Bronze Age collapsed so completely that writing disappeared from the Mediterranean for centuries. Collapse is not an anomaly in human history — it is a recurring event. What varies is the timeline, the trigger, and how much is preserved on the other side.",
         "links": [
           {
-            "label": "Foreign Affairs — civilizational risk",
-            "url": "https://www.foreignaffairs.com",
-            "emoji": "🌐",
+            "label": "Foreign Affairs",
+            "url": "https://foreignaffairs.com",
+            "emoji": "🌍",
             "tag": "GEOPOLITICS"
           }
         ],
@@ -56162,8 +56102,8 @@ const LAYERS = [
         "desc": "Zoom out far enough and individual events look different. The thing that felt like a catastrophe becomes a turning point. The thing that felt like progress becomes a setup for the next crisis. History at the scale of decades looks like politics. At the scale of centuries it looks like geology — slow, massive, and indifferent to individual urgency. The long view doesn't make the present less important. It makes it legible.",
         "links": [
           {
-            "label": "Pew Research — long-term social trends",
-            "url": "https://www.pewresearch.org",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           }
@@ -56275,19 +56215,19 @@ const LAYERS = [
           {
             "label": "National Museum of the American Indian",
             "url": "https://americanindian.si.edu",
-            "emoji": "🌍",
+            "emoji": "🗄️",
             "tag": "CULTURE"
           },
           {
-            "label": "Native Land Digital — whose land",
+            "label": "Native Land Digital",
             "url": "https://native-land.ca",
-            "emoji": "🌍",
+            "emoji": "🌱",
             "tag": "CULTURE"
           },
           {
-            "label": "Smithsonian — Native American history",
-            "url": "https://www.si.edu/spotlight/native-voices",
-            "emoji": "🌍",
+            "label": "Smithsonian",
+            "url": "https://si.edu",
+            "emoji": "🗄️",
             "tag": "CULTURE"
           }
         ],
@@ -56301,7 +56241,7 @@ const LAYERS = [
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🌍",
+                "emoji": "🗄️",
                 "tag": "CULTURE"
               }
             ],
@@ -56313,9 +56253,9 @@ const LAYERS = [
                 "desc": "After defeating France in the Seven Years War, Britain issued the Royal Proclamation of 1763 — drawing a line along the Appalachian Mountains and forbidding colonial settlement west of it. The intent was to stabilize relations with the Indian nations whose land lay beyond it. The colonists were furious. They had just fought a war they believed would open the West to them. Within twelve years they declared independence. One of the grievances in the Declaration of Independence — rarely discussed — is that the King had raised up the Indian nations as a barrier to westward expansion. The Revolution was partly a land deal. The Proclamation Line was what stood between the colonists and the continent. When Britain drew that line, the Revolution became inevitable.",
                 "links": [
                   {
-                    "label": "National Archives — Declaration of Independence",
-                    "url": "https://www.archives.gov/founding-docs/declaration-transcript",
-                    "emoji": "🏛️",
+                    "label": "National Archives",
+                    "url": "https://archives.gov",
+                    "emoji": "🗄️",
                     "tag": "HISTORY"
                   }
                 ],
@@ -56392,7 +56332,7 @@ const LAYERS = [
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🌍",
+                "emoji": "🗄️",
                 "tag": "CULTURE"
               }
             ],
@@ -56404,9 +56344,9 @@ const LAYERS = [
                 "desc": "Between 30 and 60 million bison once roamed the Great Plains. By 1889 there were approximately 1,000 left. The slaughter was not incidental to westward expansion — it was instrumental to it. General Philip Sheridan explicitly advocated for the commercial hide hunters as the most efficient means of ending Plains Indian resistance. Destroy the food supply, destroy the culture, destroy the capacity to survive outside the reservation. The railroad brought the hunters west. The Army provided protection. The government provided indifference. Hunters left carcasses to rot by the millions, taking only the hides. It was policy dressed as commerce, and it worked.",
                 "links": [
                   {
-                    "label": "Smithsonian — buffalo history",
-                    "url": "https://www.si.edu",
-                    "emoji": "📚",
+                    "label": "Smithsonian",
+                    "url": "https://si.edu",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -56451,7 +56391,7 @@ const LAYERS = [
                   {
                     "label": "Native Land Digital",
                     "url": "https://native-land.ca",
-                    "emoji": "🌍",
+                    "emoji": "🌱",
                     "tag": "CULTURE"
                   }
                 ],
@@ -56640,15 +56580,15 @@ const LAYERS = [
             "desc": "The Indian Removal Act of 1830, signed by Andrew Jackson, authorized the forced relocation of Native nations from their ancestral homelands east of the Mississippi to territory west of it. The Cherokee called their removal Nunna daul Tsuny — the trail where they cried. Approximately 15,000 Cherokee were forced to march in winter. Around 4,000 died on the way. The Removal was not a one-time event. It was a template — applied repeatedly, to nation after nation, as the line of settlement moved west. Each removal was justified by the same logic: the land was needed, the Indians were in the way, and the government had the power to move them.",
             "links": [
               {
-                "label": "National Archives — Indian Removal Act",
-                "url": "https://www.archives.gov",
-                "emoji": "🏛️",
+                "label": "National Archives",
+                "url": "https://archives.gov",
+                "emoji": "🗄️",
                 "tag": "HISTORY"
               },
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🌍",
+                "emoji": "🗄️",
                 "tag": "CULTURE"
               }
             ],
@@ -56660,9 +56600,9 @@ const LAYERS = [
                 "desc": "The United States signed over 500 treaties with Native nations between 1778 and 1871. It violated every single one. Not gradually, not accidentally — systematically, as a matter of recurring policy, whenever the land covered by a treaty became valuable enough to take. The treaty was the legal mechanism of dispossession: negotiate, sign, wait for the land to become worth something, then find a reason the treaty no longer applies. The Treaty of New Echota in 1835, signed by a small unauthorized faction of Cherokee, was used to justify the Trail of Tears over the objections of 90% of the nation. The Fort Laramie Treaty of 1868 gave the Lakota the Black Hills forever. Gold was discovered in 1874. The treaty lasted six years. The Dawes Act of 1887 broke up communal tribal land into individual allotments and sold the surplus — tribes lost 90 million acres in 47 years. The pattern is too consistent across too many administrations and too many nations to be called anything other than what it was: a method.",
                 "links": [
                   {
-                    "label": "National Archives — treaty records",
-                    "url": "https://www.archives.gov",
-                    "emoji": "🏛️",
+                    "label": "National Archives",
+                    "url": "https://archives.gov",
+                    "emoji": "🗄️",
                     "tag": "HISTORY"
                   }
                 ],
@@ -56705,9 +56645,9 @@ const LAYERS = [
                 "desc": "Disease killed more indigenous people than all the wars combined. Estimates range from 50 to 90 percent of the pre-contact population of the Americas dead within a century of European arrival — primarily from smallpox, measles, and influenza to which they had no immunity. Most of this was not deliberate. Some of it was. The most documented case: during Pontiac's War in 1763, British officers at Fort Pitt distributed blankets and a handkerchief from the smallpox hospital to Delaware tribal leaders. The correspondence between officers explicitly discusses the intent. The deliberate use of disease as a weapon predates germ theory. The people who did it knew what they were doing even if they didn't know the mechanism. The inadvertent and the intentional ran together for centuries, and the outcome was the same.",
                 "links": [
                   {
-                    "label": "Smithsonian — Native American history",
-                    "url": "https://www.si.edu/spotlight/native-voices",
-                    "emoji": "🌍",
+                    "label": "Smithsonian",
+                    "url": "https://si.edu",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   }
                 ],
@@ -56750,13 +56690,13 @@ const LAYERS = [
                 "desc": "Kill the Indian, save the man. That was the stated philosophy of Richard Henry Pratt, founder of the Carlisle Indian Industrial School in 1879 — and of the federal boarding school system that followed it. Native children were taken from their families, sometimes by force, forbidden to speak their languages, given European names, punished for practicing their traditions, and taught that everything about their culture was inferior and shameful. Over 150,000 children passed through these schools. Thousands died and were buried in unmarked graves on school grounds. The last federally operated Indian boarding school closed in 2024. This is not ancient history. People alive today attended them. The intergenerational trauma is still present and still documented.",
                 "links": [
                   {
-                    "label": "Department of Interior — boarding school report",
-                    "url": "https://www.doi.gov",
-                    "emoji": "🏛️",
+                    "label": "Department of the Interior",
+                    "url": "https://doi.gov",
+                    "emoji": "🌍",
                     "tag": "HISTORY"
                   },
                   {
-                    "label": "National Native American Boarding School Healing Coalition",
+                    "label": "Boarding School Healing Coalition",
                     "url": "https://boardingschoolhealing.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
@@ -56841,7 +56781,7 @@ const LAYERS = [
               {
                 "label": "Native Land Digital",
                 "url": "https://native-land.ca",
-                "emoji": "🌍",
+                "emoji": "🌱",
                 "tag": "CULTURE"
               }
             ],
@@ -56886,14 +56826,14 @@ const LAYERS = [
               {
                 "label": "National Museum of the American Indian",
                 "url": "https://americanindian.si.edu",
-                "emoji": "🌍",
+                "emoji": "🗄️",
                 "tag": "CULTURE"
               },
               {
-                "label": "Tribal colleges — American Indian College Fund",
+                "label": "American Indian College Fund",
                 "url": "https://collegefund.org",
-                "emoji": "📚",
-                "tag": "LEARN"
+                "emoji": "🌱",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [],
@@ -56982,28 +56922,28 @@ const LAYERS = [
     "height": 10,
     "links": [
       {
-        "label": "Aeon — philosophy & cosmology, free",
+        "label": "Aeon",
         "url": "https://aeon.co",
-        "tag": "PHILOSOPHY",
-        "emoji": "💭"
+        "emoji": "🧠",
+        "tag": "MIND"
       },
       {
-        "label": "On Being — meaning, spirit, the ineffable",
+        "label": "On Being",
         "url": "https://onbeing.org",
-        "tag": "SPIRIT",
-        "emoji": "🕊️"
+        "emoji": "🕊️",
+        "tag": "SPIRIT"
       },
       {
-        "label": "Nautilus — science at the edge of knowing",
+        "label": "Nautilus",
         "url": "https://nautil.us",
-        "tag": "COSMOS",
-        "emoji": "🔬"
+        "emoji": "🔬",
+        "tag": "SCIENCE"
       },
       {
         "label": "NASA Astronomy Picture of the Day",
         "url": "https://apod.nasa.gov",
-        "tag": "COSMOS",
-        "emoji": "🔭"
+        "emoji": "🌌",
+        "tag": "COSMOS"
       }
     ],
     "orbs": [
@@ -57019,28 +56959,28 @@ const LAYERS = [
         "desc": "Occult means hidden. That is the whole mechanism. There is a hidden order beneath visible reality. We have access to it. You don't. That claim — not the belief itself — is what makes occult knowledge a power instrument. The belief is sincere in most cases. The power structure built on top of it is not incidental. Throughout recorded history, exclusive access to hidden knowledge has justified priestly authority, royal legitimacy, initiatic hierarchy, and the gatekeeping of entire fields of inquiry. The systems change every few centuries. The access claim doesn't. What we call the occult is not one tradition — it is dozens of independent traditions that share one structural feature: the meaningful is concealed, the concealment is deliberate, and admission requires sponsorship from those already inside. That is not a spiritual claim. It is an organizational one. The history of the occult is inseparable from the history of power.",
         "links": [
           {
-            "label": "Wouter Hanegraaff — Western Esotericism (Oxford)",
-            "url": "https://www.oxfordbibliographies.com/display/document/obo-9780195396577/obo-9780195396577-0232.xml",
-            "tag": "SCHOLARSHIP",
-            "emoji": "📚"
+            "label": "Oxford Bibliographies",
+            "url": "https://oxfordbibliographies.com",
+            "emoji": "📖",
+            "tag": "RESEARCH"
           },
           {
-            "label": "Hermetic Library — primary texts archive",
+            "label": "Hermetic Library",
             "url": "https://hermetic.com",
-            "tag": "ARCHIVE",
-            "emoji": "🗝️"
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           },
           {
-            "label": "Esoteric Archives — Mead, Waite, Lévi digitized",
-            "url": "http://www.esotericarchives.com",
-            "tag": "TEXTS",
-            "emoji": "📜"
+            "label": "Esoteric Archives",
+            "url": "https://esotericarchives.com",
+            "emoji": "🕊️",
+            "tag": "SPIRIT"
           },
           {
-            "label": "JSTOR — Journal for the Study of Western Esotericism",
-            "url": "https://www.jstor.org",
-            "tag": "ACADEMIC",
-            "emoji": "🔬"
+            "label": "JSTOR",
+            "url": "https://jstor.org",
+            "emoji": "🔬",
+            "tag": "RESEARCH"
           }
         ],
         "topPills": [
@@ -57079,13 +57019,13 @@ const LAYERS = [
                   {
                     "label": "Astro-Seek",
                     "url": "https://horoscopes.astro-seek.com",
-                    "emoji": "⭐",
+                    "emoji": "🌟",
                     "tag": "MYTH"
                   },
                   {
                     "label": "NASA Astronomy Picture of the Day",
                     "url": "https://apod.nasa.gov",
-                    "emoji": "🔬",
+                    "emoji": "🌌",
                     "tag": "COSMOS"
                   }
                 ],
@@ -57471,10 +57411,10 @@ const LAYERS = [
                 "desc": "Tarot cards began as a game. The 78-card Italian tarocchi deck — 22 trump cards plus four suits — was used for card games in northern Italy from the 15th century onward. Occultists didn't discover it as a divinatory tool until the 1780s, when Antoine Court de Gébelin claimed, with no evidence, that the Major Arcana were an ancient Egyptian book of wisdom encoded in card form. The claim was false. It didn't matter. Within a generation the tarot had been fully integrated into ceremonial magic, Kabbalah, and Hermetic philosophy. The Rider-Waite deck of 1909 — illustrated by Pamela Colman Smith under Arthur Edward Waite's direction — became the template that defines the medium today. It is a modern invention with an invented ancient pedigree. It is also a genuinely sophisticated symbolic system. Both things are true.",
                 "links": [
                   {
-                    "label": "British Museum — tarot history",
-                    "url": "https://www.britishmuseum.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "label": "British Museum",
+                    "url": "https://britishmuseum.org",
+                    "emoji": "🗄️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -57516,10 +57456,10 @@ const LAYERS = [
                 "desc": "The I Ching — the Book of Changes — is one of the oldest texts in continuous use on earth, dating to at least the 9th century BCE with roots possibly 3,000 years older. Sixty-four hexagrams, each composed of six broken or unbroken lines, are consulted by throwing yarrow stalks or coins. The hexagram that results is not understood as a prediction but as a description of the present moment's underlying pattern — the condition of change you are already inside. Carl Jung spent years with the I Ching and proposed it operated through synchronicity: meaningful coincidence rather than causal mechanism. He introduced it to the West in his foreword to the Wilhelm translation in 1950. It is the one major divination system with a fully developed academic philosophical tradition alongside it.",
                 "links": [
                   {
-                    "label": "I Ching — Wilhelm/Baynes translation (Princeton)",
+                    "label": "Princeton University Press",
                     "url": "https://press.princeton.edu",
-                    "emoji": "🕊️",
-                    "tag": "SPIRIT"
+                    "emoji": "📖",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -57618,8 +57558,8 @@ const LAYERS = [
                 "desc": "The Oracle at Delphi operated for nearly a thousand years — approximately 800 BCE to 390 CE — and was the most politically influential institution in the ancient Greek world. Every major state decision, colonial expedition, and military campaign was routed through it. The Pythia — a woman chosen from local families, seated over a chasm in Apollo's temple — delivered ambiguous pronouncements interpreted by priests. Modern archaeology confirmed the presence of ethylene-producing geological faults beneath the temple. The system was not a fraud. It was a sophisticated interface between state power, popular belief, and genuine altered-state experience — with professionally managed interpretation built in. The Yoruba Ifá system uses a binary divination corpus of 256 Odù encoding centuries of accumulated wisdom. Chinese oracle bones — cattle scapulae and turtle shells heated until they cracked — were read by Shang dynasty diviners from 1200 BCE onward. The questions asked are preserved. They range from weather to warfare to toothache. They are the oldest continuous record of written Chinese.",
                 "links": [
                   {
-                    "label": "UNESCO — Yoruba Ifá Divination System",
-                    "url": "https://ich.unesco.org/en/RL/ifa-divination-system-00146",
+                    "label": "UNESCO Intangible Heritage",
+                    "url": "https://ich.unesco.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   }
@@ -57721,8 +57661,8 @@ const LAYERS = [
                 "desc": "The core texts — the Corpus Hermeticum — were written in Egypt between 100 and 300 CE, probably by multiple authors working in a Neoplatonic-Egyptian-Jewish synthesis. Renaissance humanists believed they were ancient Egyptian wisdom predating Moses. They were not. That belief — corrected by Isaac Casaubon in 1614 — had already reshaped Western intellectual history by the time it was disproved. Hermetic philosophy holds that the cosmos is a living divine unity; that the human soul participates in that divinity; that gnosis — direct experiential knowledge — is the path to liberation; and that the hidden connections between things can be worked with. As above, so below. Hermeticism was foundational to Renaissance science, to alchemy, and to virtually every Western esoteric tradition that followed it.",
                 "links": [
                   {
-                    "label": "Corpus Hermeticum — Hermetic Library",
-                    "url": "https://hermetic.com/texts/corpus-hermeticum",
+                    "label": "Hermetic Library",
+                    "url": "https://hermetic.com",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   }
@@ -57766,10 +57706,10 @@ const LAYERS = [
                 "desc": "Kabbalah is the mystical dimension of Judaism — an interpretive tradition claiming to reveal the hidden structure of divinity and its relationship to creation. Its foundational text, the Zohar, appeared in 13th-century Spain, attributed to the 2nd-century rabbi Shimon bar Yochai but written, by scholarly consensus, by Moses de León. The Kabbalistic cosmos is structured around the Sefirot — ten divine emanations arranged on the Tree of Life — through which the infinite Ein Sof flows into finite existence. In the 16th century, Isaac Luria developed Lurianic Kabbalah — a cosmological account of divine contraction, catastrophe, and repair (tikkun) that became enormously influential in Jewish mysticism and eventually in Hermeticism and Freemasonry. The Tree of Life diagram is arguably the most influential single diagram in Western esoteric history.",
                 "links": [
                   {
-                    "label": "Gershom Scholem — Major Trends in Jewish Mysticism",
-                    "url": "https://www.jstor.org",
-                    "emoji": "📚",
-                    "tag": "ACADEMIC"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -57811,8 +57751,8 @@ const LAYERS = [
                 "desc": "Gnosticism holds that the material world was created not by the supreme God but by an inferior, ignorant, or malevolent demiurge — a lesser being who mistook himself for the highest. The true divine spark is trapped in matter. The purpose of existence is to remember what you are and escape. In the 2nd and 3rd centuries, Gnostic Christianity was a serious competitor to what became orthodoxy. The Nag Hammadi library, discovered in Egypt in 1945, returned 52 texts that orthodox Christianity spent centuries trying to erase — the Gospel of Thomas, the Gospel of Philip, the Apocryphon of John. The verdict of history — that orthodoxy won and Gnosticism was a deviant heresy — is a political verdict, not a theological one.",
                 "links": [
                   {
-                    "label": "Nag Hammadi Library — Gnostic Society",
-                    "url": "http://www.gnosis.org/naghamm/nhl.html",
+                    "label": "Gnostic Society Library",
+                    "url": "https://gnosis.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   }
@@ -58085,10 +58025,10 @@ const LAYERS = [
                 "desc": "Alchemy is the attempt to perfect matter and spirit simultaneously. The physical operation — transmuting base metals into gold — was always understood by serious practitioners as inseparable from the interior operation: the transmutation of the base human soul into something incorruptible. The tradition has roots in Hellenistic Egypt, was preserved and developed by Islamic scholars (al-Rāzī, Jābir ibn Hayyān), and entered Europe in the 12th century through Latin translations of Arabic texts. Newton spent more time on alchemy than on physics. His unpublished alchemical manuscripts run to roughly a million words. Alchemy produced the laboratory method, distillation, acids, and the vocabulary of chemistry before chemistry existed as a discipline.",
                 "links": [
                   {
-                    "label": "Newton Project — alchemical manuscripts",
-                    "url": "https://www.newtonproject.ox.ac.uk",
-                    "emoji": "🕊️",
-                    "tag": "SPIRIT"
+                    "label": "Newton Project",
+                    "url": "https://newtonproject.ox.ac.uk",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -58130,8 +58070,8 @@ const LAYERS = [
                 "desc": "Ceremonial magic is the systematic application of ritual technique — circles, invocations, correspondences, tools — to produce contact with or command over spiritual entities. Its foundational medieval texts — the Lesser Key of Solomon, the Greater Key of Solomon, the Sworn Book of Honorius — describe hierarchies of demons, angels, and intelligences that can be summoned and bound. In the late 19th century the Hermetic Order of the Golden Dawn — whose members included W.B. Yeats, Aleister Crowley, and Dion Fortune — synthesized Kabbalah, tarot, astrology, and Hermetic philosophy into a complete initiatic magical curriculum. The Golden Dawn system remains the foundation of virtually all Western magical practice today.",
                 "links": [
                   {
-                    "label": "Agrippa — Three Books of Occult Philosophy",
-                    "url": "http://www.esotericarchives.com/agrippa/agrippa1.htm",
+                    "label": "Esoteric Archives",
+                    "url": "https://esotericarchives.com",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   }
@@ -58175,8 +58115,8 @@ const LAYERS = [
                 "desc": "Thelema is the system founded by Aleister Crowley following a claimed dictation in Cairo in 1904, in which he received The Book of the Law from a discarnate entity called Aiwass. The core injunction — Do what thou wilt shall be the whole of the Law — is frequently misread as libertinism. In Crowley's framework it means the opposite: discover your true will and pursue nothing else. Crowley's influence on 20th-century culture is measurable: he appears on the Beatles' Sgt. Pepper cover; Jimmy Page of Led Zeppelin owned his former home and manuscripts; his system underlies significant portions of modern Western occultism. The tradition remains active through the Ordo Templi Orientis worldwide.",
                 "links": [
                   {
-                    "label": "The Book of the Law — Liber AL vel Legis",
-                    "url": "https://hermetic.com/crowley/libers/lib220",
+                    "label": "Hermetic Library",
+                    "url": "https://hermetic.com",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   }
@@ -59080,10 +59020,10 @@ const LAYERS = [
                 "desc": "The Ahnenerbe was founded by Heinrich Himmler in 1935 to research the occult, racial, and ancestral heritage of the Aryan race. Absorbed into the SS in 1937. Its departments conducted expeditions to Tibet, Iceland, Finland, and the Middle East; investigated Atlantis, runes, and the Holy Grail; and sponsored criminal medical experiments at Dachau and Natzweiler. The Ahnenerbe is the clearest historical example of occult belief operationalized by a state apparatus with industrial-scale capacity for violence. Himmler was a genuine believer. The genocide and the mysticism were not separate projects. They were the same project.",
                 "links": [
                   {
-                    "label": "Michael Kater — Das Ahnenerbe der SS",
-                    "url": "https://www.jstor.org",
-                    "emoji": "📚",
-                    "tag": "ACADEMIC"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -59223,15 +59163,15 @@ const LAYERS = [
             "desc": "A secret society is a formal organization whose membership, rituals, or purposes are concealed from the public. The secrecy is not incidental — it is structural. It creates loyalty, enforces hierarchy, and produces the conditions for trust between members who would not otherwise have reason to trust each other. Every major civilization has produced them. Some were fraternal. Some were revolutionary. Some were instruments of state power. Some were all three simultaneously. The consistent feature across all of them is not the content of the secret. It is the organizational work the secret performs.",
             "links": [
               {
-                "label": "Carroll Quigley — Tragedy and Hope",
+                "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
-                "label": "Foreign Affairs — shadow networks",
-                "url": "https://www.foreignaffairs.com",
-                "emoji": "🌐",
+                "label": "Foreign Affairs",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
                 "tag": "GEOPOLITICS"
               }
             ],
@@ -59793,10 +59733,10 @@ const LAYERS = [
                     "desc": "The Bilderberg Group has met annually since 1954, bringing together approximately 130 senior figures from European and North American politics, finance, military, and media. No press. No formal resolutions. No published minutes. A steering committee selects the attendees. For decades the meetings themselves were not officially acknowledged. The argument that nothing important happens there requires believing that the most powerful people in the Western world gather annually for small talk. The World Economic Forum at Davos operates the same logic in public — the off-the-record sessions are the point, not the panels.",
                     "links": [
                       {
-                        "label": "Bilderberg — official participant list",
+                        "label": "Bilderberg Meetings",
                         "url": "https://bilderbergmeetings.org",
-                        "emoji": "💰",
-                        "tag": "MONEY"
+                        "emoji": "🕊️",
+                        "tag": "SPIRIT"
                       }
                     ],
                     "topPills": [],
@@ -59848,8 +59788,8 @@ const LAYERS = [
                     "links": [
                       {
                         "label": "Council on Foreign Relations",
-                        "url": "https://www.cfr.org",
-                        "emoji": "🌐",
+                        "url": "https://cfr.org",
+                        "emoji": "🌍",
                         "tag": "GEOPOLITICS"
                       }
                     ],
@@ -59959,10 +59899,10 @@ const LAYERS = [
                     "desc": "Propaganda Due was an irregular Masonic lodge in Italy whose membership, when exposed in 1981, included the heads of all three Italian intelligence services, 43 generals, 8 admirals, 43 members of parliament, the future prime minister Silvio Berlusconi, and the financier Roberto Calvi — found hanging from Blackfriars Bridge in London in 1982. Its master, Licio Gelli, had connections to the CIA, Argentine military junta figures, and the Vatican Bank. Its stated goal was to prevent a communist takeover of Italy. Its actual activities included the 1980 Bologna train station bombing that killed 85 people, carried out to discredit the left. P2 is not a conspiracy theory. It is a documented case of a secret society operating as a shadow government inside a NATO democracy.",
                     "links": [
                       {
-                        "label": "Italian Parliamentary Commission — P2 report",
-                        "url": "https://www.jstor.org",
-                        "emoji": "📚",
-                        "tag": "ACADEMIC"
+                        "label": "JSTOR",
+                        "url": "https://jstor.org",
+                        "emoji": "🔬",
+                        "tag": "RESEARCH"
                       }
                     ],
                     "topPills": [],
@@ -60004,10 +59944,10 @@ const LAYERS = [
                     "desc": "GLADIO was a NATO stay-behind network — covert paramilitary organizations established in Western European countries after WWII to organize resistance in the event of a Soviet invasion. Confirmed by Italian Prime Minister Giulio Andreotti in 1990. Similar networks were subsequently confirmed in Belgium, Switzerland, France, Germany, Greece, and most other NATO members. The stay-behind networks maintained arms caches, trained personnel, and in some cases were involved in domestic terrorism designed to shift public opinion toward authoritarian solutions — the strategy of tension. GLADIO operated for four decades without the knowledge of most elected officials in the countries where it existed.",
                     "links": [
                       {
-                        "label": "Daniele Ganser — NATO's Secret Armies",
-                        "url": "https://www.jstor.org",
-                        "emoji": "📚",
-                        "tag": "ACADEMIC"
+                        "label": "JSTOR",
+                        "url": "https://jstor.org",
+                        "emoji": "🔬",
+                        "tag": "RESEARCH"
                       }
                     ],
                     "topPills": [],
@@ -60366,21 +60306,21 @@ const LAYERS = [
         "desc": "The organizing fact of human life. Every religion, philosophy, and political system is partly an answer to this. Mostly it is a sophisticated way of not answering it while building elaborate structures to avoid looking directly at it.",
         "links": [
           {
-            "label": "On Being — death & meaning",
+            "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
             "tag": "SPIRIT"
           },
           {
-            "label": "Aeon — philosophy of death",
+            "label": "Aeon",
             "url": "https://aeon.co",
-            "emoji": "💭",
-            "tag": "PHILOSOPHY"
+            "emoji": "🧠",
+            "tag": "MIND"
           },
           {
-            "label": "The Marginalian — on mortality",
-            "url": "https://www.themarginalian.org",
-            "emoji": "🕊️",
+            "label": "The Marginalian",
+            "url": "https://themarginalian.org",
+            "emoji": "🧠",
             "tag": "MIND"
           }
         ],
@@ -60392,19 +60332,19 @@ const LAYERS = [
             "desc": "The fact at the bottom of every life. Mortality is not a problem to solve. It is a condition to live with. The species has built religions, philosophies, medicines, and entire economies around the simple fact that we don't get out alive. The fact remains.",
             "links": [
               {
-                "label": "CDC WONDER — public health data",
+                "label": "CDC WONDER",
                 "url": "https://wonder.cdc.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -60418,9 +60358,9 @@ const LAYERS = [
                 "desc": "What kills Americans. Heart disease and cancer at the top. Accidents, drug overdoses, suicide rising. The pattern shifts decade to decade and the data is published if anyone wants to look.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -60463,9 +60403,9 @@ const LAYERS = [
                 "desc": "How long Americans are living. The U.S. peaked around 79 in 2014 and has fallen since. The decline is unusual among wealthy countries and the causes — drugs, suicide, COVID, gun deaths — say something specific about this country.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -60514,9 +60454,9 @@ const LAYERS = [
                 "desc": "Who dies sooner. Black Americans live several years less than white Americans. Native Americans live considerably less than both. ZIP code remains a stronger predictor of life expectancy than genetics.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -60565,9 +60505,9 @@ const LAYERS = [
                 "desc": "Cars, falls, drug overdoses. Accidents are the leading cause of death for Americans under 45. The overdose numbers have reshaped the curve in the last decade.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -60610,14 +60550,14 @@ const LAYERS = [
                 "desc": "The deaths the country has the most trouble talking about. American suicide rates have risen substantially across two decades, especially among young people and middle-aged men. The trend has not been reversed.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -60661,16 +60601,16 @@ const LAYERS = [
                 "desc": "Roughly 45,000 Americans a year. About half are suicides. The rest are mostly homicides, with a small accidental component. The U.S. is an outlier among wealthy countries by an enormous margin.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -60762,15 +60702,15 @@ const LAYERS = [
                 "tag": "GRIEF"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
               },
               {
                 "label": "Harvard Health",
-                "url": "https://www.health.harvard.edu",
-                "emoji": "🌱",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
                 "tag": "BODY"
               }
             ],
@@ -60783,8 +60723,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -60833,10 +60773,10 @@ const LAYERS = [
                 "desc": "Grieving before the death. When someone is dying slowly, the grief begins before the loss. It is real and exhausting and rarely acknowledged by anyone outside the immediate circle.",
                 "links": [
                   {
-                    "label": "NHPCO — hospice & palliative care",
-                    "url": "https://www.nhpco.org",
-                    "emoji": "🕊️",
-                    "tag": "DEATH"
+                    "label": "NHPCO",
+                    "url": "https://nhpco.org",
+                    "emoji": "🫀",
+                    "tag": "BODY"
                   },
                   {
                     "label": "Modern Loss",
@@ -60935,15 +60875,15 @@ const LAYERS = [
                 "desc": "When grief gets stuck. Most acute grief eases over months. When it doesn't — when functioning collapses, when years pass without change — it crosses into a clinical condition with treatments that work.",
                 "links": [
                   {
-                    "label": "NAMI — mental illness alliance",
-                    "url": "https://www.nami.org",
+                    "label": "NAMI",
+                    "url": "https://nami.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -60986,7 +60926,7 @@ const LAYERS = [
                 "desc": "When a country grieves. 9/11. The Kennedy assassinations. The pandemic. Collective grief works on a different timeline and gets shaped by what the public is allowed to feel.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -61038,9 +60978,9 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   },
                   {
                     "label": "Modern Loss",
@@ -61120,7 +61060,7 @@ const LAYERS = [
             "desc": "How communities hand the dead off. Funeral rites are some of the oldest evidence of cultural complexity in the human record. They do work for the dead, the living, and the body that stops being either.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
@@ -61128,11 +61068,11 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -61191,9 +61131,9 @@ const LAYERS = [
                 "desc": "Now the majority American choice. Cheaper, more flexible, more environmentally manageable. The shift happened across two generations and changed what families had to plan for.",
                 "links": [
                   {
-                    "label": "CDC WONDER — public health data",
+                    "label": "CDC WONDER",
                     "url": "https://wonder.cdc.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -61287,10 +61227,10 @@ const LAYERS = [
                     "tag": "RESEARCH"
                   },
                   {
-                    "label": "NHPCO — hospice & palliative care",
-                    "url": "https://www.nhpco.org",
-                    "emoji": "🕊️",
-                    "tag": "DEATH"
+                    "label": "NHPCO",
+                    "url": "https://nhpco.org",
+                    "emoji": "🫀",
+                    "tag": "BODY"
                   }
                 ],
                 "topPills": [],
@@ -61334,10 +61274,9 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
-                  },
-                  null
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
+                  }
                 ],
                 "topPills": [],
                 "bottomPills": [
@@ -61380,11 +61319,11 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -61461,19 +61400,19 @@ const LAYERS = [
             "desc": "What different cultures believe happens next. The answers range across the species — heaven, hell, reincarnation, ancestral presence, dissolution, rebirth, nothing. Each answer shapes how people live and how they die.",
             "links": [
               {
-                "label": "Sacred Texts archive",
-                "url": "https://www.sacred-texts.com",
-                "emoji": "📜",
-                "tag": "MYTH"
+                "label": "Sacred Texts",
+                "url": "https://sacred-texts.com",
+                "emoji": "🗄️",
+                "tag": "SPIRIT"
               },
               {
-                "label": "Aeon — ideas & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -61487,10 +61426,10 @@ const LAYERS = [
                 "desc": "The dominant American framework. Eternal reward, eternal punishment, judgment at the end. The specific theology varies by denomination. The cultural footprint is enormous.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -61532,13 +61471,13 @@ const LAYERS = [
                 "desc": "Hindu, Buddhist, and many other traditions. The soul continues, in a new body, often shaped by the conduct of the previous life. The framework reshapes what death means.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -61583,16 +61522,16 @@ const LAYERS = [
                 "desc": "Many African, indigenous American, and East Asian traditions. The dead remain accessible — through ritual, through dream, through proper observance. The realm of the ancestors is part of the social world.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -61634,7 +61573,7 @@ const LAYERS = [
                 "desc": "What growing numbers of Americans believe. Death is the end. Whatever consciousness was, it stops. The challenge of secular grief is that the available consolations are different.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -61730,7 +61669,7 @@ const LAYERS = [
                 "desc": "What most people actually live with. Few people are fully certain about what happens next. The honesty of doubt is its own kind of religious posture.",
                 "links": [
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -61807,21 +61746,21 @@ const LAYERS = [
             "desc": "How dying gets done in modern America. Most Americans die in hospitals or nursing homes after extended medical interventions. A growing minority die in hospice, on their own terms. The choice between the two has gotten clearer and is still rationed by money and access.",
             "links": [
               {
-                "label": "NHPCO — hospice & palliative care",
-                "url": "https://www.nhpco.org",
-                "emoji": "🕊️",
-                "tag": "DEATH"
+                "label": "NHPCO",
+                "url": "https://nhpco.org",
+                "emoji": "🫀",
+                "tag": "BODY"
               },
               {
                 "label": "NIH MedlinePlus",
                 "url": "https://medlineplus.gov",
-                "emoji": "🌱",
+                "emoji": "🫀",
                 "tag": "BODY"
               },
               {
                 "label": "U.S. Department of Veterans Affairs",
-                "url": "https://www.va.gov",
-                "emoji": "🎖️",
+                "url": "https://va.gov",
+                "emoji": "🌍",
                 "tag": "VETERANS"
               }
             ],
@@ -61833,10 +61772,10 @@ const LAYERS = [
                 "desc": "Care for people whose disease will end them. Focused on comfort and meaning, not cure. Hospice has been one of the quiet ethical revolutions of the last half-century. Most Americans who use it wish they had used it earlier.",
                 "links": [
                   {
-                    "label": "NHPCO — hospice & palliative care",
-                    "url": "https://www.nhpco.org",
-                    "emoji": "🕊️",
-                    "tag": "DEATH"
+                    "label": "NHPCO",
+                    "url": "https://nhpco.org",
+                    "emoji": "🫀",
+                    "tag": "BODY"
                   }
                 ],
                 "topPills": [],
@@ -61878,15 +61817,15 @@ const LAYERS = [
                 "desc": "Comfort care that does not require a terminal diagnosis. Manages pain and symptoms across serious illness. The field is younger than hospice and still under-resourced.",
                 "links": [
                   {
-                    "label": "NHPCO — hospice & palliative care",
-                    "url": "https://www.nhpco.org",
-                    "emoji": "🕊️",
-                    "tag": "DEATH"
+                    "label": "NHPCO",
+                    "url": "https://nhpco.org",
+                    "emoji": "🫀",
+                    "tag": "BODY"
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -61931,7 +61870,7 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -61980,7 +61919,7 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -62027,14 +61966,14 @@ const LAYERS = [
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
-                    "label": "NHPCO — hospice & palliative care",
-                    "url": "https://www.nhpco.org",
-                    "emoji": "🕊️",
-                    "tag": "DEATH"
+                    "label": "NHPCO",
+                    "url": "https://nhpco.org",
+                    "emoji": "🫀",
+                    "tag": "BODY"
                   }
                 ],
                 "topPills": [],
@@ -62077,14 +62016,14 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
-                    "url": "https://www.va.gov",
-                    "emoji": "🎖️",
+                    "url": "https://va.gov",
+                    "emoji": "🌍",
                     "tag": "VETERANS"
                   },
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -62161,8 +62100,8 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
                 "label": "Modern Loss",
@@ -62171,7 +62110,7 @@ const LAYERS = [
                 "tag": "GRIEF"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -62185,7 +62124,7 @@ const LAYERS = [
                 "desc": "What gets remembered about you. Memory is not a record. It is a working draft. The version of you that survives is the one your people kept telling.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -62238,8 +62177,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -62283,8 +62222,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -62326,16 +62265,16 @@ const LAYERS = [
                 "desc": "What public memory tries to fix in stone. American monuments have been getting reconsidered. Some have come down. The fights about which figures stay and which go are fights about the country's actual past.",
                 "links": [
                   {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
+                    "label": "Brennan Center",
+                    "url": "https://brennancenter.org",
                     "emoji": "⚖️",
-                    "tag": "LAW"
+                    "tag": "RIGHTS"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -62378,15 +62317,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
+                    "url": "https://eff.org",
+                    "emoji": "⚖️",
                     "tag": "RIGHTS"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -62428,10 +62367,10 @@ const LAYERS = [
                 "desc": "What the dead leave behind in money, things, and pattern. Inheritance is unequal at scale and gets used to defend that unequal scale.",
                 "links": [
                   {
-                    "label": "Inequality.org — Institute for Policy Studies",
+                    "label": "Inequality.org",
                     "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -62505,13 +62444,13 @@ const LAYERS = [
             "desc": "The animal underneath everything else. Most of human culture is built partly out of the species' inability to fully metabolize the fact that it ends. The fear shows up in religion, in art, in war, in advertising, in the small way you avoid certain conversations with your aging parents.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
               {
-                "label": "On Being — Krista Tippett",
+                "label": "On Being",
                 "url": "https://onbeing.org",
                 "emoji": "🕊️",
                 "tag": "SPIRIT"
@@ -62532,8 +62471,8 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Harvard Health",
-                    "url": "https://www.health.harvard.edu",
-                    "emoji": "🌱",
+                    "url": "https://health.harvard.edu",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   },
                   {
@@ -62582,13 +62521,13 @@ const LAYERS = [
                 "desc": "The cognitive layer. We do not know what death is from the inside. The lack of information is itself the source of much of the fear.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
@@ -62678,15 +62617,15 @@ const LAYERS = [
                 "desc": "The bodily layer. The fear of how it will go. Modern hospice has made this much less reasonable than it was a generation ago. The cultural memory still holds the older terror.",
                 "links": [
                   {
-                    "label": "NHPCO — hospice & palliative care",
-                    "url": "https://www.nhpco.org",
-                    "emoji": "🕊️",
-                    "tag": "DEATH"
+                    "label": "NHPCO",
+                    "url": "https://nhpco.org",
+                    "emoji": "🫀",
+                    "tag": "BODY"
                   },
                   {
                     "label": "NIH MedlinePlus",
                     "url": "https://medlineplus.gov",
-                    "emoji": "🌱",
+                    "emoji": "🫀",
                     "tag": "BODY"
                   }
                 ],
@@ -62729,13 +62668,13 @@ const LAYERS = [
                 "desc": "The existential layer. The fear that life will not have added up to anything. This is the one philosophy and religion try hardest to address.",
                 "links": [
                   {
-                    "label": "On Being — Krista Tippett",
+                    "label": "On Being",
                     "url": "https://onbeing.org",
                     "emoji": "🕊️",
                     "tag": "SPIRIT"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -62782,14 +62721,14 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -62935,22 +62874,22 @@ const LAYERS = [
         "desc": "Not falsehood — the story that carries what facts cannot hold. Every culture answers the same mystery differently. None is complete. None is entirely wrong. Myth is what you tell when truth isn't enough.",
         "links": [
           {
-            "label": "On Being — myth & meaning",
+            "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
             "tag": "SPIRIT"
           },
           {
-            "label": "Aeon — myth & culture",
+            "label": "Aeon",
             "url": "https://aeon.co",
-            "emoji": "💭",
-            "tag": "PHILOSOPHY"
+            "emoji": "🧠",
+            "tag": "MIND"
           },
           {
-            "label": "The Marginalian — mythology",
-            "url": "https://www.themarginalian.org",
-            "emoji": "🕊️",
-            "tag": "CULTURE"
+            "label": "The Marginalian",
+            "url": "https://themarginalian.org",
+            "emoji": "🧠",
+            "tag": "MIND"
           }
         ],
         "topPills": [
@@ -63198,7 +63137,7 @@ const LAYERS = [
             "desc": "What stays the same when everything else changes. The hero's journey. The descent and return. The flood. The trickster. These patterns recur across cultures with no plausible historical contact, which is one of the more interesting facts about the species. We are wired to tell certain shapes of story.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
@@ -63206,20 +63145,20 @@ const LAYERS = [
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
-                "label": "Sacred Texts archive",
-                "url": "https://www.sacred-texts.com",
-                "emoji": "📜",
-                "tag": "MYTH"
+                "label": "Sacred Texts",
+                "url": "https://sacred-texts.com",
+                "emoji": "🗄️",
+                "tag": "SPIRIT"
               },
               {
                 "label": "The Marginalian",
-                "url": "https://www.themarginalian.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "url": "https://themarginalian.org",
+                "emoji": "🧠",
+                "tag": "MIND"
               }
             ],
             "topPills": [
@@ -63230,16 +63169,16 @@ const LAYERS = [
                 "desc": "The pattern Joseph Campbell named in 1949. Call to adventure, departure, trials, transformation, return. The pattern shows up everywhere — Greek myth, Star Wars, hip-hop autobiography, the addiction recovery narrative.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -63281,13 +63220,13 @@ const LAYERS = [
                 "desc": "The journey to the underworld. Inanna. Persephone. Orpheus. Odysseus. The hero goes down, comes back changed. Most useful spiritual narratives are versions of this.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -63332,7 +63271,7 @@ const LAYERS = [
                 "desc": "The shape-shifter. Coyote. Anansi. Loki. Hermes. The trickster breaks the rules to teach the rule-makers something. Every culture has one and the trickster is usually the most popular character in the pantheon.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -63340,8 +63279,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -63383,16 +63322,16 @@ const LAYERS = [
                 "desc": "The deluge. Noah. Gilgamesh. The Hindu Manu. Aztec versions. Australian versions. The pattern of the world being washed clean and one righteous remnant carrying it forward shows up almost universally. The reasons are debated.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -63479,7 +63418,7 @@ const LAYERS = [
                 "desc": "The end. Most cultures have an apocalypse story. Many have multiple — the world has ended several times before. American apocalypse storytelling has been doing significant cultural work since at least the Cold War.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -63487,8 +63426,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -63568,21 +63507,21 @@ const LAYERS = [
             "desc": "Myth across cultures. Each civilization built a story-system to answer what the world is, where it came from, why people behave the way they do, and what happens when they die. The systems differ in interesting ways. They overlap in even more interesting ways.",
             "links": [
               {
-                "label": "Sacred Texts archive",
-                "url": "https://www.sacred-texts.com",
-                "emoji": "📜",
-                "tag": "MYTH"
+                "label": "Sacred Texts",
+                "url": "https://sacred-texts.com",
+                "emoji": "🗄️",
+                "tag": "SPIRIT"
               },
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               },
               {
                 "label": "Perseus Digital Library",
-                "url": "https://www.perseus.tufts.edu",
-                "emoji": "🏛️",
+                "url": "https://perseus.tufts.edu",
+                "emoji": "🗄️",
                 "tag": "MYTH"
               }
             ],
@@ -63594,16 +63533,16 @@ const LAYERS = [
                 "desc": "Pangu separating heaven and earth. The Jade Emperor and the celestial bureaucracy. The dragon as benevolent. The structure differs from European myth in ways that show how cultures organize the cosmos differently.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -63645,16 +63584,16 @@ const LAYERS = [
                 "desc": "Amaterasu the sun goddess. Susanoo the storm. Izanagi and Izanami creating the islands. Shinto myth is partly a religion and partly a cultural memory of the country's origin.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   },
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -63696,15 +63635,15 @@ const LAYERS = [
                 "desc": "Among the world's largest, oldest, and most living mythologies. The Mahabharata. The Ramayana. The Puranas. A pantheon of thousands and a system of philosophy that has been continuously reinterpreted for three millennia.",
                 "links": [
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   },
                   {
-                    "label": "JSTOR open content",
-                    "url": "https://www.jstor.org/open",
-                    "emoji": "📚",
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
                     "tag": "RESEARCH"
                   }
                 ],
@@ -63749,13 +63688,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "JSTOR open content",
-                    "url": "https://www.jstor.org/open",
-                    "emoji": "📚",
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
                     "tag": "RESEARCH"
                   }
                 ],
@@ -63800,8 +63739,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -63851,13 +63790,13 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "JSTOR open content",
-                    "url": "https://www.jstor.org/open",
-                    "emoji": "📚",
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
                     "tag": "RESEARCH"
                   }
                 ],
@@ -63932,22 +63871,22 @@ const LAYERS = [
             "desc": "What myth puts at the center and what it puts at the edge. Heroes are who the culture wants its young to imagine becoming. Monsters are what the culture is afraid of, projected outward and given a face.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
+                "label": "Aeon",
                 "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
               {
-                "label": "Sacred Texts archive",
-                "url": "https://www.sacred-texts.com",
-                "emoji": "📜",
-                "tag": "MYTH"
+                "label": "Sacred Texts",
+                "url": "https://sacred-texts.com",
+                "emoji": "🗄️",
+                "tag": "SPIRIT"
               },
               {
                 "label": "Internet Archive",
                 "url": "https://archive.org",
-                "emoji": "📚",
-                "tag": "CULTURE"
+                "emoji": "🗄️",
+                "tag": "ARCHIVE"
               }
             ],
             "topPills": [
@@ -63959,15 +63898,15 @@ const LAYERS = [
                 "links": [
                   {
                     "label": "Perseus Digital Library",
-                    "url": "https://www.perseus.tufts.edu",
-                    "emoji": "🏛️",
+                    "url": "https://perseus.tufts.edu",
+                    "emoji": "🗄️",
                     "tag": "MYTH"
                   },
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -64009,7 +63948,7 @@ const LAYERS = [
                 "desc": "Medusa. The Minotaur. Grendel. The leviathan. Monsters are the externalized fears of the culture that imagined them. Reading the monsters of a tradition tells you what its people were trying not to face.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -64017,8 +63956,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -64062,14 +64001,14 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
-                    "label": "Sacred Texts archive",
-                    "url": "https://www.sacred-texts.com",
-                    "emoji": "📜",
-                    "tag": "MYTH"
+                    "label": "Sacred Texts",
+                    "url": "https://sacred-texts.com",
+                    "emoji": "🗄️",
+                    "tag": "SPIRIT"
                   }
                 ],
                 "topPills": [],
@@ -64113,8 +64052,8 @@ const LAYERS = [
                   {
                     "label": "Internet Archive",
                     "url": "https://archive.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "emoji": "🗄️",
+                    "tag": "ARCHIVE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -64162,16 +64101,16 @@ const LAYERS = [
                 "desc": "Tolkien. Le Guin. Star Wars. Marvel. Modern fantasy and SF are doing live mythological work — building shared symbolic systems that people use to think with. The genre is not separate from myth. It is myth, with current dates.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
                   {
                     "label": "The Marginalian",
-                    "url": "https://www.themarginalian.org",
-                    "emoji": "📚",
-                    "tag": "CULTURE"
+                    "url": "https://themarginalian.org",
+                    "emoji": "🧠",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -64213,7 +64152,7 @@ const LAYERS = [
                 "desc": "What the story positions as the obstacle. Great villains are reflections of what the culture wants to disown. American villains have shifted across cycles — communist, terrorist, oligarch — in ways that map onto the political moment.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
+                    "label": "Aeon",
                     "url": "https://aeon.co",
                     "emoji": "🧠",
                     "tag": "MIND"
@@ -64343,8 +64282,8 @@ const LAYERS = [
         "desc": "The oldest conversation humanity has ever had — with the unknown, the sacred, and the question of why anything exists at all. Every culture in recorded history has had one. Religion is not one thing. It is the sum of every answer ever attempted to the questions no one can fully answer.",
         "links": [
           {
-            "label": "Pew Research: Religion",
-            "url": "https://www.pewresearch.org/religion/",
+            "label": "Pew Research",
+            "url": "https://pewresearch.org",
             "emoji": "📊",
             "tag": "DATA"
           },
@@ -64363,8 +64302,8 @@ const LAYERS = [
             "desc": "The three Abrahamic faiths — Judaism, Christianity, and Islam — share a common origin in the story of Abraham and his covenant with God, and together account for the religious identity of more than half the world's population. They are distinct civilizations, not variations on a theme. Each has its own scripture, its own legal tradition, its own mystical dimension, its own relationship to political power, and its own internal diversity that dwarfs the differences between them. Understanding each one on its own terms — rather than primarily in contrast to the others — is the beginning of understanding any of them.",
             "links": [
               {
-                "label": "Pew Research — global religion",
-                "url": "https://www.pewresearch.org/religion",
+                "label": "Pew Research",
+                "url": "https://pewresearch.org",
                 "emoji": "📊",
                 "tag": "DATA"
               },
@@ -64409,20 +64348,20 @@ const LAYERS = [
                 "desc": "One of the oldest monotheistic traditions, Judaism is simultaneously a religion, an ethnicity, a culture, and a civilization. It is not one thing. The range of people who identify as Jewish spans those for whom every aspect of daily life is governed by religious law, to those who are entirely secular and non-practicing but identify deeply with Jewish history, culture, and community. What holds the tradition together across that range is not uniformity of belief or practice — it is a shared history, a shared text, and a shared experience of being a minority people in a world that has repeatedly tried to erase them.",
                 "links": [
                   {
-                    "label": "My Jewish Learning — accessible Jewish education",
-                    "url": "https://www.myjewishlearning.com",
-                    "emoji": "🕊️",
+                    "label": "My Jewish Learning",
+                    "url": "https://myjewishlearning.com",
+                    "emoji": "✡️",
                     "tag": "SPIRIT"
                   },
                   {
                     "label": "Jewish Virtual Library",
-                    "url": "https://www.jewishvirtuallibrary.org",
-                    "emoji": "🕊️",
+                    "url": "https://jewishvirtuallibrary.org",
+                    "emoji": "✡️",
                     "tag": "SPIRIT"
                   },
                   {
-                    "label": "Pew Research — Jewish Americans",
-                    "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
+                    "label": "Pew Research",
+                    "url": "https://pewresearch.org",
                     "emoji": "📊",
                     "tag": "DATA"
                   }
@@ -64435,9 +64374,9 @@ const LAYERS = [
                     "desc": "The Torah — the five books of Moses — is the foundation of Jewish religious life. It contains the 613 commandments that Orthodox Judaism holds as binding on Jews, the narrative of the Jewish people from creation through the death of Moses, and the covenant between God and the Jewish people. The Talmud — compiled over several centuries, completed around 500 CE — is the record of rabbinic discussion and interpretation of Torah law and is the central text of mainstream Rabbinic Judaism. It is not a rulebook but an argument — a multi-generational conversation about what the law means and how it applies. The tradition of interpretation, debate, and commentary that produced the Talmud has continued without interruption for two thousand years.",
                     "links": [
                       {
-                        "label": "My Jewish Learning — Torah & Talmud",
-                        "url": "https://www.myjewishlearning.com/article/talmud-101",
-                        "emoji": "🕊️",
+                        "label": "My Jewish Learning",
+                        "url": "https://myjewishlearning.com",
+                        "emoji": "✡️",
                         "tag": "SPIRIT"
                       }
                     ],
@@ -64479,9 +64418,9 @@ const LAYERS = [
                     "desc": "The covenant — brit — is the foundational concept of Jewish theology: a binding agreement between God and the Jewish people, initiated with Abraham, renewed at Sinai, and understood as ongoing. Jewish identity is grounded in this relationship, which creates obligations on both sides. The question of who is a Jew — defined in traditional halacha as someone born of a Jewish mother or converted according to religious law — is both a theological question and a deeply practical one that affects immigration rights in Israel, membership in Jewish communities, and personal identity. The definition is contested between denominations and between religious and secular understandings of Jewish identity.",
                     "links": [
                       {
-                        "label": "My Jewish Learning — Jewish identity",
-                        "url": "https://www.myjewishlearning.com",
-                        "emoji": "🕊️",
+                        "label": "My Jewish Learning",
+                        "url": "https://myjewishlearning.com",
+                        "emoji": "✡️",
                         "tag": "SPIRIT"
                       }
                     ],
@@ -64523,9 +64462,9 @@ const LAYERS = [
                     "desc": "Judaism is not monolithic. The major denominations represent genuinely different approaches to Jewish law, tradition, and modernity — not just differences of degree but differences of principle about what Judaism requires and permits.",
                     "links": [
                       {
-                        "label": "My Jewish Learning — denominations",
-                        "url": "https://www.myjewishlearning.com/article/the-four-jewish-denominations",
-                        "emoji": "🕊️",
+                        "label": "My Jewish Learning",
+                        "url": "https://myjewishlearning.com",
+                        "emoji": "✡️",
                         "tag": "SPIRIT"
                       }
                     ],
@@ -64774,9 +64713,9 @@ const LAYERS = [
                     "desc": "The Jewish diaspora — the dispersal of Jews from the Land of Israel — began with the Babylonian conquest in 586 BCE and accelerated with the Roman destruction of the Second Temple in 70 CE. For nearly two thousand years, Jewish life was lived as a minority community within other civilizations — in Babylon, in the Islamic world, in Christian Europe. That experience of living as a minority, maintaining a distinct identity under pressure, developing portable institutions (the synagogue, the rabbi, the text) that could sustain community without territory — shaped Judaism profoundly and produced communities that are genuinely distinct from each other despite shared roots.",
                     "links": [
                       {
-                        "label": "Jewish Virtual Library — diaspora communities",
-                        "url": "https://www.jewishvirtuallibrary.org",
-                        "emoji": "🕊️",
+                        "label": "Jewish Virtual Library",
+                        "url": "https://jewishvirtuallibrary.org",
+                        "emoji": "✡️",
                         "tag": "SPIRIT"
                       }
                     ],
@@ -64956,8 +64895,8 @@ const LAYERS = [
                         "desc": "The United States is home to the largest diaspora Jewish population in the world — approximately 7 million people, depending on how Jewish identity is measured. American Jews are disproportionately represented in law, medicine, academia, media, and politics relative to their share of the population. They are also among the most religiously unaffiliated of any American religious group — large numbers identify as Jewish culturally and ethnically while having no synagogue membership or religious practice. American Jewish political identity has historically been strongly Democratic and liberal, though that alignment has shown some movement in recent years. The relationship between American Jewish identity and Israel is complex and increasingly contested across generational and political lines.",
                         "links": [
                           {
-                            "label": "Pew Research — Jewish Americans 2020",
-                            "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
+                            "label": "Pew Research",
+                            "url": "https://pewresearch.org",
                             "emoji": "📊",
                             "tag": "DATA"
                           }
@@ -65031,15 +64970,15 @@ const LAYERS = [
                     "desc": "Zionism is a political movement — not a religious one, in its origins — founded in the late 19th century by largely secular Jews responding to European antisemitism. Theodor Herzl, an Austro-Hungarian journalist, published Der Judenstaat (The Jewish State) in 1896 arguing that Jews would never be safe in Europe and needed a state of their own. The movement he founded sought to establish that state in Palestine, then part of the Ottoman Empire. Zionism has never been a unified ideology — it has contained socialist, liberal, revisionist, religious, and cultural variants with genuinely different visions of what a Jewish state should be. It has also always been contested within Judaism, from Orthodox communities that held Jewish statehood must await the Messiah to Reform communities that initially saw Jewish identity as purely religious. Understanding Zionism requires distinguishing it from Judaism, from Israeli policy, and from support for Israel's existence — categories that overlap but are not identical.",
                     "links": [
                       {
-                        "label": "Jewish Virtual Library — Zionism",
-                        "url": "https://www.jewishvirtuallibrary.org/zionism",
-                        "emoji": "🕊️",
+                        "label": "Jewish Virtual Library",
+                        "url": "https://jewishvirtuallibrary.org",
+                        "emoji": "✡️",
                         "tag": "SPIRIT"
                       },
                       {
-                        "label": "My Jewish Learning — Zionism",
-                        "url": "https://www.myjewishlearning.com",
-                        "emoji": "🕊️",
+                        "label": "My Jewish Learning",
+                        "url": "https://myjewishlearning.com",
+                        "emoji": "✡️",
                         "tag": "SPIRIT"
                       }
                     ],
@@ -65163,8 +65102,8 @@ const LAYERS = [
                         "desc": "Support for Israel's existence is widespread among diaspora Jews. Identification as Zionist is less uniform and has declined among younger American Jews in particular. Pew Research surveys of American Jews show growing gaps between older and younger generations on questions of Israeli government policy, Palestinian rights, and the degree to which criticism of Israel constitutes antisemitism. Jewish Voice for Peace, a progressive organization that supports Palestinian rights and opposes some Israeli policies, has grown significantly. These shifts do not represent rejection of Jewish identity — they represent generational disagreement about what Jewish identity requires in relation to a specific state and its specific policies.",
                         "links": [
                           {
-                            "label": "Pew Research — Jewish Americans & Israel",
-                            "url": "https://www.pewresearch.org/religion/2021/05/11/jewish-americans-in-2020",
+                            "label": "Pew Research",
+                            "url": "https://pewresearch.org",
                             "emoji": "📊",
                             "tag": "DATA"
                           }
@@ -65238,14 +65177,14 @@ const LAYERS = [
                     "desc": "Antisemitism — hostility toward, prejudice against, or discrimination against Jewish people — is among the oldest and most persistent forms of bigotry in recorded history. Its persistence across radically different civilizations, political systems, and religious contexts — pagan Rome, Christian Europe, Islamic societies, secular nationalism, and communist states have all produced it — makes it worth understanding as a distinct phenomenon rather than simply another form of racism. It has taken religious forms (Jews as Christ-killers), economic forms (Jews as financial manipulators), racial forms (Jews as a biologically inferior or dangerous race), and conspiratorial forms (Jews as a secret power controlling governments and media). Each form has been used to justify persecution ranging from social exclusion to mass murder.",
                     "links": [
                       {
-                        "label": "United States Holocaust Memorial Museum — antisemitism",
-                        "url": "https://www.ushmm.org/antisemitism",
+                        "label": "Holocaust Museum",
+                        "url": "https://ushmm.org",
                         "emoji": "⚖️",
                         "tag": "RIGHTS"
                       },
                       {
-                        "label": "ADL — tracking antisemitism",
-                        "url": "https://www.adl.org",
+                        "label": "Anti-Defamation League",
+                        "url": "https://adl.org",
                         "emoji": "⚖️",
                         "tag": "RIGHTS"
                       }
@@ -65314,8 +65253,8 @@ const LAYERS = [
                         "desc": "Antisemitic incidents in the United States and Europe have increased measurably since 2016, reaching record levels in multiple years since. The ADL tracks incidents annually. Contemporary antisemitism comes from multiple directions — white nationalist movements that have always been antisemitic, some strands of political Islam, and debates around Israeli policy where anti-Zionist criticism sometimes crosses into antisemitic rhetoric. The question of where criticism of Israeli government policy ends and antisemitism begins is genuinely contested and politically charged. What is not contested is that antisemitic violence, vandalism, and harassment are increasing and are documented.",
                         "links": [
                           {
-                            "label": "ADL — antisemitism tracker",
-                            "url": "https://www.adl.org/resources/report/audit-antisemitic-incidents",
+                            "label": "Anti-Defamation League",
+                            "url": "https://adl.org",
                             "emoji": "⚖️",
                             "tag": "RIGHTS"
                           }
@@ -65391,12 +65330,12 @@ const LAYERS = [
                       {
                         "label": "Elie Wiesel Foundation",
                         "url": "https://eliewieselfoundation.org",
-                        "emoji": "⚖️",
+                        "emoji": "✡️",
                         "tag": "RIGHTS"
                       },
                       {
-                        "label": "USHMM — Jewish responses to the Holocaust",
-                        "url": "https://www.ushmm.org",
+                        "label": "Holocaust Museum",
+                        "url": "https://ushmm.org",
                         "emoji": "⚖️",
                         "tag": "RIGHTS"
                       }
@@ -65474,15 +65413,15 @@ const LAYERS = [
                 "desc": "Christianity is the world's largest religion — approximately 2.4 billion adherents across every continent, in virtually every culture on earth. It is also among the most internally diverse, containing traditions as different from each other as Ethiopian Orthodoxy and American Pentecostalism, medieval Catholicism and Quaker silence, liberation theology and prosperity gospel. What holds these traditions together is a shared claim: that Jesus of Nazareth, a first-century Jewish teacher executed by Roman authorities, was the Son of God whose death and resurrection offer salvation to humanity. What that claim means, how it is lived, and what it requires has been the subject of two thousand years of sometimes violent disagreement.",
                 "links": [
                   {
-                    "label": "Pew Research — global Christianity",
-                    "url": "https://www.pewresearch.org/religion",
+                    "label": "Pew Research",
+                    "url": "https://pewresearch.org",
                     "emoji": "📊",
                     "tag": "DATA"
                   },
                   {
                     "label": "Christianity Today",
-                    "url": "https://www.christianitytoday.com",
-                    "emoji": "🕊️",
+                    "url": "https://christianitytoday.com",
+                    "emoji": "✝️",
                     "tag": "SPIRIT"
                   }
                 ],
@@ -65550,8 +65489,8 @@ const LAYERS = [
                     "desc": "For the first thousand years of Christianity, the church was largely unified under a structure centered in Rome and Constantinople. The Great Schism of 1054 permanently divided Latin Christianity (Roman Catholic) from Eastern Christianity (Eastern Orthodox). Both traditions claim apostolic continuity — unbroken succession from the original apostles. Both maintain elaborate liturgical traditions, veneration of saints, and sacramental theology. Both have undergone significant internal evolution while maintaining institutional continuity across two millennia.",
                     "links": [
                       {
-                        "label": "Pew Research — Catholic & Orthodox",
-                        "url": "https://www.pewresearch.org/religion",
+                        "label": "Pew Research",
+                        "url": "https://pewresearch.org",
                         "emoji": "📊",
                         "tag": "DATA"
                       }
@@ -65988,8 +65927,8 @@ const LAYERS = [
                     "desc": "Evangelical Christianity — defined by the centrality of a personal conversion experience, the authority of the Bible, the importance of sharing the faith, and the significance of Christ's atoning death — is the dominant form of Protestantism in the United States and the fastest growing form of Christianity globally, particularly in sub-Saharan Africa, Latin America, and East Asia. Pentecostalism, which emerged from a revival at Azusa Street in Los Angeles in 1906, emphasizes the gifts of the Holy Spirit — speaking in tongues, healing, prophecy — and has grown to an estimated 500 million adherents worldwide, making it the largest Protestant movement on earth. Its growth is concentrated overwhelmingly in the Global South.",
                     "links": [
                       {
-                        "label": "Pew Research — global Pentecostalism",
-                        "url": "https://www.pewresearch.org/religion",
+                        "label": "Pew Research",
+                        "url": "https://pewresearch.org",
                         "emoji": "📊",
                         "tag": "DATA"
                       }
@@ -66175,22 +66114,22 @@ const LAYERS = [
                 "desc": "Islam is the world's second largest religion — approximately 1.8 billion adherents across every continent, representing the majority population in 49 countries and significant minorities in dozens more. It is profoundly diverse: Arab and non-Arab, Sunni and Shia, Sufi and Salafi, traditional and reform-minded, rural and urban, deeply devout and nominally affiliated. The vast majority of the world's Muslims live not in the Arab Middle East but in South and Southeast Asia — Indonesia alone has more Muslims than the entire Arab world. Understanding Islam requires releasing the assumption that it is primarily a Middle Eastern religion or primarily defined by its relationship to political conflict. It is a civilization.",
                 "links": [
                   {
-                    "label": "Pew Research — global Muslim population",
-                    "url": "https://www.pewresearch.org/religion/2011/01/27/the-future-of-the-global-muslim-population",
+                    "label": "Pew Research",
+                    "url": "https://pewresearch.org",
                     "emoji": "📊",
                     "tag": "DATA"
                   },
                   {
                     "label": "Islamic Society of North America",
-                    "url": "https://www.isna.net",
-                    "emoji": "🕊️",
+                    "url": "https://isna.net",
+                    "emoji": "☪️",
                     "tag": "SPIRIT"
                   },
                   {
-                    "label": "Al Jazeera — Islam and the world",
-                    "url": "https://www.aljazeera.com",
-                    "emoji": "🌐",
-                    "tag": "GEOPOLITICS"
+                    "label": "Al Jazeera",
+                    "url": "https://aljazeera.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [
@@ -66201,8 +66140,8 @@ const LAYERS = [
                     "desc": "Islam rests on five foundational practices — the Pillars — that structure Muslim life across all traditions and cultures. Shahada: the declaration of faith — there is no god but God, and Muhammad is his messenger. Salat: prayer five times daily, oriented toward Mecca. Zakat: giving a portion of one's wealth to those in need — a religious obligation, not a voluntary charity. Sawm: fasting during the month of Ramadan from dawn to sunset. Hajj: pilgrimage to Mecca at least once in a lifetime for those who are able. The Pillars are the common ground across enormous diversity. The theological core: tawhid, the absolute oneness of God — the rejection of any association of partners with God is the central principle of Islamic theology.",
                     "links": [
                       {
-                        "label": "Pew Research — Muslim beliefs & practices",
-                        "url": "https://www.pewresearch.org/religion",
+                        "label": "Pew Research",
+                        "url": "https://pewresearch.org",
                         "emoji": "📊",
                         "tag": "DATA"
                       }
@@ -66327,16 +66266,16 @@ const LAYERS = [
                         "desc": "The center of gravity of Sunni Islam is not the Arab world — it is South and Southeast Asia. Indonesia has the largest Muslim population of any country, approximately 230 million. Pakistan and Bangladesh together have more than 300 million Muslims. India has approximately 200 million Muslim citizens — the third largest Muslim population in any country, living as a minority in a Hindu-majority democracy. West Africa — Senegal, Mali, Nigeria, Niger — has large, ancient Muslim communities with distinctive Sufi traditions. The diversity of Sunni practice across these communities is enormous and largely invisible in Western coverage of Islam.",
                         "links": [
                           {
-                            "label": "Pew Research — Muslim population by country",
-                            "url": "https://www.pewresearch.org/religion",
+                            "label": "Pew Research",
+                            "url": "https://pewresearch.org",
                             "emoji": "📊",
                             "tag": "DATA"
                           },
                           {
                             "label": "Al Jazeera",
-                            "url": "https://www.aljazeera.com",
-                            "emoji": "🌐",
-                            "tag": "GEOPOLITICS"
+                            "url": "https://aljazeera.com",
+                            "emoji": "📰",
+                            "tag": "JOURNALISM"
                           }
                         ],
                         "topPills": [],
@@ -66490,8 +66429,8 @@ const LAYERS = [
                         "desc": "Iran is the only country with a Shia theocracy — the Islamic Republic established after the 1979 revolution under Ayatollah Khomeini's doctrine of velayat-e faqih (guardianship of the jurist). Iraq, with a Shia majority long suppressed under Saddam Hussein's Sunni-dominated government, now has a Shia-led government with close ties to Iran. Lebanon's Hezbollah, a Shia political and military organization, is the most powerful non-state armed group in the Arab world. Pakistan and India together have tens of millions of Shia Muslims. The Shia communities of the Persian Gulf — in Bahrain, Saudi Arabia's Eastern Province, and Kuwait — have faced systematic discrimination from Sunni-majority governments.",
                         "links": [
                           {
-                            "label": "Pew Research — Shia population",
-                            "url": "https://www.pewresearch.org/religion",
+                            "label": "Pew Research",
+                            "url": "https://pewresearch.org",
                             "emoji": "📊",
                             "tag": "DATA"
                           }
@@ -66677,8 +66616,8 @@ const LAYERS = [
                     "desc": "The encounter between Islamic civilization and European colonialism in the 19th and 20th centuries produced the central tensions of contemporary Muslim life: how to engage with modernity, how to understand the relationship between Islam and the state, how to respond to Western political and cultural dominance. The range of responses has been enormous — from secular nationalism (Ataturk's Turkey, Nasser's Egypt), to modernist reform (movements to reinterpret Islamic law in light of contemporary conditions), to political Islam (movements seeking to establish Islamic governance), to militant jihadism (a small but violent minority). None of these is the definitive Muslim response to modernity. All of them are Muslim responses, and understanding the distinctions between them is essential.",
                     "links": [
                       {
-                        "label": "Pew Research — Muslims and modernity",
-                        "url": "https://www.pewresearch.org/religion",
+                        "label": "Pew Research",
+                        "url": "https://pewresearch.org",
                         "emoji": "📊",
                         "tag": "DATA"
                       }
@@ -66721,14 +66660,14 @@ const LAYERS = [
                     "desc": "The majority of the world's Muslims live in the Global South — in communities that have experienced colonialism, economic marginalization, and political exclusion from the institutions that set global rules. Islam in these contexts is not primarily about the questions that dominate Western discourse — terrorism, Islamism, the headscarf. It is about community, practice, identity, and meaning in conditions of poverty and political powerlessness. The fastest growing Muslim communities are in sub-Saharan Africa. Islam's spread in West Africa over more than a thousand years through trade and scholarship produced deep-rooted traditions of Islamic learning, Sufi practice, and peaceful coexistence that have little resemblance to the Islam of the headlines. That Islam — vast, diverse, ordinary, devout — is the Islam most of the world's Muslims actually live.",
                     "links": [
                       {
-                        "label": "Al Jazeera — Islam in Africa",
-                        "url": "https://www.aljazeera.com",
-                        "emoji": "🌐",
-                        "tag": "GEOPOLITICS"
+                        "label": "Al Jazeera",
+                        "url": "https://aljazeera.com",
+                        "emoji": "📰",
+                        "tag": "JOURNALISM"
                       },
                       {
-                        "label": "Pew Research — Islam in sub-Saharan Africa",
-                        "url": "https://www.pewresearch.org/religion",
+                        "label": "Pew Research",
+                        "url": "https://pewresearch.org",
                         "emoji": "📊",
                         "tag": "DATA"
                       },
@@ -67558,13 +67497,13 @@ const LAYERS = [
                   {
                     "label": "National Museum of the American Indian",
                     "url": "https://americanindian.si.edu",
-                    "emoji": "🌍",
+                    "emoji": "🗄️",
                     "tag": "CULTURE"
                   },
                   {
                     "label": "Native Land Digital",
                     "url": "https://native-land.ca",
-                    "emoji": "🌍",
+                    "emoji": "🌱",
                     "tag": "CULTURE"
                   }
                 ],
@@ -67746,7 +67685,7 @@ const LAYERS = [
                       {
                         "label": "Native Land Digital",
                         "url": "https://native-land.ca",
-                        "emoji": "🌍",
+                        "emoji": "🌱",
                         "tag": "CULTURE"
                       }
                     ],
@@ -68573,13 +68512,13 @@ const LAYERS = [
         "desc": "The medium everything happens inside. But what is it? Physics has made it stranger, not clearer. Relativity says it bends. Quantum mechanics barely acknowledges it. The self experiences time as the only real thing. The cosmos does not appear to notice.",
         "links": [
           {
-            "label": "Aeon — philosophy of time",
+            "label": "Aeon",
             "url": "https://aeon.co",
-            "emoji": "💭",
-            "tag": "PHILOSOPHY"
+            "emoji": "🧠",
+            "tag": "MIND"
           },
           {
-            "label": "Nautilus — physics of time",
+            "label": "Nautilus",
             "url": "https://nautil.us",
             "emoji": "🔬",
             "tag": "SCIENCE"
@@ -68587,7 +68526,7 @@ const LAYERS = [
           {
             "label": "NASA Astronomy Picture of the Day",
             "url": "https://apod.nasa.gov",
-            "emoji": "🔭",
+            "emoji": "🌌",
             "tag": "COSMOS"
           }
         ],
@@ -69796,16 +69735,16 @@ const LAYERS = [
         "desc": "Why is there something rather than nothing? Every philosophy, every religion, every cosmology begins here and none of them fully answers it. The question is not a failure of knowledge — it is the condition that makes knowledge possible. The asking is the thing. Every civilization that has ever existed has looked at the same sky and felt the same vertigo. You are in very good company.",
         "links": [
           {
-            "label": "Aeon — philosophy of existence",
+            "label": "Aeon",
             "url": "https://aeon.co",
             "emoji": "🧠",
             "tag": "MIND"
           },
           {
-            "label": "Nautilus — cosmology",
+            "label": "Nautilus",
             "url": "https://nautil.us",
             "emoji": "🔬",
-            "tag": "COSMOS"
+            "tag": "SCIENCE"
           }
         ],
         "topPills": [],
@@ -69856,7 +69795,7 @@ const LAYERS = [
         "desc": "There was experience before there were words for it. The infant before naming. The moment before thought catches up. Every contemplative tradition points toward this — the space prior to the stories we tell about ourselves. It is not emptiness. It is the ground that stories grow from. Getting back there, briefly, is what meditation, music, and certain kinds of grief have in common.",
         "links": [
           {
-            "label": "On Being — beyond language",
+            "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
             "tag": "SPIRIT"
@@ -69901,13 +69840,13 @@ const LAYERS = [
         "desc": "Not the absence of sound. The ground beneath sound. Every contemplative tradition in human history — Buddhist, Christian mystical, Sufi, Indigenous, Stoic — points toward the same thing from different directions: a stillness beneath the noise that is not nothing. Whether you call it God, Tao, Brahman, or simply the present moment, the pointing is remarkably consistent across cultures that never spoke to each other. That consistency is worth sitting with.",
         "links": [
           {
-            "label": "On Being — contemplative traditions",
+            "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
             "tag": "SPIRIT"
           },
           {
-            "label": "Aeon — mysticism & philosophy",
+            "label": "Aeon",
             "url": "https://aeon.co",
             "emoji": "🧠",
             "tag": "MIND"
@@ -69952,9 +69891,9 @@ const LAYERS = [
         "desc": "Every culture has one. The Babylonian Enuma Elish. Genesis. The Hindu Rigveda. The Mayan Popol Vuh. The Big Bang. These are not competing stories about the same event — they are different kinds of answers to different kinds of questions. Science tells you what happened. Myth tells you what it means. Both are human responses to the same vertigo. Neither replaces the other. The need for both is the most human thing there is.",
         "links": [
           {
-            "label": "NASA — cosmology",
+            "label": "NASA Astronomy Picture of the Day",
             "url": "https://apod.nasa.gov",
-            "emoji": "🔬",
+            "emoji": "🌌",
             "tag": "COSMOS"
           }
         ],
@@ -69997,13 +69936,13 @@ const LAYERS = [
         "desc": "The outermost layer of the scale points back to the innermost. The cosmos asks the same question the self does: who is watching? The universe observing itself through temporary apertures — briefly conscious, briefly wondering, briefly here. The scale begins with ME and ends here, which is not a coincidence. The question beneath all the questions is the same one you started with. You just needed everything in between to see it.",
         "links": [
           {
-            "label": "Aeon — the hard problem",
+            "label": "Aeon",
             "url": "https://aeon.co",
             "emoji": "🧠",
             "tag": "MIND"
           },
           {
-            "label": "On Being — consciousness & cosmos",
+            "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
             "tag": "SPIRIT"

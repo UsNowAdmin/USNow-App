@@ -76,7 +76,7 @@ nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.
 #modal-desc{font-size:clamp(17px,2.2vw,19px);line-height:1.8;color:#e4eef8;font-family:'Georgia',serif;margin:0;}
 #modal-links{margin-top:20px;padding-top:16px;}
 .modal-links-label{font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:1;color:#c9a84c;}
-.modal-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(58,74,90,0.15);border-radius:8px;overflow:hidden;margin-top:4px;}.modal-link{display:flex;align-items:center;gap:10px;padding:13px 14px;background:#060b18;text-decoration:none;transition:background 0.2s;line-height:1.3;}@media(max-width:480px){.modal-links-grid{grid-template-columns:1fr;}}
+.modal-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(58,74,90,0.15);border-radius:8px;overflow:hidden;margin-top:4px;}.modal-link{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#060b18;text-decoration:none;transition:background 0.2s;line-height:1.2;}@media(max-width:480px){.modal-links-grid{grid-template-columns:1fr;}}
 .modal-link:hover{background:#0d1525;}
 .modal-link .arrow{opacity:0.75;}
 #modal-bottompills-section{margin-top:18px;padding-top:16px;}
