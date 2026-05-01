@@ -166,3 +166,8 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     box-shadow: 0 0 8px rgba(201,168,76,0.15);
   }
 }
+.modal-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
