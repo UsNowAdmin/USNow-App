@@ -1,0 +1,17 @@
+# USNow — AI Index
+> usnow.app | The Interactive World Compendium
+
+USNow is a civic and cultural knowledge platform organized as an interactive map of everything that touches human life — from personal identity and family to politics, history, science, and the cosmos. It covers 1,297 topics across 7 layers: ME MYSELF & I, ORIGINS, COMMUNITY & CULTURE, KNOWLEDGE & LEARNING, POWER & POLITICS, HISTORY & CIVILIZATION, and EVEN FURTHER BACK.
+
+The site is built for exploration, not consumption. Topics are connected through a web of cross-links, related concepts, and curated offsite sources. The voice is plain, factual, and unflinching — never academic, never preachy.
+
+## Full Content Index
+The complete text of all 1,297 topic descriptions is available at:
+https://usnow.app/llms-full.txt
+
+## Built-in Glossary
+The World Compendium defines key terms used across the site, cross-referenced and indexed throughout.
+
+## Author
+Jonathan Tatun | atjon.substack.com
+Target launch: July 4, 2026 — the 250th anniversary of the Declaration of Independence.

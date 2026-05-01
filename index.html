@@ -1097,5 +1097,60 @@ window.renderCard=function(data){
 <script>
 // navigator.serviceWorker.register('/sw.js');
 </script>
+
+<!-- AI Knowledge Graph: hidden from UI, visible to crawlers -->
+<section id="ai-knowledge-graph" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="false">
+  <h1>USNow — Interactive World Compendium</h1>
+  <p>A map of everything that touches human life, organized from the inside out. 1,297 topics across 7 layers: identity, origins, community, knowledge, politics, history, and the cosmos.</p>
+</section>
+
+<script>
+// Inject all card content into hidden section for crawler visibility
+(function(){
+  if(typeof LAYERS==='undefined') return;
+  var sec = document.getElementById('ai-knowledge-graph');
+  if(!sec) return;
+  function walk(node) {
+    if(!node||!node.id) return;
+    var d = node.desc||'';
+    if(d.length>30) {
+      var art = document.createElement('article');
+      art.id = 'card-'+node.id;
+      var h = document.createElement('h2');
+      h.textContent = (node.label||'').replace(/\n/g,' ');
+      var p = document.createElement('p');
+      p.textContent = d;
+      art.appendChild(h);
+      art.appendChild(p);
+      sec.appendChild(art);
+    }
+    ['topPills','orbs','bottomPills'].forEach(function(k){
+      if(Array.isArray(node[k])) node[k].forEach(walk);
+    });
+  }
+  LAYERS.forEach(walk);
+})();
+
+// Hash auto-open: if URL has #card-id, open that card on load
+(function(){
+  var hash = window.location.hash;
+  if(!hash) return;
+  var id = hash.replace('#','');
+  if(!id || typeof LAYERS==='undefined') return;
+  var index = {};
+  function buildIndex(node) {
+    if(!node||!node.id) return;
+    if((node.desc||'').length>30) index[node.id]=node;
+    ['topPills','orbs','bottomPills'].forEach(function(k){
+      if(Array.isArray(node[k])) node[k].forEach(buildIndex);
+    });
+  }
+  LAYERS.forEach(buildIndex);
+  if(index[id]) {
+    setTimeout(function(){ cardNavOpen(index[id]); }, 600);
+  }
+})();
+</script>
+
 </body>
 </html>

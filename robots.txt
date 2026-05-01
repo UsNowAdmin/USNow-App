@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usnow.app/sitemap.xml
+
+# AI crawlers — full content index available
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# LLM indexes
+# https://usnow.app/llms.txt
+# https://usnow.app/llms-full.txt

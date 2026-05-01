@@ -40,7 +40,7 @@ const LAYERS = [
         "id": "s2",
         "label": "Body",
         "color": "#b87830",
-        "desc": "Before thought, before language — sensation. The body knows things the mind claims to have decided. The oldest intelligence you carry. Body image, physical health, and the stories we tell about the flesh we live in — all of it starts here.",
+        "desc": "Before thought, before language — sensation. The body knows things the mind claims to have decided. The oldest intelligence you carry. It registers threat before you name it, pleasure before you process it, grief before you understand it. Body image, physical health, and the stories we tell about the flesh we live in — all of it starts here. Every culture has tried to discipline the body, transcend it, monetize it, or shame it into compliance. None of that changes what it is: the one thing you cannot leave.",
         "links": [
           {
             "label": "NIH MedlinePlus",
@@ -78,7 +78,7 @@ const LAYERS = [
             "id": "c3d1",
             "label": "Medicine",
             "color": "#3a7a58",
-            "desc": "The science of keeping bodies alive and the industry built around it. The two are not always the same thing. The United States spends more on healthcare than any nation on earth and ranks poorly on most outcomes. That gap is the story.",
+            "desc": "The science of keeping bodies alive and the industry built around it. The two are not always the same thing. The United States spends more on healthcare than any nation on earth and ranks poorly on most outcomes. That gap is the story. Medicine has extended life, eliminated diseases, and rebuilt bodies that would have died in any prior century. It has also priced people out of survival, overtreated the wealthy, and undertreated everyone else. The science and the system are not the same thing, and knowing the difference matters.",
             "links": [
               {
                 "label": "NIH MedlinePlus",
@@ -138,7 +138,7 @@ const LAYERS = [
             "id": "c3d2",
             "label": "Mental Health",
             "color": "#1a8a60",
-            "desc": "The interior condition — mood, mind, stability, crisis. Undertreated, underfunded, and still carrying a stigma that has no basis in biology. One in five Americans lives with a mental health condition in any given year.",
+            "desc": "The interior condition — mood, mind, stability, crisis. Undertreated, underfunded, and still carrying a stigma that has no basis in biology. One in five Americans lives with a mental health condition in any given year. Most never receive treatment. The care that exists is unevenly distributed by income, geography, and race. Depression is the leading cause of disability worldwide. Suicide kills more Americans than car accidents. These are not personal failures. They are public health facts that a society chooses — or refuses — to act on.",
             "links": [
               {
                 "label": "NAMI",
@@ -198,7 +198,7 @@ const LAYERS = [
             "id": "c3d3",
             "label": "Aging",
             "color": "#2a7a50",
-            "desc": "Every system eventually confronts what it does with its oldest members. How a society treats the aging is a direct measure of what it actually values — as opposed to what it says it values.",
+            "desc": "Every system eventually confronts what it does with its oldest members. How a society treats the aging is a direct measure of what it actually values — as opposed to what it says it values. The United States is growing older faster than at any point in its history. By 2030 all baby boomers will be over 65. The infrastructure for care — nursing homes, home health aides, retirement security — is already strained. Aging is not a medical problem with a medical solution. It is a cultural and political question that most societies prefer not to answer until forced.",
             "links": [
               {
                 "label": "NIH — National Institute on Aging",
@@ -583,7 +583,7 @@ const LAYERS = [
             "id": "s3_obs",
             "label": "The Observer",
             "color": "#d4a855",
-            "desc": "The part of you watching you. Who is that? The gap between the thinker and the thought is where every contemplative tradition in human history has planted its flag.",
+            "desc": "The part of you watching you. Who is that? The gap between the thinker and the thought is where every contemplative tradition in human history has planted its flag. Buddhism calls it no-self. Descartes called it the only thing he could be certain of. Neuroscience calls it the default mode network and says it activates when you stop doing anything else. Whatever it is, most people spend very little time there. The observer is not the same as the thinker. That distinction is either the beginning of wisdom or a rabbit hole with no bottom — probably both.",
             "links": [
               {
                 "label": "On Being",
@@ -1056,7 +1056,7 @@ const LAYERS = [
         "id": "s1",
         "label": "Identity",
         "color": "#c9903a",
-        "desc": "Who you think you are. Assembled from memory, projection, and stories others told you before you had language to argue back. Fluid. Constructed. Yours — and not entirely yours.",
+        "desc": "Who you think you are. Assembled from memory, projection, and stories others told you before you had language to argue back. Fluid. Constructed. Yours — and not entirely yours. Identity is both the most personal thing you carry and the most socially determined. Gender, race, class, nationality, religion — categories others assigned before you knew what they meant. The work of a life is figuring out which parts were given to you and which parts you chose. Many people never begin that work. Some spend a lifetime at it and still aren't sure.",
         "links": [
           {
             "label": "Aeon",
@@ -1429,7 +1429,7 @@ const LAYERS = [
         "id": "s4",
         "label": "Memory",
         "color": "#a06828",
-        "desc": "The edited archive. Selective, revisionist, emotionally weighted. The primary material from which you construct the story of being you.",
+        "desc": "The edited archive. Selective, revisionist, emotionally weighted. The primary material from which you construct the story of being you. Memory is not a recording. It is a reconstruction — rebuilt slightly differently each time you access it, shaped by mood, need, and what you have learned since. The things you remember most vividly are not necessarily the things that mattered most. They are the things your nervous system flagged as dangerous, beautiful, or unresolved. What you forget is not neutral either. Forgetting is also a choice the mind makes, often without asking.",
         "links": [
           {
             "label": "Harvard Health",
@@ -1680,7 +1680,7 @@ const LAYERS = [
             "id": "s4_familymem",
             "label": "Family Memory",
             "color": "#c88848",
-            "desc": "The stories told at dinner. The ones never told at all. Family memory is the first archive most people inherit — incomplete, uncatalogued, and edited by everyone before you. What gets remembered says something. What gets forgotten says more.",
+            "desc": "The stories told at dinner. The ones never told at all. Family memory is the first archive most people inherit — incomplete, uncatalogued, and edited by everyone before you. What gets remembered says something. What gets forgotten says more. The story of your family is not the story of your family. It is the version that survived — the one that was safe to tell, useful to believe, or too painful to discard. Genealogy can recover names and dates. It cannot recover what it felt like to be those people, in those circumstances, making those decisions. That gap is where history becomes personal.",
             "links": [
               {
                 "label": "On Being",
@@ -1879,7 +1879,7 @@ const LAYERS = [
             "id": "s5_att",
             "label": "Attention",
             "color": "#c4801a",
-            "desc": "What you point your consciousness at becomes your world. Attention is the most powerful political act you perform — and you perform it thousands of times a day, mostly without deciding to.",
+            "desc": "What you point your consciousness at becomes your world. Attention is the most powerful political act you perform — and you perform it thousands of times a day, mostly without deciding to. Every platform, advertisement, news cycle, and notification is an attempt to capture it. The attention economy is not a metaphor. It is a multi-trillion-dollar infrastructure built on the premise that your focus can be harvested and sold. What you pay attention to shapes what you believe, what you fear, and who you become. That makes it worth defending — deliberately, daily, against systems that have spent decades learning how to take it.",
             "links": [
               {
                 "label": "Insight Timer",
@@ -2888,7 +2888,7 @@ const LAYERS = [
                 "id": "f_gen_dna_mut",
                 "label": "Mutation",
                 "color": "#c07840",
-                "desc": "A copy error. Most are harmless. Some are fatal. A few — over evolutionary time — turn out to be useful. Mutation is the engine of variation. Without it nothing would change. With it, sometimes things change too fast for the body to keep up.",
+                "desc": "A copy error. Most are harmless. Some are fatal. A few — over evolutionary time — turn out to be useful. Mutation is the engine of variation. Without it, nothing would change. Every cancer starts with a mutation. So did every evolutionary innovation that made you possible. The same mechanism that produces disease produces diversity. The same process that breaks bodies also generates the raw material that natural selection works with. Biology does not distinguish between the useful and the catastrophic — the environment does that sorting after the fact.",
                 "links": [
                   {
                     "label": "NIH MedlinePlus",
@@ -2939,7 +2939,7 @@ const LAYERS = [
                 "id": "f_gen_dna_recom",
                 "label": "Recombination",
                 "color": "#a86838",
-                "desc": "How sex shuffles the deck. Each generation, the genes from two parents are cut and rejoined into combinations that have never existed before. This is why siblings differ. This is why every human is a fresh experiment.",
+                "desc": "How sex shuffles the deck. Each generation, the genes from two parents are cut and rejoined into combinations that have never existed before and will never exist again. This is why siblings differ. This is why every human is a fresh experiment. Recombination is the process that prevents each lineage from accumulating the same harmful mutations indefinitely. The genetic lottery is not random noise. It is a feature — a system designed, through millions of years of selection, to keep producing something new.",
                 "links": [
                   {
                     "label": "NIH MedlinePlus",
@@ -3279,7 +3279,7 @@ const LAYERS = [
                 "id": "f_gen_hered_temp",
                 "label": "Temperament",
                 "color": "#d08848",
-                "desc": "What you are before the world gets to you. Some babies are calm. Some are wired tight from day one. Temperament is not personality — it is the substrate personality grows on. Parents of more than one child usually figure this out fast.",
+                "desc": "What you are before the world gets to you. Some babies are calm. Some are wired tight from day one. Temperament is not personality — it is the substrate personality grows on. It shows up within hours of birth. Reactivity, sociability, emotional intensity — these show heritability across twin studies consistently. Parents of more than one child usually figure this out fast: you cannot take full credit for the easy one, and you do not deserve full blame for the difficult one. The combination of temperament and environment is where character actually forms.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -3490,7 +3490,7 @@ const LAYERS = [
                 "id": "f_gen_evo_nat",
                 "label": "Natural Selection",
                 "color": "#a86038",
-                "desc": "The mechanism. Variations that help survival and reproduction get more copies in the next generation. Variations that don't, fade. Over enough time the math is ruthless and beautiful. It does not care about you. It produced you anyway.",
+                "desc": "The mechanism. Variations that help survival and reproduction get more copies in the next generation. Variations that don't, fade. Over enough time the math is ruthless and beautiful. It does not care about you. It produced you anyway. Natural selection has no foresight and no preferences. It is not moving toward anything. It is simply the result of differential reproduction — the fact that some organisms leave more descendants than others. Every feature of every organism is either a solution to a past problem or a cost that wasn't big enough to get selected against.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -3541,7 +3541,7 @@ const LAYERS = [
                 "id": "f_gen_evo_adapt",
                 "label": "Adaptation",
                 "color": "#c07038",
-                "desc": "The fit between an organism and a niche. Adaptation looks like design. It is not. It is the residue of millions of failed experiments, with the survivors looking — in retrospect — as if someone had planned the whole thing.",
+                "desc": "The fit between an organism and a niche. Adaptation looks like design. It is not. It is the residue of millions of failed experiments, with the survivors looking — in retrospect — as if someone had planned the whole thing. The eye is a classic example: complex, efficient, obviously functional. Also blind in a spot, inverted in its wiring, and rebuilt multiple times across different lineages through unrelated pathways. Evolution finds solutions but not optimal ones. It finds solutions that are good enough, using whatever material was already there.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -3863,7 +3863,7 @@ const LAYERS = [
                 "id": "f_gen_anc_mig",
                 "label": "Genetic Migration",
                 "color": "#b86838",
-                "desc": "The constant motion of people across the map. Every population has a migration story. Most have several, layered on top of each other across centuries. The genes carry the receipts.",
+                "desc": "The constant motion of people across the map. Every population has a migration story. Most have several, layered on top of each other across centuries. The genes carry the receipts. Modern genomics can trace when populations separated, when they mixed, who came from where. The out-of-Africa migration roughly 70,000 years ago seeded every human population outside the continent. What followed was not one journey but thousands — across land bridges, coastlines, and open water — producing the geographic distribution of humanity that most people simply call home.",
                 "links": [
                   {
                     "label": "Migration Data Portal",
@@ -3914,7 +3914,7 @@ const LAYERS = [
                 "id": "f_gen_anc_admix",
                 "label": "Admixture",
                 "color": "#c87040",
-                "desc": "When populations meet. Most modern humans carry DNA from multiple ancient populations — and many carry small percentages of Neanderthal or Denisovan ancestry. Pure populations are mostly a fiction. Mixing is the rule, not the exception.",
+                "desc": "When populations meet. Most modern humans carry DNA from multiple ancient populations — and many carry small percentages of Neanderthal or Denisovan ancestry from ancient encounters that happened before recorded history. Pure populations are mostly a fiction. Mixing is the rule, not the exception. The idea of racial purity has no basis in genetics and never did. Every population that appears homogeneous has a mixing event in its past. The only question is how far back you have to go to find it.",
                 "links": [
                   {
                     "label": "National Geographic",
@@ -4179,7 +4179,7 @@ const LAYERS = [
                 "id": "f_gen_dis_screen",
                 "label": "Screening",
                 "color": "#c07840",
-                "desc": "Testing for risk before symptoms appear. Useful when there is something to do with the answer. Less useful when the test produces anxiety without action. The ethics of screening get harder the more powerful the technology becomes.",
+                "desc": "Testing for risk before symptoms appear. Useful when there is something to do with the answer. Less useful when the test produces anxiety without action. The ethics of screening get harder the more powerful the technology becomes. Knowing you carry a gene variant associated with a serious disease changes how you live, how you plan, how you relate to your body. It also changes how insurers and employers may treat you if that information reaches them. Genetic screening is expanding rapidly. The infrastructure for processing what it reveals — medically, psychologically, legally — is not keeping pace.",
                 "links": [
                   {
                     "label": "NIH MedlinePlus",
@@ -4705,7 +4705,7 @@ const LAYERS = [
                 "id": "f_gen_eng_ethics",
                 "label": "Ethics & Control",
                 "color": "#a06038",
-                "desc": "Who decides. Who consents. Who profits. Who pays. The ethics of genetic engineering are not a separate seminar to be held later. They are the field. Pretending otherwise is how the field has gotten in trouble before.",
+                "desc": "Who decides. Who consents. Who profits. Who pays. The ethics of genetic engineering are not a separate seminar to be held later — they are the field. Pretending otherwise is how the field has gotten into trouble before. CRISPR has made gene editing fast, cheap, and accessible enough that the questions of who controls it are genuinely urgent. Designer babies. Disease eradication. Agricultural control. Germline editing that passes to all future generations without their consent. The power is real. The governance is not there yet. That gap is where the danger lives.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -4838,7 +4838,7 @@ const LAYERS = [
         "x": 38,
         "y": 42,
         "color": "#a86038",
-        "desc": "The family you build and the one you were born into. The people who see you clearly and stay anyway. Sometimes chosen, sometimes blood, sometimes both. Always a statement about who you've decided to become — and where you came from.",
+        "desc": "The family you build and the one you were born into. The people who see you clearly and stay anyway. Sometimes chosen, sometimes blood, sometimes both. Always a statement about who you've decided to become — and where you came from. Family is the first institution. It shapes language, attachment, risk tolerance, class position, and what you consider normal before you have any framework for comparison. It can be a source of protection or the first place you learn that love is conditional. Usually it is both, at different times, from different people.",
         "links": [
           {
             "label": "Census Data Explorer",
@@ -4858,7 +4858,7 @@ const LAYERS = [
             "id": "f1",
             "label": "Parents",
             "color": "#c05828",
-            "desc": "They handed you a lens you didn't ask for. You may spend a lifetime learning to see through it — or around it. Either way, it shaped the prescription.",
+            "desc": "They handed you a lens you didn't ask for. You may spend a lifetime learning to see through it — or around it. Either way, it shaped the prescription. Parents are the first example of power most people ever encounter — power exercised with and without care, consciously and blindly, out of love and out of their own unprocessed histories. The research on parent-child attachment is decades deep and mostly consistent: early relationships create templates. The templates are revisable. But revision requires noticing what you inherited, and most people were never told there was anything to notice.",
             "links": [
               {
                 "label": "American Psychological Association",
@@ -4878,7 +4878,7 @@ const LAYERS = [
                 "id": "f1d1",
                 "label": "Lineage & DNA",
                 "color": "#c87850",
-                "desc": "Before memory, before story — the biological inheritance. The code passed forward without consent, carrying predispositions, vulnerabilities, and gifts across generations. Your ancestry is both a map and a mystery.",
+                "desc": "Before memory, before story — the biological inheritance. The code passed forward without consent, carrying predispositions, vulnerabilities, and gifts across generations. Your ancestry is both a map and a mystery. The map shows migration routes, population bottlenecks, disease pressures, and adaptation. The mystery is everything that got lost in the translation from DNA to life — the choices people made, the circumstances they faced, the things they felt and never recorded. Genetic genealogy can tell you where your ancestors were. It cannot tell you who they were.",
                 "links": [
                   {
                     "label": "NIH",
@@ -5003,7 +5003,7 @@ const LAYERS = [
                 "id": "f3d1",
                 "label": "Ritual & Habit",
                 "color": "#a05020",
-                "desc": "Sunday dinners. Holidays. Repeated gestures that encoded belonging before you could name belonging. The body remembers ritual the way it remembers how to walk.",
+                "desc": "Sunday dinners. Holidays. Repeated gestures that encoded belonging before you could name belonging. The body remembers ritual the way it remembers how to walk. Family rituals are not decoration — they are structure. They mark time, define membership, and transmit values across generations more efficiently than explicit instruction ever could. When rituals break — through divorce, death, migration, or estrangement — the loss is often felt as something deeper than the practice itself. What people are mourning is the order the ritual represented. The belonging it made legible.",
                 "links": [
                   {
                     "label": "On Being",
@@ -5167,7 +5167,7 @@ const LAYERS = [
             "id": "f4d2",
             "label": "Families Around the World",
             "color": "#2a7fd4",
-            "desc": "Seven billion people. Thousands of ways to be a family. The differences in how people live are not natural — they are the result of history, policy, and power. The data puts it in perspective.",
+            "desc": "Seven billion people. Thousands of ways to be a family. The differences in how people organize kinship, child-rearing, elder care, and household structure across cultures are not quirks — they are the result of history, climate, economy, and policy. The nuclear family is not the natural family. It is a recent, Western, industrial arrangement. Extended households, multigenerational living, communal child-rearing, chosen family — these are not alternatives to family. They are family, in forms that have worked for most of human history and most of the world's population today.",
             "links": [
               {
                 "label": "UN Human Development Index",
@@ -5363,7 +5363,7 @@ const LAYERS = [
                 "id": "f_sib_comp",
                 "label": "Comparison",
                 "color": "#a86838",
-                "desc": "The category each sibling gets sorted into. The smart one. The athletic one. The difficult one. The roles get assigned early and most families never quite let them go. Siblings spend lifetimes either inhabiting their assignment or fighting it.",
+                "desc": "The category each sibling gets sorted into. The smart one. The athletic one. The difficult one. The artistic one. The roles get assigned early and most families never quite let them go. Siblings spend lifetimes either inhabiting their assignment or fighting it — neither of which is entirely free. The comparison is usually implicit, which makes it harder to argue with. It shapes ambition, self-concept, and the relationship between siblings long after anyone consciously remembers the original sorting. Sometimes the category fits. More often it was just the first thing that stuck.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -5459,7 +5459,7 @@ const LAYERS = [
                 "id": "f_sib_fav",
                 "label": "Favoritism",
                 "color": "#c87840",
-                "desc": "The thing parents say doesn't happen and almost always does. Children know. They knew before they had words for it. The favored child carries a different burden than the unfavored one — but both are carrying something the parents handed them.",
+                "desc": "The thing parents say doesn't happen and almost always does. Children know. They knew before they had words for it. The favored child carries a different burden than the unfavored one — but both are carrying something. The favored one often inherits a fragile entitlement. The unfavored one often inherits a persistent need to prove something. Both tendencies travel into adult relationships and professional life. The research suggests favoritism is most damaging not when it is overt but when it is denied — when the child's perception is contradicted by the adults who created it.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -5619,7 +5619,7 @@ const LAYERS = [
                 "id": "f_sys_roles",
                 "label": "Family Roles",
                 "color": "#8a4828",
-                "desc": "Who gets cast as what. The hero. The scapegoat. The lost child. The mascot. The roles serve the system — they manage the anxiety of whatever is unspoken in the family. The cost is borne by the people stuck inside them.",
+                "desc": "Who gets cast as what. The hero. The scapegoat. The lost child. The mascot. The roles serve the family system — they manage the anxiety of whatever is unspoken or unresolved in the household. The cost is borne by the people stuck inside them. Family systems theory holds that no member's behavior makes sense outside the context of the system. The difficult child is often expressing what the system cannot say. The perfect child is often managing what the system cannot bear to look at. The roles are not chosen — they are assigned, usually unconsciously, because the system needs them filled.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -5670,7 +5670,7 @@ const LAYERS = [
                 "id": "f_sys_secrets",
                 "label": "Secrets",
                 "color": "#a85830",
-                "desc": "What the family agrees not to talk about. Sometimes for protection. Sometimes for shame. Sometimes because the truth would rearrange too many lives. Family secrets do not stay buried. They surface in the next generation, often as symptoms.",
+                "desc": "What the family agrees not to talk about. Sometimes for protection. Sometimes for shame. Sometimes because the truth would rearrange too many lives. Family secrets do not stay buried — they surface in the next generation, often as symptoms rather than disclosures. Addiction, mental illness, abuse, illegitimacy, financial ruin — these travel through families in disguise. The child who inexplicably struggles with something the family insists is fine is often metabolizing what the adults agreed to swallow. Therapy often begins with the discovery that what looked like a personal problem was a family secret in another form.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -5721,7 +5721,7 @@ const LAYERS = [
                 "id": "f_sys_conf",
                 "label": "Conflict",
                 "color": "#9a5030",
-                "desc": "The fights that keep happening. The same fight in slightly different costumes. Families have signature conflicts the way bodies have signature illnesses. The content is rarely the issue. The pattern is.",
+                "desc": "The fights that keep happening. The same fight in slightly different costumes. Families have signature conflicts the way bodies have signature illnesses — recurring, patterned, more or less predictable to everyone inside. The content is rarely the issue. The pattern is. What looks like an argument about dishes or money or a holiday plan is usually a negotiation about power, acknowledgment, or old wounds that were never addressed. Conflict is not a problem to be eliminated from families. It is information. The question is whether the family has learned to read it.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -5880,7 +5880,7 @@ const LAYERS = [
                 "id": "f_sys_gen",
                 "label": "Generational Patterns",
                 "color": "#8a4828",
-                "desc": "What gets passed down without anyone meaning to pass it. The way grandfather raised father raised you. The cycle that breaks only when someone notices it and refuses. Generational patterns are not destiny. But they don't break themselves.",
+                "desc": "What gets passed down without anyone meaning to pass it. The way grandfather raised father raised you. The emotional template reproduced across generations so reliably that it looks like character or fate. Generational patterns are not destiny. But they don't break themselves. Breaking them requires identifying them first — which means someone in the line having enough distance to see the pattern instead of just living it. That person is usually the one the family describes as difficult, oversensitive, or ungrateful. They are often the one doing the hardest work.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -6094,7 +6094,7 @@ const LAYERS = [
                 "id": "fc_we_wages",
                 "label": "Wages",
                 "color": "#a05028",
-                "desc": "What employers pay for time. American wages have stagnated for the bottom half of earners for roughly fifty years while productivity has roughly doubled. The gap is the story. Where the gap went is the rest of the story.",
+                "desc": "What employers pay for time. American wages have stagnated for the bottom half of earners for roughly fifty years while productivity has roughly doubled. The gap — between what workers produce and what they are paid — is real, documented, and politically contested as to cause. Where the gap went is the rest of the story: to capital returns, executive compensation, and shareholder value. The federal minimum wage has not been raised since 2009. In inflation-adjusted terms it is lower today than it was in the late 1960s. That is not an accident. It is a policy choice, renewed by inaction every year it stays the same.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -6233,7 +6233,7 @@ const LAYERS = [
                 "id": "fc_we_own",
                 "label": "Ownership",
                 "color": "#a85830",
-                "desc": "Who holds the title. Land. Buildings. Companies. Patents. Ownership is the deepest layer of class — the one that does not require you to work to maintain it. The richest Americans do not earn their wealth. They own it.",
+                "desc": "Who holds the title. Land. Buildings. Companies. Patents. Intellectual property. Ownership is the deepest layer of class — the one that does not require you to work to maintain it. The richest Americans do not primarily earn their wealth. They own assets that appreciate. The difference between earning and owning is the difference between needing the economy to work and simply needing it to keep running. Ownership wealth compounds. Wage income does not. This is not a metaphor about fairness — it is a mathematical description of how the system distributes what it produces.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -6284,7 +6284,7 @@ const LAYERS = [
                 "id": "fc_we_inq",
                 "label": "Inequality",
                 "color": "#7a3820",
-                "desc": "The gap. The U.S. has the highest income inequality of any major developed economy. The wealth gap is wider still. Inequality at this level is not a side effect of the economy. It is the economy doing what the rules tell it to do.",
+                "desc": "The gap. The U.S. has the highest income inequality of any major developed economy, and the wealth gap is wider still. Inequality at this level is not a side effect of the economy. It is the economy doing what the rules tell it to do. The rules — tax policy, labor law, corporate governance standards — were written, changed, and maintained by people with interests in the outcome. Inequality is not a natural condition. It is an engineered one, and the engineering has been accelerating since the 1970s. The data is not ambiguous. What to do about it is politically contested.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -6450,7 +6450,7 @@ const LAYERS = [
                 "id": "fc_wo_jobs",
                 "label": "Jobs",
                 "color": "#8a4820",
-                "desc": "The place where work meets a paycheck. American job composition has shifted from manufacturing to service across two generations. The pay went down. The benefits went down. The dignity got renegotiated and the new terms were not better.",
+                "desc": "The place where work meets a paycheck. American job composition has shifted from manufacturing to service across two generations. The pay went down. The benefits went down. The dignity got renegotiated and the new terms were not better. Service work now employs the majority of Americans. Much of it is part-time, shift-based, and without benefits, retirement, or predictable scheduling. The American mythology of work — that hard work leads to security — describes a labor market that existed briefly in the mid-twentieth century and has not existed since.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -6501,7 +6501,7 @@ const LAYERS = [
                 "id": "fc_wo_unions",
                 "label": "Unions",
                 "color": "#a85838",
-                "desc": "Workers organizing to bargain together. Unions built the American middle class. Their decline tracks the rise of inequality with uncomfortable precision. The current resurgence of union activity is the first serious turn in a generation.",
+                "desc": "Workers organizing to bargain collectively. Unions built the American middle class. Union membership peaked at around 35% of workers in the 1950s and sits below 10% today. The decline tracks the rise of inequality with uncomfortable precision — because unions are the mechanism through which workers capture a share of the productivity they produce. The current resurgence — at Amazon, Starbucks, hospitals, universities — is the first serious labor organizing movement in a generation. Whether it produces lasting change depends on whether labor law and enforcement are willing to back it.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -6645,7 +6645,7 @@ const LAYERS = [
                 "id": "fc_wo_prof",
                 "label": "Professional Class",
                 "color": "#b86040",
-                "desc": "The credentialed middle. Doctors, lawyers, professors, white-collar managers. The class that traded job security and union membership for prestige and income, and is now finding out that prestige is liquid and income is not what it used to be.",
+                "desc": "The credentialed middle. Doctors, lawyers, engineers, professors, managers. The class that traded union solidarity and manufacturing wages for education credentials and professional status, and built an identity around the distinction. The professional class is now under pressure from both directions — squeezed by the costs of the credentials that define it and increasingly replaceable by technology in the functions it was paid to perform. The status has not collapsed. The economic security it once provided is hollower than it used to be.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -6696,7 +6696,7 @@ const LAYERS = [
                 "id": "fc_wo_gig",
                 "label": "Gig Economy",
                 "color": "#7a3820",
-                "desc": "Work without a contract. Drivers, delivery people, freelancers, the people the apps insist are not employees. The gig economy is mostly the old labor market with the protections stripped off. The flexibility is real. So is the precarity.",
+                "desc": "Work without a contract. Drivers, delivery people, freelancers, independent contractors — the people the platforms insist are not employees. The gig economy is mostly the old labor market with the protections stripped off and rebranded as flexibility. The flexibility is real. So is the precarity — no benefits, no unemployment insurance, no workers' compensation, no overtime protection, no employer contribution to retirement. The workers who perform this labor are formally classified as entrepreneurs. The companies that profit from their labor are not.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -6978,7 +6978,7 @@ const LAYERS = [
                 "id": "fc_ed_cap",
                 "label": "Social Capital",
                 "color": "#b06038",
-                "desc": "Who you know. Who knew you when. The internships your parents could afford. The introductions that came with the right zip code. Most of what gets called merit in elite institutions is social capital with a college transcript stapled to the front.",
+                "desc": "Who you know. Who knew you when. The internships your parents could arrange. The introductions that came with the right zip code or the right school. Social capital is the accumulated network of relationships, institutions, and informal knowledge that eases navigation through elite spaces. Most of what gets called merit in selective institutions is social capital dressed in a college transcript. First-generation students are not less capable than their peers — they are operating without the manual everyone else was handed before they arrived.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -7029,7 +7029,7 @@ const LAYERS = [
                 "id": "fc_ed_gate",
                 "label": "Gatekeeping",
                 "color": "#a05030",
-                "desc": "The decisions, mostly invisible, about who gets in and who doesn't. Admissions committees. Hiring managers. The bouncer at the network event. Gatekeeping is class enforcement dressed up as standards.",
+                "desc": "The decisions, mostly invisible, about who gets in and who doesn't. Admissions committees. Hiring managers. The unwritten rules of the network event. Gatekeeping is class enforcement dressed as standards. It is rarely announced as exclusion — it is described as selectivity, quality, culture fit, or the ineffable sense that someone belongs. The criteria tend to favor people who already look like the people doing the selecting. The result is that access to opportunity reproduces itself along existing class and race lines more reliably than almost any other mechanism.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -7183,7 +7183,7 @@ const LAYERS = [
                 "id": "fc_h_rent",
                 "label": "Rent",
                 "color": "#a05028",
-                "desc": "What you pay for the right to keep living somewhere. American rent has outpaced wages for two decades. Roughly half of American renters now spend more than 30% of income on housing. That is a structural problem, not a personal one.",
+                "desc": "What you pay for the right to keep living somewhere. American rent has outpaced wages for two decades in most major cities. Roughly half of American renters are now cost-burdened — spending more than 30% of income on housing. The cause is not mysterious: housing supply has not kept pace with demand in high-opportunity areas, and zoning laws have been used deliberately to prevent density in expensive neighborhoods. The result is a bifurcated country where the people who can afford to live near the jobs that pay well do, and everyone else manages from farther away.",
                 "links": [
                   {
                     "label": "FRED Economic Data",
@@ -7496,7 +7496,7 @@ const LAYERS = [
                 "id": "fc_st_man",
                 "label": "Manners",
                 "color": "#a86838",
-                "desc": "The rules that mark you as belonging. Which fork. When to speak. How loud to laugh. Manners are class signaling pretending to be civility. The rules differ by class, and the people who set them tend to be the people who define the room.",
+                "desc": "The rules that mark you as belonging. Which fork. When to speak. How loud to laugh. How formally to dress. Manners are class signaling performing as civility. The rules differ by class, and the people who set them tend to be the people who control the rooms where they apply. Manners are not neutral etiquette — they are a gatekeeping technology that makes class membership legible without naming it directly. The person unfamiliar with the rules is marked as an outsider. The person enforcing them rarely acknowledges what they are enforcing.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -7592,7 +7592,7 @@ const LAYERS = [
                 "id": "fc_st_cons",
                 "label": "Consumption",
                 "color": "#c87848",
-                "desc": "What you buy and what it says. Consumption used to mark class through scarcity. Now it marks class through curation — the right brands, the right restaurants, the right vacations. The signal moves faster than it used to. The hierarchy stays.",
+                "desc": "What you buy and what it says. Consumption has always been a class signal, but the signal has changed. In the industrial era, spending on visible goods — houses, cars, clothing — communicated status. In the postindustrial era the signal moved toward experience, authenticity, restraint, and the right kind of taste. The wealthy now compete over organic groceries, travel destinations, schools, and cultural consumption. The hierarchy is no less rigid. The display is more coded. The people who grew up in it can read it instantly. The people who didn't are still learning the vocabulary.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -7733,7 +7733,7 @@ const LAYERS = [
                 "id": "fc_st_resp",
                 "label": "Respectability",
                 "color": "#a86838",
-                "desc": "The performance of being a good kind of poor. Respectability politics asks marginalized people to dress, speak, and behave a certain way in exchange for safer treatment. The bargain has rarely paid off. The treatment was never about the behavior.",
+                "desc": "The performance of being a good kind of poor, a good kind of Black, a good kind of immigrant. Respectability politics asks marginalized people to dress, speak, and behave in ways the dominant culture approves of, in exchange for safer treatment. The bargain has rarely paid off at the systemic level. The treatment was rarely actually about the behavior. Respectability politics places the burden of ending discrimination on the people being discriminated against — and blames them when the strategy fails rather than questioning why the strategy was ever required.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -7912,7 +7912,7 @@ const LAYERS = [
                 "id": "fc_mob_sb",
                 "label": "Small Business",
                 "color": "#b06038",
-                "desc": "The classic American mobility story. Roughly half of small businesses fail within five years. Most that succeed do not make their owners rich. Small business ownership is real work and real dignity — but it is not a shortcut to a different class.",
+                "desc": "The classic American mobility story. Hard work, a good product, a loyal customer base, and the dream of being your own boss. Roughly half of small businesses fail within five years. Most that succeed do not generate wealth — they generate livable income and the satisfaction of autonomy. Small business ownership is real work and real dignity. It is not, for most people, a shortcut to a different class. The mythology of the entrepreneur as the engine of American prosperity flattens a more complicated reality in which small business owners are often working as hard as anyone for less security than they would have had as employees.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -8172,7 +8172,7 @@ const LAYERS = [
             "id": "f_rc_d1",
             "label": "Place",
             "color": "#9a4020",
-            "desc": "Geography is not neutral. Where you were born shapes what you believe is possible, what you believe is normal, and who you believe deserves what. ZIP code predicts life expectancy more reliably than almost any individual behavior.",
+            "desc": "Geography is not neutral. Where you were born shapes what you believe is possible, what you consider normal, and what you assume about strangers. ZIP code predicts life expectancy, educational attainment, income, and incarceration rates more reliably than almost any individual characteristic. This is not because place determines fate — it is because place determines the environments, institutions, resources, and social networks that shape what choices are available. The American mythology of individual mobility tends to ignore how much the starting point determines the trajectory. Where you begin is not your fault. But it is your reality.",
             "links": [
               {
                 "label": "Census Data Explorer",
@@ -8234,7 +8234,7 @@ const LAYERS = [
             "id": "f_rc_d2",
             "label": "Rights & Responsibilities",
             "color": "#7a3018",
-            "desc": "Rights without responsibility are wishes. Responsibility without rights is servitude. The tension between the two is the actual content of civic life — what you are owed, what you owe, and who decides.",
+            "desc": "Rights without responsibility are wishes. Responsibility without rights is servitude. The tension between the two is the actual content of civic life — what you are owed, what you owe, and who decides. American political culture tends to fragment this into camps: one side that emphasizes rights without discussing obligations, another that demands responsibility while resisting enforcement of rights. The two cannot be separated. A society that protects rights broadly produces people capable of meeting responsibilities. A society that demands responsibility while withholding rights is asking for something it has not offered.",
             "links": [
               {
                 "label": "ACLU",
@@ -8291,7 +8291,7 @@ const LAYERS = [
             "id": "frc_struct",
             "label": "Race as Structure",
             "color": "#7a3820",
-            "desc": "Race is not a fact about biology — it is a fact about how societies have organized power. The categories were invented, refined, and used to justify who got land, vote, work, freedom. The genes don't sort the way the categories do. The history did.",
+            "desc": "Race is not a fact about biology — it is a fact about how societies have organized power. The categories were invented, refined, and weaponized to justify who got land, vote, work, freedom. The genes do not sort the way the categories do. Human genetic variation is real but it does not cluster along the lines that racial categories describe. Race as biology is a fiction. Race as social structure is not. It has produced documented differences in wealth, health, incarceration, education, and life expectancy that persist across generations. The categories were built to do that. They worked.",
             "links": [
               {
                 "label": "ProPublica",
@@ -8317,7 +8317,7 @@ const LAYERS = [
                 "id": "frc_st_class",
                 "label": "Classification",
                 "color": "#6a3018",
-                "desc": "Who decides which boxes exist and who gets put in them. The U.S. Census has redrawn its racial categories more than two dozen times. Each redraw is a political decision dressed as a clerical one.",
+                "desc": "Who decides which boxes exist and who gets put in them. The U.S. Census has redrawn its racial categories more than two dozen times since 1790. Each redraw is a political decision dressed as a clerical one — reflecting who needed to be counted as what for purposes of taxation, representation, exclusion, or labor. The category of white has expanded and contracted over time to include or exclude Irish, Italian, Jewish, and other groups depending on the political needs of the moment. Classification is power. The people with the power to classify set the terms everyone else lives under.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -8518,7 +8518,7 @@ const LAYERS = [
                 "id": "frc_st_soc",
                 "label": "Social Construction",
                 "color": "#8a4030",
-                "desc": "The phrase scientists and historians settled on once it became obvious that race is not a natural kind. Constructed does not mean fake. It means built — by laws, by institutions, by repetition — and built things have force.",
+                "desc": "The phrase that scientists, historians, and sociologists settled on once it became impossible to deny that race is not a biological category. Social construction does not mean fake. It means built — by laws, by institutions, by repetition, by enforcement. Language is socially constructed. Money is socially constructed. So is the nation-state. Constructed things have enormous force. Race was built through specific legal instruments — slavery, the one-drop rule, redlining, the GI Bill's exclusions — and those instruments produced real material differences in wealth and opportunity that compound across generations.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -8621,7 +8621,7 @@ const LAYERS = [
                 "id": "frc_eth_lang",
                 "label": "Language & Identity",
                 "color": "#9a5028",
-                "desc": "The first thing a community loses when it gets pressured to assimilate. The first thing reclaimed when communities push back.",
+                "desc": "The first thing a community loses when it gets pressured to assimilate. The first thing reclaimed when communities push back. Language carries more than communication — it carries epistemology, humor, kinship terms, relationships to time and space and obligation that do not translate cleanly into the dominant tongue. When Indigenous children were taken to boarding schools, the first target was their language. That was not incidental. Language is the architecture of culture. Lose it and you lose the culture's ability to reproduce itself on its own terms.",
                 "links": [
                   {
                     "label": "Endangered Languages Project",
@@ -8672,7 +8672,7 @@ const LAYERS = [
                 "id": "frc_eth_food",
                 "label": "Food",
                 "color": "#b86840",
-                "desc": "What survives migration when most of the rest is lost. Recipes are some of the most durable carriers of identity ever invented. They cross borders that the people who carry them sometimes don't.",
+                "desc": "What survives migration when most of the rest is lost. Recipes are some of the most durable carriers of identity ever invented. They cross borders that the people who carry them sometimes cannot. Food is the last link in the chain for many diaspora communities — the grandparent's dish made from memory, the flavor that triggers a sense of belonging that cannot be named otherwise. Food is also constantly appropriated, decontextualized, and sold back to the communities it came from in forms they would not recognize. What gets celebrated and what gets credited rarely align.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -8741,7 +8741,7 @@ const LAYERS = [
                 "id": "frc_eth_home",
                 "label": "Homeland",
                 "color": "#a05828",
-                "desc": "The place the diaspora carries in its head, often more vivid than the place that exists now. Homeland in this sense is partly real, partly mythic, and entirely shaping.",
+                "desc": "The place the diaspora carries in its head, often more vivid and more idealized than the place that exists now. Homeland in this sense is partly real, partly mythic, and entirely shaping. It is invoked in political movements, passed to children who have never seen it, mourned by people who left under duress and have never returned. The gap between the homeland imagined and the homeland that exists produces its own politics — nostalgia, nationalism, sometimes violence. First-generation immigrants and their children often negotiate a homeland they experience differently and disagree about how to mourn.",
                 "links": [
                   {
                     "label": "Migration Data Portal",
@@ -8786,7 +8786,7 @@ const LAYERS = [
                 "id": "frc_eth_inter",
                 "label": "Intermarriage",
                 "color": "#c87048",
-                "desc": "The most powerful force changing American ethnic categories. The boundaries that the Census once enforced are dissolving across kitchen tables.",
+                "desc": "The most powerful force changing American ethnic categories across generations. The boundaries that the Census once tried to enforce by law are dissolving across kitchen tables and in marriage records. Intermarriage rates have increased across every group since the 1960s. The growing mixed-race population is changing how Americans think about racial categories in ways that law and policy have not yet fully absorbed. Whether intermarriage dissolves racial hierarchy or simply produces new hierarchies with different edges is one of the more honest arguments in American sociology right now.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -8869,7 +8869,7 @@ const LAYERS = [
             "id": "frc_id",
             "label": "Identity & Belonging",
             "color": "#b06840",
-            "desc": "How race and ethnicity get lived from the inside. The categories the world assigns and the categories the self chooses are rarely identical. Most people negotiate the gap their whole lives.",
+            "desc": "How race and ethnicity get lived from the inside. The categories the world assigns and the categories the self chooses are rarely identical. A biracial person may identify with one parent's community, both, or neither, depending on context, history, and which identity offers more belonging on a given day. Most people who live across racial categories negotiate the gap constantly — between how they are read by others and how they understand themselves. That negotiation is not a personal quirk. It is the normal experience of living in a society whose categories are cruder than the people they describe.",
             "links": [
               {
                 "label": "Pew Research",
@@ -8883,7 +8883,7 @@ const LAYERS = [
                 "id": "frc_id_self",
                 "label": "Self-Identification",
                 "color": "#a05830",
-                "desc": "The category you claim. The Census now asks. The world does not always honor the answer.",
+                "desc": "The category you choose to claim. The Census now officially asks rather than assigns. The world does not always honor the answer. Self-identification matters — it shapes community, politics, belonging, and access to resources tied to group membership. It is also contested. Communities have long argued about who gets to identify in, who is authentic, and who is claiming an identity for reasons that benefit them. Those arguments are real and often legitimate. The person doing the identifying is still the one who lives with the answer.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -8934,7 +8934,7 @@ const LAYERS = [
                 "id": "frc_id_mix",
                 "label": "Mixed Identity",
                 "color": "#c07040",
-                "desc": "The fastest-growing American identity. Mixed-race people occupy a space the categories were not built to hold, and increasingly are insisting that the categories change instead.",
+                "desc": "The fastest-growing American identity. Mixed-race people occupy a space the categories were not built to hold, and increasingly are insisting that the categories change rather than that they fit themselves into boxes that don't match. The experience of being multiracial in America is not one thing. It varies by which combinations are involved, by how the person is read visually, by class, by geography, by family. What it consistently involves is navigating multiple communities' expectations — often being too much of one thing and not enough of another, everywhere.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -8985,7 +8985,7 @@ const LAYERS = [
                 "id": "frc_id_pass",
                 "label": "Passing",
                 "color": "#9a5030",
-                "desc": "When someone is read as a category they do not belong to, sometimes by choice, sometimes by circumstance. American history is full of passing — its safety, its costs, its grief.",
+                "desc": "When someone is read as a category they do not belong to — sometimes by choice, sometimes by circumstance, sometimes by the limits of how other people see. American history is full of passing. Light-skinned Black Americans who passed as white to access housing, jobs, and safety. Jewish Americans who anglicized names to navigate anti-Semitism. The costs are well documented: loss of community, estrangement from family, the constant management of information. Passing is not the same as deception. It is a survival strategy in a system that makes some categories dangerous.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -9030,7 +9030,7 @@ const LAYERS = [
                 "id": "frc_id_code",
                 "label": "Code-Switching",
                 "color": "#b06838",
-                "desc": "The practice of changing language, accent, or behavior to navigate different rooms. Mostly done by people whose home culture is read as suspect by the dominant one. The work is real and mostly unacknowledged.",
+                "desc": "The practice of shifting language, tone, accent, and behavior to move through different rooms. Mostly performed by people whose home culture is read as suspect or insufficient by the dominant one. Code-switching is a real competence — the ability to be bilingual in social registers. It is also an invisible tax. The cognitive load of monitoring your own speech, body language, and presentation in environments where the default is someone else's normal is real and cumulative. It is rarely acknowledged by the people who never have to do it, which is most of the people in the rooms that require it.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -9075,7 +9075,7 @@ const LAYERS = [
                 "id": "frc_id_com",
                 "label": "Community",
                 "color": "#c07048",
-                "desc": "The room where you don't have to translate. Ethnic and racial communities have built schools, papers, churches, mutual aid, political power, and the everyday infrastructure that makes living in a hostile country possible.",
+                "desc": "The room where you don't have to translate. Ethnic and racial communities have built parallel institutions across American history — Black newspapers, mutual aid societies, ethnic churches, community development organizations — because the mainstream institutions either excluded them or served them inadequately. These communities are not consolation prizes for people who couldn't access the mainstream. They are functioning alternatives built under duress and sustained by solidarity. They also carry contradictions: internal hierarchies, exclusions, and disagreements about who belongs and on what terms.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -9126,7 +9126,7 @@ const LAYERS = [
                 "id": "frc_id_excl",
                 "label": "Exclusion",
                 "color": "#7a3820",
-                "desc": "The other side of belonging. The room you don't get into. Exclusion is not always loud — sometimes it is the silence after your name in the meeting. The cumulative effect is what shapes a life.",
+                "desc": "The other side of belonging. The room you don't get into. The invitation that doesn't come. The name that gets passed over in the meeting. Exclusion is not always loud — sometimes it is the pattern you can only see from outside. The cumulative effect of small exclusions is what shapes a life, a career, a community's position in the hierarchy. Research on implicit bias has documented how exclusion operates below the threshold of conscious intent. The person doing the excluding often genuinely believes they are not. The person being excluded experiences the outcome either way.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -9235,7 +9235,7 @@ const LAYERS = [
                 "id": "frc_rp_slav",
                 "label": "Slavery",
                 "color": "#3a1808",
-                "desc": "The American original sin. Two and a half centuries of human beings as legal property. The wealth it built funded the country. The harm it did has not been remediated. Most American institutions still bear its fingerprints if you know where to look.",
+                "desc": "The American original sin. Two and a half centuries of human beings as legal property — bought, sold, bred, worked, and killed in the service of an agricultural economy that funded the country's expansion. The wealth it built seeded American banking, insurance, and industrial capital. The harm it did has not been remediated. Descendants of enslaved people are wealthier by absolute measure than their grandparents — and further behind white Americans in relative terms than they were in 1968. Most American institutions still bear slavery's fingerprints if you know where to look. Most people were not taught where to look.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -9445,7 +9445,7 @@ const LAYERS = [
                 "id": "frc_rp_ster",
                 "label": "Stereotypes",
                 "color": "#7a3828",
-                "desc": "The mental shortcuts the dominant culture trains everyone to use. Stereotypes harm the people they describe and shape the perceptions of the people who hold them, often without consent or awareness.",
+                "desc": "The mental shortcuts the dominant culture trains everyone to use. Stereotypes harm the people they describe in direct and documented ways — in hiring, lending, policing, medicine, and education. They also shape the inner life of the people who hold them, including members of stereotyped groups who internalize the image they have been subjected to. Stereotype threat — the anxiety of confirming a negative stereotype about your group — has measurable effects on performance and well-being. Stereotypes are not just rude. They are a form of structural harm disguised as observation.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -9496,7 +9496,7 @@ const LAYERS = [
                 "id": "frc_rp_back",
                 "label": "Backlash",
                 "color": "#8a3818",
-                "desc": "The recurring American pattern. Every advance in civil rights has been followed by organized retreat — Reconstruction, civil rights, the Obama years. Backlash is not a glitch. It is part of the cycle the country keeps running.",
+                "desc": "The recurring American pattern. Every documented advance in civil rights has been followed by organized political and legal retreat. Reconstruction gave way to Jim Crow. The gains of the civil rights movement gave way to mass incarceration, the war on drugs, and the gutting of the Voting Rights Act. The Obama presidency was followed by a political movement organized in part around its reversal. Backlash is not a glitch in the American story. It is part of the structure — the recurring attempt to reassert a hierarchy that the preceding movement threatened. Understanding the pattern does not make it inevitable. It makes it visible.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -9699,7 +9699,7 @@ const LAYERS = [
             "id": "crel_att",
             "label": "Attachment",
             "color": "#5a8a8a",
-            "desc": "How you learned to be close to people. The first relationships — usually with caregivers — set a pattern the body remembers long after the conscious mind has moved on. Attachment styles are not destiny. They are starting positions.",
+            "desc": "How you learned to be close to people. The first relationships — usually with caregivers — set a pattern the body remembers long after the conscious mind has moved on. Attachment styles are not destiny. They are starting positions. The research is decades deep and consistent: early attachment shapes adult relationship patterns, health outcomes, and the next generation's attachment. The attachment style a person develops is not a verdict about them. It is a description of what they adapted to. Adults can develop earned security over time, in relationships where reliability is experienced and sustained.",
             "links": [
               {
                 "label": "Harvard Health",
@@ -9725,7 +9725,7 @@ const LAYERS = [
                 "id": "crel_att_safe",
                 "label": "Safety",
                 "color": "#4a7a7a",
-                "desc": "What it feels like when the people closest to you are reliable. Most adult relationship work is the slow rebuilding of this when childhood didn't supply it.",
+                "desc": "What it feels like when the people closest to you are reliable. You can need things. You can be upset. You can go away and come back. Safety in attachment is not the absence of conflict — it is the confidence that the relationship survives it. Most adult relationship work, when it goes well, is the slow reconstruction of this when childhood didn't supply it reliably. It can be built. It takes longer when it has to be built from scratch.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -9770,7 +9770,7 @@ const LAYERS = [
                 "id": "crel_att_avoid",
                 "label": "Avoidance",
                 "color": "#6a8a8a",
-                "desc": "The strategy of getting close enough to function and not so close it costs anything. Often built early in homes where closeness was not safe.",
+                "desc": "The strategy of getting close enough to function and not so close it costs too much. Built early in homes where closeness was unpredictable or punished. Avoidant people often look self-sufficient from the outside. The self-sufficiency is real. It is also a defense that was built for a different time and a different home. In adult relationships, avoidance tends to push away the people who want to give what was missing. The pattern repeats until someone identifies it and decides to do something harder.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -9815,7 +9815,7 @@ const LAYERS = [
                 "id": "crel_att_anx",
                 "label": "Anxiety",
                 "color": "#7a9a9a",
-                "desc": "The other strategy. Closeness becomes a thing to monitor, hold tight, check on. Often built where care was inconsistent.",
+                "desc": "The strategy of monitoring closeness — holding tight, checking in, reading signals constantly for signs that the relationship is about to change. Built where care was inconsistent and the good moments were real but unpredictable. Anxious attachment is exhausting to live inside and hard to live alongside. The monitoring makes sense as a childhood solution. In adult relationships it tends to create the withdrawal it was designed to prevent. The pattern is treatable and remarkably common.",
                 "links": [
                   {
                     "label": "NAMI",
@@ -9860,7 +9860,7 @@ const LAYERS = [
                 "id": "crel_att_dep",
                 "label": "Dependence",
                 "color": "#5a8080",
-                "desc": "The line between healthy reliance and unhealthy fusion. Adults negotiate this every day in every close relationship. The line moves.",
+                "desc": "The line between healthy reliance and unhealthy fusion. Adults need each other and that is not pathology. Dependence becomes a problem when one person's identity, stability, or sense of worth is entirely contingent on another person's availability. The line moves with the relationship and shifts under stress. Most people who describe themselves as codependent are operating from an attachment history that made independence feel like loss and closeness feel like the only safety. The solution is not to need less. It is to need differently.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -9905,7 +9905,7 @@ const LAYERS = [
                 "id": "crel_att_child",
                 "label": "Childhood Patterns",
                 "color": "#6a8888",
-                "desc": "The originals. Most adult relationship trouble has a childhood diagram somewhere underneath, with the same shapes in different costumes.",
+                "desc": "The originals. The earliest patterns — usually with a primary caregiver — become the template the body applies to close relationships long after the conscious mind has moved on. Most adult relationship trouble has a childhood diagram somewhere underneath, with the same shapes in different costumes. The template is not fixed. But it is the first draft. Understanding it is less about assigning blame to parents and more about seeing clearly what you are working from and what you might want to revise.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -9956,7 +9956,7 @@ const LAYERS = [
                 "id": "crel_att_sec",
                 "label": "Security",
                 "color": "#4a7878",
-                "desc": "The earned version. Adult security in relationships is rarely a gift of childhood — most often it is built, slowly, by people who decided to do the work of becoming reliable to themselves and others.",
+                "desc": "The earned version. Adult security in attachment is rarely a simple gift of childhood — most often it is built over time, in relationships where reliability was chosen and maintained under pressure. People who grew up with insecure attachment can develop earned security through relationships, therapy, or the slow accumulation of evidence that closeness does not always end in abandonment or suffocation. Secure attachment in adulthood is predictive of better physical health, longer life, more stable work, and more functional families in the next generation. The returns are real.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -10065,7 +10065,7 @@ const LAYERS = [
                 "id": "crel_fr_comp",
                 "label": "Companionship",
                 "color": "#5a9090",
-                "desc": "Just being with someone. Most friendship is this and not advice or rescue or any other dramatic thing. Presence is most of what we need from each other.",
+                "desc": "Just being with someone without it needing to be about anything. Most friendship is this and not advice, rescue, or any other dramatic intervention. Presence is most of what we need from each other and the hardest thing to give in a culture organized around productivity and purpose. The friend you can sit in silence with is a different kind of wealth than the friend who shows up in crisis. Both matter. The first is rarer.",
                 "links": [
                   {
                     "label": "On Being",
@@ -10110,7 +10110,7 @@ const LAYERS = [
                 "id": "crel_fr_loy",
                 "label": "Loyalty",
                 "color": "#7aaaaa",
-                "desc": "Showing up across time. The friend who stayed when it got hard. The math is uneven and that's the point.",
+                "desc": "Showing up across time. The friend who stayed when it got hard. The one who knew you before you had anything to show for yourself and stayed anyway. Loyalty is not blind agreement — it is the commitment to the person underneath the circumstances. In friendships it is asymmetric and untracked. Real loyalty does not keep a ledger. The math is uneven and that is the point.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -10173,7 +10173,7 @@ const LAYERS = [
                 "id": "crel_fr_hist",
                 "label": "Shared History",
                 "color": "#6a9a9a",
-                "desc": "The friends who knew you before. The ones who remember the version of you that nobody else met. Old friends are an archive of the self.",
+                "desc": "The friends who knew you before. The ones who remember the version of you that nobody else ever met — the person you were at twenty, or fifteen, or in the bad year. Old friends are an archive of the self that is otherwise inaccessible. The version of you they remember is also embarrassing and partially wrong and exactly what you need someone to hold. Shared history is not nostalgia. It is evidence of continuity at the times when continuity is hardest to feel.",
                 "links": [
                   {
                     "label": "The Marginalian",
@@ -10218,7 +10218,7 @@ const LAYERS = [
                 "id": "crel_fr_circ",
                 "label": "Social Circles",
                 "color": "#5a8585",
-                "desc": "The networks you belong to. American social circles have narrowed and become more politically homogeneous across the last twenty years, which is part of why disagreement now feels like betrayal.",
+                "desc": "The networks you belong to. Circles of friendship, professional contact, neighborhood, faith, and shared interest have narrowed across the last two decades of American life. The average American reports fewer close friends than at any point since the surveys began. Social circles have also become more politically homogeneous — a function of geographic sorting and algorithmic curation. When everyone in your circle thinks the same way, disagreement stops feeling like information and starts feeling like betrayal. The epistemic cost is real.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -10263,7 +10263,7 @@ const LAYERS = [
                 "id": "crel_fr_drift",
                 "label": "Drift",
                 "color": "#7a9595",
-                "desc": "Friends who don't fight, don't fall out — just stop. Drift is the most common form of friendship loss and the least examined. The work to prevent it is small. The cost of not doing it is enormous.",
+                "desc": "Friends who don't fight, don't fall out — just stop. Drift is the most common form of friendship loss and the least examined. Life changes, moves, jobs, children, distance — none of it is dramatic, but the cumulative effect is that people who mattered a great deal to each other simply stop being in each other's lives. The work to prevent drift is small — a message, a call, showing up once a year. The cost of not doing it is enormous: the relationship is gone and neither person knows quite when it happened.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -10375,7 +10375,7 @@ const LAYERS = [
                 "id": "crel_lv_attr",
                 "label": "Attraction",
                 "color": "#9a5878",
-                "desc": "The pull. Mostly involuntary, partly trainable. Attraction follows scripts the culture wrote and the body inherited and neither one consults you about.",
+                "desc": "The pull. Mostly involuntary, partly shaped by experience. Attraction follows scripts — evolutionary, cultural, psychological — that the body inherited and the culture reinforced before you had much say in the matter. What people find attractive has universal elements and highly particular ones. The universal elements have been tracked by evolutionary biology. The particular ones are your history and nobody else's. Neither the pull nor its absence is a moral judgment. Attraction is information, not obligation.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -10420,7 +10420,7 @@ const LAYERS = [
                 "id": "crel_lv_int",
                 "label": "Intimacy",
                 "color": "#a86888",
-                "desc": "Being known. The thing most people are looking for when they say they want love. Intimacy is harder than attraction and rarer than romance.",
+                "desc": "Being known. Not just liked or desired — actually seen, in the messy and contradictory version. Intimacy is the thing most people are looking for when they say they want love, and the thing they find hardest to tolerate when it arrives. Being fully known requires vulnerability, and vulnerability requires trusting that the knowing won't be used against you. That trust takes time to build and can be destroyed in a single conversation. Intimacy is harder than attraction and rarer than romance, and it is the only thing that actually lasts.",
                 "links": [
                   {
                     "label": "On Being",
@@ -10465,7 +10465,7 @@ const LAYERS = [
                 "id": "crel_lv_part",
                 "label": "Partnership",
                 "color": "#8a5070",
-                "desc": "The long version. The choice to keep choosing. Partnership runs on competence as much as feeling — the daily work of being on the same team in a world that is not.",
+                "desc": "The long version. The choice to keep choosing. Partnership runs on competence as much as feeling — the daily organizational work of a shared life, the negotiation of money and children and space and time, the management of two people's needs when they conflict. Romance is the opening. Partnership is the building. Most people are trained extensively for romance and not at all for partnership, which may explain some of the gap between how relationships begin and how they tend to end.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -10516,7 +10516,7 @@ const LAYERS = [
                 "id": "crel_lv_sex",
                 "label": "Sex",
                 "color": "#b06888",
-                "desc": "The biological substrate the rest of love and romance gets built around. Sex is not the same as romance and not the same as intimacy and culture keeps pretending it is.",
+                "desc": "The biological substrate the rest of love and romance gets built around, or avoids, or mourns. Sex is not the same as romance and not the same as intimacy — culture keeps insisting on their equivalence, and most people's actual experience keeps refuting it. American culture simultaneously overcomplicates sex — centuries of religious and legal apparatus — and oversimplifies it, as if desire were simple or consent obvious or the body straightforward. None of those things are true. The biology is ancient. The ethics are ongoing.",
                 "links": [
                   {
                     "label": "NIH MedlinePlus",
@@ -10618,7 +10618,7 @@ const LAYERS = [
                 "id": "crel_lv_break",
                 "label": "Breakups",
                 "color": "#7a4868",
-                "desc": "The end. Most romantic relationships end in something other than death. Breakups are common and culturally underacknowledged — there is no ritual, no leave from work, and yet they shape lives.",
+                "desc": "The end. Most romantic relationships end in something other than death, and breakups are statistically common and culturally underacknowledged. There is no ritual for them, no leave from work, no social script for the grief. And yet they shape careers, cities chosen, children decided against, bodies changed. The pain of a breakup is physiologically similar to the pain of bereavement. The culture treats it as inconvenience. People who are struggling after one are not being disproportionate. They are responding accurately to a real loss.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -10695,7 +10695,7 @@ const LAYERS = [
             "id": "crel_conf",
             "label": "Conflict & Repair",
             "color": "#8a5060",
-            "desc": "Healthy relationships are not the ones without conflict. They are the ones where conflict gets repaired. Repair is a skill. It can be learned. Most of the time it isn't.",
+            "desc": "Healthy relationships are not the ones without conflict. They are the ones where conflict gets repaired. Every relationship with real intimacy has real conflict — the two go together. The question is whether both people have the skills and the willingness to repair after the rupture. Repair is a skill. It can be learned. Most people were never explicitly taught it and are working from inheritance — which means they fight the way their parents fought and repair the way their parents repaired, if their parents repaired at all.",
             "links": [
               {
                 "label": "Harvard Health",
@@ -10721,7 +10721,7 @@ const LAYERS = [
                 "id": "crel_co_arg",
                 "label": "Arguments",
                 "color": "#7a4858",
-                "desc": "The visible form. The shape of an argument tells you something about the relationship — whether it is two people on the same team disagreeing about a problem, or two opponents looking for a winner.",
+                "desc": "The visible form of conflict. The shape of an argument tells you more about the relationship than the content does — whether it is two people trying to solve a problem together, or two people competing to win one. Arguments that circle the same content year after year, in the same emotional register, with the same positions, are usually not about the content. They are about something underneath it that has never been directly addressed. The recurring argument is the relationship asking a question neither person has answered yet.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -10766,7 +10766,7 @@ const LAYERS = [
                 "id": "crel_co_apol",
                 "label": "Apology",
                 "color": "#9a5868",
-                "desc": "The hardest sentence in the English language and the most underrated. A real apology has three parts: it names the harm, it owns the harm, and it does not ask the harmed person to manage the apologizer's feelings about it.",
+                "desc": "The hardest sentence in the English language and the most underrated relationship skill. A real apology has three parts: it names what happened, it takes responsibility for the harm without qualification, and it does not ask the harmed person to manage the apologizer's feelings about it. Most attempts at apology fail the third test — they turn into a request for comfort from the person who was harmed. A real apology creates space for the other person. It makes no demands in return. It is not a negotiation. That is why it is hard.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -10817,7 +10817,7 @@ const LAYERS = [
                 "id": "crel_co_forg",
                 "label": "Forgiveness",
                 "color": "#a06070",
-                "desc": "Not the same as reconciliation. Forgiveness can happen with no further contact. Reconciliation requires the other person. The two get conflated and most people are looking for one when they need the other.",
+                "desc": "Not the same as reconciliation, and the conflation causes genuine harm. Forgiveness is something you do for yourself — the release of the ongoing cost of carrying resentment. Reconciliation is an agreement between two people to rebuild something together, and it requires changed behavior from the person who caused harm. You can forgive someone without speaking to them again. You can reconcile without forgiving, at least not yet. Most people know which one they need and mistake it for the other because the culture uses both words to mean the same thing.",
                 "links": [
                   {
                     "label": "On Being",
@@ -10868,7 +10868,7 @@ const LAYERS = [
                 "id": "crel_co_bound",
                 "label": "Boundaries",
                 "color": "#8a4858",
-                "desc": "What you will and will not do, said in advance and held under pressure. Most boundary trouble is people setting them as a request to others rather than as a commitment to themselves.",
+                "desc": "What you will and will not do, said in advance and held under pressure. The language of boundaries has entered popular culture and in the process gotten somewhat distorted. Boundaries are not requests — they are commitments you make to yourself about what you will do if a line is crossed. They are also not primarily for other people's benefit. Setting a boundary means deciding for yourself what you will tolerate and what the consequence is if that is violated. Most boundary failures happen because the person held the boundary once, was pushed back against, and backed down. Inconsistency is what makes them ineffective.",
                 "links": [
                   {
                     "label": "NAMI",
@@ -10919,7 +10919,7 @@ const LAYERS = [
                 "id": "crel_co_estr",
                 "label": "Estrangement",
                 "color": "#6a3848",
-                "desc": "The relationships that ended without ending. Family estrangement in particular is rising — partly as a sign of healthier boundary-setting, partly as a sign of how thin our connective tissue has gotten.",
+                "desc": "The relationships that ended without formally ending. Family estrangement in particular has been rising — research suggests roughly one in four Americans is estranged from a family member. Some estrangements are acts of self-protection made necessary by abuse, addiction, or chronic harm. Others reflect a cultural shift toward treating relationships as renewable rather than permanent. Neither reading is complete. Estrangement is sometimes the healthiest available option and sometimes a loss that compounds over decades. The culture has strong opinions about it and thin data.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -10970,7 +10970,7 @@ const LAYERS = [
                 "id": "crel_co_recon",
                 "label": "Reconciliation",
                 "color": "#9a5868",
-                "desc": "The rebuilding. Possible, sometimes. Not always wise. Reconciliation requires both people to change something — most relationships break because only one is willing.",
+                "desc": "The rebuilding. Possible sometimes and not always wise. Reconciliation after a serious rupture requires both people to change something real — not just the behavior that caused the break, but the pattern that made it possible. Most relationships that fail at reconciliation do so because one person came back expecting credit for the gesture of return, rather than understanding that return is the beginning of the work. The reconciliation that holds is the one where both people are different people than the ones who broke the relationship.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -11053,7 +11053,7 @@ const LAYERS = [
             "id": "crel_trust",
             "label": "Trust & Betrayal",
             "color": "#7a3850",
-            "desc": "The substrate that makes everything else possible and the thing that breaks hardest when it goes. Trust is built slowly and can be destroyed in seconds. Most relationships that don't recover from betrayal could not survive a second one.",
+            "desc": "The substrate that makes everything else possible and the thing that breaks hardest when it goes. Trust is built slowly, through consistent behavior over time, and can be destroyed in seconds. Most relationships that don't recover from betrayal couldn't survive a second one because the first revealed that the underlying reliability was conditional. Trust in close relationships is not a feeling — it is an assessment. It is built on evidence and revised by evidence. What looks like blind trust is usually the accumulated weight of small proofs that the person in question can be relied on.",
             "links": [
               {
                 "label": "American Psychological Association",
@@ -11073,7 +11073,7 @@ const LAYERS = [
                 "id": "crel_tr_hon",
                 "label": "Honesty",
                 "color": "#6a3040",
-                "desc": "What you actually say versus what you let the other person believe. Most of what destroys trust is not lying — it is the careful management of partial truth.",
+                "desc": "What you actually say versus what you let the other person believe. Most of what destroys trust is not outright lying — it is the careful management of partial truth. The omission of the detail that would change the other person's understanding. The technically accurate statement designed to mislead. These are harder to identify and prosecute than lies, and they are more corrosive because they make the other person doubt their own perception rather than the facts. Honesty in close relationships is not a virtue in the abstract. It is the operational requirement of real intimacy.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -11124,7 +11124,7 @@ const LAYERS = [
                 "id": "crel_tr_sec",
                 "label": "Secrecy",
                 "color": "#5a2838",
-                "desc": "What you choose not to share. The line between privacy and secrecy is whether the other person would feel betrayed knowing. The line is real and it moves with the relationship.",
+                "desc": "What you choose not to share with the people closest to you. Privacy and secrecy are not the same thing. The line between them is whether the other person, if they knew what was being withheld, would feel that the withholding was a betrayal. That line is real and it moves with the nature and depth of the relationship. Everyone is entitled to privacy. Secrecy inside an intimate relationship tends to create exactly the distance it was designed to manage. Most relationships that end in discovered secrets did not end because of the secret — they ended because of the decision to keep it.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -11179,7 +11179,7 @@ const LAYERS = [
                 "id": "crel_tr_inf",
                 "label": "Infidelity",
                 "color": "#5a2030",
-                "desc": "The classic betrayal. Cuts deepest because it touches multiple violations at once — the lie, the body, the secret life. Most relationships that survive infidelity do not survive whole.",
+                "desc": "The classic betrayal, partly because it concentrates so many violations at once — the lie, the body, the secret life, the redirection of intimacy. Most relationships that survive infidelity do so after a long and painful process of rebuilding that does not look like the relationship before. Infidelity does not survive well in silence. The research consistently suggests that the people who recover are the ones who are able to have the full conversation about it — which is the hardest conversation most of them have ever had.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -11230,7 +11230,7 @@ const LAYERS = [
                 "id": "crel_tr_man",
                 "label": "Manipulation",
                 "color": "#4a1828",
-                "desc": "Getting someone to do what you want by managing what they think is happening. Manipulation does not announce itself. The sign that you've been manipulated is usually that you blame yourself for the manipulator's choices.",
+                "desc": "Getting someone to do what you want by managing what they think is happening. Manipulation does not announce itself — it operates through guilt, obligation, implied threats, strategic vulnerability, and the subtle rewarding of compliance. The clearest sign you have been manipulated is that you blame yourself for the manipulator's choices. Manipulation in close relationships is often invisible to the person doing it — they learned it as a child as the only way to get needs met, and never examined whether it was the only option available to adults.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -11281,7 +11281,7 @@ const LAYERS = [
                 "id": "crel_tr_rep",
                 "label": "Repair",
                 "color": "#6a3848",
-                "desc": "The slow rebuilding when trust has been broken. Repair is possible and not guaranteed. Both people have to do their part and the harmed person sets the pace.",
+                "desc": "The slow rebuilding when trust has been broken. Repair is possible and not guaranteed. It requires the person who caused the harm to take actions that are different from the ones that produced the break — consistently, over time, without keeping score. The harmed person sets the pace and that is not negotiable. Premature forgiveness that skips the repair process is not forgiveness — it is avoidance. Real repair changes the relationship rather than restoring it to the previous version. The previous version had the conditions that allowed the break.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -11390,7 +11390,7 @@ const LAYERS = [
                 "id": "crel_lo_iso",
                 "label": "Isolation",
                 "color": "#4a5070",
-                "desc": "The objective version. Living alone, working alone, moving without networks. Isolation is a measurable condition that has been climbing for decades.",
+                "desc": "The objective condition — living alone, working without connection, moving through the world without people who know you. Isolation has been rising measurably in the United States for decades. The number of people who report having no close friends has tripled since the 1990s. Isolation is a public health problem with measurable physiological effects — loneliness increases cortisol, disrupts sleep, and is associated with earlier mortality at roughly the same magnitude as smoking. The Surgeon General in 2023 declared a loneliness epidemic. The declaration was not wrong.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -11441,7 +11441,7 @@ const LAYERS = [
                 "id": "crel_lo_rej",
                 "label": "Rejection",
                 "color": "#6a5878",
-                "desc": "The pain of being not chosen. Brain imaging suggests rejection registers in the same regions as physical pain. The body keeps score.",
+                "desc": "The pain of being not chosen. Passed over. Unwanted. Brain imaging consistently shows that rejection activates the same neural regions as physical pain — the body does not distinguish between a broken bone and a broken bond. This is not weakness. It is the result of millions of years of evolution in which social exclusion was genuinely life-threatening. The intensity of the pain is calibrated for the ancestral environment, where being cast out of the group was not a feeling to manage but a crisis to survive. The calibration stayed. The stakes changed.",
                 "links": [
                   {
                     "label": "American Psychological Association",
@@ -11492,7 +11492,7 @@ const LAYERS = [
                 "id": "crel_lo_anx",
                 "label": "Social Anxiety",
                 "color": "#7a6888",
-                "desc": "The fear that being seen will go badly. Common, treatable, and increasing among young Americans in particular. Social media did not invent it. It did not help.",
+                "desc": "The fear that being seen will go badly — that what the other people see will not be enough, or will be too much, or will confirm the worst thing you suspect about yourself. Common, treatable, and increasing particularly among younger Americans. Social anxiety is not the same as introversion, though it is often mistaken for it. It is a specific apprehension about social evaluation that can be debilitating when severe. The research on treatment is positive. Most people who experience it severely do not seek treatment, partly because seeking treatment requires the social interaction they are afraid of.",
                 "links": [
                   {
                     "label": "NAMI",
@@ -11552,7 +11552,7 @@ const LAYERS = [
                 "id": "crel_lo_dig",
                 "label": "Digital Substitutes",
                 "color": "#5a5878",
-                "desc": "What the apps offer instead of presence. Likes are not the same as being known. Comments are not the same as conversation. Most people figure this out in some part of themselves and keep using the apps anyway.",
+                "desc": "What the apps offer instead of presence. Likes instead of being known. Follows instead of friendship. Comments instead of conversation. Most people figure out in some part of themselves that this is not the same thing — and keep using the apps anyway. Digital substitutes are not nothing. They maintain weak ties that can become strong ones. They provide the sense of connection that the body finds slightly soothing. But they do not address the deeper deficit, and for some people they replace the activities that would. The loneliness that follows a phone put down is real and increasing.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -11597,7 +11597,7 @@ const LAYERS = [
                 "id": "crel_lo_seen",
                 "label": "The Need to Be Seen",
                 "color": "#6a6088",
-                "desc": "The deepest human appetite. Underneath most relationship trouble is some version of this — the want for one person who looks at you and gets it.",
+                "desc": "The deepest human appetite. Not admired, not envied, not followed — known. Seen in the accurate version, including the parts that are inconsistent and unresolved. Underneath most relationship trouble, most social anxiety, most of the behavior that looks strange from the outside, is some version of this want: for one person to look at you clearly and get it. Most of what the attention economy is selling is a pale substitute for it. Most of what people are doing on the apps is a search for it that the apps are not built to provide.",
                 "links": [
                   {
                     "label": "On Being",
@@ -14155,7 +14155,7 @@ const LAYERS = [
         "x": 60,
         "y": 36,
         "color": "#50b878",
-        "desc": "The synthetic village. Engineered for engagement, which turned out to mean outrage. The loudest voices replace the wisest ones. The algorithms are not neutral — they are optimized for the emotion that keeps you scrolling, which is not joy.",
+        "desc": "The synthetic village. Engineered for engagement, which turned out to mean outrage. What began as a tool for social connection became the dominant information environment for billions of people — and then became an advertising business optimized for the emotion that keeps you scrolling longest, which is not joy. The platforms are not neutral. They make editorial decisions about what you see, what you feel, and how you understand the world, at a scale no previous media institution ever reached. The algorithm is not a feature of social media. It is the product.",
         "links": [
           {
             "label": "Pew Research",
@@ -14187,7 +14187,7 @@ const LAYERS = [
             "id": "c2_alg",
             "label": "The Algorithm",
             "color": "#3a4878",
-            "desc": "The hidden middleman. The algorithm decides what you see — not your choices, not your relationships, not editorial judgment. Optimized for engagement, which is mostly outrage. The version of the world it shows you is shaped by what makes you stay.",
+            "desc": "The hidden middleman between you and everything you see. The algorithm decides what appears in your feed — not your choices, not your relationships, not any editorial judgment accountable to the truth. Optimized for engagement, which in practice means content that produces strong reactions, and strong reactions online skew angry, frightened, and tribal. The version of the world the algorithm constructs around you is not the world. It is the version of the world the platform can monetize best. That distinction matters for everything downstream.",
             "links": [
               {
                 "label": "Stanford AI Index",
@@ -14219,7 +14219,7 @@ const LAYERS = [
                 "id": "c2_alg_rank",
                 "label": "Ranking",
                 "color": "#2a3868",
-                "desc": "The decision the platform makes a billion times a day about whose post a person sees first. Ranking is editorial work disguised as math. Math made by people. People paid by ad revenue.",
+                "desc": "The decision the platform makes a billion times a day about whose post a person sees first — or at all. Ranking is editorial work disguised as mathematics. The math was designed by people paid by ad revenue, which creates a direct incentive to surface content that generates engagement, not content that is accurate, valuable, or good for the person seeing it. Most users have no idea that a ranking decision was made. They experience the feed as a neutral representation of what is happening. It is not.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -14264,7 +14264,7 @@ const LAYERS = [
                 "id": "c2_alg_rec",
                 "label": "Recommendation",
                 "color": "#4a5888",
-                "desc": "What the platform suggests next. Recommendation systems were built to keep you on the app. They do that. The cost is what you saw to make it happen.",
+                "desc": "What the platform suggests you watch, read, or follow next. Recommendation systems were built to keep you on the platform longer, and they work. The cost is what you saw to make it happen — the escalating, attention-holding content that the algorithm learned would keep you. YouTube recommendation systems have been documented leading users from mainstream content to more extreme content in a predictable and measurable progression. The recommendation engine is not trying to inform you. It is trying to retain you.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -14315,7 +14315,7 @@ const LAYERS = [
                 "id": "c2_alg_eng",
                 "label": "Engagement",
                 "color": "#3a4878",
-                "desc": "The metric that runs the building. What gets measured gets optimized for. What gets optimized for becomes the world the platform tries to produce. Engagement is mostly outrage at scale.",
+                "desc": "The metric that the building is organized around. What gets measured gets optimized for. What gets optimized for becomes what the platform produces. Engagement captures reactions — comments, shares, time spent. It does not capture truth, wellbeing, or the quality of the information environment. The economy that runs on engagement has built a world where the most emotionally activating content wins regardless of its accuracy. That is not an accident. It is the product of optimizing for the right metric for advertising revenue.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -14366,7 +14366,7 @@ const LAYERS = [
                 "id": "c2_alg_rage",
                 "label": "Rage Bait",
                 "color": "#5a3838",
-                "desc": "Content designed to provoke. The algorithm rewards strong reaction over considered response, which means rage bait wins by design. The information environment that builds is the one we are now living in.",
+                "desc": "Content designed to provoke reaction — outrage, contempt, fear. Not misinformation necessarily, though often. Rage bait is any content calibrated to produce a strong negative emotional response. The algorithm rewards it because strong responses mean engagement. The information environment that builds around rage bait is not a public square — it is a machine for generating shared enemies and distributing the emotional cost of that to the users. The anger is real. The target is frequently manufactured or distorted. Both things are true at once.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -14417,7 +14417,7 @@ const LAYERS = [
                 "id": "c2_alg_bub",
                 "label": "Filter Bubbles",
                 "color": "#4a5878",
-                "desc": "The personalized world the algorithm builds for you. Every person sees a different feed. Most of us do not realize how different. The shared reality news organizations once forced has been quietly replaced by a billion private channels.",
+                "desc": "The personalized world the algorithm builds around you. Every person on the platform sees a different feed — curated by their history, shaped by their reactions, designed to be sticky for exactly them. Most users do not realize how different their feed is from someone else's, or how much of the difference is engineered. The shared reality that broadcast media once created — imperfect and often unjust, but shared — has been replaced by billions of individual channels. When people from different bubbles talk about what is happening, they are often describing different things because the algorithm showed them different things.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -14584,7 +14584,7 @@ const LAYERS = [
             "id": "c2_plat",
             "label": "Platforms & Communities",
             "color": "#4a6890",
-            "desc": "The houses we are spending our attention in. Each platform has a culture, a logic, a kind of post that wins. The platforms train us as much as we use them.",
+            "desc": "The houses where the attention lives. Each platform has a culture, a logic, and a kind of post that wins. Facebook optimized for sharing and became a misinformation engine for older users. Instagram optimized for images and became a comparison machine and influencer marketplace. TikTok abandoned the social graph entirely and built a pure algorithmic feed. Each of these was a design decision, not an inevitable outcome. The platforms are not neutral infrastructure — they are choices about what human attention is for.",
             "links": [
               {
                 "label": "Pew Research",
@@ -14604,7 +14604,7 @@ const LAYERS = [
                 "id": "c2_p_fb",
                 "label": "Facebook",
                 "color": "#3a5880",
-                "desc": "The platform that taught the world social media. Now skews older, still enormous, increasingly a vector for misinformation among the demographics still on it.",
+                "desc": "The platform that taught the world what social media was. Now skewing older, still the largest social network by users, and increasingly a primary vector for health misinformation and political disinformation among the demographics still on it. Facebook's internal research, disclosed by whistleblowers, documented that its algorithms amplified divisive content knowingly. The company chose growth. The information environment that resulted is one of the most consequential editorial decisions of the twenty-first century, made without editorial accountability.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -14649,7 +14649,7 @@ const LAYERS = [
                 "id": "c2_p_ig",
                 "label": "Instagram",
                 "color": "#5a3878",
-                "desc": "The image-first feed where the comparison economy took up residence. Body image, curated lives, influencer culture — Instagram did not invent these but it concentrated them.",
+                "desc": "The image-first feed where the comparison economy took up residence. Body image disorders, depression, anxiety — particularly among adolescent girls — have been linked in research to Instagram use, including in studies conducted by Meta's own researchers and subsequently disclosed. Instagram did not invent beauty standards, social comparison, or the commodification of appearance. It concentrated them into a format that is essentially unavoidable for young people and optimized the comparison through algorithmic ranking. The harm is documented. The platform continues.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -14694,7 +14694,7 @@ const LAYERS = [
                 "id": "c2_p_tt",
                 "label": "TikTok",
                 "color": "#3a3838",
-                "desc": "The algorithmic feed that abandoned the social graph. TikTok shows you what the algorithm thinks you'll watch, not what your friends posted. The format the rest of the industry has been chasing.",
+                "desc": "The algorithmic feed that abandoned the social graph entirely and showed people content based on predicted interest rather than who they follow. TikTok's model proved more engaging than anything that came before it — every major platform has rebuilt itself around short-form video since. The Chinese ownership of TikTok has made it a national security concern in multiple countries, though the evidence that user data is being accessed by the Chinese government remains disputed. The platform's data practices with American users are the same as every other platform's, which is part of the argument both for and against concern.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -14745,7 +14745,7 @@ const LAYERS = [
                 "id": "c2_p_x",
                 "label": "X / Twitter",
                 "color": "#1a1a1a",
-                "desc": "Once the closest thing to a public square the internet had. Now owned, edited, and reshaped by a single proprietor. The migration of users to other platforms is one of the largest social media stories of the decade.",
+                "desc": "Once the closest thing to a public square the internet produced — flawed, chaotic, but with a meaningful mix of voices. Acquired in 2022, reduced in staff, moderation, and advertiser confidence, and reshaped in ways that consistently benefited the owner's political allies. The platform's role as a real-time news distribution system has diminished as journalists and public figures have migrated elsewhere. Whether something replaces it as a shared information space, and what that would look like, is one of the more open questions in media.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -14790,7 +14790,7 @@ const LAYERS = [
                 "id": "c2_p_yt",
                 "label": "YouTube",
                 "color": "#7a3838",
-                "desc": "The platform people forget is social media. The world's largest video archive, the world's second-largest search engine, and one of the most powerful recommendation systems ever built.",
+                "desc": "The platform people forget is social media. The world's largest video archive, the second-largest search engine on the planet, and one of the most powerful recommendation engines ever built. YouTube radicalization — the documented pathway from mainstream content to extremist content through the recommendation algorithm — was a significant factor in the political polarization of the 2010s. The platform also hosts an enormous range of educational content, free to anyone with internet access. It is simultaneously one of the most democratizing media platforms ever built and one of the most dangerous.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -14835,7 +14835,7 @@ const LAYERS = [
                 "id": "c2_p_red",
                 "label": "Reddit",
                 "color": "#a05038",
-                "desc": "The community-shaped platform. Forums by topic, moderated by users, full of expertise that doesn't exist anywhere else. Also full of the worst of the internet, organized.",
+                "desc": "The community-shaped platform. Forums organized by topic and moderated by volunteer users have produced some of the most expert communities on the internet — detailed, accurate, searchable, and built by people who actually know what they are talking about. Reddit also hosted some of the worst communities the internet has generated before those communities were shut down or migrated. The moderation culture varies enormously. The platform's decision to restrict third-party API access in 2023 produced the largest coordinated user protest in social media history.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -14912,7 +14912,7 @@ const LAYERS = [
             "id": "c2_inf",
             "label": "Influencers",
             "color": "#7a5090",
-            "desc": "The new occupational category. People who are paid to be themselves at scale. Influencer economics restructured advertising, celebrity, journalism, and the meaning of the word real. The work is real labor. The product is the self.",
+            "desc": "The new occupational category. People who are paid to be themselves at scale — to curate an audience around a persona and then monetize that audience's attention through sponsorships, merchandise, and subscriptions. Influencer economics restructured advertising, celebrity, journalism, and the meaning of authenticity in public life. The labor is real and often grueling — content schedules, audience management, performance of a self that is both genuine and engineered. The product is the person. The risk is that the product and the person become indistinguishable.",
             "links": [
               {
                 "label": "Pew Research",
@@ -14932,7 +14932,7 @@ const LAYERS = [
                 "id": "c2_in_brand",
                 "label": "Personal Brand",
                 "color": "#6a4080",
-                "desc": "The self as something to be marketed. Personal brand is not a metaphor anymore. It is what young people are explicitly told to build.",
+                "desc": "The self as something to be marketed. Personal brand is not a metaphor anymore — it is explicit career advice given to students, job seekers, and workers across industries. The imperative to manage your digital presence as a brand collapses the distinction between authentic expression and strategic self-presentation. For young people this language is normalized. For older workers it is new and often uncomfortable. Whether performing a version of yourself is the same as being yourself is a question that personal brand culture tends not to ask.",
                 "links": [
                   {
                     "label": "Rest of World",
@@ -14983,7 +14983,7 @@ const LAYERS = [
                 "id": "c2_in_fol",
                 "label": "Followers & Status",
                 "color": "#8a5898",
-                "desc": "A measurable form of social weight. Followers translate into income, opportunity, and a sense of mattering that the rest of the culture has stopped reliably providing.",
+                "desc": "A measurable form of social weight. Followers translate into income, opportunity, cultural visibility, and a sense of social proof that functions in the attention economy the way credit scores function in the financial one. Having them changes how you are treated in industries where attention is currency. Not having them is increasingly a disadvantage. The follower count is also a fragile thing — platform algorithm changes, pile-ons, or the drift of audience interest can erase it faster than it was built. The status is real and precarious at the same time.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -15028,7 +15028,7 @@ const LAYERS = [
                 "id": "c2_in_sp",
                 "label": "Sponsorships & Monetization",
                 "color": "#7a4880",
-                "desc": "How followers turn into rent. The rules of disclosure are weak and patchily enforced. A lot of what reads as recommendation is paid placement.",
+                "desc": "How followers turn into rent. Sponsorships, branded content, affiliate links, and merchandise are the financial infrastructure of the creator economy. The Federal Trade Commission requires disclosure of paid partnerships. Enforcement is inconsistent. A large portion of what reads as recommendation on social media platforms is paid placement that audiences understand they should be skeptical of — but the emotional register of influencer content works against that skepticism. The relationship feels personal. The product placement is industrial.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -15073,7 +15073,7 @@ const LAYERS = [
                 "id": "c2_in_par",
                 "label": "Parasocial Relationships",
                 "color": "#9a6098",
-                "desc": "The one-way intimacy. Followers feel they know creators. Creators feel the weight of strangers' expectations. Neither side is built for what the relationship has become.",
+                "desc": "The one-way intimacy. Followers feel they know the creator — their routines, relationships, opinions, and moods. Creators feel the weight of an audience's expectations without knowing any individual within it. The creator invests in the performance of intimacy; the audience responds with genuine feeling. Neither side is built for what the relationship has actually become. Parasocial bonds are not fake — research suggests they provide real benefits of social connection, particularly for isolated people. They are also not reciprocal, and the grief when they end is real and unacknowledged.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -15124,7 +15124,7 @@ const LAYERS = [
                 "id": "c2_in_auth",
                 "label": "Authenticity & Performance",
                 "color": "#7a4878",
-                "desc": "The contradiction at the heart of the form. The audience wants real. The format rewards polished. Influencers spend careers negotiating the gap and the audience usually senses it.",
+                "desc": "The contradiction at the heart of the form. Audiences want real. The format rewards polished. Influencers spend careers negotiating the gap — performing authenticity while managing the production, scheduling the spontaneous, and editing the unfiltered. The most successful ones have become expert at the register of casual honesty while operating a production operation. The audience usually senses the performance and usually keeps watching anyway, which suggests the performance of authenticity may satisfy the same appetite as the real thing. May.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -15207,7 +15207,7 @@ const LAYERS = [
             "id": "c2_ident",
             "label": "Identity & Attention",
             "color": "#5a5890",
-            "desc": "How the self gets shaped by the apps. Adolescence on social media is a different developmental experience than adolescence without it. Identity formation now happens with an audience.",
+            "desc": "How the self gets shaped by the apps. Social media did not change adolescent development — the same drives are there. It changed the environment those drives operate in: an audience is always available, feedback is immediate and quantified, and the comparison is global and constant. Identity formation now happens with an audience, and for the first time in human history, a permanent record. The anxiety this produces is not a generation being weak. It is a generation being accurately responsive to conditions no previous generation ever faced.",
             "links": [
               {
                 "label": "Harvard Health",
@@ -15233,7 +15233,7 @@ const LAYERS = [
                 "id": "c2_id_pers",
                 "label": "Persona & Self-Presentation",
                 "color": "#4a4880",
-                "desc": "The version of you the feed sees. Some of self-presentation is healthy editing. Some of it becomes the thing you are pretending to feel. The line moves over a lifetime.",
+                "desc": "The version of you the feed sees — curated, edited, and published. Some self-presentation is healthy and universal: people have always managed how they appear. The social media version is different in degree. It is constant, public, archived, and measurable. Some of what gets performed eventually becomes internalized as real. Some of it becomes a gap between the public self and the private one that grows over time and produces its own kind of exhaustion. Most people navigate a version of this without naming it as a thing that is happening to them.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -15278,7 +15278,7 @@ const LAYERS = [
                 "id": "c2_id_val",
                 "label": "Status & Validation",
                 "color": "#6a5898",
-                "desc": "The like as social currency. Validation arrived faster, smaller, and more frequent than any culture had built people to handle. The body did not adapt.",
+                "desc": "The like as social currency. Validation via social media arrives faster, smaller, and more frequently than anything the human body was built to process. The dopamine response to social approval is real and the platforms are engineered around it. The result is a continuous feedback loop that shapes behavior in ways users are often aware of and find difficult to resist. Young people who grew up with this as the primary social feedback mechanism have developed relationship to their own worth that is differently entangled with external response than any previous generation.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -15323,7 +15323,7 @@ const LAYERS = [
                 "id": "c2_id_cmp",
                 "label": "Comparison & Envy",
                 "color": "#7a5898",
-                "desc": "The structural problem of the platform. You see other people's highlight reels next to your own ordinary day. The math is rigged. The body still calculates.",
+                "desc": "The structural problem built into the format. You see other people's curated presentations — holidays, achievements, relationships — next to your own ordinary and unfiltered experience. The comparison is between your inside and their outside. The math is not fair. The body still calculates. Social comparison is universal and ancient. The social media version runs at a scale and frequency that has no precedent. The research on its effects, particularly on adolescent mental health, is consistent across multiple methodologies and countries: more use, worse outcomes.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -15374,7 +15374,7 @@ const LAYERS = [
                 "id": "c2_id_loop",
                 "label": "Attention Loops",
                 "color": "#5a4878",
-                "desc": "The infinite scroll. The pull-to-refresh. The features were designed to be hard to put down. They work. The ten thousandth scroll feels exactly the same as the first.",
+                "desc": "The infinite scroll. The pull-to-refresh. The notification that brought you back when you were about to stop. The features of social media that make it hard to put down were designed to be hard to put down. Former platform engineers have been candid about this. The variable reward schedule — sometimes there is something good, often there isn't — is the same mechanism slot machines use. The ten thousandth scroll feels exactly the same as the first because the system was designed not to give you the feeling of completion that would allow you to stop.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -15425,7 +15425,7 @@ const LAYERS = [
                 "id": "c2_id_out",
                 "label": "Outrage & Rage Bait",
                 "color": "#6a3848",
-                "desc": "The emotion the platform optimizes for. The body cannot tell the difference between genuine outrage at injustice and engineered outrage at strangers. The cumulative cost is exhaustion that looks like politics.",
+                "desc": "The emotion the platform optimizes for because it reliably produces engagement. Outrage, contempt, and moral disgust are among the most engaging emotional registers on social media — they produce shares, comments, and return visits. The body cannot perfectly distinguish between genuine outrage at actual injustice and engineered outrage at manufactured grievances. Both feel real. The cumulative cost of sustained outrage as a daily information diet is a kind of exhaustion that looks like political engagement but depletes the capacity for it.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -15502,7 +15502,7 @@ const LAYERS = [
             "id": "c2_misinfo",
             "label": "Misinformation",
             "color": "#7a3838",
-            "desc": "False or misleading information moving at scale. The platforms did not invent lies. They built infrastructure that makes lies travel faster and cheaper than truth. Every major democratic election since 2016 has been tested by the result.",
+            "desc": "False or misleading information moving at scale — faster and cheaper than truth, amplified by platforms that reward engagement over accuracy. The platforms did not invent lies. They built infrastructure that gives lies a structural advantage over corrections. False stories spread faster and further than true ones, a finding documented across multiple platforms and consistent across studies. Every major democratic election since 2016 has been materially affected by coordinated disinformation. The question of what a democratic society does about that has not been answered.",
             "links": [
               {
                 "label": "Brennan Center",
@@ -15534,7 +15534,7 @@ const LAYERS = [
                 "id": "c2_mi_con",
                 "label": "Conspiracy",
                 "color": "#5a2828",
-                "desc": "The belief that hidden actors are running the show. Conspiracy thinking has roots that predate the internet. The internet gave it search, recruiting, and infinite confirmation.",
+                "desc": "The belief that hidden actors are running the show — orchestrating events, suppressing truth, coordinating from the shadows. Conspiracy thinking predates the internet by centuries. The internet provided it with search, community, and infinite confirmation. The pattern of conspiratorial thinking is consistent: it offers coherence in the face of complexity, community around a shared truth others can't see, and a clear enemy to organize against. These are real human needs. Conspiracy theories fill them with false content. The needs remain whether or not the theory is debunked.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -15585,7 +15585,7 @@ const LAYERS = [
                 "id": "c2_mi_prop",
                 "label": "Propaganda",
                 "color": "#7a3030",
-                "desc": "Information weaponized for political ends. Old technology, new delivery system. The state actors got faster. The corporate ones got more convincing.",
+                "desc": "Information deliberately shaped to serve a political or ideological goal — not necessarily false but selectively framed, amplified, and distributed to produce a desired effect. Propaganda is old technology. The internet gave it new delivery systems: targeted, personal, cheap to produce, impossible to contain, and difficult to distinguish from organic content. State actors from multiple countries run coordinated influence operations on Western social media. So do domestic political actors. The line between propaganda and advertising has always been thin.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -15636,7 +15636,7 @@ const LAYERS = [
                 "id": "c2_mi_df",
                 "label": "Deepfakes",
                 "color": "#3a2828",
-                "desc": "Synthetic video and audio of people saying things they didn't say. The technology has gotten good faster than any countermeasure. The election cycles to come will test what truth means when video is no longer evidence.",
+                "desc": "Synthetic video and audio of real people saying and doing things they did not say or do. The technology has matured faster than any countermeasure or legal framework. Deepfakes of politicians, public figures, and private individuals are circulating across multiple platforms. Several election cycles have already featured deepfake content. The evidentiary status of video is deteriorating — the intuition that seeing is believing was already wrong, and is now more wrong. What an information environment built on that broken intuition does to public trust is still playing out.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -15687,7 +15687,7 @@ const LAYERS = [
                 "id": "c2_mi_echo",
                 "label": "Echo Chambers",
                 "color": "#6a3838",
-                "desc": "The closed loops. Communities that hear only their own voices, amplified. Every faction has them now. The middle ground keeps narrowing.",
+                "desc": "The closed feedback loops where communities hear only their own voices amplified and corrected. Every major political faction has them. Religious communities, conspiratorial networks, professional guilds, partisan media ecosystems — echo chambers are not a fringe phenomenon. They are the normal product of social sorting, geographic concentration, and algorithmic curation. The most dangerous property of an echo chamber is not what it believes — it is what it can no longer imagine: that the people on the other side have reasons for their positions that are not stupidity or malice.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -15738,7 +15738,7 @@ const LAYERS = [
                 "id": "c2_mi_ps",
                 "label": "Pseudoscience",
                 "color": "#8a4040",
-                "desc": "Claims dressed in lab coats. Vaccine misinformation, miracle cures, alternative medicine empires. The platforms surface these because they engage. The cost shows up in public health data.",
+                "desc": "Claims dressed in the register of science but without its methods, accountability, or honest relationship to evidence. Vaccine hesitancy, alternative medicine empires, food pseudoscience, supplement industries — pseudoscience is big business because people want the authority of science without the uncertainty and complexity that honest science always delivers. Social media platforms surface pseudoscience because it engages. The public health consequences are real and documented: disease outbreaks, delayed diagnoses, preventable deaths. The problem compounds because trust in legitimate science has been systematically eroded by the same actors who benefit from the confusion.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -15789,7 +15789,7 @@ const LAYERS = [
                 "id": "c2_mi_elec",
                 "label": "Election Lies",
                 "color": "#5a2020",
-                "desc": "The specific category that has restructured American politics since 2020. Election denial has gone from fringe to platform-level for one of the two major parties. The institutional damage will outlast the cycle that produced it.",
+                "desc": "The specific category of misinformation that has most directly destabilized American democracy since 2020. Claims about stolen elections, rigged voting machines, and fraudulent counts have gone from fringe to mainstream within one of the two major parties. Courts, election officials from both parties, and the Department of Justice found no evidence supporting these claims. That evidence has not resolved the dispute. Election denial is now a litmus test in Republican primaries, and candidates who passed that test are in positions to administer elections. The institutional damage will outlast the cycle that produced it.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -15908,7 +15908,7 @@ const LAYERS = [
             "id": "c2_surv",
             "label": "Surveillance & Data",
             "color": "#4a5060",
-            "desc": "The other product. You are using the platform. The platform is using you. Every action, every dwell time, every typed-and-deleted message is data. The data is sold, modeled, and used to predict you better than you predict yourself.",
+            "desc": "The other product. You use the platform free of charge. The platform sells your behavior to advertisers and data brokers. Every click, scroll, pause, search, and typed-but-deleted message is a data point. The data is aggregated, modeled, and used to predict your behavior — political, commercial, and otherwise — more accurately than you predict it yourself. You consented to this in a terms of service document no one reads. The consent is legally valid and functionally meaningless. The surveillance infrastructure of American social media is the largest private data collection operation in human history.",
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
@@ -15928,7 +15928,7 @@ const LAYERS = [
                 "id": "c2_su_track",
                 "label": "Tracking",
                 "color": "#3a4050",
-                "desc": "Cookies, pixels, fingerprints. Even when you log out. Even when you delete the app. Even when you didn't sign up. The infrastructure follows you across the open web because the open web monetized itself this way.",
+                "desc": "The infrastructure that follows you across the internet even when you are not on the platform. Cookies, tracking pixels, browser fingerprinting, cross-device matching. Companies can follow a user from a health information site to a news site to an e-commerce site to a social platform, building a behavioral profile without the user ever signing in. This tracking is pervasive, largely invisible to users, and mostly legal under current American law. European regulations have forced partial transparency. The underlying infrastructure has not changed.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -15979,7 +15979,7 @@ const LAYERS = [
                 "id": "c2_su_ad",
                 "label": "Ad Targeting",
                 "color": "#5a6070",
-                "desc": "The visible end of the data pipeline. Ads sorted by what the platforms know about you, which is more than most users would guess and less than the platforms imply.",
+                "desc": "The visible end of the data pipeline. Ads sorted to you by what the platforms know about you — your income bracket, health status, relationship status, political views, pregnancy, religious practice, and hundreds of other attributes inferred from your behavior. The targeting is remarkably precise and the precision is mostly invisible to the person being targeted. Most users substantially underestimate what the platforms know. Most would object to specific uses of that knowledge if they understood them. The consent mechanisms were designed to obscure rather than clarify.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -16024,7 +16024,7 @@ const LAYERS = [
                 "id": "c2_su_brok",
                 "label": "Data Brokers",
                 "color": "#3a3848",
-                "desc": "The companies most users have never heard of that aggregate data from hundreds of sources and sell composite profiles. The industry is largely unregulated and most of the profiles include things people would be shocked to learn are for sale.",
+                "desc": "The companies most internet users have never heard of that sit at the center of the commercial surveillance economy. Data brokers aggregate information from public records, purchase history, location data, social media behavior, and hundreds of other sources, and sell composite profiles to advertisers, political campaigns, law enforcement, employers, insurers, and anyone else willing to pay. The industry is largely unregulated in the United States. Many of the profiles include sensitive information — health conditions, financial distress, political views — that individuals would be alarmed to know is commercially available.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -16085,7 +16085,7 @@ const LAYERS = [
                 "id": "c2_su_kids",
                 "label": "Children Online",
                 "color": "#5a3848",
-                "desc": "The most acute case. Children have less capacity to consent and more years ahead for the data to follow. The protections on paper are weak. The enforcement is weaker.",
+                "desc": "The most acute version of the surveillance and algorithmic design problem. Children have less capacity to consent to data collection, less ability to understand what is being done with their information, and more years ahead during which that data will follow them. The Children's Online Privacy Protection Act was written before the current surveillance architecture existed and has not been substantially updated. Platforms nominally prohibit users under thirteen but do not meaningfully enforce the restriction. The developmental effects of algorithmic social media on children are an ongoing experiment no one formally consented to run.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -16136,7 +16136,7 @@ const LAYERS = [
                 "id": "c2_su_priv",
                 "label": "Privacy",
                 "color": "#3a4858",
-                "desc": "The thing being traded for the apps. Most users could not explain what they have given up because the disclosure documents are deliberately incomprehensible. The tradeoff was never freely chosen.",
+                "desc": "The thing being continuously traded for free access to platforms most people feel they cannot leave. Most users have a weak and accurate sense that they are being surveilled but underestimate the scope significantly. The disclosure documents — privacy policies and terms of service — are deliberately written to be incomprehensible. The consent they record is not meaningful in any substantive sense. American law treats this consent as valid. The European General Data Protection Regulation takes a different view and has produced measurable, if incomplete, changes in platform behavior where it applies.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -16274,7 +16274,7 @@ const LAYERS = [
         "x": 84,
         "y": 56,
         "color": "#228a50",
-        "desc": "The great pacifier and the great mirror. What a culture entertains itself with reveals what it actually values — not what it claims to value at the podium. The size of the industry is the size of the need it fills.",
+        "desc": "The great pacifier and the great mirror. What a culture entertains itself with reveals what it values more honestly than what it says at the podium. Sports unify and tribalize simultaneously. Film and television teach people what is normal, what is desirable, who matters, and what endings are possible. Music carries politics, grief, sex, and revolution in a format the body can't resist. The entertainment industry is enormous, concentrated, and largely unexamined as the cultural force it is — treated as distraction while doing the work of ideology.",
         "links": [
           {
             "label": "TED Talks",
@@ -16294,7 +16294,7 @@ const LAYERS = [
             "id": "c4_games",
             "label": "Games & Competition",
             "color": "#5a8848",
-            "desc": "The structured contest. Rules, sides, a winner. Games are how cultures rehearse cooperation, conflict, fairness, and the consolation of losing well. Most of what gets called sport is also a business now.",
+            "desc": "The structured contest. Rules, sides, a winner, and a loser who has to return tomorrow. Games are how cultures rehearse competition, cooperation, fairness, and the consolation of losing well. The athletic game is also now a multi-billion dollar industry with franchise values, labor negotiations, television contracts, and stadium subsidies from governments that could not fund schools. What was built to be play has been successfully converted into product without most of its participants noticing, or minding, or being asked.",
             "links": [
               {
                 "label": "TED Talks",
@@ -16314,7 +16314,7 @@ const LAYERS = [
                 "id": "c4_g_rules",
                 "label": "Rules",
                 "color": "#4a7838",
-                "desc": "What the game agrees on. Rules are negotiated history. They change when the players, owners, or audiences want them to.",
+                "desc": "What the game agrees on before anyone picks up the ball. Rules are negotiated history — they reflect who had power when they were written, what injuries were acceptable, which bodies were included, and which complaints were heard. They change when the players, the owners, the audiences, or the regulators want them to, and the arguments about changing them are usually arguments about something larger than the game. The rules of the game are a compressed version of the rules of the culture that built it.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -16359,7 +16359,7 @@ const LAYERS = [
                 "id": "c4_g_team",
                 "label": "Teams",
                 "color": "#5a8a48",
-                "desc": "The unit of belonging. American adults still mostly inherit their teams from their fathers, which is one of the more durable cultural transmissions left.",
+                "desc": "The unit of belonging. Teams provide one of the more reliable experiences of collective identity available in American life — a we that is freely chosen, emotionally real, and socially legible. American adults still mostly inherit their teams from their fathers, which is one of the more durable cultural transmissions left in a society that has abandoned most of the others. The team is often the one place a person maintains a connection to a home they left, a parent they lost, or a version of themselves they no longer otherwise inhabit.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -16404,7 +16404,7 @@ const LAYERS = [
                 "id": "c4_g_skill",
                 "label": "Skill",
                 "color": "#6a9858",
-                "desc": "The thing that makes a game worth watching. Skill is built by years of repetition the audience never sees.",
+                "desc": "The thing that makes a game worth watching. Skill is built by years of unglamorous repetition the audience never sees — the same swing at five in the morning, the same route run in an empty parking lot. Athletic skill at the highest level is a kind of art: the compression of thousands of hours of practice into a few seconds of apparently effortless execution. The distance between what looks easy and what is required to make it look easy is one of the more consistent forms of beauty in public life.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -16449,7 +16449,7 @@ const LAYERS = [
                 "id": "c4_g_win",
                 "label": "Winning",
                 "color": "#4a7038",
-                "desc": "The official goal. Also a culture's compressed answer to what counts. American sports has been training the country's instincts about winning for over a century.",
+                "desc": "The official goal. Also a culture's compressed answer to what counts and what is permitted in the pursuit of it. American sports has been training the country's instincts about winning for over a century. The lessons are not always the ones the game intends: that some cheating is acceptable if it works, that the rules are for the losers, that what matters is the scoreboard at the end. The better lessons are also there: that sustained excellence requires discipline, that teams beat individuals, that losing does not have to be shameful. Both versions of the lesson are being taught simultaneously.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -16494,7 +16494,7 @@ const LAYERS = [
                 "id": "c4_g_riv",
                 "label": "Rivalry",
                 "color": "#5a7848",
-                "desc": "The story the season tells. Every great game has a great rival. The hatred is mostly performed and partly real.",
+                "desc": "The story the season tells — the opponent who makes a win meaningful. Every great game has a great rival, and the hatred is part of what makes the love of the game work. Sports rivalries function as controlled expressions of tribal conflict — channeled into a form with rules, referees, and a scheduled end. The passion is real. The stakes are not what they feel like. This is the service sports rivalries provide: a form for the intensity of belonging and opposition that would otherwise find less contained expression.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -16539,7 +16539,7 @@ const LAYERS = [
                 "id": "c4_g_fair",
                 "label": "Fairness",
                 "color": "#7a9858",
-                "desc": "What the rules try to enforce and the field tries to test. Fairness in sport is one of the few places American culture still seriously argues about the concept.",
+                "desc": "What the rules try to enforce and the field continuously tests. Fairness in sport — whether the rules are applied equally, whether the resources teams bring are comparable, whether the outcome reflects skill or money — is one of the few places American culture still seriously argues about the concept. Salary caps, draft systems, transfer policies, and competitive balance rules are attempts to manufacture conditions under which outcomes can feel earned. They are imperfect and contested. The argument about fairness in sport is practice for the argument about fairness everywhere else.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -16630,7 +16630,7 @@ const LAYERS = [
                 "id": "c4_f_bel",
                 "label": "Fandom & Belonging",
                 "color": "#6a9848",
-                "desc": "The reason most of fandom exists. People want a we. The team becomes the easy answer.",
+                "desc": "The reason most of fandom exists underneath the game and the statistics. People want a we — a community of shared feeling, shared identity, shared fate for three hours on a Sunday. The team provides an easy answer to the question of who we are and who they are. This is not trivial. The community organized around a team can be one of the more durable social bonds in a person's life, particularly in places where other forms of community have thinned. The we of fandom is cheap to enter and real once you are in.",
                 "links": [
                   {
                     "label": "On Being",
@@ -16675,7 +16675,7 @@ const LAYERS = [
                 "id": "c4_f_rit",
                 "label": "Ritual",
                 "color": "#7a9858",
-                "desc": "Tailgates, watch parties, the same bar with the same friends. Fandom rituals do work that used to be done by churches and unions and lodges.",
+                "desc": "Tailgates, watch parties, the same bar with the same group of people for twenty years. Fandom rituals do work that used to be done by churches, unions, lodges, and the other civic institutions that have declined. They mark time, create predictable occasions for community, and transmit membership across generations. The specific rituals vary enormously. What they share is the function: a regular occasion that belongs to the group, with its own rules and customs, that is not contingent on any individual's mood or availability.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -16720,7 +16720,7 @@ const LAYERS = [
                 "id": "c4_f_id",
                 "label": "Fan Identity",
                 "color": "#8ab068",
-                "desc": "The team becomes the self. Fans of a losing team learn something about loyalty under bad conditions. Fans of a winning team learn something else.",
+                "desc": "The team becomes the self — or at least part of it. Fans of a losing team learn something about loyalty under bad conditions. Fans of a winning team learn something different and potentially less useful. Fan identity is not usually examined as identity — it is treated as trivial because it is about sport. But the emotional investment is real, the social world it organizes is real, and the things it teaches about belonging, loss, and solidarity are taught whether or not anyone intends to learn them.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -16765,7 +16765,7 @@ const LAYERS = [
                 "id": "c4_f_merch",
                 "label": "Merchandising",
                 "color": "#a0c078",
-                "desc": "The financial backbone. Jerseys, hats, mugs, the whole apparatus. Every team brand exists to sell more of itself.",
+                "desc": "The financial backbone of the fan relationship. Jerseys, hats, flags, memorabilia — every team brand exists to sell more of itself, and the fan who buys the jersey is participating in both an emotional transaction and a commercial one. Merchandising has become one of the largest revenue streams in professional sports. The logo on the shirt is an identity marker the fan pays for and the team profits from. The emotional authenticity of the gesture is not in conflict with its commercial function. Both are operating simultaneously.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -16810,7 +16810,7 @@ const LAYERS = [
                 "id": "c4_f_online",
                 "label": "Online Communities",
                 "color": "#5a8848",
-                "desc": "The forums where fans live now. Some are loving. Some are toxic. Most are both at different hours of the same day.",
+                "desc": "The forums, subreddits, Discord servers, and social media accounts where fans now live alongside the game. Fan communities online have amplified both the best and worst of fandom. The collective analysis of plays and statistics has become genuinely sophisticated. The collective anger directed at players, officials, and each other has become genuinely destructive. Athletes have documented leaving social media because the volume and nature of the content from fans was not compatible with being a functioning person. The same communities that celebrate also threaten.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -16855,7 +16855,7 @@ const LAYERS = [
                 "id": "c4_f_trib",
                 "label": "Tribalism",
                 "color": "#7a8848",
-                "desc": "The shadow side. The same loyalty that makes fandom warm makes it ugly when the rival fans show up. Most fan tribalism is harmless theater. Some of it isn't.",
+                "desc": "The shadow side of what makes fandom work. The same loyalty that creates warmth and belonging creates hostility toward outsiders. Fan tribalism — contempt for rival fans, dehumanization of opposing players, the genuine belief that the other team is bad in some moral sense — is mostly harmless theater and sometimes not. Tribalism is not a bug in the fandom operating system. It is what the operating system was built to produce. The sense of belonging requires an outside. The team provides both.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -16932,7 +16932,7 @@ const LAYERS = [
             "id": "c4_cel",
             "label": "Celebrity",
             "color": "#a08848",
-            "desc": "The product the entertainment industry has been refining for a century. A celebrity is a person who has become a brand other people consume. The labor is constant. The product is the self in public.",
+            "desc": "The product the entertainment industry has been refining for a century. A celebrity is a person who has been converted into a brand — an identity that other people consume, discuss, and project their own needs onto. The labor required to maintain celebrity is constant and often invisible. The product is the self in public, managed at scale. The distance between the celebrity and the person inside the celebrity is one of the more reliably tragic stories in American cultural life.",
             "links": [
               {
                 "label": "Longreads",
@@ -16952,7 +16952,7 @@ const LAYERS = [
                 "id": "c4_c_fame",
                 "label": "Fame",
                 "color": "#9a7838",
-                "desc": "The condition. Most people who pursue it discover what they thought they were after isn't what shows up.",
+                "desc": "The condition of being known by a great many more people than know you back. Most people who pursue fame discover that what they thought they were after — recognition, validation, the feeling of mattering — is not what shows up. What shows up is attention, which is a different thing. Attention is not intimate, not accurate, not kind, and not stable. The fantasy of fame is about being seen. The reality of fame is about being a surface for other people's projections. Most celebrities spend their careers managing the gap.",
                 "links": [
                   {
                     "label": "Longreads",
@@ -17003,7 +17003,7 @@ const LAYERS = [
                 "id": "c4_c_img",
                 "label": "Public Image",
                 "color": "#b09858",
-                "desc": "The constructed version. Image is what the audience believes about the celebrity. It rarely matches who they are. Sometimes the gap is the product.",
+                "desc": "The constructed version of the person. Public image is what the audience believes about the celebrity — the character built from interviews, appearances, performances, and the controlled release of personal information. It rarely matches who the celebrity actually is, and the gap is not incidental. The image is managed by professionals whose job is to serve the brand, which is not always the same as serving the person. Sometimes the image and the person converge. Sometimes the person disappears into the image and neither they nor the audience can find them afterward.",
                 "links": [
                   {
                     "label": "Longreads",
@@ -17048,7 +17048,7 @@ const LAYERS = [
                 "id": "c4_c_scan",
                 "label": "Scandal",
                 "color": "#7a4828",
-                "desc": "The other half of fame. The same machine that makes the star is built to dismantle the star. Scandal is content the industry cannot resist.",
+                "desc": "The other half of fame. The same machine that builds the star is built to dismantle it — because the fall generates as much attention as the rise, and attention is the product. Scandal is content the industry cannot resist because audiences consume it voraciously and the infrastructure for producing it is already in place. Some scandals reveal genuine harm that warranted public attention. Others are mechanisms for managing the market value of competing celebrities. The coverage is rarely able to distinguish between the two.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -17093,7 +17093,7 @@ const LAYERS = [
                 "id": "c4_c_inf",
                 "label": "Influence",
                 "color": "#a08850",
-                "desc": "The leverage that comes with the audience. Used well, celebrity has changed laws and saved lives. Used badly, it has sold quack cures and elected demagogues.",
+                "desc": "The leverage that comes with the attention of a large audience. Celebrity influence has changed laws, moved charitable giving, shaped medical behavior, and elected candidates. It has also sold fraudulent investments, promoted diets that cause harm, and amplified political movements that would not otherwise have reached scale. The difference between those two uses is not always visible to the audience, because the register of the communication — intimate, casual, trustworthy — does not change based on whether the content is harmful.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -17138,7 +17138,7 @@ const LAYERS = [
                 "id": "c4_c_par",
                 "label": "Parasocial Bonds",
                 "color": "#9a8050",
-                "desc": "The audience's side of the relationship. The fan feels close to the celebrity. The celebrity does not know the fan exists. Both feelings are real and asymmetric.",
+                "desc": "The audience's side of the relationship. The fan follows, watches, and feels close to the celebrity. The celebrity does not know the fan exists. Both sides of this dynamic are real: the fan's attachment is genuine, the celebrity's non-reciprocation is structural. Parasocial relationships provide real psychological benefits — they are correlated with lower loneliness and higher wellbeing in some research. They can also substitute for reciprocal relationships in ways that increase long-term isolation. The balance depends on what else is in the person's life.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -17183,7 +17183,7 @@ const LAYERS = [
                 "id": "c4_c_mach",
                 "label": "The Fame Machine",
                 "color": "#8a6838",
-                "desc": "The studios, agents, publicists, and platforms that produce celebrity at scale. The machine has gotten more efficient and more brutal across the digital decades.",
+                "desc": "The studios, agencies, publicists, managers, stylists, social media teams, and platforms that produce celebrity at industrial scale. The machine has gotten more efficient and more brutal across the digital decades. The speed at which fame can be manufactured has increased. The duration of any given celebrity's relevance has shortened. The machine requires constant fresh material, which means it is continuously looking for new people to put through it and has less institutional interest in what happens to them afterward.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -17266,7 +17266,7 @@ const LAYERS = [
             "id": "c4_film",
             "label": "Film, TV & Streaming",
             "color": "#8848a0",
-            "desc": "How the country tells stories to itself. Film and television used to share roughly the same audience. Streaming exploded the audience into a thousand niches. The shared story is harder to find. Each generation now grows up on its own canon.",
+            "desc": "How the country tells stories to itself. Film and television used to share roughly the same audience — the same blockbuster, the same season finale, the same shared cultural moment. Streaming fragmented that audience into thousands of micro-canons, each with its own beloved texts and reference points. The shared culture is harder to find. Each generation now grows up on its own story universe, with less overlap than any previous era. What replaces shared story as social glue is still an open question.",
             "links": [
               {
                 "label": "Longreads",
@@ -17286,7 +17286,7 @@ const LAYERS = [
                 "id": "c4_fl_story",
                 "label": "Storytelling",
                 "color": "#783898",
-                "desc": "What people pay for. The stories that work do something the audience needs without being able to name it. The stories that fail usually cost more.",
+                "desc": "What people have always paid for, in money and attention. The stories that work do something the audience needs without being able to name it — they provide models for the emotions, experiences, and situations life presents without instruction. Stories that fail almost always fail at the level of emotional truth, regardless of production budget. The industry has spent decades trying to make storytelling predictable — the three-act structure, the hero's journey, the franchise formula — and keeps discovering that what audiences actually respond to is the thing that cannot be formalized.",
                 "links": [
                   {
                     "label": "Longreads",
@@ -17337,7 +17337,7 @@ const LAYERS = [
                 "id": "c4_fl_stud",
                 "label": "Studios",
                 "color": "#683888",
-                "desc": "The companies that finance and distribute. American film and television are now run by a handful of conglomerates. The choices about what gets made happen in fewer rooms than at any time in the medium's history.",
+                "desc": "The companies that finance and distribute film and television. American entertainment is now controlled by a handful of conglomerates — Disney, NBCUniversal, Warner Bros. Discovery, Sony, Apple, Amazon. The consolidation of the last twenty years means that the decisions about what stories get told, at what scale, for what audience, happen in fewer rooms than at any time in the medium's history. The economics of the studio system — who gets greenlit, who gets cut — are the hidden architecture of American cultural production.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -17382,7 +17382,7 @@ const LAYERS = [
                 "id": "c4_fl_fr",
                 "label": "Franchises",
                 "color": "#9858a8",
-                "desc": "The recyclable product. Marvel, Star Wars, the universes that get spun out into ten parallel shows. Franchises de-risk the financial bet. The cost is the squeeze on everything that isn't one.",
+                "desc": "The recyclable product. A franchise is intellectual property with enough audience recognition to support sequels, spinoffs, merchandise, and theme park rides. Marvel, Star Wars, the universe-sized stories. Franchises de-risk the financial bet by selling something the audience already knows they like. The cost is the compression of development resources and exhibition space around a small number of proven properties, which squeezes out the mid-budget original film that built most of the filmmakers the industry now canonizes. The franchise era has been commercially successful. The creative cost is real and ongoing.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -17427,7 +17427,7 @@ const LAYERS = [
                 "id": "c4_fl_str",
                 "label": "Streaming Platforms",
                 "color": "#7a3898",
-                "desc": "The new theaters. Netflix, Disney+, Apple TV+, the rest. The streaming wars of the early 2020s settled into a duopoly-with-stragglers, with prices rising and content libraries shrinking.",
+                "desc": "The new theaters, available anywhere, at any hour. Netflix normalized subscription streaming. Disney+ consolidated franchises. Apple TV+ and Amazon Prime use entertainment as a loss leader for larger business models. The streaming wars of the early 2020s collapsed into a smaller number of more expensive services. Subscriber growth has plateaued and prices have risen. The content libraries that drove initial subscriptions are shrinking as licensing deals expire and platforms cut costs. The permanent archive of film and television that streaming briefly made possible is already contracting.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -17472,7 +17472,7 @@ const LAYERS = [
                 "id": "c4_fl_alg",
                 "label": "Algorithms",
                 "color": "#8848a0",
-                "desc": "The streaming recommendation system. Like social media, optimized for retention. The shape of what gets greenlit is increasingly determined by what the algorithm can sell to a subscription audience.",
+                "desc": "The recommendation system that determines what most people watch next on a streaming platform. Like social media algorithms, optimized for retention — keeping the subscriber watching rather than canceling. The shape of what gets greenlit increasingly reflects what the algorithm can sell to a broad subscription audience rather than what a particular creative vision demands. This is changing the aesthetics of prestige television in ways that are visible to critics and increasingly to audiences — the algorithmic show has a signature texture that a large enough slice of the audience can now identify.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -17517,7 +17517,7 @@ const LAYERS = [
                 "id": "c4_fl_mem",
                 "label": "Cultural Memory",
                 "color": "#a868b8",
-                "desc": "The films and shows that lodge in a generation. They become reference points, vocabulary, the unspoken shared text that lets two strangers understand each other.",
+                "desc": "The films and shows that lodge in a generation's shared imagination. They become vocabulary, reference points, the unspoken text that allows two strangers from the same era to understand each other. Cultural memory via film and television is generationally segmented — the references that land for a forty-year-old do not land for a twenty-year-old, and the gap is widening as the canons diverge. What holds across generations tends to be the stories with the most direct access to the universal — grief, love, belonging, the fear of death. The technology changes. Those do not.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -17600,7 +17600,7 @@ const LAYERS = [
             "id": "c4_mus",
             "label": "Music & Performance",
             "color": "#a8488a",
-            "desc": "The art form most people carry on them constantly. Music is older than language, older than agriculture, probably older than human anatomy is. The industry around it is younger and uglier than the art deserves.",
+            "desc": "The art form most people carry on them constantly, in their ears, in their heads, on their phones. Music is older than any other human art form — older than written language, older than architecture, probably older than the current configuration of the human vocal tract. The industry around it is younger and has never been stable. Recorded music, radio, MTV, file sharing, streaming — every new delivery mechanism restructured who got paid and who did not. The art has survived every version of the industry. The working musician's economic situation has not.",
             "links": [
               {
                 "label": "Internet Archive",
@@ -17620,7 +17620,7 @@ const LAYERS = [
                 "id": "c4_m_genre",
                 "label": "Genre",
                 "color": "#984078",
-                "desc": "The categories the industry uses to sell. Genres are real and porous. The interesting work usually happens at the seams.",
+                "desc": "The categories the industry uses to sort, market, and sell music. Genres are real — they describe actual aesthetic and cultural communities — and they are porous. The interesting work almost always happens at the seams: country-rap, punk-jazz, gospel-electronics. Genres calcify around commercial success and loosen under cultural pressure. The genre categories in use today were mostly invented by radio programmers and record label marketing departments. They reflect what the industry needed to sell as much as what the music actually is.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -17665,7 +17665,7 @@ const LAYERS = [
                 "id": "c4_m_conc",
                 "label": "Concerts",
                 "color": "#b85890",
-                "desc": "The live event. The thing streaming cannot replicate. Live music is now one of the few entertainment forms where artists make most of their income.",
+                "desc": "The live event that streaming cannot replicate. The body in the room, the sound at a volume that is felt as much as heard, ten thousand people responding to the same moment simultaneously. Live music is now one of the few entertainment forms where artists make the majority of their income — a reversal from the pre-streaming era when albums were the primary revenue and touring was the promotion. The concert economy has grown while recorded music revenue has shrunk. The scale of live events has also grown, with a small number of artists capturing an increasingly large share.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -17720,7 +17720,7 @@ const LAYERS = [
                 "id": "c4_m_sub",
                 "label": "Subculture",
                 "color": "#883878",
-                "desc": "The scenes that grew around specific music — punk, hip-hop, country, electronic. Subcultures are where new forms get tested before the mainstream picks them up.",
+                "desc": "The scenes that formed around specific sounds in specific places at specific moments — punk in London in 1976, hip-hop in the South Bronx in the 1970s, grunge in Seattle in the late 1980s. Subcultures are where new forms get developed and tested before the mainstream arrives to strip the context and sell the aesthetic. The time between a subculture forming and the mainstream consuming it has compressed dramatically with social media. The geographic specificity that made subcultures possible is also dissolving as the internet flattens cultural space.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -17765,7 +17765,7 @@ const LAYERS = [
                 "id": "c4_m_prot",
                 "label": "Protest Music",
                 "color": "#a83878",
-                "desc": "The songs that go with every movement. From spirituals through folk through hip-hop, American protest music is one of the most durable political forms the country has produced.",
+                "desc": "The songs that go with every movement that has ever moved anything. From the spirituals of the enslaved to the union songs of the labor movement to the anthems of civil rights to the hip-hop that documented the crack epidemic to the protest music of every contemporary movement — music has been political transportation for as long as there have been things worth being political about. The mechanism is consistent: music gets the feeling into the body in a way that argument cannot. Once the feeling is there, it is very hard to argue out.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -17816,7 +17816,7 @@ const LAYERS = [
                 "id": "c4_m_ind",
                 "label": "Industry Control",
                 "color": "#783868",
-                "desc": "The labels, streamers, and platforms that take most of the money. Working musicians make a small percentage of what their work earns. The math has gotten worse with streaming.",
+                "desc": "The labels, streaming platforms, and publishers that take the majority of the money generated by music. The economics have shifted with each technology transition and have not shifted in favor of working musicians. A stream on Spotify pays fractions of a cent. An album that would have supported a mid-level artist's career in 1995 produces a few hundred dollars in annual streaming income now. The artists at the top of the industry make enormous amounts. The vast middle of professional musicians is working harder for less than at any point in the recorded music era.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -17899,7 +17899,7 @@ const LAYERS = [
             "id": "c4_biz",
             "label": "The Business of Entertainment",
             "color": "#785838",
-            "desc": "The money side. Entertainment in the U.S. is hundreds of billions of dollars a year. Most of it flows to a small number of companies. Most of the labor is done by people who aren't on the cap table.",
+            "desc": "The money side of the largest entertainment economy in the world. American entertainment generates hundreds of billions of dollars annually. The overwhelming majority of that flows to a small number of corporations through ownership of intellectual property, control of distribution, and the structural advantages of scale. The labor that produces the content — writers, actors, musicians, crew, technicians — negotiates for its share against entities with vastly more leverage. The 2023 Hollywood strikes were one of the more visible recent examples of what happens when that negotiation breaks down.",
             "links": [
               {
                 "label": "Bureau of Labor Statistics",
@@ -17925,7 +17925,7 @@ const LAYERS = [
                 "id": "c4_b_lab",
                 "label": "Labor",
                 "color": "#684828",
-                "desc": "The writers, actors, crew, technicians, musicians. The 2023 strikes were the biggest labor action in entertainment in decades and they happened because the math had stopped working.",
+                "desc": "The writers, directors, actors, crew, musicians, technicians, and the thousands of other workers who produce the entertainment industry's output. The 2023 WGA and SAG-AFTRA strikes were the largest labor action in American entertainment in decades, triggered by the collapse of residual income as streaming replaced broadcast and the emerging threat of AI replacing writers and actors outright. The strikes won meaningful concessions. The underlying economics — platforms capturing enormous value while the people who produced the content receive diminishing shares — have not been resolved.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -17976,7 +17976,7 @@ const LAYERS = [
                 "id": "c4_b_con",
                 "label": "Entertainment Contracts",
                 "color": "#785838",
-                "desc": "The fine print. Entertainment contracts have gotten more extractive as the platforms consolidated. Royalty structures, residual rights, ownership of likeness — all the things that used to feed working artists are being renegotiated downward.",
+                "desc": "The fine print that governs how creative work gets paid. Entertainment contracts have gotten more extractive as platforms consolidated and the leverage of individual artists and creators diminished. Royalty structures, residual rights, ownership of likeness, streaming percentages, work-for-hire clauses — all the mechanisms that once provided income to working artists across the life of their work are being renegotiated downward in the age of algorithmic distribution. The 2023 Hollywood strikes were partly about this. The new contracts were better. The fundamental power asymmetry between the person who creates and the company that distributes has not changed.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -18031,7 +18031,7 @@ const LAYERS = [
                 "id": "c4_b_own",
                 "label": "Media Ownership",
                 "color": "#586028",
-                "desc": "The handful of companies. Disney, Comcast, Paramount, Warner, Sony, a few others. American entertainment ownership is more concentrated now than when the antitrust laws were written.",
+                "desc": "The handful of companies. Disney, Comcast, Warner Bros. Discovery, Paramount Global, Sony, and a few technology companies that entered the content business. American entertainment ownership is more concentrated than at any point in the industry's history, despite the antitrust frameworks written to prevent exactly this kind of consolidation. The concentration determines what gets made, what gets distributed, what gets preserved, and what disappears. The creative decisions made by entertainment corporations are also cultural decisions — about which stories get told and which do not — made by a smaller number of people than the scale of the influence would suggest is wise.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -18076,7 +18076,7 @@ const LAYERS = [
                 "id": "c4_b_lg",
                 "label": "Sports Leagues",
                 "color": "#684838",
-                "desc": "The NFL, NBA, MLB, NHL, MLS, NCAA. The leagues are antitrust-exempt cartels in most respects. They make a great deal of money and pay their stars a lot of it. They pay everyone else what the labor agreement forced.",
+                "desc": "The NFL, NBA, MLB, NHL, MLS, and the NCAA — organized as leagues with antitrust exemptions that allow them to function as cartels in ways that would be illegal in other industries. They set schedules, cap salaries, control broadcast rights, and negotiate stadium subsidies from governments simultaneously. The leagues make a great deal of money. The stars make a significant fraction of it. The workers at the base of the enterprise — college athletes, minor league players, stadium staff — make what the labor agreement or the absence of one permits. The gap is wide and largely invisible.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -18121,7 +18121,7 @@ const LAYERS = [
                 "id": "c4_b_str",
                 "label": "Streaming Economics",
                 "color": "#786838",
-                "desc": "The math the industry is still figuring out. Subscriber growth slowed. Profitability is still elusive for most platforms. The price keeps rising and the libraries keep shrinking.",
+                "desc": "The economics the streaming industry has been trying to solve since subscriber growth plateaued in the early 2020s. The content investment required to retain subscribers at the necessary scale has proven difficult to recoup through subscription revenue alone. Ad-supported tiers have returned. Passwords are being locked. Prices are rising. Libraries are being culled to reduce licensing costs. The permanent streaming utopia of all content, everywhere, cheap, turned out to be a temporary condition of market expansion rather than a sustainable business model. The industry is repricing toward something that might actually work.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -19053,7 +19053,7 @@ const LAYERS = [
                 "id": "e1_o_sites",
                 "label": "Websites",
                 "color": "#2a6848",
-                "desc": "The original unit of the web. A page anyone could make. Most have decayed, been bought, or disappeared into a platform. The ones still standing are doing real work.",
+                "desc": "The original unit of the web. A page anyone could make and anyone could find. The early web was uneven, often ugly, and genuinely decentralized. Most of that has decayed or been absorbed into platforms. The ones still standing as independent websites are doing real work — journalism, research, art, documentation — that the platforms have no interest in hosting. The website is not obsolete. It is increasingly uncommon. That is a political and economic fact, not a technological one.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -19098,7 +19098,7 @@ const LAYERS = [
                 "id": "e1_o_link",
                 "label": "Hyperlinks",
                 "color": "#3a7858",
-                "desc": "The thing that made the web a web. Every link is a vote that another page is worth reading. Algorithms learned to read links. Then learned to game them. Then learned to ignore them.",
+                "desc": "The thing that made the web a web instead of a collection of isolated pages. Every hyperlink is an assertion that another page is worth visiting — a form of citation and endorsement compressed into a click. Algorithms learned to read link patterns as a measure of authority. Then people learned to game the links. Then the algorithms learned to discount the games. The hyperlink is still the infrastructure of navigation on the open web and still carries more of the web's architecture than anything that replaced it.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -19143,7 +19143,7 @@ const LAYERS = [
                 "id": "e1_o_blog",
                 "label": "Blogs",
                 "color": "#4a8868",
-                "desc": "The form that taught the internet to write personally. Most are gone. Some became Substacks. The voice the form trained is everywhere now.",
+                "desc": "The form that taught the internet to write personally, directly, and in a voice. Most blogs are gone — replaced by social media, newsletters, or neglect. Some became Substacks or podcasts. The voice the blog format trained — first-person, informal, opinionated, long-form — is everywhere now in ways that are not always credited to where it came from. The blog was also the first time many people published anything. That mattered more than the format.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -19188,7 +19188,7 @@ const LAYERS = [
                 "id": "e1_o_for",
                 "label": "Forums",
                 "color": "#3a6848",
-                "desc": "The communities that predate social media. Topic-organized, moderated, sometimes durable. Forums still hold expertise the platforms can't match because forums are not optimized for engagement.",
+                "desc": "The communities that predate social media and have, in some cases, outlasted it. Topic-organized, moderated by users, searchable across years. Forums still hold expertise that social media cannot match because forums are not optimized for engagement — they are optimized for the accumulation of knowledge over time. The answers to technical questions, the community around niche interests, the long unspooled conversations — these are preserved in forum archives that have no equivalent in the ephemeral, chronological feed.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -19233,7 +19233,7 @@ const LAYERS = [
                 "id": "e1_o_proto",
                 "label": "Protocols",
                 "color": "#2a5838",
-                "desc": "The agreements underneath. HTTP, SMTP, the standards that let any browser talk to any server. The open web's deepest layer is still standards-based and still mostly out of any single company's control.",
+                "desc": "The agreements that let any browser talk to any server, any email client send to any other, any device connect to any network. HTTP, SMTP, TCP/IP — the protocols of the open internet are the reason no single company owns it. They were built by researchers without a commercial mandate and they remain the deepest layer of the web's public character. The open web's survival depends on those standards remaining open. The pressure from platform enclosure is constant.",
                 "links": [
                   {
                     "label": "Mozilla Foundation",
@@ -19293,7 +19293,7 @@ const LAYERS = [
                 "id": "e1_o_dec",
                 "label": "Web Decay",
                 "color": "#1a4828",
-                "desc": "The slow death of the open web. Roughly 40% of all web pages from 2013 are now dead links. The default state of online content is to disappear. Archives are the only reason any of it survives.",
+                "desc": "The slow death of the open web, one dead link at a time. Roughly 40% of all web pages from 2013 are now inaccessible. The default state of online content is to disappear — hosting expires, domains lapse, companies shut down, platforms close. The Internet Archive's Wayback Machine has captured billions of pages and is underfunded. Everything else is subject to the economics of server costs and the decisions of whoever is paying them. The web is not a permanent record. It is a series of temporary ones.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -19370,7 +19370,7 @@ const LAYERS = [
             "id": "e1_search",
             "label": "Search & Discovery",
             "color": "#4a8868",
-            "desc": "How people find what they're looking for. Search has gotten worse. The major engines have been progressively more loaded with ads, AI summaries, and content optimized for them rather than for the searcher.",
+            "desc": "How people find what they're looking for — and increasingly what they find instead of what they wanted. Search has been the primary interface to the web for twenty years and has gotten progressively worse by most quality measures: more ads, more SEO-optimized content, more AI-generated pages, fewer direct links to sources. The search engine is still where most people start. The question of whether it still gets them to the right place is a genuinely contested one.",
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
@@ -19390,7 +19390,7 @@ const LAYERS = [
                 "id": "e1_s_eng",
                 "label": "Search Engines",
                 "color": "#3a7858",
-                "desc": "The companies that decide what most people find first. Google has held majority share for two decades. The alternatives are slowly improving and still small.",
+                "desc": "The companies that decide what most people find first. Google has held majority search market share for two decades. The alternatives — Bing, DuckDuckGo, Brave, a handful of others — are slowly improving and still small. The dominance of a single search engine over the information intake of billions of people is one of the more consequential concentrations of power in the modern information environment. The company has no formal editorial accountability.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -19435,7 +19435,7 @@ const LAYERS = [
                 "id": "e1_s_seo",
                 "label": "SEO",
                 "color": "#5a9878",
-                "desc": "The industry that exists to game what search engines surface. The whole content layer of the modern web is partly shaped by what SEO is rewarding this quarter.",
+                "desc": "The industry that exists to reverse-engineer and game what search engines surface. Search engine optimization is not inherently dishonest — making your content readable and findable is legitimate. The industry has also produced an enormous layer of content written primarily to satisfy algorithms rather than readers. Entire content farms exist to produce pages that rank highly for searches and provide little value to people who click them. The SEO layer is part of why search has gotten worse.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -19480,7 +19480,7 @@ const LAYERS = [
                 "id": "e1_s_rec",
                 "label": "Search Recommendation",
                 "color": "#4a8868",
-                "desc": "What the platform suggests when you didn't ask. Recommendation is search inverted — and increasingly the way people encounter information.",
+                "desc": "What the platform surfaces when you didn't ask for it specifically. Search recommendation is the interface between search and social media — the autocomplete, the related searches, the suggested queries. Recommendation is search inverted: instead of you specifying what you want to find, the system infers what you might want and shows you that. It is increasingly the way people encounter information they didn't know to look for, which makes the recommendation's calibration a genuinely important editorial question.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -19525,7 +19525,7 @@ const LAYERS = [
                 "id": "e1_s_idx",
                 "label": "Indexing",
                 "color": "#3a7858",
-                "desc": "The crawl that builds the searchable index. Most of the open web is no longer well-indexed by major engines. The library card catalog metaphor has broken.",
+                "desc": "The crawl that maps the web and builds the searchable record. Major search engines index a fraction of what exists online — the rest is the deep web, the dark web, or content that crawlers can't or don't reach. The index is also not static: pages get added, removed, and changed. Most of the open web from before 2000 is no longer well-indexed by any major engine. The library card catalog metaphor has broken in ways most people don't register because the remaining index is still large enough to feel comprehensive.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -19570,7 +19570,7 @@ const LAYERS = [
                 "id": "e1_s_rank",
                 "label": "Search Ranking",
                 "color": "#2a6848",
-                "desc": "The order results come in. Ranking is editorial work that people do not perceive as editorial. The top three results get the overwhelming majority of clicks.",
+                "desc": "The order results come in. The first result gets roughly a third of all clicks. The top three get the overwhelming majority. Everything below the fold is mostly unread. Ranking is editorial work that people do not perceive as editorial — it carries the authority of algorithm and objectivity rather than the acknowledged subjectivity of a human editor. The ranking decides what most people read about almost every topic. The company doing the ranking has not been elected to that role.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -19615,7 +19615,7 @@ const LAYERS = [
                 "id": "e1_s_bias",
                 "label": "Search Bias",
                 "color": "#5a8868",
-                "desc": "What the search engine doesn't surface. The default surface tilts toward commercial sources, recent content, and English. The web is bigger than what search shows.",
+                "desc": "What the search engine doesn't surface, or surfaces last. The default tilt is toward commercial sources, recently published content, English-language pages, and results that fit the dominant frame on any contested topic. The web is bigger and more diverse than what search shows. The bias is not designed to be political but it has political effects — the systematic under-surfacing of minority-language sources, small publishers, and non-commercial voices changes what a normal web search reveals.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -19769,7 +19769,7 @@ const LAYERS = [
                 "id": "e1_a_gov",
                 "label": "Government Records",
                 "color": "#4a7838",
-                "desc": "The papers nations keep. American federal records are scattered across agencies in varying conditions. Each administration changes what gets kept and what gets purged.",
+                "desc": "The papers governments keep — treaties, legislation, budgets, correspondence, administrative records. American federal records are scattered across hundreds of agencies in vastly different conditions. Some are well preserved and publicly accessible. Others are underfunded, deteriorating, and subject to selective classification. Each administration changes what gets kept, what gets declassified, and what gets quietly purged. The national memory depends on institutions that have not been consistently resourced to hold it.",
                 "links": [
                   {
                     "label": "Library of Congress",
@@ -19820,7 +19820,7 @@ const LAYERS = [
                 "id": "e1_a_oral",
                 "label": "Oral History",
                 "color": "#6a9858",
-                "desc": "What gets remembered when there are no documents. Oral history projects have preserved testimony from civil rights workers, Holocaust survivors, indigenous communities, and ordinary people whose lives the official record missed.",
+                "desc": "What gets preserved when there are no documents, or when the documents were kept by the wrong people. Oral history projects have captured testimony from civil rights workers, Holocaust survivors, indigenous communities, veterans, migrants, and ordinary people whose lives the official record missed entirely. The Studs Terkel model — sit down, ask good questions, transcribe what comes back — has produced some of the most irreplaceable primary sources in American history. The institutions that fund and maintain oral history archives are perpetually at risk.",
                 "links": [
                   {
                     "label": "Library of Congress",
@@ -19865,7 +19865,7 @@ const LAYERS = [
                 "id": "e1_a_dead",
                 "label": "Dead Links",
                 "color": "#3a6028",
-                "desc": "The default state. Most things published online twenty years ago are gone now. Link rot is the working condition of the digital archive.",
+                "desc": "The default state of the digital record. Most things published online twenty years ago are gone — the hosting expired, the domain lapsed, the company shut down, the platform changed its policy. Link rot is not a marginal condition of the digital archive. It is the standard one. The Internet Archive exists to fight this and captures billions of pages, but it is one nonprofit against the economics of the internet. The assumption that digital is permanent is incorrect. Digital is, in practice, more fragile than paper.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -19910,7 +19910,7 @@ const LAYERS = [
                 "id": "e1_a_dig",
                 "label": "Digitization",
                 "color": "#5a8848",
-                "desc": "The slow scanning of the analog world. Libraries and archives are still working through centuries of paper. The work outpaces the funding by an order of magnitude.",
+                "desc": "The slow, ongoing project of converting the analog world's accumulated record into a format that can be searched, shared, and preserved. Libraries and archives are still working through centuries of paper, photographs, film, and magnetic tape. The work is expensive, technically demanding, and perpetually underfunded relative to the scale of what exists. The good news is that digitization is preserving things that would otherwise be lost to decay. The complication is that digital preservation has its own obsolescence problem.",
                 "links": [
                   {
                     "label": "Library of Congress",
@@ -19961,7 +19961,7 @@ const LAYERS = [
                 "id": "e1_a_inst",
                 "label": "Memory Institutions",
                 "color": "#4a7838",
-                "desc": "The libraries, archives, and museums that hold the record. Underfunded almost everywhere. Most of what survives the next century will survive because someone in one of these buildings made a budget fight for it.",
+                "desc": "The libraries, archives, museums, and cultural repositories that hold the accumulated record of human activity. Underfunded in most countries, perpetually threatened by budget cuts, and increasingly asked to do more with less. The Library of Congress, the Smithsonian, the National Archives — these are the infrastructure of cultural memory, and most of the public treats them as background to the life of the mind rather than its prerequisite. Most of what survives the next century will survive because someone in one of these buildings fought for the money to keep it.",
                 "links": [
                   {
                     "label": "Library of Congress",
@@ -20070,7 +20070,7 @@ const LAYERS = [
                 "id": "e1_ac_bb",
                 "label": "Broadband",
                 "color": "#6a9878",
-                "desc": "The connection itself. Federal broadband programs have failed to close the gap for two decades. The companies built where the profit was. Where the profit wasn't, the country didn't show up.",
+                "desc": "The connection that makes access to the rest of this possible. Broadband is infrastructure, and like all infrastructure its distribution follows investment, which follows profit. The federal government has made multiple attempts to close the rural and low-income broadband gap over two decades. None of them have fully succeeded. The companies built where the economics worked. Where the economics didn't work — rural areas, low-income urban neighborhoods — the country mostly didn't show up. The gap is closing slowly. The cost of having had it this long is not recoverable.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -20115,7 +20115,7 @@ const LAYERS = [
                 "id": "e1_ac_dev",
                 "label": "Devices",
                 "color": "#5a8868",
-                "desc": "The hardware. A computer is no longer optional. Schools, jobs, and clinics increasingly assume one. The cost is borne by households for whom the cost is not trivial.",
+                "desc": "The hardware end of the digital divide. A computer or smartphone is no longer optional for participating in modern civic and economic life. Schools, employers, healthcare systems, and government agencies increasingly assume you have one. The cost of devices — several hundred dollars at minimum — is borne by households for whom that cost is not trivial. Device access correlates with income, race, and geography in patterns that mirror the larger inequalities of the society the devices are supposed to help people navigate.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -20211,7 +20211,7 @@ const LAYERS = [
                 "id": "e1_ac_rur",
                 "label": "Rural Access",
                 "color": "#8aa898",
-                "desc": "The deepest gap. Rural America has paid the price for the urban tilt of broadband investment for decades. The gap is starting to close. It is closing slowly.",
+                "desc": "The deepest end of the broadband gap. Rural America has been systematically underserved by private broadband investment because the economics of serving dispersed populations do not work for private carriers. The gap has produced real costs: rural hospitals closing, agricultural businesses unable to adopt precision farming, students doing homework in fast food parking lots for the wifi. Federal programs to close the gap have been slow to design and slower to deploy. Progress is being made. The years of delay cannot be returned.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -20256,7 +20256,7 @@ const LAYERS = [
                 "id": "e1_ac_pay",
                 "label": "Paywalls",
                 "color": "#9ab098",
-                "desc": "Knowledge behind a credit card. Most academic research is paywalled. Most newspapers are paywalled. The information that decides public conversations is increasingly available only to people who can afford the subscriptions.",
+                "desc": "Knowledge behind a credit card. Most peer-reviewed academic research is paywalled. Most major newspapers are paywalled. Legal databases are paywalled. The information that shapes public conversation — about medicine, law, policy, science — is increasingly available only to people who can afford the subscriptions or who happen to have institutional access. This is a structural consequence of how knowledge production is financed. The open access movement has made progress in the sciences. In most other fields, the toll persists.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -20307,7 +20307,7 @@ const LAYERS = [
                 "id": "e1_ac_lang",
                 "label": "Language Barriers",
                 "color": "#7a9888",
-                "desc": "The web is mostly in English. Most non-English speakers see a smaller, slower, lower-quality web. Translation tools are improving and are still no substitute for resources built in the language.",
+                "desc": "The web is approximately 60% English-language content, serving a global population that is about 17% English-speaking. For non-English speakers, the web is smaller, slower, less current, and lower quality — both because less content exists in their language and because translation tools, while improving, are not substitutes for resources actually built in the language. Language barriers to knowledge access are not a technical problem awaiting a solution. They are a function of which populations the people who built the web served.",
                 "links": [
                   {
                     "label": "Endangered Languages Project",
@@ -20467,7 +20467,7 @@ const LAYERS = [
                 "id": "e1_k_oa",
                 "label": "Open Access",
                 "color": "#4a8858",
-                "desc": "The movement to free academic research from paywalls. Mostly successful for new work in the sciences. Mostly stalled for everything else. The economics of academic publishing remain weird and bad.",
+                "desc": "The movement to make academic research freely accessible rather than locked behind publisher paywalls. Open access has made significant progress for new scientific publications, particularly work funded by federal grants, where mandates now require public release. The humanities, social sciences, and older research remain largely paywalled. The economics of academic publishing are strange — research produced by publicly funded universities is often handed to private publishers who charge those same universities to access it. The movement argues this arrangement should end.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -20518,7 +20518,7 @@ const LAYERS = [
                 "id": "e1_k_cc",
                 "label": "Creative Commons",
                 "color": "#6a9868",
-                "desc": "The licensing framework that lets creators give specific permissions short of full copyright. Underpins much of the open web's reusable culture.",
+                "desc": "The licensing system developed by Lawrence Lessig and Creative Commons to allow creators to grant specific permissions without surrendering all copyright. Instead of all rights reserved or nothing reserved, Creative Commons licenses specify exactly what can be done — share freely, use commercially, modify, require attribution. The licenses underpin much of the open web's reusable culture: Wikipedia, open educational resources, freely shared music and photography. A simple legal tool that changed the practical terms of cultural sharing.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -20569,7 +20569,7 @@ const LAYERS = [
                 "id": "e1_k_pd",
                 "label": "Public Domain",
                 "color": "#7aa878",
-                "desc": "What is no longer copyrighted. Most of human creative output should be here by now. The U.S. has repeatedly extended copyright terms to keep specific properties out of the commons.",
+                "desc": "What is no longer copyrighted and therefore belongs to everyone. Most of human creative output should be here — works more than 95 years old, works produced by government employees in the course of their duties, works explicitly dedicated to the public domain. Copyright terms in the United States have been repeatedly extended by Congress, largely at the request of entertainment companies, to keep specific properties from entering the commons. The result is that works created in living memory remain locked for generations.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -20620,7 +20620,7 @@ const LAYERS = [
                 "id": "e1_k_data",
                 "label": "Open Data",
                 "color": "#5a8858",
-                "desc": "Data that the public can use. Government data portals are uneven across agencies and administrations. The good ones are very good. The bad ones are deliberately unusable.",
+                "desc": "Data produced by governments, research institutions, and other entities that the public can use, analyze, and build on. Government data portals are uneven in quality across agencies and change with administrations — data that was publicly accessible has been removed, restricted, or made harder to use by agencies that preferred the findings not be visible. The good government data portals are very good. The bad ones are often the result of deliberate decisions rather than technical failures. Open data is a policy choice, not a default.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -20677,7 +20677,7 @@ const LAYERS = [
                 "id": "e1_k_com",
                 "label": "Community Knowledge",
                 "color": "#6a9868",
-                "desc": "Knowledge held by groups outside the official record — indigenous knowledge, craft tradition, oral history, the expertise of practitioners. The web has surfaced more of it. The web has also exposed it to extraction.",
+                "desc": "The knowledge held by communities that exists outside the official record — indigenous ecological knowledge, craft traditions, oral histories, the accumulated expertise of practitioners. This knowledge is often more detailed, more locally accurate, and more durable than formally published equivalents. The internet has made more of it findable. It has also made it easier to extract from its communities, package, and sell without attribution, credit, or compensation. The relationship between community knowledge and the formal knowledge economy is a running negotiation about who owns what.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -20798,7 +20798,7 @@ const LAYERS = [
         "x": 28,
         "y": 36,
         "color": "#4870c8",
-        "desc": "The method that replaced revelation with replication. Still the best tool humans have for being less wrong, systematically. Currently under deliberate political pressure from multiple directions.",
+        "desc": "The method that replaced revelation with replication. Not a body of facts but a process for generating and testing them — observation, hypothesis, experiment, peer review, revision. Still the best tool humans have for being systematically less wrong about the physical world. Currently under deliberate political pressure in the United States and elsewhere, with specific findings — evolution, climate change, vaccine safety — contested not on scientific grounds but on political and economic ones. The method itself is not in dispute. Its findings are.",
         "links": [
           {
             "label": "Pew Research",
@@ -20872,7 +20872,7 @@ const LAYERS = [
                 "id": "e2_math_arith",
                 "label": "Arithmetic & Algebra",
                 "color": "#3858a8",
-                "desc": "The foundations — counting, operations, and the rules for manipulating quantities and unknowns. The math most people use every day without realizing it underpins everything from a grocery bill to a rocket trajectory.",
+                "desc": "The foundations — counting, operations, and the rules for manipulating quantities and unknowns. Arithmetic is the mathematics everyone uses every day: the grocery bill, the interest rate, the medication dose. Algebra extends this into the unknown, turning specific numbers into general relationships. Together they are the floor beneath every other mathematical discipline and the minimal quantitative literacy required to navigate modern life without being continuously misled by numbers presented without context.",
                 "links": [
                   {
                     "label": "Khan Academy",
@@ -20923,7 +20923,7 @@ const LAYERS = [
                 "id": "e2_math_geo",
                 "label": "Geometry",
                 "color": "#3858a8",
-                "desc": "The mathematics of shape, space, and structure. From Euclid's Elements to the non-Euclidean geometries that made Einstein's relativity possible. Architecture, art, navigation, and physics all run on geometry.",
+                "desc": "The mathematics of shape, space, and structure. Euclid codified its foundations around 300 BCE and the axioms held as the only geometry for two thousand years, until the 19th century produced non-Euclidean geometries that describe curved space — and that turned out to be necessary for Einstein's relativity. Architecture, navigation, art, physics, and computer graphics all depend on geometry. It is also one of the first mathematical subjects that gives students the experience of formal proof — of knowing something is true not because an authority said so but because it follows necessarily.",
                 "links": [
                   {
                     "label": "Khan Academy",
@@ -20974,7 +20974,7 @@ const LAYERS = [
                 "id": "e2_math_calc",
                 "label": "Calculus",
                 "color": "#3858a8",
-                "desc": "Invented independently by Newton and Leibniz in the 17th century, calculus is the mathematics of change. It made modern physics, engineering, and economics possible. Every curve, every rate of change, every optimization problem runs on calculus.",
+                "desc": "The mathematics of change and accumulation — invented independently by Newton and Leibniz in the seventeenth century, argued about bitterly for decades, and now essential to every quantitative science. Differential calculus handles rates of change: how fast something is moving, how quickly a population grows, how a curve's slope changes. Integral calculus handles accumulation: how much area under a curve, how much work is done, how much drug accumulates in a body. Modern physics, engineering, economics, and AI would not exist without it.",
                 "links": [
                   {
                     "label": "Khan Academy",
@@ -21031,7 +21031,7 @@ const LAYERS = [
                 "id": "e2_math_stats",
                 "label": "Statistics & Probability",
                 "color": "#3858a8",
-                "desc": "The mathematics of uncertainty. How to draw conclusions from incomplete information, how likely something is, how confident we should be in a result. Essential for medicine, polling, finance, AI, and every claim that begins with \"studies show.\"",
+                "desc": "The mathematics of uncertainty and inference. How to draw conclusions from incomplete data. How likely something is. How confident we should be in a result. How to tell a real signal from noise. Statistics underlies medicine — clinical trials, drug approvals, epidemiology. It underlies polling, finance, AI training, and almost every claim that begins with studies show. It is also widely misunderstood, selectively cited, and used to mislead as often as to illuminate. Statistical literacy is one of the more consequential gaps in contemporary education.",
                 "links": [
                   {
                     "label": "Khan Academy",
@@ -21091,7 +21091,7 @@ const LAYERS = [
             "id": "e2_hard",
             "label": "Hard Sciences",
             "color": "#3858a8",
-            "desc": "The disciplines that study the physical world through observation, experimentation, and mathematical description. Chemistry, physics, biology, geology — the hard sciences build the foundation that technology, medicine, and engineering rest on.",
+            "desc": "The disciplines that study the physical world through observation, experimentation, and mathematical description. Physics covers matter, energy, and their interactions from subatomic to cosmic scale. Chemistry covers atoms, molecules, and reactions. Biology covers life in all its forms. Earth science covers the planet. Astronomy covers everything beyond it. These disciplines produce the knowledge base that medicine, engineering, agriculture, and materials science build on. Their findings are among the most rigorously tested claims in human history.",
             "links": [
               {
                 "label": "Scientific American",
@@ -21318,7 +21318,7 @@ const LAYERS = [
                 "id": "e2_earth",
                 "label": "Earth Science",
                 "color": "#3858a8",
-                "desc": "The study of the planet itself — geology, meteorology, oceanography, climatology. Earth science tells us how old the planet is, how its continents move, how its climate has changed, and what humans are doing to it now.",
+                "desc": "The study of the planet's systems — geology, meteorology, oceanography, climatology, hydrology. Earth science established that the planet is 4.5 billion years old, that its continents move on tectonic plates, that its climate has changed dramatically many times before human influence, and that it is changing again now under human influence at a rate without precedent in the geological record. The same discipline that reads the planet's past also forecasts its future. Both capabilities are politically contested in ways that have nothing to do with the science.",
                 "links": [
                   {
                     "label": "USGS",
@@ -21713,7 +21713,7 @@ const LAYERS = [
                 "id": "e2_sociology",
                 "label": "Sociology",
                 "color": "#3858a8",
-                "desc": "The study of human society — how groups form, how institutions function, how inequality persists, how culture changes. Sociology asks why the world is organized the way it is and in whose interest that organization serves.",
+                "desc": "The study of how human societies organize themselves, how inequality persists and changes, how institutions shape behavior, and how culture reproduces across generations. Sociology asks the questions that are hardest to answer individually: why is poverty concentrated this way, why do these groups have this outcome, what are the structural forces behind what looks like personal failure? The answers are often uncomfortable to institutions that prefer explanations at the individual level. That discomfort is partly why sociology is underfunded relative to its explanatory power.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -21769,7 +21769,7 @@ const LAYERS = [
                 "id": "e2_anthro",
                 "label": "Anthropology",
                 "color": "#3858a8",
-                "desc": "The broadest of the social sciences — the study of humanity across time and culture. Cultural anthropology examines how different societies live. Physical anthropology traces human evolution. Archaeology recovers the past from what was left behind.",
+                "desc": "The broadest of the social sciences — the comparative study of humanity across time and culture. Cultural anthropology asks how different societies organize kinship, religion, economics, and meaning. Physical anthropology traces human evolution and the biological diversity of the species. Archaeology recovers past societies from what they left behind. Linguistic anthropology examines how language shapes thought. Anthropology's great contribution is defamiliarization — the systematic demonstration that what any one culture treats as natural is, in comparison to others, one choice among many.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -22006,7 +22006,7 @@ const LAYERS = [
                 "id": "e2_method_obs",
                 "label": "Observation & Hypothesis",
                 "color": "#3858a8",
-                "desc": "Science begins with looking carefully and asking a specific, testable question. A hypothesis is not a guess — it is a falsifiable prediction. If there is no way to prove it wrong, it is not science.",
+                "desc": "Where science begins. Careful observation produces a pattern; the pattern produces a question; the question produces a specific, testable hypothesis. The hypothesis is not a guess — it is a falsifiable prediction: if this is true, then we should observe that, and if we observe the opposite, the hypothesis is wrong. The requirement that a claim be falsifiable is the core criterion that separates scientific from non-scientific claims. It does not mean that unfalsifiable claims are meaningless. It means they are not science, and the distinction matters.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -22063,7 +22063,7 @@ const LAYERS = [
                 "id": "e2_method_peer",
                 "label": "Peer Review",
                 "color": "#3858a8",
-                "desc": "The process by which scientific findings are evaluated by other experts before publication. Peer review is imperfect, slow, and sometimes corrupted — but it remains the best mechanism humans have for catching errors and filtering out bad science.",
+                "desc": "The process by which scientific findings are evaluated by other experts in the field before publication. A submitted paper is reviewed by two or three anonymous reviewers who check the methodology, the analysis, and the claims. It is imperfect — reviewers have biases, important work is sometimes rejected, weak work sometimes passes. It is also the best mechanism humans have developed for catching errors, filtering bad science, and building a record with some accountability. Science published without peer review is not necessarily wrong. It is less trustworthy.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -22234,7 +22234,7 @@ const LAYERS = [
             "id": "e2_histsci",
             "label": "History of Science",
             "color": "#3858a8",
-            "desc": "The story of how humans came to know what we know — and how violently the world sometimes resisted each new discovery. Every major advance in science disturbed an existing power structure. The history of science is also the history of courage.",
+            "desc": "The story of how humans came to know what we know — and how violently the world sometimes resisted each new discovery. Copernicus held publication until near death. Galileo was tried. Darwin expected attack and spent twenty years preparing before publishing. Semmelweis died in an asylum after being mocked for insisting doctors wash their hands. The history of science is also a history of institutions protecting established beliefs and the people who challenged them. Every major advance disturbed a power structure. That pattern has not ended.",
             "links": [
               {
                 "label": "World History Encyclopedia",
@@ -23098,7 +23098,7 @@ const LAYERS = [
                 "id": "e_ah_d1",
                 "label": "Art",
                 "color": "#3858c8",
-                "desc": "Visual art across all media and all eras — painting, drawing, printmaking, collage, digital. The record of what the eye has seen and the mind has needed to externalize. Every era's art tells you what that era could not say any other way.",
+                "desc": "Visual art across all media and all eras — painting, drawing, printmaking, sculpture, photography, collage, installation, digital. The record of what the eye has seen and the mind has needed to externalize. Art is not decoration applied to culture. It is one of the primary ways cultures work out what they believe, fear, desire, and cannot say plainly. Every era's art is a document of that era's inner life more unguarded than its official records. What is considered art and whose art is considered has always been a question of power as much as aesthetics.",
                 "links": [
                   {
                     "label": "Khan Academy",
@@ -24323,7 +24323,7 @@ const LAYERS = [
             "id": "e5",
             "label": "Public Schools",
             "color": "#6888c8",
-            "desc": "The only institution designed to give every child a shared foundation and a common floor. Currently underfunded in poor districts, overstretched everywhere, and politically targeted from multiple directions simultaneously.",
+            "desc": "The only institution designed to give every child a shared foundation regardless of the family they were born into. Currently underfunded in poor districts, politically targeted from multiple directions, asked to solve problems created by poverty and inequality with teaching alone. Public schools do not fail because teachers are bad. They fail where they fail because the resources available to them are not equal, the expectations placed on them are impossible, and the political will to fix either has not materialized in the places where the gap is widest.",
             "links": [
               {
                 "label": "ProPublica",
@@ -24355,7 +24355,7 @@ const LAYERS = [
                 "id": "e5d1",
                 "label": "The Curriculum",
                 "color": "#4868b0",
-                "desc": "What gets taught is what gets remembered as true. Who writes the textbooks writes the national story. This is why curriculum battles are proxy wars for cultural control — and why they are so bitter.",
+                "desc": "What gets taught is what gets remembered as true. The textbook a child reads in fourth grade shapes their understanding of their country, their history, and their place in both more than almost any later intervention. Who writes the textbooks writes the national story — which is why curriculum battles are proxy wars for cultural control and why they are so consistently bitter. The fight over what is included, what is omitted, and what is framed as central or peripheral is the fight over what kind of country the next generation inherits.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -24507,7 +24507,7 @@ const LAYERS = [
                 "id": "efe_ec_pre",
                 "label": "Preschool",
                 "color": "#3a8a98",
-                "desc": "What three- and four-year-olds do when adults plan it. Universal pre-K research is solid. Universal pre-K policy is patchy because it costs money up front for benefits that show up decades later.",
+                "desc": "The structured time three- and four-year-olds spend learning to be around other children, follow instructions, and begin building the skills that formal education requires. The research on the benefits of high-quality preschool is among the strongest in education economics — the Perry Preschool Project and similar studies show returns measured in higher graduation rates, lower incarceration, and higher earnings decades later. Universal pre-K policy is patchily implemented because the benefits show up far in the future and the costs show up immediately, and the political incentive structure rewards the present.",
                 "links": [
                   {
                     "label": "National Center for Education Statistics",
@@ -24558,7 +24558,7 @@ const LAYERS = [
                 "id": "efe_ec_play",
                 "label": "Play",
                 "color": "#5a98a8",
-                "desc": "What children's brains build through. Cut from the school day in many places to make room for testing prep. The cost is invisible until later.",
+                "desc": "What children's brains build through. Play is how children develop executive function, language, social cognition, and the capacity for sustained attention — the foundational skills that formal learning requires. Play-based early childhood education has substantial research support. Play time has been systematically cut from American early childhood programs and elementary schools over the last two decades to make room for academic content and test preparation. The developmental cost is real, measurable, and mostly invisible until it shows up as behavioral or academic problems years later.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -24609,7 +24609,7 @@ const LAYERS = [
                 "id": "efe_ec_lang",
                 "label": "Language Development",
                 "color": "#4a98a8",
-                "desc": "The most powerful predictor of later academic outcomes. The vocabulary gap by household income at age three predicts a lot of what comes later.",
+                "desc": "The most powerful single predictor of later academic outcomes. Children from high-income households hear millions more words before age three than children from low-income households — a gap documented in research since the 1990s. The vocabulary gap at age three predicts reading ability at age nine, which predicts much of what follows. Language development in the first three years is deeply sensitive to the amount and quality of adult speech, reading aloud, and responsive conversation children experience. This is not about intelligence. It is about environment.",
                 "links": [
                   {
                     "label": "National Center for Education Statistics",
@@ -24660,7 +24660,7 @@ const LAYERS = [
                 "id": "efe_ec_nut",
                 "label": "Nutrition",
                 "color": "#3a8898",
-                "desc": "What growing brains need that hungry households don't always provide. WIC, SNAP, and school meals do enormous quiet work. They get cut anyway.",
+                "desc": "What growing brains need that stressed households do not always provide. Chronic hunger impairs cognitive development in measurable and lasting ways. Programs like WIC, SNAP, school breakfast and lunch, and summer feeding do enormous quiet work providing the nutritional baseline that learning requires. They are politically controversial in ways that the research does not support and are routinely proposed for cuts in budget negotiations. The children who depend on them are not able to lobby for themselves. That asymmetry shows up in the outcomes.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -24720,7 +24720,7 @@ const LAYERS = [
                 "id": "efe_ec_inq",
                 "label": "Early Childhood Inequality",
                 "color": "#2a7888",
-                "desc": "The gap that shows up before kids show up at school. By kindergarten, the differences are already substantial. Formal education then mostly fails to close them.",
+                "desc": "The gap that shows up before children set foot in school. By kindergarten, differences in vocabulary, self-regulation, early literacy, and numeracy — largely a function of household resources — are already substantial and strongly predictive of what follows. Formal education narrows these gaps modestly at best. The structure of American schooling — with most funding tied to local property taxes — tends to widen them by providing more resources in the districts that started with more. The inequality of outcomes in education is largely the inequality of inputs, which starts at birth.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -24803,7 +24803,7 @@ const LAYERS = [
             "id": "efe_cur",
             "label": "Curriculum & Testing",
             "color": "#5aa8b8",
-            "desc": "What gets taught and how it gets measured. American curriculum decisions happen at fifty levels of government and produce a patchwork. Standardized testing has been the federal lever for forty years and the actual benefits remain debated.",
+            "desc": "What gets taught and how well students learn it gets measured. American curriculum decisions happen at the federal, state, district, and school level, producing a patchwork that varies more than in almost any peer country. Standardized testing has been the primary federal lever for four decades — No Child Left Behind, Race to the Top, Every Student Succeeds Act — with mixed evidence of impact. The tests produce data. Whether the data reflects learning or test preparation is a live debate.",
             "links": [
               {
                 "label": "National Center for Education Statistics",
@@ -24829,7 +24829,7 @@ const LAYERS = [
                 "id": "efe_cu_read",
                 "label": "Reading",
                 "color": "#4a98a8",
-                "desc": "The most consequential subject. American reading scores have been flat for decades. The phonics-versus-whole-language fight has been re-fought several times because the field never quite arrives at consensus.",
+                "desc": "The most consequential skill schools teach. American reading scores have been flat to declining for decades, and the debate about how to teach reading has been one of the most bitter in American education. The phonics-versus-whole-language argument has been re-fought several times. The current consensus, backed by substantial cognitive science research, favors explicit phonics instruction and has produced a slow, ongoing revision of how reading is taught in most states. The science is clearer than the politics.",
                 "links": [
                   {
                     "label": "National Center for Education Statistics",
@@ -24874,7 +24874,7 @@ const LAYERS = [
                 "id": "efe_cu_math",
                 "label": "Math",
                 "color": "#5aa8b8",
-                "desc": "The other subject everyone tracks. American math scores trail peer countries. The reasons are genuinely contested.",
+                "desc": "The subject most used to rank students, schools, and countries against each other. American math scores trail peer countries consistently on international assessments, which has produced decades of reform efforts. The reasons are genuinely contested: curriculum design, teacher training, cultural attitudes toward struggle and failure, the way math is sequenced across grades. The stakes are real — mathematical literacy is increasingly foundational to economic participation — and the gap between what is known about effective math teaching and what happens in most classrooms remains wide.",
                 "links": [
                   {
                     "label": "National Center for Education Statistics",
@@ -24919,7 +24919,7 @@ const LAYERS = [
                 "id": "efe_cu_sci",
                 "label": "Teaching Science",
                 "color": "#6ab8c8",
-                "desc": "The subject most contested by what counts as science. Evolution, climate change, vaccines — the curriculum gets pulled into political fights every cycle.",
+                "desc": "The subject that becomes a cultural battlefield when its findings conflict with existing beliefs. Evolution, climate change, vaccine safety, the age of the universe — these are scientific questions with scientific consensus. They are also the subject of ongoing legislative and school board battles in multiple states. Teachers in contested districts navigate real professional risk when teaching established science. The chilling effect on science education is documented and real. Whether science is taught honestly varies substantially by geography.",
                 "links": [
                   {
                     "label": "National Center for Education Statistics",
@@ -24964,7 +24964,7 @@ const LAYERS = [
                 "id": "efe_cu_hist",
                 "label": "History",
                 "color": "#7ac8d8",
-                "desc": "The subject the country fights about most. Whose stories get told decides which Americans the next generation thinks of as central. The fight is older than the country.",
+                "desc": "The subject the country fights about most because it is really a fight about identity. Whose stories get included as central to the American narrative determines which Americans the next generation sees as protagonists of their own country. Slavery's centrality, Native dispossession, immigration, labor history, the history of women — the battles over what to include are battles over what kind of country this is and was. The current round of these battles is being fought in state legislatures and school boards with more organization and political coordination than previous rounds.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -25015,7 +25015,7 @@ const LAYERS = [
                 "id": "efe_cu_civ",
                 "label": "Civics",
                 "color": "#5aa8b8",
-                "desc": "How government works and why it matters. Civics education has been thinned out across most curricula. The civic literacy gap shows up in every survey.",
+                "desc": "Whether students learn how government actually works, what their rights are, and what participation in democracy requires. Civics education has been systematically thinned out across most American curricula over the last thirty years as tested subjects consumed more instructional time. Civic literacy surveys consistently find alarming gaps — substantial percentages of Americans cannot name the three branches of government, identify their congressional representative, or explain how a bill becomes law. A democracy that does not teach its citizens how it works is asking something of them it has not provided the tools for.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -25066,7 +25066,7 @@ const LAYERS = [
                 "id": "efe_cu_arts",
                 "label": "Arts",
                 "color": "#8ad8e8",
-                "desc": "The subject cut first when budgets shrink. The research consistently shows arts education improving outcomes across other subjects. The cuts happen anyway.",
+                "desc": "The subject that gets cut first when school budgets shrink. The research case for arts education is strong and consistent: arts programs are associated with improved outcomes across other subjects, with higher attendance, with better social-emotional development, and with stronger engagement for students who struggle with traditional academic formats. The cuts happen anyway because arts are not tested. What is not measured is not protected. The students who lose arts programs are disproportionately in low-income schools. The students in high-income schools mostly keep them.",
                 "links": [
                   {
                     "label": "Smarthistory",
@@ -25169,7 +25169,7 @@ const LAYERS = [
                 "id": "efe_co_adm",
                 "label": "Admissions",
                 "color": "#2a8898",
-                "desc": "The gate. Elite admissions are now extreme — sub-5% acceptance rates at top schools, with selection criteria that favor families with the resources to game them.",
+                "desc": "The gate between secondary education and the selective college tier. Elite admissions are now extreme — acceptance rates below 5% at the most selective schools. The criteria that determine admission include academic achievement, which is real, and legacy status, donor relationships, recruited athletic participation, and access to professional application preparation, which are forms of purchased advantage. The Supreme Court ended affirmative action in 2023. The other preferences — for legacies, athletes, and donors' children — remain.",
                 "links": [
                   {
                     "label": "National Center for Education Statistics",
@@ -25214,7 +25214,7 @@ const LAYERS = [
                 "id": "efe_co_maj",
                 "label": "Majors",
                 "color": "#4aa8b8",
-                "desc": "What you study. The major correlates with earnings, but less than people think. The college matters more.",
+                "desc": "What you study in college. Major correlates with earnings, but less consistently than the popular mythology suggests. Engineering and computer science graduates earn more on average. English and history graduates earn less — and have lower unemployment than the stereotype implies. What the major actually determines is the first job, and the first job matters less over a career than the college attended and the networks formed there. The obsession with major as economic destiny is partly accurate and partly a way of avoiding the harder conversation about access and stratification.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -25259,7 +25259,7 @@ const LAYERS = [
                 "id": "efe_co_deg",
                 "label": "Degrees",
                 "color": "#3a98a8",
-                "desc": "The credential. Bachelor's, master's, doctorate. Each level used to mark a serious step in capability. The first two are increasingly required for jobs that don't actually need them.",
+                "desc": "The credential that has become the minimum requirement for a growing proportion of jobs. The bachelor's degree is now required for positions that clearly do not need four years of higher education, from administrative assistant to customer service manager. This credentialism does not reflect increased job complexity — it reflects employers using educational credentials as a screening device because it is cheap and legally defensible. The result is that working-class people without degrees are locked out of jobs their grandparents could have had, while repaying the loans they took out trying to meet the new standard.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -25310,7 +25310,7 @@ const LAYERS = [
                 "id": "efe_co_pre",
                 "label": "Prestige",
                 "color": "#5ab8c8",
-                "desc": "The hierarchy. Where you went matters more than what you studied. Prestige opens doors the rest of the system has closed.",
+                "desc": "The hierarchy of institutional prestige that operates mostly independently of what students actually learn. Elite university diplomas function as social capital in labor markets, professional networks, and marriage markets in ways that have been consistently documented. Where you went matters for your career more than what you studied, partly because the sorting at admission correlates with family background, and family background correlates with network access. Prestige opens doors. Most people apply to elite schools to access the network that lives behind the credential, not the education.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -25355,7 +25355,7 @@ const LAYERS = [
                 "id": "efe_co_grad",
                 "label": "Graduate School",
                 "color": "#2a7888",
-                "desc": "The next layer. Graduate education is a lengthening, more expensive route to careers that used to be reachable with less. It is also where the actual research gets done.",
+                "desc": "The additional credential beyond the bachelor's degree. Master's degrees have become the new bachelor's — required for professional entry in fields that used to hire undergraduates. Doctoral degrees are required for academic careers that are increasingly scarce. The time and debt investment in graduate education has grown as the economic return has become less reliable. Graduate school is also where most research actually happens — the labs, the dissertations, the postdoctoral fellowships — and that research is largely invisible to the public that funds much of it.",
                 "links": [
                   {
                     "label": "National Center for Education Statistics",
@@ -25406,7 +25406,7 @@ const LAYERS = [
                 "id": "efe_co_inf",
                 "label": "Credential Inflation",
                 "color": "#3a8898",
-                "desc": "The slow ratchet. Jobs that needed high school in 1980 need bachelor's degrees now without the work having gotten harder. Credentialism is doing labor sorting work that the economy used to do differently.",
+                "desc": "The slow ratchet by which credential requirements rise without the work having gotten harder. Jobs that required a high school diploma in 1980 now require a bachelor's degree. Jobs that required a bachelor's degree now require a master's. This is not because the jobs changed — it is because employers can demand more credentials without paying more, and the population has more credentials, and so the floor rises. The people who lose are those who cannot afford the escalating credential and find themselves screened out of jobs their parents held without it.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -25515,7 +25515,7 @@ const LAYERS = [
                 "id": "efe_w_can",
                 "label": "Canon",
                 "color": "#3a88b8",
-                "desc": "The list of works a culture insists every educated person know. Canons reflect who was in the room when they got built. Expanding the canon is genuinely difficult and overdue.",
+                "desc": "The list of works a culture decides every educated person should know. Canons do real intellectual work — shared texts create shared references that allow complex conversations without re-establishing premises. They also reflect who was in the room when they were assembled: mostly European, mostly male, mostly from the comfortable classes. Expanding the canon is genuinely difficult because every addition implies something else gets less attention. The argument is not really about literature. It is about who counts as central to the civilization being educated.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -25566,7 +25566,7 @@ const LAYERS = [
                 "id": "efe_w_ban",
                 "label": "Book Bans",
                 "color": "#2a7888",
-                "desc": "The current iteration. Coordinated efforts to remove books — most about race, sexuality, or American history — from libraries and curricula. The pace and organization are unusual. The pattern is old.",
+                "desc": "Coordinated efforts to remove specific books from school libraries and curricula, primarily books about race, sexuality, and American history. The pace and geographic coordination of book removal efforts since 2021 are unusual in American history. The targets are consistent: Toni Morrison, books about LGBTQ experience, books depicting historical atrocities from the perspective of survivors. Most removals are initiated by small numbers of organized advocates using school board processes. The First Amendment constraints on public school book removal are real but limited.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -25617,7 +25617,7 @@ const LAYERS = [
                 "id": "efe_w_hist",
                 "label": "History Wars",
                 "color": "#4a98c8",
-                "desc": "What gets included in American history. Slavery's centrality. Native dispossession. Women's invisibility. The wars over how to teach this are being fought in school boards and state legislatures right now.",
+                "desc": "What gets included when the country teaches its own history to its children. The current battles are primarily about slavery's centrality to American founding and development, the history of Native dispossession, and the ongoing effects of structural racism. Several states have passed legislation restricting what teachers can say about race and history. The laws vary and are legally contested. The effect on teachers — who face disciplinary risk for teaching established historical fact in some districts — is documented. What students in those districts learn about their country is not the same as what students elsewhere learn.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -25668,7 +25668,7 @@ const LAYERS = [
                 "id": "efe_w_rg",
                 "label": "Race & Gender",
                 "color": "#5aa8d8",
-                "desc": "What gets taught about who. The current legislation in many states explicitly limits classroom discussion of race and gender. The chilling effect on teachers is documented.",
+                "desc": "The specific arena of curriculum conflict that has generated the most recent legislative activity. Multiple states have passed laws restricting classroom discussion of race, gender, and sexual orientation — laws framed as protecting children from inappropriate content and challenged by educators, civil liberties organizations, and researchers who document their chilling effect on teaching. Teachers in affected states report significant self-censorship. The students whose experiences are being made invisible in the curriculum are not evenly distributed across the school population.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -25719,7 +25719,7 @@ const LAYERS = [
                 "id": "efe_w_civ",
                 "label": "Civic Education",
                 "color": "#3a88b8",
-                "desc": "Whether young Americans are being trained to participate in democracy. Civic literacy among young Americans is alarmingly low and most education systems have not prioritized fixing it.",
+                "desc": "Whether young Americans are being prepared to participate in the democracy they will soon be responsible for. The answer, by most measures, is not adequately. Civic literacy surveys find consistent and alarming gaps — in knowledge of constitutional rights, in understanding of how legislation works, in basic institutional literacy. Civic education has been squeezed out of curricula by the expansion of tested subjects. A generation that does not know how its government works is more vulnerable to manipulation by people who do. That is not a hypothetical risk. It is a documented condition.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -25959,7 +25959,7 @@ const LAYERS = [
             "id": "c7_tools",
             "label": "Tools & Machines",
             "color": "#5878a8",
-            "desc": "Everything humans built before software. Hand tools, engines, factories, electrical grids. Tools extend the body — first into more force, then into more reach, then into more thought. Each extension changed the species that made it.",
+            "desc": "Everything humans built before software — and the foundation that software rests on. Hand tools extended the body's reach. Engines amplified its force. Electricity moved energy anywhere on the grid. Manufacturing made goods at scales the craft economy never imagined. Each extension changed the economy, the city, the family, and the body of the species that made it. The tools humans have built are not separable from the humans who built and used them. Each new tool created the conditions for the next one and changed what it meant to be the people who needed it.",
             "links": [
               {
                 "label": "Internet Archive",
@@ -25979,7 +25979,7 @@ const LAYERS = [
                 "id": "c7_t_hand",
                 "label": "Hand Tools",
                 "color": "#4868a0",
-                "desc": "The first technology. Stones, blades, levers. Hand tools shaped the species that shaped them. The capacity for tool use coevolved with the brain that uses them.",
+                "desc": "The first technology. Stones shaped into cutting tools, levers that multiply force, needles that sew skins. Hand tools predate Homo sapiens — our ancestors were making and using them for millions of years before our species existed. The capacity for tool use coevolved with the brain that used the tools: larger hands, more precise grip, the expansion of the frontal cortex associated with planning and fine motor control. Tools made us as much as we made them. The hand tool is not primitive. It is the origin point of everything that followed.",
                 "links": [
                   {
                     "label": "National Geographic",
@@ -26024,7 +26024,7 @@ const LAYERS = [
                 "id": "c7_t_eng",
                 "label": "Engines",
                 "color": "#5878b0",
-                "desc": "The amplification. Engines turned heat into motion and rebuilt every economy that adopted them.",
+                "desc": "The amplification of human and animal force through the controlled release of energy. Steam engines turned heat into mechanical motion and rebuilt every economy that adopted them — displacing hand labor, building railroads, powering factories, concentrating populations in cities. Internal combustion extended the reach of the engine to smaller machines and individual vehicles. Jet engines made global travel routine. Each generation of engine technology increased the energy available per person and produced economic and social disruption proportional to the increase.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -26069,7 +26069,7 @@ const LAYERS = [
                 "id": "c7_t_elec",
                 "label": "Electricity",
                 "color": "#6888c0",
-                "desc": "The infrastructure layer. Once electricity arrived, every other technology rode on it. The grid is the most consequential invisible system in modern life.",
+                "desc": "The infrastructure layer that every other modern technology rides on. The electrical grid is the most consequential invisible system in modern life — so reliable in the developed world that its absence is experienced as emergency rather than normal condition. Electrification of industry, homes, and transportation happened over roughly a century and remains incomplete globally. The transition away from fossil fuel generation toward renewable sources is the largest infrastructure transformation since the original grid was built. Every system that requires a plug depends on the political and physical choices being made about that transition now.",
                 "links": [
                   {
                     "label": "USGS",
@@ -26114,7 +26114,7 @@ const LAYERS = [
                 "id": "c7_t_man",
                 "label": "Manufacturing",
                 "color": "#3858a0",
-                "desc": "Making at scale. Manufacturing lifted living standards across two centuries and hollowed out the towns it abandoned in the process. Both things happened.",
+                "desc": "Making things at scale — the factory system, standardized parts, assembly lines, and the industrial production that lifted material living standards across two centuries and hollowed out the communities organized around it in the process. American manufacturing employment peaked in the 1970s and has declined since due to automation, offshoring, and the shift to service economies. The output went up. The jobs went elsewhere. The towns built around those jobs did not find replacements. Both the gains and the losses are real and not evenly distributed.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -26165,7 +26165,7 @@ const LAYERS = [
                 "id": "c7_t_inf",
                 "label": "Infrastructure",
                 "color": "#4868a8",
-                "desc": "The systems behind the systems. Roads, sewers, water, power, transit. American infrastructure is now decades behind in maintenance and the costs are starting to come due.",
+                "desc": "The systems that make modern collective life possible and that most people experience only when they fail. Roads and bridges. Sewers and water treatment. The electrical grid. Broadband networks. Mass transit. American infrastructure was built mostly in the mid-twentieth century and has been maintained inconsistently since. The American Society of Civil Engineers grades U.S. infrastructure a C- and estimates a multi-trillion dollar backlog of deferred maintenance. The costs of deferred maintenance are not evenly distributed — they fall hardest on the communities least able to absorb them.",
                 "links": [
                   {
                     "label": "USGS",
@@ -26216,7 +26216,7 @@ const LAYERS = [
                 "id": "c7_t_ext",
                 "label": "Human Extension",
                 "color": "#7898c8",
-                "desc": "The thread through all of it. Tools are not separate from human capability. They are part of it. Take away your tools and a different human emerges.",
+                "desc": "The through-line of tool history. Every tool is an extension of human capability — the knife extends the hand's cutting, the lens extends the eye's reach, the computer extends the mind's capacity to process. The tools humans build are not additions to human capability from outside. They are incorporated into what it means to be functionally human. Remove the tools and a different human emerges — one with the same biology but far less ability. Humans are defined as a species in part by the tools they require to live at their own standard.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -26293,7 +26293,7 @@ const LAYERS = [
             "id": "c7_comp",
             "label": "Computers & Software",
             "color": "#3868b8",
-            "desc": "The specific machines and the specific instructions they run. The computer is not a tool — it is a tool that makes other tools, including itself. That is the property that has made it the most consequential invention since the printing press.",
+            "desc": "The specific machines that run software and the instructions those machines run. What makes computers different from all previous tools is their generality — they are not built for one task but for any task that can be described in instructions. That generality is the property that made the computer the most consequential invention since the printing press. A computer is a tool for making tools, including other computers. Every layer of modern life — finance, medicine, communication, infrastructure, entertainment — now runs on this architecture.",
             "links": [
               {
                 "label": "Internet Archive",
@@ -26313,7 +26313,7 @@ const LAYERS = [
                 "id": "c7_c_hw",
                 "label": "Hardware",
                 "color": "#2858a8",
-                "desc": "The physical layer. Chips have been doubling in capability roughly every two years for decades. The physics of that scaling is starting to slow. The economy assumed it would not.",
+                "desc": "The physical layer — the chips, circuits, storage, and power systems that software runs on. Moore's Law — the observation that transistor density on chips doubles roughly every two years — has driven decades of exponential improvement in computing capability. The physics of further scaling is running into physical limits. The semiconductor industry is one of the most strategically important in the world economy, concentrated in a small number of facilities in Taiwan and South Korea. The geopolitics of chip supply chains has become a major axis of U.S.-China competition.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -26358,7 +26358,7 @@ const LAYERS = [
                 "id": "c7_c_os",
                 "label": "Operating Systems",
                 "color": "#3868b8",
-                "desc": "The layer between you and the hardware. A small number of operating systems run almost all of the world's computing. The choice of OS shapes a lot of what software exists.",
+                "desc": "The software layer between you and the hardware — the operating system manages memory, processes, files, and the interface between applications and the machine. A small number of operating systems run almost all of the world's computing: Windows and macOS on personal computers, Linux on servers and infrastructure, iOS and Android on mobile devices. The choice of operating system shapes what software exists for the platform, which in turn shapes what capabilities are available to users. Two companies control the mobile operating system market almost entirely.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -26403,7 +26403,7 @@ const LAYERS = [
                 "id": "c7_c_code",
                 "label": "Code",
                 "color": "#4878c8",
-                "desc": "Instructions in language a machine can follow. Most code is written by people who never see the people their code affects.",
+                "desc": "Instructions written in a formal language that a machine can interpret and execute. Code is how humans specify precisely what they want a computer to do — every application, every website, every automated system is code. Most code is written by people who never meet the people their code affects, which creates a systematic distance between the decisions encoded in software and the communities that live with the consequences. Software is not neutral infrastructure. It encodes assumptions, values, and priorities. Most users never see them and do not know to look.",
                 "links": [
                   {
                     "label": "arXiv",
@@ -26448,7 +26448,7 @@ const LAYERS = [
                 "id": "c7_c_db",
                 "label": "Databases",
                 "color": "#2858a8",
-                "desc": "How information gets stored, indexed, and retrieved at scale. Databases are the unsexy substrate of every product anyone has ever called software.",
+                "desc": "The systems that store, organize, and retrieve structured information at scale. Every application that remembers anything — your bank balance, your medical records, your search history, the inventory in a warehouse — is built on a database. Databases are unglamorous infrastructure, invisible to most users, and foundational to everything. The design of a database embeds decisions about what information matters, how it relates to other information, and who can access what. These are not purely technical decisions. They are political and ethical ones wearing technical clothing.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -26505,7 +26505,7 @@ const LAYERS = [
                 "id": "c7_c_int",
                 "label": "Interfaces",
                 "color": "#5888d8",
-                "desc": "The surface where humans and machines meet. Interface design is doing enormous quiet work shaping what people think computers can do.",
+                "desc": "The surface where humans and machines meet — the screen, the keyboard, the voice command, the gesture, the button. Interface design is doing enormous, mostly invisible work shaping what people believe computers can do and what they actually do with them. Well-designed interfaces make complex capability accessible. Poorly designed ones create friction that excludes or manipulates. Dark patterns — interface designs deliberately engineered to mislead users into choices they wouldn't make if they understood what was happening — are widespread and mostly unregulated.",
                 "links": [
                   {
                     "label": "Wired",
@@ -26550,7 +26550,7 @@ const LAYERS = [
                 "id": "c7_c_sec",
                 "label": "Cybersecurity",
                 "color": "#1a4898",
-                "desc": "The defense layer. Most of the world's important systems have been quietly breached at some point. The attackers are usually a step ahead.",
+                "desc": "The defense layer — the ongoing effort to protect systems and data from unauthorized access, manipulation, and destruction. Most of the world's important systems have been quietly breached at some point. Power grids, hospitals, election infrastructure, financial systems, and government agencies have all experienced significant intrusions. The attackers tend to be a step ahead because offense is cheaper than defense — finding one vulnerability is enough, while defenders must protect everything. Cybersecurity is not a problem to be solved. It is a condition to be continuously managed.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -26627,7 +26627,7 @@ const LAYERS = [
             "id": "c7_inet",
             "label": "Internet Infrastructure",
             "color": "#4878a8",
-            "desc": "The plumbing under everything online. Submarine cables, data centers, content delivery networks, the routing protocols that move packets across the planet. None of it gets attention until something fails.",
+            "desc": "The physical and logical infrastructure under everything online — the submarine cables, data centers, routing protocols, and content delivery networks that move data across the planet. Most users experience the internet as seamless and invisible. The infrastructure that produces that seamlessness is physically massive, geographically concentrated, and owned by a small number of corporations. When it fails — a severed cable, a major outage at a cloud provider — the dependency is immediately visible. Most of the time, the infrastructure is invisible, which makes it easy to take for granted and hard to govern.",
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
@@ -26647,7 +26647,7 @@ const LAYERS = [
                 "id": "c7_in_srv",
                 "label": "Servers",
                 "color": "#3868a0",
-                "desc": "The computers always on, listening. Most of the modern internet runs on a small number of cloud providers' servers in a small number of data centers in a small number of regions.",
+                "desc": "The computers that are always on and listening — storing data, processing requests, running the applications that billions of people use every day. Most of the modern internet runs on servers operated by three companies: Amazon Web Services, Microsoft Azure, and Google Cloud. The concentration of compute infrastructure in a small number of providers creates resilience risks and raises questions about who controls the infrastructure of digital life. When a major cloud provider has an outage, the list of affected services is a map of how dependent the digital economy has become on a small number of players.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -26692,7 +26692,7 @@ const LAYERS = [
                 "id": "c7_in_cloud",
                 "label": "Cloud",
                 "color": "#5888b8",
-                "desc": "The aggregated server farms run by Amazon, Microsoft, Google, and a few others. Most of the world's commerce now depends on three companies' continued operations.",
+                "desc": "The aggregation of server capacity into shared infrastructure operated at scale. The cloud reduced the cost and complexity of running software by letting companies rent computing power rather than buying and maintaining it. It also concentrated the world's compute infrastructure in three companies with enormous market power over the businesses and governments that depend on them. Most of the world's commerce, communication, and increasingly critical infrastructure now runs on Amazon's, Microsoft's, or Google's continued operations. The resilience and political implications of that concentration are underexamined.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -26747,7 +26747,7 @@ const LAYERS = [
                 "id": "c7_in_brow",
                 "label": "Browsers",
                 "color": "#5888c0",
-                "desc": "The window into the web. Three browsers — Chrome, Safari, Firefox — split most of the market. Two are owned by companies that also dominate the rest of the internet ecosystem.",
+                "desc": "The window into the web. Three browsers — Chrome, Safari, and Firefox — split nearly all browser market share. Chrome, made by Google, holds roughly two-thirds. Safari is required on iOS devices. Both are made by companies that also dominate the rest of the internet ecosystem, which creates structural tensions between the browser's role as a neutral access tool and its maker's interest in directing traffic to their own products. Firefox, made by a nonprofit, remains the only major browser with no commercial conflict of interest. Its market share has been declining.",
                 "links": [
                   {
                     "label": "Mozilla Foundation",
@@ -26792,7 +26792,7 @@ const LAYERS = [
                 "id": "c7_in_apps",
                 "label": "Apps",
                 "color": "#4878a8",
-                "desc": "The walled-garden version. Apps replaced the open web for most consumer use cases. The trade was convenience for surveillance and platform lock-in.",
+                "desc": "The walled gardens that replaced the open web for most consumer use. Apps are more convenient than websites on mobile — faster to open, built for the form factor, integrated with the phone's hardware. The trade was convenience for surveillance and platform lock-in. Apps are distributed through two stores controlled by Apple and Google, which take a cut of all purchases and can remove any app for any reason. The app economy is more censorship-vulnerable and less decentralized than the open web it replaced for most users' daily activity.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -26837,7 +26837,7 @@ const LAYERS = [
                 "id": "c7_in_plat",
                 "label": "Platforms",
                 "color": "#2868a0",
-                "desc": "Where the apps live. Platform power is the single most important shift in internet economics since the web's founding. The platforms got the network effects. Everyone else got to be tenants.",
+                "desc": "The digital infrastructure that acquired network effects and became effectively unavoidable for the populations organized around them. Facebook became the social graph. Google became the search and advertising stack. Amazon became the e-commerce default. Each of these companies acquired platform power — the ability to set terms for everyone who needs to access their users — through a combination of network effects, capital, and strategic acquisition. Platform power is the most important shift in internet economics since the web's creation. Everyone else got to be tenants in someone else's infrastructure.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -26914,7 +26914,7 @@ const LAYERS = [
             "id": "c7_auto",
             "label": "Automation & Labor",
             "color": "#3a6098",
-            "desc": "What machines are doing that humans used to. Automation has been remaking work for two centuries. The current wave is different in scope — for the first time, white-collar work is in the firing line. The economy has not figured out what comes after.",
+            "desc": "What machines are doing that humans used to. Automation has been remaking work for two hundred years — the industrial revolution automated physical labor, computers automated routine cognitive tasks, and the current wave is reaching non-routine cognitive work for the first time. The previous rounds of automation eliminated jobs and eventually created different ones. Whether the current round will do the same at the same pace is genuinely uncertain. The economy has not finished processing what is already happening.",
             "links": [
               {
                 "label": "Bureau of Labor Statistics",
@@ -26940,7 +26940,7 @@ const LAYERS = [
                 "id": "c7_au_fac",
                 "label": "Factories",
                 "color": "#2a5088",
-                "desc": "Where automation started. American manufacturing employs far fewer people than in 1980 even though output is up. The jobs that left did not come back.",
+                "desc": "Where automation started and where it has gone furthest. American manufacturing employs fewer people than it did in 1980 even as output has increased substantially — the gap is explained by automation replacing labor. The jobs that left manufacturing did not come back in equivalent numbers or at equivalent wages. The communities organized around manufacturing employment — the specific cities and regions — did not reorganize themselves easily or well. The economic dislocation produced by factory automation is part of the political dislocation visible in American life since the 1990s.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -26985,7 +26985,7 @@ const LAYERS = [
                 "id": "c7_au_log",
                 "label": "Logistics",
                 "color": "#3a6098",
-                "desc": "What automation is doing now. Warehouses, ports, delivery routes. Amazon-scale logistics is one of the most automated work environments humans have ever built.",
+                "desc": "What automation is doing now to the jobs that replaced factory work. Warehouses are deploying robots at scale. Delivery routes are being optimized algorithmically. Ports are automating. The logistics sector — which absorbed many workers displaced from manufacturing — is now itself being automated. Amazon's warehouse operations are one of the most studied examples: high injury rates, automated monitoring of worker pace, algorithmic management that replaces human supervisors. The work that remains after automation is often the hardest, least dignified, and most surveilled.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -27097,7 +27097,7 @@ const LAYERS = [
                 "id": "c7_au_des",
                 "label": "Deskilling",
                 "color": "#3a5878",
-                "desc": "When the machine takes the skill out of the job. The remaining human task is often less interesting, less compensated, and easier to replace next time.",
+                "desc": "The process by which automation removes the skill from a job while leaving the human in it. The remaining task is simpler, requires less judgment, and is easier to replace with the next generation of automation. Deskilling is not just an economic phenomenon — it is a change in what kind of person the job produces. Work that requires skill and judgment tends to produce workers who develop skill and judgment. Work that requires button-pressing produces workers who press buttons. The cumulative effect of decades of deskilling is not only economic.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -27142,7 +27142,7 @@ const LAYERS = [
                 "id": "c7_au_prod",
                 "label": "Productivity",
                 "color": "#4a6898",
-                "desc": "What economists measure. American productivity has roughly doubled since 1979. Median wages are nearly flat. Where the productivity went is the central economic story of the era.",
+                "desc": "What economists measure when they track how much output is produced per hour of work. American productivity has roughly doubled since 1979. Median wages have grown by roughly 15% in real terms over the same period. The gap between what workers produce and what they are paid is the central economic story of the last forty years. The productivity gains went somewhere — to capital returns, to executive compensation, to shareholder value. The workers who generated the gains did not receive proportional shares of what they produced. That is a policy choice, sustained by forty years of policy decisions.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -27231,7 +27231,7 @@ const LAYERS = [
             "id": "c7_data",
             "label": "Data & Surveillance",
             "color": "#1a3868",
-            "desc": "The other half of modern technology. Every system collects more data than the last one and the data outlasts the system. Nobody fully knows what corporations and governments now hold about most adults.",
+            "desc": "The other half of modern technology. Every connected system collects more data than the last one, stores it indefinitely, and uses it in ways the people it describes were not told about and could not meaningfully have consented to. Nobody fully knows what major corporations and governments now hold about most adults. The aggregate profile that data brokers can construct for an average American — derived from public records, purchase history, location data, health information, and behavioral inference — is more detailed than most people's closest friends know about them.",
             "links": [
               {
                 "label": "Electronic Frontier Foundation",
@@ -27275,7 +27275,7 @@ const LAYERS = [
                 "id": "c7_d_ad",
                 "label": "Ad Tech",
                 "color": "#2a4878",
-                "desc": "The largest and most opaque data ecosystem ever built. Real-time bidding for ad placement happens billions of times a day. The data that powers it has leaked, repeatedly, in ways nobody has fully audited.",
+                "desc": "The largest and most opaque data ecosystem ever built. Real-time bidding for advertising placement happens billions of times a day — an auction, completed in milliseconds, that determines what ad you see and what data about you was sold to make that decision. The infrastructure has experienced multiple large-scale data leaks. It has been used to target political advertising with precision that bypasses normal disclosure rules. The people whose data powers this system did not consent to most of its uses and have no meaningful way to withdraw.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -27320,7 +27320,7 @@ const LAYERS = [
                 "id": "c7_d_pred",
                 "label": "Behavioral Prediction",
                 "color": "#3a5888",
-                "desc": "Models that try to forecast what you will do. Used for ads. Used for hiring. Used for sentencing. The accuracy is uneven. The consequences are not.",
+                "desc": "The models built to forecast what you will do before you do it. Predictive behavioral models are used to target advertising, to select job candidates, to set insurance premiums, to flag patients as high-risk, and to recommend sentences in criminal court. The accuracy of these models is uneven and often unknown because they are proprietary. The consequences of acting on a prediction are not evenly distributed — false positives in criminal justice algorithms have documented racial disparities. The predictions are more reliable for some populations than others, in ways that tend to disadvantage the same populations that are already disadvantaged.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -27398,7 +27398,7 @@ const LAYERS = [
                 "id": "c7_d_smart",
                 "label": "Smart Devices",
                 "color": "#1a4878",
-                "desc": "Phones, watches, speakers, refrigerators, doorbells. Each is a sensor. Each sends data home. Most users have never read the disclosure that explains what.",
+                "desc": "The proliferation of networked sensors into domestic and physical space. Phones track location continuously. Smart speakers listen for wake words and maintain recordings. Smart doorbells capture footage of public and private space. Fitness trackers record health data. Smart televisions monitor viewing habits. Each device sends data to servers operated by its manufacturer. The terms of service for most of these devices are incomprehensible and grant the manufacturer broad rights over the data. The aggregate of data from a fully networked home is an extraordinarily detailed record of domestic life.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -27449,7 +27449,7 @@ const LAYERS = [
                 "id": "c7_d_con",
                 "label": "Consent Theater",
                 "color": "#2a4868",
-                "desc": "The clickthrough. The cookie banner. The thirty-page privacy policy. The legal performance of consent in service of what is structurally non-negotiable.",
+                "desc": "The legal performance of consent in service of a transaction that is structurally non-negotiable. The cookie banner. The thirty-page privacy policy. The clickthrough agreement. These are not designed to inform users or enable real choices — they are designed to create a legal record of consent that the companies can point to when sued or regulated. The European Union's effort to make consent meaningful through the General Data Protection Regulation has forced some transparency. The underlying architecture of surveillance capitalism has not changed. The consent theater continues.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -30582,7 +30582,7 @@ const LAYERS = [
         "x": 8,
         "y": 42,
         "color": "#b04848",
-        "desc": "The machinery of collective decision-making — at its best, the only force powerful enough to check everything else on this layer. At its worst, the thing that needs checking most. Either way, it runs on your behalf whether you're watching or not.",
+        "desc": "The machinery of collective decision-making. At its best, the only force with enough legitimacy and scale to check everything else on this layer — corporations, armies, concentrated wealth. At its worst, the thing that needs checking most. Either way it runs on your behalf whether you're watching or not. Government is not something that happens to you. It is something you are enrolled in, whether you voted or not, whether you pay attention or not. The decisions being made in your name include the ones you agree with and the ones you don't. That is the arrangement.",
         "links": [
           {
             "label": "USA.gov",
@@ -34081,7 +34081,7 @@ const LAYERS = [
             "id": "p_corp_cor",
             "label": "Corporate Corruption",
             "color": "#883030",
-            "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
+            "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look — accounting fraud, price fixing, regulatory capture, the use of corporate funds for political outcomes that benefit officers personally. Most of it operates in the space between illegal and technically permissible. The settlements when things do get investigated tend to be fines that are smaller than the gains. The behavior continues.",
             "links": [
               {
                 "label": "OpenSecrets",
@@ -34169,7 +34169,7 @@ const LAYERS = [
                 "id": "pcorp_o_share",
                 "label": "Shareholders",
                 "color": "#582020",
-                "desc": "The owners of record. Most are funds, not individuals. The retail investor's share of the market keeps shrinking.",
+                "desc": "The owners of record. Most are not individuals — they are funds. Index funds, pension funds, mutual funds hold the majority of shares in most public companies. The retail investor's share of the stock market keeps shrinking relative to institutional holders. The practical consequence is that the dispersed shareholder of civics textbooks — the individual whose interests the corporation serves — has been largely replaced by institutional actors whose interests, timelines, and incentives are different from those of the workers, customers, or communities the companies operate within.",
                 "links": [
                   {
                     "label": "Federal Reserve",
@@ -34214,7 +34214,7 @@ const LAYERS = [
                 "id": "pcorp_o_inst",
                 "label": "Institutional Investors",
                 "color": "#683028",
-                "desc": "Pension funds, mutual funds, endowments. They are the largest shareholders at most public companies and they vote those shares.",
+                "desc": "Pension funds, mutual funds, university endowments, sovereign wealth funds. They are the largest shareholders at most public companies and they vote those shares on governance questions — executive pay, board membership, shareholder resolutions. The voting behavior of major institutional investors has become a significant force in corporate governance, often in directions that favor short-term returns over longer-term considerations. When institutional investors align, they can impose enormous pressure on corporate management. When they don't, individual investors have almost no power.",
                 "links": [
                   {
                     "label": "Federal Reserve",
@@ -34279,7 +34279,7 @@ const LAYERS = [
                 "id": "pcorp_o_top3",
                 "label": "The Big Three",
                 "color": "#583020",
-                "desc": "BlackRock, Vanguard, State Street. Together they vote roughly a fifth of S&P 500 shares — the largest blocks at most major companies. They are not household names. They should be.",
+                "desc": "BlackRock, Vanguard, and State Street together control roughly $20 trillion in assets under management and vote roughly a fifth of all S&P 500 shares — the largest single blocks at most major companies. They are not household names. They should be. Their voting decisions on corporate governance, executive compensation, climate disclosure, and board composition shape the behavior of the largest companies in the American economy. Whether three firms exercising this level of coordinated influence over corporate America is a feature or a bug is a question antitrust law was not designed to answer.",
                 "links": [
                   {
                     "label": "Follow The Money",
@@ -34372,7 +34372,7 @@ const LAYERS = [
             "id": "pcorp_lab",
             "label": "Labor & Management",
             "color": "#583020",
-            "desc": "The relationship between the people who do the work and the people who control the work. American labor lost most of its leverage across forty years and is starting to claw some of it back.",
+            "desc": "The relationship between the people who do the work and the people who control the work. American labor relations shifted decisively after 1980 — union density declined, labor law enforcement weakened, and the leverage of workers relative to employers shrank. The gap between worker compensation and executive compensation widened to levels without precedent in American history. The current resurgence of labor organizing — Starbucks, Amazon, hotel workers, the major Hollywood strikes — is the first serious pushback in a generation. Whether it reshapes the structural balance or becomes a series of isolated wins is still being decided.",
             "links": [
               {
                 "label": "Bureau of Labor Statistics",
@@ -34398,7 +34398,7 @@ const LAYERS = [
                 "id": "pcorp_l_wo",
                 "label": "Workers",
                 "color": "#482018",
-                "desc": "The people whose hours fund everything. Worker share of corporate income has fallen across decades. The shareholders' share rose by an offsetting amount. There was no middle.",
+                "desc": "The people whose hours fund everything else on the balance sheet. Worker share of corporate income — the portion of what a company earns that goes to wages rather than profits and capital returns — has fallen across four decades of data. The shareholders' share rose by an offsetting amount. There was no natural disaster in between. There was a series of policy choices about labor law, trade, and taxation. The workers who produce the value did not vote for those choices. Most did not have the political leverage to stop them.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -34449,7 +34449,7 @@ const LAYERS = [
                 "id": "pcorp_l_ex",
                 "label": "Executives",
                 "color": "#683028",
-                "desc": "CEO compensation has grown roughly tenfold since 1980 in real terms. Median worker pay has barely moved. The ratio between CEO and worker pay used to be around 30 to 1. It is now around 350 to 1.",
+                "desc": "CEO compensation has grown roughly tenfold since 1980 in real, inflation-adjusted terms. Median worker pay has barely moved. The ratio between CEO and median worker pay was around 20 to 1 in 1965. It is around 350 to 1 today at major American corporations. The rise was not driven by evidence that high executive pay produces better company performance — the research does not support that claim. It was driven by compensation committees, consultants, and the incentive structure of stock-based pay that the 1990s institutionalized.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -34510,7 +34510,7 @@ const LAYERS = [
                 "id": "pcorp_l_gig",
                 "label": "Gig & Contract Labor",
                 "color": "#382010",
-                "desc": "The misclassification economy. Apps reclassified employees as contractors and the courts have mostly let them. The benefits floor went away with the employer.",
+                "desc": "The misclassification economy. Companies reclassified employees as independent contractors and the courts and regulatory agencies mostly let them, eliminating the obligation to provide benefits, pay payroll taxes, offer overtime, or cover workplace injuries. The apps made this relationship feel new. The economics are the same as the day labor market: take the labor, externalize the risk. The flexibility is real for some workers. The precarity is real for all of them. The companies capturing the value of that labor have not shared it proportionally.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -34561,7 +34561,7 @@ const LAYERS = [
                 "id": "pcorp_l_ratio",
                 "label": "CEO-Worker Ratio",
                 "color": "#583018",
-                "desc": "The starkest visible measure. The American ratio is the highest of any major economy. It rose every decade since 1980.",
+                "desc": "The starkest visible measure of where American corporate income goes. The ratio of CEO pay to median worker pay at S&P 500 companies is the highest of any major economy and has risen every decade since 1980. In 1965 it was roughly 20 to 1. In 1989 it was 58 to 1. Today it hovers around 350 to 1 at many major companies. The number is not a measure of differential value created — research does not support the claim that CEOs produce 350 times more value than the workers they manage. It is a measure of differential power.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -34612,7 +34612,7 @@ const LAYERS = [
                 "id": "pcorp_l_strk",
                 "label": "Strikes",
                 "color": "#682818",
-                "desc": "The leverage workers have when other tools fail. Major strikes returned in 2023 — UAW, the writers, the actors, the hotel workers. The leverage worked. The contracts they won were better than the ones they walked out on.",
+                "desc": "The leverage workers retain when other tools fail. Major strikes returned in 2023 with unusual breadth — the United Auto Workers won substantial gains from all three Detroit automakers, the Hollywood writers and actors won residual protections against AI replacement, hotel workers settled favorable contracts. The leverage worked in these cases. The conditions for that leverage — tight labor markets, public sympathy, and organizations willing to hold out — are not always present. The history of American labor shows how quickly the window can close.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -34715,7 +34715,7 @@ const LAYERS = [
                 "id": "pcorp_p_mon",
                 "label": "Monopoly",
                 "color": "#582018",
-                "desc": "When one firm dominates a market. Once the textbook bogeyman of antitrust law, monopoly has crept back into mainstream American commerce in ways the original laws were designed to prevent.",
+                "desc": "When one firm dominates a market to the degree that competition cannot effectively constrain its prices, its quality, or its terms. Once the textbook bogeyman of antitrust law, monopoly crept back into mainstream American commerce across forty years of weakened enforcement. Airlines, hospitals, pharmacy benefit managers, internet service providers, major tech platforms — concentration is the norm in most significant American industries. The argument that monopolies in tech markets don't hurt consumers because the products are free is being tested by regulators and slowly losing.",
                 "links": [
                   {
                     "label": "Follow The Money",
@@ -34760,7 +34760,7 @@ const LAYERS = [
                 "id": "pcorp_p_ol",
                 "label": "Oligopoly",
                 "color": "#683028",
-                "desc": "The more common form. A handful of firms with a comfortable understanding of each other. Most American consumer industries function this way.",
+                "desc": "The more common and more durable form of market concentration. A handful of firms with an implicit understanding of each other — who prices where, what terms are standard, how aggressively to compete. Most American consumer industries — airlines, banking, wireless carriers, health insurance, grocery retail — operate as oligopolies with coordination that falls just below the legal definition of collusion. The consumer experience is limited choice, similar prices, and limited recourse. The firms share profits without formally sharing them.",
                 "links": [
                   {
                     "label": "Follow The Money",
@@ -34805,7 +34805,7 @@ const LAYERS = [
                 "id": "pcorp_p_cart",
                 "label": "Cartels",
                 "color": "#481810",
-                "desc": "When the few coordinate, openly or quietly. American antitrust law forbids overt cartels. The covert kind shows up in price-fixing investigations periodically and is presumably more common than enforcement catches.",
+                "desc": "When the few coordinate openly or covertly to fix prices, divide markets, or exclude competitors. American antitrust law forbids overt cartels and prosecutes them when found. Price-fixing investigations produce settlements and fines in industries ranging from chicken to automotive parts to municipal bond underwriting. The overt cartel is presumably the small fraction of coordinated behavior that enforcement catches. The price levels in concentrated industries — where no explicit coordination can be proven but prices move together — suggests the invisible version is pervasive.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -34850,7 +34850,7 @@ const LAYERS = [
                 "id": "pcorp_p_anti",
                 "label": "Antitrust",
                 "color": "#883030",
-                "desc": "The legal regime meant to constrain market power. American antitrust enforcement weakened across forty years and is now starting to wake up. The DOJ and FTC have brought their most ambitious cases in a generation in the last few years.",
+                "desc": "The legal regime meant to constrain market power and protect competition. American antitrust enforcement weakened progressively from the 1980s onward under a jurisprudence that focused on consumer prices as the primary harm and largely ignored other dimensions of market power. Forty years of that approach produced the concentrated economy that currently exists. The current DOJ and FTC have brought their most ambitious cases in a generation — against Google, Meta, Amazon, and others. The outcomes will define antitrust law for decades.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -34901,7 +34901,7 @@ const LAYERS = [
                 "id": "pcorp_p_acq",
                 "label": "Acquisitions",
                 "color": "#783030",
-                "desc": "How concentration happens. Big firms buy small firms. Big firms buy each other. The cumulative effect is industry consolidation that no single deal would have triggered alarms over.",
+                "desc": "How market concentration compounds. Dominant firms buy smaller competitors, eliminating potential rivals before they grow. They buy adjacent companies that would otherwise have competed in their market. They buy the suppliers and distributors that previously gave them market discipline. Each individual transaction may clear regulatory review because it doesn't look dominant in isolation. The cumulative effect is industry consolidation that no single deal would have triggered action over — which is exactly the strategy the most sophisticated acquirers have pursued.",
                 "links": [
                   {
                     "label": "Follow The Money",
@@ -34946,7 +34946,7 @@ const LAYERS = [
                 "id": "pcorp_p_plat",
                 "label": "Platform Power",
                 "color": "#683028",
-                "desc": "The new form. Platforms are not just dominant firms — they are the marketplace itself. Amazon, Google, Facebook, Apple set the rules of the markets they also compete in.",
+                "desc": "The market power that comes from being the marketplace itself rather than just a participant in it. Amazon competes against third-party sellers while charging them for the privilege of using Amazon's platform to reach customers. Google competes in advertising against publishers while being the primary way those publishers reach audiences. Apple controls the only legal way to distribute software to iPhone users and takes a cut of every transaction. Platform power lets the platform set the rules, collect the toll, and compete on terms no other player can match.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -35029,7 +35029,7 @@ const LAYERS = [
             "id": "pcorp_lob",
             "label": "Lobbying & Regulation",
             "color": "#583028",
-            "desc": "How corporations shape the rules they have to follow. The largest industries spend more on lobbying than the federal regulatory agencies that govern them have in their entire budgets. The asymmetry is the policy.",
+            "desc": "How corporations shape the rules they live under. The largest industries spend more on lobbying than the federal agencies that regulate them have in their entire operating budgets. Former congressional staff and regulators rotate into lobbying jobs at multiples of their government salaries and use the relationships and institutional knowledge they built in public service to shape public policy on behalf of private clients. The system is legal, pervasive, and produces rules that consistently favor the industries that can afford the most sophisticated representation.",
             "links": [
               {
                 "label": "OpenSecrets",
@@ -35055,7 +35055,7 @@ const LAYERS = [
                 "id": "pcorp_lo_lob",
                 "label": "Lobbyists",
                 "color": "#482018",
-                "desc": "The professionals who write legislation, draft regulatory comments, and walk the corridors. There are several lobbyists for every member of Congress. Most are former government officials.",
+                "desc": "The professionals who draft legislation, write regulatory comments, schedule meetings, and manage the flow of influence. There are approximately six registered lobbyists for every member of Congress. Most are former congressional staff, former regulators, or former elected officials. They bring to their private clients the relationships, institutional knowledge, and credibility they built in public service. Most lobbying activity is not dramatic — it is the quiet, persistent presence in every room where policy is being made, by people who understand what is being decided.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -35100,7 +35100,7 @@ const LAYERS = [
                 "id": "pcorp_lo_rev",
                 "label": "Corporate Revolving Door",
                 "color": "#583028",
-                "desc": "The career path. Hill staffer becomes lobbyist. Lobbyist becomes regulator. Regulator becomes consultant. The same people end up writing, enforcing, and re-writing the rules they live with.",
+                "desc": "The career pipeline that connects corporate interests to public policy and back again. Hill staffer becomes industry lobbyist. Lobbyist becomes agency official. Agency official becomes industry consultant. The same people negotiate from both sides of the same table at different points in their careers. The conflicts are disclosed and managed on paper. The informal relationships, the shared assumptions, and the career incentives that shape behavior are not easily disclosed or managed. The revolving door is not a corruption problem in the legal sense. It is a structural feature of how American policy gets made.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -35151,7 +35151,7 @@ const LAYERS = [
                 "id": "pcorp_lo_pac",
                 "label": "PACs & Super PACs",
                 "color": "#683028",
-                "desc": "The campaign finance vehicles. Citizens United opened the floodgates in 2010. Most of the largest political donations now come through entities that did not legally exist in their current form before that ruling.",
+                "desc": "Political Action Committees and Super PACs — the vehicles through which corporate and wealthy individual money enters electoral politics. Citizens United v. FEC, decided in 2010, held that political spending is protected speech and removed the limits on independent expenditures. The result was an immediate and sustained increase in outside spending in American elections. Most of the largest donors operate through multiple vehicles that make the ultimate source difficult to trace. The landscape of campaign finance is now almost entirely opaque at the level of large donors.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -35212,7 +35212,7 @@ const LAYERS = [
                 "id": "pcorp_lo_cap",
                 "label": "Regulatory Capture",
                 "color": "#583020",
-                "desc": "When the regulator starts thinking like the regulated. Agencies that are supposed to police industries often find themselves staffed by people from those industries who are kind to former colleagues.",
+                "desc": "The dynamic by which regulatory agencies gradually come to share the perspective of the industries they regulate, protecting established players rather than the public the agency was created to serve. It happens through the revolving door, through the information asymmetry between regulators and regulated, through the attrition of agency resources relative to the complexity of what they are asked to oversee, and through the simple persistence of industry influence over years and administrations. Most major regulatory agencies show some degree of capture in some of their functions.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -35263,7 +35263,7 @@ const LAYERS = [
                 "id": "pcorp_lo_alec",
                 "label": "Model Legislation",
                 "color": "#683018",
-                "desc": "Corporate-funded organizations like ALEC produce ready-to-introduce bills that get passed in dozens of state legislatures with minor edits. State law in many places is partly written by people the voters never elected.",
+                "desc": "The American Legislative Exchange Council produces model legislation for state legislatures — bills written to serve corporate clients that get introduced in multiple states with minor edits. Other organizations operate similarly on both the right and left. The result is that significant portions of state law in multiple states are written by people the voters of those states never elected, funded by corporations with interests in the outcome, and passed by legislators who often have not read what they are voting for. The process is legal, documented, and rarely reported.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -35372,7 +35372,7 @@ const LAYERS = [
                 "id": "pcorp_b_id",
                 "label": "Brand Identity",
                 "color": "#985028",
-                "desc": "The story the company tries to attach to itself. The good ones become shorthand. The great ones become reflexive — the brand is the first thought when the category comes up.",
+                "desc": "The story the company tries to attach to itself so that the category and the brand become one. The great brand identities are not just recognition — they are emotional associations that operate below the threshold of conscious evaluation. Apple and innovation. Nike and determination. Patagonia and environmental conscience. Brand identity is built over decades through consistent visual language, product experience, and cultural association. The companies that achieve it have converted advertising into cultural infrastructure — the brand is encountered as part of the landscape rather than as paid promotion.",
                 "links": [
                   {
                     "label": "Longreads",
@@ -35417,7 +35417,7 @@ const LAYERS = [
                 "id": "pcorp_b_ad",
                 "label": "Advertising",
                 "color": "#a85838",
-                "desc": "The largest manipulation industry in the country by spend. Americans see thousands of ads a day. The cumulative effect on attention, desire, and self-image is enormous and almost never measured.",
+                "desc": "The largest manipulation industry in the country by expenditure, and one of the least examined as such. Americans are exposed to thousands of advertising messages daily across screens, surfaces, and feeds. The cumulative effect on desire, self-image, and the sense of what constitutes a normal or adequate life is enormous. Advertising created the consumer economy as a cultural formation — the conviction that identity is expressed through purchase, that problems have products as solutions, and that what you own is a reasonable measure of who you are. These are not natural beliefs. They were built.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -35486,7 +35486,7 @@ const LAYERS = [
                 "id": "pcorp_b_mark",
                 "label": "Marketing",
                 "color": "#b86838",
-                "desc": "The strategy underneath the ads. Market research, segmentation, the careful study of what makes people buy. Marketing has gotten more sophisticated as the data has gotten richer.",
+                "desc": "The strategy that advertising executes. Market research, audience segmentation, behavioral targeting, brand positioning — marketing is the systematic study of how to move people from indifference to purchase. The discipline has gotten dramatically more sophisticated as behavioral data has made it possible to target specific individuals rather than demographic categories. Political marketing has adopted the same tools, with the same goal: move people from indifference or opposition to engagement and action. The techniques of commercial marketing and political marketing have converged almost entirely.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -35531,7 +35531,7 @@ const LAYERS = [
                 "id": "pcorp_b_inf",
                 "label": "Influencer Economy",
                 "color": "#c87848",
-                "desc": "The new model. Pay people with audiences to mention the product. Disclosure rules are weak and patchily enforced. A lot of recommendation is paid placement.",
+                "desc": "The contemporary model in which companies pay people with audiences to associate themselves with products in content that resembles recommendation more than advertising. The Federal Trade Commission requires disclosure of paid partnerships. Enforcement is inconsistent and penalties are modest. The most effective influencer marketing works because the emotional register — personal, casual, intimate — is the opposite of the register that audiences have learned to screen out as advertising. The audience understands intellectually that the recommendation may be paid. The body responds to the intimacy anyway.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -35576,7 +35576,7 @@ const LAYERS = [
                 "id": "pcorp_b_loy",
                 "label": "Customer Loyalty",
                 "color": "#a86038",
-                "desc": "The asset corporations spend most on building. Loyalty programs, points, status tiers — the structures designed to get the same customer to come back instead of comparing.",
+                "desc": "The asset that corporations spend the most on building and protecting. Loyalty programs, points systems, membership tiers, subscription relationships — the structures designed to make switching cost more than it's worth and to transform the transaction into a relationship. Loyalty in the commercial sense is not the same as loyalty in the human sense. It is a designed dependency — the accumulation of small switching costs and sunken investments that make it easier to stay than to compare. The emotional language of loyalty is doing work in the service of lock-in.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -35621,7 +35621,7 @@ const LAYERS = [
                 "id": "pcorp_b_mind",
                 "label": "Branded Minds",
                 "color": "#985828",
-                "desc": "The cumulative effect. Most Americans can recall hundreds of brand jingles and mottoes verbatim. The same memory does not generally hold poetry, civics, or family history at the same density. The wiring is not neutral.",
+                "desc": "The cumulative effect of decades of commercial messaging on the architecture of attention and memory. Most Americans can recall hundreds of brand slogans, jingles, and logos verbatim — content that was placed in their memory without their consent through repetition at scale. The same memory does not reliably hold civic information, family history, or poetry at anything like the same density. The asymmetry is not accidental. The brand recall was funded by companies with resources to place it. The civic knowledge was funded by nobody at comparable scale.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -35698,7 +35698,7 @@ const LAYERS = [
             "id": "pcorp_ext",
             "label": "Externalities & Harm",
             "color": "#382818",
-            "desc": "What corporations cost that doesn't show up on their balance sheet. Pollution. Health damage. Wage suppression. Community collapse. Externalities are the costs the company gets to skip while someone else pays them.",
+            "desc": "What corporations cost that doesn't appear on their balance sheet. Pollution. Health damage to workers and communities. Wage suppression. Community collapse when facilities close. Externalities are costs the company shifts onto someone else — workers, communities, the public, future generations, the natural environment. The price of the product does not include what the product actually costs. The gap is paid by people who did not buy the product and did not agree to absorb the cost. Externalities are not a bug in market capitalism. They are a predictable output of markets that aren't required to price them.",
             "links": [
               {
                 "label": "EPA",
@@ -35724,7 +35724,7 @@ const LAYERS = [
                 "id": "pcorp_e_pol",
                 "label": "Corporate Pollution",
                 "color": "#282010",
-                "desc": "What the company puts into the air, water, and soil that isn't on the receipt. American industry has externalized environmental cost for two centuries. Some of that cost is now showing up as cancer rates in specific zip codes.",
+                "desc": "What industrial operations put into the air, water, and soil that is not on anyone's receipt. American industry has externalized environmental cost for two centuries — the cleanup, the health burden, and the long-term remediation have been paid by communities, governments, and the bodies of people who lived nearby. Environmental justice research documents the consistent pattern: industrial pollution is disproportionately concentrated in low-income communities and communities of color. The cost is not evenly distributed. The political capacity to resist it is not evenly distributed either.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -35769,7 +35769,7 @@ const LAYERS = [
                 "id": "pcorp_e_lab",
                 "label": "Labor Harm",
                 "color": "#382018",
-                "desc": "Wage theft. Unsafe workplaces. Wrongful termination. Most of the small daily harms of the workplace economy are not headline news. The cumulative cost is high.",
+                "desc": "Wage theft — paying less than the agreed wage, or not at all — is the most common form of employee theft in the United States by dollar value, exceeding all property crime combined by most estimates. Unsafe working conditions, wrongful termination, illegal retaliation against organizing — most of the small daily harms of the employment relationship are not headline news. The cumulative economic and physical cost to workers is enormous. Enforcement is underfunded relative to the volume of violations. Most victims never file a complaint because the process offers them little and costs them time they can't afford.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -35820,7 +35820,7 @@ const LAYERS = [
                 "id": "pcorp_e_consu",
                 "label": "Consumer Harm",
                 "color": "#482818",
-                "desc": "Fraud. Defective products. Misleading marketing. The repeat playbook — when caught, settle for less than the profit, treat it as a cost of doing business, do it again.",
+                "desc": "Fraud. Defective products knowingly sold. Misleading marketing. The repeat playbook for consumer harm is documented across industries — tobacco, opioids, financial products, baby formula — and follows a consistent pattern: internal knowledge of the harm precedes public disclosure by years or decades, the company settles when forced to, the settlement is smaller than the profits from the harm, and the behavior continues until external pressure makes it financially irrational. The legal system processes this as ordinary litigation. The people harmed experience it as something else.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -35865,7 +35865,7 @@ const LAYERS = [
                 "id": "pcorp_e_com",
                 "label": "Community Harm",
                 "color": "#582820",
-                "desc": "When a major employer leaves, gets bought, or extracts value through cuts. Whole towns have been hollowed out by decisions made in boardrooms hundreds of miles away.",
+                "desc": "When a major employer closes, gets bought and stripped, or extracts value through wage suppression and benefit cuts, the community organized around that employment absorbs the cost. Plant closings, hospital consolidations, retail chain bankruptcies — the communities that depended on those employers do not find equivalent replacements. The boardroom decision takes hours. The community it unmakes takes decades to recover, if it does. The costs — in health outcomes, family instability, political despair — are real and largely invisible to the people who made the decision.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -35916,7 +35916,7 @@ const LAYERS = [
                 "id": "pcorp_e_hea",
                 "label": "Health Harm",
                 "color": "#181008",
-                "desc": "Tobacco. Opioids. Lead. Asbestos. PFAS. The pattern is the same across products and decades — the company knows about the harm earlier than the public, sells anyway, and litigates for years before any consequence.",
+                "desc": "Tobacco. Opioids. Lead paint. Asbestos. PFAS. The pattern is the same across products and decades: the company has internal research documenting harm, continues selling, suppresses or disputes the research, litigates against victims for years, and settles eventually for sums smaller than the profits. The executives who made the decisions rarely face personal consequence. The settlements are paid by the company's future earnings. The harm — the cancer, the addiction, the developmental damage — is paid by the bodies of the people who were exposed. The asymmetry has been consistent enough across enough industries that it should be recognized as a structural feature, not a series of accidents.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -35967,7 +35967,7 @@ const LAYERS = [
                 "id": "pcorp_e_set",
                 "label": "Settlements",
                 "color": "#382818",
-                "desc": "How the harms get resolved without admission of liability. The settlement is paid out of company cash flow. The harm continues to whoever it was done to. The shareholder rarely notices.",
+                "desc": "How the harms get resolved. Companies that have caused widespread harm — to consumers, workers, or communities — rarely go to trial. They settle. The settlement is paid from corporate cash flow, treated as a cost of doing business, and structured without admission of liability, which means the legal record does not establish that the harm occurred. The executives who made the decisions are almost never parties to the settlement. The shareholders absorb a temporary reduction in earnings. The harm continues to whoever experienced it. The settlement is not justice. It is the mechanism by which the legal system closes the file.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -37126,7 +37126,7 @@ const LAYERS = [
                 "id": "p5_man",
                 "label": "Media Manipulation",
                 "color": "#783040",
-                "desc": "The deliberate engineering of what people believe is true, important, or possible. Not always a lie — sometimes just a frame, a sequence, an omission.",
+                "desc": "The deliberate engineering of what people believe is true, important, or possible. Not always a lie — sometimes just a frame, a sequence, a repeated emphasis, or a careful omission. Media manipulation operates at the level of what gets covered and what gets ignored, how events get characterized, whose experts appear, and what the default assumptions are. It does not require a conspiracy — it can emerge from the routine incentives of the industry: what attracts audiences, what advertisers will support, what sources will talk to, what the people in the building already believe. The result is as shaped as any deliberate campaign.",
                 "links": [
                   {
                     "label": "AllSides",
@@ -37802,7 +37802,7 @@ const LAYERS = [
             "id": "p_mil_af",
             "label": "Abuse of Force",
             "color": "#783838",
-            "desc": "Power without accountability finds its worst expression here. The gap between force authorized and force applied — and who pays the cost when those two things don't match.",
+            "desc": "Power without accountability finds its most direct expression here. Every institution with the legal authority to use force contains the possibility of abuse — the gap between force authorized and force applied. Police violence, military excess, detention without charge, torture authorized or tolerated — these are not aberrations in institutions that otherwise function cleanly. They are the predictable output of unchecked power operating under conditions of secrecy, urgency, and immunity. The cost is paid by the people on the receiving end of the force. The accountability is borne by almost no one.",
             "links": [
               {
                 "label": "Amnesty International",
@@ -37890,7 +37890,7 @@ const LAYERS = [
                 "id": "pmil_a_br",
                 "label": "Branches",
                 "color": "#4a4040",
-                "desc": "Army, Navy, Air Force, Marines, Coast Guard, Space Force. Each has its own culture, doctrine, and lobbyists. Most procurement fights are interservice fights as much as they are policy fights.",
+                "desc": "Army, Navy, Air Force, Marine Corps, Coast Guard, Space Force. Each has its own culture, doctrine, chain of command, and congressional constituency. Interservice rivalry is genuine and persistent — the services compete for budget, for roles, and for the doctrinal primacy that determines which capabilities get funded. Most major procurement fights are also interservice fights, with each branch advocating for weapons systems that expand its role and budget. The unified command structure above them manages but does not eliminate the competition. The Joint Chiefs exist partly to contain it.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -37935,7 +37935,7 @@ const LAYERS = [
                 "id": "pmil_a_rec",
                 "label": "Recruiting",
                 "color": "#5a5050",
-                "desc": "The all-volunteer force, struggling. Recruitment has missed targets for several years. The military has historically pulled from communities with fewer economic options. Those communities have either fewer people or more options now.",
+                "desc": "The all-volunteer force has missed its recruiting targets for several consecutive years. The military has historically drawn from communities with limited economic alternatives — small towns, the South, families with prior service. Those communities have changed: they have fewer young people, the stigma on military service in some has grown, and the economic alternatives have expanded. The services have responded by lowering standards in some categories, increasing bonuses, and expanding eligibility. The long-term implications for force readiness and the civil-military relationship are being debated within the institution.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -37986,7 +37986,7 @@ const LAYERS = [
                 "id": "pmil_a_train",
                 "label": "Training",
                 "color": "#6a6060",
-                "desc": "How a person becomes a soldier. Basic training is also identity training — the institution remakes recruits in its image. That work is fast, durable, and not always reversible.",
+                "desc": "How a person becomes a soldier, sailor, airman, or Marine. Basic training is identity training as much as physical or tactical training — the institution is deliberately remaking the recruit's sense of self, loyalty, and obedience in a compressed period. The psychological research on this process is substantial: basic training works quickly and durably. The identity built there — the unit, the service, the mission — tends to persist long after the uniform comes off. How people reconnect with their pre-service self, and whether they do, is a significant part of what we call the veteran experience.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -38031,7 +38031,7 @@ const LAYERS = [
                 "id": "pmil_a_dem",
                 "label": "Demographics",
                 "color": "#4a4848",
-                "desc": "Who serves. Heavily weighted toward the South, toward smaller towns, toward families with prior service. Women have served in combat roles since 2013. Racial composition does not match the country's.",
+                "desc": "Who serves is not a cross-section of the country. Service is heavily weighted toward the South, rural and small-town America, and families with prior military service. White Americans are overrepresented relative to their share of the population. Hispanic Americans are underrepresented. Women have been authorized to serve in all combat roles since 2013 and are present in those roles in smaller numbers than men. The demographics of service shape the political and cultural relationship between the military and the civilian population it serves — including who is most directly affected when the country goes to war.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -38082,7 +38082,7 @@ const LAYERS = [
                 "id": "pmil_a_sub",
                 "label": "Subcultures",
                 "color": "#5a5050",
-                "desc": "Each service has its own. Marines and Army differ in ways outsiders rarely catch. The cultures shape behavior in ways that outlast the uniform.",
+                "desc": "Each service has its own distinctive culture, and the differences are real and consequential. Marine Corps culture emphasizes small-unit cohesion, austere conditions, and the cultivation of aggression. Army culture varies enormously by branch and unit but tends to emphasize mass and logistics. Navy culture is shaped by the ship as total institution. The cultures shape how service members understand their purpose, their relationship to civilian authority, and their own identity. They also shape what kinds of people each service attracts and retains, and what those people bring home when they leave.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -38127,7 +38127,7 @@ const LAYERS = [
                 "id": "pmil_a_civ",
                 "label": "Civil-Military Relations",
                 "color": "#3a3838",
-                "desc": "The principle that civilians control the military. American civil-military norms have been strained by recent administrations. The principle still holds. The norms are weaker than they were.",
+                "desc": "The principle, embedded in American constitutional design, that the military serves civilian authority rather than directing it. The norm has been strained by administrations that asked the military to act in ways that senior officers found contrary to law or their professional ethics. The principle still holds in the most important sense — no coup has occurred, no general has defied a presidential order by force. The norms — the informal understandings about what civilian and military leaders owe each other — are weaker than they were a generation ago in ways that most participants acknowledge.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -38236,7 +38236,7 @@ const LAYERS = [
                 "id": "pmil_w_doc",
                 "label": "Doctrine",
                 "color": "#2a2828",
-                "desc": "How the military says it intends to fight. Doctrine is the official theory. Doctrine often loses contact with what is actually happening in the conflicts the country is in.",
+                "desc": "How the military says it intends to fight. Doctrine is the official theory of operations — the principles, concepts, and procedures that are supposed to guide how forces are organized, trained, and employed. Doctrine is revised after every major conflict to incorporate lessons learned, and every doctrinal revision reflects the last war more than the next one. The gap between doctrine and what actually happens in specific conflicts is consistent and well-documented. The military's counterinsurgency doctrine was developed through painful experience in Iraq and Afghanistan. Whether it will apply to the next conflict is genuinely uncertain.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -38281,7 +38281,7 @@ const LAYERS = [
                 "id": "pmil_w_asym",
                 "label": "Asymmetric Warfare",
                 "color": "#3a3030",
-                "desc": "When the bigger force can't bring its advantage to bear. Vietnam. Iraq. Afghanistan. The world's most expensive military has been outlasted repeatedly by adversaries with no air force.",
+                "desc": "When the larger, more conventionally powerful force cannot bring its advantages to bear against an adversary that refuses to fight on those terms. The U.S. military has overwhelming advantage in conventional warfare — the air superiority, the precision strike capacity, the logistics. That advantage has been largely irrelevant in the conflicts of the last fifty years. Vietnam, Iraq, Afghanistan — the adversaries refused conventional battle, dispersed into civilian populations, extended the conflict, and outlasted American political will. The world's most expensive military has been outlasted repeatedly by opponents with no air force and improvised weapons.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -38332,7 +38332,7 @@ const LAYERS = [
                 "id": "pmil_w_drone",
                 "label": "Drone Warfare",
                 "color": "#1a1818",
-                "desc": "The defining technology of two American decades of war. Drones changed the cost of killing — for the operator. They have not changed the cost for the targets, who are mostly civilians by significant percentages in most strikes studied.",
+                "desc": "The weapon system that defined two American decades of war. Drones changed the cost structure of killing for the operator — strikes that previously required expensive manned aircraft can now be conducted remotely, cheaply, and with political deniability. They did not change the cost for the targets. Civilian casualty rates in drone strikes have been studied by independent researchers and government accountability offices alike and consistently find higher percentages of civilian deaths than official military reports acknowledge. The legal framework for targeting in countries with which the U.S. is not formally at war remains contested.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -38383,7 +38383,7 @@ const LAYERS = [
                 "id": "pmil_w_cyb",
                 "label": "Cyber Operations",
                 "color": "#2a2828",
-                "desc": "The newest battlespace. Most of what happens here happens silently. The U.S. is enormously capable and a frequent target. The norms for what counts as an act of war in cyberspace are still unsettled.",
+                "desc": "The newest operational domain. Most significant cyberoperations — by the United States and against it — happen silently and are never publicly acknowledged. The U.S. has conducted offensive cyber operations against Iranian nuclear facilities, Russian election infrastructure, and numerous other targets. U.S. government systems, critical infrastructure, and private companies have been repeatedly penetrated by Russian, Chinese, Iranian, and North Korean actors. The norms for what constitutes an act of war in cyberspace are still being established through practice rather than agreed treaty. The escalation ladder is unclear.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -38434,7 +38434,7 @@ const LAYERS = [
                 "id": "pmil_w_sf",
                 "label": "Special Forces",
                 "color": "#3a2828",
-                "desc": "The small units doing most of the active operations. The American footprint in dozens of countries is mostly Special Forces, mostly classified, mostly invisible to the citizens whose name it is being done in.",
+                "desc": "The small units conducting most of the active American military operations. Special Operations Forces — Army Rangers, Green Berets, Delta Force, Navy SEALs, and others — have been the primary instrument of American military engagement since 2001. U.S. Special Forces operate in dozens of countries simultaneously, most of which are not acknowledged publicly. The operations are authorized under legal frameworks that predate the current conflict landscape and are rarely reviewed by Congress. The American military footprint in the world is much larger than what the public is aware of.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -38485,7 +38485,7 @@ const LAYERS = [
                 "id": "pmil_w_civ",
                 "label": "Civilian Casualties",
                 "color": "#1a1010",
-                "desc": "The grim arithmetic. Every war the U.S. has fought in the last twenty-five years has killed civilians at multiples of the combatants killed. The estimates vary by source. The pattern doesn't.",
+                "desc": "The grim arithmetic of every war. Every armed conflict the United States has participated in since 1991 has killed substantially more civilians than combatants — in some conflicts by multiples. The estimates vary widely by source: U.S. military estimates, independent research organizations, and local documentation disagree significantly. The pattern across conflicts does not. International humanitarian law requires distinction between combatants and civilians and proportionality in the use of force. Whether American operations have consistently met that standard is a question that classified targeting reviews are not the appropriate mechanism to answer.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -38568,7 +38568,7 @@ const LAYERS = [
             "id": "pmil_bud",
             "label": "Defense Budget",
             "color": "#683020",
-            "desc": "Where the money goes. The U.S. spends more on its military than the next ten countries combined — most of which are American allies. Roughly half of federal discretionary spending. The math is the policy.",
+            "desc": "Where roughly half of federal discretionary spending goes. The U.S. military budget is larger than the next ten countries' combined, most of which are American allies. The topline figure is already abstract enough to resist comprehension. What is inside it — the procurement programs, the personnel costs, the operations budgets, the classified programs — is understood in detail only by a few hundred people inside the government and a few dozen outside of it. The size of the budget is a policy choice. The lack of public comprehension of what is in it is also, at some level, a policy choice.",
             "links": [
               {
                 "label": "Congressional Budget Office",
@@ -38600,7 +38600,7 @@ const LAYERS = [
                 "id": "pmil_b_top",
                 "label": "Topline",
                 "color": "#583018",
-                "desc": "Roughly $900 billion in 2024 and rising. That figure does not include Veterans Affairs, the nuclear weapons budget at the Department of Energy, or several other line items that belong in any honest accounting.",
+                "desc": "Roughly $900 billion in fiscal year 2024 and rising with each authorization cycle. That figure does not include Veterans Affairs healthcare and benefits, which add another $300+ billion. It does not include the nuclear weapons budget, which sits at the Department of Energy. It does not include intelligence community funding, which is reported as an aggregate. The honest accounting of what the United States spends on national security is substantially higher than the number reported as the defense budget. The reporting structure is designed for the defense department's convenience, not for public understanding.",
                 "links": [
                   {
                     "label": "Congressional Budget Office",
@@ -38651,7 +38651,7 @@ const LAYERS = [
                 "id": "pmil_b_proc",
                 "label": "Procurement",
                 "color": "#683028",
-                "desc": "What the Pentagon buys and from whom. Procurement is dominated by a handful of contractors who consistently produce systems behind schedule and over budget. The system is not designed to fail. It also is not designed to succeed.",
+                "desc": "What the Pentagon buys and from whom. Major procurement programs — the F-35 fighter, the Gerald Ford aircraft carriers, the Columbia-class submarines, the next-generation ICBM — are contracted to a small number of prime contractors who consistently deliver systems that are behind schedule, over budget, and, in some cases, underperforming specifications. The acquisition system is structured in ways that make cancellation politically expensive and contractors financially protected from cost overruns. The Government Accountability Office documents this cycle every year. The cycle continues.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -38702,7 +38702,7 @@ const LAYERS = [
                 "id": "pmil_b_pers",
                 "label": "Personnel",
                 "color": "#783028",
-                "desc": "The largest single category. Pay, healthcare, retirement, family services. The all-volunteer force is expensive. The alternative — a draft — has been politically unthinkable for two generations.",
+                "desc": "The largest single category in the defense budget. Pay, healthcare, housing allowances, family support services, retirement — the all-volunteer force is expensive to recruit and retain at the scale and quality the military requires. Personnel costs crowd out procurement and readiness in budget negotiations. The retirement system, which vests at 20 years, is designed for an era when most service members served full careers and is expensive relative to the number who do. Reforming military compensation has been studied repeatedly and changed modestly because the beneficiaries are politically organized and the abstract future savings are not.",
                 "links": [
                   {
                     "label": "Congressional Budget Office",
@@ -38753,7 +38753,7 @@ const LAYERS = [
                 "id": "pmil_b_op",
                 "label": "Operations",
                 "color": "#583020",
-                "desc": "What it costs to run the force day to day. Training, fuel, deployments. Operating tempo has been high for two decades and the equipment shows it.",
+                "desc": "What it costs to run the force day to day — the fuel for training exercises, the spare parts for aging aircraft and vehicles, the forward deployment costs, the operations in multiple theaters simultaneously. Operating tempo has been high for two decades and the wear on equipment and people is real. Readiness — the percentage of units able to perform their assigned missions — has been a persistent concern in Congressional oversight. The tension between funding the current force and investing in the future force is constant in every budget cycle.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -38798,7 +38798,7 @@ const LAYERS = [
                 "id": "pmil_b_audit",
                 "label": "Audits",
                 "color": "#481810",
-                "desc": "The Pentagon has never passed an audit. It has been required to be audit-ready since 1990. The most recent audits have failed in increasingly creative ways. Trillions of dollars are unaccounted for in the literal accounting sense.",
+                "desc": "The Pentagon has failed every audit it has been required to complete. The requirement for audit readiness was written into law in 1990. The first full audit attempt began in 2017. It has failed every year since in ways that have become progressively more expensive without becoming more successful. Trillions of dollars cannot be accounted for in the literal accounting sense — the department cannot trace the money from appropriation to expenditure. This is not the same as theft, necessarily, but it means the public, Congress, and the department itself cannot know what they are getting for the money.",
                 "links": [
                   {
                     "label": "Congressional Budget Office",
@@ -38849,7 +38849,7 @@ const LAYERS = [
                 "id": "pmil_b_hid",
                 "label": "Hidden Costs",
                 "color": "#383018",
-                "desc": "What doesn't show up in the topline. Veterans care. Disability claims that will run for fifty more years. Interest on war debt. Environmental cleanup. The true cost of the post-9/11 wars is estimated in the trillions.",
+                "desc": "What doesn't show up in the headline number. Veterans healthcare and disability compensation will cost the United States hundreds of billions of dollars a year for decades because of injuries from the post-9/11 wars. Interest on the debt borrowed to finance those wars will cost trillions. Environmental cleanup of contaminated military sites will run for generations. The true cost of American military engagement is not knowable in real time and not payable in the year it is incurred. The full bill for decisions made in 2001 is still arriving and will continue arriving long after the decision-makers are gone.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -38958,7 +38958,7 @@ const LAYERS = [
                 "id": "pmil_mic_con",
                 "label": "Major Contractors",
                 "color": "#482018",
-                "desc": "Lockheed Martin, Boeing, Raytheon, Northrop Grumman, General Dynamics. Five companies do most of the largest contracts. The consolidation happened in the 1990s and was supposed to save money. It did not.",
+                "desc": "Lockheed Martin, Boeing, Raytheon Technologies, Northrop Grumman, and General Dynamics dominate the major Pentagon contracts. Five companies. They consolidated in the 1990s after the Pentagon encouraged mergers to achieve efficiency. The mergers happened. The efficiency did not materialize in any measurable way. The consolidated contractor base now has less competition than before, more leverage over the government customer, and the political protection that comes from having production spread across congressional districts nationwide. The concentration was encouraged by policy. The consequences were predictable.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -39009,7 +39009,7 @@ const LAYERS = [
                 "id": "pmil_mic_lob",
                 "label": "Lobbying",
                 "color": "#683028",
-                "desc": "The defense industry employs roughly one lobbyist for every member of Congress, often more. Most are former military or former Hill staffers. The doors revolve.",
+                "desc": "The defense industry employs approximately one lobbyist for every member of Congress, often more. Most of them are former military officers, former defense officials, or former congressional staff who use the relationships and institutional knowledge built in public service to secure contracts and shape policy for private clients. The Revolving Door Project and independent researchers have documented the career pathways in detail. The influence is structural — it operates through relationships, shared assumptions, and the career incentives that connect public service to private reward — not through individual corrupt transactions.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -39054,7 +39054,7 @@ const LAYERS = [
                 "id": "pmil_mic_rev",
                 "label": "Revolving Door",
                 "color": "#583020",
-                "desc": "Generals retire into contractor jobs. Contractor executives go into Pentagon roles. The same people negotiate from both sides of the same table over a career. The conflicts are managed on paper.",
+                "desc": "Generals retire and join contractor boards and consulting firms. Contractor executives move into Pentagon acquisition roles. The same people who approve programs are often the people who previously worked for or will subsequently work for the contractors receiving the awards. The conflicts are disclosed and managed through recusal procedures on paper. The informal influence — the relationships, the shared vocabulary, the career considerations that shape how current officials treat future employers — is not captured by disclosure forms. The revolving door is legal, pervasive, and consistently produces outcomes favorable to contractors.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -39105,7 +39105,7 @@ const LAYERS = [
                 "id": "pmil_mic_dis",
                 "label": "Distributed Production",
                 "color": "#483020",
-                "desc": "Defense contracts are deliberately spread across as many congressional districts as possible. The point is to make cancellation politically painful. It works.",
+                "desc": "Defense contracts are deliberately structured to spread production and supply chain work across as many congressional districts as possible. The F-35 program has suppliers in over 45 states. This is not industrial policy — it is political engineering. Congressional representatives who vote to cut a weapons program are voting to eliminate jobs in their own districts. The politics of cancellation are always worse than the politics of continuation, regardless of the program's military value. Distributed production is the mechanism by which the contractor converts the program into a political constituency.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -39150,7 +39150,7 @@ const LAYERS = [
                 "id": "pmil_mic_exp",
                 "label": "Arms Exports",
                 "color": "#583028",
-                "desc": "The U.S. is the world's largest arms exporter. American weapons end up in conflicts the U.S. did not start and sometimes opposed. The export economy is a separate American foreign policy.",
+                "desc": "The United States is the world's largest arms exporter — selling roughly 40% of all international weapons transfers. American weapons have ended up in conflicts the United States did not start and, in some cases, later opposed. Saudi Arabia, the United Arab Emirates, Israel, Ukraine, Taiwan, and dozens of other countries operate American weapons systems. The export market is a distinct foreign policy — separate from declared diplomatic positions — that creates relationships, dependencies, and entanglements that outlast the specific transactions. Congress has limited oversight over most commercial arms sales.",
                 "links": [
                   {
                     "label": "SIPRI",
@@ -39201,7 +39201,7 @@ const LAYERS = [
                 "id": "pmil_mic_eis",
                 "label": "Eisenhower's Warning",
                 "color": "#482018",
-                "desc": "1961, January 17. The outgoing president told the country to beware. The warning is still cited and has been mostly ignored. Sixty years later the complex he warned about is several times the size it was.",
+                "desc": "On January 17, 1961, Dwight Eisenhower used his farewell address to warn the American people about what he called the military-industrial complex — the relationship between the armed services and the defense industry that threatened, he said, to distort the country's priorities and undermine democratic governance. The speech is still cited. The warning has been mostly ignored. The complex Eisenhower warned about has grown by every measure since 1961 — in budget, in contractor concentration, in lobbying, in the revolving door, in the difficulty of civilian oversight. Eisenhower had commanded it. He knew what he was describing.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -39293,7 +39293,7 @@ const LAYERS = [
             "id": "pmil_vet",
             "label": "Veterans & Aftermath",
             "color": "#785038",
-            "desc": "What happens after the deployment. Roughly 18 million American veterans alive today. Some are doing fine. Many are not. The institution is good at sending them and uneven at bringing them home.",
+            "desc": "What happens after the deployment — which is the part the enlistment posters don't show and the institution has historically been less equipped to manage than sending people out. Eighteen million living veterans. Some are doing well. Many carry injuries — physical, psychological, and moral — that the Department of Veterans Affairs is variably equipped to address. The gap between what the country says about its veterans and what it funds for them is one of the more consistent hypocrisies in American public life. The yellow ribbon is cheap. The VA wait time is not.",
             "links": [
               {
                 "label": "U.S. Department of Veterans Affairs",
@@ -39313,7 +39313,7 @@ const LAYERS = [
                 "id": "pmil_v_va",
                 "label": "VA Healthcare",
                 "color": "#684028",
-                "desc": "The largest integrated healthcare system in the country. When it works it is excellent. When it fails it fails in ways the rest of American healthcare doesn't because there is no alternative provider for many veterans.",
+                "desc": "The Department of Veterans Affairs healthcare system is the largest integrated healthcare provider in the United States, serving roughly nine million enrolled veterans annually. When it works well — and it often does — it provides high-quality, coordinated care to people who would struggle to access it otherwise. When it fails, it fails in ways that are distinctive to a system with no market alternative: the veteran on a long waiting list cannot go to a competitor in the way a private patient can. The scandals that have periodically erupted over wait times and neglect are real. So are the millions of veterans receiving competent care.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -39364,7 +39364,7 @@ const LAYERS = [
                 "id": "pmil_v_ptsd",
                 "label": "PTSD & Moral Injury",
                 "color": "#583028",
-                "desc": "The conditions deployment leaves behind. PTSD is real and treatable. Moral injury — what happens when service required something the conscience could not file away — is harder to name and harder to treat.",
+                "desc": "Post-traumatic stress disorder and its less-classified companion, moral injury. PTSD has a clinical definition, a treatment literature, and a diagnosis code. Moral injury — the damage done when service required people to participate in things their conscience cannot accommodate — is harder to name and harder to treat because it is not primarily a disorder of the nervous system. It is a problem of meaning. Many veterans carry both. The military has invested substantially in PTSD treatment and suicide prevention. Moral injury is less institutionally legible and less resourced. It may be more prevalent.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -39421,7 +39421,7 @@ const LAYERS = [
                 "id": "pmil_v_su",
                 "label": "Veteran Suicide",
                 "color": "#382018",
-                "desc": "Roughly 17 veterans a day, by VA estimates. Higher than the civilian rate at most ages. The Department has poured resources into the problem and the numbers have barely moved.",
+                "desc": "Approximately 17 veterans die by suicide every day, according to VA estimates — a rate consistently higher than the civilian population adjusted for age and sex. The Department has treated this as a priority for more than a decade and deployed significant resources. The numbers have moved modestly. The factors that drive veteran suicide are multiple: untreated PTSD and depression, economic instability, loss of identity and community after service, access to lethal means. No single intervention addresses all of them. The gap between the country's stated commitment to veterans and its actual investment in their mental health is measurable.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -39472,7 +39472,7 @@ const LAYERS = [
                 "id": "pmil_v_hl",
                 "label": "Veteran Homelessness",
                 "color": "#483028",
-                "desc": "Roughly 35,000 veterans homeless on any given night. Down from a decade ago. Still a stain on a country with a flag culture this loud.",
+                "desc": "Roughly 35,000 veterans are homeless on any given night in the United States — down from roughly 75,000 a decade ago, a real reduction driven by targeted housing-first programs. Still 35,000 people who wore the uniform sleeping outside. The causes are familiar: untreated mental illness, substance use disorders, the economic consequences of interrupted civilian careers, and the specific difficulty of transitioning from a total institution to an unstructured civilian world. The country that holds military service as a core national value has not resolved the question of what it owes the people who performed it.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -39523,7 +39523,7 @@ const LAYERS = [
                 "id": "pmil_v_emp",
                 "label": "Employment",
                 "color": "#785038",
-                "desc": "Most veterans return to work. Some struggle. Federal hiring preferences exist on paper. Translation of military skill to civilian credential remains uneven.",
+                "desc": "Most veterans return to work after service. The skills developed in the military — leadership, logistics, operating under pressure, working in teams — translate broadly into civilian employment. The translation is not always smooth. Military occupational specialties don't map cleanly onto civilian credential frameworks. The culture of military work — hierarchy, clear command, defined mission — can be jarring in environments that operate differently. Federal hiring preferences for veterans exist and are real. They are also inconsistently administered and do not substitute for the broader civilian career infrastructure most veterans enter without.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -39574,7 +39574,7 @@ const LAYERS = [
                 "id": "pmil_v_fam",
                 "label": "Military Families",
                 "color": "#886038",
-                "desc": "The other half of the cost. Frequent moves. Long deployments. The slow grind on marriages and on children who change schools every two years. Military family support has improved. The fundamental ask of the family has not.",
+                "desc": "The cost of military service is distributed across families, not just service members. Frequent relocations disrupt children's schooling, partners' careers, and the social networks that civilian families take for granted. Long deployments concentrate parenting and household management on one partner and leave the deployed member absent for months or years at a time. The reintegration after deployment is its own challenge. Military family support programs have improved substantially since the 1990s. The fundamental ask of the family — sustained separation, geographic instability, exposure to the possibility of death — has not changed.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -39657,7 +39657,7 @@ const LAYERS = [
             "id": "pmil_emp",
             "label": "Empire & Bases",
             "color": "#582818",
-            "desc": "The global footprint. The U.S. operates roughly 750 military bases in over 80 countries. No other country comes close. Most Americans cannot name ten of them. The empire has been there long enough to feel like geography.",
+            "desc": "The global footprint. The United States operates roughly 750 military installations in more than 80 countries. No other country maintains anything approaching this. The network was built during and after World War II and has never been systematically reduced. Most Americans cannot name the installations. The communities that host them have complicated and evolving relationships with the presence — economic dependence, resentment of noise and crime, status asymmetries between American and local forces — that the U.S. foreign policy apparatus does not consistently track or address.",
             "links": [
               {
                 "label": "Federation of American Scientists",
@@ -39683,7 +39683,7 @@ const LAYERS = [
                 "id": "pmil_e_base",
                 "label": "Bases",
                 "color": "#482010",
-                "desc": "From Okinawa to Ramstein to Diego Garcia. Bases shape local economies, politics, and discontent. The communities that host them have complicated feelings the U.S. mostly doesn't track.",
+                "desc": "From Okinawa to Ramstein to Guantánamo to Diego Garcia to Bahrain to South Korea. American military bases shape the economies of the towns and regions around them, the politics of the governments that host them, and the lived experience of the local populations who live near them. Base host agreements are negotiated differently in every country and are frequently sources of diplomatic tension. The status of forces agreements that govern the legal treatment of American personnel who commit crimes in host countries have been particularly contentious. The bases are infrastructure of empire in the literal, geographic sense.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -39734,7 +39734,7 @@ const LAYERS = [
                 "id": "pmil_e_pres",
                 "label": "Forward Presence",
                 "color": "#583018",
-                "desc": "The doctrine that justifies the bases. Forward presence deters and reassures, the argument goes. It also concentrates risk and produces resentment in places that did not vote for it.",
+                "desc": "The doctrine that justifies maintaining the global base network. Forward presence deters adversaries, reassures allies, and allows rapid response to crises — the argument has held since 1945 and is still the operational logic of American global military deployment. Critics argue that forward presence also creates tripwires for escalation, generates resentment that produces blowback, and commits the United States to the defense of commitments it has not explicitly chosen through democratic deliberation. Both arguments have evidence. The debate is genuine and consequential for whether the network gets maintained, expanded, or contracted.",
                 "links": [
                   {
                     "label": "Foreign Affairs",
@@ -39779,7 +39779,7 @@ const LAYERS = [
                 "id": "pmil_e_int",
                 "label": "Interventions",
                 "color": "#382010",
-                "desc": "The list since 1945 is long. Some called wars, some called police actions, some never officially called anything. The pattern is the pattern.",
+                "desc": "The list of U.S. military interventions since 1945 is long and includes actions formally declared as wars, actions called police operations or humanitarian interventions, proxy wars, covert operations, and presence that was never publicly acknowledged. Korea, Vietnam, Lebanon, Grenada, Panama, the Gulf War, Somalia, Haiti, Bosnia, Kosovo, Afghanistan, Iraq, Libya, Syria, and dozens of smaller operations. The pattern across these interventions — the justifications given, the outcomes achieved, the costs incurred — is one of the most studied and most contested bodies of evidence in American foreign policy.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -39830,7 +39830,7 @@ const LAYERS = [
                 "id": "pmil_e_part",
                 "label": "Partner Forces",
                 "color": "#483018",
-                "desc": "Allied militaries trained, equipped, and sometimes effectively run by U.S. advisors. Partner forces have replaced some of what direct American troops used to do.",
+                "desc": "Allied militaries trained, equipped, advised, and in some cases functionally commanded by U.S. Special Forces and security cooperation programs. Partner force strategy has become a primary tool for maintaining American influence and conducting operations without deploying U.S. combat troops — trading the domestic political cost of American casualties for the strategic cost of training partners whose values and conduct are not always aligned with American stated commitments. The Afghan National Army, built over twenty years at enormous expense, dissolved within days of U.S. withdrawal. The partner force model's limitations were starkly demonstrated.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -39875,7 +39875,7 @@ const LAYERS = [
                 "id": "pmil_e_dr",
                 "label": "Drone Strikes",
                 "color": "#382818",
-                "desc": "The signature of empire in the 21st century. Strikes have happened in Pakistan, Yemen, Somalia, Afghanistan, Iraq, Syria, Libya. Most of the countries struck were not at war with the U.S. in any formal sense.",
+                "desc": "Strikes conducted by remotely piloted aircraft in Pakistan, Yemen, Somalia, Afghanistan, Iraq, Syria, Libya, and other countries. Many of these countries have not been formally at war with the United States. The legal authorization for strikes has been derived from the 2001 and 2002 Authorizations for Use of Military Force, stretched interpretively to cover conflicts and countries that did not exist when those authorizations were written. The Intercept, The Bureau of Investigative Journalism, and other outlets have documented civilian casualty rates that consistently exceed official military acknowledgments.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -39926,7 +39926,7 @@ const LAYERS = [
                 "id": "pmil_e_blow",
                 "label": "Blowback",
                 "color": "#281008",
-                "desc": "What CIA jargon called the unintended consequences of intervention. Most of the major American foreign policy crises of the last forty years have included blowback as a contributing factor.",
+                "desc": "CIA jargon for the unintended consequences of covert operations — the blowback that lands on a population that does not know why it is being targeted. The concept entered the public vocabulary after 9/11, when analysts documented the relationship between U.S. support for the Afghan mujahideen against the Soviets and the subsequent emergence of al-Qaeda. The pattern has recurred: coups that installed regimes producing refugee crises, arms that ended up with forces the U.S. later fought, alliances that created obligations the country did not want to honor. Blowback is not inevitable. It is predictable when the consequences of action are not traced forward.",
                 "links": [
                   {
                     "label": "Foreign Affairs",
@@ -40009,7 +40009,7 @@ const LAYERS = [
             "id": "pmil_int",
             "label": "Intelligence & Special Operations",
             "color": "#382820",
-            "desc": "The hidden side of national security. Sixteen agencies in the official intelligence community. Hundreds of thousands of cleared personnel. A budget of roughly $90 billion that gets reported in aggregate so the public cannot scrutinize the parts.",
+            "desc": "The hidden half of national security. Sixteen agencies in the official intelligence community, plus the classified programs within military commands, plus the contractor workforce that does much of the actual work. Budget roughly $90 billion, reported as an aggregate number that conceals the breakdown between agencies and functions. The oversight mechanisms — the intelligence committees in Congress, the Foreign Intelligence Surveillance Court, the inspector general system — are stronger than nothing and weaker than what the scale of the enterprise probably requires. Most of what this apparatus does and has done is not known to the public it serves.",
             "links": [
               {
                 "label": "Federation of American Scientists",
@@ -40035,7 +40035,7 @@ const LAYERS = [
                 "id": "pmil_i_cia",
                 "label": "CIA",
                 "color": "#282018",
-                "desc": "The Central Intelligence Agency. Civilian. Reports to the president. Conducts both intelligence collection and covert operations, including paramilitary action. Has its own air force, drone fleet, and history of involvement in foreign coups.",
+                "desc": "The Central Intelligence Agency — civilian, reporting to the president through the Director of National Intelligence. The CIA conducts both intelligence collection and covert action, including paramilitary operations, propaganda, the funding of foreign political parties, and the support or conduct of coups. It has its own air fleet, drone capability, and detention infrastructure. The Church Committee investigations in the 1970s documented a history of domestic surveillance, assassination plots, and coups that produced significant reforms. The reforms constrained some activities and were worked around in others. The covert action function has never been abolished.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40086,7 +40086,7 @@ const LAYERS = [
                 "id": "pmil_i_nsa",
                 "label": "NSA",
                 "color": "#382820",
-                "desc": "The National Security Agency. Signals intelligence — the interception, decryption, and analysis of communications. The Snowden disclosures revealed surveillance programs that captured large quantities of American communications.",
+                "desc": "The National Security Agency is the signals intelligence component of the U.S. intelligence community — responsible for intercepting, decrypting, and analyzing foreign communications. The agency's capabilities are among the most sensitive secrets in the government and most of what it collects is classified. The 2013 Snowden disclosures revealed domestic surveillance programs that captured metadata and content from American communications at a scale that had not been publicly acknowledged and that subsequent court reviews found exceeded legal authority in important respects. The programs were largely continued under different legal frameworks.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -40137,7 +40137,7 @@ const LAYERS = [
                 "id": "pmil_i_dia",
                 "label": "DIA",
                 "color": "#483028",
-                "desc": "Defense Intelligence Agency. The Pentagon's own intelligence service. Focused on military intelligence and supporting combatant commands.",
+                "desc": "The Defense Intelligence Agency provides military intelligence in support of the Department of Defense and combatant commands. Its focus is on foreign military capabilities, order of battle, and the intelligence needs of operational military planning. It is less well-known than the CIA but operates a larger number of human intelligence sources worldwide through the Defense Attaché system. The DIA's assessments of adversary capabilities inform procurement decisions, war planning, and the intelligence community's overall assessments that drive policy.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40182,7 +40182,7 @@ const LAYERS = [
                 "id": "pmil_i_nro",
                 "label": "NRO",
                 "color": "#382818",
-                "desc": "National Reconnaissance Office. Builds and operates spy satellites. Existence was officially classified until 1992. Budget is in the billions and largely opaque.",
+                "desc": "The National Reconnaissance Office builds and operates the satellite systems that collect imagery and signals intelligence from space. Its existence was classified until 1992. Its budget is in the several billions and largely opaque within the intelligence community's aggregate budget disclosure. The NRO operates some of the most capable and expensive collection systems in the U.S. government. Its products — satellite imagery, electronic intelligence — are fundamental inputs to almost every other intelligence activity. The office is one of the least known of the major intelligence agencies.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40227,7 +40227,7 @@ const LAYERS = [
                 "id": "pmil_i_fbi",
                 "label": "FBI Intelligence",
                 "color": "#583028",
-                "desc": "The domestic side. The FBI's intelligence operations expanded after 9/11 and have a complicated history of surveilling activists, civil rights leaders, and journalists alongside actual threats.",
+                "desc": "The Federal Bureau of Investigation has both law enforcement and intelligence functions. Its intelligence role expanded significantly after 9/11 and the creation of the National Counterterrorism Center. The FBI's domestic intelligence history includes the COINTELPRO program, which surveilled and disrupted civil rights organizations, anti-war groups, and political figures from the 1950s through the 1970s. The documented history of the FBI intelligence function targeting constitutionally protected activity has not been fully reconciled with the expanded domestic intelligence role it now performs. The tension between effective counterterrorism and civil liberties protection is unresolved.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -40278,7 +40278,7 @@ const LAYERS = [
                 "id": "pmil_i_jsoc",
                 "label": "JSOC",
                 "color": "#181010",
-                "desc": "Joint Special Operations Command. The most elite military units, with global reach and a decade of experience as the tip of the spear in counterterrorism operations. Most of what they do is classified.",
+                "desc": "Joint Special Operations Command is the organization that commands and coordinates the most elite military units — Delta Force, SEAL Team Six, the Intelligence Support Activity, and others. JSOC has operated as the primary counterterrorism strike force since 2001, with global authority and a decade and a half of near-continuous operational experience. The nature and scope of JSOC operations is classified. Congressional oversight of JSOC activities is more limited than oversight of conventional military operations. The organization has developed capabilities, relationships, and institutional knowledge that have given it significant autonomy within the national security structure.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40329,7 +40329,7 @@ const LAYERS = [
                 "id": "pmil_i_all",
                 "label": "Allied Intelligence",
                 "color": "#482820",
-                "desc": "The Five Eyes — U.S., U.K., Canada, Australia, New Zealand. Tightest intelligence-sharing relationship on earth. Other partnerships extend the network further with varying levels of trust.",
+                "desc": "The Five Eyes alliance — the United States, United Kingdom, Canada, Australia, and New Zealand — share signals intelligence under agreements dating to World War II. The sharing arrangement is tighter and more comprehensive than any other intelligence relationship on earth. Broader arrangements extend to NATO allies, Israel, and specific partner countries on specific topics, with varying levels of trust and reciprocity. Allied intelligence relationships are among the most enduring products of the American-led post-war order. Their maintenance is one of the concrete costs of any significant deterioration in American alliance relationships.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40374,7 +40374,7 @@ const LAYERS = [
                 "id": "pmil_i_riv",
                 "label": "Rival Services",
                 "color": "#281810",
-                "desc": "Russia's GRU and SVR. China's MSS. Iran's MOIS. Each runs its own intelligence operations against U.S. targets. The contest is constant and mostly silent.",
+                "desc": "Russia's intelligence apparatus — the SVR for foreign intelligence, the GRU for military intelligence, and the FSB for domestic security — runs active operations against American targets, interests, and elections. China's Ministry of State Security conducts an intelligence and influence operation in the United States that is described by the FBI as one of the most significant counterintelligence challenges the bureau has ever faced. Iran and North Korea conduct more limited but real operations. The contest between these services and the American intelligence community is constant, global, and mostly invisible to the publics whose lives it affects.",
                 "links": [
                   {
                     "label": "Foreign Affairs",
@@ -40425,7 +40425,7 @@ const LAYERS = [
                 "id": "pmil_i_hum",
                 "label": "HUMINT",
                 "color": "#382820",
-                "desc": "Human intelligence — assets, agents, the people who tell the agency what they see. The classic spy work. Slow, expensive, and irreplaceable when it works.",
+                "desc": "Human intelligence — the use of assets, agents, and informants to collect information that cannot be gathered technically. HUMINT is slow to develop, expensive to run, and difficult to verify. It is also irreplaceable when it works — the agent in the room knows things that no satellite or signal can capture. The CIA runs the United States' primary HUMINT capability. The Defense Intelligence Agency runs the Defense Attaché network. JSOC and the military services run their own human networks for operational purposes. The quality and coverage of American HUMINT is a subject of sustained internal debate that rarely surfaces in public.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40470,7 +40470,7 @@ const LAYERS = [
                 "id": "pmil_i_sig",
                 "label": "SIGINT",
                 "color": "#382828",
-                "desc": "Signals intelligence. Communications, electronic emissions, the data trails. The volume the U.S. collects is staggering. Analyzing it well is harder than collecting it.",
+                "desc": "Signals intelligence — the collection, processing, and analysis of electronic communications, radar emissions, telemetry, and other signals. The NSA is the primary SIGINT agency. The volume of data collectible through signals intelligence has grown faster than the analytical capacity to make sense of it. The Snowden disclosures revealed that collection had expanded far beyond what the oversight framework was designed to manage. The challenge is not only legal and ethical — it is analytical: most of what is collected is never examined by a human analyst. The intelligence picture assembled from signals is both more comprehensive and more incomplete than the scale of collection would suggest.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -40521,7 +40521,7 @@ const LAYERS = [
                 "id": "pmil_i_cov",
                 "label": "Covert Influence",
                 "color": "#281810",
-                "desc": "Operations to shape events without leaving fingerprints. Funding political parties. Producing propaganda. Backing coups. The CIA has done all of this. Most of the operations stayed classified for decades. Some still are.",
+                "desc": "Operations designed to shape events in foreign countries without leaving attributable fingerprints. The CIA has conducted covert influence operations — funding political parties, producing propaganda, backing coups, supporting insurgencies — in dozens of countries since its founding. Many of these operations remained classified for decades and became known only through congressional investigations or document declassification. The Iran coup of 1953, the Guatemala coup of 1954, the election interference in Italy, the funding of Contra forces in Nicaragua — these are now documented history. The current scope of covert influence activity is classified and, by definition, not publicly accountable.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -40636,7 +40636,7 @@ const LAYERS = [
                 "id": "pmil_n_arsenal",
                 "label": "American Arsenal",
                 "color": "#381008",
-                "desc": "The triad — submarines, bombers, land-based missiles. Each leg costs hundreds of billions over its lifetime to maintain and modernize. The current modernization program is the largest in a generation.",
+                "desc": "The nuclear triad — ballistic missile submarines, land-based intercontinental ballistic missiles, and nuclear-capable bombers — is the physical infrastructure of American nuclear deterrence. Each leg of the triad costs hundreds of billions of dollars over its operational lifetime and is now undergoing simultaneous modernization. The Columbia-class submarine program, the Sentinel ICBM replacement, and the B-21 bomber together represent the largest nuclear modernization investment in American history. The modernization is broadly supported across parties. The strategic logic of why all three legs remain necessary, given current threats, is less broadly examined.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40687,7 +40687,7 @@ const LAYERS = [
                 "id": "pmil_n_pol",
                 "label": "Nuclear Policy",
                 "color": "#482010",
-                "desc": "The doctrines about when and how the weapons would be used. American policy maintains the option of first use, which most allies and most arms control experts have argued against for decades.",
+                "desc": "The doctrines that govern when and how nuclear weapons would be used. American nuclear policy maintains the option of first use — the United States has never adopted a no-first-use pledge. The policy allows for nuclear use in response to existential threats, including potentially non-nuclear ones. Most allies and most arms control experts have argued that first-use posture increases escalation risk. Most American administrations have reviewed the policy, found it useful for extended deterrence commitments, and retained it. The tension between deterrence logic and humanitarian law obligations is real and unresolved.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40738,7 +40738,7 @@ const LAYERS = [
                 "id": "pmil_n_mad",
                 "label": "Mutual Assured Destruction",
                 "color": "#281008",
-                "desc": "The Cold War logic that has held since 1949. If both sides die, neither side strikes first. The logic has worked. It is also extraordinary that it has worked.",
+                "desc": "Mutual Assured Destruction — the strategic logic that has kept nuclear weapons unused since 1945. If any nuclear exchange will kill both sides, neither side strikes first. The logic is simple. That it has held for eighty years across multiple crises, near-misses, technical malfunctions, and unstable leaders is either evidence that deterrence works or extraordinary luck. Probably both. The system has come close to failure in ways the public learned about decades after the fact. The current erosion of arms control agreements and the emergence of a three-way nuclear competition between the U.S., Russia, and China is straining a framework built for a different configuration.",
                 "links": [
                   {
                     "label": "Bulletin of the Atomic Scientists",
@@ -40789,7 +40789,7 @@ const LAYERS = [
                 "id": "pmil_n_pro",
                 "label": "Proliferation",
                 "color": "#481810",
-                "desc": "The slow spread. Nine nuclear states now. The Non-Proliferation Treaty has held more often than it has failed and is fraying at the edges. North Korea, Iran, and the long shadow of South Asia are the current pressure points.",
+                "desc": "The slow spread of nuclear weapons capability to additional states. Nine countries now have confirmed nuclear weapons: the United States, Russia, China, the United Kingdom, France, India, Pakistan, Israel, and North Korea. The Non-Proliferation Treaty has prevented more states from acquiring weapons than have acquired them — a genuinely significant accomplishment given how many countries have had the technical capability. The treaty is fraying: the nuclear states have not fulfilled their disarmament obligations, and states that gave up weapons or programs — Ukraine, Libya, Iraq — have not been repaid with security. The incentive structure for proliferation has worsened.",
                 "links": [
                   {
                     "label": "Federation of American Scientists",
@@ -40840,7 +40840,7 @@ const LAYERS = [
                 "id": "pmil_n_dis",
                 "label": "Disarmament",
                 "color": "#582820",
-                "desc": "The arms control framework. The treaties that limited nuclear arsenals are mostly expired or expiring. There is currently no serious negotiation underway between the U.S. and Russia.",
+                "desc": "The arms control framework that constrained the superpower nuclear competition during the Cold War and afterward is largely gone. The Intermediate-Range Nuclear Forces Treaty expired after U.S. withdrawal in 2019. The Open Skies Treaty followed. New START, the last remaining bilateral limit on deployed strategic nuclear warheads, expired without renewal in 2026. There are no current negotiations between the United States and Russia on nuclear arms control. There have never been meaningful trilateral negotiations including China. The world has more nuclear warheads deployed without formal limitations than at any point since the late Cold War.",
                 "links": [
                   {
                     "label": "ICAN",
@@ -40897,7 +40897,7 @@ const LAYERS = [
                 "id": "pmil_n_use",
                 "label": "First Use & Risk",
                 "color": "#181008",
-                "desc": "The active question. American doctrine still permits first use. Risk of accident, miscalculation, or escalation has been quietly rising for years. The Bulletin's Doomsday Clock has been moved closer to midnight in successive years for reasons.",
+                "desc": "The actual use of nuclear weapons — the decision to cross the threshold that has not been crossed since 1945. American nuclear doctrine still permits first use. Multiple scenarios exist in which escalation from conventional to nuclear conflict is plausible: a conventional defeat of a nuclear-armed adversary, miscalculation during a crisis, technical malfunction misread as attack. The Bulletin of the Atomic Scientists' Doomsday Clock has been set closer to midnight in successive years because the risk landscape has genuinely worsened — more nuclear states, less arms control, more unstable governments with weapons. The clock is a metaphor. What it is measuring is not.",
                 "links": [
                   {
                     "label": "Bulletin of the Atomic Scientists",
@@ -41029,7 +41029,7 @@ const LAYERS = [
         "x": 88,
         "y": 40,
         "color": "#983030",
-        "desc": "The system for deciding who works, who owns, who starves, who thrives. Not natural law — a set of choices, repeated daily, enforced by every other orb in this layer.",
+        "desc": "The system that decides who works, who owns, who eats, who thrives, and who is disposable. Not natural law — a set of choices, embedded in policy, enforced by every other orb in this layer, repeated daily. The economy is not separate from politics. It is politics by other means. The rules about what can be owned, how labor can be organized, what can be taxed, how debt works — each rule produces a distribution of outcomes. Outcomes that look inevitable are usually the consequences of choices that were made at specific historical moments by people with interests in the result.",
         "links": [
           {
             "label": "USASpending.gov",
@@ -41049,7 +41049,7 @@ const LAYERS = [
             "id": "p4",
             "label": "Global Capital",
             "color": "#b84040",
-            "desc": "The operating system beneath the visible interface. Follow the money and you find the actual policy — not the speech, not the vote. The money.",
+            "desc": "The operating system beneath the visible interface of national economies and democratic politics. Capital moves across borders faster than people, faster than regulation, and faster than most democratic processes can respond. The holders of global capital can exit any jurisdiction that becomes inconvenient — redirecting investment, shifting legal domiciles, accessing tax systems that are effectively optional for those with the means to navigate them. Follow the money and you find the actual policy — not the speech, not the vote, not the platform. The money.",
             "links": [
               {
                 "label": "OpenSecrets",
@@ -41119,7 +41119,7 @@ const LAYERS = [
             "id": "p2_exp",
             "label": "Exploitation",
             "color": "#883020",
-            "desc": "The extraction of value from labor, land, or people at a price that only one party agreed to. The engine beneath most of the wealth in this layer.",
+            "desc": "The extraction of value from labor, land, or people at a price that only one party negotiated freely. Exploitation is the engine beneath most of the accumulated wealth in this layer — the gap between what labor, raw materials, or land are worth and what they are paid. The word has been drained of force by overuse and academic abstraction, but it describes something specific and measurable: the person who cleans the hotel room and the person who owns the hotel company are both paid for their contribution to the enterprise, and one of them is paid much more than their proportional contribution justifies.",
             "links": [
               {
                 "label": "Economic Policy Institute",
@@ -41189,7 +41189,7 @@ const LAYERS = [
             "id": "p2_trade",
             "label": "Trade",
             "color": "#883828",
-            "desc": "The exchange of goods, services, and leverage across borders. Trade agreements are foreign policy dressed in economic language. What moves freely and what doesn't is always a political decision.",
+            "desc": "The exchange of goods, services, and geopolitical leverage across borders. Trade agreements are foreign policy dressed in economic language — they determine not just tariff rates but labor standards, intellectual property rules, and the relative leverage of corporations versus governments in dispute resolution. What moves freely and what doesn't is always a political decision. The benefits of trade are real and diffuse. The costs are concentrated in specific industries and communities. The political economy of trade — who benefits enough to lobby for it, who loses enough to oppose it — has produced the current fragmentation.",
             "links": [
               {
                 "label": "USASpending.gov",
@@ -41279,7 +41279,7 @@ const LAYERS = [
             "id": "p2_work",
             "label": "Work & Wages",
             "color": "#a87038",
-            "desc": "What gets paid for time. American wages have stagnated for the bottom half for roughly fifty years while productivity has roughly doubled. The gap is the story. Where the gap went is the rest of it.",
+            "desc": "What gets paid for time. American wages for the bottom half of earners have stagnated for roughly fifty years while the productivity those workers generate has roughly doubled. The gap is real, documented, and politically contested as to cause. The explanations offered — globalization, automation, union decline, policy choices — are not mutually exclusive. They are all true. The gap is the story. Where the gap went — to capital returns, to executive compensation, to shareholder value — is the rest of the story.",
             "links": [
               {
                 "label": "Bureau of Labor Statistics",
@@ -41305,7 +41305,7 @@ const LAYERS = [
                 "id": "p2_w_min",
                 "label": "Minimum Wage",
                 "color": "#985828",
-                "desc": "The federal floor. $7.25 an hour, unchanged since 2009. The longest stretch without a raise in the law's history. Many states have moved on without Washington.",
+                "desc": "The federal minimum wage floor — $7.25 an hour, unchanged since 2009. The longest period without a federal increase since the minimum wage was established in 1938. Many states and cities have moved well above the federal level on their own. In inflation-adjusted terms the federal minimum wage is lower today than it was in the late 1960s. The political failure to raise it is not a consequence of economic evidence — the research on modest minimum wage increases and employment effects is largely positive. It is a consequence of who has leverage over the legislative process.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -41356,7 +41356,7 @@ const LAYERS = [
                 "id": "p2_w_med",
                 "label": "Median Pay",
                 "color": "#a87038",
-                "desc": "The middle of the distribution. Median household income looks higher than ever in nominal dollars and lower than 1999 in inflation-adjusted ones, depending on how you measure. The household kept up by adding a second earner.",
+                "desc": "The middle of the wage distribution. Median household income in nominal dollars looks higher than ever. In inflation-adjusted terms, accounting for changes in household size and composition, real wage growth for median households has been modest over fifty years. The household kept up partly by adding a second earner — the shift from single-income to dual-income households absorbed a significant portion of the apparent income gains without reflecting an improvement in the per-worker wage. The numbers tell a story that depends significantly on which numbers are chosen and how they are adjusted.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -41407,7 +41407,7 @@ const LAYERS = [
                 "id": "p2_w_un",
                 "label": "Unemployment",
                 "color": "#785020",
-                "desc": "What the official number measures and what it hides. The headline rate excludes people who stopped looking. The real labor participation rate has been falling for decades.",
+                "desc": "The official unemployment rate measures the percentage of people who do not have jobs and are actively looking. It excludes people who have stopped looking, people who are working part-time but want full-time work, and people in the informal economy. The headline rate is the most-cited number. The broader measures — U-4, U-5, U-6 in Bureau of Labor Statistics terminology — tell a more complete story. Labor force participation, which measures the share of the working-age population in the labor force at all, has been declining for two decades. The headline rate can fall while underlying labor market conditions worsen.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -41462,7 +41462,7 @@ const LAYERS = [
                 "id": "p2_w_gig",
                 "label": "Gig Work",
                 "color": "#985830",
-                "desc": "Drivers, delivery people, contractors-by-misclassification. The gig economy is the old labor market with the protections stripped off and the flexibility marketed as freedom.",
+                "desc": "The category of work that platforms created by misclassifying employees as independent contractors. Drivers, delivery people, care workers, freelancers — workers performing services core to the company's business model while denied the protections and benefits that employment law requires for employees. The platforms argued that independent contractor status reflected genuine entrepreneurial freedom. California's AB5 law challenged that argument. The platforms spent $200 million on a ballot measure to overturn it. They won. The labor market category they created is now standard in the gig sector.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -41522,7 +41522,7 @@ const LAYERS = [
                 "id": "p2_w_prod",
                 "label": "Productivity Gap",
                 "color": "#a87838",
-                "desc": "The shape of the divergence. From 1948 to 1979, productivity and pay rose together. After 1979, productivity kept rising and pay flatlined. The lost wages went up the income distribution.",
+                "desc": "The documented divergence between what American workers produce and what they are paid for producing it. From 1948 to 1979, productivity and median compensation tracked each other closely. After 1979, they came apart: productivity continued rising, median compensation largely did not. The divergence is not in dispute. The lost wages — the difference between what workers would earn if the old relationship had held and what they actually earn — represents trillions of dollars redirected from labor to capital over forty years. Where it went is visible in the wealth concentration data.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -41605,7 +41605,7 @@ const LAYERS = [
             "id": "p2_wealth",
             "label": "Wealth & Ownership",
             "color": "#985828",
-            "desc": "The deeper layer. Income is the river. Wealth is the reservoir. American wealth is concentrated at the top in a way that has not been seen since before the Great Depression. The bottom half owns roughly nothing.",
+            "desc": "The deeper layer. Income is what flows in. Wealth is what accumulates. American wealth is concentrated at levels not seen since before the Great Depression — the top 1% owns roughly a third of total wealth, the top 10% owns roughly two-thirds, and the bottom half owns approximately nothing in net terms. Wealth generates income — dividends, rent, capital gains — without labor. The people who own assets do not have to work to maintain their position in the distribution. The people who do not own assets do. That asymmetry compounds over time and across generations.",
             "links": [
               {
                 "label": "Federal Reserve",
@@ -41631,7 +41631,7 @@ const LAYERS = [
                 "id": "p2_we_inh",
                 "label": "Wealth Inheritance",
                 "color": "#783818",
-                "desc": "What gets passed down. About a third of the wealth held by the richest Americans came from inheritance, not earnings. The country tells itself a story about merit. The data tells a different one.",
+                "desc": "What passes from one generation to the next. About a third of the wealth held by the richest Americans is estimated to have come from inheritance rather than earnings. The country tells itself a meritocratic story about how wealth is accumulated. The data consistently complicates that story. Large fortunes are maintained and compounded across generations through estate planning, trust structures, and the treatment of capital gains at death that effectively eliminates income tax on much inherited wealth. The estate tax, designed to limit hereditary wealth concentration, applies to fewer than one in a thousand estates.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -41682,7 +41682,7 @@ const LAYERS = [
                 "id": "p2_we_assets",
                 "label": "Assets",
                 "color": "#a86830",
-                "desc": "Stocks, real estate, businesses. Asset values have grown enormously across two decades while wages stagnated. The gap is the wealth gap.",
+                "desc": "Stocks, real estate, private business equity — the assets that appreciate over time and generate income for their owners. Asset values have grown enormously over the past three decades while wages stagnated. The gap between those who own assets and those who don't has widened correspondingly. Homeownership has historically been the primary vehicle for asset accumulation by middle-class families. The pricing out of first-time buyers from most major housing markets has closed that vehicle for a significant and growing share of the population. The wealth gap is the asset gap.",
                 "links": [
                   {
                     "label": "Federal Reserve",
@@ -41760,7 +41760,7 @@ const LAYERS = [
                 "id": "p2_we_top",
                 "label": "Top 1%",
                 "color": "#583808",
-                "desc": "The slice that owns more than the bottom 90%. The concentration has doubled since 1980. It has not stopped accelerating.",
+                "desc": "The slice that owns more than the bottom 90%. In 2024, the top 1% of American households by wealth owned roughly 30% of total household wealth. The top 10% owned roughly 67%. The bottom 50% owned approximately 3.5%. These numbers have moved in one direction across the last forty years. The acceleration is consistent with the policy changes made in the 1980s — cuts in capital gains and income taxes on high earners, weakened labor protections, deregulation of finance — and with the wealth effects of rising asset prices. The concentration has not stopped.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -41811,7 +41811,7 @@ const LAYERS = [
                 "id": "p2_we_inq",
                 "label": "Wealth Inequality",
                 "color": "#683018",
-                "desc": "The deepest measure. The gap between top and bottom in wealth is several times wider than the gap in income. American wealth inequality is among the highest in the developed world.",
+                "desc": "The gap between what the richest Americans hold and what the poorest Americans hold, measured in total wealth rather than annual income. The wealth gap is several times wider than the income gap and has grown faster. By some measures it is the widest it has been since the late 1920s. International comparisons show the United States as an outlier among developed economies. The gap is not a natural feature of market economies — comparable countries with similar income levels have substantially less wealth concentration. The difference is largely explained by policy: taxation of capital, inheritance law, and labor standards.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -41862,7 +41862,7 @@ const LAYERS = [
                 "id": "p2_we_race",
                 "label": "Racial Wealth Gap",
                 "color": "#583018",
-                "desc": "The descendant of slavery, Jim Crow, redlining, and a hundred other policies. The median white American household holds roughly seven to ten times the wealth of the median Black household. The gap has barely closed in fifty years.",
+                "desc": "The descendant of slavery, Black Codes, sharecropping, the systematic exclusion from the GI Bill, redlining, urban renewal, and mass incarceration. The median white American household holds roughly seven to ten times the wealth of the median Black household. The ratio has not closed meaningfully in fifty years despite civil rights legislation. The gap is not explained by current income differences — it reflects the compounding of policies that prevented Black wealth accumulation over generations while subsidizing white wealth accumulation through the same period. The policy tools that produced it are well documented. The political will to address it has not materialized.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -41919,7 +41919,7 @@ const LAYERS = [
                 "id": "p2_we_dyn",
                 "label": "Family Dynasties",
                 "color": "#785020",
-                "desc": "The wealthiest American families have held their position across three or four generations. Compounding works. So does the political system that protects compounded wealth.",
+                "desc": "The wealthiest American families — the Waltons, the Kochs, the Mars family, the Pritzkers — have maintained and grown their positions across three and four generations. Compounding works: a fortune that generates 5% annually in returns doubles roughly every fifteen years. The political system that protects compounded wealth — through low capital gains rates, step-up basis at death, trust structures, and the underfunding of estate tax enforcement — also works. Dynasty in a democracy is not a natural condition. It is a maintained one.",
                 "links": [
                   {
                     "label": "Follow The Money",
@@ -42020,7 +42020,7 @@ const LAYERS = [
             "id": "p2_debt",
             "label": "Debt & Credit",
             "color": "#583018",
-            "desc": "What the bottom half borrows because the wages stopped working. Household debt is now near record highs. Most of it is servicing earlier debt. The economy runs partly on this.",
+            "desc": "What the bottom half of the income distribution borrows because the wages stopped being enough. American household debt reached approximately $17 trillion in 2024. Most of it — mortgages, auto loans, student loans, medical bills, credit card balances — is servicing the gap between what people earn and what they need to manage a decent life. The debt economy is not an accident or a failure of personal responsibility. It is the mechanism by which an economy that stopped paying wages adequate for middle-class life continued to sell middle-class consumption.",
             "links": [
               {
                 "label": "Federal Reserve",
@@ -42046,7 +42046,7 @@ const LAYERS = [
                 "id": "p2_d_house",
                 "label": "Household Debt",
                 "color": "#482010",
-                "desc": "Mortgages, credit cards, auto loans, student loans, medical debt. Roughly $17 trillion in 2024, more in 2025. The debt grew because the wages didn't.",
+                "desc": "The aggregate of what American households owe. Mortgages make up the largest share, followed by auto loans, student loans, and credit card debt. Medical debt is harder to measure but adds hundreds of billions more. Total household debt crossed $17 trillion in 2024. The growth in household debt tracks the divergence between productivity and wages across the same period — when wages stopped keeping pace with costs, debt filled the gap. The debt is not equally distributed: the bottom quintile carries the highest debt-to-income ratios and the least capacity to absorb shocks.",
                 "links": [
                   {
                     "label": "Federal Reserve",
@@ -42091,7 +42091,7 @@ const LAYERS = [
                 "id": "p2_d_card",
                 "label": "Credit Cards",
                 "color": "#683020",
-                "desc": "The most expensive form of borrowing for most households. Average rates have crossed 20%. The companies running the cards make their money from the people who can't pay them off.",
+                "desc": "The most expensive common form of borrowing. Credit card interest rates crossed 20% on average in 2023 — the highest in the modern measurement period. The companies that issue cards make their profits primarily from the roughly 40% of cardholders who carry balances and pay monthly interest. The product is designed to be easy to use and expensive to revolve. Minimum payment structures are calibrated to extend the repayment period. The regulatory framework has improved disclosure without substantially changing the economics. The cost is borne primarily by lower-income households.",
                 "links": [
                   {
                     "label": "Federal Reserve",
@@ -42136,7 +42136,7 @@ const LAYERS = [
                 "id": "p2_d_stu",
                 "label": "Student Debt",
                 "color": "#583018",
-                "desc": "$1.7 trillion. 43 million people. Does not discharge in bankruptcy. Has reshaped marriage, home buying, and family formation for an entire generation.",
+                "desc": "$1.7 trillion in outstanding student loan debt held by approximately 43 million Americans. The debt does not discharge in bankruptcy, unlike almost every other form of consumer debt. This exception, passed in stages between 1976 and 2005, creates a uniquely inescapable burden that follows borrowers through job loss, illness, and economic dislocation. Student debt has restructured major life decisions for an entire generation — marriage rates, home purchase rates, and family formation have all been affected. The returns on the degrees financed by the debt are highly variable and not disclosed before borrowing.",
                 "links": [
                   {
                     "label": "Congressional Budget Office",
@@ -42235,7 +42235,7 @@ const LAYERS = [
                 "id": "p2_d_med",
                 "label": "Medical Debt",
                 "color": "#683010",
-                "desc": "The leading cause of personal bankruptcy in the United States. Other developed countries do not have a category called medical debt because they do not have a healthcare system that produces it.",
+                "desc": "Medical debt is the leading cause of personal bankruptcy in the United States. Other developed countries do not have a category called medical debt because their healthcare financing systems do not produce it — the bill for a serious illness does not land on the patient as a personal financial obligation. In the American system it does, in amounts that can be catastrophic. Roughly 100 million Americans carry some form of medical debt. It appears on credit reports, affects housing and employment, and lingers for years after the treatment was received. The debt is the price of being sick in a country without universal coverage.",
                 "links": [
                   {
                     "label": "Congressional Budget Office",
@@ -42286,7 +42286,7 @@ const LAYERS = [
                 "id": "p2_d_pred",
                 "label": "Predatory Lending",
                 "color": "#382008",
-                "desc": "Payday loans, title loans, the products that exist where banks won't go. Effective interest rates often exceed 300% annually. The customers are mostly people the rest of the financial system has refused.",
+                "desc": "The financial products that exist in the space where mainstream banks will not go. Payday loans with effective annual interest rates exceeding 300%. Title loans that use vehicles as collateral. Rent-to-own arrangements that charge multiples of retail price. Predatory mortgage products structured to fail. The customers are people with no credit history, damaged credit, or incomes too low for conventional products — people the rest of the financial system has decided are not profitable enough to serve honestly. The predatory sector serves them profitably by charging rates that guarantee debt traps for many.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -42337,7 +42337,7 @@ const LAYERS = [
                 "id": "p2_d_score",
                 "label": "Credit Scores",
                 "color": "#482018",
-                "desc": "The number that follows you. Credit scores were sold as objective. They are not — they reflect, among other things, ZIP code, employment patterns, and historical lending discrimination encoded as risk.",
+                "desc": "The three-digit number that functions as a financial passport — determining access to mortgages, auto loans, credit cards, rental housing, and in some cases employment and insurance. Credit scores were sold as objective measures of creditworthiness. They are not objective — they reflect the pattern of one's financial history, which reflects the financial history available to people in one's ZIP code, employment category, and demographic group. Studies have documented systematic racial disparities in credit scores that are not explained by financial behavior and that reflect the legacy of historical lending discrimination encoded as risk.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -42420,7 +42420,7 @@ const LAYERS = [
             "id": "p2_mark",
             "label": "Markets & Trade",
             "color": "#a08038",
-            "desc": "How the system moves goods and money. Markets are useful when the rules are honest and the players are roughly comparable in power. American markets are mostly neither.",
+            "desc": "How the system allocates resources — or claims to. Markets are useful coordination mechanisms when participants have comparable information, comparable bargaining power, and when prices capture all relevant costs. American markets in most major sectors have none of these properties: information is asymmetric, bargaining power is wildly unequal, and prices do not capture externalities. The textbook market is a useful model. The actually existing American market in healthcare, housing, finance, and food production is something else.",
             "links": [
               {
                 "label": "FRED Economic Data",
@@ -42446,7 +42446,7 @@ const LAYERS = [
                 "id": "p2_m_sup",
                 "label": "Supply & Demand",
                 "color": "#907030",
-                "desc": "The textbook story. Real markets diverge from it constantly because most large markets are concentrated and most prices are set by something other than competition.",
+                "desc": "The basic model of how prices form in competitive markets: when supply exceeds demand, prices fall; when demand exceeds supply, prices rise. The model is correct as far as it goes and describes real dynamics in genuinely competitive markets. Most significant American markets are not genuinely competitive. Prices in concentrated industries — airlines, hospitals, wireless carriers, cable providers — are set by something closer to administered pricing among a small number of firms than by the supply-demand interaction the textbook describes. The model is taught as the explanation of how markets work. It describes how competitive markets work. Those are different things.",
                 "links": [
                   {
                     "label": "Bureau of Economic Analysis",
@@ -42491,7 +42491,7 @@ const LAYERS = [
                 "id": "p2_m_glo",
                 "label": "Globalization",
                 "color": "#a08838",
-                "desc": "The integration of national economies. Lifted hundreds of millions out of poverty in the developing world. Hollowed out specific industrial regions of the developed world. Both things are true.",
+                "desc": "The progressive integration of national economies through trade, investment, and the movement of people, technology, and ideas. Globalization over the last thirty years lifted hundreds of millions of people out of poverty in developing countries — primarily in China, India, and Southeast Asia. It also contributed to deindustrialization in specific regions of developed countries, creating concentrations of economic pain that were not addressed by the aggregate gains. Both things are true and both are documented. The political failure to manage the distributional consequences of globalization has produced the populist politics that are now renegotiating its terms.",
                 "links": [
                   {
                     "label": "World Bank Open Data",
@@ -42552,7 +42552,7 @@ const LAYERS = [
                 "id": "p2_m_supc",
                 "label": "Supply Chains",
                 "color": "#88682c",
-                "desc": "The global plumbing. The pandemic exposed how fragile and consolidated the chains had become. Most people had not realized how much depended on a small number of choke points.",
+                "desc": "The global logistics networks through which goods, components, and raw materials flow. Supply chains were built over decades on the logic of cost optimization — manufacturing where it is cheapest, sourcing components globally, holding minimal inventory. The COVID-19 pandemic exposed how fragile those chains had become: a few concentrated chokepoints — semiconductor fabrication in Taiwan, container shipping through a few major ports, specific chemical suppliers — disrupted production globally. The response has been a partial shift toward supply chain resilience, reshoring, and strategic stockpiling. The full rebalancing is expensive and incomplete.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -42603,7 +42603,7 @@ const LAYERS = [
                 "id": "p2_m_mon",
                 "label": "Monopoly Power",
                 "color": "#785020",
-                "desc": "What the American economy has tolerated for two generations. The big companies got bigger. The middle of the distribution got hollowed out. Antitrust enforcement is starting to wake up after a long sleep.",
+                "desc": "Market concentration — the degree to which a small number of firms dominate a sector — has increased in most significant American industries over the past four decades. This was permitted by an antitrust enforcement philosophy focused primarily on consumer prices rather than the broader dimensions of market power. Concentration that doesn't immediately raise consumer prices was largely allowed. The result is an economy where most sectors — airlines, hospitals, insurance, banking, telecommunications, retail, agriculture — are dominated by a small number of firms with pricing power they exercise. The awakening of antitrust enforcement is addressing the current generation. Forty years of concentration is not undone quickly.",
                 "links": [
                   {
                     "label": "Follow The Money",
@@ -42654,7 +42654,7 @@ const LAYERS = [
                 "id": "p2_m_extr",
                 "label": "Extraction",
                 "color": "#683018",
-                "desc": "The other end of trade. Many of the cheap goods come from labor and resource extraction in places the U.S. consumer never sees. The cheap is paid for somewhere.",
+                "desc": "The economy at the far end of the supply chain — where raw materials are extracted, basic components manufactured, and agricultural commodities produced. Extraction economies are often characterized by low wages, weak environmental regulation, high corporate profits, and political systems shaped by the companies doing the extracting. The relationship between the price paid for a commodity and the conditions under which it was produced is systematically obscured by the length and complexity of supply chains. The cheap is paid for somewhere. The question is who pays it and whether they had any say in the bargain.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -42737,7 +42737,7 @@ const LAYERS = [
             "id": "p2_cap",
             "label": "Capitalism & Finance",
             "color": "#783820",
-            "desc": "The system underneath everything else. American capitalism in the 21st century is dominated by finance — the moving of capital — more than by industry, the making of things. The shift has reshaped what the economy rewards.",
+            "desc": "The economic system in which production is organized around private ownership of capital and the pursuit of profit. American capitalism in the twenty-first century is dominated by finance — the movement and management of capital — more than by industry, the production of goods. The financialization of the economy has reshaped what companies are for, who they serve, and what kinds of activity they reward. The shift from an industrial economy to a financial one has changed the distribution of power within the economy in ways that are visible in the wealth and income data of the last forty years.",
             "links": [
               {
                 "label": "Federal Reserve",
@@ -42763,7 +42763,7 @@ const LAYERS = [
                 "id": "p2_c_cap",
                 "label": "Capital",
                 "color": "#683018",
-                "desc": "The wealth used to buy more wealth. Capital compounds. Wages don't. The widening gap between the two is the engine of modern American inequality.",
+                "desc": "The wealth that is used to acquire more wealth rather than to purchase consumption. Capital compounds: the asset that generates a return, reinvested, generates a larger return. Wages do not compound in the same way — a wage earner must work each period to earn each period's income. The mathematical difference between compounding returns on capital and linear returns on labor produces, over decades, the concentration visible in wealth data. This is not a moral argument — it is a description of the mechanics. What to do about it is a political question. The mechanics are not.",
                 "links": [
                   {
                     "label": "Federal Reserve",
@@ -42814,7 +42814,7 @@ const LAYERS = [
                 "id": "p2_c_fin",
                 "label": "Finance",
                 "color": "#783820",
-                "desc": "The industry that moves money. Finance has grown from roughly 4% of GDP after the war to roughly 8% now while doing essentially the same job. The extra cost is rent.",
+                "desc": "The industry that exists to move capital — banks, investment firms, private equity, hedge funds, insurance companies. Finance's share of GDP roughly doubled between the end of World War II and 2007. The financial sector did not become twice as large because it was doing twice as much useful work — it became larger because financial innovation allowed it to capture a larger share of economic activity as rents. The financial crisis of 2008 was the most direct demonstration of what happens when financial complexity outpaces the risk management and oversight of the system. The share of the economy captured by finance has not returned to pre-crisis levels.",
                 "links": [
                   {
                     "label": "Federal Reserve",
@@ -42865,7 +42865,7 @@ const LAYERS = [
                 "id": "p2_c_str",
                 "label": "Stock Market",
                 "color": "#883828",
-                "desc": "The visible casino. The market does not measure the economy — it measures expected returns to shareholders. The two have decoupled for long stretches without anyone seeming to notice.",
+                "desc": "The market where shares of public companies are bought and sold. The stock market is frequently invoked as a measure of economic health. It is not a reliable measure of how most people are doing economically — it primarily measures expected returns to shareholders. The two have decoupled for extended periods: the market rose sharply while unemployment was high after the 2008 crisis; it rose during the 2020 pandemic while tens of millions lost jobs and income. The disconnect makes sense once the distinction between shareholder returns and economic welfare is clear. Most political commentary maintains the conflation.",
                 "links": [
                   {
                     "label": "FRED Economic Data",
@@ -42916,7 +42916,7 @@ const LAYERS = [
                 "id": "p2_c_pe",
                 "label": "Private Equity",
                 "color": "#582818",
-                "desc": "The buyout industry. Private equity now owns large pieces of healthcare, housing, retail, and journalism. The model is to extract value and exit. The communities that depended on the companies acquired do not always survive.",
+                "desc": "The buyout industry — firms that acquire companies, typically using debt, restructure them to extract value, and resell them. Private equity now owns large and growing pieces of American healthcare, senior housing, news media, veterinary services, and retail. The standard private equity model loads acquired companies with debt, cuts costs aggressively, and exits within five to seven years. The financial returns to the PE firm are often high. The effects on the companies acquired — workforce reductions, quality deterioration, long-term investment foregone — are documented across sectors. Nursing home quality under PE ownership has been specifically studied and found to decline.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -42994,7 +42994,7 @@ const LAYERS = [
                 "id": "p2_c_share",
                 "label": "Shareholder Primacy",
                 "color": "#683020",
-                "desc": "The theory that companies exist to maximize returns to shareholders. Came from a 1970 essay. Got encoded into corporate law and business school curricula. The country before this theory looked meaningfully different.",
+                "desc": "The theory that corporations exist primarily and perhaps solely to maximize returns to shareholders — articulated most influentially by Milton Friedman in a 1970 New York Times essay. Before this theory took hold, corporations were understood to have obligations to multiple stakeholders — workers, communities, customers, and the broader society — not only shareholders. The shareholder primacy theory was encoded into corporate law, business school curricula, and executive compensation structures across the 1970s, 1980s, and 1990s. The economy before and after that encoding looks different. The difference is visible in the data on wages, corporate investment, and inequality.",
                 "links": [
                   {
                     "label": "Follow The Money",
@@ -43063,7 +43063,7 @@ const LAYERS = [
                 "id": "p2_c_cron",
                 "label": "Crony Capitalism",
                 "color": "#583018",
-                "desc": "When the rules get written by the people they regulate. American financial regulation, agricultural subsidies, defense procurement, and tax policy all show heavy fingerprints of the industries they govern.",
+                "desc": "The system in which political connections, rather than competitive merit, are the primary driver of economic outcomes — where contracts go to the politically connected, regulations favor established players, and the state directs resources toward private interests. American political economy shows elements of crony capitalism across sectors: defense procurement, agricultural subsidies, the tax treatment of specific industries, financial regulation shaped by the firms it regulates. Whether this constitutes crony capitalism as a system or is better described as normal democratic interest group politics is a matter of definition. The outcomes are similar.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -43146,7 +43146,7 @@ const LAYERS = [
             "id": "p2_inq",
             "label": "Inequality & Extraction",
             "color": "#582010",
-            "desc": "Where the money went. The gains of forty years of economic growth went disproportionately to the people who already had the most. This was not gravity. This was a series of choices about taxes, labor, finance, and ownership.",
+            "desc": "Where the money went. The gains of four decades of American economic growth were concentrated heavily at the top of the distribution. This was not gravity. It was the predictable result of choices about taxes, labor law, trade policy, financial regulation, and the treatment of corporate ownership. Each choice was debated and made by people with interests in the outcome. The aggregate of those choices produced the distribution that current data describes. Reversing the distribution requires reversing the choices — or making different ones. Neither has happened at the scale required.",
             "links": [
               {
                 "label": "Inequality.org",
@@ -43172,7 +43172,7 @@ const LAYERS = [
                 "id": "p2_i_gini",
                 "label": "Gini Coefficient",
                 "color": "#481808",
-                "desc": "The standard measure of inequality. The American Gini coefficient is the highest of any major developed economy. It rose every decade since 1980.",
+                "desc": "The standard summary measure of income distribution within a country. A Gini coefficient of zero would represent perfect equality — everyone has the same income. A coefficient of one would represent maximal inequality — one person has everything. The United States' Gini coefficient is the highest of any large developed economy and has risen every decade since 1980. Most of the peer countries with lower inequality did not have different underlying economies — they had different policy choices about labor law, taxation, and social provision. The Gini measures the outcome. The policy choices explain it.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -43223,7 +43223,7 @@ const LAYERS = [
                 "id": "p2_i_top",
                 "label": "Top 1% & 0.1%",
                 "color": "#382008",
-                "desc": "Where the gains went. The top 1% now captures roughly 20% of national income, up from about 10% in 1980. The top 0.1% has done even better.",
+                "desc": "Where the gains went in specific. The top 1% of American earners now captures roughly 20% of national income, up from about 10% in 1980. The top 0.1% has captured a disproportionate share of even that gain. The gains are concentrated not just at the top but within the top — the distance between the 99th and 99.9th percentile has grown faster than the distance between the median and the 99th percentile. This is consistent with the returns to financial capital outpacing the returns to high professional earnings. The professional class has done well. The ownership class has done much better.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -43274,7 +43274,7 @@ const LAYERS = [
                 "id": "p2_i_dec",
                 "label": "Decoupling",
                 "color": "#582010",
-                "desc": "The break. From 1948 to 1979, productivity and median pay rose roughly together. After 1979, they came apart. Most of the gains since have gone to capital, not labor.",
+                "desc": "The documented divergence between productivity — how much is produced per hour of work — and median compensation — what that hour of work is paid. The two tracked closely from 1948 to roughly 1979. After 1979 they came apart. Productivity continued rising. Median compensation largely did not, after accounting for inflation. The gap represents, cumulatively, trillions of dollars that previous generations of workers would have received as wages under the earlier relationship. Where the gap went is visible in the capital income data: profits, dividends, capital gains, and executive compensation rose as the labor share of income fell.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -43325,7 +43325,7 @@ const LAYERS = [
                 "id": "p2_i_extr",
                 "label": "Extraction Economies",
                 "color": "#483018",
-                "desc": "Towns, regions, and entire industries organized around taking value out and not putting much back. Healthcare consolidations. Resource economies. Retail rollups. The pattern is recognizable across sectors.",
+                "desc": "Economies organized around taking value out of a place, a company, or a people rather than investing in long-term production. Resource extraction towns built around a mine or a timber operation that will eventually be exhausted. Private equity acquisition of companies structured to maximize short-term cash extraction. Pharmaceutical pricing that extracts value from patients with no alternatives. Healthcare consolidation that extracts monopoly rents from captive local markets. The extraction economy is not confined to the Global South. It is a domestic phenomenon, visible in specific industries and regions across the United States.",
                 "links": [
                   {
                     "label": "ProPublica",
@@ -43376,7 +43376,7 @@ const LAYERS = [
                 "id": "p2_i_low",
                 "label": "The Working Poor",
                 "color": "#683028",
-                "desc": "People who work full-time and remain in poverty. About 7 million Americans by official measure, more by realistic ones. Their existence in a wealthy country is a policy choice.",
+                "desc": "People who work — full-time, year-round — and remain in poverty or near it. By official measures, about 7 million Americans. By more realistic measures that account for the gap between the official poverty line and actual subsistence costs in most cities, the number is several times higher. The working poor exist in a wealthy country with a tight labor market because the minimum wage has not kept pace with costs, benefit structures create poverty traps, housing costs consume disproportionate income, and the jobs available to people without credentials have been systematically devalued. Their existence is a policy choice, sustained by policy inaction.",
                 "links": [
                   {
                     "label": "Economic Policy Institute",
@@ -43427,7 +43427,7 @@ const LAYERS = [
                 "id": "p2_i_pol",
                 "label": "Policy Choices",
                 "color": "#583018",
-                "desc": "The choices that produced this. Tax cuts for capital. Anti-union law and weak enforcement. Trade deals without worker protection. Financial deregulation. None of it was inevitable.",
+                "desc": "The choices that produced the current distribution. Tax cuts that disproportionately benefited high earners and capital income. Trade agreements that did not include labor protections. The weakening of union certification and collective bargaining rights. Financial deregulation that allowed concentration and risk-taking that would previously have been constrained. The defunding of the agencies that enforced labor standards. Each choice was made at a specific moment, by specific actors, for specific reasons. None of it was inevitable. Understanding that is the prerequisite to imagining anything different.",
                 "links": [
                   {
                     "label": "OpenSecrets",
@@ -43598,7 +43598,7 @@ const LAYERS = [
         "x": 8,
         "y": 50,
         "color": "#9868c8",
-        "desc": "Mountains, rivers, coastlines, and deserts have shaped every civilization more than any ideology. Geopolitics is mostly geography in a suit.",
+        "desc": "Mountains, rivers, coastlines, and deserts have shaped every civilization that has ever existed more than any ideology, religion, or great person ever did. Geopolitics is mostly geography in a suit. Where people can live, what they can grow, which routes connect them to trade, what they must defend — these are answers the land gives before the politics starts. Every empire in history was built along a navigable waterway or across a defensible plain. The civilizations that lasted longest understood what the ones that collapsed had not yet learned: that the land sets the terms.",
         "links": [
           {
             "label": "Pew Research",
@@ -43618,7 +43618,7 @@ const LAYERS = [
             "id": "h5_land",
             "label": "Landforms",
             "color": "#587038",
-            "desc": "The shape of the earth. Mountains, valleys, plains, plateaus, deserts, coastlines. The shape of the land has decided where humans settled, what they could grow, and which civilizations rose. Geography is destiny in some old senses and not in others.",
+            "desc": "The shape of the earth — mountains, valleys, plains, plateaus, deserts, coastlines, river systems. The shape of the land has decided where humans settled, what they could grow, which routes connected them to trade, and which civilizations rose and fell. Geography is destiny in the old sense that a mountain range is a natural border and a river delta is a natural granary. It is not destiny in the newer sense that every geographic constraint has eventually been overcome by technology, trade, or force. The mountains did not stop the railroads. They shaped where the railroads went.",
             "links": [
               {
                 "label": "USGS",
@@ -43638,7 +43638,7 @@ const LAYERS = [
                 "id": "h5_l_mnt",
                 "label": "Mountains",
                 "color": "#487028",
-                "desc": "Where settlement is hard and culture often preserves longest. Mountain peoples across the world tend to share certain patterns — independence, self-reliance, slower contact with empires.",
+                "desc": "Where settlement is hard, defense is easy, and culture often preserves longest. Mountain peoples across the world tend toward independence — the Scots, the Afghans, the Basques, the peoples of the Hindu Kush and the Caucasus — not because of some mountain character but because empires have a harder time projecting force through altitude and terrain. The same geography that made conquest expensive made culture durable. Languages and customs that disappeared in the plains survived in the highlands for centuries after the political boundaries changed around them.",
                 "links": [
                   {
                     "label": "USGS",
@@ -43689,7 +43689,7 @@ const LAYERS = [
                 "id": "h5_l_riv",
                 "label": "Rivers",
                 "color": "#5a8068",
-                "desc": "The arteries. Most major civilizations grew along rivers — Nile, Tigris-Euphrates, Indus, Yangtze, Mississippi. Rivers move water, soil, goods, and ideas.",
+                "desc": "The arteries of civilization. Most major civilizations of the ancient and classical world developed along rivers — the Nile, the Tigris and Euphrates, the Indus, the Yangtze and Yellow, the Ganges, the Mississippi. Rivers deliver water, deposit fertile silt, provide transportation routes, and concentrate populations into the densities that produce cities, states, and eventually empires. They also flood, shift course, and dry up, taking the civilizations built around them when they do. The history of hydraulic civilization is also the history of what happens when the water stops.",
                 "links": [
                   {
                     "label": "National Geographic",
@@ -43740,7 +43740,7 @@ const LAYERS = [
                 "id": "h5_l_coast",
                 "label": "Coastlines",
                 "color": "#6a9888",
-                "desc": "Where land meets water. Coastal areas concentrate population, trade, and increasingly climate risk.",
+                "desc": "Where land meets water. Coastal areas have always concentrated population, trade, and cultural exchange — because the coast is the interface between the land-based resources behind it and the maritime routes in front of it. The great trading civilizations — Phoenician, Greek, Arab, later Portuguese, Dutch, and British — were coastal civilizations. The coast also concentrates climate risk: sea level rise, storm surge, and saltwater intrusion are already affecting the most densely populated areas on the planet. The same geography that made coastal areas desirable is what makes them vulnerable.",
                 "links": [
                   {
                     "label": "NOAA",
@@ -43791,7 +43791,7 @@ const LAYERS = [
                 "id": "h5_l_des",
                 "label": "Deserts",
                 "color": "#a08838",
-                "desc": "Land short on water. Deserts have shaped every civilization adjacent to them. Their borders shift as the climate shifts.",
+                "desc": "Land short on water, which means short on agriculture, dense population, and easy conquest. Deserts have shaped every civilization adjacent to them — as barriers, as trade routes, as the environments that forged the pastoral and nomadic peoples who periodically swept through the settled civilizations on their edges. The Sahara, the Arabian, the Gobi, the American Southwest — each produced distinctive cultures and distinctive pressures on neighbors. Their borders shift as the climate shifts. The Sahel is expanding. Parts of the American Southwest are approaching permanent arid conditions. The deserts are moving.",
                 "links": [
                   {
                     "label": "USGS",
@@ -43842,7 +43842,7 @@ const LAYERS = [
                 "id": "h5_l_plain",
                 "label": "Plains",
                 "color": "#7a8848",
-                "desc": "Flat, generally fertile, the breadbaskets. Most large agricultural societies sit on plains. The American Midwest is one of the most productive on earth.",
+                "desc": "Flat, generally fertile, the breadbaskets of human history. Plains allow large-scale agriculture, easy movement, and the large armies that control them. Most large agricultural societies sit on plains — the North China Plain, the Ganges Plain, the Great Plains of North America, the Eurasian steppe, the Pampas of South America. The American Midwest is among the most agriculturally productive regions on earth, producing a disproportionate share of the world's grain, soybeans, and corn. Plains are also hard to defend — natural borders are few and armies move easily across them.",
                 "links": [
                   {
                     "label": "USGS",
@@ -43887,7 +43887,7 @@ const LAYERS = [
                 "id": "h5_l_pl",
                 "label": "Plate Tectonics",
                 "color": "#383028",
-                "desc": "Why the landforms exist. The continents drift. Mountains rise where plates collide. Earthquakes and volcanoes mark the seams.",
+                "desc": "The force that built the planet's surface. The outer shell of the earth is broken into tectonic plates that move on the hotter material below — centimeters per year, over millions of years. Where plates collide, mountains rise. Where they pull apart, rift valleys and ocean basins form. Where one slides under another, volcanoes form and earthquakes strike. The Himalayas formed when India collided with Asia. The Atlantic is still widening. The Ring of Fire marks where Pacific plates subduct under adjacent ones. The landforms humans think of as permanent are the current frame of an ongoing process.",
                 "links": [
                   {
                     "label": "USGS",
@@ -43970,7 +43970,7 @@ const LAYERS = [
             "id": "h5_clim",
             "label": "Climate & Biomes",
             "color": "#487048",
-            "desc": "The patterns of weather over time, and the living systems they support. Climate is not weather. Climate is the long-term distribution. The current global system is moving outside the range humans built civilizations inside.",
+            "desc": "The long-term patterns of temperature, precipitation, wind, and the living systems they support. Climate is not weather — it is the statistical description of weather over decades. The current global climate system is moving outside the range within which humans built agriculture, cities, and civilization over the last ten thousand years. The Holocene — the stable interglacial period that enabled everything — is ending under human influence. The consequences are being distributed unevenly, falling hardest on the people and places least responsible for the emissions driving the change.",
             "links": [
               {
                 "label": "NOAA",
@@ -43996,7 +43996,7 @@ const LAYERS = [
                 "id": "h5_c_zones",
                 "label": "Climate Zones",
                 "color": "#386038",
-                "desc": "Tropical, arid, temperate, continental, polar. The major bands organized by latitude and ocean. The bands are shifting as warming progresses.",
+                "desc": "The major climate bands organized by latitude, ocean currents, and topography. Tropical zones near the equator are hot and wet. Arid zones at mid-latitudes are dry. Temperate zones at higher latitudes have four seasons. Polar zones are cold. The bands are not absolute — the climate of any specific place is shaped by proximity to oceans, altitude, and prevailing winds. The bands are also shifting northward in the Northern Hemisphere as average temperatures rise. Species, agriculture, and human settlement patterns are following — at different speeds, with different consequences.",
                 "links": [
                   {
                     "label": "NOAA",
@@ -44041,7 +44041,7 @@ const LAYERS = [
                 "id": "h5_c_for",
                 "label": "Forests",
                 "color": "#385828",
-                "desc": "The lungs and archives of the planet. Old-growth forest holds carbon, water, biodiversity, and history. The U.S. has lost most of its old growth. The Amazon is losing its now.",
+                "desc": "The lungs of the terrestrial biosphere. Forests regulate water cycles, store carbon, hold biodiversity, and moderate local climates. Old-growth forests hold carbon accumulated over centuries in their soils and biomass — carbon that is released when they are cleared. The United States has lost most of its original old-growth forest to logging over two centuries. The Amazon — the largest tropical forest on earth and one of the most biodiverse places on the planet — is being cleared at rates that are pushing it toward a tipping point beyond which the forest cannot sustain its own rainfall and will transition to savanna.",
                 "links": [
                   {
                     "label": "National Geographic",
@@ -44102,7 +44102,7 @@ const LAYERS = [
                 "id": "h5_c_pol",
                 "label": "Polar Regions",
                 "color": "#a8b8c8",
-                "desc": "Cold, fragile, warming faster than anywhere else. Arctic ice is at record lows. Antarctica is losing mass. The consequences for sea levels and weather patterns are global.",
+                "desc": "Cold, fragile, and warming faster than anywhere else on earth. Arctic average temperatures are rising roughly four times faster than the global average. Sea ice extent is at record lows. Permafrost — frozen ground that holds vast quantities of carbon accumulated over millennia — is thawing and releasing methane. Antarctica is losing ice mass from its ice sheets at an accelerating rate. The consequences feed back into global systems: rising sea levels, disrupted ocean circulation, changes in Northern Hemisphere weather patterns. What happens at the poles does not stay at the poles.",
                 "links": [
                   {
                     "label": "NOAA",
@@ -44157,7 +44157,7 @@ const LAYERS = [
                 "id": "h5_c_dis",
                 "label": "Natural Disasters",
                 "color": "#582818",
-                "desc": "Hurricanes, wildfires, floods, droughts, earthquakes. Climate change is making most of them more frequent or more severe. The cost in lives and dollars keeps climbing.",
+                "desc": "Events produced by extreme natural forces — hurricanes, typhoons, wildfires, floods, droughts, earthquakes, volcanic eruptions. Climate change is increasing the frequency, intensity, and cost of most categories of climate-related disasters. Wildfires are burning more area in the American West. Atlantic hurricane seasons are becoming more active. Extreme rainfall events are intensifying. The economic and human cost of disasters is rising. The cost is not evenly distributed — poorer communities, lower-lying coastal areas, and regions with less adaptive capacity absorb disproportionate damage and recover more slowly.",
                 "links": [
                   {
                     "label": "NOAA",
@@ -44266,7 +44266,7 @@ const LAYERS = [
                 "id": "h5_m_proj",
                 "label": "Projections",
                 "color": "#4a5838",
-                "desc": "How a sphere gets onto a flat page. Mercator made Europe look bigger than Africa for centuries. Every projection lies in some specific direction. Choosing the lie is choosing the politics.",
+                "desc": "How a three-dimensional sphere gets represented on a flat page, and what gets lost or distorted in the translation. Every map projection preserves some properties and distorts others — area, shape, distance, or direction. The Mercator projection, designed for navigation, distorts area: Greenland looks the same size as Africa, but Africa is roughly fourteen times larger. Peters projection corrects area but distorts shape. Each projection embeds assumptions about what matters. The default choice of projection in textbooks and atlases shapes how people understand the relative size and importance of places. The choice of map is a political act.",
                 "links": [
                   {
                     "label": "USGS",
@@ -44311,7 +44311,7 @@ const LAYERS = [
                 "id": "h5_m_bor",
                 "label": "Borders",
                 "color": "#6a7848",
-                "desc": "Lines drawn between political units. Most modern borders are colonial. Many are arbitrary. They get enforced anyway.",
+                "desc": "Lines drawn between political units. Most modern borders are the product of colonial treaties, post-war settlements, and diplomatic negotiations conducted by people who had never been to the places they were dividing. The borders of most African countries were drawn at the Berlin Conference of 1884-85 without reference to the ethnic, linguistic, or cultural communities that lived there. The borders of the modern Middle East were drawn by Britain and France after World War I. The borders are enforced today by states, armies, and immigration systems. The arbitrariness of the original line does not make the enforcement less real.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -44356,7 +44356,7 @@ const LAYERS = [
                 "id": "h5_m_sov",
                 "label": "Sovereignty",
                 "color": "#5a6848",
-                "desc": "What a country claims authority over. Sovereignty is a 17th-century European invention that became the global default. Indigenous nations and oppressed peoples have always had complicated relationships with it.",
+                "desc": "The principle that within a defined territory, a government has supreme authority and other governments may not interfere. Sovereignty is a seventeenth-century European legal concept codified in the Peace of Westphalia in 1648 that became the organizing principle of the global state system. It was extended to cover the colonies when they became independent — usually the postcolonial state inherited the colonial borders and sovereignty simultaneously, regardless of whether the people within those borders constituted a coherent political community. Sovereignty is also invoked to shield authoritarian governments from international accountability.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -44401,7 +44401,7 @@ const LAYERS = [
                 "id": "h5_m_dis",
                 "label": "Disputed Territory",
                 "color": "#683828",
-                "desc": "Where the maps disagree. Kashmir. Western Sahara. Taiwan. The maps differ by which side's textbooks you read. Real lives are decided by which version gets enforced.",
+                "desc": "Where the maps disagree and real lives are decided by which version gets enforced. Kashmir is claimed by India, Pakistan, and partly by China. Taiwan is recognized as a province of China by most governments and functions as an independent state. Western Sahara is claimed by Morocco and by the Sahrawi people. The South China Sea is claimed by China, the Philippines, Vietnam, Malaysia, Brunei, and Taiwan in overlapping configurations. Disputed territory is not an anomaly in the international system. It is one of the more reliable generators of ongoing conflict. Which map wins is never a purely legal question.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -44452,7 +44452,7 @@ const LAYERS = [
                 "id": "h5_m_col",
                 "label": "Colonial Cartography",
                 "color": "#583018",
-                "desc": "How European powers drew the maps of Africa, Asia, the Americas. Mostly without consulting the people who lived there. The lines are still there. The consequences are still being lived.",
+                "desc": "How European powers mapped the territories they claimed, often for the first time in the sense of producing documents that other European powers would recognize. Colonial cartography served conquest — it documented what had been taken and provided the legal basis for what would be taken next. Indigenous peoples were often not consulted and sometimes not depicted at all. The maps were drawn in European capitals by people who had never visited the places they described. The borders created on those maps persisted through independence and now frame the politics of dozens of countries whose populations had no say in their design.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -44503,7 +44503,7 @@ const LAYERS = [
                 "id": "h5_m_pl",
                 "label": "Place Names",
                 "color": "#6a7068",
-                "desc": "What the rivers, mountains, and cities are called. Names get changed when conquerors arrive and again when independence comes. Each name carries an argument about whose place it is.",
+                "desc": "What the rivers, mountains, cities, and countries are called — and by whom. Place names are political. The renaming of cities, countries, streets, and geographic features is a constant feature of colonization, decolonization, and political change. Bombay became Mumbai. Saigon became Ho Chi Minh City. The colonizers renamed what they found; the postcolonial nations renamed it back. In the United States, most place names for natural features are indigenous, often surviving even when the people who gave the names were dispossessed. The name is a compressed argument about whose place it is.",
                 "links": [
                   {
                     "label": "Endangered Languages Project",
@@ -44586,7 +44586,7 @@ const LAYERS = [
             "id": "h5_pl",
             "label": "Place & Region",
             "color": "#788858",
-            "desc": "How specific places get their character. Region is geography plus history plus economy plus culture plus the slow accumulation of who has lived there.",
+            "desc": "How specific places get their character — through the accumulation of geography, history, economy, and the specific people who have lived there and left their marks. Region is not just a geographic category. It is the condensed experience of a place over time: the industries that rose and fell, the migrations that shaped the population, the political arrangements that organized life, the conflicts that left their traces. American regional identities are real and persistent — the South is not the Midwest is not the West Coast — and they are changing faster than the labels suggest.",
             "links": [
               {
                 "label": "U.S. Census",
@@ -44606,7 +44606,7 @@ const LAYERS = [
                 "id": "h5_p_urb",
                 "label": "Urban",
                 "color": "#588048",
-                "desc": "Where most Americans live now. Cities concentrate jobs, education, art, disease, money, and noise. They have always been engines and discontents at once.",
+                "desc": "Where most Americans now live and where most of global population growth is occurring. Cities concentrate economic opportunity, cultural production, educational institutions, and political power. They also concentrate poverty, inequality, housing costs, and the stresses of dense living. American cities were built and shaped by forces that are now straining — the car-dependent design of the postwar era, the flight of industry, the legacy of racial segregation in housing and schools. The cities that are thriving tend to have done so by becoming platforms for the knowledge economy. The ones that are struggling are still managing the collapse of an industrial base that left.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -44651,7 +44651,7 @@ const LAYERS = [
                 "id": "h5_p_sub",
                 "label": "Suburban",
                 "color": "#788858",
-                "desc": "Where the postwar middle class went. Built on federal subsidy, racial exclusion, and cheap oil. The economic and cultural model is straining.",
+                "desc": "Where the American postwar middle class went, built on a specific convergence of federal subsidy, racial exclusion, and cheap fossil fuel. The GI Bill financed mortgages in new subdivisions. The interstate highway system made them commutable. Redlining kept Black families out of the neighborhoods where equity was building. The environmental and economic model of car-dependent suburban living — large houses, long commutes, separate everything — is straining under the weight of energy costs, infrastructure maintenance, aging demographics, and the preference of younger Americans for walkable density.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -44702,7 +44702,7 @@ const LAYERS = [
                 "id": "h5_p_rur",
                 "label": "Rural",
                 "color": "#888848",
-                "desc": "Where the country's myth of itself lives. Rural America is shrinking in population, aging fast, and politically overrepresented relative to its numbers. The grievance is real and the math is also real.",
+                "desc": "Where the country's mythology of itself lives — the yeoman farmer, the small town, the self-reliant community. Rural America is shrinking in population, aging faster than any other demographic category, and politically overrepresented in the Senate and Electoral College relative to its numbers. The economic base that sustained rural communities — manufacturing, coal, tobacco, commodity agriculture — has contracted or mechanized. The grievance is real: these communities have experienced genuine economic and cultural disruption. The political diagnosis of the cause — and who is responsible — is where the story gets complicated.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -44753,7 +44753,7 @@ const LAYERS = [
                 "id": "h5_p_reg",
                 "label": "Regions",
                 "color": "#687848",
-                "desc": "South, Northeast, Midwest, West. The regional differences in American culture are real and durable. Regional politics has gotten louder as national politics has gotten more divided.",
+                "desc": "The durable regional identities of American life. The South, with its history of slavery and its particular relationship to federal authority and racial politics. The Northeast, with its density, its institutions, and its colonial-era political culture. The Midwest, with its industrial-turned-post-industrial cities and its vast agricultural interior. The West, with its extractive industries, its public lands, and its newer immigrant populations. The divisions are not absolute — there are liberals in Alabama and conservatives in California — but the regional patterns are real, persistent, and currently amplified by political sorting.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -44798,7 +44798,7 @@ const LAYERS = [
                 "id": "h5_p_loc",
                 "label": "Local Identity",
                 "color": "#788838",
-                "desc": "The town. The neighborhood. The block. Local identity is shrinking as a force in American life and the loss is rarely named directly. People still feel it.",
+                "desc": "The town, the neighborhood, the block. Local identity — the sense of belonging to a specific place with specific people and specific history — has been thinning as a force in American life across the last generation. Chains replaced local businesses. Commutes lengthened. Social media replaced the local newspaper and the corner bar. The loss is rarely named directly. People feel it as a vague disorientation — the sense that where they live is a backdrop rather than a community. What replaces local identity, and whether anything does, is one of the more consequential open questions in American social life.",
                 "links": [
                   {
                     "label": "Our World in Data",
@@ -44849,7 +44849,7 @@ const LAYERS = [
                 "id": "h5_p_dia",
                 "label": "Place & Diaspora",
                 "color": "#7a8068",
-                "desc": "How communities carry the old place into the new one. Little Italy. Chinatown. The Cuban neighborhoods of Miami. Place gets reproduced in fragments.",
+                "desc": "How immigrant communities carry the old place into the new one — the neighborhoods, food, language, and social organizations that reproduce a version of home in a different country. Little Italy. Chinatown. Greektown. The Cuban neighborhoods of Miami. The Somali communities of Minneapolis. The old place gets carried incompletely — a fragment of the original, preserved in amber at roughly the moment of departure, changing more slowly than the place it came from. The diaspora's relationship to the homeland is always partly mythic. The mythology is real in its consequences.",
                 "links": [
                   {
                     "label": "Migration Data Portal",
@@ -44926,7 +44926,7 @@ const LAYERS = [
             "id": "h5_set",
             "label": "Resources & Settlement",
             "color": "#687840",
-            "desc": "Why people live where they live. Water. Soil. Fish. Coal. Oil. Settlement patterns track resources and trade routes. Resources also explain a lot of the world's wars.",
+            "desc": "Why people live where they live. Settlement tracks water, soil, fish, timber, coal, oil, and the trade routes that connect resource surpluses to resource deficits. Most of human history is the story of people moving toward resources and fighting over them when they got there. The geography of resources has also shaped the geography of conflict — most of the world's major wars can be traced to competition for specific resources or the trade routes that moved them. The transition away from fossil fuels is already beginning to rearrange the geography of energy and the geopolitics that goes with it.",
             "links": [
               {
                 "label": "USGS",
@@ -44962,7 +44962,7 @@ const LAYERS = [
                 "id": "h5_s_food",
                 "label": "Food Systems",
                 "color": "#788848",
-                "desc": "Where calories come from. American agriculture is concentrated, subsidized, and dominated by a small number of crops. The food on the average shelf reflects the policy more than the climate.",
+                "desc": "Where calories come from, at what environmental and economic cost, and who controls the system. American agriculture is extraordinarily productive, heavily subsidized, and dominated by a small number of commodity crops — corn, soybeans, wheat, cotton — grown on large, chemically intensive farms by a shrinking number of farmers. The food on the average American shelf reflects the subsidy structure as much as the climate or the soil. Corn syrup is cheap because corn is subsidized. Fresh vegetables are expensive because they receive fewer subsidies and are labor-intensive. The food system is a policy system.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -45013,7 +45013,7 @@ const LAYERS = [
                 "id": "h5_s_en",
                 "label": "Energy Geography",
                 "color": "#783028",
-                "desc": "Where oil, gas, coal, and increasingly solar and wind are found and where they are consumed. The geography of energy has shaped American foreign policy for a century.",
+                "desc": "Where oil, gas, coal, and increasingly solar and wind are found, extracted, and consumed — and the geopolitical relationships those flows create. The geography of fossil fuel energy shaped American foreign policy for a century: the strategic importance of the Persian Gulf, the relationship with Saudi Arabia, the wars in Iraq. The transition to renewable energy is beginning to reshape that geography — solar and wind resources are distributed differently than oil fields, and the countries that dominate the supply chains for solar panels, batteries, and electric vehicles are different from the countries that dominated the oil market.",
                 "links": [
                   {
                     "label": "USGS",
@@ -45058,7 +45058,7 @@ const LAYERS = [
                 "id": "h5_s_min",
                 "label": "Mining & Extraction",
                 "color": "#583020",
-                "desc": "What the country digs out. Copper, lithium, rare earths, coal. The mining communities of the U.S. have a long history of being used and discarded.",
+                "desc": "What gets dug out of the ground and the communities built around the digging. Coal in Appalachia and Wyoming. Copper in Arizona. Lithium in Nevada and the Mountain West. Rare earth elements in multiple states. Mining communities across American history have been built up when the resource was needed and abandoned when it was depleted or undercut by cheaper sources. The transition to clean energy is creating new demand for the minerals required for batteries and solar panels — lithium, cobalt, nickel, copper, rare earths — and new versions of the old extractive relationship.",
                 "links": [
                   {
                     "label": "USGS",
@@ -45109,7 +45109,7 @@ const LAYERS = [
                 "id": "h5_s_trade",
                 "label": "Trade Routes",
                 "color": "#688068",
-                "desc": "The roads, rails, ports, and pipelines. Where goods move. Trade routes shape which cities thrive and which decline.",
+                "desc": "The roads, rails, ports, canals, and pipelines that carry goods from where they are made to where they are consumed. Trade routes shape which cities thrive — the cities that sit at trade route intersections have always had advantages. The American rail network, built in the nineteenth century, determined which cities became industrial centers. The interstate highway system, built in the twentieth, determined which of those cities survived the shift to trucks. The ports — Los Angeles, Long Beach, New York, Houston — are the choke points of global supply chains that most Americans never see and rely on for almost everything they own.",
                 "links": [
                   {
                     "label": "Bureau of Economic Analysis",
@@ -45154,7 +45154,7 @@ const LAYERS = [
                 "id": "h5_s_pop",
                 "label": "Population Density",
                 "color": "#788838",
-                "desc": "How many people per square mile. American density is bimodal — very high in metro areas, very low across most of the interior. The political system gives the low-density parts disproportionate weight.",
+                "desc": "How many people per square mile, and what that density means politically. American population density is dramatically uneven — most of the country's land area is very sparsely populated, while a small fraction contains the overwhelming majority of the population. The U.S. Senate, which gives every state two senators regardless of population, gives voters in Wyoming roughly 70 times the Senate representation of voters in California. The Electoral College has a similar, though smaller, tilt. The political geography of American democracy consistently gives more power per person to the less densely populated parts of the country.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -45231,7 +45231,7 @@ const LAYERS = [
             "id": "h5_hum",
             "label": "Human Geography",
             "color": "#788868",
-            "desc": "How human activity has shaped the surface of the earth. Roads, fields, dams, cities, cleared forests. The visible world is mostly anthropogenic now. We are the geological force.",
+            "desc": "How human activity has reshaped the surface of the earth. Roads, farms, cities, dams, cleared forests, drained wetlands, dug mines, built coasts. Most of the terrestrial surface visible from space is now directly modified by human activity. The term Anthropocene — proposed as the name for the current geological epoch — reflects the fact that humans have become a geological force: we move more rock than all the world's rivers, we have altered the chemistry of the atmosphere and oceans, and we have caused the sixth mass extinction in the history of complex life. These are not metaphors. They are measurements.",
             "links": [
               {
                 "label": "National Geographic",
@@ -45251,7 +45251,7 @@ const LAYERS = [
                 "id": "h5_h_an",
                 "label": "The Anthropocene",
                 "color": "#582820",
-                "desc": "The proposed name for the current geological epoch — the one in which humans are the dominant force on the planet. The naming is contested. The reality is not.",
+                "desc": "The proposed name for the current geological epoch — the one in which human activity has become the dominant influence on the planet's climate, biodiversity, and physical surface. The naming is contested among geologists because defining the start date and the formal stratigraphic marker is technically complicated. The reality the name describes is not contested. The atmosphere's chemistry has changed. The global temperature is rising. Species are going extinct at a rate that is orders of magnitude above the background rate. The landforms are being reshaped. The oceans are warming and acidifying. The Anthropocene is less a debate about geology than a confrontation with consequence.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -45302,7 +45302,7 @@ const LAYERS = [
                 "id": "h5_h_urb",
                 "label": "Urbanization",
                 "color": "#588048",
-                "desc": "More than half of humanity lives in cities now. Most of the still-coming population growth will be urban. The infrastructure to support it is not yet built.",
+                "desc": "The shift of human population from rural to urban that has been the dominant demographic trend since the industrial revolution and is still ongoing. More than half of humanity now lives in cities — the first time in human history this has been true. Urban populations are growing fastest in Africa and South Asia. The cities growing fastest lack the infrastructure to support their current populations, let alone the ones still coming. The infrastructure gap — water, sanitation, housing, transport, power — is one of the most consequential challenges of the twenty-first century and receives far less attention than the technology questions that occupy the same conversations.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -45363,7 +45363,7 @@ const LAYERS = [
                 "id": "h5_h_inf",
                 "label": "Built Infrastructure",
                 "color": "#586878",
-                "desc": "The networks humans have built across the surface. Roads, rails, pipelines, transmission lines, ports. The infrastructure of the rich world is older than most of its builders. Maintenance has lagged construction for decades.",
+                "desc": "The networks humans have built across the surface of the planet — roads, rails, pipelines, electrical transmission lines, water systems, ports, bridges, and the digital fiber underneath it all. The infrastructure of the wealthy world is older than most of its builders realize: American interstate highways date to the 1950s, water systems to the early twentieth century, rail networks to the nineteenth. Maintenance has lagged construction for decades because maintenance is invisible and political credit flows to ribbon-cutting, not to replacing the pipe that didn't burst. The deferred costs are now arriving.",
                 "links": [
                   {
                     "label": "USGS",
@@ -45408,7 +45408,7 @@ const LAYERS = [
                 "id": "h5_h_lan",
                 "label": "Landscape Change",
                 "color": "#688868",
-                "desc": "What humans have done to the visible surface. Most of the Lower 48 is no longer wild in any meaningful sense. The landscape is what humans made of it.",
+                "desc": "What human activity has done to the visible surface of the earth over millennia — and especially over the last two centuries. The Lower 48 states of the United States have no remaining wilderness in the ecological sense: every square mile has been affected by agriculture, grazing, logging, fire suppression, pollution, or introduction of invasive species. Most of the world's large river systems have been dammed. Most of the world's original forests have been cleared. The landscape people call natural is mostly a human artifact, maintained or allowed to exist by specific choices about land use that are continuously made and can be continuously remade.",
                 "links": [
                   {
                     "label": "National Geographic",
@@ -45453,7 +45453,7 @@ const LAYERS = [
                 "id": "h5_h_clim",
                 "label": "Climate Migration",
                 "color": "#583028",
-                "desc": "The movement of people away from places becoming uninhabitable. The displacements have started. They will be among the largest migrations in human history.",
+                "desc": "The movement of people away from places that are becoming too hot, too dry, too flood-prone, or too exposed to extreme weather. Climate migration has already begun — in South Asia, the Sahel, Central America, and Pacific island nations. The scale projected under high-emissions scenarios is among the largest movements of people in human history. Conservative estimates suggest hundreds of millions of people will need to move within their own countries or across borders by 2050. The political and humanitarian infrastructure for managing this does not exist. The immigration debates of today are a preview of what climate migration will produce.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -48205,7 +48205,7 @@ const LAYERS = [
                 "id": "h6_r_civ",
                 "label": "Civil Rights",
                 "color": "#286088",
-                "desc": "What you are entitled to as a person under the law. Vote. Speak. Assemble. Be free of discrimination. American civil rights have expanded across two centuries through court rulings, legislation, and movements that did not take no for an answer.",
+                "desc": "What you are entitled to as a person under the law of the country you live in. Vote. Speak. Assemble. Petition. Be free from arbitrary arrest and unreasonable search. Be treated equally regardless of race, sex, or religion. American civil rights were not granted — they were won through sustained political action, legal argument, civil disobedience, and the willingness of people to endure violence in the process of demanding what was owed. They have expanded across two centuries and contracted periodically when political conditions allowed it. Rights undefended tend to erode. The erosion is usually gradual and usually described as something else.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -48262,7 +48262,7 @@ const LAYERS = [
                 "id": "h6_r_hum",
                 "label": "Human Rights",
                 "color": "#387098",
-                "desc": "The rights people are owed because they are people, not because of citizenship. The Universal Declaration in 1948 set the framework. The U.S. has had a complicated relationship with the framework ever since.",
+                "desc": "The rights people are owed not because of their citizenship but because of their humanity — the universal standards articulated in the Universal Declaration of Human Rights, adopted by the United Nations in 1948, three years after the Holocaust demonstrated what happened in the absence of such standards. The U.S. was a primary architect of the declaration and has had a complicated relationship with it ever since — invoking it against adversaries, resisting its application to American practices, and failing to ratify core human rights treaties that most peer countries have signed. The gap between the U.S. human rights posture abroad and at home has been noted by every serious human rights organization.",
                 "links": [
                   {
                     "label": "UN Human Rights",
@@ -48319,7 +48319,7 @@ const LAYERS = [
                 "id": "h6_r_du",
                 "label": "Civic Duties",
                 "color": "#3878a8",
-                "desc": "The other side. Vote. Pay taxes. Serve on juries. Show up. American civic culture has gotten thinner on the duties side in living memory.",
+                "desc": "The other side of the civic relationship. Rights without responsibilities are wishes; responsibilities without rights are servitude. American civic culture has emphasized rights heavily and civic duties more lightly in recent decades. Voter participation rates in the U.S. are among the lowest in developed democracies. Jury service is widely evaded. Tax compliance depends more on audit risk than civic obligation. The thinning of civic responsibility is not a moral judgment — it reflects real failures of the institutions that civic participation is supposed to sustain. People who do not see government as serving them have less reason to serve it.",
                 "links": [
                   {
                     "label": "USA.gov",
@@ -48443,7 +48443,7 @@ const LAYERS = [
                 "id": "h6_r_due",
                 "label": "Due Process",
                 "color": "#4878a0",
-                "desc": "The promise that the government cannot take your life, liberty, or property without proper procedure. American due process is real and uneven — better in some courtrooms than others, weaker for the poor and people of color across the system.",
+                "desc": "The promise, embedded in the Fifth and Fourteenth Amendments, that the government cannot deprive you of life, liberty, or property without proper legal process. American due process is real — the rights to counsel, to a hearing, to notice, to appeal. It is also uneven. Due process looks different in a public defender's office than in a private law firm. It works better in federal court than in many state criminal courts. Immigration proceedings have been specifically stripped of many due process protections. The principle is genuine. The gap between the principle and the practice is where most of the actual constitutional law lives.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -48564,7 +48564,7 @@ const LAYERS = [
                 "id": "h6_co_sct",
                 "label": "Supreme Court",
                 "color": "#487098",
-                "desc": "Nine justices. Lifetime appointments. The most consequential court in the country. The composition shifts political weight for decades at a time and the current composition is meaningfully different from any in living memory.",
+                "desc": "Nine justices. Lifetime appointments. No electoral accountability. The most consequential court in the country, deciding what the Constitution means and invalidating legislation when it disagrees. The Court's composition shifts with each appointment and holds for decades — a single vacancy filled by a president who loses the next election can shape constitutional law for a generation. The current Court's composition, with six justices appointed by Republican presidents, represents a shift in constitutional interpretation that is among the most significant in living memory. Major decisions on abortion, voting rights, administrative law, and presidential immunity have followed.",
                 "links": [
                   {
                     "label": "Oyez",
@@ -48621,7 +48621,7 @@ const LAYERS = [
                 "id": "h6_co_app",
                 "label": "Appellate Courts",
                 "color": "#5878a8",
-                "desc": "The federal courts of appeal. Most cases that matter get decided here, not at the Supreme Court. The geographical circuits have developed distinct legal cultures.",
+                "desc": "The twelve regional circuits plus the Federal Circuit that hear appeals from federal district courts. Most cases that matter get decided here — the Supreme Court accepts fewer than 100 cases per year and the appellate courts issue tens of thousands of opinions. The geographic circuits have developed distinct legal cultures and are often divided on significant questions, creating circuit splits that the Supreme Court must eventually resolve. Appellate court appointments have become politically contested for the same reason Supreme Court appointments have: these are the judges who actually decide most federal cases.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -48672,7 +48672,7 @@ const LAYERS = [
                 "id": "h6_co_dis",
                 "label": "District Courts",
                 "color": "#6888b8",
-                "desc": "The federal trial courts. Where the evidence gets heard, the witnesses testify, the verdict comes in. Most federal cases never go higher than this.",
+                "desc": "The federal trial courts where cases begin — where evidence is heard, witnesses testify, facts are found, and verdicts are returned. There are 94 federal district courts. They handle federal criminal cases, civil rights suits against federal officials, and the vast majority of federal litigation. Most of what happens in district courts never goes higher — it ends with a settlement, a plea, or a verdict that is not appealed. The district court judge who keeps a case or dismisses it, who sentences or acquits, is the judge whose decision most defendants and plaintiffs actually live with.",
                 "links": [
                   {
                     "label": "U.S. Courts",
@@ -48723,7 +48723,7 @@ const LAYERS = [
                 "id": "h6_co_st",
                 "label": "State Courts",
                 "color": "#7898c8",
-                "desc": "Where most American litigation actually happens. State courts handle the overwhelming majority of criminal cases, family law, contracts, and small claims.",
+                "desc": "Where most American litigation actually happens. State courts handle the overwhelming majority of criminal cases — all the murders, assaults, thefts, and drug offenses that are prosecuted under state law. They handle family law: divorce, child custody, adoption. They handle contracts, torts, property disputes. The quality and independence of state courts varies enormously — between states with well-funded, professionalized judiciaries and states where judges are elected in partisan races, where public defender budgets are inadequate, and where the backlog of cases renders justice effectively unavailable.",
                 "links": [
                   {
                     "label": "National Center for State Courts",
@@ -48774,7 +48774,7 @@ const LAYERS = [
                 "id": "h6_co_jud",
                 "label": "How Judges Get There",
                 "color": "#5878a0",
-                "desc": "How they get there and who they are. Federal judges are nominated and confirmed. State judges in most places are elected. The political weight of judicial elections has grown in step with the courts' policy importance.",
+                "desc": "Federal judges are nominated by the president, confirmed by the Senate, and serve lifetime appointments. The process has become increasingly politicized as the courts have become more policy-significant. Senate confirmation battles over nominees — Bork, Thomas, Garland, Kavanaugh, Barrett — have become defining political events. State judges in most states are elected, either in partisan or nonpartisan races. Judicial elections are increasingly expensive and subject to outside spending. The fiction that judicial decisions are purely legal rather than political is harder to maintain when the process of selecting judges is so explicitly political.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -48825,7 +48825,7 @@ const LAYERS = [
                 "id": "h6_co_jur",
                 "label": "Juries",
                 "color": "#6888b8",
-                "desc": "The other branch. Twelve neighbors deciding the fate of one defendant. Jury trials have shrunk dramatically — most criminal cases now resolve through plea bargains. The constitutional right is more theoretical than practical for most defendants.",
+                "desc": "The institution designed to put the ultimate fact-finding power in the hands of ordinary citizens rather than the state. The constitutional right to jury trial in criminal cases is real. In practice, more than 90% of criminal cases are resolved through plea bargains — defendants trade the right to a trial for a guaranteed, usually lesser sentence. The plea bargain system developed because the court system could not manage its caseload otherwise. The right that exists on paper is not available in practice to the vast majority of criminal defendants. The cases that do go to trial are the ones where the defendant can afford to refuse the deal.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -49311,7 +49311,7 @@ const LAYERS = [
             "id": "h6_prop",
             "label": "Property & Contracts",
             "color": "#785838",
-            "desc": "The legal scaffolding of the economy. Most of what private law does is enforce property and contracts. The choices about what counts as property and what contracts will be enforced shape who gets what.",
+            "desc": "The legal scaffolding beneath the economy. Most of what private law does is enforce two things: property rights and contracts. The choices about what counts as property — who can own what, what protections ownership confers, how ownership can be transferred — and what contracts will be enforced shape the distribution of resources and power in the economy. These choices look technical. They are political. The expansion of intellectual property rights, the treatment of wages in corporate bankruptcy, the doctrine of eminent domain, the rules of landlord-tenant law — each embeds specific political choices about who gets protected by law.",
             "links": [
               {
                 "label": "Cornell Law — LII",
@@ -49337,7 +49337,7 @@ const LAYERS = [
                 "id": "h6_p_pro",
                 "label": "Property",
                 "color": "#684828",
-                "desc": "What you can own. American property law evolved to enable extraction — of land from indigenous nations, of labor from enslaved people, of resources from public lands. The forms have changed. Some of the patterns haven't.",
+                "desc": "The legal right to exclude others from using what you own. American property law evolved partly to enable extraction — of land from indigenous nations through doctrines that denied the validity of indigenous title, of labor from enslaved people whose own persons were legally property, of resources from public lands through favorable leasing terms. The forms of property have changed enormously — from land and physical goods to financial instruments, intellectual property, and data. The underlying political question — whose claims the law protects and at whose expense — has not changed.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -49388,7 +49388,7 @@ const LAYERS = [
                 "id": "h6_p_real",
                 "label": "Real Property",
                 "color": "#785838",
-                "desc": "Land. The most heavily regulated property type. Zoning, easements, eminent domain, mortgages — all the structures that shape who lives where.",
+                "desc": "Land and the structures on it. The most heavily regulated form of property — zoning laws, building codes, environmental restrictions, easements, and mortgages all constrain what owners can do with their land. Eminent domain allows the government to take private property for public use with compensation. Real property is also the primary vehicle through which most American middle-class families build wealth — the home is the largest asset most people ever own. The exclusion of Black Americans from homeownership in majority-white neighborhoods through redlining and restrictive covenants is a primary cause of the current racial wealth gap.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -49439,7 +49439,7 @@ const LAYERS = [
                 "id": "h6_p_int",
                 "label": "Intellectual Property",
                 "color": "#886038",
-                "desc": "Copyrights, patents, trademarks. The category has grown enormously to cover ideas, processes, brands, and increasingly genetic information. Each extension was sold as protecting creators. Each ended up mostly protecting corporations.",
+                "desc": "Copyrights, patents, trademarks, and trade secrets — the legal protection of ideas, creative works, and brand identities. Intellectual property law is relatively recent in historical terms and has expanded dramatically in scope and duration over the last fifty years. Each extension — longer copyright terms, broader patent claims, the patenting of genetic sequences and software — was passed with industry support and sold as protecting creators. Most of the practical benefit flows to corporations rather than individual creators. The balance between the public interest in the free circulation of ideas and private interests in controlling them has shifted significantly toward private control.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -49496,7 +49496,7 @@ const LAYERS = [
                 "id": "h6_p_con",
                 "label": "Contracts",
                 "color": "#785030",
-                "desc": "Promises the law will enforce. Most modern contracts are not negotiated. They are presented. Take it or leave it. The legal fiction of mutual agreement has gotten thin.",
+                "desc": "Promises the law will enforce. The legal theory of contract imagines two parties negotiating freely and entering a mutual agreement. Most modern contracts are not negotiated. They are presented on a take-it-or-leave-it basis — terms of service, employment agreements, user licenses, mortgage documents. The consumer or employee either accepts the entire document or forgoes the transaction. Courts have enforced these adhesion contracts with minimal scrutiny of whether the terms are fair. The legal fiction of mutual agreement has gotten thin enough that it no longer describes the actual transaction but still provides its legal architecture.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -49550,7 +49550,7 @@ const LAYERS = [
                 "id": "h6_p_bk",
                 "label": "Bankruptcy",
                 "color": "#684830",
-                "desc": "The legal escape valve. Bankruptcy law in the U.S. is more generous to corporations than to individuals. Student debt does not discharge. Most medical debt does. The structure says something about the priorities.",
+                "desc": "The legal process for resolving unmanageable debt by providing either a repayment plan or discharge of obligations. Bankruptcy law in the United States is explicitly more generous to corporations than to individuals. Corporations can use Chapter 11 to restructure debts, reject contracts and pension obligations, and emerge with their assets intact. Individuals in Chapter 7 lose most assets and face long-term credit damage. Student loan debt specifically does not discharge in bankruptcy — an exception added by Congress that treats the most burdensome debt category most harshly. Medical debt discharges. The structure of the exceptions reveals the priorities.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -50471,7 +50471,7 @@ const LAYERS = [
             "id": "h1_ancient",
             "label": "The Ancient World",
             "color": "#6848a8",
-            "desc": "The first experiments in total organization. Power at this scale had never existed before. Nobody knew the rules because nobody had written them yet. They wrote them in stone and called it divine.",
+            "desc": "The first experiments at organizing human life at a scale that required writing, law, and permanent coercion to maintain. Mesopotamia, Egypt, Persia, Greece, Rome, Han China, Maurya India — civilizations that built temples, navies, tax systems, and armies, that invented writing partly to track what they owed and who owed them. The scale of what they attempted had never existed before and nobody had written the rules yet. They wrote them in stone and called it divine because there was no other claim of authority available. The patterns they established — the bureaucratic state, the standing army, the written law — are still running underneath everything that came after.",
             "links": [
               {
                 "label": "Lapham's Quarterly",
@@ -52809,7 +52809,7 @@ const LAYERS = [
         "x": 70,
         "y": 34,
         "color": "#5838b8",
-        "desc": "The original human act. Every border is a line drawn through a migration route. Every 'native' population arrived from somewhere else, earlier. The timeline just depends on where you start counting.",
+        "desc": "The original human act. Homo sapiens spread from Africa across the planet over roughly 70,000 years before any border existed. Every border is a line drawn through a migration route. Every population that describes itself as native arrived from somewhere else — the question is only how recently. The politics of migration in the present tense are built on a fiction of original settlement that the archaeology and genetics consistently contradict. The migrants of the present are doing what all humans have always done when the conditions at home became worse than the risk of the road.",
         "links": [
           {
             "label": "Migration Data Portal",
@@ -52829,7 +52829,7 @@ const LAYERS = [
             "id": "h4_pp",
             "label": "Push & Pull",
             "color": "#a87858",
-            "desc": "Why people move. Push factors are what is wrong at home — war, poverty, persecution, climate. Pull factors are what looks better elsewhere — work, safety, family. Most migration is both at once. The framing depends on who is telling the story.",
+            "desc": "Why people move. Push factors are what is intolerable at home — war, poverty, persecution, drought, the slow erosion of viable life. Pull factors are what looks possible elsewhere — work, safety, family, a future for children. Most migration is both at once: a home that is no longer working and a destination that looks like it might. The framing depends on who is telling the story and what purpose it serves. Push framing emphasizes desperation and tends toward sympathy or alarm. Pull framing emphasizes choice and tends toward judgment. Most migrants are doing the math that humans have always done and making the calculation that has always produced the same answer.",
             "links": [
               {
                 "label": "Migration Data Portal",
@@ -52855,7 +52855,7 @@ const LAYERS = [
                 "id": "h4_p_war",
                 "label": "War",
                 "color": "#583018",
-                "desc": "The most reliable producer of migrants. Most refugee surges of the last fifty years tracked specific conflicts. The current displacement total is the highest since World War II.",
+                "desc": "The most reliable and consistent producer of displaced people. Conflict generates refugees faster than any other cause — the Syrian civil war produced millions in years. The ongoing conflicts in Sudan, the Democratic Republic of Congo, Myanmar, and Ukraine have produced the displacement numbers currently described as unprecedented. Most refugee surges of the last fifty years track specific conflicts with a lag of months to years. The conflicts that produce the surges are often connected to earlier interventions and destabilizations that the receiving countries participated in. The relationship between who caused the conflict and who absorbs the displaced is rarely discussed directly.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -52906,7 +52906,7 @@ const LAYERS = [
                 "id": "h4_p_pov",
                 "label": "Poverty",
                 "color": "#785038",
-                "desc": "The slow push. Economic migration is older than war as a category and currently larger in raw numbers. Most economic migrants are not desperate — they are people who looked at the math and made a calculation.",
+                "desc": "The slow and persistent push. Economic migration is larger in total numbers than conflict migration and older as a category. Most economic migrants are not the poorest people in their countries — the very poor lack the resources to move. Most are people who looked at the comparative math between staying and going and made a rational calculation. The calculation accounts for risk, cost, separation from family, and the specific opportunities visible at the destination. American immigration politics treats economic migration as less legitimate than refugee flight. The people making the journey do not experience the distinction the way the law draws it.",
                 "links": [
                   {
                     "label": "Migration Data Portal",
@@ -52957,7 +52957,7 @@ const LAYERS = [
                 "id": "h4_p_per",
                 "label": "Persecution",
                 "color": "#682838",
-                "desc": "The political push. Religious, ethnic, sexual, ideological. The category that the international refugee framework was built around. Each year's persecuted look different from the last.",
+                "desc": "The push of political, religious, ethnic, or sexual persecution. The international refugee system was built after World War II specifically around this category — the experience of Jewish and other persecuted people who could not flee Nazi Europe because no country would take them. The convention categories — persecution on account of race, religion, nationality, political opinion, or membership in a particular social group — have been interpreted and litigated across decades. Domestic violence, gang persecution, and climate-driven displacement have been contested as to whether they qualify. Each year the category of recognized persecution negotiates itself against the conditions of a changing world.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -53008,7 +53008,7 @@ const LAYERS = [
                 "id": "h4_p_clim",
                 "label": "Climate Displacement",
                 "color": "#3a5870",
-                "desc": "The growing category. Drought, sea level rise, crop failure. Climate migration is just starting and will be among the largest movements of people in human history.",
+                "desc": "The growing category. Drought making agricultural land uninhabitable. Sea level rise flooding coastal deltas where hundreds of millions live. Crop failures from heat and changed rainfall patterns. Extreme heat making outdoor labor dangerous. Climate migration is not a future scenario — it is happening now, primarily as internal displacement within countries. The international legal framework for climate migrants does not exist in a meaningful sense. People displaced by climate change do not qualify as refugees under the 1951 convention. The gap between the legal categories available and the actual conditions driving displacement will grow as warming continues.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -53065,7 +53065,7 @@ const LAYERS = [
                 "id": "h4_p_op",
                 "label": "Opportunity",
                 "color": "#a87838",
-                "desc": "The pull. Work. Education. Family reunification. Most migrants are not running from. They are running toward.",
+                "desc": "The pull factor. Work that pays more than what is available at home. Educational opportunities not accessible locally. Safety from conditions the home country cannot provide. Family already established in the destination country. Most immigration to the United States is toward opportunity rather than away from crisis — the distinction matters because it changes what the migration looks like and what the migrants need. Economic migrants move toward something. The rhetoric of invasion assumes movement against something. The mismatch between the description and the reality shapes most American immigration policy.",
                 "links": [
                   {
                     "label": "Migration Data Portal",
@@ -53116,7 +53116,7 @@ const LAYERS = [
                 "id": "h4_p_fam",
                 "label": "Family Reunification",
                 "color": "#a06850",
-                "desc": "The dominant legal category in U.S. immigration. Most green cards go to family members of existing residents. The chain migration the political right rails against is also called family.",
+                "desc": "Family reunification is the legal basis for the majority of green cards issued in the United States each year. Spouses, children, parents, and siblings of existing citizens and permanent residents are the primary beneficiaries of the system. The political framing of this as chain migration — implying an unlimited cascade of relatives — is misleading. The actual categories are narrow, the waiting lists are long, and the waits are measured in years or decades for many countries. Family reunification reflects a value embedded in American immigration law since its earliest forms. The political attack on it is a recent phenomenon.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -53231,7 +53231,7 @@ const LAYERS = [
                 "id": "h4_i_leg",
                 "label": "Legal Pathways",
                 "color": "#684828",
-                "desc": "Family-based, employment-based, refugees, asylum, diversity lottery, and various smaller categories. The legal immigration system is enormously complicated and the wait times are measured in decades for some categories.",
+                "desc": "The pathways through which people can legally immigrate to the United States. Family-based categories for spouses, children, parents, and siblings of citizens and permanent residents. Employment-based categories for workers with needed skills or employer sponsorship. Refugee and asylum programs. The diversity visa lottery. Special categories for specific national situations. The system is large, complex, and backlogged — wait times for certain country-of-origin and category combinations run to decades. The legal pathways that exist do not match the demand for them, which is part of what produces undocumented immigration.",
                 "links": [
                   {
                     "label": "U.S. Census",
@@ -53282,7 +53282,7 @@ const LAYERS = [
                 "id": "h4_i_un",
                 "label": "Undocumented",
                 "color": "#583018",
-                "desc": "Roughly 11 million people in the U.S. without legal status. Most have been here for over a decade. Most arrived legally and overstayed. The political conversation is mostly disconnected from the actual data.",
+                "desc": "Roughly 11 million people live in the United States without legal immigration status. About two-thirds have been here for more than a decade. The largest share of undocumented people in the country arrived legally and overstayed their visas — not crossed the southern border without documents. Most work, pay taxes in many cases, and are integrated into communities and families that include U.S. citizens. The political conversation about undocumented immigration focuses heavily on the southern border and treats unauthorized presence as primarily a security issue. The demographic reality is more complicated and less amenable to enforcement-only solutions.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -53333,7 +53333,7 @@ const LAYERS = [
                 "id": "h4_i_dac",
                 "label": "DACA & Dreamers",
                 "color": "#785038",
-                "desc": "The young people brought as children. Roughly 600,000 currently protected by DACA. The program has been in legal limbo for a decade. Their lives have been on hold.",
+                "desc": "Deferred Action for Childhood Arrivals — the Obama-era executive order that provided temporary protection from deportation and work authorization to people who came to the United States as children without legal status. Roughly 600,000 people are currently covered by DACA. The program has been in continuous legal and political limbo since 2017. Courts have alternately upheld and struck it down. Recipients — who have spent their lives in the United States, attended American schools, and built careers and families here — have lived with sustained uncertainty about their status for most of their adult lives.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -53384,7 +53384,7 @@ const LAYERS = [
                 "id": "h4_i_econ",
                 "label": "Economic Impact",
                 "color": "#886040",
-                "desc": "Immigrants are net contributors to the U.S. economy by every credible measure. They pay more in taxes than they receive in services and contribute disproportionately to entrepreneurship. The political talk is mostly disconnected from this evidence.",
+                "desc": "The empirical evidence on the economic impact of immigration is remarkably consistent and remarkably disconnected from the political debate. Immigrants are net fiscal contributors — they pay more in taxes, on average, than they receive in public services. They are overrepresented in entrepreneurship, patent applications, and the founding of high-growth companies. They fill labor shortages in both high-skilled and essential service sectors. Their presence does not systematically reduce wages for native-born workers except in specific, narrow labor markets under specific conditions. The research is not contested among economists. The political debate proceeds as if it were.",
                 "links": [
                   {
                     "label": "Bureau of Labor Statistics",
@@ -53435,7 +53435,7 @@ const LAYERS = [
                 "id": "h4_i_pol",
                 "label": "Immigration Politics",
                 "color": "#583028",
-                "desc": "The most reliable third rail in American politics. Both parties have moved right on enforcement across decades. The actual reform has not happened in nearly forty years.",
+                "desc": "The most reliable third rail in American politics — capable of generating heat in all directions, resistant to evidence, and connected to the deepest questions about what kind of country this is and who belongs. Both parties have moved rightward on enforcement over the last forty years. Comprehensive immigration reform — covering a path to legal status for existing undocumented people, modernization of the legal system, and reformed enforcement — has been proposed and failed multiple times. The failure is not primarily about policy design. It is about political incentives that reward obstruction over resolution.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -53486,7 +53486,7 @@ const LAYERS = [
                 "id": "h4_i_int",
                 "label": "Interior Enforcement",
                 "color": "#481810",
-                "desc": "ICE. Workplace raids. The deportation machine. Built up across decades and now at a scale most Americans don't recognize. The architecture has been assembled. What gets done with it depends on who is running the country.",
+                "desc": "The interior enforcement apparatus — primarily Immigration and Customs Enforcement, created in 2003 — that identifies, detains, and deports people without legal status from within the United States. ICE's budget, personnel, and operational scope have grown under every administration since its creation. Workplace raids, courthouse arrests, traffic stop detentions — the methods have varied. The architecture of the detention and deportation system has been built up over two decades. What gets done with it depends on the administration running it. The system can be used surgically or as a mass deportation mechanism. Both modes have been tested.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -53569,7 +53569,7 @@ const LAYERS = [
             "id": "h4_ref",
             "label": "Refugees & Asylum",
             "color": "#a86838",
-            "desc": "The protected categories. Refugees flee persecution and apply from outside. Asylum seekers apply from inside or at the border. The legal framework is from 1951 and the current displacement scale exceeds anything the framework was built for.",
+            "desc": "The protected categories under international law. Refugees are people who have fled persecution and applied for resettlement from outside the destination country. Asylum seekers are people who apply for protection from inside the country or at the border. The legal framework dates to 1951 and was designed for the European displacement of World War II. The current scale of global displacement — over 100 million people — was not imagined when the framework was written. Most countries, including the United States, have interpreted the framework narrowly. The gap between the number of displaced people and the number offered legal protection is vast and growing.",
             "links": [
               {
                 "label": "UNHCR",
@@ -53595,7 +53595,7 @@ const LAYERS = [
                 "id": "h4_r_def",
                 "label": "Refugee Definition",
                 "color": "#785028",
-                "desc": "The 1951 convention. A well-founded fear of persecution on account of race, religion, nationality, political opinion, or membership in a particular social group. Each phrase is litigated.",
+                "desc": "A refugee is defined by the 1951 Refugee Convention as someone with a well-founded fear of persecution based on race, religion, nationality, political opinion, or membership in a particular social group. Every phrase in that definition has been litigated in administrative courts and federal courts across decades. What constitutes a social group. What constitutes a well-founded fear. Whether domestic violence qualifies. Whether gang persecution qualifies. Whether climate-driven displacement qualifies. The definitions were written for a specific historical moment. They are being interpreted to fit circumstances their authors could not have anticipated.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -53640,7 +53640,7 @@ const LAYERS = [
                 "id": "h4_r_us",
                 "label": "U.S. Refugee Program",
                 "color": "#683028",
-                "desc": "The annual ceiling that varies by administration. The number of refugees actually admitted varies more. The program has shrunk substantially in recent years.",
+                "desc": "The annual ceiling that the president sets for how many refugees the United States will admit. The ceiling is a policy choice — it has ranged from over 200,000 in the early 1980s to under 20,000 under the Trump administration and back to higher levels since. The number actually admitted is usually lower than the ceiling, constrained by processing capacity, security screening backlogs, and the resettlement infrastructure in receiving communities. The United States was once the world's primary destination for resettled refugees. That role has diminished significantly over the last decade.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -53691,7 +53691,7 @@ const LAYERS = [
                 "id": "h4_r_as",
                 "label": "Asylum",
                 "color": "#583020",
-                "desc": "The right to apply for protection from inside the country or at the border. American asylum law is being remade by court rulings, executive orders, and a backlog of nearly two million cases.",
+                "desc": "The right to apply for protection from persecution while inside the United States or at its borders. Asylum law derives from the same international framework as refugee law but applies to people already present. The American asylum system is in crisis by any honest description — the backlog of pending cases exceeds 3 million, wait times for hearings stretch to years or decades, and the legal standards are being continuously rewritten by executive orders, court rulings, and agency policy changes. The people in that backlog are living in legal limbo, often unable to work legally, for years at a stretch.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -53742,7 +53742,7 @@ const LAYERS = [
                 "id": "h4_r_det",
                 "label": "Detention",
                 "color": "#382010",
-                "desc": "Where the U.S. holds people while their cases are pending. Many of the facilities are run by for-profit prison companies. Conditions have been documented as poor by every credible inspection.",
+                "desc": "The network of facilities where immigration authorities hold people while their cases are pending — or while they await deportation. The U.S. immigration detention system holds roughly 35,000 people on any given day. Many of the facilities are operated by private prison companies under contract. Conditions have been documented by the DHS Inspector General, congressional investigators, and legal advocates as regularly falling below minimal standards — inadequate medical care, contaminated water, use of solitary confinement, deaths in custody. Detention is civil, not criminal — the people held have not been convicted of anything — but the conditions are often indistinguishable.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -53793,7 +53793,7 @@ const LAYERS = [
                 "id": "h4_r_chil",
                 "label": "Children at the Border",
                 "color": "#582820",
-                "desc": "The unaccompanied minors. The family separations. The image the country has had to look at and look away from across multiple administrations. The legal framework for how the U.S. treats these kids is still being written.",
+                "desc": "Children arriving alone at the southern border — unaccompanied minors, primarily from Central America. Children separated from parents under the family separation policy of 2018. The images of children in chain-link enclosures produced a political crisis that has not been resolved. The legal framework governing the treatment of unaccompanied children — primarily the Flores settlement from 1997 — has been the subject of continuous litigation. The numbers of unaccompanied minors arriving have been high and rising across multiple administrations. The infrastructure for processing, sheltering, and placing them has never caught up with the numbers.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -53844,7 +53844,7 @@ const LAYERS = [
                 "id": "h4_r_glb",
                 "label": "Global Displacement",
                 "color": "#a86840",
-                "desc": "More than 100 million people displaced worldwide as of recent counts. The largest figure since World War II. Most stay close to home. A small fraction reach the U.S.",
+                "desc": "More than 110 million people were forcibly displaced worldwide as of the most recent UNHCR counts — more than at any point since World War II and more than twice the number a decade earlier. The majority are internally displaced within their own countries. About 36 million are refugees who have crossed international borders. About 6 million are asylum seekers with pending cases. The causes are familiar: conflict, persecution, climate, and economic collapse. The international system for addressing displacement was not designed for this scale and has not been redesigned. Most displaced people spend years or decades in temporary status.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -53927,7 +53927,7 @@ const LAYERS = [
             "id": "h4_bord",
             "label": "Borders & Citizenship",
             "color": "#583028",
-            "desc": "The legal lines and what they mean. Citizenship is the most important legal status a person can hold and the rules for getting it differ enormously between countries. American citizenship rules are mostly inherited or born into.",
+            "desc": "The legal lines that determine who belongs where and what rights follow from belonging. Citizenship is the most consequential legal status a person can hold — it determines access to political participation, protection abroad, and the right to remain in the country that claims you. The rules for acquiring citizenship differ enormously between countries: birthright citizenship, citizenship by descent, citizenship by naturalization. The United States practices all three. Birthright citizenship — citizenship for anyone born on U.S. soil — is the most inclusive rule and the most politically contested in the current environment.",
             "links": [
               {
                 "label": "Cornell Law — LII",
@@ -53947,7 +53947,7 @@ const LAYERS = [
                 "id": "h4_b_cit",
                 "label": "Citizenship",
                 "color": "#482018",
-                "desc": "The full status. Voting rights, jury duty, the protection of the country abroad. American citizenship can be acquired by birth, by descent, or by naturalization.",
+                "desc": "The full legal status of membership in a country — with the right to vote, to hold certain government positions, to pass citizenship to children, and to claim the protection of the country abroad. American citizenship can be acquired by birth on U.S. soil, by birth abroad to a citizen parent, or by naturalization after meeting legal residency and other requirements. Citizenship can be renounced and, in narrow circumstances, revoked. The rights that attach to citizenship are the most protected of any legal status — citizens cannot be deported and have the full protection of constitutional rights.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -53992,7 +53992,7 @@ const LAYERS = [
                 "id": "h4_b_nat",
                 "label": "Naturalization",
                 "color": "#583028",
-                "desc": "The process of becoming a citizen by application. Roughly a million people naturalize each year. The test is in English and includes civics questions most native-born Americans would fail.",
+                "desc": "The process by which a non-citizen becomes a citizen through application. Roughly one million people naturalize each year in the United States. Applicants must have been lawful permanent residents for three to five years, pass background checks, demonstrate English proficiency, pass a civics test, and take an oath of allegiance. The civics test covers American history and government. Research consistently finds that naturalized citizens score higher on civics knowledge than native-born Americans who have not had to demonstrate it. The naturalization ceremony is one of the more genuinely moving civic events in American public life.",
                 "links": [
                   {
                     "label": "Cornell Law — LII",
@@ -54037,7 +54037,7 @@ const LAYERS = [
                 "id": "h4_b_bor",
                 "label": "Border Politics",
                 "color": "#583020",
-                "desc": "The lines and what is built along them. The U.S.-Mexico border has become some of the most heavily policed land border in the world. The northern border is largely open in practice. The asymmetry says something.",
+                "desc": "The physical and political boundary between the United States and Mexico — 1,954 miles of varied terrain, now one of the most heavily patrolled land borders in the world. The border has been fenced, walled, surveilled with technology, and staffed at historic levels. Crossing attempts have not stopped — they have shifted to more dangerous routes. Deaths at the border from heat, dehydration, and drowning have increased as enforcement has pushed migrants toward more remote terrain. The northern border with Canada is roughly twice as long and largely open. The asymmetry reflects political priorities rather than security logic.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -54088,7 +54088,7 @@ const LAYERS = [
                 "id": "h4_b_pas",
                 "label": "Passports & Visas",
                 "color": "#683028",
-                "desc": "The documents that determine who can move where. The American passport opens most countries. Most passports do not open America. The privilege is mostly invisible to those who hold it.",
+                "desc": "The documents that determine who can move where and on what terms. The American passport is one of the most powerful travel documents in the world — holders can enter most countries without a visa or with a visa on arrival. Most of the world's population holds passports that cannot enter the United States without a visa obtained in advance. The privilege of easy global mobility is distributed along lines that closely track colonial history and economic power. It is largely invisible to people who have it and defining to people who don't.",
                 "links": [
                   {
                     "label": "UN Data",
@@ -54133,7 +54133,7 @@ const LAYERS = [
                 "id": "h4_b_san",
                 "label": "Sanctuary",
                 "color": "#684030",
-                "desc": "Places that refuse to assist federal immigration enforcement. Sanctuary cities and states. The legal authority is mostly settled — federal immigration is federal, local police don't have to help.",
+                "desc": "Jurisdictions that limit their cooperation with federal immigration enforcement. Sanctuary cities and states do not typically prohibit immigration enforcement — they decline to hold people on immigration detainers beyond their criminal sentence or to share immigration status information with ICE. The legal authority of states and localities to decline this cooperation has been affirmed by courts. The federal government has attempted to condition funding on cooperation; courts have limited that leverage. Sanctuary policies reflect decisions by local governments that enforcing federal immigration law is not their responsibility and that making it their responsibility damages community trust.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -54184,7 +54184,7 @@ const LAYERS = [
                 "id": "h4_b_state",
                 "label": "Statelessness",
                 "color": "#382818",
-                "desc": "People with no recognized citizenship anywhere. Roughly 10 million worldwide. Cannot legally work, travel, marry, or be buried in most places without paperwork.",
+                "desc": "People who do not have citizenship in any country — unrecognized by any state, unable to access most public services, unable to legally work, travel, marry, open a bank account, or register a birth in most places. Roughly 10 million people worldwide are stateless. Statelessness results from gaps and conflicts in nationality laws, from the dissolution of states, from discrimination that strips citizenship from specific ethnic or religious groups, and from the bureaucratic exclusion of people who cannot document their lineage. The Rohingya in Myanmar and previously in Bangladesh are among the largest stateless populations. Statelessness is invisible to most people who have never faced it.",
                 "links": [
                   {
                     "label": "UNHCR",
@@ -54267,7 +54267,7 @@ const LAYERS = [
             "id": "h4_assim",
             "label": "Assimilation & Identity",
             "color": "#a08858",
-            "desc": "What happens after arrival. The melting pot, the salad bowl, the mosaic — every metaphor describes the same process from a different angle. Each generation in a migrant family negotiates the inheritance differently.",
+            "desc": "What happens to immigrants and their descendants across generations — the negotiation between the culture brought and the culture found. The melting pot metaphor suggested immigrants dissolved into a common American identity. The salad bowl metaphor suggested distinct identities coexisted. Neither is fully accurate. What actually happens is generationally variable, culturally specific, and highly dependent on whether the receiving society extends welcome or hostility. Each generation of a migrant family negotiates the inheritance differently. The grandchildren of immigrants are American in ways their grandparents were not and often come back looking for what was lost.",
             "links": [
               {
                 "label": "Pew Research",
@@ -54287,7 +54287,7 @@ const LAYERS = [
                 "id": "h4_a_lang",
                 "label": "Immigrant Language Loss",
                 "color": "#886038",
-                "desc": "The first wall and the first bridge. Most immigrant languages are lost by the third generation in the U.S. The cost of that loss is rarely tallied.",
+                "desc": "The first thing a community loses when pressure to assimilate is strong. Most immigrant languages in the United States are substantially gone by the third generation — the grandchildren of immigrants often speak no language but English, even when the first and second generations were bilingual. The loss is rarely mourned publicly, treated instead as the normal cost of integration. What goes with the language is not just vocabulary — it is the grammar of certain relationships, the jokes that don't translate, the specific words for feelings and foods and family structures that English doesn't have. Once gone, it rarely comes back.",
                 "links": [
                   {
                     "label": "Endangered Languages Project",
@@ -54338,7 +54338,7 @@ const LAYERS = [
                 "id": "h4_a_gen",
                 "label": "Generations",
                 "color": "#a08858",
-                "desc": "First, second, third. Each generation has a different relationship to the old country. The first remembers it. The second negotiates it. The third often comes back looking for it.",
+                "desc": "First generation — arrived as adults, negotiating between two worlds. Second generation — born or raised in the new country, hyphenated, often mediating between parents and the outside world. Third generation — usually monolingual in the language of the new country, often coming back in search of what was lost. Each generation has a different relationship to the old country: the first remembers it, the second negotiates it, the third sometimes romanticizes it. The pattern is consistent across ethnic groups and countries of origin. What persists is usually food, some religious practice, and a name.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -54383,7 +54383,7 @@ const LAYERS = [
                 "id": "h4_a_id",
                 "label": "Hyphenated Identity",
                 "color": "#b09860",
-                "desc": "American-and-something-else. Most American immigrant communities have hyphenated for a few generations and then stopped. Some haven't. The pattern depends on the welcome.",
+                "desc": "The hyphen that marks the in-between. Mexican-American. Vietnamese-American. Irish-American. The hyphen used to mark the foreign-origin, signaling incomplete absorption. Over time it has become a marker of cultural complexity — the acknowledgment that a person belongs to more than one story. Most American ethnic communities have hyphenated for a few generations and then dropped the hyphen as the old-country connection thinned. Some communities have maintained the hyphenated identity longer, either because the home culture was kept deliberately or because the host society continued to mark them as other regardless of how American they became.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -54428,7 +54428,7 @@ const LAYERS = [
                 "id": "h4_a_cult",
                 "label": "Cultural Retention",
                 "color": "#988838",
-                "desc": "What stays. Food and religion are usually last to go. Language goes earlier. Family structures shift across generations.",
+                "desc": "What survives the crossing and the generations. Food is usually last to go — the grandmother's recipe outlasts the grandmother's language, sometimes by decades. Religious practice is often next most durable, adapted and hybridized but recognizable. Language typically goes by the third generation. Family structures shift as the norms of the new country's family formation — age of marriage, household composition, elder care — exert pressure. What stays and what goes is shaped by how much the home culture was actively maintained, how much the receiving society welcomed it, and how much it was a source of pride rather than shame.",
                 "links": [
                   {
                     "label": "Pew Research",
@@ -54482,7 +54482,7 @@ const LAYERS = [
                 "id": "h4_a_back",
                 "label": "Immigration Backlash",
                 "color": "#583028",
-                "desc": "What the host culture does. Each wave of American immigration has been met with an organized backlash. The targets change. The pattern doesn't.",
+                "desc": "The organized response from the receiving society to each new wave of immigration. The pattern in American history is consistent: each major wave of immigration was met with a political movement arguing that this particular wave was too large, too culturally different, too threatening to be absorbed. The Irish were going to subvert the republic. The Chinese were an existential threat. The Southern and Eastern Europeans were racially inferior. The Mexicans were invading. The targets change with each wave. The rhetoric remains remarkably stable. The country absorbed the previous waves and the same rhetoric argued it couldn't.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -54898,7 +54898,7 @@ const LAYERS = [
                 "id": "h2_f_ie",
                 "label": "Indo-European",
                 "color": "#487098",
-                "desc": "The family that includes English, Spanish, Hindi, Russian, Greek, and most of the languages of Europe and large parts of South Asia. About half the world's people speak an Indo-European language as their first.",
+                "desc": "The language family that includes English, Spanish, French, Portuguese, German, Russian, Hindi, Farsi, Greek, and most of the languages of Europe and South Asia — descended from a common ancestor spoken perhaps 6,000 years ago on the Eurasian steppe. Indo-European languages are spoken by roughly 3 billion people. The family includes vast internal diversity in sound systems, grammar, and vocabulary while retaining traceable shared ancestry visible in cognate words — the English 'mother,' Latin 'mater,' Sanskrit 'mata,' Russian 'mat,' all descending from the same ancestral word. Comparative linguistics reconstructed the family before archaeology found physical evidence of the people who spoke the ancestor.",
                 "links": [
                   {
                     "label": "Ethnologue",
@@ -54949,7 +54949,7 @@ const LAYERS = [
                 "id": "h2_f_st",
                 "label": "Sino-Tibetan",
                 "color": "#5878a8",
-                "desc": "Chinese languages and a wide spread of related tongues across China, Tibet, Southeast Asia. The second-largest family by speakers.",
+                "desc": "The family that includes Mandarin, Cantonese, and the other Chinese languages, Tibetan, Burmese, and hundreds of smaller languages across China and Southeast Asia. Sino-Tibetan is the second-largest language family by number of speakers, primarily because of the scale of Mandarin Chinese. The family is internally diverse in ways the single-label obscures — the Chinese languages are mutually unintelligible as spoken languages even while sharing a writing system. The shared writing system has been one of the most consequential facts in Chinese political and cultural history: it allowed political unity across spoken language differences that would otherwise have fragmented the country.",
                 "links": [
                   {
                     "label": "Ethnologue",
@@ -54994,7 +54994,7 @@ const LAYERS = [
                 "id": "h2_f_nc",
                 "label": "Niger-Congo",
                 "color": "#587858",
-                "desc": "The largest African language family. Hundreds of languages. Includes Swahili, Yoruba, Igbo, Zulu.",
+                "desc": "The largest language family in Africa, covering most of sub-Saharan Africa with hundreds of distinct languages. The Bantu subgroup alone — which includes Swahili, Zulu, Xhosa, Shona, and scores of others — spread across Central, Eastern, and Southern Africa in one of the largest migrations in human prehistory. Niger-Congo languages include tonal languages in which the pitch of a syllable changes its meaning, languages with complex noun class systems unlike anything in European languages, and grammatical structures that encode relationships between people and actions in ways that require new analytical frameworks to describe. The family is the most linguistically diverse in the world.",
                 "links": [
                   {
                     "label": "Ethnologue",
@@ -55039,7 +55039,7 @@ const LAYERS = [
                 "id": "h2_f_au",
                 "label": "Austronesian",
                 "color": "#688098",
-                "desc": "The family that spread across the Pacific. Includes Hawaiian, Maori, Tagalog, Indonesian, Malagasy on Madagascar — one of the largest geographic spreads of any language family.",
+                "desc": "The family that spread across the Pacific more widely than any other linguistic group in history. Austronesian languages are spoken from Madagascar off the east coast of Africa to Hawaii and Easter Island in the central Pacific — the widest geographic spread of any pre-modern language family. The spread happened through a series of maritime migrations beginning roughly 4,000 years ago from Taiwan. The family includes Malay, Indonesian, Tagalog, Hawaiian, Maori, Fijian, and hundreds of other languages. The linguistic evidence of a single origin for this enormous geographic range was one of the early confirmations of ancient maritime capability that archaeology has since supported with physical evidence.",
                 "links": [
                   {
                     "label": "Ethnologue",
@@ -55084,7 +55084,7 @@ const LAYERS = [
                 "id": "h2_f_iso",
                 "label": "Language Isolates",
                 "color": "#688868",
-                "desc": "Languages without known relatives. Basque. Korean by some accounts. Burushaski in northern Pakistan. They are clues to histories whose evidence has been lost.",
+                "desc": "Languages with no demonstrable relationship to any other living language — no family, no cousins, no traceable ancestry. Basque, spoken in the region where Spain and France meet the Pyrenees, is the most famous: it was there before Indo-European arrived and has resisted all attempts to connect it to any known family. It is almost certainly a remnant of pre-agricultural Europe. Korean and Japanese are sometimes classified as isolates or as forming a micro-family. Burushaski in northern Pakistan. Each isolate is a clue to a history whose speakers are gone — languages that survived when the populations around them were replaced or absorbed.",
                 "links": [
                   {
                     "label": "Ethnologue",
@@ -55135,7 +55135,7 @@ const LAYERS = [
                 "id": "h2_f_pid",
                 "label": "Pidgins & Creoles",
                 "color": "#7888a8",
-                "desc": "What happens when speakers of different languages have to communicate. Pidgins are simplified contact languages. Creoles are what pidgins become when children grow up speaking them as a first language.",
+                "desc": "What happens linguistically when speakers of mutually unintelligible languages need to communicate for extended periods. Pidgins develop as simplified contact languages — reduced grammar, limited vocabulary, often drawing on multiple parent languages. The plantation economies of colonialism produced many — Tok Pisin in Papua New Guinea, Haitian Creole, the English-based creoles of the Caribbean. When children grow up speaking a pidgin as their first language, it becomes a creole — a full, native language with complete grammar that no one designed. Creoles are not broken versions of their parent languages. They are new languages, generated spontaneously, that demonstrate how much of grammar is not taught but built.",
                 "links": [
                   {
                     "label": "Ethnologue",
@@ -55212,7 +55212,7 @@ const LAYERS = [
             "id": "h2_mg",
             "label": "Meaning & Grammar",
             "color": "#688898",
-            "desc": "What language does. The signals are sound or sign. The meaning is in the shared system the speakers know — the grammar that organizes the sounds, the semantics that connects them to the world.",
+            "desc": "What language does — the relationship between the signals humans produce and the meanings those signals carry. The relationship is not simple and not stable. Grammar organizes sound into meaningful units. Semantics connects those units to things and concepts in the world. Pragmatics interprets what is meant in context, which is usually richer than what is literally said. Metaphor extends the reach of language into abstract territory by mapping structure from familiar domains onto unfamiliar ones. The study of meaning in language is the study of how minds make the world legible to other minds — an achievement so routine that its complexity is invisible.",
             "links": [
               {
                 "label": "Oxford English Dictionary",
@@ -55232,7 +55232,7 @@ const LAYERS = [
                 "id": "h2_mg_synt",
                 "label": "Syntax",
                 "color": "#588898",
-                "desc": "The order of things. Subject-verb-object in English. Subject-object-verb in Japanese. Verb-subject-object in Welsh. The orders are not random and they are not all equally common across languages.",
+                "desc": "The rules for ordering elements within sentences. Every language has syntax — rules about what can follow what, which determine meaning. In English, the order of subject, verb, and object is fixed and carries meaning. In Latin, flexible word order was compensated by elaborate case endings. In Japanese, the verb almost always comes last. The syntactic rules of a language are not arbitrary — there are patterns across languages about which orders are common and which are rare. Children acquire the syntax of their native language without explicit instruction, apparently through exposure alone. How they do this is one of the central questions in linguistics and cognitive science.",
                 "links": [
                   {
                     "label": "Linguistic Society of America",
@@ -55277,7 +55277,7 @@ const LAYERS = [
                 "id": "h2_mg_morph",
                 "label": "Morphology",
                 "color": "#688898",
-                "desc": "The internal structure of words. Some languages build complex words from many small pieces (Inuit, Turkish). Others, like Mandarin, mostly don't. The choices shape what kinds of meaning are easy to express.",
+                "desc": "The internal structure of words — how languages combine smaller meaningful units (morphemes) into larger ones. Highly inflected languages like Latin or Russian or Turkish encode grammatical information — tense, case, agreement, person — through changes to the form of the word itself. Languages like Mandarin and Vietnamese do not — grammatical information is carried by word order and separate particles. English is in between: it has some inflections (walked, walking, walks) but far fewer than its Indo-European relatives. The morphological type of a language shapes what kinds of meanings are easy to express grammatically and what must be said with extra words.",
                 "links": [
                   {
                     "label": "Linguistic Society of America",
@@ -55322,7 +55322,7 @@ const LAYERS = [
                 "id": "h2_mg_sem",
                 "label": "Semantics",
                 "color": "#7898a8",
-                "desc": "How meaning attaches to form. The relationship between word and world is not arbitrary in interesting ways and not transparent in interesting ways.",
+                "desc": "The study of meaning — how words and sentences connect to things and concepts in the world and in the mind. The relationship between word and world is not straightforward. Words do not map one-to-one onto concepts across languages. Color terms carve up the visible spectrum differently. Kinship terms group relatives differently. What counts as a separate action or a variant of the same action differs. Semantics also studies how meaning is structured — prototypes, fuzzy boundaries, the ways category membership is a matter of degree rather than sharp distinction. What language can express and what it cannot expresses the limits of the categories available to its speakers.",
                 "links": [
                   {
                     "label": "Linguistic Society of America",
@@ -55373,7 +55373,7 @@ const LAYERS = [
                 "id": "h2_mg_prag",
                 "label": "Pragmatics",
                 "color": "#5888a8",
-                "desc": "What's meant beyond what's said. Sarcasm. Implication. Tone. Most of communication is pragmatic — the literal sentence is a small part of the message.",
+                "desc": "The study of what is communicated beyond what the words literally say. When someone says 'Can you pass the salt?' they are not asking whether you have the physical capacity — they are making a request. When someone says 'Nice day, isn't it?' to a stranger, they are not primarily seeking meteorological information. Most of what is communicated in everyday language is pragmatic — the literal sentence is scaffolding for a meaning that context, tone, relationship, and shared assumption flesh out. The failure to read pragmatic meaning is a marker of certain communication disorders. The ability to produce and interpret it is what makes conversation work.",
                 "links": [
                   {
                     "label": "Linguistic Society of America",
@@ -55418,7 +55418,7 @@ const LAYERS = [
                 "id": "h2_mg_met",
                 "label": "Metaphor",
                 "color": "#788888",
-                "desc": "How language makes the abstract think-able. Most concepts about time, mind, emotion, and morality are structured by metaphors we don't notice. Up is good. Time is a river. The argument is a battle.",
+                "desc": "The mechanism by which language extends its reach into abstract territory by mapping structure from one domain onto another. Time is structured as a path we move along — we look forward to the future, put the past behind us. Arguments are structured as combat — we defend positions, shoot down objections, attack claims. The mind is structured as a container — ideas enter and leave it, some stick. These are not decorative figures of speech. They are the cognitive scaffolding on which most abstract thought is built. Conceptual Metaphor Theory, developed by George Lakoff and Mark Johnson, demonstrated how pervasive and structural metaphor is in all languages, not just literary ones.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -55469,7 +55469,7 @@ const LAYERS = [
                 "id": "h2_mg_amb",
                 "label": "Ambiguity",
                 "color": "#587898",
-                "desc": "The constant feature of natural language. Most sentences have multiple possible meanings. Speakers and listeners constantly resolve them based on context. Computers find this much harder than people do.",
+                "desc": "The unavoidable feature of natural language. Most sentences in any language have more than one possible interpretation. 'I saw the man with the telescope' — did I use the telescope, or did I see a man who had one? 'Time flies like an arrow; fruit flies like a banana' exploits the same grammatical ambiguity for comic effect. Speakers resolve ambiguity constantly and automatically through context, expectation, and pragmatic inference — so smoothly that most people do not notice it is happening. Computers, which must resolve ambiguity explicitly, find it one of the hardest problems in natural language processing. The ease of human disambiguation is one of the things that makes human language comprehension still beyond automated replication.",
                 "links": [
                   {
                     "label": "Stanford AI Index",
@@ -55552,7 +55552,7 @@ const LAYERS = [
             "id": "h2_lang_living",
             "label": "Slang & Living Speech",
             "color": "#a87078",
-            "desc": "Where language gets made. Slang is not corruption — it is the engine room of the language, the place where new meaning gets tested and either survives or fades. Living speech is always doing this. The dictionary follows, slowly.",
+            "desc": "Where language actually gets made. Slang is not corruption of a pure earlier form — it is the engine room, the place where new vocabulary is tested, new meanings assigned, new grammatical forms tried. Living speech is always doing this, mostly without the conscious awareness of the people doing it. The dictionary follows, slowly, years or decades after the words have spread. Internet language has compressed the cycle dramatically — phrases that took a generation to enter print now enter the language in months, carried by memes and platform cultures. The English of 2025 is not the English of 2000, and the English of 2050 will not be the English of 2025. This is not decay. It is what living languages do.",
             "links": [
               {
                 "label": "Urban Dictionary",
@@ -55578,7 +55578,7 @@ const LAYERS = [
                 "id": "h2_l_slang",
                 "label": "Slang",
                 "color": "#985868",
-                "desc": "The freshest layer of vocabulary. Slang serves marking — by generation, region, subculture, profession. When slang crosses over to general speech it usually loses what made it specific.",
+                "desc": "The freshest layer of vocabulary — words and phrases that serve social marking functions alongside or instead of referential ones. Slang identifies you as part of a group, marks generational membership, signals in-group status, and hedges between the formal and the intimate. When slang crosses into general use — when it escapes its original community and enters mainstream speech — it usually loses the marking function that made it valuable. The word that meant something specific among a specific community of speakers becomes just another word. The community moves on to new vocabulary. The cycle is continuous.",
                 "links": [
                   {
                     "label": "Urban Dictionary",
@@ -55731,7 +55731,7 @@ const LAYERS = [
                 "id": "h2_l_gen",
                 "label": "Generational Speech",
                 "color": "#b87878",
-                "desc": "The vocabulary that marks a cohort. Gen Z slang. Boomer slang. Each generation brings its own and the older generation usually misreads the newer one's tone.",
+                "desc": "The vocabulary that marks a cohort. Every generation develops speech patterns that are distinct from those of the previous generation — partly as natural drift, partly as deliberate differentiation. Boomer speech, Gen X speech, Millennial speech, Gen Z speech — linguists can identify the markers. The older generation characteristically misreads the newer one's speech as decline, imprecision, or disrespect. Research consistently finds that what looks like decay to older ears is systematic innovation — new vocabulary, new pragmatic functions, new grammatical constructions that the next generation will in turn describe as decline when their children use them.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -55782,7 +55782,7 @@ const LAYERS = [
                 "id": "h2_l_mem",
                 "label": "Internet Memes & Memetic Language",
                 "color": "#988068",
-                "desc": "How phrases now propagate at the speed of the platforms. Memetic language is one of the fastest-evolving registers humans have ever produced. Half the slang in this paragraph will be dated by the time anyone reads it.",
+                "desc": "How phrases, images, and cultural references propagate through populations at the speed of digital platforms. Memetic language — the word 'meme' itself coined by Richard Dawkins in 1976 for cultural units that replicate and spread — has become a specific linguistic register in the internet era. Phrases spread as image captions, mutate in use, lose their original reference, become detached from their source, and eventually enter colloquial speech stripped of their online context. The result is one of the fastest-evolving linguistic registers in human history — phrases that are current one year are dated the next, and the people who still use them after the window closes are marked as out of touch.",
                 "links": [
                   {
                     "label": "Urban Dictionary",
@@ -55833,7 +55833,7 @@ const LAYERS = [
                 "id": "h2_l_pro",
                 "label": "Profanity",
                 "color": "#785058",
-                "desc": "What you can't say in the polite version. Profanity does emotional and social work that polite language can't. The list of taboo words shifts decade to decade — the function stays the same.",
+                "desc": "The vocabulary marked as taboo in formal or polite registers. Profanity serves real linguistic and emotional functions — it emphasizes, it expresses pain or surprise more efficiently than polite alternatives, it marks intimacy by signaling that the speaker is not performing formality. The specific words that carry these functions change across time and culture — what is profane in one era is neutral in the next, and vice versa. The words currently most taboo in American English are racial and other slurs — categories that were not particularly taboo two generations ago. The function — emotional amplification, social marking, taboo violation — is constant. The specific vocabulary rotates.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -60303,7 +60303,7 @@ const LAYERS = [
         "x": 27,
         "y": 56,
         "color": "#1860a0",
-        "desc": "The organizing fact of human life. Every religion, philosophy, and political system is partly an answer to this. Mostly it is a sophisticated way of not answering it while building elaborate structures to avoid looking directly at it.",
+        "desc": "The organizing fact of human life. Every religion, philosophy, political system, and artistic tradition is partly an answer to this. Mostly they are sophisticated ways of not looking directly at it while building elaborate structures around the looking. Death gives life its shape — the fact of finitude is what makes time feel like time, choices feel like choices, and the people you love feel like the stakes they are. Most cultures have developed practices for approaching death that the secular modern world has largely abandoned without replacing. The resulting improvisation is one of the defining conditions of contemporary life.",
         "links": [
           {
             "label": "On Being",
@@ -60355,7 +60355,7 @@ const LAYERS = [
                 "id": "x2_m_caus",
                 "label": "Causes of Death",
                 "color": "#4a3828",
-                "desc": "What kills Americans. Heart disease and cancer at the top. Accidents, drug overdoses, suicide rising. The pattern shifts decade to decade and the data is published if anyone wants to look.",
+                "desc": "What kills Americans and how the pattern shifts. Heart disease and cancer at the top — together accounting for roughly half of all deaths. Accidents, unintentional drug overdoses, and suicide have risen to make up a growing share. COVID-19 killed more than a million Americans. The overdose crisis reshaped the mortality curve for working-age Americans in ways not seen since the AIDS epidemic. The data is published by the CDC annually. The pattern of causes of death is a compressed summary of the country's public health, economic conditions, and social stress. It says specific things about specific failures.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -60400,7 +60400,7 @@ const LAYERS = [
                 "id": "x2_m_ex",
                 "label": "Life Expectancy",
                 "color": "#6a5848",
-                "desc": "How long Americans are living. The U.S. peaked around 79 in 2014 and has fallen since. The decline is unusual among wealthy countries and the causes — drugs, suicide, COVID, gun deaths — say something specific about this country.",
+                "desc": "How long Americans are living — and the recent reversal. The U.S. peaked at roughly 79 years life expectancy around 2014 and has fallen since, a trajectory unusual among wealthy countries. The causes are specific and documented: drug overdoses, suicide, COVID-19, gun deaths, and the long-term effects of obesity and metabolic disease. The United States spends more on healthcare per capita than any other country and has among the lowest life expectancy in the developed world. The gap is not explained by healthcare spending. It is explained by the conditions the healthcare system is treating — conditions that other countries manage through policy before they become medical problems.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -60451,7 +60451,7 @@ const LAYERS = [
                 "id": "x2_m_dis",
                 "label": "Health Disparities",
                 "color": "#3a2818",
-                "desc": "Who dies sooner. Black Americans live several years less than white Americans. Native Americans live considerably less than both. ZIP code remains a stronger predictor of life expectancy than genetics.",
+                "desc": "Who dies sooner and by how much. Black Americans live roughly four years less than white Americans, a gap that widened during COVID-19 and has only partially recovered. Native Americans live considerably less than both groups. Hispanic Americans live longer than white Americans despite lower average incomes — the so-called Hispanic paradox, attributed to social cohesion, immigration selection, and dietary factors. ZIP code predicts life expectancy more reliably than almost any individual characteristic. The health disparities are not primarily explained by genetics. They are explained by the differential distribution of stress, environmental hazard, poverty, and access to care across the American map.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -60502,7 +60502,7 @@ const LAYERS = [
                 "id": "x2_m_acc",
                 "label": "Accidental Death",
                 "color": "#5a4030",
-                "desc": "Cars, falls, drug overdoses. Accidents are the leading cause of death for Americans under 45. The overdose numbers have reshaped the curve in the last decade.",
+                "desc": "Unintentional injuries — car crashes, falls, drug overdoses — are the leading cause of death for Americans under 45. The drug overdose component has grown dramatically: in 2022 over 100,000 Americans died of drug overdoses, primarily involving synthetic opioids. This is the overdose crisis, which the country has been in various stages of responding to since the late 1990s. The automotive death rate has declined with safety technology even as total miles driven increased. The fall death rate is rising as the population ages. The accidental death numbers are among the most preventable in the mortality statistics — and among the most persistently underaddressed.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -60547,7 +60547,7 @@ const LAYERS = [
                 "id": "x2_m_sui",
                 "label": "Suicide",
                 "color": "#382818",
-                "desc": "The deaths the country has the most trouble talking about. American suicide rates have risen substantially across two decades, especially among young people and middle-aged men. The trend has not been reversed.",
+                "desc": "American suicide rates have risen across two decades, particularly among young people and middle-aged men. The United States has one of the highest suicide rates in the developed world. The rise is not explained by a single factor — it intersects with economic precarity, social isolation, the decline of community institutions, the opioid crisis, and access to lethal means. Among young Americans, suicide is the second leading cause of death. The tools for reducing suicide rates are known: means restriction, mental health access, social connection, economic security. The political will to deploy them at scale has not materialized.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -60598,7 +60598,7 @@ const LAYERS = [
                 "id": "x2_m_gun",
                 "label": "Gun Deaths",
                 "color": "#281008",
-                "desc": "Roughly 45,000 Americans a year. About half are suicides. The rest are mostly homicides, with a small accidental component. The U.S. is an outlier among wealthy countries by an enormous margin.",
+                "desc": "Roughly 45,000 Americans die from firearms annually — a rate that makes the United States an extreme outlier among wealthy nations. Approximately half are suicides. The majority of the remainder are homicides, with a small percentage from accidents. Mass shootings attract the most media attention and represent a small fraction of gun deaths. The policy debate is constrained by the political power of firearms interests, a specific reading of the Second Amendment, and a cultural attachment to firearms in substantial portions of the electorate. Other countries have reduced gun deaths through policy. The United States has consistently not.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -60687,7 +60687,7 @@ const LAYERS = [
             "id": "x2_grief",
             "label": "Grief & Loss",
             "color": "#4a3838",
-            "desc": "What love costs. Grief is not a problem to be processed. It is the shape love takes when its object is gone. Most cultures have built ritual around grief because it does not move on schedule and it does not move alone.",
+            "desc": "What love costs. Grief is not a problem to be processed on a schedule and filed. It is the shape love takes when its object is gone — the presence of absence, which is its own kind of presence. Most cultures built ritual around grief because unstructured loss is hard to survive socially. The American cultural script for grief is thin: a few days of bereavement leave, a casserole, and the expectation that things return to normal. They don't. Grief changes people. The ones who say it doesn't are usually the ones who haven't been through it yet.",
             "links": [
               {
                 "label": "Modern Loss",
@@ -60719,7 +60719,7 @@ const LAYERS = [
                 "id": "x2_g_st",
                 "label": "Stages",
                 "color": "#3a2828",
-                "desc": "The Kübler-Ross stages — denial, anger, bargaining, depression, acceptance. Misunderstood for decades. They are not a sequence. They are not a destination. They are common feelings that show up out of order, repeatedly.",
+                "desc": "Elisabeth Kübler-Ross identified five stages — denial, anger, bargaining, depression, acceptance — in her 1969 book On Death and Dying, based on interviews with terminally ill patients. The framework was misunderstood almost immediately as a sequence to be completed in order, a checklist with acceptance as the endpoint. Kübler-Ross herself pushed back on that reading. The stages are not stages. They are common emotional textures that show up out of order, recur, and in some cases never resolve into acceptance. They remain useful as a vocabulary. They are harmful as a timeline.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -60770,7 +60770,7 @@ const LAYERS = [
                 "id": "x2_g_anti",
                 "label": "Anticipatory Grief",
                 "color": "#4a3838",
-                "desc": "Grieving before the death. When someone is dying slowly, the grief begins before the loss. It is real and exhausting and rarely acknowledged by anyone outside the immediate circle.",
+                "desc": "Grieving before the death. When someone is dying slowly — Alzheimer's, terminal cancer, the long decline — the grief begins long before the death certificate. Mourning the person who is still present but no longer fully there. Mourning the future that is not going to happen. Anticipatory grief is real, exhausting, and rarely acknowledged outside the immediate caregiving circle. It does not subtract from the grief after the death. It compounds it. The people who have been anticipatorily grieving for years are often the most depleted at the moment when social attention finally arrives.",
                 "links": [
                   {
                     "label": "NHPCO",
@@ -60821,7 +60821,7 @@ const LAYERS = [
                 "id": "x2_g_dis",
                 "label": "Disenfranchised Grief",
                 "color": "#382818",
-                "desc": "The losses society does not officially recognize. Pet death. Pregnancy loss. The end of a relationship that wasn't legally one. Grief without permission to grieve fully.",
+                "desc": "Losses that don't get social permission for full grief. The death of a pet that was someone's primary companion. Pregnancy loss at stages that don't have funerals. The end of a relationship that wasn't legally recognized. The loss of a friend who was family in every sense that mattered. The loss of someone from whom the bereaved was estranged. Disenfranchised grief is grief without a recognized role to play — no bereavement leave, no casserole, no acknowledgment of the legitimacy of the pain. The grief is real. The social support is absent. The combination is its own kind of suffering.",
                 "links": [
                   {
                     "label": "Modern Loss",
@@ -60872,7 +60872,7 @@ const LAYERS = [
                 "id": "x2_g_com",
                 "label": "Complicated Grief",
                 "color": "#281818",
-                "desc": "When grief gets stuck. Most acute grief eases over months. When it doesn't — when functioning collapses, when years pass without change — it crosses into a clinical condition with treatments that work.",
+                "desc": "When grief does not follow the expected arc. Most acute grief eases over months — raw and disabling at first, gradually becoming something more integrated and livable. When it doesn't — when the intensity does not diminish across years, when daily functioning collapses and does not recover, when the loss dominates every hour — it crosses into what is now called prolonged grief disorder. The condition is real, diagnosable, and treatable. It affects roughly 10% of bereaved people following the death of someone close. The treatments work. Most people experiencing it do not receive them.",
                 "links": [
                   {
                     "label": "NAMI",
@@ -60923,7 +60923,7 @@ const LAYERS = [
                 "id": "x2_g_col",
                 "label": "Collective Grief",
                 "color": "#5a4848",
-                "desc": "When a country grieves. 9/11. The Kennedy assassinations. The pandemic. Collective grief works on a different timeline and gets shaped by what the public is allowed to feel.",
+                "desc": "When a community or country grieves together. September 11. The Kennedy assassinations. The deaths of cultural figures who represented something larger than themselves. The pandemic. Collective grief operates at a different scale and on a different timeline than personal grief — it moves through public ritual, media cycles, and political response in ways that can facilitate or obstruct the actual work of mourning. What the public is permitted to feel, and for how long, is shaped by political and media decisions as much as by the nature of the loss. Collective grief managed badly produces political pathology. The examples are not hard to find.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -60974,7 +60974,7 @@ const LAYERS = [
                 "id": "x2_g_book",
                 "label": "Letters & Memoirs",
                 "color": "#6a5848",
-                "desc": "What grief produces in writing. Some of the best American writing of the last fifty years is grief writing — Joan Didion, Elizabeth Alexander, Anne Lamott, Cheryl Strayed. The genre is doing real work.",
+                "desc": "What grief produces in writing. Some of the most enduring literature of the last fifty years is grief literature: Joan Didion's The Year of Magical Thinking, C.S. Lewis's A Grief Observed, Anne Lamott's Traveling Mercies, Cheryl Strayed's Wild, Elizabeth Alexander's The Light of the World. The genre works because grief dismantles the defenses that protect most prose from honesty. Writing about loss forces writers to be specific — specific about the person, specific about the loss, specific about what remains. The specificity is what makes grief literature universal. It is the genre that least tolerates generalization.",
                 "links": [
                   {
                     "label": "The Marginalian",
@@ -61057,7 +61057,7 @@ const LAYERS = [
             "id": "x2_rit",
             "label": "Ritual & Burial",
             "color": "#5a4040",
-            "desc": "How communities hand the dead off. Funeral rites are some of the oldest evidence of cultural complexity in the human record. They do work for the dead, the living, and the body that stops being either.",
+            "desc": "How communities hand the dead to whatever comes next, and how they keep the living together in the process. Funeral rites are among the oldest evidence of cognitive complexity in the human record — Neanderthal burial sites suggest ritual even before anatomically modern humans. The rituals do multiple kinds of work simultaneously: they care for the body, they mark the transition, they gather the community, they give the grief a form. The specific practices vary enormously across cultures. The function is nearly universal. When communities lose their death rituals — through migration, secularization, or pandemic isolation — they discover how much the rituals were doing.",
             "links": [
               {
                 "label": "Aeon",
@@ -61083,7 +61083,7 @@ const LAYERS = [
                 "id": "x2_r_fun",
                 "label": "Funerals",
                 "color": "#4a3030",
-                "desc": "The American funeral has been an industry for over a century. Embalming. The casket. The viewing. Each piece can be done well or done as commerce. The grieving rarely have the energy to choose at the moment.",
+                "desc": "The American funeral became an industry in the late nineteenth century. Embalming, developed during the Civil War for transporting the dead home, became standard. The metal casket, the viewing, the funeral home as an institution — each element was developed as commerce as much as as consolation. The industry is largely unregulated on pricing, and families making decisions in acute grief are among the least equipped to shop around. Jessica Mitford's The American Way of Death documented the exploitation in 1963. The industry is more regulated than it was. The fundamental economics of selling to the grieving have not changed.",
                 "links": [
                   {
                     "label": "ATJon on Substack",
@@ -61128,7 +61128,7 @@ const LAYERS = [
                 "id": "x2_r_cre",
                 "label": "Cremation",
                 "color": "#5a4848",
-                "desc": "Now the majority American choice. Cheaper, more flexible, more environmentally manageable. The shift happened across two generations and changed what families had to plan for.",
+                "desc": "Cremation has become the majority American choice, now selected by more than half of families. It is cheaper, requires less land, and gives families more flexibility about what to do with the remains. The shift happened across two generations and reflects changes in religious practice, geographic mobility, and cost consciousness. The Catholic Church reversed its prohibition on cremation in 1963. The environmental case for cremation over conventional burial — which uses embalming chemicals and non-biodegradable materials — is somewhat overstated, since cremation uses substantial energy. Green burial addresses this more directly.",
                 "links": [
                   {
                     "label": "CDC WONDER",
@@ -61173,7 +61173,7 @@ const LAYERS = [
                 "id": "x2_r_bur",
                 "label": "Burial",
                 "color": "#3a2828",
-                "desc": "The classic. American cemeteries are mostly perpetual care arrangements. The land use and the chemicals involved are starting to be questioned by the green burial movement.",
+                "desc": "In-ground burial is the older American tradition — the churchyard, the family cemetery, the national cemetery. American burial customs were shaped by Protestant practice, by the Civil War, and by the rural-to-urban migration that transformed where people died relative to where they had lived. Most American cemeteries operate as perpetual care arrangements — the cemetery maintains the grounds in exchange for the original purchase price. The land use, the formaldehyde in the embalming process, and the concrete vaults used in most conventional burial are being reconsidered by the green burial movement and by a generation thinking differently about the afterlife.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -61218,7 +61218,7 @@ const LAYERS = [
                 "id": "x2_r_grn",
                 "label": "Green Burial",
                 "color": "#586848",
-                "desc": "Burial without embalming or non-biodegradable caskets. Returns the body to the soil cleanly. A small but growing movement reshaping what death rituals can mean.",
+                "desc": "Burial without embalming, without metal caskets, without concrete vaults — in a shroud or a biodegradable container, in a nature preserve or a dedicated green cemetery, returning the body to the soil directly. The green burial movement is small but growing, reflecting both environmental concern and a cultural shift toward more natural, less mediated death practices. It is also, in most cases, substantially cheaper than conventional burial. Alkaline hydrolysis — sometimes called water cremation — is a related option, using water and heat rather than fire. The legal availability of green burial options varies by state.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -61269,7 +61269,7 @@ const LAYERS = [
                 "id": "x2_r_wake",
                 "label": "Wakes & Visitations",
                 "color": "#6a4838",
-                "desc": "The before-and-after gathering. The wake is older than the funeral and in some traditions does most of the work. Sitting with the dead. Telling the stories. Crying together.",
+                "desc": "The gathering before or around the funeral — sitting with the body, telling stories, crying together, eating together. Wakes are older than the formal funeral and in many traditions do more of the grief work. The Irish wake, the Jewish shiva, the Southern homegoing — each has its own form and its own theory of what the living need when the dead are still present. What these traditions have in common is duration and social presence: the grief is not managed efficiently in a single service but spread over days, with the community sustaining the bereaved through proximity. The instinct is correct. The cultural support for it has thinned.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -61314,7 +61314,7 @@ const LAYERS = [
                 "id": "x2_r_anc",
                 "label": "Ancestor Veneration",
                 "color": "#683828",
-                "desc": "What many cultures do that the U.S. mostly doesn't. Ongoing relationship with the dead — at altars, on holidays, through ritual. Grief that doesn't end becomes presence that doesn't end either.",
+                "desc": "The practice of maintaining ongoing relationship with the dead rather than separating sharply from them after burial. Ancestor veneration is central to many African, East Asian, Mesoamerican, and indigenous American traditions — offerings at household altars, ritual on specific calendar days, consultation of the dead in important decisions. The Western secular model tends to treat grief as a period that ends with the living returning to normal and the dead receding. Ancestor veneration practices suggest a different relationship — that the dead remain part of the social world, accessible through practice, continuing to matter.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -61397,7 +61397,7 @@ const LAYERS = [
             "id": "x2_aft",
             "label": "Afterlife Beliefs",
             "color": "#6a5050",
-            "desc": "What different cultures believe happens next. The answers range across the species — heaven, hell, reincarnation, ancestral presence, dissolution, rebirth, nothing. Each answer shapes how people live and how they die.",
+            "desc": "What different cultures believe happens after death, and how those beliefs shape the lives of the living. The range across the species is enormous: heaven and hell with eternal judgment, reincarnation across many lives with karmic accounting, dissolution into the natural world with nothing preserved, ancestral presence in a parallel realm accessible through ritual, union with the divine, or simply nothing. Each answer has ethical consequences for how people live. Each shapes how people die. The variety across human cultures is evidence that the question has no obvious answer and that the need to have one is nearly universal.",
             "links": [
               {
                 "label": "Sacred Texts",
@@ -61423,7 +61423,7 @@ const LAYERS = [
                 "id": "x2_a_chr",
                 "label": "Christian Heaven & Hell",
                 "color": "#5a4848",
-                "desc": "The dominant American framework. Eternal reward, eternal punishment, judgment at the end. The specific theology varies by denomination. The cultural footprint is enormous.",
+                "desc": "The dominant framework in American culture: an eternal afterlife in heaven or hell, allocated by divine judgment based on faith and conduct. The specific theology varies enormously across denominations — Catholics, evangelicals, mainline Protestants, and Mormons hold different accounts of what the judgment involves, who qualifies for salvation, and what the afterlife consists of. The cultural footprint of Christian afterlife belief is enormous even in secular Americans, shaping the language of grief, the expectations of justice, and the sense that death is not simply an end. It is the background assumption of most American death discourse.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -61468,7 +61468,7 @@ const LAYERS = [
                 "id": "x2_a_re",
                 "label": "Reincarnation",
                 "color": "#7a5858",
-                "desc": "Hindu, Buddhist, and many other traditions. The soul continues, in a new body, often shaped by the conduct of the previous life. The framework reshapes what death means.",
+                "desc": "The belief that consciousness continues after death in a new body, shaped by the conduct of previous lives. Central to Hinduism and Buddhism in different forms, and present in many other traditions. Reincarnation fundamentally changes what death means — it is not an ending but a transition, one of many in a longer arc. The ethical structure that accompanies reincarnation belief — karma as the mechanism linking conduct to future conditions — shapes behavior differently than the single-life judgment of Abrahamic traditions. For roughly a third of the world's population, the basic metaphysics of death are organized around continuation rather than finality.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -61519,7 +61519,7 @@ const LAYERS = [
                 "id": "x2_a_anc",
                 "label": "Ancestor Realms",
                 "color": "#6a4838",
-                "desc": "Many African, indigenous American, and East Asian traditions. The dead remain accessible — through ritual, through dream, through proper observance. The realm of the ancestors is part of the social world.",
+                "desc": "Many African, indigenous American, and East Asian traditions understand the dead as remaining accessible — present in a parallel realm, reachable through ritual, responsive to the living who maintain proper relationship with them. Día de los Muertos in Mexican tradition. Qingming in Chinese practice. The Yoruba relationship with the orisha and with specific ancestors. These traditions do not treat death as a clean separation between the living and the dead but as a change in the nature of a continuing relationship. The dead remain part of the moral community. They have interests. They can be consulted, appeased, and honored.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -61570,7 +61570,7 @@ const LAYERS = [
                 "id": "x2_a_se",
                 "label": "Secular Views",
                 "color": "#5a5050",
-                "desc": "What growing numbers of Americans believe. Death is the end. Whatever consciousness was, it stops. The challenge of secular grief is that the available consolations are different.",
+                "desc": "Growing percentages of Americans describe themselves as religiously unaffiliated — not necessarily atheist but no longer embedded in religious frameworks for understanding death. For secular people, death is likely the end: whatever consciousness was, it ceases. The challenge is not belief — many secular people are at peace with the end — but the practical work of dying without the ritual, community, and symbolic framework that religious traditions provide. Secular grief lacks the vocabulary and the social structure that religion developed over centuries. Building secular equivalents — secular grief groups, humanist memorial services, philosophical preparation for death — is ongoing work.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -61621,7 +61621,7 @@ const LAYERS = [
                 "id": "x2_a_nde",
                 "label": "Near-Death Experiences",
                 "color": "#7a6058",
-                "desc": "What people report from close calls with death — tunnels, light, life review, the sense of being met. The experiences are common, cross-cultural, and not fully explained by any framework.",
+                "desc": "Reports from people who came close to death and recovered — the tunnel, the light, the panoramic life review, the sense of profound peace, the feeling of being met by known or unknown presences. Near-death experiences are reported across cultures, across religions, and by people with no prior religious belief. They are real experiences in the sense that the people who have them are not fabricating them. The neuroscientific explanations — oxygen deprivation, endorphin release, REM intrusion — are partial and contested. They have not resolved the question of whether NDEs tell us anything about what actually happens after death.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -61666,7 +61666,7 @@ const LAYERS = [
                 "id": "x2_a_doubt",
                 "label": "Doubt",
                 "color": "#4a4040",
-                "desc": "What most people actually live with. Few people are fully certain about what happens next. The honesty of doubt is its own kind of religious posture.",
+                "desc": "What most honest people actually live with. Few people are genuinely certain about what happens after death — the certainties displayed in public are often thinner than they appear privately. Doubt is not the absence of belief. It is the honest acknowledgment that the question cannot be answered from inside the living condition. Many religious traditions have accommodated doubt as a legitimate and even valuable stance — Job's questioning, the apophatic theology of the mystics, the Zen tradition of not-knowing. The person who says they don't know what death is may be more accurately positioned than either the devout or the militantly secular.",
                 "links": [
                   {
                     "label": "On Being",
@@ -61769,7 +61769,7 @@ const LAYERS = [
                 "id": "x2_e_hos",
                 "label": "Hospice",
                 "color": "#486848",
-                "desc": "Care for people whose disease will end them. Focused on comfort and meaning, not cure. Hospice has been one of the quiet ethical revolutions of the last half-century. Most Americans who use it wish they had used it earlier.",
+                "desc": "Care for people whose illness will end them, focused on comfort, meaning, and the quality of the remaining time rather than the extension of it. Hospice is one of the quiet ethical revolutions of the last half-century — the recognition that aggressive treatment is not always the right answer and that dying well is a legitimate medical goal. Studies consistently find that hospice patients live as long or longer than comparable patients in aggressive treatment, and report substantially better quality of life and less suffering. Most Americans who experience hospice say they wish they had started it earlier. Most American deaths still happen in hospitals, without it.",
                 "links": [
                   {
                     "label": "NHPCO",
@@ -61814,7 +61814,7 @@ const LAYERS = [
                 "id": "x2_e_pal",
                 "label": "Palliative Care",
                 "color": "#587058",
-                "desc": "Comfort care that does not require a terminal diagnosis. Manages pain and symptoms across serious illness. The field is younger than hospice and still under-resourced.",
+                "desc": "Comfort care that does not require a terminal diagnosis to access. Palliative care manages pain, symptoms, and the psychological burden of serious illness alongside whatever curative treatment is underway. It is not the same as giving up — it is the recognition that suffering is a medical problem that deserves medical attention regardless of prognosis. The field has grown substantially since the 1990s and remains under-resourced relative to the number of seriously ill people who could benefit from it. The barrier is partly training — most physicians receive minimal palliative care education — and partly the cultural equation of medicine with treatment rather than with relief.",
                 "links": [
                   {
                     "label": "NHPCO",
@@ -61865,7 +61865,7 @@ const LAYERS = [
                 "id": "x2_e_av",
                 "label": "Advance Directives",
                 "color": "#688058",
-                "desc": "The paperwork. Living wills, healthcare proxies, DNRs. Most Americans don't have them. When the moment comes, families end up making decisions in the dark that the patient could have made if asked earlier.",
+                "desc": "The legal documents that specify what medical interventions you do and do not want if you are unable to speak for yourself — living wills, healthcare proxy designations, do-not-resuscitate orders. Most Americans do not have them. When the moment comes — a sudden accident, a stroke, the rapid progression of a terminal illness — families are left making decisions in crisis, under pressure from medical teams, about what the patient would have wanted. The decisions are often not what the patient would have chosen. Completing advance directives is the single most effective thing most people can do to protect their own wishes at the end of life.",
                 "links": [
                   {
                     "label": "NIH MedlinePlus",
@@ -61910,7 +61910,7 @@ const LAYERS = [
                 "id": "x2_e_phys",
                 "label": "Physician-Aided Dying",
                 "color": "#384828",
-                "desc": "Legal in a small number of states. Allows terminally ill patients to request medication to end their lives. The ethics are real and the safeguards have mostly held up across the years of operation.",
+                "desc": "Medical aid in dying, legal in roughly a dozen states under names like Death with Dignity. It allows terminally ill patients who meet specific criteria — terminal diagnosis, mental competence, multiple physician confirmations — to request a prescription for medication they can use to end their lives. The safeguards have been substantial and have mostly held. The fears about coercive use of the option have not materialized in states that have operated the law for years. The ethical debate is real — about the obligations of medicine, the nature of autonomy, and the relationship between individual choice and social values around the value of life.",
                 "links": [
                   {
                     "label": "ACLU",
@@ -61961,7 +61961,7 @@ const LAYERS = [
                 "id": "x2_e_med",
                 "label": "Medicalized Death",
                 "color": "#583028",
-                "desc": "What most American deaths look like. ICUs, ventilators, escalating intervention. Useful when treatment is plausible. Cruel when it is not. The system defaults to escalation unless someone speaks up.",
+                "desc": "What most American deaths look like in practice. Intensive care units, ventilators, feeding tubes, CPR, and the escalating application of intervention to bodies that are shutting down. The system defaults to treatment because that is what it is built to do and because the liability and cultural expectations run toward doing more. When treatment is plausible — when there is real chance of recovery — this is exactly right. When it is not, it is expensive, painful, and frequently contrary to what patients would choose if asked in advance. The gap between what Americans say they want at the end of life and what actually happens is large and well-documented.",
                 "links": [
                   {
                     "label": "NIH MedlinePlus",
@@ -62012,7 +62012,7 @@ const LAYERS = [
                 "id": "x2_e_fam",
                 "label": "Family Caregivers",
                 "color": "#687060",
-                "desc": "The unpaid labor at the end. Roughly 40 million Americans are providing unpaid care to a sick or dying family member at any time. The economic value of that care is in the hundreds of billions.",
+                "desc": "The roughly 40 million Americans who are providing unpaid care to a sick or dying family member at any given time. They manage medications, coordinate appointments, provide personal care, and absorb the psychological burden of watching someone they love decline. Most do this while working and maintaining other family responsibilities. The economic value of unpaid family caregiving is estimated at several hundred billion dollars annually — a subsidy to the healthcare system that is not accounted for in its cost calculations. The caregiver's own health typically deteriorates over the caregiving period. The support systems available to them are minimal relative to the work they are doing.",
                 "links": [
                   {
                     "label": "U.S. Department of Veterans Affairs",
@@ -62095,7 +62095,7 @@ const LAYERS = [
             "id": "x2_leg",
             "label": "Legacy & Remembrance",
             "color": "#788868",
-            "desc": "What stays after. Legacy is what you leave that the next generation has to work with. Most of it is invisible. Some of it lasts.",
+            "desc": "What stays after you're gone and what the next generation has to work with. Legacy is not only monuments and named buildings — it is the patterns you modeled, the relationships you maintained, the resources you left or depleted, the stories you told and the ones you suppressed. Most legacy is invisible to the person creating it. The parent who worked two jobs and never had time for dinner did not intend that as their legacy. It was one anyway. What you leave behind is not fully in your control. How deliberately you approach it is.",
             "links": [
               {
                 "label": "Internet Archive",
@@ -62121,7 +62121,7 @@ const LAYERS = [
                 "id": "x2_l_mem",
                 "label": "Legacy & Memory",
                 "color": "#688058",
-                "desc": "What gets remembered about you. Memory is not a record. It is a working draft. The version of you that survives is the one your people kept telling.",
+                "desc": "What gets remembered about you after you're gone — which is not the same as what you were. Memory is not a record. It is a working draft maintained by the people who knew you, shaped by their needs, their grief, their own histories with you. The version of you that survives is the one they kept telling each other. Important things disappear. Minor things become defining. The person they are remembering is a real person and not entirely the one who lived. Understanding this in advance changes how people approach what they want to leave behind — not in vanity, but in honesty about what memory actually preserves.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -62172,7 +62172,7 @@ const LAYERS = [
                 "id": "x2_l_lett",
                 "label": "Letters & Wills",
                 "color": "#788868",
-                "desc": "What you leave on paper. The letter for after. The video for the grandchild not yet born. The will that decides things you couldn't decide while alive.",
+                "desc": "What you leave on paper or on record for people who come after. The letter written for a child to open at graduation or at a wedding. The video recorded for grandchildren not yet born. The will that makes decisions you couldn't negotiate in life. These documents are among the most intimate things people create — written from one side of death to the other, without the possibility of revision or response. Most people mean to write them and don't. The ones who do tend to report that the writing changed something in them about how they were living the remaining time.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -62217,7 +62217,7 @@ const LAYERS = [
                 "id": "x2_l_obit",
                 "label": "Obituaries",
                 "color": "#586850",
-                "desc": "The official goodbye. Obituaries used to be journalism. They are increasingly written by the family. The shift changes what gets remembered and what gets edited out.",
+                "desc": "The official public goodbye. Obituaries used to be journalism — reported by newspaper staff, edited for accuracy and tone, serving as a public record of a life. They are increasingly written by the family, submitted to papers that publish them as received. The shift changes what gets included, what gets edited out, and whose lives get documented at all. Obituaries in major newspapers over-represent certain demographics. The families who write their own often produce something more honest and more loving than what professional obituary writers produced. The newspaper obituary section is also one of the last forms of print journalism with a captive audience.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -62262,7 +62262,7 @@ const LAYERS = [
                 "id": "x2_l_mon",
                 "label": "Monuments",
                 "color": "#5a6840",
-                "desc": "What public memory tries to fix in stone. American monuments have been getting reconsidered. Some have come down. The fights about which figures stay and which go are fights about the country's actual past.",
+                "desc": "What public memory tries to fix in stone, bronze, or marble. American public monuments have been under sustained reconsideration — statues of Confederate generals, Columbus, and others have been removed by governments or pulled down by crowds. The fights about which figures get stone and which get removed are fights about the actual past versus the mythologized past, about who the country claims as its heroes, and about whose grandchildren have to walk past those figures. Monuments were always political decisions. The current arguments are about who gets to make those decisions, for whom, and about what version of the past.",
                 "links": [
                   {
                     "label": "Brennan Center",
@@ -62313,7 +62313,7 @@ const LAYERS = [
                 "id": "x2_l_dig",
                 "label": "Digital Afterlife",
                 "color": "#688868",
-                "desc": "What lingers online. Old social media posts. Email accounts. Photos. The digital traces of the dead are now a vast archive nobody quite knows what to do with.",
+                "desc": "What the dead leave behind in the digital world. Social media profiles that remain active after death. Email archives that accumulate after the last sent message. Photos, videos, voice recordings, text threads. The digital traces of the dead are now a vast, growing, largely unmanaged archive — some of it comforting to those who miss them, some of it distressing, much of it simply suspended in a kind of digital limbo. Tech companies handle this inconsistently. The legal frameworks for who owns a dead person's digital identity are still being worked out. The grief implications of the dead's persistent digital presence are being experienced by millions of people without much guidance.",
                 "links": [
                   {
                     "label": "Electronic Frontier Foundation",
@@ -62364,7 +62364,7 @@ const LAYERS = [
                 "id": "x2_l_inh",
                 "label": "What We Leave Behind",
                 "color": "#789868",
-                "desc": "What the dead leave behind in money, things, and pattern. Inheritance is unequal at scale and gets used to defend that unequal scale.",
+                "desc": "What the dead leave behind in money, property, and accumulated advantage. Inheritance is one of the primary mechanisms by which wealth inequality compounds across generations — assets that took a lifetime to accumulate are transferred to heirs who did not earn them and who will transfer them again. At the policy level, the estate tax was designed to limit this concentration. It applies to fewer than one in a thousand estates and is riddled with planning strategies that reduce it further. At the human level, inheritance is also the transmission of relationship, pattern, and obligation. The money is the visible part.",
                 "links": [
                   {
                     "label": "Inequality.org",
@@ -62467,7 +62467,7 @@ const LAYERS = [
                 "id": "x2_f_an",
                 "label": "Animal Fear",
                 "color": "#281810",
-                "desc": "The body's. The thing that makes you flinch. Death anxiety in this sense is older than language and probably older than the brain that interprets it.",
+                "desc": "The animal layer of death anxiety — the flinch response, the freeze, the physiological alarm that precedes any thought about death. This fear is older than consciousness and operates in the body before it reaches the mind. Every organism that avoids death has some version of this. In humans it is entangled with the cognitive layer — the awareness of mortality — in ways that produce the uniquely human burden of knowing you will die while still carrying the body's ancient refusal to accept it. Terror management theory argues that much of human culture is organized around managing this foundational dread.",
                 "links": [
                   {
                     "label": "Harvard Health",
@@ -62518,7 +62518,7 @@ const LAYERS = [
                 "id": "x2_f_un",
                 "label": "Fear of the Unknown",
                 "color": "#382820",
-                "desc": "The cognitive layer. We do not know what death is from the inside. The lack of information is itself the source of much of the fear.",
+                "desc": "The cognitive layer of death anxiety — the specific discomfort of not knowing what death is from the inside. We know what it looks like from the outside: the body stops, the person stops. We do not know what it is to undergo it. The lack of a first-person account is the epistemic gap that every religion, every philosophy, and every near-death narrative is partly filling. Whether it is genuinely unknowable or merely unknown is itself unknown. The discomfort with that uncertainty is species-wide. What cultures do with that discomfort varies enormously and is one of the more reliable ways to understand what a culture most values.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -62569,7 +62569,7 @@ const LAYERS = [
                 "id": "x2_f_lon",
                 "label": "Fear of Loneliness",
                 "color": "#3a2820",
-                "desc": "The relational layer. Some of what we fear about dying is leaving the people we love. Some of it is being left.",
+                "desc": "The relational layer — the fear of the separations that death requires. Fear of leaving the people you love. Fear of being left by them. Fear of the loneliness of dying itself. These are different fears that get compressed into the single category of death anxiety. The fear of leaving is often more acute for people with dependents — children, aging parents, partners who will be devastated. The fear of being left becomes more prominent as people lose others across a lifetime. What both fears have in common is that death is not imagined as a solitary event but as a rupture in the web of relation that makes a life feel like a life.",
                 "links": [
                   {
                     "label": "Modern Loss",
@@ -62614,7 +62614,7 @@ const LAYERS = [
                 "id": "x2_f_pain",
                 "label": "Fear of Pain",
                 "color": "#481818",
-                "desc": "The bodily layer. The fear of how it will go. Modern hospice has made this much less reasonable than it was a generation ago. The cultural memory still holds the older terror.",
+                "desc": "The fear of how death will go rather than of death itself — specifically the fear of pain, diminishment, and loss of control during dying. This fear is more tractable than it used to be. Modern palliative care and hospice can control pain in the vast majority of deaths when deployed. The gap between what is available and what most Americans receive is large. The cultural memory of painful, prolonged dying is more current than the clinical reality in places with good palliative care. The fear is reasonable given how much dying still happens in ICUs without adequate comfort care. Improving that is a policy question.",
                 "links": [
                   {
                     "label": "NHPCO",
@@ -62665,7 +62665,7 @@ const LAYERS = [
                 "id": "x2_f_meaning",
                 "label": "Fear of Meaninglessness",
                 "color": "#382820",
-                "desc": "The existential layer. The fear that life will not have added up to anything. This is the one philosophy and religion try hardest to address.",
+                "desc": "The existential layer of death anxiety — the fear that the life will not have added up to anything, that the death will reveal the life as insufficient or wasted. This is the one that philosophy has spent the most effort addressing: Epicurus, the Stoics, the existentialists, the Buddhist tradition — each offering a different account of how to make meaning in the face of impermanence. Terror management theory suggests that much of human achievement, culture-building, and status-seeking is driven by the need to create something that outlasts the body. The monuments, the children, the work — all partly answers to this fear.",
                 "links": [
                   {
                     "label": "On Being",
@@ -62716,7 +62716,7 @@ const LAYERS = [
                 "id": "x2_f_for",
                 "label": "Fear of Being Forgotten",
                 "color": "#48302a",
-                "desc": "The social layer. The fear that nothing will remain of you. The fear is older than writing and probably part of why writing was invented.",
+                "desc": "The fear of erasure — that death will not only end the life but erase the evidence that it occurred. The fear of being forgotten is as old as the first grave marker, the first inscription, the first story told to keep someone alive in memory. It is partly why people have children, write books, build buildings, leave money to universities with naming rights attached. The need to persist in some form is one of the most consistent human motivations across cultures. Whether the persistence actually happens is not guaranteed by the effort. Most people are forgotten within three generations. The fear of that does not make it less true.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -62871,7 +62871,7 @@ const LAYERS = [
         "x": 50,
         "y": 60,
         "color": "#2858b8",
-        "desc": "Not falsehood — the story that carries what facts cannot hold. Every culture answers the same mystery differently. None is complete. None is entirely wrong. Myth is what you tell when truth isn't enough.",
+        "desc": "Not falsehood — the story that carries what facts cannot hold. Every culture answers the same set of mysteries differently: where did everything come from, why do people suffer, what happens after death, what do we owe each other, what forces are at work behind the visible world? Myth is the form those answers took before and alongside the development of philosophy and science. It is not a primitive form of knowledge that more advanced cultures leave behind. It is a different kind of knowing — one that works through narrative, symbol, and pattern rather than through argument and evidence. Its staying power is evidence of the things it does that argument cannot.",
         "links": [
           {
             "label": "On Being",
@@ -63166,7 +63166,7 @@ const LAYERS = [
                 "id": "x1_p_hero",
                 "label": "The Hero's Journey",
                 "color": "#684878",
-                "desc": "The pattern Joseph Campbell named in 1949. Call to adventure, departure, trials, transformation, return. The pattern shows up everywhere — Greek myth, Star Wars, hip-hop autobiography, the addiction recovery narrative.",
+                "desc": "The pattern Joseph Campbell identified in The Hero with a Thousand Faces — the monomyth present across cultures with local variation. Call to adventure, departure from the ordinary world, threshold crossing, trials, descent, revelation, return with the boon. Campbell found it in Homer, in the Arthurian romances, in the Buddha's life, in the Navajo Night Chant. George Lucas used it deliberately as the architecture for Star Wars. It shows up in hip-hop autobiography, in addiction recovery narratives, in immigrant stories. Whether the pattern is hard-wired into human cognition or is simply the shape narrative takes when it is doing its deepest work is still debated.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -63217,7 +63217,7 @@ const LAYERS = [
                 "id": "x1_p_des",
                 "label": "Descent & Return",
                 "color": "#583868",
-                "desc": "The journey to the underworld. Inanna. Persephone. Orpheus. Odysseus. The hero goes down, comes back changed. Most useful spiritual narratives are versions of this.",
+                "desc": "One of the most ancient and widespread mythic patterns: the living person who descends to the realm of the dead and returns, changed. Inanna descends through seven gates, surrendering something at each. Persephone is taken and returns seasonally. Orpheus goes for Eurydice and loses her at the threshold. Odysseus consults the dead in Hades. Dante goes down and comes back. The pattern appears in traditions separated by centuries and oceans. What it consistently captures is the experience of transformation through encounter with what cannot be avoided — the descent is necessary, the return is different from the departure.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -63268,7 +63268,7 @@ const LAYERS = [
                 "id": "x1_p_trick",
                 "label": "The Trickster",
                 "color": "#785888",
-                "desc": "The shape-shifter. Coyote. Anansi. Loki. Hermes. The trickster breaks the rules to teach the rule-makers something. Every culture has one and the trickster is usually the most popular character in the pantheon.",
+                "desc": "The figure who moves between worlds, breaks the rules, and teaches the rule-makers something in the process. Coyote in the traditions of the American Southwest and Plains. Anansi the spider in West African and diasporic tradition. Loki in Norse mythology. Hermes in Greek. The trickster is usually the most entertaining, most ambiguous, and most culturally useful character in the mythology — too smart to be heroic, too subversive to be a villain, present at the boundaries between order and chaos. The trickster reminds the culture that its rules are contingent. Every mythology that has rules needs a figure who can test them.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -63319,7 +63319,7 @@ const LAYERS = [
                 "id": "x1_p_flood",
                 "label": "The Flood",
                 "color": "#487868",
-                "desc": "The deluge. Noah. Gilgamesh. The Hindu Manu. Aztec versions. Australian versions. The pattern of the world being washed clean and one righteous remnant carrying it forward shows up almost universally. The reasons are debated.",
+                "desc": "A great flood sent to cleanse a corrupted world, survived by a righteous remnant who carries humanity forward. The pattern appears in Mesopotamian mythology centuries before Genesis — the Epic of Gilgamesh contains a flood story with a survivor, a boat, and animals. It appears in Hindu mythology, in Greek myth, in Aztec and Maya traditions, in Australian Aboriginal traditions. The universality is contested — some scholars argue independent origin, others argue diffusion, others point to the global prevalence of flood events in human prehistory as a shared referent. What all versions share is the moral structure: corruption, catastrophe, renewal.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -63370,7 +63370,7 @@ const LAYERS = [
                 "id": "x1_p_arch",
                 "label": "Archetypes",
                 "color": "#988898",
-                "desc": "The recurring characters. Mother. Father. Lover. Wise old man. Eternal youth. Carl Jung argued these are wired into the human psyche. Whether or not he was right about the wiring, the patterns recur across cultures.",
+                "desc": "The recurring characters that appear across mythologies and that Jung argued were structural features of the human psyche rather than borrowed cultural content. The Great Mother. The Wise Old Man. The Shadow. The Anima and Animus. The Eternal Youth. The Trickster. Whether these patterns are literally hardwired or are the result of the recurring conditions of human life — the helpless infant, the dying parent, the sexual rival, the dangerous outsider — they recur across traditions with enough consistency to demand explanation. Jung's explanation remains contested. The patterns themselves are real.",
                 "links": [
                   {
                     "label": "JSTOR",
@@ -63415,7 +63415,7 @@ const LAYERS = [
                 "id": "x1_p_apoc",
                 "label": "Apocalypse",
                 "color": "#583858",
-                "desc": "The end. Most cultures have an apocalypse story. Many have multiple — the world has ended several times before. American apocalypse storytelling has been doing significant cultural work since at least the Cold War.",
+                "desc": "The story of the world's end. Norse Ragnarok. Hindu Pralaya. The Book of Revelation. Aztec cosmology's sequence of world-ages. Zoroastrian eschatology. Most cultures have an apocalypse story — the recognition that the world as it exists is not permanent. American apocalypse is distinctive: the country has produced an enormous body of apocalyptic storytelling — nuclear, environmental, zombie, rapture — since the Cold War, reflecting both the specific terrors of the American moment and the deeper mythic need to imagine an ending. The apocalypse story is also, almost always, a creation story: the end makes room for the new.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -63530,7 +63530,7 @@ const LAYERS = [
                 "id": "x1_w_chi",
                 "label": "Chinese",
                 "color": "#886098",
-                "desc": "Pangu separating heaven and earth. The Jade Emperor and the celestial bureaucracy. The dragon as benevolent. The structure differs from European myth in ways that show how cultures organize the cosmos differently.",
+                "desc": "Chinese mythology begins with the cosmic egg and the giant Pangu who separated heaven and earth with his body. The Jade Emperor and the celestial bureaucracy reflect the political organization of imperial China. The dragon is benevolent — bringer of rain, symbol of imperial power — rather than the malevolent creature of Western tradition. The Eight Immortals. Chang'e on the moon. The mythology is inseparable from Chinese folk religion, Taoism, and Buddhism as they developed together over millennia. Chinese myth is one of the oldest continuous traditions in the world and remains culturally alive in ways that Greek and Roman mythology mostly no longer is.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -63581,7 +63581,7 @@ const LAYERS = [
                 "id": "x1_w_jap",
                 "label": "Japanese",
                 "color": "#a878a8",
-                "desc": "Amaterasu the sun goddess. Susanoo the storm. Izanagi and Izanami creating the islands. Shinto myth is partly a religion and partly a cultural memory of the country's origin.",
+                "desc": "Japanese mythology, recorded in the Kojiki and Nihon Shoki in the eighth century, tells of the creation of the islands from the union of Izanagi and Izanami, the birth of the sun goddess Amaterasu and the storm god Susanoo, and the divine lineage of the imperial family. The mythology is inseparable from Shinto practice and from Japanese cultural identity in ways that have been politically instrumentalized — most visibly in the militarist period of the twentieth century. The stories are also deeply beautiful, strange, and unlike anything in the Western tradition. The Japanese afterlife, presided over by Emma-O, resembles a bureaucratic court more than heaven or hell.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -63632,7 +63632,7 @@ const LAYERS = [
                 "id": "x1_w_ind",
                 "label": "Hindu Mythology",
                 "color": "#9868a0",
-                "desc": "Among the world's largest, oldest, and most living mythologies. The Mahabharata. The Ramayana. The Puranas. A pantheon of thousands and a system of philosophy that has been continuously reinterpreted for three millennia.",
+                "desc": "Among the world's largest, most complex, and most living mythological traditions. The Mahabharata — longer than the Iliad and Odyssey combined — contains hundreds of stories within its main narrative. The Ramayana. The Puranas. A pantheon of thousands of deities understood as aspects of a single divine reality. The philosophy underlying the stories — Advaita Vedanta, the multiplicity-within-unity of the divine — is sophisticated enough to have engaged Western philosophers for two centuries. Unlike Greek and Roman mythology, Hindu mythology has never been archived as a dead tradition. It is practiced, debated, and reinterpreted by a living billion people.",
                 "links": [
                   {
                     "label": "Sacred Texts",
@@ -63683,7 +63683,7 @@ const LAYERS = [
                 "id": "x1_w_afr",
                 "label": "African Mythologies",
                 "color": "#7858a0",
-                "desc": "Hundreds of distinct traditions across the continent. Yoruba. Akan. Dogon. Bantu cosmologies. Each has its own structure and most were transmitted orally rather than codified, which has cost an enormous amount to colonial disruption.",
+                "desc": "Hundreds of distinct traditions across the most culturally diverse continent on earth. Yoruba mythology, from West Africa, gave the world Orishas — divine forces that govern specific aspects of human experience — and through the diaspora gave the Americas Candomblé, Santería, and Vodou. Dogon cosmology from Mali contains astronomical knowledge about Sirius whose origin is still debated. Akan mythology, Bantu creation stories, Egyptian and Berber traditions. Much of the oral tradition was disrupted or destroyed by colonialism. Much survived through the people who carried it. The African mythological traditions are among the least studied and most misrepresented in Western education.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -63734,7 +63734,7 @@ const LAYERS = [
                 "id": "x1_w_nat",
                 "label": "Indigenous American",
                 "color": "#a86098",
-                "desc": "From the Inuit to the Mapuche, hundreds of distinct traditions. Coyote stories of the Plains. Lakota cosmology. Maya creation accounts. Most were systematically suppressed during colonization and many survived anyway.",
+                "desc": "From the Inuit of the Arctic to the Mapuche of Chile, hundreds of distinct indigenous American mythological traditions. Coyote stories across the Plains and Southwest. Lakota cosmology and the White Buffalo Calf Woman. Haudenosaunee creation accounts involving a woman falling through the sky. Maya creation narratives in the Popol Vuh. Aztec cosmology's five sun ages. Most of these traditions were systematically targeted for destruction during colonization — through residential schools, religious suppression, and the prohibition of ceremony. Many survived through elders who carried them in memory. Recovery and revitalization efforts are active across many communities.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -63785,7 +63785,7 @@ const LAYERS = [
                 "id": "x1_w_pol",
                 "label": "Polynesian & Oceanic",
                 "color": "#7888a0",
-                "desc": "The mythologies of the Pacific. Maui pulling islands from the sea. Pele the volcano goddess. Navigators carrying genealogies of stars. The tradition is alive and increasingly being reclaimed from colonial accounts.",
+                "desc": "The mythologies of the Pacific — Māori, Hawaiian, Samoan, Tongan, Melanesian, and dozens of others. Maui, the demigod trickster, pulling islands from the sea with his hook and slowing the sun to give farmers more daylight. Pele, the Hawaiian volcano goddess, whose movement shapes the landscape. The Māori creation account involving Tāne separating Ranginui the sky father and Papatūānuku the earth mother. These traditions contain sophisticated navigation knowledge, ecological understanding, and cosmological frameworks. They were suppressed by colonial evangelism and are being actively reclaimed as central to Pacific peoples' cultural identity and political sovereignty.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -63868,7 +63868,7 @@ const LAYERS = [
             "id": "x1_her",
             "label": "Heroes & Monsters",
             "color": "#8a4878",
-            "desc": "What myth puts at the center and what it puts at the edge. Heroes are who the culture wants its young to imagine becoming. Monsters are what the culture is afraid of, projected outward and given a face.",
+            "desc": "What myth puts at the center of its stories and what it exiles to the edges. Heroes model the virtues the culture wants to cultivate and the sacrifices it believes worth making. Monsters embody what the culture is afraid of, made external, given a shape you can fight. The pairing is almost universal: every heroic tradition requires an adversary. The adversary tells you as much about the culture as the hero does. What a society makes monstrous — what it projects outward as Other, as threatening, as deserving of defeat — is a direct readout of what that society cannot accept about itself.",
             "links": [
               {
                 "label": "Aeon",
@@ -63894,7 +63894,7 @@ const LAYERS = [
                 "id": "x1_h_class",
                 "label": "Classical Heroes",
                 "color": "#7a3868",
-                "desc": "Achilles. Hercules. Odysseus. The Greek and Roman model that shaped Western storytelling for two millennia. The heroes are flawed in specific ways and the cultures knew it.",
+                "desc": "Achilles, who chose glory over long life and understood the choice. Odysseus, who wanted home more than he wanted anything and still could not stop being curious. Hercules, who was stronger than anything and still could not outrun his own grief. The Greek and Roman heroic tradition shaped Western storytelling so thoroughly that its tropes and structures are still the default grammar of the genre. What the Greeks understood about their heroes is that the heroic quality is always also the fatal flaw — the strength is the same thing as the wound. That insight has not aged.",
                 "links": [
                   {
                     "label": "Perseus Digital Library",
@@ -63945,7 +63945,7 @@ const LAYERS = [
                 "id": "x1_h_mon",
                 "label": "Monsters",
                 "color": "#582858",
-                "desc": "Medusa. The Minotaur. Grendel. The leviathan. Monsters are the externalized fears of the culture that imagined them. Reading the monsters of a tradition tells you what its people were trying not to face.",
+                "desc": "Medusa, whose gaze turns to stone — and who was a beautiful woman before Poseidon violated her in Athena's temple and Athena punished her for it. The Minotaur, imprisoned in the labyrinth — born of Pasiphae's degradation, as much victim as monster. Grendel, who attacks the mead hall because he cannot be inside it. The great monsters of the literary tradition are almost never simply evil. They are exiled, wounded, or created by the failures of the societies that produce them. Reading the monster carefully usually reveals what the culture that made it was unwilling to look at in itself.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -63996,7 +63996,7 @@ const LAYERS = [
                 "id": "x1_h_drag",
                 "label": "Dragons",
                 "color": "#a85858",
-                "desc": "Almost universal. Western dragons hoard. Eastern dragons bless. The same body, opposite valences. The shape of the symbol is older than the meanings cultures attached.",
+                "desc": "Dragons appear in the mythologies of cultures across Europe, Asia, the Americas, and the Middle East in forms so similar that the shared template predates recorded contact between those traditions. Western dragons hoard gold, destroy towns, and must be slain by heroes. Eastern dragons — Chinese long, Japanese ryū — bring rain, are associated with imperial power, and are generally benevolent. The same reptilian body, the same scale and flight and fire, carrying opposite moral valences across traditions. The image is older than the meanings attached to it. What the deep human imagination is doing with the dragon is not yet satisfactorily explained.",
                 "links": [
                   {
                     "label": "Internet Archive",
@@ -64098,7 +64098,7 @@ const LAYERS = [
                 "id": "x1_h_msf",
                 "label": "Modern Fantasy & Science Fiction",
                 "color": "#785890",
-                "desc": "Tolkien. Le Guin. Star Wars. Marvel. Modern fantasy and SF are doing live mythological work — building shared symbolic systems that people use to think with. The genre is not separate from myth. It is myth, with current dates.",
+                "desc": "Tolkien built a secondary world with its own languages, histories, and creation mythology. Le Guin built worlds that thought seriously about gender, ecology, and anarchism. Star Wars gave a generation a hero's journey and a cosmology. Marvel built a shared mythology that became the most financially successful narrative franchise in history. Modern fantasy and science fiction are not entertainment derivatives of myth — they are myth, functioning in the contemporary role: building the symbolic systems through which a culture thinks about good and evil, sacrifice and power, the individual and the collective. The fact that it is marketed as genre does not change what it is doing.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -64149,7 +64149,7 @@ const LAYERS = [
                 "id": "x1_h_vil",
                 "label": "Villains",
                 "color": "#382848",
-                "desc": "What the story positions as the obstacle. Great villains are reflections of what the culture wants to disown. American villains have shifted across cycles — communist, terrorist, oligarch — in ways that map onto the political moment.",
+                "desc": "The figure the story needs in order to have something for the hero to overcome, and the figure the culture needs in order to have something to disown. American villainy has shifted across cultural cycles — Communist infiltrators in the Cold War, Arab terrorists after 9/11, corrupt oligarchs and corporate villains in the post-2008 era. Each villainous type tells you what the culture's deepest anxiety was at that moment. The best villains are not simply evil. They have coherent logic, genuine power, and something of the hero in them — which is what makes them dangerous and what makes them interesting. The villain who is just evil is a wish. The villain who makes sense is a warning.",
                 "links": [
                   {
                     "label": "Aeon",
@@ -64459,7 +64459,7 @@ const LAYERS = [
                     "id": "x5_jud_denom",
                     "label": "Denominations",
                     "color": "#5a48a0",
-                    "desc": "Judaism is not monolithic. The major denominations represent genuinely different approaches to Jewish law, tradition, and modernity — not just differences of degree but differences of principle about what Judaism requires and permits.",
+                    "desc": "Judaism is not one thing practiced one way. Orthodox Judaism holds that Jewish law — halakha — is divine in origin and binding, and that its requirements govern every aspect of daily life: what is eaten, how time is marked, how prayer is conducted. Conservative Judaism holds the law as binding but subject to scholarly reinterpretation in changing circumstances. Reform Judaism treats Jewish law as a guide rather than a requirement, emphasizing ethical principles and individual autonomy. Reconstructionist and Renewal movements understand Judaism as an evolving civilization rather than a revealed religion. These are genuine theological disagreements, not just differences of practice.",
                     "links": [
                       {
                         "label": "My Jewish Learning",
@@ -68590,7 +68590,7 @@ const LAYERS = [
                 "id": "x3_seasons",
                 "label": "Seasons & Lunar Cycles",
                 "color": "#7a6a9a",
-                "desc": "The original clock. The tilt of the earth, the orbit of the moon — these rhythms governed planting and harvest, migration and shelter, ritual and rest for most of human history. They still govern more than we admit.",
+                "desc": "The tilt of the earth on its axis produces seasons. The orbit of the moon produces a monthly rhythm. These cycles governed the fundamental organization of human life for most of the species' existence — when to plant, when to harvest, when to migrate, when to shelter, when to gather and when to disperse. Religion, agriculture, trade, warfare, and political succession were all organized around them. The invention of artificial light, climate control, and the industrial calendar did not end these rhythms. It covered them. The body still registers them. The disruption of seasonal light cycles is one of the more documented contributors to the depression and anxiety that characterize modern urban life.",
                 "links": [
                   {
                     "label": "NOAA",
@@ -68647,7 +68647,7 @@ const LAYERS = [
                 "id": "x3_calendar",
                 "label": "The Calendar",
                 "color": "#7a6a9a",
-                "desc": "The human attempt to standardize the cycle. The Sumerian, Egyptian, Mayan, Julian, Gregorian — each a negotiation between astronomical reality and political necessity. The calendar you use was decided by a pope in 1582.",
+                "desc": "Every civilization has had to solve the problem of synchronizing the lunar cycle, the solar year, and the agricultural season — which do not divide evenly into each other. The Sumerians created a 360-day year. The Egyptians added five intercalary days. Julius Caesar reformed the Roman calendar. Pope Gregory XIII reformed it again in 1582, producing the Gregorian calendar now in global use. The Mayan Long Count calendar, the Hebrew calendar, the Islamic lunar calendar, the Chinese lunisolar calendar — each is a different negotiation between astronomical reality and human need. The calendar you use was not discovered. It was decided. Usually by the person with the most power to make it stick.",
                 "links": [
                   {
                     "label": "World History Encyclopedia",
@@ -68704,7 +68704,7 @@ const LAYERS = [
                 "id": "x3_agtime",
                 "label": "Agricultural Time",
                 "color": "#7a6a9a",
-                "desc": "For ten thousand years, time meant the growing season. When to plant, when to harvest, when to store, when to rest. The entire structure of ancient society — religion, governance, trade, war — was organized around the agricultural cycle.",
+                "desc": "For roughly ten thousand years — the entire span of human civilization — time meant the agricultural cycle. When to break ground. When to plant. When to watch the sky for rain. When to harvest before the frost. When to store enough to survive winter. The entire architecture of ancient society was organized around this rhythm: religious calendars marked planting and harvest festivals, governance structured itself around the tax of grain, trade moved with the seasonal surplus, and war was fought when the crops were in. The industrial revolution replaced agricultural time with clock time and the factory schedule. The transition was recent, incomplete, and not without cost.",
                 "links": [
                   {
                     "label": "World History Encyclopedia",
@@ -68819,7 +68819,7 @@ const LAYERS = [
                 "id": "x3_progress",
                 "label": "Progress & History",
                 "color": "#7a6a9a",
-                "desc": "The belief that things can get better — and the evidence that sometimes they do. Linear time gave us the idea of improvement, of building on what came before. It also gave us the burden of believing every generation should do better than the last.",
+                "desc": "The belief, distinctive to the modern West though not confined to it, that history moves in a direction — that things can get better, that the future can be an improvement on the past, that human effort accumulates into advancement. The idea depends on linear time. It produced the Enlightenment, the scientific revolution, liberal democracy, and the technological transformation of material life. It also produced the belief that each generation is obligated to do better than the last, and the anxiety that accompanies any evidence that things are getting worse. Progress is partly an empirical claim — things have improved in specific measurable ways — and partly a faith.",
                 "links": [
                   {
                     "label": "Our World in Data",
@@ -68876,7 +68876,7 @@ const LAYERS = [
                 "id": "x3_cause",
                 "label": "Cause & Effect",
                 "color": "#7a6a9a",
-                "desc": "The foundational assumption of linear time — that what happens now was caused by what happened before, and will cause what comes next. The basis of science, law, and narrative. Quantum mechanics complicates this considerably.",
+                "desc": "The foundational assumption beneath science, law, history, and narrative: what happens now was caused by what happened before, and will in turn cause what comes next. The world is legible because events have explanations. Responsibility is meaningful because actions have consequences. Stories are possible because later follows from earlier. The assumption is so embedded in how humans think that violating it — as quantum mechanics does at the subatomic level, where particles can be entangled across space and causality breaks down — is genuinely disorienting. Most of how we organize collective life depends on this assumption holding. At the deepest level of physical reality, it doesn't quite.",
                 "links": [
                   {
                     "label": "Stanford Encyclopedia of Philosophy",
@@ -68933,7 +68933,7 @@ const LAYERS = [
                 "id": "x3_arrow",
                 "label": "The Arrow of Time",
                 "color": "#7a6a9a",
-                "desc": "Why does time only move forward? The laws of physics are mostly reversible — a film of billiard balls played backward looks equally plausible. But entropy gives time its direction. Everything falls apart eventually. That is the arrow.",
+                "desc": "Why does time only move in one direction? The laws of classical physics are mostly time-symmetric — a film of billiard balls colliding looks equally plausible played forward or backward. But entropy — the tendency of closed systems toward increasing disorder — gives time its arrow. The universe began in an extraordinarily low-entropy state. It has been moving toward higher entropy ever since. Ice melts, stars burn out, order becomes disorder, the future is always more uncertain than the past. The second law of thermodynamics is why time feels irreversible. It is also why the universe is running down — and why life, which locally reverses entropy at the cost of dispersing it elsewhere, is so improbable and so remarkable.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -68990,7 +68990,7 @@ const LAYERS = [
                 "id": "x3_entropy",
                 "label": "Entropy",
                 "color": "#7a6a9a",
-                "desc": "The second law of thermodynamics: disorder always increases in a closed system. Ice melts, stars burn out, empires fall. Entropy is why time feels irreversible and why the future is always more uncertain than the past.",
+                "desc": "The second law of thermodynamics: in any closed system, entropy — disorder, the number of possible microstates — always increases or stays the same. It never spontaneously decreases. Ice melts into water, not the reverse. Perfume diffuses through a room, not the reverse. Stars burn out. Organized structures decay. The law is not about chaos in the colloquial sense but about the overwhelming statistical tendency of energy and matter to spread out, to become less organized, to approach the configurations that have the most possible arrangements. Life temporarily and locally reverses this — at the cost of importing energy and exporting entropy. Every living thing is a temporary island of order in an ocean of increasing disorder.",
                 "links": [
                   {
                     "label": "Nautilus",
@@ -69167,7 +69167,7 @@ const LAYERS = [
                 "id": "x3_qm",
                 "label": "Quantum Mechanics",
                 "color": "#7a6a9a",
-                "desc": "At the subatomic level, particles exist in superposition — multiple states simultaneously — until observed. Entangled particles affect each other instantly across any distance. The neat causality of linear time begins to dissolve.",
+                "desc": "The physics of the very small, where the familiar rules dissolve. Particles exist in superposition — multiple states simultaneously — until measured, at which point the wave function collapses into a definite state. Entangled particles affect each other instantaneously regardless of distance, a phenomenon Einstein called spooky action at a distance and which has been experimentally confirmed. The observer is not separate from the observed — measurement changes what is measured. The neat causality of everyday experience is an approximation that breaks down at the quantum scale. Quantum mechanics is the most precisely tested theory in the history of physics. Nobody fully understands what it means.",
                 "links": [
                   {
                     "label": "Nautilus",
