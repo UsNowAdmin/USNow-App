@@ -1,18 +1,21 @@
-# USNow.app
-> usnow.app | It's Not AI, It's Organized Intelligence
-> copyrighted May 1, 2026
+# USNow — It's Not AI. It's Organized Intelligence.
+> usnow.app | The Interactive World Compendium
+> The Question is the Answer. Start Anywhere. Go Anywhere.
+> © Jonathan Tatun, 2026. All rights reserved.
 
-USNow is a civic and cultural knowledge platform organized as an interactive map of everything that touches human life — from personal identity and family to politics, history, science, and the cosmos. It covers 1,297 topics across 7 layers: ME MYSELF & I, ORIGINS, COMMUNITY & CULTURE, KNOWLEDGE & LEARNING, POWER & POLITICS, HISTORY & CIVILIZATION, and EVEN FURTHER BACK.
+USNow is a worldwide civic and cultural knowledge platform — an interactive map of everything that touches human life, organized from the inside out. It covers 1,297 topics across 7 layers: ME MYSELF & I, ORIGINS, COMMUNITY & CULTURE, KNOWLEDGE & LEARNING, POWER & POLITICS, HISTORY & CIVILIZATION, and EVEN FURTHER BACK.
 
-The site is built for exploration, not consumption. Topics are connected through a web of cross-links, related concepts, and curated offsite sources. The voice is plain, factual, and unflinching — never academic, never preachy.
+Topics include: democracy, capitalism, race, family, consciousness, war, religion, technology, climate change, inequality, mythology, death, media manipulation, labor rights, military empire, surveillance, the attention economy, grief, attachment theory, student debt, nuclear weapons, the revolving door, ancestral memory, and 1,280 more.
+
+The site is built for exploration, not consumption. Topics are connected through a web of cross-links, related concepts, and curated offsite sources. The voice is plain, factual, and unflinching — never academic, never preachy. Assumes an intelligent adult reader.
 
 ## Full Content Index
-The complete text of over 1200 topic descriptions is available at:
+The complete structured text of all 1,297 topic descriptions — organized by layer, orb, and branch — is available at:
 https://usnow.app/llms-full.txt
 
 ## Built-in Glossary
-The World Compendium defines key terms used across the site, cross-referenced and indexed throughout.
+The World Compendium defines key civic and cultural terms used across the site — with phonetics, etymology, history, and cross-references throughout.
 
 ## Author
-usnow.app 
-
+Jonathan Tatun | atjon.substack.com | usnow.app
+Target launch: July 4, 2026 — 250th Anniversary of the Declaration of Independence.
