@@ -809,7 +809,7 @@ function renderCard(data){
   if(data.topPills&&data.topPills.length>0){
     window._deepCards=window._deepCards||{};
     data.topPills.forEach(d=>{
-      const c=d.color||data.color;const pc=data.color;const cl=lightenHex(pc,0.45);
+    const c=data.color;const pc=data.color;const cl=lightenHex(pc,0.45);
       const key='dp_'+d.id;
       window._deepCards[key]=JSON.stringify({color:c,glow:data.glow,tag:data.title,scaleText:null,title:d.label,sub:null,desc:d.desc||'',links:d.links||[],bottomPills:d.bottomPills||[],topPills:d.topPills||[],isLayer:false});
       topPills.push(`<span class="modal-orb-tag" style="color:${cl};background:${pc}28;border:1px solid ${pc}66;" onclick="cardNavOpen(JSON.parse(window._deepCards['${key}']));"><span class="modal-orb-dot" style="background:${sphereGrad(pc)};border:1px solid ${sphereBorder(pc)};"></span>${d.label}</span>`);
