@@ -626,7 +626,7 @@ const LAYERS = [
             "bottomPills": [
               {
                 "id": "cosmos_tp5",
-                "label": "The Observer",
+                "label": "The Cosmic Observer",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -1836,7 +1836,7 @@ const LAYERS = [
           },
           {
             "id": "x2_l_mem",
-            "label": "Memory",
+            "label": "Legacy & Memory",
             "desc": "",
             "links": [],
             "topPills": [],
@@ -2298,7 +2298,7 @@ const LAYERS = [
       },
       {
         "id": "cosmos_tp5",
-        "label": "The Observer",
+        "label": "The Cosmic Observer",
         "desc": "",
         "links": [],
         "topPills": [],
@@ -2457,7 +2457,7 @@ const LAYERS = [
         "bottomPills": [
           {
             "id": "f_gen_anc_mig",
-            "label": "Migration",
+            "label": "Genetic Migration",
             "desc": "",
             "links": [],
             "topPills": [],
@@ -3873,7 +3873,7 @@ const LAYERS = [
               },
               {
                 "id": "f_gen_anc_mig",
-                "label": "Migration",
+                "label": "Genetic Migration",
                 "color": "#b86838",
                 "desc": "The constant motion of people across the map. Every population has a migration story. Most have several, layered on top of each other across centuries. The genes carry the receipts.",
                 "links": [
@@ -3945,7 +3945,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "f_gen_anc_mig",
-                    "label": "Migration",
+                    "label": "Genetic Migration",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -4065,7 +4065,7 @@ const LAYERS = [
                   },
                   {
                     "id": "f_gen_anc_mig",
-                    "label": "Migration",
+                    "label": "Genetic Migration",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -5499,7 +5499,7 @@ const LAYERS = [
                   },
                   {
                     "id": "f_sys_roles",
-                    "label": "Roles",
+                    "label": "Family Roles",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -5541,7 +5541,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "f_sys_roles",
-                    "label": "Roles",
+                    "label": "Family Roles",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -5629,7 +5629,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "f_sys_roles",
-                "label": "Roles",
+                "label": "Family Roles",
                 "color": "#8a4828",
                 "desc": "Who gets cast as what. The hero. The scapegoat. The lost child. The mascot. The roles serve the system — they manage the anxiety of whatever is unspoken in the family. The cost is borne by the people stuck inside them.",
                 "links": [
@@ -5752,7 +5752,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "f_sys_roles",
-                    "label": "Roles",
+                    "label": "Family Roles",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -5821,7 +5821,7 @@ const LAYERS = [
                   },
                   {
                     "id": "f_sys_roles",
-                    "label": "Roles",
+                    "label": "Family Roles",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -6157,51 +6157,10 @@ const LAYERS = [
                 "id": "fc_we_assets",
                 "label": "Assets",
                 "color": "#b86038",
-                "desc": "What you own that holds or grows in value. Houses. Stocks. Land. The thing that rents itself out. Assets compound. Wages don't. The widening gap between asset-holders and wage-earners is the engine of modern American inequality.",
-                "links": [
-                  {
-                    "label": "Federal Reserve",
-                    "url": "https://www.federalreserve.gov",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  },
-                  {
-                    "label": "Inequality.org — Institute for Policy Studies",
-                    "url": "https://inequality.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "fc_we_own",
-                    "label": "Ownership",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_wealth",
-                    "label": "Wealth & Income",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_mob_dream",
-                    "label": "The American Dream",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -6246,6 +6205,33 @@ const LAYERS = [
                   {
                     "id": "fc_mob_debt",
                     "label": "Debt",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_we_debt",
+                    "label": "Debt",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_mobility",
+                    "label": "Social Mobility",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_mob_mer",
+                    "label": "Meritocracy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -6576,6 +6562,42 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "pcorp_lab",
+                    "label": "Labor & Management",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_left_labor",
+                    "label": "Labor & Unions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2_work",
+                    "label": "Work & Wages",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2_w_prod",
+                    "label": "Productivity Gap",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -6846,51 +6868,10 @@ const LAYERS = [
                 "id": "fc_ed_pub",
                 "label": "Public Schools",
                 "color": "#a85830",
-                "desc": "Funded mostly by local property taxes. Which means rich neighborhoods have rich schools and poor neighborhoods have poor schools, and the country pretends this isn't a deliberate choice. It is.",
-                "links": [
-                  {
-                    "label": "National Center for Education Statistics",
-                    "url": "https://nces.ed.gov",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  },
-                  {
-                    "label": "Economic Policy Institute",
-                    "url": "https://www.epi.org",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "fc_edu",
-                    "label": "Education & Opportunity",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_h_seg",
-                    "label": "Segregation",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_ed_gate",
-                    "label": "Gatekeeping",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -6999,57 +6980,10 @@ const LAYERS = [
                 "id": "fc_ed_debt",
                 "label": "Student Debt",
                 "color": "#8a4828",
-                "desc": "Roughly $1.7 trillion held by 43 million Americans. The debt does not go away in bankruptcy. It does not go away if the school closed. It does not go away if the credential turned out to be worthless. It is a uniquely durable form of poverty for an entire generation.",
-                "links": [
-                  {
-                    "label": "Congressional Budget Office",
-                    "url": "https://www.cbo.gov",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  },
-                  {
-                    "label": "Federal Reserve",
-                    "url": "https://www.federalreserve.gov",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  },
-                  {
-                    "label": "Economic Policy Institute",
-                    "url": "https://www.epi.org",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "e_fe",
-                    "label": "Formal Education",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_we_debt",
-                    "label": "Debt",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_gov",
-                    "label": "Government",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -7638,7 +7572,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "frc_eth_lang",
-                    "label": "Language",
+                    "label": "Language & Identity",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -7980,45 +7914,10 @@ const LAYERS = [
                 "id": "fc_mob_debt",
                 "label": "Debt",
                 "color": "#9a5028",
-                "desc": "The other direction. Heavy household debt holds families in place. It is harder to take a risk, change careers, or move toward opportunity when the monthly payments are non-negotiable.",
-                "links": [
-                  {
-                    "label": "Federal Reserve",
-                    "url": "https://www.federalreserve.gov",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "fc_we_debt",
-                    "label": "Debt",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_mobility",
-                    "label": "Social Mobility",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_mob_mer",
-                    "label": "Meritocracy",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -8732,7 +8631,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "frc_eth_lang",
-                "label": "Language",
+                "label": "Language & Identity",
                 "color": "#9a5028",
                 "desc": "The first thing a community loses when it gets pressured to assimilate. The first thing reclaimed when communities push back.",
                 "links": [
@@ -10260,6 +10159,24 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "crel_fr_loy",
+                    "label": "Loyalty",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "crel_tr_rep",
+                    "label": "Repair",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -10735,7 +10652,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x2_grief",
-                    "label": "Grief",
+                    "label": "Grief & Loss",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -11264,45 +11181,10 @@ const LAYERS = [
                 "id": "crel_tr_loy",
                 "label": "Loyalty",
                 "color": "#7a4050",
-                "desc": "Where you stand when it costs something. Most loyalty is cheap until tested.",
-                "links": [
-                  {
-                    "label": "American Psychological Association",
-                    "url": "https://apa.org",
-                    "emoji": "🧠",
-                    "tag": "MIND"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "crel_trust",
-                    "label": "Trust & Betrayal",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_fr_loy",
-                    "label": "Loyalty",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_tr_rep",
-                    "label": "Repair",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -11939,6 +11821,18 @@ const LAYERS = [
                     "url": "https://www.ipcc.ch",
                     "emoji": "🌍",
                     "tag": "SCIENCE"
+                  },
+                  {
+                    "label": "NOAA",
+                    "url": "https://www.noaa.gov",
+                    "emoji": "🌍",
+                    "tag": "EARTH"
+                  },
+                  {
+                    "label": "Our World in Data",
+                    "url": "https://ourworldindata.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [
@@ -12240,6 +12134,24 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "c_env_cc",
+                    "label": "Climate Change",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h5_c_pol",
+                    "label": "Polar Regions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -12478,6 +12390,18 @@ const LAYERS = [
                     "url": "https://www.globalforestwatch.org",
                     "emoji": "🌍",
                     "tag": "SCIENCE"
+                  },
+                  {
+                    "label": "National Geographic",
+                    "url": "https://www.nationalgeographic.com",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
+                  },
+                  {
+                    "label": "Our World in Data",
+                    "url": "https://ourworldindata.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -12503,6 +12427,24 @@ const LAYERS = [
                   {
                     "id": "c_env_cc",
                     "label": "Climate Change",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h5_hum",
+                    "label": "Human Geography",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c_env_bio_extinction",
+                    "label": "The Sixth Extinction",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -12561,6 +12503,18 @@ const LAYERS = [
                 "url": "https://pacinst.org",
                 "emoji": "🌍",
                 "tag": "SCIENCE"
+              },
+              {
+                "label": "U.S. Geological Survey",
+                "url": "https://www.usgs.gov",
+                "emoji": "🌍",
+                "tag": "EARTH"
+              },
+              {
+                "label": "NOAA",
+                "url": "https://www.noaa.gov",
+                "emoji": "🌍",
+                "tag": "EARTH"
               }
             ],
             "topPills": [
@@ -12620,6 +12574,12 @@ const LAYERS = [
                     "url": "https://www.noaa.gov",
                     "emoji": "🌍",
                     "tag": "SCIENCE"
+                  },
+                  {
+                    "label": "National Geographic",
+                    "url": "https://www.nationalgeographic.com",
+                    "emoji": "🌍",
+                    "tag": "GLOBAL"
                   }
                 ],
                 "topPills": [
@@ -12829,6 +12789,33 @@ const LAYERS = [
                   {
                     "id": "c_env_ocean_plastic",
                     "label": "Plastic & Microplastics",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h5_clim",
+                    "label": "Climate & Biomes",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c_env_cc",
+                    "label": "Climate Change",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h5_s_trade",
+                    "label": "Trade Routes",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -13123,6 +13110,33 @@ const LAYERS = [
               {
                 "id": "c_env_water_wars",
                 "label": "Water Wars",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h5_set",
+                "label": "Resources & Settlement",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "c_env_cc",
+                "label": "Climate Change",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h5_s_food",
+                "label": "Food Systems",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -14211,6 +14225,12 @@ const LAYERS = [
                 "url": "https://atjon.substack.com",
                 "emoji": "⭐",
                 "tag": "USNOW"
+              },
+              {
+                "label": "MIT Technology Review",
+                "url": "https://www.technologyreview.com",
+                "emoji": "📡",
+                "tag": "TECH"
               }
             ],
             "topPills": [
@@ -14542,6 +14562,39 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
+              },
+              {
+                "id": "c2",
+                "label": "Social Media",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e1_surveillance",
+                "label": "Surveillance Capitalism",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "c7_algo_editor",
+                "label": "The Algorithm as Editor",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
+              },
+              {
+                "id": "edu_tp4",
+                "label": "Misinformation",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": []
               }
             ],
             "orbs": []
@@ -15487,6 +15540,12 @@ const LAYERS = [
                 "url": "https://www.propublica.org",
                 "emoji": "📰",
                 "tag": "JOURNALISM"
+              },
+              {
+                "label": "Pew Research — misinformation",
+                "url": "https://www.pewresearch.org",
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -15824,6 +15883,42 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
+              },
+              {
+                "id": "c2_misinfo",
+                "label": "Misinformation",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "s5_bias",
+                "label": "Bias",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p5_manipulation",
+                "label": "Manipulation & Framing",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "edu_tp3",
+                "label": "The Press to the Feed",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
               }
             ],
             "orbs": []
@@ -15985,7 +16080,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h6_r_pri",
-                    "label": "Privacy",
+                    "label": "Right to Privacy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -15999,51 +16094,10 @@ const LAYERS = [
                 "id": "c2_su_pred",
                 "label": "Behavioral Prediction",
                 "color": "#4a4858",
-                "desc": "The point. The platforms aren't just selling ads against your data — they are selling the ability to nudge what you do next. That is a different product than advertising. The market for it is still being defined.",
-                "links": [
-                  {
-                    "label": "Stanford AI Index",
-                    "url": "https://aiindex.stanford.edu",
-                    "emoji": "🤖",
-                    "tag": "AI"
-                  },
-                  {
-                    "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
-                    "tag": "RIGHTS"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c2_surv",
-                    "label": "Surveillance & Data",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c2_su_brok",
-                    "label": "Data Brokers",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s5_att",
-                    "label": "Attention",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -16135,7 +16189,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h6_r_pri",
-                    "label": "Privacy",
+                    "label": "Right to Privacy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -16593,7 +16647,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "c4_f_bel",
-                "label": "Belonging",
+                "label": "Fandom & Belonging",
                 "color": "#6a9848",
                 "desc": "The reason most of fandom exists. People want a we. The team becomes the easy answer.",
                 "links": [
@@ -16683,7 +16737,7 @@ const LAYERS = [
               },
               {
                 "id": "c4_f_id",
-                "label": "Identity",
+                "label": "Fan Identity",
                 "color": "#8ab068",
                 "desc": "The team becomes the self. Fans of a losing team learn something about loyalty under bad conditions. Fans of a winning team learn something else.",
                 "links": [
@@ -16851,7 +16905,7 @@ const LAYERS = [
                   },
                   {
                     "id": "c4_f_id",
-                    "label": "Identity",
+                    "label": "Fan Identity",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -17333,7 +17387,7 @@ const LAYERS = [
                   },
                   {
                     "id": "c4_b_own",
-                    "label": "Ownership",
+                    "label": "Media Ownership",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -17675,45 +17729,10 @@ const LAYERS = [
                 "id": "c4_m_dance",
                 "label": "Dance",
                 "color": "#c868a0",
-                "desc": "Music in the body. Dance predates writing about music by a wide margin. Most cultural forms began here.",
-                "links": [
-                  {
-                    "label": "JSTOR",
-                    "url": "https://jstor.org",
-                    "emoji": "🔬",
-                    "tag": "RESEARCH"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c4_mus",
-                    "label": "Music & Performance",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x5_indigenous",
-                    "label": "Indigenous & Animist",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fam_tp4",
-                    "label": "Ritual & Tradition",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -17953,7 +17972,7 @@ const LAYERS = [
                   },
                   {
                     "id": "c4_b_con",
-                    "label": "Contracts",
+                    "label": "Entertainment Contracts",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -17974,7 +17993,7 @@ const LAYERS = [
               },
               {
                 "id": "c4_b_con",
-                "label": "Contracts",
+                "label": "Entertainment Contracts",
                 "color": "#785838",
                 "desc": "The fine print. Entertainment contracts have gotten more extractive as the platforms consolidated. Royalty structures, residual rights, ownership of likeness — all the things that used to feed working artists are being renegotiated downward.",
                 "links": [
@@ -18021,50 +18040,15 @@ const LAYERS = [
                 "id": "c4_b_ad",
                 "label": "Advertising",
                 "color": "#886848",
-                "desc": "The other revenue stream. Most entertainment is paid for by selling audiences to advertisers. The exceptions — premium subscriptions — also tend toward ads eventually.",
-                "links": [
-                  {
-                    "label": "Bureau of Labor Statistics",
-                    "url": "https://www.bls.gov",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c4_biz",
-                    "label": "The Business of Entertainment",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c2_surv",
-                    "label": "Surveillance & Data",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c2_alg",
-                    "label": "The Algorithm",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
                 "id": "c4_b_own",
-                "label": "Ownership",
+                "label": "Media Ownership",
                 "color": "#586028",
                 "desc": "The handful of companies. Disney, Comcast, Paramount, Warner, Sony, a few others. American entertainment ownership is more concentrated now than when the antitrust laws were written.",
                 "links": [
@@ -18502,65 +18486,10 @@ const LAYERS = [
         "id": "com_tp5",
         "label": "The Algorithm",
         "color": "#4a9a60",
-        "desc": "The invisible editor. Every piece of content you see has been ranked, filtered, and served by a system optimized for engagement — which turned out to mean outrage, fear, and the tribal affirmation of what you already believe. The algorithm did not create human division. It found it, amplified it, and discovered that division was more profitable than connection. That is not a design flaw. It is the design.",
-        "links": [
-          {
-            "label": "EFF — algorithmic accountability",
-            "url": "https://www.eff.org",
-            "emoji": "📡",
-            "tag": "TECH"
-          },
-          {
-            "label": "MIT Technology Review",
-            "url": "https://www.technologyreview.com",
-            "emoji": "📡",
-            "tag": "TECH"
-          }
-        ],
+        "desc": "",
+        "links": [],
         "topPills": [],
-        "bottomPills": [
-          {
-            "id": "c2",
-            "label": "Social Media",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "e1_surveillance",
-            "label": "Surveillance Capitalism",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "c7_algo_editor",
-            "label": "The Algorithm as Editor",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "p5",
-            "label": "Media",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          },
-          {
-            "id": "edu_tp4",
-            "label": "Misinformation",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": []
-          }
-        ],
+        "bottomPills": [],
         "orbs": []
       }
     ],
@@ -19047,7 +18976,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h6_r_pri",
-                    "label": "Privacy",
+                    "label": "Right to Privacy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -19366,6 +19295,15 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "e1_o_proto",
+                    "label": "Protocols",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -19559,7 +19497,7 @@ const LAYERS = [
               },
               {
                 "id": "e1_s_rec",
-                "label": "Recommendation",
+                "label": "Search Recommendation",
                 "color": "#4a8868",
                 "desc": "What the platform suggests when you didn't ask. Recommendation is search inverted — and increasingly the way people encounter information.",
                 "links": [
@@ -19592,7 +19530,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e1_s_rank",
-                    "label": "Ranking",
+                    "label": "Search Ranking",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -19649,7 +19587,7 @@ const LAYERS = [
               },
               {
                 "id": "e1_s_rank",
-                "label": "Ranking",
+                "label": "Search Ranking",
                 "color": "#2a6848",
                 "desc": "The order results come in. Ranking is editorial work that people do not perceive as editorial. The top three results get the overwhelming majority of clicks.",
                 "links": [
@@ -19733,7 +19671,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e1_s_rank",
-                    "label": "Ranking",
+                    "label": "Search Ranking",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -21041,7 +20979,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e_ah_geometry",
-                    "label": "Geometry",
+                    "label": "Geometry & Form",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -22543,7 +22481,7 @@ const LAYERS = [
               },
               {
                 "id": "e2_quantum_hist",
-                "label": "Quantum Mechanics",
+                "label": "The Quantum Revolution",
                 "color": "#3858a8",
                 "desc": "The early 20th century discovery that the universe at the smallest scales behaves nothing like the world we experience. Einstein, Bohr, Heisenberg, Schrödinger — the founders of quantum mechanics disagreed profoundly about what it meant, and that disagreement has never been fully resolved. It remains the most successful and most philosophically troubling theory in the history of science.",
                 "links": [
@@ -22958,7 +22896,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e_ah_geometry",
-                    "label": "Geometry",
+                    "label": "Geometry & Form",
                     "color": "#4858b8",
                     "desc": "Number in space. The study of shape, form, proportion, and spatial relationship. Geometry was considered the discipline that trained the mind to think about what is eternal and unchanging — because a triangle is a triangle in every culture, in every century, on every planet. It was the classical gateway to philosophy.",
                     "links": [
@@ -23003,7 +22941,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e_ah_music_quad",
-                    "label": "Music",
+                    "label": "Music & Mathematics",
                     "color": "#3858c0",
                     "desc": "Number in time — the quadrivium's entry for music was not about composition or performance but about harmony as a mathematical relationship. The ratio between frequencies. The structure of consonance and dissonance. The Pythagoreans discovered that musical intervals correspond to simple whole-number ratios, and concluded that the universe itself was organized on the same principle. The music of the spheres was not a metaphor to them.",
                     "links": [
@@ -23048,7 +22986,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e_ah_astronomy_quad",
-                    "label": "Astronomy",
+                    "label": "Astronomy & the Quadrivium",
                     "color": "#2848b0",
                     "desc": "Number in space and time — the capstone of the quadrivium. The observation of celestial cycles and the mathematical modeling of their motion. Astronomy was the discipline where the other three converged: arithmetic to count, geometry to map, music's ratios to describe orbital harmony. Kepler still used musical ratios to describe planetary motion. The line between astronomy and astrology was not drawn until the Scientific Revolution — and even then, it was contested.",
                     "links": [
@@ -23113,7 +23051,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e_ah_music_quad",
-                    "label": "Music",
+                    "label": "Music & Mathematics",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -23297,7 +23235,7 @@ const LAYERS = [
                   },
                   {
                     "id": "e_ah_geometry",
-                    "label": "Geometry",
+                    "label": "Geometry & Form",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -23571,6 +23509,12 @@ const LAYERS = [
                     "url": "https://www.themarginalian.org",
                     "emoji": "💃",
                     "tag": "CULTURE"
+                  },
+                  {
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -23596,6 +23540,33 @@ const LAYERS = [
                   {
                     "id": "c4_m_dance",
                     "label": "Dance",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c4_mus",
+                    "label": "Music & Performance",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x5_indigenous",
+                    "label": "Indigenous & Animist",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fam_tp4",
+                    "label": "Ritual & Tradition",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -24384,6 +24355,18 @@ const LAYERS = [
                 "url": "https://www.usaspending.gov",
                 "emoji": "💰",
                 "tag": "BUDGET"
+              },
+              {
+                "label": "National Center for Education Statistics",
+                "url": "https://nces.ed.gov",
+                "emoji": "📊",
+                "tag": "DATA"
+              },
+              {
+                "label": "Economic Policy Institute",
+                "url": "https://www.epi.org",
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -24481,6 +24464,24 @@ const LAYERS = [
                 "topPills": [],
                 "bottomPills": [],
                 "orbs": []
+              },
+              {
+                "id": "fc_edu",
+                "label": "Education & Opportunity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "fc_ed_gate",
+                "label": "Gatekeeping",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
               }
             ],
             "orbs": []
@@ -24489,60 +24490,10 @@ const LAYERS = [
             "id": "e4",
             "label": "Student Debt",
             "color": "#183898",
-            "desc": "The financialization of learning. Knowledge behind a toll. The mechanism by which education became credential, credential became debt, and debt became a life sentence on the front end of adulthood.",
-            "links": [
-              {
-                "label": "CBO Data",
-                "url": "https://www.cbo.gov",
-                "emoji": "💰",
-                "tag": "BUDGET"
-              },
-              {
-                "label": "ProPublica: Student Debt",
-                "url": "https://www.propublica.org",
-                "emoji": "📰",
-                "tag": "JOURNALISM"
-              }
-            ],
+            "desc": "",
+            "links": [],
             "topPills": [],
-            "bottomPills": [
-              {
-                "id": "e_fe",
-                "label": "Formal\nEducation",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "fc_ed_debt",
-                "label": "Student Debt",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "p2_d_stu",
-                "label": "Student Debt",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "fc_mob_dream",
-                "label": "The American Dream",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
-            ],
+            "bottomPills": [],
             "orbs": []
           },
           {
@@ -24612,7 +24563,7 @@ const LAYERS = [
                   },
                   {
                     "id": "efe_ec_inq",
-                    "label": "Inequality",
+                    "label": "Early Childhood Inequality",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -24714,7 +24665,7 @@ const LAYERS = [
                   },
                   {
                     "id": "efe_ec_inq",
-                    "label": "Inequality",
+                    "label": "Early Childhood Inequality",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -24765,7 +24716,7 @@ const LAYERS = [
                   },
                   {
                     "id": "efe_ec_inq",
-                    "label": "Inequality",
+                    "label": "Early Childhood Inequality",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -24786,7 +24737,7 @@ const LAYERS = [
               },
               {
                 "id": "efe_ec_inq",
-                "label": "Inequality",
+                "label": "Early Childhood Inequality",
                 "color": "#2a7888",
                 "desc": "The gap that shows up before kids show up at school. By kindergarten, the differences are already substantial. Formal education then mostly fails to close them.",
                 "links": [
@@ -24985,7 +24936,7 @@ const LAYERS = [
               },
               {
                 "id": "efe_cu_sci",
-                "label": "Science",
+                "label": "Teaching Science",
                 "color": "#6ab8c8",
                 "desc": "The subject most contested by what counts as science. Evolution, climate change, vaccines — the curriculum gets pulled into political fights every cycle.",
                 "links": [
@@ -25671,7 +25622,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h6_r_pri",
-                    "label": "Privacy",
+                    "label": "Right to Privacy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -26270,7 +26221,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h5_h_inf",
-                    "label": "Infrastructure",
+                    "label": "Built Infrastructure",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -26805,51 +26756,10 @@ const LAYERS = [
                 "id": "c7_in_proto",
                 "label": "Protocols",
                 "color": "#3a78a8",
-                "desc": "The shared standards. The reason any browser can read any website. The reason any email server can talk to any other.",
-                "links": [
-                  {
-                    "label": "Mozilla Foundation",
-                    "url": "https://foundation.mozilla.org",
-                    "emoji": "🌐",
-                    "tag": "WEB"
-                  },
-                  {
-                    "label": "Electronic Frontier Foundation",
-                    "url": "https://www.eff.org",
-                    "emoji": "🛡️",
-                    "tag": "RIGHTS"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c7_inet",
-                    "label": "Internet Infrastructure",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "e1_o_proto",
-                    "label": "Protocols",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "e1_open",
-                    "label": "The Open Web",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -27196,51 +27106,10 @@ const LAYERS = [
                 "id": "c7_au_gig",
                 "label": "Gig Work",
                 "color": "#2a5088",
-                "desc": "The other model. Apps replaced employers with platforms and called the workers contractors. The flexibility is real. The wage floor and benefits floor went away with the employer.",
-                "links": [
-                  {
-                    "label": "Bureau of Labor Statistics",
-                    "url": "https://www.bls.gov",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  },
-                  {
-                    "label": "Economic Policy Institute",
-                    "url": "https://www.epi.org",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c7_auto",
-                    "label": "Automation & Labor",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "pcorp_l_gig",
-                    "label": "Gig & Contract Labor",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h6_prop",
-                    "label": "Property & Contracts",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -27513,6 +27382,33 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "c2_surv",
+                    "label": "Surveillance & Data",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c2_su_brok",
+                    "label": "Data Brokers",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s5_att",
+                    "label": "Attention",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -27594,7 +27490,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h6_r_pri",
-                    "label": "Privacy",
+                    "label": "Right to Privacy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -27858,60 +27754,10 @@ const LAYERS = [
         "id": "edu_tp4",
         "label": "Misinformation",
         "color": "#6878c8",
-        "desc": "Not new. Not uniquely digital. Not a problem that can be solved by fact-checking alone. Misinformation spreads because it is emotionally satisfying, tribally confirming, and algorithmically rewarded. The correction rarely travels as far as the original claim. Understanding why people believe false things requires understanding what the false thing is doing for them — what need it meets, what fear it addresses, what belonging it provides.",
-        "links": [
-          {
-            "label": "Pew Research — misinformation",
-            "url": "https://www.pewresearch.org",
-            "emoji": "📊",
-            "tag": "DATA"
-          },
-          {
-            "label": "MIT Technology Review",
-            "url": "https://www.technologyreview.com",
-            "emoji": "📡",
-            "tag": "TECH"
-          }
-        ],
+        "desc": "",
+        "links": [],
         "topPills": [],
-        "bottomPills": [
-          {
-            "id": "c2_misinfo",
-            "label": "Misinformation",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "s5_bias",
-            "label": "Bias",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "p5_manipulation",
-            "label": "Manipulation & Framing",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          },
-          {
-            "id": "edu_tp3",
-            "label": "The Press to the Feed",
-            "desc": "",
-            "links": [],
-            "topPills": [],
-            "bottomPills": [],
-            "orbs": []
-          }
-        ],
+        "bottomPills": [],
         "orbs": []
       },
       {
@@ -33134,6 +32980,12 @@ const LAYERS = [
                         "url": "https://civilrights.gov",
                         "emoji": "⚖️",
                         "tag": "RIGHTS"
+                      },
+                      {
+                        "label": "Ballotpedia — elections and voting",
+                        "url": "https://ballotpedia.org",
+                        "emoji": "🗳️",
+                        "tag": "VOTE"
                       }
                     ],
                     "topPills": [],
@@ -33159,6 +33011,24 @@ const LAYERS = [
                       {
                         "id": "frc_rp_jc",
                         "label": "Jim Crow",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h6_rt",
+                        "label": "Rights & Duties",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_gov_cr",
+                        "label": "Civil Rights & Human Rights",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -33495,6 +33365,24 @@ const LAYERS = [
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "pcorp_lob",
+                        "label": "Lobbying & Regulation",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_gov_cor_dark",
+                        "label": "Dark Money",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
                     ],
                     "orbs": []
@@ -33546,7 +33434,7 @@ const LAYERS = [
                       },
                       {
                         "id": "h3_pw_revolving",
-                        "label": "The Revolving Door",
+                        "label": "The Military Revolving Door",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -34210,7 +34098,7 @@ const LAYERS = [
         "topPills": [
           {
             "id": "p_corp_cor",
-            "label": "Corruption",
+            "label": "Corporate Corruption",
             "color": "#883030",
             "desc": "When the business of business becomes the business of bending rules. Corporate corruption takes forms that rarely look like crime until someone decides to look.",
             "links": [
@@ -34390,102 +34278,20 @@ const LAYERS = [
                 "id": "pcorp_o_pe",
                 "label": "Private Equity",
                 "color": "#481818",
-                "desc": "The buyout shops. PE now owns large pieces of healthcare, housing, retail, and journalism. The model extracts value and exits, often before the consequences become visible.",
-                "links": [
-                  {
-                    "label": "ProPublica",
-                    "url": "https://www.propublica.org",
-                    "emoji": "📰",
-                    "tag": "JOURNALISM"
-                  },
-                  {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "pcorp_own",
-                    "label": "Ownership & Shareholders",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p2_c_pe",
-                    "label": "Private Equity",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_corp",
-                    "label": "Corporations",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
                 "id": "pcorp_o_dyn",
                 "label": "Family Dynasties",
                 "color": "#785030",
-                "desc": "The old money. The Kochs. The Waltons. The Murdochs. The Mars family. Family-controlled fortunes have outlasted the regulatory cycles that were supposed to constrain them.",
-                "links": [
-                  {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  },
-                  {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "pcorp_own",
-                    "label": "Ownership & Shareholders",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p2_we_dyn",
-                    "label": "Family Dynasties",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fc_mobility",
-                    "label": "Social Mobility",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -34543,51 +34349,10 @@ const LAYERS = [
                 "id": "pcorp_o_share2",
                 "label": "Shareholder Primacy",
                 "color": "#682820",
-                "desc": "The doctrine that the corporation exists to maximize returns to shareholders. It is a 1970s theory that became the law of the land via decades of court decisions and business school training.",
-                "links": [
-                  {
-                    "label": "ATJon on Substack",
-                    "url": "https://atjon.substack.com",
-                    "emoji": "⭐",
-                    "tag": "USNOW"
-                  },
-                  {
-                    "label": "FollowTheMoney",
-                    "url": "https://www.followthemoney.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "pcorp_own",
-                    "label": "Ownership & Shareholders",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p2_c_share",
-                    "label": "Shareholder Primacy",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "pcorp_lab",
-                    "label": "Labor & Management",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               }
             ],
@@ -34754,51 +34519,10 @@ const LAYERS = [
                 "id": "pcorp_l_un",
                 "label": "Unions",
                 "color": "#583028",
-                "desc": "The decline and the partial revival. Private-sector unionization is at historic lows. Recent organizing wins at Amazon, Starbucks, and the auto industry suggest the floor may be reached.",
-                "links": [
-                  {
-                    "label": "Bureau of Labor Statistics",
-                    "url": "https://www.bls.gov",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  },
-                  {
-                    "label": "Economic Policy Institute",
-                    "url": "https://www.epi.org",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "pcorp_lab",
-                    "label": "Labor & Management",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_left_labor",
-                    "label": "Labor & Unions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p2_work",
-                    "label": "Work & Wages",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -35393,7 +35117,7 @@ const LAYERS = [
               },
               {
                 "id": "pcorp_lo_rev",
-                "label": "Revolving Door",
+                "label": "Corporate Revolving Door",
                 "color": "#583028",
                 "desc": "The career path. Hill staffer becomes lobbyist. Lobbyist becomes regulator. Regulator becomes consultant. The same people end up writing, enforcing, and re-writing the rules they live with.",
                 "links": [
@@ -35497,51 +35221,10 @@ const LAYERS = [
                 "id": "pcorp_lo_dark",
                 "label": "Dark Money",
                 "color": "#181008",
-                "desc": "The donations that don't have to be disclosed. Routed through 501(c)(4)s and other vehicles that obscure the original donor. Has grown steadily since 2010 and changes the outcomes of elections.",
-                "links": [
-                  {
-                    "label": "Brennan Center for Justice",
-                    "url": "https://www.brennancenter.org",
-                    "emoji": "⚖️",
-                    "tag": "LAW"
-                  },
-                  {
-                    "label": "OpenSecrets — money in politics",
-                    "url": "https://www.opensecrets.org",
-                    "emoji": "💰",
-                    "tag": "MONEY"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "pcorp_lob",
-                    "label": "Lobbying & Regulation",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_gov_cor_dark",
-                    "label": "Dark Money",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_gov_campaign",
-                    "label": "Campaign Finance",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -35796,6 +35479,24 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "c4_biz",
+                    "label": "The Business of Entertainment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c2_alg",
+                    "label": "The Algorithm",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -36040,7 +35741,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "pcorp_e_pol",
-                "label": "Pollution",
+                "label": "Corporate Pollution",
                 "color": "#282010",
                 "desc": "What the company puts into the air, water, and soil that isn't on the receipt. American industry has externalized environmental cost for two centuries. Some of that cost is now showing up as cancer rates in specific zip codes.",
                 "links": [
@@ -37442,7 +37143,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "p5_man",
-                "label": "Manipulation",
+                "label": "Media Manipulation",
                 "color": "#783040",
                 "desc": "The deliberate engineering of what people believe is true, important, or possible. Not always a lie — sometimes just a frame, a sequence, an omission.",
                 "links": [
@@ -39358,7 +39059,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h3_pw_revolving",
-                    "label": "The Revolving Door",
+                    "label": "The Military Revolving Door",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -39725,7 +39426,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x2_grief",
-                    "label": "Grief",
+                    "label": "Grief & Loss",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -39788,7 +39489,7 @@ const LAYERS = [
               },
               {
                 "id": "pmil_v_hl",
-                "label": "Homelessness",
+                "label": "Veteran Homelessness",
                 "color": "#483028",
                 "desc": "Roughly 35,000 veterans homeless on any given night. Down from a decade ago. Still a stain on a country with a flag culture this loud.",
                 "links": [
@@ -40441,7 +40142,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h6_r_pri",
-                    "label": "Privacy",
+                    "label": "Right to Privacy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -41526,6 +41227,12 @@ const LAYERS = [
                 "url": "https://data.worldbank.org",
                 "emoji": "📊",
                 "tag": "DATA"
+              },
+              {
+                "label": "Bureau of Economic Analysis",
+                "url": "https://www.bea.gov",
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [],
@@ -41551,6 +41258,33 @@ const LAYERS = [
               {
                 "id": "h1_am_economic",
                 "label": "The Economic Empire",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p2_mark",
+                "label": "Markets & Trade",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "p2_trade",
+                "label": "Trade",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "geo_shifting",
+                "label": "The Shifting Order",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -41737,51 +41471,10 @@ const LAYERS = [
                 "id": "p2_w_uni",
                 "label": "Unions",
                 "color": "#b87838",
-                "desc": "The decline. Union membership in the private sector has gone from roughly a third of workers in 1955 to under 7% today. The wage gap and the union gap track each other almost perfectly.",
-                "links": [
-                  {
-                    "label": "Bureau of Labor Statistics",
-                    "url": "https://www.bls.gov",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  },
-                  {
-                    "label": "Economic Policy Institute",
-                    "url": "https://www.epi.org",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "p2_work",
-                    "label": "Work & Wages",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_left_labor",
-                    "label": "Labor & Unions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p2_w_prod",
-                    "label": "Productivity Gap",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -41826,6 +41519,15 @@ const LAYERS = [
                   {
                     "id": "h6_prop",
                     "label": "Property & Contracts",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c7_auto",
+                    "label": "Automation & Labor",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -41946,7 +41648,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "p2_we_inh",
-                "label": "Inheritance",
+                "label": "Wealth Inheritance",
                 "color": "#783818",
                 "desc": "What gets passed down. About a third of the wealth held by the richest Americans came from inheritance, not earnings. The country tells itself a story about merit. The data tells a different one.",
                 "links": [
@@ -42037,6 +41739,33 @@ const LAYERS = [
                   {
                     "id": "p2_we_inq",
                     "label": "Wealth Inequality",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_we_own",
+                    "label": "Ownership",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_wealth",
+                    "label": "Wealth & Income",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_mob_dream",
+                    "label": "The American Dream",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -42252,6 +41981,24 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "pcorp_own",
+                    "label": "Ownership & Shareholders",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2_we_dyn",
+                    "label": "Family Dynasties",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -42427,6 +42174,12 @@ const LAYERS = [
                     "url": "https://www.epi.org",
                     "emoji": "📊",
                     "tag": "DATA"
+                  },
+                  {
+                    "label": "ProPublica: Student Debt",
+                    "url": "https://www.propublica.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -42452,6 +42205,42 @@ const LAYERS = [
                   {
                     "id": "fc_mob_dream",
                     "label": "The American Dream",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e_fe",
+                    "label": "Formal Education",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fc_we_debt",
+                    "label": "Debt",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_gov",
+                    "label": "Government",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2_d_stu",
+                    "label": "Student Debt",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -42772,45 +42561,10 @@ const LAYERS = [
                 "id": "p2_m_trade",
                 "label": "Trade",
                 "color": "#b08840",
-                "desc": "What countries buy and sell to each other. American trade policy across forty years assumed cheaper goods would compensate workers for lost jobs. The math worked at the aggregate level. It did not work in the towns where the jobs were.",
-                "links": [
-                  {
-                    "label": "Bureau of Economic Analysis",
-                    "url": "https://www.bea.gov",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "p2_mark",
-                    "label": "Markets & Trade",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p2_trade",
-                    "label": "Trade",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "geo_shifting",
-                    "label": "The Shifting Order",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -43224,6 +42978,33 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "pcorp_own",
+                    "label": "Ownership & Shareholders",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2_c_pe",
+                    "label": "Private Equity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p_corp",
+                    "label": "Corporations",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -43270,6 +43051,24 @@ const LAYERS = [
                   {
                     "id": "pcorp_lab",
                     "label": "Labor & Management",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "pcorp_own",
+                    "label": "Ownership & Shareholders",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2_c_share",
+                    "label": "Shareholder Primacy",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -44312,51 +44111,10 @@ const LAYERS = [
                 "id": "h5_c_oc",
                 "label": "Oceans",
                 "color": "#387078",
-                "desc": "Most of the planet. The ocean regulates the climate, feeds enormous numbers of people, and is in trouble — overfishing, warming, acidification, plastic.",
-                "links": [
-                  {
-                    "label": "NOAA",
-                    "url": "https://www.noaa.gov",
-                    "emoji": "🌍",
-                    "tag": "EARTH"
-                  },
-                  {
-                    "label": "National Geographic",
-                    "url": "https://www.nationalgeographic.com",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "h5_clim",
-                    "label": "Climate & Biomes",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c_env_cc",
-                    "label": "Climate Change",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h5_s_trade",
-                    "label": "Trade Routes",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -44408,57 +44166,10 @@ const LAYERS = [
                 "id": "h5_c_ch",
                 "label": "Climate Change",
                 "color": "#783028",
-                "desc": "What humans are doing to the climate by burning fossil fuels. The science is settled. The politics are not. The window for limited action keeps shrinking.",
-                "links": [
-                  {
-                    "label": "NOAA",
-                    "url": "https://www.noaa.gov",
-                    "emoji": "🌍",
-                    "tag": "EARTH"
-                  },
-                  {
-                    "label": "Our World in Data",
-                    "url": "https://ourworldindata.org",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  },
-                  {
-                    "label": "ATJon on Substack",
-                    "url": "https://atjon.substack.com",
-                    "emoji": "⭐",
-                    "tag": "USNOW"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c_env_cc",
-                    "label": "Climate Change",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h5_h_clim",
-                    "label": "Climate Migration",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h5_c_pol",
-                    "label": "Polar Regions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -45260,51 +44971,10 @@ const LAYERS = [
                 "id": "h5_s_wat",
                 "label": "Water",
                 "color": "#487060",
-                "desc": "The first resource. Civilizations rose along reliable water and fall when it goes. American water in the West is being used up faster than it gets replaced.",
-                "links": [
-                  {
-                    "label": "U.S. Geological Survey",
-                    "url": "https://www.usgs.gov",
-                    "emoji": "🌍",
-                    "tag": "EARTH"
-                  },
-                  {
-                    "label": "NOAA",
-                    "url": "https://www.noaa.gov",
-                    "emoji": "🌍",
-                    "tag": "EARTH"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "h5_set",
-                    "label": "Resources & Settlement",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c_env_cc",
-                    "label": "Climate Change",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h5_s_food",
-                    "label": "Food Systems",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -45702,56 +45372,15 @@ const LAYERS = [
                 "id": "h5_h_def",
                 "label": "Deforestation",
                 "color": "#384028",
-                "desc": "Most of the world's forests are smaller than they were a century ago. The losses concentrated in the tropics in recent decades. The carbon, water cycle, and biodiversity costs are global.",
-                "links": [
-                  {
-                    "label": "National Geographic",
-                    "url": "https://www.nationalgeographic.com",
-                    "emoji": "🌍",
-                    "tag": "GLOBAL"
-                  },
-                  {
-                    "label": "Our World in Data",
-                    "url": "https://ourworldindata.org",
-                    "emoji": "📊",
-                    "tag": "DATA"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "h5_hum",
-                    "label": "Human Geography",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c_env_bio_extinction",
-                    "label": "The Sixth Extinction",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c_env_cc",
-                    "label": "Climate Change",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
                 "id": "h5_h_inf",
-                "label": "Infrastructure",
+                "label": "Built Infrastructure",
                 "color": "#586878",
                 "desc": "The networks humans have built across the surface. Roads, rails, pipelines, transmission lines, ports. The infrastructure of the rich world is older than most of its builders. Maintenance has lagged construction for decades.",
                 "links": [
@@ -46515,6 +46144,12 @@ const LAYERS = [
                     "url": "https://au.int",
                     "emoji": "🌍",
                     "tag": "GLOBAL"
+                  },
+                  {
+                    "label": "National Security Archive — declassified interventions",
+                    "url": "https://nsarchive.gwu.edu",
+                    "emoji": "🏛️",
+                    "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
@@ -46540,6 +46175,24 @@ const LAYERS = [
                   {
                     "id": "frc_rp_col",
                     "label": "Colonialism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_20thc",
+                    "label": "The 20th Century Redrawing",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h3_rev_decolonization",
+                    "label": "Decolonization",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -48065,7 +47718,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h3_pw_revolving",
-                    "label": "The Revolving Door",
+                    "label": "The Military Revolving Door",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -48164,7 +47817,7 @@ const LAYERS = [
               },
               {
                 "id": "h3_pw_revolving",
-                "label": "The Revolving Door",
+                "label": "The Military Revolving Door",
                 "color": "#a05050",
                 "desc": "Senior military officers retire and join the boards or advisory staffs of defense contractors. Defense contractor executives become Deputy Secretaries of Defense. Congressional staffers who write defense appropriations bills take jobs with the companies their bills fund. Think tank analysts who argue for defense spending are funded by defense contractors. The revolving door is legal, documented, and universal. It ensures that the people who make decisions about military spending have financial interests in maximum military spending. Eisenhower's warning was not a prediction. It was an observation about something already fully formed.",
                 "links": [
@@ -48742,62 +48395,15 @@ const LAYERS = [
                 "id": "h6_r_vot",
                 "label": "Voting Rights",
                 "color": "#286898",
-                "desc": "The right that protects the others. American voting rights have expanded and contracted across cycles. The Voting Rights Act of 1965 was the high water mark. Recent court decisions and state laws have rolled back significant pieces.",
-                "links": [
-                  {
-                    "label": "Brennan Center — voting rights",
-                    "url": "https://www.brennancenter.org/voting-rights",
-                    "emoji": "⚖️",
-                    "tag": "LAW"
-                  },
-                  {
-                    "label": "ACLU — voting rights",
-                    "url": "https://www.aclu.org/voting-rights",
-                    "emoji": "⚖️",
-                    "tag": "RIGHTS"
-                  },
-                  {
-                    "label": "Ballotpedia — elections and voting",
-                    "url": "https://ballotpedia.org",
-                    "emoji": "🗳️",
-                    "tag": "VOTE"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "h6_rt",
-                    "label": "Rights & Duties",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h3_civil_shadow",
-                    "label": "The Long Shadow",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p_gov_cr",
-                    "label": "Civil Rights & Human Rights",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
                 "id": "h6_r_pri",
-                "label": "Privacy",
+                "label": "Right to Privacy",
                 "color": "#487898",
                 "desc": "The right not enumerated in the Constitution and largely constructed by the courts. Privacy law in the U.S. is uneven, mostly weaker than European peers, and increasingly tested by technology that did not exist when most of the relevant law was written.",
                 "links": [
@@ -52228,45 +51834,10 @@ const LAYERS = [
                 "id": "h1_20th_decolonize",
                 "label": "Decolonization",
                 "color": "#4a7a5a",
-                "desc": "50 new nations in 20 years. Independence arrived inside the colonial borders — the only option on offer, and the one that locked in every ethnic and tribal conflict the colonial administrators had managed through deliberate division. The leaders who tried to build something different were mostly removed: Lumumba in the Congo, Mosaddegh in Iran, Allende in Chile — CIA operations, some direct, some by proxy, documented in declassified files. The pattern: any government that attempted to control its own resources on behalf of its own people was a communist threat. The ideology was the justification. The resources were the point.",
-                "links": [
-                  {
-                    "label": "National Security Archive — declassified interventions",
-                    "url": "https://nsarchive.gwu.edu",
-                    "emoji": "🏛️",
-                    "tag": "HISTORY"
-                  }
-                ],
+                "desc": "",
+                "links": [],
                 "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "h1_20thc",
-                    "label": "The 20th Century Redrawing",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h3_rev_decolonization",
-                    "label": "Decolonization",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "frc_rp_col",
-                    "label": "Colonialism",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
+                "bottomPills": [],
                 "orbs": []
               },
               {
@@ -52789,7 +52360,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "h1_meg_pattern",
-                "label": "The Pattern",
+                "label": "The Megalomaniac Pattern",
                 "color": "#8a2a4a",
                 "desc": "The mechanics are consistent across centuries and cultures. The sequence doesn't vary much. What varies is the speed. Deference loops form first — surrounded by people whose survival depends on agreement, dissent becomes career-ending, then dangerous, then impossible, and the feedback loop closes. Insulation follows — physical first, then informational, and what reaches the leader is curated by people who know what he wants to hear. The gap between the map and the territory widens without anyone announcing it. Then consequence is removed — legal immunity formal or informal, no mechanism left to correct behavior, actions that would have ended a career or a freedom for anyone else pass without friction. Once all three are in place the process stops being reversible from inside. External pressure is the only remaining corrective. External pressure gets called an attack. The system doesn't fail all at once. It fails one accommodation at a time.",
                 "links": [
@@ -52870,7 +52441,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h1_meg_pattern",
-                    "label": "The Pattern",
+                    "label": "The Megalomaniac Pattern",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -53181,7 +52752,7 @@ const LAYERS = [
                   },
                   {
                     "id": "h1_meg_pattern",
-                    "label": "The Pattern",
+                    "label": "The Megalomaniac Pattern",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -53204,7 +52775,7 @@ const LAYERS = [
             "bottomPills": [
               {
                 "id": "h1_meg_pattern",
-                "label": "The Pattern",
+                "label": "The Megalomaniac Pattern",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -53495,7 +53066,7 @@ const LAYERS = [
               },
               {
                 "id": "h4_p_clim",
-                "label": "Climate",
+                "label": "Climate Displacement",
                 "color": "#3a5870",
                 "desc": "The growing category. Drought, sea level rise, crop failure. Climate migration is just starting and will be among the largest movements of people in human history.",
                 "links": [
@@ -54524,7 +54095,7 @@ const LAYERS = [
               },
               {
                 "id": "h4_b_bor",
-                "label": "Borders",
+                "label": "Border Politics",
                 "color": "#583020",
                 "desc": "The lines and what is built along them. The U.S.-Mexico border has become some of the most heavily policed land border in the world. The northern border is largely open in practice. The asymmetry says something.",
                 "links": [
@@ -54774,7 +54345,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "h4_a_lang",
-                "label": "Language",
+                "label": "Immigrant Language Loss",
                 "color": "#886038",
                 "desc": "The first wall and the first bridge. Most immigrant languages are lost by the third generation in the U.S. The cost of that loss is rarely tallied.",
                 "links": [
@@ -54813,7 +54384,7 @@ const LAYERS = [
                   },
                   {
                     "id": "frc_eth_lang",
-                    "label": "Language",
+                    "label": "Language & Identity",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54969,7 +54540,7 @@ const LAYERS = [
               },
               {
                 "id": "h4_a_back",
-                "label": "Backlash",
+                "label": "Immigration Backlash",
                 "color": "#583028",
                 "desc": "What the host culture does. Each wave of American immigration has been met with an organized backlash. The targets change. The pattern doesn't.",
                 "links": [
@@ -55505,7 +55076,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x5_africa_ind",
-                    "label": "Africa",
+                    "label": "African Spiritual Traditions",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -57370,7 +56941,7 @@ const LAYERS = [
           },
           {
             "id": "x5_americas",
-            "label": "The Americas",
+            "label": "Indigenous Americas",
             "desc": "",
             "links": [],
             "topPills": [],
@@ -58021,7 +57592,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x5_greek_rel",
-                    "label": "Greek & Roman",
+                    "label": "Greek & Roman Religion",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -58075,7 +57646,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x5_greek_rel",
-                    "label": "Greek & Roman",
+                    "label": "Greek & Roman Religion",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -58430,7 +58001,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x5_greek_rel",
-                    "label": "Greek & Roman",
+                    "label": "Greek & Roman Religion",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -58680,7 +58251,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x5_africa_ind",
-                    "label": "Africa",
+                    "label": "African Spiritual Traditions",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -58737,7 +58308,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x5_africa_ind",
-                    "label": "Africa",
+                    "label": "African Spiritual Traditions",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -58945,7 +58516,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "x5_greek_rel",
-                    "label": "Greek & Roman",
+                    "label": "Greek & Roman Religion",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -60740,7 +60311,7 @@ const LAYERS = [
           },
           {
             "id": "cosmos_tp5",
-            "label": "The Observer",
+            "label": "The Cosmic Observer",
             "desc": "",
             "links": [],
             "topPills": [],
@@ -61174,7 +60745,7 @@ const LAYERS = [
           },
           {
             "id": "x2_grief",
-            "label": "Grief",
+            "label": "Grief & Loss",
             "color": "#4a3838",
             "desc": "What love costs. Grief is not a problem to be processed. It is the shape love takes when its object is gone. Most cultures have built ritual around grief because it does not move on schedule and it does not move alone.",
             "links": [
@@ -61482,7 +61053,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "x2_l_mem",
-                    "label": "Memory",
+                    "label": "Legacy & Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -62609,7 +62180,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "x2_l_mem",
-                "label": "Memory",
+                "label": "Legacy & Memory",
                 "color": "#688058",
                 "desc": "What gets remembered about you. Memory is not a record. It is a working draft. The version of you that survives is the one your people kept telling.",
                 "links": [
@@ -62675,7 +62246,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "x2_l_mem",
-                    "label": "Memory",
+                    "label": "Legacy & Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -62693,7 +62264,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x2_l_inh",
-                    "label": "Inheritance",
+                    "label": "What We Leave Behind",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -62720,7 +62291,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "x2_l_mem",
-                    "label": "Memory",
+                    "label": "Legacy & Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -62771,7 +62342,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "x2_l_mem",
-                    "label": "Memory",
+                    "label": "Legacy & Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -62822,7 +62393,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "x2_l_mem",
-                    "label": "Memory",
+                    "label": "Legacy & Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -62852,7 +62423,7 @@ const LAYERS = [
               },
               {
                 "id": "x2_l_inh",
-                "label": "Inheritance",
+                "label": "What We Leave Behind",
                 "color": "#789868",
                 "desc": "What the dead leave behind in money, things, and pattern. Inheritance is unequal at scale and gets used to defend that unequal scale.",
                 "links": [
@@ -62885,7 +62456,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x2_l_mem",
-                    "label": "Memory",
+                    "label": "Legacy & Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -63225,7 +62796,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "x2_l_mem",
-                    "label": "Memory",
+                    "label": "Legacy & Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -63735,7 +63306,7 @@ const LAYERS = [
                   },
                   {
                     "id": "x2_grief",
-                    "label": "Grief",
+                    "label": "Grief & Loss",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -65360,7 +64931,7 @@ const LAYERS = [
                           },
                           {
                             "id": "x5_africa_ind",
-                            "label": "Africa",
+                            "label": "African Spiritual Traditions",
                             "desc": "",
                             "links": [],
                             "topPills": [],
@@ -67951,7 +67522,7 @@ const LAYERS = [
             "bottomPills": [
               {
                 "id": "x5_americas",
-                "label": "The Americas",
+                "label": "Indigenous Americas",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -67960,7 +67531,7 @@ const LAYERS = [
               },
               {
                 "id": "x5_africa_ind",
-                "label": "Africa",
+                "label": "African Spiritual Traditions",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -67980,7 +67551,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "x5_americas",
-                "label": "The Americas",
+                "label": "Indigenous Americas",
                 "color": "#7a9a50",
                 "desc": "From the Lakota Sun Dance to the Aztec calendar to the Andean concept of Pachamama — earth as living mother — the indigenous spiritual traditions of the Americas represent thousands of distinct cultures and cosmologies. What they share is a relationship to the natural world as sacred and alive — not a resource to be extracted but a relative to be respected. These traditions survived colonization, suppression, forced conversion, and the deliberate destruction of language and ceremony. Many are being actively reclaimed today.",
                 "links": [
@@ -68036,7 +67607,7 @@ const LAYERS = [
                       },
                       {
                         "id": "x5_americas",
-                        "label": "The Americas",
+                        "label": "Indigenous Americas",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -68092,7 +67663,7 @@ const LAYERS = [
                       },
                       {
                         "id": "x5_americas",
-                        "label": "The Americas",
+                        "label": "Indigenous Americas",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -68157,7 +67728,7 @@ const LAYERS = [
                       },
                       {
                         "id": "x5_americas",
-                        "label": "The Americas",
+                        "label": "Indigenous Americas",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -68243,7 +67814,7 @@ const LAYERS = [
               },
               {
                 "id": "x5_africa_ind",
-                "label": "Africa",
+                "label": "African Spiritual Traditions",
                 "color": "#7a9a50",
                 "desc": "Africa is the birthplace of humanity and home to some of its oldest spiritual traditions. West African traditions like Yoruba gave rise to diaspora religions — Candomblé, Vodou, Santería — carried across the Atlantic by enslaved people. Ubuntu, the southern African philosophy of shared humanity, is both ethical and spiritual.",
                 "links": [
@@ -68386,7 +67957,7 @@ const LAYERS = [
             "bottomPills": [
               {
                 "id": "x5_greek_rel",
-                "label": "Greek & Roman",
+                "label": "Greek & Roman Religion",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -68415,7 +67986,7 @@ const LAYERS = [
             "topPills": [
               {
                 "id": "x5_greek_rel",
-                "label": "Greek & Roman",
+                "label": "Greek & Roman Religion",
                 "color": "#9a7040",
                 "desc": "The Olympian gods of Greece and their Roman counterparts were state religions — practiced through sacrifice, festival, and temple worship. They were also political tools: emperors became gods, wars were fought with divine sanction. The philosophical tradition that grew alongside them quietly dismantled the mythology while keeping the questions.",
                 "links": [
@@ -69709,7 +69280,7 @@ const LAYERS = [
                   },
                   {
                     "id": "cosmos_tp5",
-                    "label": "The Observer",
+                    "label": "The Cosmic Observer",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -69748,7 +69319,7 @@ const LAYERS = [
                 "bottomPills": [
                   {
                     "id": "cosmos_tp5",
-                    "label": "The Observer",
+                    "label": "The Cosmic Observer",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -70241,7 +69812,7 @@ const LAYERS = [
         "bottomPills": [
           {
             "id": "cosmos_tp5",
-            "label": "The Observer",
+            "label": "The Cosmic Observer",
             "desc": "",
             "links": [],
             "topPills": [],
@@ -70421,7 +69992,7 @@ const LAYERS = [
       },
       {
         "id": "cosmos_tp5",
-        "label": "The Observer",
+        "label": "The Cosmic Observer",
         "color": "#6888c8",
         "desc": "The outermost layer of the scale points back to the innermost. The cosmos asks the same question the self does: who is watching? The universe observing itself through temporary apertures — briefly conscious, briefly wondering, briefly here. The scale begins with ME and ends here, which is not a coincidence. The question beneath all the questions is the same one you started with. You just needed everything in between to see it.",
         "links": [
