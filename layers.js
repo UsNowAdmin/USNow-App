@@ -273,8 +273,8 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               }
@@ -661,8 +661,8 @@ const LAYERS = [
             "desc": "The oldest signal in the system. Fear is not weakness — it is a working alarm. It kept your ancestors alive long enough to become you. The trouble starts when the alarm runs constantly. Chronic fear narrows attention, hardens the body, distorts memory, and shrinks the world. Politics knows this. Industries know this. Algorithms know this. The thing being protected and the thing being exploited are the same thing.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -781,8 +781,8 @@ const LAYERS = [
             "desc": "Information about a boundary. Anger says: this is not okay, and I am the one who knows it. Suppressed anger doesn't disappear — it ferments. It comes out as resentment, depression, sarcasm, contempt, illness. Anger that is named and channeled becomes courage and clarity. Anger that is buried becomes everything else.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -964,8 +964,8 @@ const LAYERS = [
             "desc": "The feeling that you are wrong, not that you did wrong. Guilt says I made a mistake. Shame says I am a mistake. It is the most isolating emotion because it makes you believe the isolation is deserved. Most of what we call moral failing in others is shame talking through them. Most of what we call cruelty is shame defending itself.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -1103,8 +1103,8 @@ const LAYERS = [
             "desc": "The picture you carry of yourself when no one is looking. Built from a thousand inputs you didn't choose — what you were told as a child, what mirrors showed you, what other people's faces did when you spoke. The gap between self-image and reality is where most personal suffering lives.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -1163,8 +1163,8 @@ const LAYERS = [
             "desc": "Parent. Worker. Friend. Patient. Citizen. Each role comes with a script you didn't write and an audience you didn't pick. Some roles fit. Some chafe. Some you outgrow and never get around to taking off. The trouble starts when you confuse the role for the self underneath it.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               }
@@ -1216,12 +1216,6 @@ const LAYERS = [
             "color": "#d8a848",
             "desc": "The pattern of how you tend to be. Some of it is wired in before birth. Some of it gets shaped by what happened to you in the first few years of being alive. Personality is durable but not fixed — people change less than they hope and more than they fear. Most of who you are was decided before you remember being asked.",
             "links": [
-              {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
-              },
               {
                 "label": "Harvard Health",
                 "url": "https://www.health.harvard.edu",
@@ -1480,12 +1474,6 @@ const LAYERS = [
                 "url": "https://www.health.harvard.edu",
                 "emoji": "🌱",
                 "tag": "BODY"
-              },
-              {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
               }
             ],
             "topPills": [],
@@ -1608,10 +1596,10 @@ const LAYERS = [
                 "tag": "CULTURE"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Harvard Health",
+                "url": "https://health.harvard.edu",
+                "emoji": "🫀",
+                "tag": "BODY"
               }
             ],
             "topPills": [],
@@ -1666,12 +1654,6 @@ const LAYERS = [
                 "url": "https://www.health.harvard.edu",
                 "emoji": "🌱",
                 "tag": "BODY"
-              },
-              {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
               }
             ],
             "topPills": [],
@@ -1972,10 +1954,10 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [],
@@ -2017,10 +1999,10 @@ const LAYERS = [
             "desc": "The shortcuts the brain uses because thinking is expensive. Cognitive bias is not a flaw of bad people — it is a feature of all brains. Confirmation bias, availability bias, the way we trust the familiar over the true. Knowing about bias does not protect you from it. It just lets you notice when it has already done the work.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               },
               {
                 "label": "TED Talks",
@@ -2083,10 +2065,10 @@ const LAYERS = [
             "desc": "The brain looking for shape in the noise. Without it, you couldn't read a face or learn a language. With too much of it, you see conspiracies in coincidences and meaning in randomness. Pattern recognition is what makes you smart and what makes you wrong. Both at once, often.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               },
               {
                 "label": "Stanford AI Index",
@@ -2134,10 +2116,10 @@ const LAYERS = [
             "desc": "When perception breaks open and shows you the seam. Optical illusions are interesting because they reveal that what you see is constructed — and the construction usually wins, even after you know how the trick works. Most of what we call common sense is illusion that nobody has bothered to break.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               },
               {
                 "label": "TED Talks",
@@ -2185,10 +2167,10 @@ const LAYERS = [
             "desc": "The ongoing work of checking whether what you think is happening is actually happening. Mental health depends on it. Politics depends on it. Science depends on it. When reality testing breaks down at the individual level it is called psychosis. When it breaks down at the social level it is called something else — usually too late.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               },
               {
                 "label": "NAMI — mental illness alliance",
@@ -3151,10 +3133,10 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -3216,10 +3198,10 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -3318,10 +3300,10 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -3363,10 +3345,10 @@ const LAYERS = [
                 "desc": "The most politically loaded question in genetics. The science says intelligence has heritable components and is also profoundly shaped by environment. The history says every time someone has tried to use genetics to rank groups, they have been wrong, and the wrongness has been used to justify enormous harm. Both things are true.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "Pew Research",
@@ -3414,10 +3396,10 @@ const LAYERS = [
                 "desc": "The wrong question, asked for centuries. Nothing is purely either. Genes shape environments by shaping the people who choose them. Environments shape genes by deciding which ones get expressed. The interesting question is not which one matters more. It is how they are doing the work together.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "Harvard Health",
@@ -3503,10 +3485,10 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               },
               {
                 "label": "National Geographic",
@@ -3523,10 +3505,10 @@ const LAYERS = [
                 "desc": "The mechanism. Variations that help survival and reproduction get more copies in the next generation. Variations that don't, fade. Over enough time the math is ruthless and beautiful. It does not care about you. It produced you anyway.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "National Geographic",
@@ -3574,10 +3556,10 @@ const LAYERS = [
                 "desc": "The fit between an organism and a niche. Adaptation looks like design. It is not. It is the residue of millions of failed experiments, with the survivors looking — in retrospect — as if someone had planned the whole thing.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "National Geographic",
@@ -3625,10 +3607,10 @@ const LAYERS = [
                 "desc": "Every living thing on earth descends from the same ancient ancestor. The evidence is in the genetic code, which is shared down to the molecular level. The bacterium in your gut and the redwood on the coast and the person reading this are cousins. Distant. But cousins.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "National Geographic",
@@ -3688,10 +3670,10 @@ const LAYERS = [
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -3733,10 +3715,10 @@ const LAYERS = [
                 "desc": "Why peacocks have ridiculous tails. Sometimes the trait isn't about surviving the environment — it's about being chosen by a mate. Sexual selection produced antlers, birdsong, the human capacity for art and humor and lies. It is evolution's wing of vanity, and it has done more shaping than people realize.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "National Geographic",
@@ -3873,10 +3855,10 @@ const LAYERS = [
                 "tag": "GLOBAL"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -3953,10 +3935,10 @@ const LAYERS = [
                     "tag": "GLOBAL"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Our World in Data",
+                    "url": "https://ourworldindata.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -4055,10 +4037,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Our World in Data",
+                    "url": "https://ourworldindata.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -4463,10 +4445,10 @@ const LAYERS = [
                 "tag": "AI"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "MIT Technology Review",
+                "url": "https://technologyreview.com",
+                "emoji": "🔬",
+                "tag": "TECH"
               },
               {
                 "label": "Electronic Frontier Foundation",
@@ -4489,10 +4471,10 @@ const LAYERS = [
                     "tag": "SCIENCE"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "MIT Technology Review",
+                    "url": "https://technologyreview.com",
+                    "emoji": "🔬",
+                    "tag": "TECH"
                   }
                 ],
                 "topPills": [],
@@ -4636,10 +4618,10 @@ const LAYERS = [
                 "desc": "Embryo screening. Selection. The conversation about what counts as a disease and what counts as a difference. Reproductive genetics is where parents make decisions geneticists can describe but not resolve. The line between preventing suffering and selecting for preference is real and not always where you think it is.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "Harvard Health",
@@ -4744,10 +4726,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -4893,12 +4875,6 @@ const LAYERS = [
               {
                 "label": "American Psychological Association",
                 "url": "https://apa.org",
-                "emoji": "🧠",
-                "tag": "MIND"
-              },
-              {
-                "label": "Aeon",
-                "url": "https://aeon.co",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -5286,8 +5262,8 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -5312,8 +5288,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -5402,8 +5378,8 @@ const LAYERS = [
                 "desc": "The category each sibling gets sorted into. The smart one. The athletic one. The difficult one. The roles get assigned early and most families never quite let them go. Siblings spend lifetimes either inhabiting their assignment or fighting it.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -5504,8 +5480,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -5549,8 +5525,8 @@ const LAYERS = [
                 "desc": "What gets assigned in childhood often does not get unassigned in adulthood. The peacemaker is still smoothing things over at fifty. The black sheep is still being introduced as the black sheep at the wedding. The roles outlast the room they were cast in.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -5638,8 +5614,8 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -5658,8 +5634,8 @@ const LAYERS = [
                 "desc": "Who gets cast as what. The hero. The scapegoat. The lost child. The mascot. The roles serve the system — they manage the anxiety of whatever is unspoken in the family. The cost is borne by the people stuck inside them.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -5709,8 +5685,8 @@ const LAYERS = [
                 "desc": "What the family agrees not to talk about. Sometimes for protection. Sometimes for shame. Sometimes because the truth would rearrange too many lives. Family secrets do not stay buried. They surface in the next generation, often as symptoms.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -5919,8 +5895,8 @@ const LAYERS = [
                 "desc": "What gets passed down without anyone meaning to pass it. The way grandfather raised father raised you. The cycle that breaks only when someone notices it and refuses. Generational patterns are not destiny. But they don't break themselves.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -7089,10 +7065,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Our World in Data",
+                    "url": "https://ourworldindata.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -7134,10 +7110,10 @@ const LAYERS = [
                 "desc": "The decisions, mostly invisible, about who gets in and who doesn't. Admissions committees. Hiring managers. The bouncer at the network event. Gatekeeping is class enforcement dressed up as standards.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "ProPublica",
+                    "url": "https://propublica.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "Pew Research",
@@ -7581,10 +7557,10 @@ const LAYERS = [
             "desc": "How class shows itself in public. Status and taste are the visible part of class — the part that gets read across a room before anyone speaks. Most of taste is not personal preference. It is the silent training of the household you grew up in, recognizable to anyone trained the same way.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Our World in Data",
+                "url": "https://ourworldindata.org",
+                "emoji": "📊",
+                "tag": "DATA"
               },
               {
                 "label": "Pew Research",
@@ -7601,10 +7577,10 @@ const LAYERS = [
                 "desc": "The rules that mark you as belonging. Which fork. When to speak. How loud to laugh. Manners are class signaling pretending to be civility. The rules differ by class, and the people who set them tend to be the people who define the room.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -7646,10 +7622,10 @@ const LAYERS = [
                 "desc": "How you sound. Accent gets read for class faster than almost any other signal. American culture has been training people to lose regional accents for a century — partly to standardize, partly to allow upward movement, partly to erase. The accent that wins is usually the accent of the people in charge.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Linguistic Society of America",
+                    "url": "https://linguisticsociety.org",
+                    "emoji": "🌐",
+                    "tag": "LANGUAGE"
                   },
                   {
                     "label": "Endangered Languages Project",
@@ -7742,10 +7718,10 @@ const LAYERS = [
                 "desc": "What you wear. Clothing is class on display, refined into a thousand silent signals — fabric, cut, brand, fit, the way the shoes are kept. Working-class clothing tells one story. Old-money clothing tells another. Both stories are legible to anyone who learned to read them.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -7787,10 +7763,10 @@ const LAYERS = [
                 "desc": "The knowledge that signals class. Which writers, which films, which museums, which jokes. Cultural capital is invisible to people who have it and impossible to fake from outside. Education distributes some of it. Most of it gets transmitted by the family across the dinner table.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "The Marginalian",
@@ -7838,10 +7814,10 @@ const LAYERS = [
                 "desc": "The performance of being a good kind of poor. Respectability politics asks marginalized people to dress, speak, and behave a certain way in exchange for safer treatment. The bargain has rarely paid off. The treatment was never about the behavior.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "ProPublica",
+                    "url": "https://propublica.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "ACLU",
@@ -7947,10 +7923,10 @@ const LAYERS = [
                 "desc": "The story that effort and talent decide outcomes. Mostly false. Outcomes track parental income with depressing accuracy. The myth of meritocracy is durable because the people who benefit from it have a strong interest in believing they deserved what they got.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Our World in Data",
+                    "url": "https://ourworldindata.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "Pew Research",
@@ -8160,10 +8136,10 @@ const LAYERS = [
                 "desc": "The story that every successful tech founder started in a garage with nothing. Mostly false. The famous garages belonged to families that could afford a garage and a year without income. The myth conceals the role of family wealth, networks, and luck in producing the people who later get described as self-made.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "ProPublica",
+                    "url": "https://propublica.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -8431,10 +8407,10 @@ const LAYERS = [
             "desc": "Race is not a fact about biology — it is a fact about how societies have organized power. The categories were invented, refined, and used to justify who got land, vote, work, freedom. The genes don't sort the way the categories do. The history did.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "ProPublica",
+                "url": "https://propublica.org",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               },
               {
                 "label": "Brennan Center for Justice",
@@ -8502,10 +8478,10 @@ const LAYERS = [
                 "desc": "The category that mostly studies everyone but itself. American whiteness has expanded over time to include groups once considered separate — Irish, Italians, Jews, others — usually as a way to keep a different group on the outside. The boundary moves. The function stays.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -8658,10 +8634,10 @@ const LAYERS = [
                 "desc": "The phrase scientists and historians settled on once it became obvious that race is not a natural kind. Constructed does not mean fake. It means built — by laws, by institutions, by repetition — and built things have force.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "Brennan Center for Justice",
@@ -8747,10 +8723,10 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "JSTOR",
+                "url": "https://jstor.org",
+                "emoji": "🔬",
+                "tag": "RESEARCH"
               }
             ],
             "topPills": [
@@ -8812,10 +8788,10 @@ const LAYERS = [
                 "desc": "What survives migration when most of the rest is lost. Recipes are some of the most durable carriers of identity ever invented. They cross borders that the people who carry them sometimes don't.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "The Marginalian",
@@ -9009,12 +8985,6 @@ const LAYERS = [
             "desc": "How race and ethnicity get lived from the inside. The categories the world assigns and the categories the self chooses are rarely identical. Most people negotiate the gap their whole lives.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
-              },
-              {
                 "label": "Pew Research",
                 "url": "https://www.pewresearch.org",
                 "emoji": "📊",
@@ -9131,10 +9101,10 @@ const LAYERS = [
                 "desc": "When someone is read as a category they do not belong to, sometimes by choice, sometimes by circumstance. American history is full of passing — its safety, its costs, its grief.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -9176,10 +9146,10 @@ const LAYERS = [
                 "desc": "The practice of changing language, accent, or behavior to navigate different rooms. Mostly done by people whose home culture is read as suspect by the dominant one. The work is real and mostly unacknowledged.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -9221,10 +9191,10 @@ const LAYERS = [
                 "desc": "The room where you don't have to translate. Ethnic and racial communities have built schools, papers, churches, mutual aid, political power, and the everyday infrastructure that makes living in a hostile country possible.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Pew Research",
+                    "url": "https://pewresearch.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -9432,10 +9402,10 @@ const LAYERS = [
                 "desc": "The export of racial hierarchy as a system of governance. European colonialism from the 1500s onward built racial categories partly to justify what was being taken. Most modern nations carry colonial inheritance on both sides — those who did the taking and those it was taken from.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "World History Encyclopedia",
+                    "url": "https://worldhistory.org",
+                    "emoji": "🗄️",
+                    "tag": "HISTORY"
                   },
                   {
                     "label": "United Nations data",
@@ -9591,8 +9561,8 @@ const LAYERS = [
                 "desc": "The mental shortcuts the dominant culture trains everyone to use. Stereotypes harm the people they describe and shape the perceptions of the people who hold them, often without consent or awareness.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -9825,12 +9795,6 @@ const LAYERS = [
             "tag": "MIND"
           },
           {
-            "label": "Aeon",
-            "url": "https://aeon.co",
-            "emoji": "🧠",
-            "tag": "MIND"
-          },
-          {
             "label": "On Being",
             "url": "https://onbeing.org",
             "emoji": "🕊️",
@@ -9857,8 +9821,8 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -9922,8 +9886,8 @@ const LAYERS = [
                 "desc": "The strategy of getting close enough to function and not so close it costs anything. Often built early in homes where closeness was not safe.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10012,8 +9976,8 @@ const LAYERS = [
                 "desc": "The line between healthy reliance and unhealthy fusion. Adults negotiate this every day in every close relationship. The line moves.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10063,8 +10027,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10262,8 +10226,8 @@ const LAYERS = [
                 "desc": "Showing up across time. The friend who stayed when it got hard. The math is uneven and that's the point.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10397,8 +10361,8 @@ const LAYERS = [
                 "desc": "Friends who don't fight, don't fall out — just stop. Drift is the most common form of friendship loss and the least examined. The work to prevent it is small. The cost of not doing it is enormous.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10483,8 +10447,8 @@ const LAYERS = [
             "desc": "The relationship category we tell the most stories about and understand the worst. Love and romance are two different things — sometimes overlapping, sometimes not. The culture sells them as identical, which sets up most of the disappointment people will spend decades calling personal failure.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -10509,8 +10473,8 @@ const LAYERS = [
                 "desc": "The pull. Mostly involuntary, partly trainable. Attraction follows scripts the culture wrote and the body inherited and neither one consults you about.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10605,8 +10569,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10656,8 +10620,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10835,8 +10799,8 @@ const LAYERS = [
                 "tag": "BODY"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -10855,8 +10819,8 @@ const LAYERS = [
                 "desc": "The visible form. The shape of an argument tells you something about the relationship — whether it is two people on the same team disagreeing about a problem, or two opponents looking for a winner.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -10957,8 +10921,8 @@ const LAYERS = [
                     "tag": "SPIRIT"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -11008,8 +10972,8 @@ const LAYERS = [
                     "tag": "MIND"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -11104,8 +11068,8 @@ const LAYERS = [
                 "desc": "The rebuilding. Possible, sometimes. Not always wise. Reconciliation requires both people to change something — most relationships break because only one is willing.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -11187,8 +11151,8 @@ const LAYERS = [
             "desc": "The substrate that makes everything else possible and the thing that breaks hardest when it goes. Trust is built slowly and can be destroyed in seconds. Most relationships that don't recover from betrayal could not survive a second one.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "American Psychological Association",
+                "url": "https://apa.org",
                 "emoji": "🧠",
                 "tag": "MIND"
               },
@@ -11207,8 +11171,8 @@ const LAYERS = [
                 "desc": "What you actually say versus what you let the other person believe. Most of what destroys trust is not lying — it is the careful management of partial truth.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -11258,8 +11222,8 @@ const LAYERS = [
                 "desc": "What you choose not to share. The line between privacy and secrecy is whether the other person would feel betrayed knowing. The line is real and it moves with the relationship.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -11303,8 +11267,8 @@ const LAYERS = [
                 "desc": "Where you stand when it costs something. Most loyalty is cheap until tested.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -11354,8 +11318,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -11399,8 +11363,8 @@ const LAYERS = [
                 "desc": "Getting someone to do what you want by managing what they think is happening. Manipulation does not announce itself. The sign that you've been manipulated is usually that you blame yourself for the manipulator's choices.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -11610,8 +11574,8 @@ const LAYERS = [
                 "desc": "The pain of being not chosen. Brain imaging suggests rejection registers in the same regions as physical pain. The body keeps score.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   },
@@ -14068,10 +14032,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Aeon",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "The Marginalian",
@@ -14461,10 +14425,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Mozilla Foundation",
+                    "url": "https://foundation.mozilla.org",
+                    "emoji": "🌐",
+                    "tag": "WEB"
                   }
                 ],
                 "topPills": [],
@@ -14937,10 +14901,10 @@ const LAYERS = [
                 "desc": "The self as something to be marketed. Personal brand is not a metaphor anymore. It is what young people are explicitly told to build.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Rest of World",
+                    "url": "https://restofworld.org",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -15078,10 +15042,10 @@ const LAYERS = [
                 "desc": "The one-way intimacy. Followers feel they know creators. Creators feel the weight of strangers' expectations. Neither side is built for what the relationship has become.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "Harvard Health",
@@ -15129,10 +15093,10 @@ const LAYERS = [
                 "desc": "The contradiction at the heart of the form. The audience wants real. The format rewards polished. Influencers spend careers negotiating the gap and the audience usually senses it.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -15224,10 +15188,10 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [
@@ -15238,10 +15202,10 @@ const LAYERS = [
                 "desc": "The version of you the feed sees. Some of self-presentation is healthy editing. Some of it becomes the thing you are pretending to feel. The line moves over a lifetime.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -15385,10 +15349,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Mozilla Foundation",
+                    "url": "https://foundation.mozilla.org",
+                    "emoji": "🌐",
+                    "tag": "WEB"
                   }
                 ],
                 "topPills": [],
@@ -15539,10 +15503,10 @@ const LAYERS = [
                     "tag": "USNOW"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -15692,10 +15656,10 @@ const LAYERS = [
                     "tag": "DATA"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Mozilla Foundation",
+                    "url": "https://foundation.mozilla.org",
+                    "emoji": "🌐",
+                    "tag": "WEB"
                   }
                 ],
                 "topPills": [],
@@ -16284,12 +16248,6 @@ const LAYERS = [
             "tag": "IDEAS"
           },
           {
-            "label": "Aeon",
-            "url": "https://aeon.co",
-            "emoji": "🧠",
-            "tag": "MIND"
-          },
-          {
             "label": "Nautilus",
             "url": "https://nautil.us",
             "emoji": "🔬",
@@ -16304,10 +16262,10 @@ const LAYERS = [
             "desc": "The structured contest. Rules, sides, a winner. Games are how cultures rehearse cooperation, conflict, fairness, and the consolation of losing well. Most of what gets called sport is also a business now.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
+                "label": "TED Talks",
+                "url": "https://ted.com",
                 "emoji": "🧠",
-                "tag": "MIND"
+                "tag": "IDEAS"
               },
               {
                 "label": "ATJon on Substack",
@@ -16324,10 +16282,10 @@ const LAYERS = [
                 "desc": "What the game agrees on. Rules are negotiated history. They change when the players, owners, or audiences want them to.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -16504,10 +16462,10 @@ const LAYERS = [
                 "desc": "The story the season tells. Every great game has a great rival. The hatred is mostly performed and partly real.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -16549,10 +16507,10 @@ const LAYERS = [
                 "desc": "What the rules try to enforce and the field tries to test. Fairness in sport is one of the few places American culture still seriously argues about the concept.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -16630,12 +16588,6 @@ const LAYERS = [
                 "url": "https://www.pewresearch.org",
                 "emoji": "📊",
                 "tag": "DATA"
-              },
-              {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
               }
             ],
             "topPills": [
@@ -16691,10 +16643,10 @@ const LAYERS = [
                 "desc": "Tailgates, watch parties, the same bar with the same friends. Fandom rituals do work that used to be done by churches and unions and lodges.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -16736,10 +16688,10 @@ const LAYERS = [
                 "desc": "The team becomes the self. Fans of a losing team learn something about loyalty under bad conditions. Fans of a winning team learn something else.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -16871,10 +16823,10 @@ const LAYERS = [
                 "desc": "The shadow side. The same loyalty that makes fandom warm makes it ugly when the rival fans show up. Most fan tribalism is harmless theater. Some of it isn't.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -16948,10 +16900,10 @@ const LAYERS = [
             "desc": "The product the entertainment industry has been refining for a century. A celebrity is a person who has become a brand other people consume. The labor is constant. The product is the self in public.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Longreads",
+                "url": "https://longreads.com",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               },
               {
                 "label": "Pew Research",
@@ -16968,10 +16920,10 @@ const LAYERS = [
                 "desc": "The condition. Most people who pursue it discover what they thought they were after isn't what shows up.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Longreads",
+                    "url": "https://longreads.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -17019,10 +16971,10 @@ const LAYERS = [
                 "desc": "The constructed version. Image is what the audience believes about the celebrity. It rarely matches who they are. Sometimes the gap is the product.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Longreads",
+                    "url": "https://longreads.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -17282,10 +17234,10 @@ const LAYERS = [
             "desc": "How the country tells stories to itself. Film and television used to share roughly the same audience. Streaming exploded the audience into a thousand niches. The shared story is harder to find. Each generation now grows up on its own canon.",
             "links": [
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Longreads",
+                "url": "https://longreads.com",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               },
               {
                 "label": "Internet Archive",
@@ -17302,10 +17254,10 @@ const LAYERS = [
                 "desc": "What people pay for. The stories that work do something the audience needs without being able to name it. The stories that fail usually cost more.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Longreads",
+                    "url": "https://longreads.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   },
                   {
                     "label": "The Marginalian",
@@ -17622,10 +17574,10 @@ const LAYERS = [
                 "tag": "CULTURE"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Longreads",
+                "url": "https://longreads.com",
+                "emoji": "📰",
+                "tag": "JOURNALISM"
               }
             ],
             "topPills": [
@@ -17636,10 +17588,10 @@ const LAYERS = [
                 "desc": "The categories the industry uses to sell. Genres are real and porous. The interesting work usually happens at the seams.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -17726,10 +17678,10 @@ const LAYERS = [
                 "desc": "Music in the body. Dance predates writing about music by a wide margin. Most cultural forms began here.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -18332,10 +18284,10 @@ const LAYERS = [
         "desc": "There used to be a place where everyone knew your name and most of your business. The village — literal and metaphorical — provided belonging, accountability, and mutual aid at the cost of privacy and conformity. Modernity dissolved it. The internet promised to rebuild it and instead built something that looks like a village from the outside and functions like a stadium from the inside: loud, anonymous, and optimized for spectacle rather than connection.",
         "links": [
           {
-            "label": "Aeon",
-            "url": "https://aeon.co",
-            "emoji": "🧠",
-            "tag": "MIND"
+            "label": "Our World in Data",
+            "url": "https://ourworldindata.org",
+            "emoji": "📊",
+            "tag": "DATA"
           },
           {
             "label": "On Being",
@@ -19753,10 +19705,10 @@ const LAYERS = [
                     "tag": "RIGHTS"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Mozilla Foundation",
+                    "url": "https://foundation.mozilla.org",
+                    "emoji": "🌐",
+                    "tag": "WEB"
                   }
                 ],
                 "topPills": [],
@@ -21648,12 +21600,6 @@ const LAYERS = [
                 "url": "https://plato.stanford.edu",
                 "emoji": "🔬",
                 "tag": "MIND"
-              },
-              {
-                "label": "Aeon",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
               }
             ],
             "bottomPills": [
@@ -21714,12 +21660,6 @@ const LAYERS = [
                     "tag": "MIND"
                   },
                   {
-                    "label": "Aeon",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
-                  },
-                  {
                     "label": "JSTOR",
                     "url": "https://jstor.org",
                     "emoji": "🔬",
@@ -21734,8 +21674,8 @@ const LAYERS = [
                     "desc": "What the brain does that we don't have a better word for. Mind is the working name for thought, perception, attention, intention, the running narrative — all of it, taken together. The hard problem is whether mind is reducible to brain or whether something else is going on. Most of what we know suggests it is reducible. Most of what we feel from the inside resists the reduction.",
                     "links": [
                       {
-                        "label": "Aeon — ideas & mind",
-                        "url": "https://aeon.co",
+                        "label": "American Psychological Association",
+                        "url": "https://apa.org",
                         "emoji": "🧠",
                         "tag": "MIND"
                       },
@@ -21861,12 +21801,6 @@ const LAYERS = [
                     "url": "https://jstor.org",
                     "emoji": "🔬",
                     "tag": "RESEARCH"
-                  },
-                  {
-                    "label": "Aeon",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
                   },
                   {
                     "label": "Our World in Data",
@@ -22775,10 +22709,10 @@ const LAYERS = [
                 "tag": "EDUCATION"
               },
               {
-                "label": "Aeon — history of knowledge",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "IDEAS"
+                "label": "Smarthistory",
+                "url": "https://smarthistory.org",
+                "emoji": "🔬",
+                "tag": "CULTURE"
               }
             ],
             "topPills": [
@@ -22789,10 +22723,10 @@ const LAYERS = [
                 "desc": "The first three. Grammar, Logic, Rhetoric. How to receive knowledge, test it, and transmit it. The medieval university required mastery of all three before a student could proceed. The idea: you cannot think clearly without language, you cannot reason without logic, and you cannot act on what you know without the ability to communicate it. Everything downstream depends on these three.",
                 "links": [
                   {
-                    "label": "Aeon — language and thought",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "IDEAS"
+                    "label": "Stanford Encyclopedia of Philosophy",
+                    "url": "https://plato.stanford.edu",
+                    "emoji": "🔬",
+                    "tag": "MIND"
                   }
                 ],
                 "topPills": [
@@ -22893,10 +22827,10 @@ const LAYERS = [
                     "desc": "The art of persuasion. How to make an argument that moves people — not just one that is technically correct. Rhetoric was considered the capstone of the trivium because knowledge that cannot be communicated cannot act in the world. It is also the discipline most easily weaponized. Every demagogue in history has been, at minimum, an intuitive rhetorician.",
                     "links": [
                       {
-                        "label": "Aeon — rhetoric and persuasion",
-                        "url": "https://aeon.co",
-                        "emoji": "🗣️",
-                        "tag": "IDEAS"
+                        "label": "Stanford Encyclopedia of Philosophy",
+                        "url": "https://plato.stanford.edu",
+                        "emoji": "🔬",
+                        "tag": "MIND"
                       }
                     ],
                     "topPills": [],
@@ -23841,10 +23775,10 @@ const LAYERS = [
                 "desc": "The original archive. Before writing, knowledge was held in the body and the voice — in song, in story, in the repeated recitation of what a people needed to remember. Oral traditions are not primitive preludes to literacy. They are sophisticated systems for encoding and transmitting knowledge across generations without a page. Homer was oral tradition. So was the Torah, before it was written. So is every creation myth that has ever survived.",
                 "links": [
                   {
-                    "label": "Aeon — myth and meaning",
-                    "url": "https://aeon.co",
-                    "emoji": "🌀",
-                    "tag": "IDEAS"
+                    "label": "Project Gutenberg",
+                    "url": "https://gutenberg.org",
+                    "emoji": "📖",
+                    "tag": "ARCHIVE"
                   }
                 ],
                 "topPills": [],
@@ -24196,12 +24130,6 @@ const LAYERS = [
                 "url": "https://endangeredlanguagefund.org",
                 "emoji": "🌍",
                 "tag": "CULTURE"
-              },
-              {
-                "label": "Aeon — language & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "IDEAS"
               }
             ],
             "topPills": [
@@ -24707,8 +24635,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -25209,10 +25137,10 @@ const LAYERS = [
                 "desc": "The subject cut first when budgets shrink. The research consistently shows arts education improving outcomes across other subjects. The cuts happen anyway.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Smarthistory",
+                    "url": "https://smarthistory.org",
+                    "emoji": "🔬",
+                    "tag": "CULTURE"
                   }
                 ],
                 "topPills": [],
@@ -25658,10 +25586,10 @@ const LAYERS = [
                 "desc": "The list of works a culture insists every educated person know. Canons reflect who was in the room when they got built. Expanding the canon is genuinely difficult and overdue.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "The Marginalian",
@@ -25913,10 +25841,10 @@ const LAYERS = [
                 "desc": "What schools teach that they don't list — punctuality, deference, who gets called on, who gets disciplined, whose questions are welcome. The hidden curriculum is mostly class enforcement and racial sorting and it is doing more work than the official curriculum.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "Economic Policy Institute",
@@ -26108,10 +26036,10 @@ const LAYERS = [
                 "tag": "CULTURE"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "MIT Technology Review",
+                "url": "https://technologyreview.com",
+                "emoji": "🔬",
+                "tag": "TECH"
               }
             ],
             "topPills": [
@@ -26359,10 +26287,10 @@ const LAYERS = [
                 "desc": "The thread through all of it. Tools are not separate from human capability. They are part of it. Take away your tools and a different human emerges.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -26648,10 +26576,10 @@ const LAYERS = [
                 "desc": "The surface where humans and machines meet. Interface design is doing enormous quiet work shaping what people think computers can do.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Wired",
+                    "url": "https://wired.com",
+                    "emoji": "🤖",
+                    "tag": "TECH"
                   }
                 ],
                 "topPills": [],
@@ -27322,10 +27250,10 @@ const LAYERS = [
                 "desc": "When the machine takes the skill out of the job. The remaining human task is often less interesting, less compensated, and easier to replace next time.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Economic Policy Institute",
+                    "url": "https://epi.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -27821,12 +27749,6 @@ const LAYERS = [
         "color": "#4868a8",
         "desc": "Knowledge has gatekeepers. Who gets to be an expert, who gets published, who gets funded, who gets cited — these are not purely meritocratic processes. They are social processes, which means they carry the biases of the societies that built them. The credential is real. The knowledge it certifies is real. The question of who was systematically excluded from earning it is also real, and the answer shapes what we know and don't know.",
         "links": [
-          {
-            "label": "Aeon",
-            "url": "https://aeon.co",
-            "emoji": "🧠",
-            "tag": "MIND"
-          },
           {
             "label": "JSTOR",
             "url": "https://jstor.org",
@@ -35789,10 +35711,10 @@ const LAYERS = [
                 "desc": "The story the company tries to attach to itself. The good ones become shorthand. The great ones become reflexive — the brand is the first thought when the category comes up.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Longreads",
+                    "url": "https://longreads.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -35975,10 +35897,10 @@ const LAYERS = [
                 "desc": "The asset corporations spend most on building. Loyalty programs, points, status tiers — the structures designed to get the same customer to come back instead of comparing.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -37537,10 +37459,10 @@ const LAYERS = [
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "Aeon",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -37650,10 +37572,10 @@ const LAYERS = [
                     "tag": "JOURNALISM"
                   },
                   {
-                    "label": "Aeon",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Bellingcat",
+                    "url": "https://bellingcat.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
                 "topPills": [],
@@ -44641,10 +44563,10 @@ const LAYERS = [
                 "tag": "GLOBAL"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Our World in Data",
+                "url": "https://ourworldindata.org",
+                "emoji": "📊",
+                "tag": "DATA"
               }
             ],
             "topPills": [
@@ -45187,10 +45109,10 @@ const LAYERS = [
                 "desc": "The town. The neighborhood. The block. Local identity is shrinking as a force in American life and the loss is rarely named directly. People still feel it.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Our World in Data",
+                    "url": "https://ourworldindata.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   },
                   {
                     "label": "ATJon on Substack",
@@ -45681,10 +45603,10 @@ const LAYERS = [
                 "desc": "The proposed name for the current geological epoch — the one in which humans are the dominant force on the planet. The naming is contested. The reality is not.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   },
                   {
                     "label": "Our World in Data",
@@ -54843,12 +54765,6 @@ const LAYERS = [
                 "tag": "DATA"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
-              },
-              {
                 "label": "ATJon on Substack",
                 "url": "https://atjon.substack.com",
                 "emoji": "⭐",
@@ -54918,12 +54834,6 @@ const LAYERS = [
                     "url": "https://www.pewresearch.org",
                     "emoji": "📊",
                     "tag": "DATA"
-                  },
-                  {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
                   }
                 ],
                 "topPills": [],
@@ -55010,10 +54920,10 @@ const LAYERS = [
                 "desc": "What stays. Food and religion are usually last to go. Language goes earlier. Family structures shift across generations.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Pew Research",
+                    "url": "https://pewresearch.org",
+                    "emoji": "📊",
+                    "tag": "DATA"
                   }
                 ],
                 "topPills": [],
@@ -55191,10 +55101,10 @@ const LAYERS = [
             "tag": "CULTURE"
           },
           {
-            "label": "Aeon — language & thought",
-            "url": "https://aeon.co",
-            "emoji": "🧠",
-            "tag": "MIND"
+            "label": "Linguistic Society of America",
+            "url": "https://linguisticsociety.org",
+            "emoji": "🌐",
+            "tag": "LANGUAGE"
           }
         ],
         "topPills": [
@@ -55205,10 +55115,10 @@ const LAYERS = [
             "desc": "Nobody knows exactly when or how humans began to speak. The fossil record preserves bones but not words. The best estimates place the emergence of complex language somewhere between 50,000 and 200,000 years ago — a range that reflects how little we know. What we do know: language changed everything. It made large-scale cooperation possible, made planning across time possible, made culture possible. Everything in this scale is downstream of someone, somewhere, saying the first word.",
             "links": [
               {
-                "label": "Aeon — origins of language",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Nautilus",
+                "url": "https://nautil.us",
+                "emoji": "🔬",
+                "tag": "SCIENCE"
               }
             ],
             "topPills": [],
@@ -55301,10 +55211,10 @@ const LAYERS = [
                 "tag": "HISTORY"
               },
               {
-                "label": "Aeon",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Linguistic Society of America",
+                "url": "https://linguisticsociety.org",
+                "emoji": "🌐",
+                "tag": "LANGUAGE"
               },
               {
                 "label": "Endangered Languages Project",
@@ -55800,10 +55710,10 @@ const LAYERS = [
                 "tag": "LANGUAGE"
               },
               {
-                "label": "Aeon — ideas & mind",
-                "url": "https://aeon.co",
-                "emoji": "🧠",
-                "tag": "MIND"
+                "label": "Linguistic Society of America",
+                "url": "https://linguisticsociety.org",
+                "emoji": "🌐",
+                "tag": "LANGUAGE"
               }
             ],
             "topPills": [
@@ -55814,10 +55724,10 @@ const LAYERS = [
                 "desc": "The order of things. Subject-verb-object in English. Subject-object-verb in Japanese. Verb-subject-object in Welsh. The orders are not random and they are not all equally common across languages.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Linguistic Society of America",
+                    "url": "https://linguisticsociety.org",
+                    "emoji": "🌐",
+                    "tag": "LANGUAGE"
                   }
                 ],
                 "topPills": [],
@@ -55859,10 +55769,10 @@ const LAYERS = [
                 "desc": "The internal structure of words. Some languages build complex words from many small pieces (Inuit, Turkish). Others, like Mandarin, mostly don't. The choices shape what kinds of meaning are easy to express.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Linguistic Society of America",
+                    "url": "https://linguisticsociety.org",
+                    "emoji": "🌐",
+                    "tag": "LANGUAGE"
                   }
                 ],
                 "topPills": [],
@@ -55904,10 +55814,10 @@ const LAYERS = [
                 "desc": "How meaning attaches to form. The relationship between word and world is not arbitrary in interesting ways and not transparent in interesting ways.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Linguistic Society of America",
+                    "url": "https://linguisticsociety.org",
+                    "emoji": "🌐",
+                    "tag": "LANGUAGE"
                   },
                   {
                     "label": "Oxford English Dictionary",
@@ -55955,10 +55865,10 @@ const LAYERS = [
                 "desc": "What's meant beyond what's said. Sarcasm. Implication. Tone. Most of communication is pragmatic — the literal sentence is a small part of the message.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Linguistic Society of America",
+                    "url": "https://linguisticsociety.org",
+                    "emoji": "🌐",
+                    "tag": "LANGUAGE"
                   }
                 ],
                 "topPills": [],
@@ -56057,10 +55967,10 @@ const LAYERS = [
                     "tag": "AI"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Linguistic Society of America",
+                    "url": "https://linguisticsociety.org",
+                    "emoji": "🌐",
+                    "tag": "LANGUAGE"
                   }
                 ],
                 "topPills": [],
@@ -56262,10 +56172,10 @@ const LAYERS = [
                 "desc": "The most influential American dialect of the last hundred years. AAVE has contributed enormously to general American English vocabulary and grammar. The contribution is often unacknowledged. The speakers are often penalized for the same features the language borrows.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "Endangered Languages Project",
@@ -56313,10 +56223,10 @@ const LAYERS = [
                 "desc": "The vocabulary that marks a cohort. Gen Z slang. Boomer slang. Each generation brings its own and the older generation usually misreads the newer one's tone.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "Urban Dictionary",
@@ -56415,10 +56325,10 @@ const LAYERS = [
                 "desc": "What you can't say in the polite version. Profanity does emotional and social work that polite language can't. The list of taboo words shifts decade to decade — the function stays the same.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -57596,10 +57506,10 @@ const LAYERS = [
                 "desc": "The oldest observatory was the open sky. Every civilization that has ever existed looked up and found meaning in what it saw. Not one astrology — many. The Babylonians built the zodiac we still use. The Chinese developed a parallel system based on a sixty-year cycle and five classical planets. The Vedic tradition of India — Jyotisha — predates Greek influence and remains a living practice for hundreds of millions today. The Maya built the most accurate calendar in the ancient world and tracked Venus with a precision that rivals modern instruments. These are not variations on a single theme. They are independent answers to the same human question: if the sky moves in patterns, and we move in patterns, is there a relationship? The question is older than writing. The answers are as varied as the civilizations that asked it. Astrology is where humanity first decided the universe was paying attention. Whether or not it is, the asking changed everything.",
                 "links": [
                   {
-                    "label": "Aeon — history of astrology",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Astro-Seek",
+                    "url": "https://horoscopes.astro-seek.com",
+                    "emoji": "⭐",
+                    "tag": "MYTH"
                   },
                   {
                     "label": "NASA Astronomy Picture of the Day",
@@ -61307,8 +61217,8 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
+                    "label": "American Psychological Association",
+                    "url": "https://apa.org",
                     "emoji": "🧠",
                     "tag": "MIND"
                   }
@@ -61755,10 +61665,10 @@ const LAYERS = [
                 "desc": "The classic. American cemeteries are mostly perpetual care arrangements. The land use and the chemicals involved are starting to be questioned by the green burial movement.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
@@ -61800,10 +61710,10 @@ const LAYERS = [
                 "desc": "Burial without embalming or non-biodegradable caskets. Returns the body to the soil cleanly. A small but growing movement reshaping what death rituals can mean.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   },
                   {
                     "label": "NHPCO — hospice & palliative care",
@@ -62204,10 +62114,10 @@ const LAYERS = [
                 "desc": "What people report from close calls with death — tunnels, light, life review, the sense of being met. The experiences are common, cross-cultural, and not fully explained by any framework.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -63056,10 +62966,10 @@ const LAYERS = [
                     "tag": "BODY"
                   },
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "Nautilus",
+                    "url": "https://nautil.us",
+                    "emoji": "🔬",
+                    "tag": "SCIENCE"
                   }
                 ],
                 "topPills": [],
@@ -63953,10 +63863,10 @@ const LAYERS = [
                 "desc": "The recurring characters. Mother. Father. Lover. Wise old man. Eternal youth. Carl Jung argued these are wired into the human psyche. Whether or not he was right about the wiring, the patterns recur across cultures.",
                 "links": [
                   {
-                    "label": "Aeon — ideas & mind",
-                    "url": "https://aeon.co",
-                    "emoji": "🧠",
-                    "tag": "MIND"
+                    "label": "JSTOR",
+                    "url": "https://jstor.org",
+                    "emoji": "🔬",
+                    "tag": "RESEARCH"
                   }
                 ],
                 "topPills": [],
