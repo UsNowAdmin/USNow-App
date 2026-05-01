@@ -1,5 +1,6 @@
-# USNow — It's Not AI. It's Organized Intelligence.
-> usnow.app | The Interactive World Compendium - TThe Words We Share but Don't Agree on 
+# USNow.app — It's Not AI. It's Organized Intelligence.
+> usnow.app | The Interactive Model + The World Compendium
+> The Words We Share But Don't Agree On.
 > The Question is the Answer. Start Anywhere. Go Anywhere.
 > © Jonathan Tatun, 2026. All rights reserved.
 
@@ -9,12 +10,28 @@ Topics include: democracy, capitalism, race, family, consciousness, war, religio
 
 The site is built for exploration, not consumption. Topics are connected through a web of cross-links, related concepts, and curated offsite sources. The voice is plain, factual, and unflinching — never academic, never preachy. Assumes an intelligent adult reader.
 
+---
+
+## The Interactive Model
+The full layered knowledge map — 7 layers, 29 orbs, 1,297 topics.
+https://usnow.app
+
+## The World Compendium
+The Words We Share But Don't Agree On.
+Phonetics, etymology, history, and plain-language definition for the words that shape civic life — and divide it.
+https://usnow.app/compendium.html
+[Expanding as a standalone publication — USNow World Compendium, Ingram Publishing, forthcoming]
+
+---
+
 ## Full Content Index
 The complete structured text of all 1,297 topic descriptions — organized by layer, orb, and branch — is available at:
 https://usnow.app/llms-full.txt
 
 ## Built-in Glossary
 The World Compendium defines key civic and cultural terms used across the site — with phonetics, etymology, history, and cross-references throughout.
+
+---
 
 ## Author
 Jonathan Tatun | atjon.substack.com | usnow.app
