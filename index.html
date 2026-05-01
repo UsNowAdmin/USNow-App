@@ -1099,7 +1099,7 @@ window.renderCard=function(data){
 </script>
 
 <!-- AI Knowledge Graph: hidden from UI, fully visible to crawlers and AI -->
-<section id="ai-knowledge-graph" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="false">
+<section id="ai-knowledge-graph" style="display:none;" aria-hidden="false">
   <h1>USNow — Interactive World Compendium</h1>
   <p>A civic and cultural knowledge platform covering 1,297 topics from personal identity to the cosmos. Built for exploration, not consumption. Plain, factual, unflinching.</p>
 </section>
@@ -3740,17 +3740,33 @@ var _slugToId = {
   if(!key || typeof LAYERS==='undefined') return;
   // resolve slug to id if needed
   var targetId = _slugToId[key] || key;
-  var cardIndex = {};
-  function buildIndex(node) {
+  // Find card and its parent layer for proper rendering context
+  var foundCard = null, foundLayer = null;
+  function findCard(node, layer) {
     if(!node||!node.id) return;
-    if((node.desc||'').length>30) cardIndex[node.id]=node;
+    if(node.id === targetId && (node.desc||'').length>30) { foundCard=node; foundLayer=layer; return; }
     ['topPills','orbs','bottomPills'].forEach(function(k){
-      if(Array.isArray(node[k])) node[k].forEach(buildIndex);
+      if(Array.isArray(node[k])) node[k].forEach(function(c){ findCard(c, layer); });
     });
   }
-  LAYERS.forEach(buildIndex);
-  if(cardIndex[targetId]) {
-    setTimeout(function(){ cardNavOpen(cardIndex[targetId]); }, 600);
+  LAYERS.forEach(function(layer){ findCard(layer, layer); });
+  if(foundCard && foundLayer) {
+    setTimeout(function(){
+      var c = foundCard.color || foundLayer.color || '#888888';
+      var hx = c.replace('#','');
+      var r=parseInt(hx.slice(0,2),16), g=parseInt(hx.slice(2,4),16), b=parseInt(hx.slice(4,6),16);
+      var glow = 'rgba('+r+','+g+','+b+',0.28)';
+      cardNavOpen({
+        color: c, glow: glow,
+        tag: foundLayer.label, scaleText: foundLayer.time,
+        title: foundCard.label, sub: null,
+        desc: foundCard.desc,
+        links: foundCard.links||[],
+        topPills: foundCard.topPills||[],
+        bottomPills: foundCard.bottomPills||[],
+        isLayer: false, inProgress: foundCard.inProgress||false
+      });
+    }, 600);
   }
 })();
 </script>
