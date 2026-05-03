@@ -3742,7 +3742,7 @@ var _slugToId = {
   var foundCard = null, foundLayer = null;
   function findCard(node, layer) {
     if(!node||!node.id) return;
-    if(node.id === targetId && (node.desc||'').length>30) { foundCard=node; foundLayer=layer; return; }
+   if(node.id === targetId && ((node.desc||'').length>30 || node.orbs || node.topPills)) { foundCard=node; foundLayer=layer; return; }
     ['topPills','orbs','bottomPills'].forEach(function(k){
       if(Array.isArray(node[k])) node[k].forEach(function(c){ findCard(c, layer); });
     });
