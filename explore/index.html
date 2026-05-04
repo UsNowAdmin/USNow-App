@@ -253,7 +253,11 @@ function getColor(card) {
 
 // ─── Recursive tree node builder ──────────────────────────────────────────────
 // Works at ANY depth — no hardcoded level limit
-function buildNode(card, depth, isLast) {
+function buildNode(card, depth, isLast, visited) {
+  if(!visited) visited = new Set();
+  if(depth > 8 || visited.has(card.id)) return document.createElement('div');
+  visited = new Set(visited);
+  visited.add(card.id);
   const color = getColor(card);
   const type = card.cardType || 'card';
   const children = (card.topPills || []).map(id => cardIndex.get(id)).filter(Boolean);
@@ -340,7 +344,7 @@ function buildNode(card, depth, isLast) {
     const childContainer = document.createElement('div');
     childContainer.className = 'node-children';
     children.forEach((child, i) => {
-      childContainer.appendChild(buildNode(child, depth + 1, i === children.length - 1));
+      childContainer.appendChild(buildNode(child, depth + 1, i === children.length - 1, visited));
     });
     node.appendChild(childContainer);
   }
