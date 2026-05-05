@@ -188,12 +188,13 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     </span>
   </div>
 
-  <!-- Tree button only -->
-  <div style="flex-shrink:0;">
+  <!-- Tree button + hidden contact button (required by index.js) -->
+  <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
     <a href="tree.html"
       style="display:flex;align-items:center;gap:4px;font-size:10px;letter-spacing:0.06em;background:#c9a84c;border:1px solid #c9a84c;padding:5px 11px;border-radius:14px;text-decoration:none;color:#04080f;font-weight:700;font-family:'Courier New',monospace;white-space:nowrap;transition:all 0.2s;"
       onmouseover="this.style.background='#e0b860';this.style.borderColor='#e0b860'"
       onmouseout="this.style.background='#c9a84c';this.style.borderColor='#c9a84c'">🌳 THE TREE</a>
+    <button id="nav-contact-btn" style="display:none;"></button>
   </div>
 
 </nav>
