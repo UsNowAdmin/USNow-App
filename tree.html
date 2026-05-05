@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>USNow — Tree of Knowledge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ── RESET ───────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;}
+
+/* ── SCENE ───────────────────────────────────────── */
+#scene{
+  position:fixed;
+  top:50px;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse 120% 80% at 50% 120%, #1a0a00 0%, #090510 40%, #020108 100%);
+  overflow:hidden;
+  font-family:'Libre Baskerville',serif;
+}
+
+/* ── TOP BAR ─────────────────────────────────────── */
+#topbar{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:50px;
+  background:rgba(4,8,15,0.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(201,168,76,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 16px;
+  z-index:200;
+}
+#logo{
+  font-family:'Cinzel',serif;
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:0.08em;
+  line-height:1;
+  user-select:none;
+  flex-shrink:0;
+}
+#logo .us{color:#fff;}
+#logo .now{color:#e85d2a;}
+#topbar-right{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+#search-bar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:20px;
+  padding:0 10px 0 12px;
+  height:32px;
+}
+#search-bar:focus-within{
+  border-color:rgba(201,168,76,0.45);
+  background:rgba(0,0,0,0.4);
+}
+#search-toggle{
+  background:none;
+  border:none;
+  color:rgba(255,255,255,0.35);
+  font-size:13px;
+  cursor:default;
+  padding:0;
+  flex-shrink:0;
+  line-height:1;
+}
+#search-input{
+  width:120px;
+  background:transparent;
+  border:none;
+  outline:none;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  color:#fff;
+  pointer-events:all;
+}
+@media(max-width:500px){
+  #search-input{ width:80px; }
+}
+#search-input::placeholder{ color:rgba(255,255,255,0.3); }
+#search-clear{
+  display:none;
+  color:rgba(255,255,255,0.35);
+  font-size:11px;
+  cursor:pointer;
+  font-family:'JetBrains Mono',monospace;
+  padding:2px 2px;
+  transition:color 0.15s;
+  flex-shrink:0;
+  background:none;
+  border:none;
+}
+#search-clear.visible{display:block;}
+#search-clear:hover{color:#fff;}
+
+
+
+/* ── STARS ───────────────────────────────────────── */
+#stars{position:absolute;inset:0;pointer-events:none;z-index:0;}
+
+/* ── HORIZON / EARTH ─────────────────────────────── */
+#horizon{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:38%;
+  z-index:2;
+  pointer-events:none;
+}
+#earth-arc{
+  position:absolute;
+  bottom:0;left:-10%;right:-10%;
+  height:100%;
+  border-radius:50% 50% 0 0 / 60% 60% 0 0;
+  background:radial-gradient(ellipse 100% 100% at 50% 100%,
+    #3a1800 0%, #1e0c00 30%, #0d0600 60%, transparent 100%);
+  border-top:1px solid rgba(200,100,30,0.25);
+}
+#earth-glow{
+  position:absolute;
+  bottom:0;left:-20%;right:-20%;
+  height:120%;
+  border-radius:50% 50% 0 0 / 50% 50% 0 0;
+  background:radial-gradient(ellipse 80% 60% at 50% 100%,
+    rgba(255,140,30,0.18) 0%,
+    rgba(180,80,10,0.10) 35%,
+    transparent 70%);
+  pointer-events:none;
+}
+#horizon-line{
+  position:absolute;
+  bottom:38%;left:0;right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(220,120,40,0.5),rgba(255,180,60,0.8),rgba(220,120,40,0.5),transparent);
+  z-index:3;
+  pointer-events:none;
+}
+
+/* ── LAYER ATMOSPHERE ────────────────────────────── */
+#layer-atmosphere{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  transition:background 1.2s ease, opacity 0.8s ease;
+  opacity:0;
+}
+
+/* ── LAYER GHOST LABEL ───────────────────────────── */
+#layer-ghost{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Cinzel',serif;
+  font-size:clamp(28px,8vw,80px);
+  font-weight:600;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.04);
+  pointer-events:none;
+  z-index:1;
+  text-align:center;
+  white-space:nowrap;
+  transition:opacity 0.8s ease, color 1s ease;
+  user-select:none;
+}
+@media(max-width:600px){
+  #layer-ghost{ display:none; }
+}
+
+/* ── HORIZON BREADCRUMBS ─────────────────────────── */
+#breadcrumb{
+  position:absolute;
+  /* sits just above the horizon line */
+  bottom:38%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:50;
+  display:flex;
+  align-items:center;
+  gap:0;
+  max-width:88vw;
+  overflow:hidden;
+  pointer-events:none;
+}
+.crumb{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;
+  letter-spacing:0.08em;
+  color:rgba(255,255,255,0.5);
+  cursor:pointer;
+  padding:3px 9px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.1);
+  background:rgba(0,0,0,0.45);
+  backdrop-filter:blur(4px);
+  transition:color 0.2s, background 0.2s, border-color 0.2s;
+  white-space:nowrap;
+  pointer-events:all;
+  flex-shrink:1;
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:120px;
+}
+.crumb:hover{color:rgba(255,255,255,0.9);background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.25);}
+.crumb.active{
+  color:rgba(255,220,100,0.9);
+  border-color:rgba(201,168,76,0.4);
+  background:rgba(201,168,76,0.08);
+  cursor:default;
+  pointer-events:none;
+}
+.crumb-sep{
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  color:rgba(255,255,255,0.2);
+  padding:0 2px;
+  flex-shrink:0;
+}
+
+
+#logo .us{color:#fff;}
+#logo .now{color:#e85d2a;}
+
+/* ── BACK BUTTON ─────────────────────────────────── */
+
+
+
+
+
+/* ── SEARCH RESULTS SCREEN ───────────────────────── */
+#search-results-screen{
+  position:fixed;
+  top:50px;left:0;right:0;bottom:0;
+  z-index:150;
+  background:#06080f;
+  display:none;
+  flex-direction:column;
+  width:100%;
+  overflow:hidden;
+}
+#search-results-topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 16px 8px;
+  flex-shrink:0;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+#search-results-count{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.08em;
+  color:rgba(255,255,255,0.35);
+}
+#search-results-back{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.06em;
+  color:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  padding:5px 12px;
+  border-radius:5px;
+  cursor:pointer;
+  transition:all 0.2s;
+}
+#search-results-back:hover{color:#fff;border-color:rgba(255,255,255,0.3);}
+#search-results-fruit{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  align-content:start;
+  gap:12px;
+  padding:16px 12px 80px;
+  overflow-y:auto;
+  width:100%;
+  box-sizing:border-box;
+}
+#search-results-fruit::-webkit-scrollbar{width:4px;}
+#search-results-fruit::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:2px;}
+
+/* ── TREE SVG ────────────────────────────────────── */
+#tree-svg{
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  overflow:visible;
+}
+
+/* ── FRUIT CONTAINER ─────────────────────────────── */
+#fruit-layer{
+  position:absolute;
+  inset:0;
+  z-index:10;
+}
+
+/* ── FRUIT ───────────────────────────────────────── */
+.fruit{
+  position:absolute;
+  border-radius:50%;
+  cursor:pointer;
+  transform:translate(-50%,-50%);
+  transition:transform 0.18s ease, box-shadow 0.18s ease;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.fruit:hover{animation-play-state:paused;}
+
+.fruit-label{
+  color:#fff;
+  font-family:'Libre Baskerville',serif;
+  font-weight:400;
+  font-size:12px;
+  letter-spacing:0.01em;
+  text-align:center;
+  line-height:1.2;
+  padding:4px;
+  pointer-events:none;
+  text-shadow:0 1px 6px rgba(0,0,0,1),0 0 12px rgba(0,0,0,0.95),0 2px 4px rgba(0,0,0,1);
+  position:relative;
+  z-index:2;
+}
+
+/* SEE MORE indicator */
+.fruit-more{
+  position:absolute;
+  bottom:5px;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.06em;
+  color:rgba(255,255,255,0.75);
+  background:rgba(0,0,0,0.6);
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:10px;
+  padding:3px 9px;
+  pointer-events:all;
+  cursor:pointer;
+  white-space:nowrap;
+  z-index:30;
+  transition:all 0.15s;
+  opacity:0;
+}
+.fruit:hover .fruit-more{opacity:1;}
+/* Always visible on touch devices — no hover state */
+@media(hover:none){
+  .fruit-more{ opacity:0.85; }
+}
+.fruit-more:hover{
+  background:rgba(255,255,255,0.18);
+  border-color:rgba(255,255,255,0.6);
+  color:#fff;
+}
+
+/* Leaf fruits — whole fruit is the door */
+.fruit-leaf .fruit-more{display:none;}
+
+/* Fallen fruit along horizon */
+.fruit-fallen{
+  position:absolute;
+  border-radius:50%;
+  cursor:pointer;
+  transform:translateX(-50%);
+  z-index:8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0.55;
+  transition:opacity 0.2s, transform 0.2s;
+}
+.fruit-fallen:hover{opacity:0.9;transform:translateX(-50%) translateY(-4px);}
+.fruit-fallen-label{
+  color:rgba(255,255,255,0.7);
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px;
+  text-align:center;
+  line-height:1.2;
+  padding:2px;
+  pointer-events:none;
+  text-shadow:0 1px 4px rgba(0,0,0,1);
+}
+
+/* ROOT ORB */
+#root-orb{
+  position:absolute;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  z-index:25;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:transform 0.2s;
+}
+#root-orb:hover{transform:translate(-50%,-50%) scale(1.06);}
+#root-label{
+  color:#fff;
+  font-family:'Cinzel',serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.08em;
+  text-align:center;
+  line-height:1.3;
+  padding:4px;
+  pointer-events:none;
+  text-shadow:0 1px 8px rgba(0,0,0,1);
+}
+
+/* Float animations */
+@keyframes fruitFloat{
+  0%,100%{transform:translate(-50%,-50%) translateY(0);}
+  50%{transform:translate(-50%,-50%) translateY(-5px);}
+}
+@keyframes fruitFloatB{
+  0%,100%{transform:translate(-50%,-50%) translateY(0);}
+  50%{transform:translate(-50%,-50%) translateY(-7px);}
+}
+@keyframes fruitFloatC{
+  0%,100%{transform:translate(-50%,-50%) translateY(0);}
+  50%{transform:translate(-50%,-50%) translateY(-4px);}
+}
+@keyframes pulseCore{
+  0%,100%{box-shadow:0 0 40px rgba(212,168,85,0.5),0 0 80px rgba(212,168,85,0.2),inset 0 0 20px rgba(0,0,0,0.3);}
+  50%{box-shadow:0 0 60px rgba(212,168,85,0.7),0 0 120px rgba(212,168,85,0.3),inset 0 0 20px rgba(0,0,0,0.3);}
+}
+
+/* ── MODAL ───────────────────────────────────────── */
+#modal{
+  position:fixed;inset:0;
+  z-index:500;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 0.25s;
+}
+#modal.open{opacity:1;pointer-events:all;}
+#modal-backdrop{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(6px);
+  cursor:pointer;
+}
+#modal-card{
+  position:relative;
+  z-index:1;
+  width:100%;max-width:600px;
+  max-height:85vh;
+  overflow-y:auto;
+  border-radius:16px;
+  padding:28px;
+  animation:modalIn 0.25s ease;
+}
+@keyframes modalIn{
+  from{opacity:0;transform:translateY(20px) scale(0.97);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+#modal-close{
+  position:absolute;top:14px;right:14px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  color:rgba(255,255,255,0.5);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:0.08em;
+  padding:4px 10px;border-radius:5px;
+  cursor:pointer;transition:all 0.15s;
+}
+#modal-close:hover{color:#fff;background:rgba(255,255,255,0.15);}
+#modal-crumb{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;letter-spacing:0.12em;
+  color:rgba(255,255,255,0.35);
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+#modal-colorbar{height:2px;border-radius:1px;width:50px;margin-bottom:16px;}
+#modal-title{
+  font-family:'Cinzel',serif;
+  font-size:26px;font-weight:400;
+  color:#fff;margin-bottom:4px;
+  line-height:1.2;
+}
+#modal-sub{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:0.08em;
+  color:rgba(255,255,255,0.4);
+  margin-bottom:16px;
+}
+.modal-section{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:0.14em;
+  color:rgba(255,255,255,0.3);
+  text-transform:uppercase;
+  margin:20px 0 8px;
+}
+.modal-desc{
+  font-size:13.5px;line-height:1.8;
+  color:rgba(255,255,255,0.72);
+}
+.modal-pills{display:flex;flex-wrap:wrap;gap:7px;}
+.modal-pill{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:0.04em;
+  padding:5px 12px;border-radius:20px;
+  border:1px solid;cursor:pointer;
+  transition:all 0.15s;
+}
+.modal-pill:hover{transform:translateY(-1px);}
+.modal-links{display:flex;flex-wrap:wrap;gap:6px;}
+.modal-link{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 10px;border-radius:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  background:rgba(255,255,255,0.04);
+  text-decoration:none;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:rgba(255,255,255,0.55);
+  transition:all 0.15s;
+  white-space:nowrap;
+}
+.modal-link:hover{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.25);}
+.modal-link-tag{
+  font-size:8px;letter-spacing:0.08em;
+  padding:1px 5px;border-radius:3px;
+  background:rgba(255,255,255,0.08);
+  color:rgba(255,255,255,0.35);flex-shrink:0;
+}
+
+/* Search term highlight */
+.search-hl{
+  background:rgba(201,168,76,0.35);
+  color:#fff;
+  border-radius:2px;
+  padding:0 1px;
+}
+
+/* scrollbar */
+#modal-card::-webkit-scrollbar{width:4px;}
+#modal-card::-webkit-scrollbar-track{background:rgba(255,255,255,0.03);}
+#modal-card::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:2px;}
+
+/* ── GLORY WORDS ─────────────────────────────────── */
+.glory-word{font-style:italic;border-bottom:1px dotted rgba(201,168,76,0.35);cursor:pointer;transition:border-color 0.2s,color 0.2s;}
+.glory-word:hover{border-bottom-color:rgba(201,168,76,0.85);color:#e0c060;}
+#glory-pop{display:none;position:fixed;z-index:9000;background:linear-gradient(160deg,#0d1525,#070c1a);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 16px;max-width:280px;box-shadow:0 0 40px rgba(0,0,0,0.7),0 0 20px rgba(201,168,76,0.12);}
+#glory-pop .gp-word{font-size:13px;font-weight:700;letter-spacing:0.1em;color:#e0c060;font-family:'JetBrains Mono',monospace;margin-bottom:6px;}
+#glory-pop .gp-def{font-size:12px;line-height:1.6;color:#8898b0;font-family:'Libre Baskerville',serif;font-style:italic;margin-bottom:10px;}
+#glory-pop .gp-link{font-size:9px;letter-spacing:0.15em;color:rgba(201,168,76,0.6);font-family:'JetBrains Mono',monospace;text-decoration:none;transition:color 0.2s;display:block;}
+#glory-pop .gp-link:hover{color:#c9a84c;}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div id="logo"><span class="us">US</span><span class="now">NOW</span></div>
+  <div id="back-btn">← BACK</div>
+  <div id="topbar-right">
+    <div id="search-bar">
+      <span id="search-toggle">⌕</span>
+      <input id="search-input" type="text" placeholder="search…" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="search" enterkeyhint="search">
+      <button id="search-clear">✕</button>
+    </div>
+    <a href="index.html" id="layers-btn">← LAYERS</a>
+  </div>
+</div>
+
+<div id="search-results-screen">
+  <div id="search-results-topbar">
+    <span id="search-results-count"></span>
+    <button id="search-results-back">← BACK</button>
+  </div>
+  <div id="search-results-fruit"></div>
+</div>
+
+<div id="scene">
+  <canvas id="stars"></canvas>
+  <div id="layer-atmosphere"></div>
+  <div id="layer-ghost"></div>
+  <svg id="tree-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+  <div id="fruit-layer"></div>
+
+  <div id="horizon">
+    <div id="earth-glow"></div>
+    <div id="earth-arc"></div>
+  </div>
+  <div id="horizon-line"></div>
+  <div id="root-orb"><div id="root-label">ME,<br>MYSELF<br>& I</div></div>
+  <div id="breadcrumb"></div>
+</div>
+
+<div id="glory-pop">
+  <div class="gp-word" id="gp-word"></div>
+  <div class="gp-def" id="gp-def"></div>
+  <a class="gp-link" id="gp-link" href="compendium.html" target="_blank">→ THE WORLD COMPENDIUM</a>
+</div>
+
+<div id="modal">
+  <div id="modal-backdrop"></div>
+  <div id="modal-card">
+    <button id="modal-close">✕ CLOSE</button>
+    <div id="modal-crumb"></div>
+    <div id="modal-colorbar"></div>
+    <h2 id="modal-title"></h2>
+    <div id="modal-sub"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="layers.js"></script>
+<script src="glories.js"></script>
+<script>
+/* =====================================================
+   USNOW TREE OF KNOWLEDGE
+   ===================================================== */
+
+const W = () => window.innerWidth;
+const H = () => window.innerHeight;
+
+// ── SPHERE RENDERING (from live site) ─────────────
+
+function sphereGrad(c) {
+  const h = c.replace('#','');
+  const r = parseInt(h.slice(0,2),16), g = parseInt(h.slice(2,4),16), b = parseInt(h.slice(4,6),16);
+  const lighten = (v,a) => Math.min(255, Math.round(v+a));
+  const darken  = (v,a) => Math.max(0,   Math.round(v-a));
+  const spec = `rgba(255,255,255,0.76)`;
+  const hl   = `rgba(${lighten(r,70)},${lighten(g,70)},${lighten(b,53)},0.90)`;
+  const base = `rgba(${r},${g},${b},1)`;
+  const shad = `rgba(${darken(r,60)},${darken(g,60)},${darken(b,50)},1)`;
+  const deep = `rgba(${darken(r,90)},${darken(g,90)},${darken(b,80)},1)`;
+  const rim  = `rgba(${lighten(r,40)},${lighten(g,40)},${lighten(b,50)},0.5)`;
+  return `radial-gradient(circle at 30% 68%, ${spec} 0%, ${spec} 4%, ${hl} 12%, ${base} 38%, ${shad} 68%, ${deep} 88%, ${rim} 100%)`;
+}
+function sphereBorder(c) {
+  const h = c.replace('#','');
+  const r = parseInt(h.slice(0,2),16), g = parseInt(h.slice(2,4),16), b = parseInt(h.slice(4,6),16);
+  return `rgba(${Math.min(255,r+60)},${Math.min(255,g+60)},${Math.min(255,b+50)},0.7)`;
+}
+function sphereGlow(c, sz) {
+  return `0 0 ${sz*0.5}px ${c}88, 0 0 ${sz*0.2}px ${c}55, inset 0 0 ${sz*0.25}px rgba(0,0,0,0.4)`;
+}
+function sphereGlowHover(c, sz) {
+  return `0 0 ${sz*1.1}px ${c}cc, 0 0 ${sz*0.5}px ${c}99, inset 0 0 ${sz*0.3}px rgba(0,0,0,0.3)`;
+}
+
+// ── STARS ─────────────────────────────────────────
+
+function drawStars() {
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+  canvas.width = W(); canvas.height = H();
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const count = 280;
+  for(let i=0;i<count;i++){
+    const x = Math.random()*canvas.width;
+    const y = Math.random()*canvas.height*0.72; // only sky portion
+    const r = Math.random()*1.2+0.2;
+    const a = Math.random()*0.6+0.1;
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(255,255,255,${a})`;
+    ctx.fill();
+  }
+}
+
+// ── STATE ─────────────────────────────────────────
+
+// History stack: each entry = { node, items, label, color, breadcrumbLabel }
+// node types: 'root' | 'layer' | 'orb' | 'card'
+const history = [];
+let currentItems = []; // fruit items currently on tree
+
+// Build flat card index for bottomPills resolution
+const _cardIndex = {};
+function buildCardIndex() {
+  function walk(items, layerColor) {
+    items.forEach(item => {
+      if(!item || !item.id) return;
+      _cardIndex[item.id] = item;
+      if(item.topPills) walk(item.topPills, layerColor);
+      if(item.bottomPills) walk(item.bottomPills, layerColor);
+      if(item.orbs) walk(item.orbs, layerColor);
+    });
+  }
+  LAYERS.forEach(layer => {
+    _cardIndex[layer.id] = layer;
+    walk(layer.topPills || [], layer.color);
+    walk(layer.orbs || [], layer.color);
+  });
+}
+
+// ── TREE GEOMETRY ─────────────────────────────────
+
+const HORIZON_PCT = 0.64; // horizon sits at 64% down the screen
+const ROOT_Y_PCT  = 0.72; // root orb center
+
+function getRootPos() {
+  return { x: W()/2, y: H() * ROOT_Y_PCT };
+}
+
+// Pyramid slot layout — fixed positions, no overlaps at any screen size
+//            [1]           top center
+//        [2]     [3]       mid row
+//      [4]   [5]   [6]     lower row
+//        [7]     [8]       low-hanging, flank root
+//           [ROOT]
+// Pyramid slots — xf: horizontal factor, yf: vertical factor (1=top, 0=near root)
+//            [1]           top center
+//        [2]     [3]       mid row
+//      [4]   [5]   [6]     lower row
+//        [7]     [8]       low-hanging, flank root
+//           [ROOT]
+const PYRAMID_SLOTS = [
+  { xf:  0.00, yf: 0.92 }, // 1 — top center
+  { xf: -0.40, yf: 0.65 }, // 2 — mid left
+  { xf:  0.40, yf: 0.65 }, // 3 — mid right
+  { xf: -0.72, yf: 0.36 }, // 4 — lower left
+  { xf:  0.00, yf: 0.32 }, // 5 — lower center
+  { xf:  0.72, yf: 0.36 }, // 6 — lower right
+  { xf: -0.30, yf: 0.10 }, // 7 — low left (near root)
+  { xf:  0.30, yf: 0.10 }, // 8 — low right (near root)
+];
+
+function getFruitPositions(n) {
+  if(n === 0) return [];
+  const cx      = W() / 2;
+  const rootY   = H() * ROOT_Y_PCT;
+  const mobile  = W() < 600;
+  // On mobile compress the vertical range so tree fits screen
+  const topY    = mobile ? H() * 0.12 : H() * 0.10;
+  const bottomY = rootY - 130; // always clear the 92px root orb
+  const totalH  = bottomY - topY;
+  const halfW   = mobile ? W() * 0.42 : W() * 0.46;
+
+  // Symmetric order maps for small counts
+  // Always pair left/right, center goes top or middle
+  const ORDER = {
+    1: [0],
+    2: [1, 2],
+    3: [0, 1, 2],
+    4: [1, 2, 3, 5],
+    5: [0, 1, 2, 3, 5],
+    6: [0, 1, 2, 3, 4, 5],
+    7: [0, 1, 2, 3, 4, 5, 6],
+    8: [0, 1, 2, 3, 4, 5, 6, 7],
+  };
+  const order = ORDER[Math.min(n, 8)] || ORDER[8];
+
+  const positions = [];
+  order.forEach(slotIdx => {
+    const slot = PYRAMID_SLOTS[slotIdx];
+    const x = cx + slot.xf * halfW;
+    const y = bottomY - slot.yf * totalH;
+    positions.push({
+      x: Math.max(W()*0.06, Math.min(W()*0.94, x)),
+      y: Math.max(topY, Math.min(bottomY, y))
+    });
+  });
+  return positions;
+}
+
+// ── TREE BRANCHES (SVG) ───────────────────────────
+
+function drawBranches(fruitPositions, color) {
+  const svg = document.getElementById('tree-svg');
+  const root = getRootPos();
+  const c = color || '#8a6020';
+  const mobile = W() < 600;
+
+  // Parse color for glow effects
+  const hx = c.replace('#','');
+  const cr = parseInt(hx.slice(0,2),16);
+  const cg = parseInt(hx.slice(2,4),16);
+  const cb = parseInt(hx.slice(4,6),16);
+  const cGlow = `rgba(${cr},${cg},${cb},0.25)`;
+  const cMid  = `rgba(${cr},${cg},${cb},0.55)`;
+  const cBase = `rgba(${cr},${cg},${cb},0.75)`;
+
+  // Trunk geometry — tall, substantial, tapers naturally
+  const trunkBase = { x: root.x, y: root.y - 46 };
+  const trunkH    = mobile ? 80 : 120;
+  const trunkTop  = { x: root.x, y: trunkBase.y - trunkH };
+  const trunkW    = mobile ? 11 : 18;
+
+  // Find vertical midpoint of all fruits to set split height
+  const avgY = fruitPositions.reduce((s,p) => s + p.y, 0) / (fruitPositions.length || 1);
+  const splitY = trunkTop.y + (avgY - trunkTop.y) * 0.35;
+
+  let defs = `<defs>
+    <linearGradient id="trunkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${c}" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="${c}" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="${c}" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="burstGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="${c}" stop-opacity="0.45"/>
+      <stop offset="40%"  stop-color="${c}" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="${c}" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="branchGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>`;
+
+  let paths = defs;
+
+  // ── TRUNK ─────────────────────────────────────────
+  // Background glow trunk (fat, blurred)
+  paths += `<line x1="${trunkBase.x}" y1="${trunkBase.y}"
+    x2="${trunkTop.x}" y2="${trunkTop.y}"
+    stroke="${cGlow}" stroke-width="${trunkW * 3}"
+    stroke-linecap="round" filter="url(#branchGlow)"/>`;
+  // Main trunk body
+  paths += `<line x1="${trunkBase.x}" y1="${trunkBase.y}"
+    x2="${trunkTop.x}" y2="${trunkTop.y}"
+    stroke="url(#trunkGrad)" stroke-width="${trunkW}"
+    stroke-linecap="round"/>`;
+  // Highlight streak
+  paths += `<line x1="${trunkBase.x - 1}" y1="${trunkBase.y}"
+    x2="${trunkTop.x - 1}" y2="${trunkTop.y}"
+    stroke="rgba(255,255,255,0.12)" stroke-width="${trunkW * 0.3}"
+    stroke-linecap="round"/>`;
+
+  // ── BACKGROUND BRANCH SILHOUETTES (depth effect) ──
+  // Small ghost branches that suggest a fuller tree
+  const ghostBranches = [
+    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.3, dx: -W()*0.08, dy: -H()*0.06 },
+    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.5, dx:  W()*0.07, dy: -H()*0.05 },
+    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.15,dx: -W()*0.06, dy: -H()*0.08 },
+    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.6, dx:  W()*0.09, dy: -H()*0.04 },
+  ];
+  ghostBranches.forEach(gb => {
+    const cpx = gb.x1 + gb.dx * 0.5;
+    const cpy = gb.y1 + gb.dy * 0.3;
+    paths += `<path d="M ${gb.x1} ${gb.y1} Q ${cpx} ${cpy} ${gb.x1+gb.dx} ${gb.y1+gb.dy}"
+      fill="none" stroke="${cGlow}" stroke-width="1.5"
+      stroke-linecap="round" opacity="0.5"/>`;
+    // Small sub-twigs
+    paths += `<path d="M ${gb.x1+gb.dx*0.7} ${gb.y1+gb.dy*0.7}
+      Q ${gb.x1+gb.dx*0.8+gb.dy*0.3} ${gb.y1+gb.dy*0.5}
+        ${gb.x1+gb.dx+gb.dy*0.15} ${gb.y1+gb.dy*0.3}"
+      fill="none" stroke="${cGlow}" stroke-width="0.8"
+      stroke-linecap="round" opacity="0.35"/>`;
+  });
+
+  // ── MAIN BRANCHES TO FRUIT ─────────────────────────
+  fruitPositions.forEach((fp, i) => {
+    const isLeft = fp.x < root.x - 20;
+    const isRight = fp.x > root.x + 20;
+    const isCenter = !isLeft && !isRight;
+
+    // Branch thickness tapers: nearest fruits get thicker branches
+    const distFromRoot = Math.sqrt(Math.pow(fp.x - root.x,2) + Math.pow(fp.y - root.y,2));
+    const maxDist = H() * 0.6;
+    const taper = 1 - (distFromRoot / maxDist) * 0.5;
+    const branchW = Math.max(1.2, (mobile ? 2.5 : 3.5) * taper);
+
+    // Branch starts from trunk at appropriate height
+    // Branches closer to fruit height split from trunk higher
+    const splitFraction = 0.3 + (trunkTop.y - fp.y) / (trunkTop.y - root.y) * 0.4;
+    const startY = trunkTop.y + (trunkBase.y - trunkTop.y) * Math.max(0, Math.min(0.6, splitFraction));
+    const startX = trunkTop.x;
+
+    // Bezier control points for organic curve
+    const cp1x = startX + (fp.x - startX) * (isCenter ? 0.05 : 0.18);
+    const cp1y = startY - Math.abs(startY - fp.y) * 0.45;
+    const cp2x = fp.x - (fp.x - startX) * (isCenter ? 0.05 : 0.25);
+    const cp2y = fp.y + Math.abs(fp.y - startY) * 0.25;
+
+    // Glow pass
+    paths += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
+      fill="none" stroke="${cGlow}" stroke-width="${branchW * 2.5}"
+      stroke-linecap="round" filter="url(#branchGlow)" opacity="0.6"/>`;
+    // Main branch
+    paths += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
+      fill="none" stroke="${cMid}" stroke-width="${branchW}"
+      stroke-linecap="round"/>`;
+
+    // ── NODE DOTS along the branch ─────────────────
+    // 3 glowing dots evenly spaced between trunk and fruit
+    const dotCount = mobile ? 2 : 3;
+    for(let d = 1; d <= dotCount; d++) {
+      const t = d / (dotCount + 1);
+      // Cubic bezier point at parameter t
+      const mt = 1 - t;
+      const nx = mt*mt*mt*startX + 3*mt*mt*t*cp1x + 3*mt*t*t*cp2x + t*t*t*fp.x;
+      const ny = mt*mt*mt*startY + 3*mt*mt*t*cp1y + 3*mt*t*t*cp2y + t*t*t*fp.y;
+      const dotR = mobile ? 2.5 : 3;
+      // Outer glow
+      paths += `<circle cx="${nx}" cy="${ny}" r="${dotR * 2.2}"
+        fill="${cGlow}" opacity="0.5" filter="url(#branchGlow)"/>`;
+      // Inner dot
+      paths += `<circle cx="${nx}" cy="${ny}" r="${dotR}"
+        fill="${c}" opacity="0.85"/>`;
+      // Specular
+      paths += `<circle cx="${nx - dotR*0.3}" cy="${ny - dotR*0.3}" r="${dotR * 0.4}"
+        fill="rgba(255,255,255,0.6)" opacity="0.7"/>`;
+    }
+  });
+
+  // ── HORIZON BURST behind root ──────────────────────
+  // Radial light emanating from where trunk meets earth
+  const burstX = root.x;
+  const burstY = trunkBase.y + 20;
+  const burstR = mobile ? 55 : 80;
+  // burstGrad defined in defs above
+  paths += `<ellipse cx="${burstX}" cy="${burstY}"
+    rx="${burstR * 1.6}" ry="${burstR * 0.7}"
+    fill="url(#burstGrad)" opacity="0.8"/>`;
+  // Tight bright core
+  paths += `<ellipse cx="${burstX}" cy="${burstY}"
+    rx="${burstR * 0.5}" ry="${burstR * 0.25}"
+    fill="${c}" opacity="0.18"/>`;
+
+  svg.innerHTML = paths;
+}
+
+// ── FRUIT FACTORY ─────────────────────────────────
+
+const FLOAT_ANIMS = ['fruitFloat','fruitFloatB','fruitFloatC'];
+
+function makeFruit(item, pos, isLayerType, isLeaf) {
+  const color  = item.color || '#888';
+  const isMobile = W() < 600;
+  const sz = isLayerType
+    ? (isMobile ? 88 : 70)
+    : (isMobile ? 90 : 72);
+  const label  = item.label || '';
+
+  const el = document.createElement('div');
+  el.className = 'fruit' + (isLayerType ? ' fruit-layer-type' : '') + (isLeaf ? ' fruit-leaf' : '');
+  el.style.cssText = `
+    left:${pos.x}px; top:${pos.y}px;
+    width:${sz}px; height:${sz}px;
+    background:${sphereGrad(color)};
+    border:1.5px solid ${sphereBorder(color)};
+    box-shadow:${sphereGlow(color, sz)};
+    animation:${FLOAT_ANIMS[Math.floor(Math.random()*3)]} ${3.2 + Math.random()*1.6}s ease-in-out infinite;
+    animation-delay:${Math.random()*2}s;
+  `;
+
+  el.innerHTML = `
+    <span class="fruit-label" style="font-size:${Math.max(9, sz*0.155)}px">${label}</span>
+    ${!isLeaf ? '<span class="fruit-more">▾ MORE</span>' : ''}
+  `;
+
+  // Hover glow
+  el.addEventListener('mouseenter', () => {
+    el.style.boxShadow = sphereGlowHover(color, sz);
+    el.style.zIndex = '50';
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.boxShadow = sphereGlow(color, sz);
+    el.style.zIndex = '20';
+  });
+
+  // ── UNIFIED TOUCH + CLICK HANDLER ──────────────
+  // Touch fires the action directly in touchend to avoid
+  // synthetic click being swallowed at deeper tree levels
+  let _tsx, _tsy, _tmoved;
+
+  el.addEventListener('touchstart', e => {
+    _tsx = e.touches[0].clientX;
+    _tsy = e.touches[0].clientY;
+    _tmoved = false;
+    el.style.boxShadow = sphereGlowHover(color, sz);
+  }, {passive: true});
+
+  el.addEventListener('touchmove', e => {
+    if(Math.abs(e.touches[0].clientX-_tsx) > 8 ||
+       Math.abs(e.touches[0].clientY-_tsy) > 8) _tmoved = true;
+  }, {passive: true});
+
+  el.addEventListener('touchend', e => {
+    el.style.boxShadow = sphereGlow(color, sz);
+    if(_tmoved) return;
+    e.preventDefault();
+    e.stopPropagation();
+    // Determine what was tapped
+    const tappedMore = e.target.closest('.fruit-more');
+    if(isLayerType) {
+      openModal(item, [item.label]);
+    } else if(isLeaf) {
+      openModal(item, buildCrumbLabels(item));
+    } else if(tappedMore) {
+      openModal(item, buildCrumbLabels(item));
+    } else {
+      growTree(item);
+    }
+  });
+
+  // Click handlers for mouse (desktop)
+  if(isLayerType) {
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      openModal(item, [item.label]);
+    });
+  } else if(isLeaf) {
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      openModal(item, buildCrumbLabels(item));
+    });
+  } else {
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      if(e.target.closest('.fruit-more')) {
+        openModal(item, buildCrumbLabels(item));
+      } else {
+        growTree(item);
+      }
+    });
+  }
+
+  return el;
+}
+
+function buildCrumbLabels(item) {
+  // Walk history to build path
+  const labels = history.map(h => h.breadcrumbLabel);
+  labels.push(item.label);
+  return labels;
+}
+
+// ── FALLEN FRUIT — arc around root orb ───────────
+// Places fruit in a wide arc around the root orb base.
+// Never overlaps the root orb. Deduplicates by label.
+
+function renderFallenFruit(items, color) {
+  const container = document.getElementById('fruit-layer');
+  const root = getRootPos();
+  const mobile = W() < 600;
+  const sz = mobile ? 38 : 30;
+  const rootSz = 92;
+  // Arc radius — clear the root orb with margin
+  const arcR = rootSz/2 + sz/2 + (mobile ? 28 : 22);
+  // Arc spans from left to right below horizon, centered on root
+  // Angles: from ~200° to ~340° (bottom arc, avoiding top)
+  const startAngle = 200;
+  const endAngle   = 340;
+
+  // Deduplicate by label
+  const seen = new Set();
+  const unique = [];
+  items.forEach(item => {
+    const key = (item.label || '').toLowerCase().trim();
+    if(!seen.has(key)) { seen.add(key); unique.push(item); }
+  });
+
+  const count = Math.min(unique.length, 8);
+  if(count === 0) return;
+
+  for(let i = 0; i < count; i++) {
+    const item = unique[i];
+    const t = count === 1 ? 0.5 : i / (count - 1);
+    const angleDeg = startAngle + (endAngle - startAngle) * t;
+    const angle = angleDeg * Math.PI / 180;
+    const x = root.x + Math.cos(angle) * arcR * (mobile ? 1.5 : 1.7);
+    const y = root.y + Math.sin(angle) * arcR * 0.75;
+
+    // Clamp to screen
+    if(x < sz || x > W() - sz) continue;
+    if(y > H() * 0.96) continue;
+
+    const c = item.color || color || '#888';
+    const el = document.createElement('div');
+    el.className = 'fruit-fallen';
+    el.style.cssText = `
+      left:${x}px; top:${y}px;
+      width:${sz}px; height:${sz}px;
+      background:${sphereGrad(c)};
+      border:1px solid ${sphereBorder(c)};
+      box-shadow:${sphereGlow(c, sz)};
+      opacity:0.7;
+      transform:translateX(-50%) translateY(-50%);
+    `;
+    el.innerHTML = `<span class="fruit-fallen-label" style="font-size:${mobile?7:7.5}px">${item.label}</span>`;
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      const resolved = _cardIndex[item.id] || item;
+      openModal(resolved, [item.label]);
+    });
+    // Touch
+    let _ts, _tm;
+    el.addEventListener('touchstart', e => {
+      _ts={x:e.touches[0].clientX,y:e.touches[0].clientY};_tm=false;
+    },{passive:true});
+    el.addEventListener('touchmove', e => {
+      if(Math.abs(e.touches[0].clientX-_ts.x)>8||Math.abs(e.touches[0].clientY-_ts.y)>8)_tm=true;
+    },{passive:true});
+    el.addEventListener('touchend', e => {
+      if(_tm) return;
+      e.preventDefault();
+      const resolved = _cardIndex[item.id] || item;
+      openModal(resolved, [item.label]);
+    });
+    container.appendChild(el);
+  }
+}
+
+// ── GROW TREE ─────────────────────────────────────
+
+function growTree(item) {
+  const children = (item.topPills || []).slice(0, 8);
+  if(children.length === 0) {
+    // Leaf — open modal instead
+    openModal(item, buildCrumbLabels(item));
+    return;
+  }
+
+  // Push current state to history
+  history.push({
+    items: currentItems,
+    label: item.label,
+    breadcrumbLabel: item.label,
+    color: item.color || '#888',
+    node: item
+  });
+
+  currentItems = children;
+  renderTree(children, item);
+  updateNav(item);
+}
+
+function renderTree(items, parentItem) {
+  const container = document.getElementById('fruit-layer');
+  const svg = document.getElementById('tree-svg');
+
+  // Clear existing fruits (keep fallen)
+  container.querySelectorAll('.fruit').forEach(f => f.remove());
+  container.querySelectorAll('.fruit-fallen').forEach(f => f.remove());
+  svg.innerHTML = '';
+
+  const color = parentItem ? (parentItem.color || '#8a6020') : '#d4a855';
+  const positions = getFruitPositions(items.length);
+
+  // Draw branches
+  drawBranches(positions, color);
+
+  // Update atmosphere
+  setAtmosphere(parentItem);
+
+  // Render fruits
+  items.forEach((item, i) => {
+    const children = item.topPills || [];
+    const isLeaf = children.length === 0;
+    const isLayerType = item._isLayer || false;
+    const fruit = makeFruit(item, positions[i], isLayerType, isLeaf);
+    container.appendChild(fruit);
+  });
+
+  // Fallen fruit from bottomPills
+  const fallen = parentItem ? (parentItem.bottomPills || []) : [];
+  if(fallen.length) renderFallenFruit(fallen, color);
+}
+
+// ── ROOT LEVEL (layers as fruits) ────────────────
+
+function renderRoot() {
+  history.length = 0;
+  currentItems = [];
+
+  const container = document.getElementById('fruit-layer');
+  const svg = document.getElementById('tree-svg');
+  container.innerHTML = '';
+  svg.innerHTML = '';
+
+  // Layer order matches the sketch — slot positions:
+  // slot 1 (top center)    = Even Further Back
+  // slot 2 (mid left)      = Power & Politics
+  // slot 3 (mid right)     = History & Civilization
+  // slot 4 (lower left)    = Community & Culture
+  // slot 5 (lower center)  = Origins
+  // slot 6 (lower right)   = Knowledge & Learning
+  const LAYER_ORDER = ['cosmos','politics','history','community','family','education'];
+  const layerMap = {};
+  LAYERS.filter(l => l.id !== 'self').forEach(l => layerMap[l.id] = l);
+  const layerFruits = LAYER_ORDER
+    .map(id => layerMap[id])
+    .filter(Boolean)
+    .map(l => ({ ...l, _isLayer: true, _orbs: l.orbs || [] }));
+
+  const positions = getFruitPositions(layerFruits.length);
+  const rootColor = '#d4a855';
+
+  drawBranches(positions, rootColor);
+  setAtmosphere(null);
+  updateNav(null);
+
+  layerFruits.forEach((layer, i) => {
+    const sz = W() < 600 ? 95 : 76;
+    const el = document.createElement('div');
+    el.className = 'fruit fruit-layer-type';
+    el.style.cssText = `
+      left:${positions[i].x}px; top:${positions[i].y}px;
+      width:${sz}px; height:${sz}px;
+      background:${sphereGrad(layer.color)};
+      border:1.5px solid ${sphereBorder(layer.color)};
+      box-shadow:${sphereGlow(layer.color, sz)};
+      animation:${FLOAT_ANIMS[i%3]} ${3.5+i*0.4}s ease-in-out infinite;
+      animation-delay:${i*0.35}s;
+    `;
+    el.innerHTML = `<span class="fruit-label" style="font-size:10px">${layer.label}</span><span class="fruit-more">▾ MORE</span>`;
+
+    el.addEventListener('mouseenter', () => {
+      el.style.boxShadow = sphereGlowHover(layer.color, sz);
+      el.style.zIndex = '50';
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.boxShadow = sphereGlow(layer.color, sz);
+      el.style.zIndex = '20';
+    });
+
+    // Layer fruit: tap body → grow orb tree, tap MORE → layer modal
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      if(e.target.closest('.fruit-more')) {
+        openModal(layer, [layer.label]);
+        return;
+      }
+      history.push({
+        items: layerFruits,
+        label: 'ROOT',
+        breadcrumbLabel: layer.label,
+        color: layer.color,
+        node: layer,
+        isRoot: true
+      });
+      currentItems = layer._orbs || layer.orbs || [];
+      const orbItems = (layer._orbs || layer.orbs || []).map(o => ({...o, _layerColor: layer.color}));
+      renderTree(orbItems, layer);
+      updateNav(layer);
+    });
+
+    // Touch handler for layer fruits
+    let _ltsx, _ltsy, _ltmoved;
+    el.addEventListener('touchstart', e => {
+      _ltsx = e.touches[0].clientX; _ltsy = e.touches[0].clientY; _ltmoved = false;
+      el.style.boxShadow = sphereGlowHover(layer.color, sz);
+    }, {passive:true});
+    el.addEventListener('touchmove', e => {
+      if(Math.abs(e.touches[0].clientX-_ltsx)>8||Math.abs(e.touches[0].clientY-_ltsy)>8) _ltmoved=true;
+    }, {passive:true});
+    el.addEventListener('touchend', e => {
+      el.style.boxShadow = sphereGlow(layer.color, sz);
+      if(_ltmoved) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if(e.target.closest('.fruit-more')) {
+        openModal(layer, [layer.label]);
+        return;
+      }
+      history.push({
+        items: layerFruits,
+        label: 'ROOT',
+        breadcrumbLabel: layer.label,
+        color: layer.color,
+        node: layer,
+        isRoot: true
+      });
+      currentItems = layer._orbs || layer.orbs || [];
+      const orbItems = (layer._orbs || layer.orbs || []).map(o => ({...o, _layerColor: layer.color}));
+      renderTree(orbItems, layer);
+      updateNav(layer);
+    });
+
+    container.appendChild(el);
+  });
+
+  // Self layer pills as small satellites near root
+  renderSelfSatellites();
+  updateBreadcrumb([]);
+  document.getElementById('back-btn').style.display = 'none';
+}
+
+function renderSelfSatellites() {
+  // Self layer topPills sit as resting fruit on the ground
+  // flanking the root orb left and right along the horizon
+  const self = LAYERS.find(l => l.id === 'self');
+  if(!self) return;
+  const container = document.getElementById('fruit-layer');
+  const root = getRootPos();
+  const pills = (self.topPills || []).slice(0, 5);
+  const mobile = W() < 600;
+  const sz = mobile ? 48 : 42;
+  const groundY = H() * HORIZON_PCT + sz * 0.4; // sit ON the horizon line
+
+  // Use same arc renderer as fallen fruit — consistent geometry
+  renderFallenFruit(pills.map(p => ({...p, color: p.color || self.color})), self.color);
+}
+
+// ── ROOT ORB ──────────────────────────────────────
+
+function initRootOrb() {
+  const root = document.getElementById('root-orb');
+  const pos = getRootPos();
+  const sz = 92;
+  root.style.cssText = `
+    left:${pos.x}px; top:${pos.y}px;
+    width:${sz}px; height:${sz}px;
+    background:radial-gradient(circle at 37% 32%, #f8e8b0 0%, #d4a855 35%, #8a6020 65%, #3a2408 90%);
+    border:2px solid rgba(240,210,130,0.78);
+    box-shadow:0 0 40px rgba(212,168,85,0.5),0 0 80px rgba(212,168,85,0.2),inset 0 0 20px rgba(0,0,0,0.3);
+    animation:pulseCore 3.5s ease-in-out infinite;
+  `;
+  root.addEventListener('click', () => {
+    if(history.length === 0) {
+      // At root — open ME MYSELF & I modal
+      openModal(LAYERS[0], ['ME, MYSELF & I']);
+    } else {
+      // Inside a layer/orb — open the parent node's modal
+      const parent = history[history.length - 1].node;
+      if(parent) openModal(parent, history.map(h => h.breadcrumbLabel));
+      else renderRoot();
+    }
+  });
+}
+
+function updateRootLabel(item) {
+  const labelEl = document.getElementById('root-label');
+  if(!item) {
+    labelEl.innerHTML = 'ME,<br>MYSELF<br>& I';
+    return;
+  }
+  const label = item.label || '';
+  const words = label.split(' ');
+  if(words.length <= 2) {
+    labelEl.innerHTML = label;
+  } else {
+    const mid = Math.ceil(words.length / 2);
+    labelEl.innerHTML = words.slice(0,mid).join(' ') + '<br>' + words.slice(mid).join(' ');
+  }
+}
+
+// ── ATMOSPHERE ────────────────────────────────────
+
+function setAtmosphere(item) {
+  const atm = document.getElementById('layer-atmosphere');
+  const ghost = document.getElementById('layer-ghost');
+
+  if(!item) {
+    atm.style.opacity = '0';
+    ghost.style.opacity = '0';
+    return;
+  }
+
+  const color = item.color || item._layerColor || '#888';
+  const label = item.layerLabel || item.label || '';
+  const hex = color.replace('#','');
+  const r = parseInt(hex.slice(0,2),16);
+  const g = parseInt(hex.slice(2,4),16);
+  const b = parseInt(hex.slice(4,6),16);
+
+  atm.style.background = `radial-gradient(ellipse 100% 60% at 50% 0%, rgba(${r},${g},${b},0.08) 0%, transparent 70%)`;
+  atm.style.opacity = '1';
+
+  ghost.textContent = label;
+  ghost.style.color = `rgba(${r},${g},${b},0.055)`;
+  ghost.style.opacity = '1';
+}
+
+// ── NAV / BREADCRUMB ──────────────────────────────
+
+function updateNav(currentItem) {
+  const backBtn = document.getElementById('back-btn');
+  backBtn.style.display = history.length > 0 ? 'block' : 'none';
+  // Root label shows the parent — what you stepped out of to see this tree
+  const parent = history.length > 0 ? history[history.length-1].node : null;
+  updateRootLabel(parent);
+  updateBreadcrumb(currentItem);
+}
+
+function updateBreadcrumb(currentItem) {
+  const el = document.getElementById('breadcrumb');
+  // history entries: each push stores the label of what you tapped to arrive here
+  // The last entry's breadcrumbLabel == currentItem.label, so skip it to avoid duplicate
+  const crumbs = history
+    .slice(0, -1) // drop last — it IS the current item
+    .map((h,i) => ({ label: h.breadcrumbLabel, index: i }));
+
+  let html = '';
+  // Always show THE GARDEN as first crumb if we're inside anything
+  if(history.length > 0) {
+    html += `<span class="crumb" data-idx="-1">THE TREE</span>`;
+    if(crumbs.length) html += `<span class="crumb-sep">›</span>`;
+  }
+  crumbs.forEach((c, i) => {
+    html += `<span class="crumb" data-idx="${c.index}">${c.label}</span>`;
+    html += `<span class="crumb-sep">›</span>`;
+  });
+  if(currentItem && currentItem.label) {
+    html += `<span class="crumb active">${currentItem.label}</span>`;
+  } else if(history.length === 0) {
+    html += `<span class="crumb active" style="color:rgba(212,168,85,0.6)">THE TREE</span>`;
+  }
+  el.innerHTML = html;
+
+  el.querySelectorAll('.crumb[data-idx]').forEach(c => {
+    c.addEventListener('click', () => {
+      const idx = parseInt(c.dataset.idx);
+      if(idx === -1) { renderRoot(); return; }
+      jumpToHistory(idx);
+    });
+  });
+}
+
+function jumpToHistory(idx) {
+  // Unwind stack to idx
+  while(history.length > idx + 1) history.pop();
+  const entry = history[idx];
+  if(!entry) { renderRoot(); return; }
+
+  history.pop();
+  if(entry.isRoot) {
+    renderRoot();
+  } else {
+    currentItems = entry.items;
+    renderTree(entry.items, entry.node);
+    updateNav(entry.node);
+  }
+}
+
+document.getElementById('back-btn').addEventListener('click', () => {
+  if(history.length === 0) return;
+  const prev = history.pop();
+  if(prev.isRoot || history.length === 0) {
+    renderRoot();
+  } else {
+    currentItems = prev.items;
+    renderTree(prev.items, prev.node);
+    updateNav(prev.node);
+  }
+});
+
+document.getElementById('logo').addEventListener('click', () => renderRoot());
+
+// ── MODAL ─────────────────────────────────────────
+
+function openModal(item, crumbLabels) {
+  const color  = item.color || '#888';
+  const hex    = color.replace('#','');
+  const r = parseInt(hex.slice(0,2),16);
+  const g = parseInt(hex.slice(2,4),16);
+  const b = parseInt(hex.slice(4,6),16);
+
+  // Style card
+  const card = document.getElementById('modal-card');
+  card.style.background = `linear-gradient(160deg, rgba(${r},${g},${b},0.12) 0%, #0c1020 100%)`;
+  card.style.border = `1px solid rgba(${r},${g},${b},0.3)`;
+
+  // Colorbar
+  document.getElementById('modal-colorbar').style.background = color;
+
+  // Crumb
+  const crumbText = (crumbLabels || []).slice(0,-1).join(' › ').toUpperCase();
+  document.getElementById('modal-crumb').textContent = crumbText;
+
+  // Title
+  document.getElementById('modal-title').textContent = item.label || '';
+
+  // Sub
+  const subEl = document.getElementById('modal-sub');
+  subEl.textContent = item.sub || item.time || '';
+  subEl.style.display = (item.sub || item.time) ? 'block' : 'none';
+
+  let body = '';
+
+  // Top pills — GO FURTHER / WHAT'S INSIDE
+  const pills = item.topPills || [];
+  if(pills.length) {
+    const sectionLabel = item._isLayer ? 'EXPLORE THIS LAYER' : (item.cardType === 'orb' ? 'INSIDE THIS ORB' : 'GO FURTHER');
+    body += `<div class="modal-section">${sectionLabel}</div><div class="modal-pills">`;
+    pills.slice(0,8).forEach(p => {
+      const pc = p.color || color;
+      const lcl = `rgba(${Math.min(255,parseInt(pc.replace('#','').slice(0,2),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(2,4),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(4,6),16)+50)},0.9)`;
+      body += `<span class="modal-pill" style="color:${lcl};border-color:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16),0.4});background:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16)},0.12);" data-pill-id="${p.id}">${p.label}</span>`;
+    });
+    body += `</div>`;
+  }
+
+  // Description
+  if(item.desc) {
+    body += `<div class="modal-section">WHAT IT IS</div><div class="modal-desc">${item.desc}</div>`;
+  }
+
+  // Links
+  if(item.links && item.links.length) {
+    body += `<div class="modal-section">RESOURCES</div><div class="modal-links">`;
+    item.links.forEach(link => {
+      const em = link.emoji ? `<span>${link.emoji}</span>` : '';
+      const tag = link.tag ? `<span class="modal-link-tag">${link.tag}</span>` : '';
+      body += `<a class="modal-link" href="${link.url}" target="_blank" rel="noopener">${em}<span>${link.label}</span>${tag}</a>`;
+    });
+    body += `</div>`;
+  }
+
+  document.getElementById('modal-body').innerHTML = body;
+
+  // Apply glory word highlights to description
+  const bodyEl = document.getElementById('modal-body');
+  applyGlories(bodyEl);
+
+  // Pill click → open that pill's modal
+  document.querySelectorAll('.modal-pill[data-pill-id]').forEach(p => {
+    p.addEventListener('click', () => {
+      const resolved = _cardIndex[p.dataset.pillId];
+      if(resolved) openModal(resolved, [...(crumbLabels||[]), resolved.label]);
+    });
+  });
+
+  document.getElementById('modal').classList.add('open');
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-backdrop').addEventListener('click', closeModal);
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  activeSearchQuery = ''; // clear highlight context when modal closes
+}
+
+// ── INIT ──────────────────────────────────────────
+
+function init() {
+  buildCardIndex();
+  drawStars();
+  initRootOrb();
+  renderRoot();
+  initSearch();
+}
+
+// ── SEARCH ───────────────────────────────────────
+
+function initSearch() {
+  const toggle   = document.getElementById('search-toggle');
+  const bar      = document.getElementById('search-bar');
+  const input    = document.getElementById('search-input');
+  const clearBtn = document.getElementById('search-clear');
+  const screen   = document.getElementById('search-results-screen');
+  const countEl  = document.getElementById('search-results-count');
+  const fruitsEl = document.getElementById('search-results-fruit');
+  const MAX      = 48;
+  let   timer;
+
+  // No toggle — input always visible, nothing to click
+
+  clearBtn.addEventListener('click', () => {
+    input.value = '';
+    clearSearch();
+    bar.classList.remove('open');
+  });
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim();
+    clearBtn.classList.toggle('visible', q.length > 0);
+    clearTimeout(timer);
+    timer = setTimeout(() => runSearch(q), 220);
+  });
+
+  input.addEventListener('keydown', e => {
+    if(e.key === 'Enter') { input.blur(); return; }
+    if(e.key === 'Escape') {
+      clearSearch();
+      bar.classList.remove('open');
+    }
+  });
+
+  function clearSearch() {
+    closeSearch();
+    input.value = '';
+    clearBtn.classList.remove('visible');
+    activeQuery = '';
+  }
+
+  function hideResults() {
+    screen.style.display = 'none';
+    fruitsEl.innerHTML = '';
+    countEl.textContent = '';
+  }
+
+  function runSearch(q) {
+    if(q.length < 3) { hideResults(); return; }
+    const ql = q.toLowerCase();
+
+    // Gather all searchable cards from LAYERS
+    const allCards = [];
+    LAYERS.forEach(layer => {
+      function walk(items, layerColor) {
+        (items || []).forEach(item => {
+          if(!item || !item.id) return;
+          allCards.push({ item, layerColor: item.color || layerColor });
+          walk(item.topPills, item.color || layerColor);
+          walk(item.bottomPills, item.color || layerColor);
+        });
+      }
+      walk(layer.topPills, layer.color);
+      walk(layer.orbs, layer.color);
+    });
+
+    // Score each card
+    const scored = [];
+    const seen = new Set();
+    allCards.forEach(({ item, layerColor }) => {
+      if(seen.has(item.id)) return;
+      seen.add(item.id);
+      const label = (item.label || '').toLowerCase();
+      const desc  = (item.desc  || '').toLowerCase();
+      let score = 0;
+      if(label === ql)              score = 100; // exact
+      else if(label.startsWith(ql)) score = 80;  // label starts with
+      else if(label.includes(ql))   score = 60;  // label contains
+      else if(desc.includes(ql))    score = 20;  // desc contains
+      if(score > 0) scored.push({ item, layerColor, score });
+    });
+
+    scored.sort((a,b) => b.score - a.score);
+    const total   = scored.length;
+    const results = scored.slice(0, MAX);
+
+    if(total === 0) {
+      countEl.textContent = `no results for "${q}"`;
+      fruitsEl.innerHTML = '';
+      screen.style.display = 'flex';
+      return;
+    }
+
+    countEl.textContent = total > MAX
+      ? `${MAX} of ${total} — narrow your search`
+      : `${total} result${total === 1 ? '' : 's'} for "${q}"`;
+
+    fruitsEl.innerHTML = '';
+    results.forEach(({ item, layerColor }) => {
+      const color = item.color || layerColor || '#888';
+      const mobile = W() < 600;
+      // Fixed small size — clean 3 across on any phone
+      const sz = mobile ? 72 : 85;
+      const el = document.createElement('div');
+      el.style.cssText = `
+        width:${sz}px; height:${sz}px;
+        border-radius:50%;
+        background:${sphereGrad(color)};
+        border:1.5px solid ${sphereBorder(color)};
+        box-shadow:${sphereGlow(color, sz)};
+        display:flex; align-items:center; justify-content:center;
+        cursor:pointer; position:relative;
+        margin:0 auto;
+        transition:transform 0.15s, box-shadow 0.15s;
+      `;
+      el.innerHTML = `<span style="
+        color:#fff; font-family:'Libre Baskerville',serif;
+        font-size:${Math.max(8, sz*0.13)}px;
+        text-align:center; line-height:1.2; padding:6px;
+        pointer-events:none;
+        text-shadow:0 1px 6px rgba(0,0,0,1),0 0 12px rgba(0,0,0,0.95);
+      ">${item.label}</span>`;
+      el.addEventListener('mouseenter', () => {
+        el.style.transform = 'scale(1.1)';
+        el.style.boxShadow = sphereGlowHover(color, sz);
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'scale(1)';
+        el.style.boxShadow = sphereGlow(color, sz);
+      });
+      // Touch
+      let _ts, _tm;
+      el.addEventListener('touchstart', e => {
+        _ts = {x:e.touches[0].clientX, y:e.touches[0].clientY}; _tm = false;
+      }, {passive:true});
+      el.addEventListener('touchmove', e => {
+        if(Math.abs(e.touches[0].clientX-_ts.x)>8||Math.abs(e.touches[0].clientY-_ts.y)>8) _tm=true;
+      }, {passive:true});
+      el.addEventListener('touchend', e => {
+        if(_tm) return;
+        e.preventDefault();
+        openModal(item, [item.label]);
+      });
+      el.addEventListener('click', () => openModal(item, [item.label]));
+      fruitsEl.appendChild(el);
+    });
+
+    screen.style.display = 'flex';
+  }
+}
+
+window.addEventListener('resize', () => {
+  drawStars();
+  initRootOrb();
+  if(history.length === 0) renderRoot();
+  else {
+    const top = history[history.length-1];
+    renderTree(currentItems, top.node);
+    updateNav(top.node);
+  }
+});
+
+// ── GLORY HIGHLIGHTS ─────────────────────────────
+// Called after modal body renders — highlights matching words
+function applyGlories(root) {
+  if(typeof GLORIES === 'undefined') return; // glories.js not loaded
+  if(!window._gloryRe) {
+    const words = Object.keys(GLORIES).sort((a,b) => b.length - a.length);
+    window._gloryRe = new RegExp(
+      '\\b(' + words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|') + ')\\b',
+      'gi'
+    );
+  }
+  const re = window._gloryRe;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(n) {
+      const p = n.parentElement;
+      if(!p) return NodeFilter.FILTER_REJECT;
+      if(['SCRIPT','STYLE','A','BUTTON','INPUT'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
+      if(p.classList && p.classList.contains('glory-word')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes = [];
+  while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => {
+    re.lastIndex = 0;
+    if(!re.test(node.textContent)) return;
+    re.lastIndex = 0;
+    const frag = document.createDocumentFragment();
+    let last = 0, m;
+    while((m = re.exec(node.textContent)) !== null) {
+      if(m.index > last) frag.appendChild(document.createTextNode(node.textContent.slice(last, m.index)));
+      const span = document.createElement('span');
+      span.className = 'glory-word';
+      span.textContent = m[0];
+      span.dataset.glory = m[0].charAt(0).toUpperCase() + m[0].slice(1).toLowerCase();
+      frag.appendChild(span);
+      last = re.lastIndex;
+    }
+    if(last < node.textContent.length) frag.appendChild(document.createTextNode(node.textContent.slice(last)));
+    node.parentNode.replaceChild(frag, node);
+  });
+}
+
+// Glory popup — capture phase fires before modal stopPropagation
+document.addEventListener('click', e => {
+  const t = e.target.closest('.glory-word');
+  if(t) {
+    e.stopPropagation();
+    if(typeof GLORIES === 'undefined') return;
+    const key = t.dataset.glory;
+    const def = GLORIES[key] || GLORIES[Object.keys(GLORIES).find(k => k.toLowerCase() === key.toLowerCase())];
+    if(!def) return;
+    document.getElementById('gp-word').textContent = key.toUpperCase();
+    document.getElementById('gp-def').textContent = def;
+    document.getElementById('gp-link').href = 'compendium.html#' + key.toLowerCase();
+    const r = t.getBoundingClientRect();
+    const pw = 280, ph = 130;
+    let left = r.left, top = r.bottom + 8;
+    if(left + pw > window.innerWidth - 10) left = window.innerWidth - pw - 10;
+    if(top + ph > window.innerHeight - 10) top = r.top - ph - 8;
+    const pop = document.getElementById('glory-pop');
+    pop.style.left = Math.max(8, left) + 'px';
+    pop.style.top  = Math.max(8, top)  + 'px';
+    pop.style.display = 'block';
+    return;
+  }
+  if(!e.target.closest('#glory-pop')) {
+    const pop = document.getElementById('glory-pop');
+    if(pop) pop.style.display = 'none';
+  }
+}, true);
+
+init();
+</script>
+</body>
+</html>
