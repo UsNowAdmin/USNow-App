@@ -283,20 +283,21 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 /* ── LAYER GHOST LABEL ───────────────────────────── */
 #layer-ghost{
   position:absolute;
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
+  top:28%;left:50%;
+  transform:translateX(-50%);
   font-family:'Cinzel',serif;
   font-size:clamp(28px,8vw,80px);
   font-weight:600;
   letter-spacing:0.15em;
   text-transform:uppercase;
-  color:rgba(255,255,255,0.04);
+  color:rgba(255,255,255,0.055);
   pointer-events:none;
-  z-index:1;
+  z-index:6;
   text-align:center;
   white-space:nowrap;
   transition:opacity 0.8s ease, color 1s ease;
   user-select:none;
+  mix-blend-mode:screen;
 }
 @media(max-width:600px){
   #layer-ghost{ display:none; }
@@ -1089,12 +1090,16 @@ function drawBranches(fruitPositions, color) {
     { x: root.x + spreadX*0.15, y: trunkTop.y - h*0.02 },
     { x: root.x - spreadX*0.75, y: trunkTop.y + trunkH*0.40 },
     { x: root.x + spreadX*0.70, y: trunkTop.y + trunkH*0.38 },
+    // Mobile canopy fill — push green mass to top of screen
+    { x: root.x,                y: trunkTop.y - h*0.10 },
+    { x: root.x - spreadX*0.40, y: trunkTop.y - h*0.08 },
+    { x: root.x + spreadX*0.38, y: trunkTop.y - h*0.06 },
   ];
   blobCenters.forEach((b,i) => {
-    const rx = (mobile ? 55 : 80) + i*8;
-    const ry = (mobile ? 40 : 62) + i*5;
+    const rx = (mobile ? 90 : 80) + i*10;
+    const ry = (mobile ? 70 : 62) + i*6;
     bg += `<ellipse cx="${b.x}" cy="${b.y}" rx="${rx}" ry="${ry}"
-      fill="${cGlow}" opacity="0.28" filter="url(#softGlow)"/>`;
+      fill="${cGlow}" opacity="${mobile ? 0.38 : 0.28}" filter="url(#softGlow)"/>`;
   });
 
   // ── DEEP BACKGROUND BRANCHES (behind everything) ───
@@ -1468,6 +1473,12 @@ function drawBranches(fruitPositions, color) {
     { x: root.x + spreadX*0.16, y: trunkTop.y + trunkH*0.10,  r: 0.6  },
     { x: root.x - spreadX*0.80, y: trunkTop.y + trunkH*0.35,  r: 0.55 },
     { x: root.x + spreadX*0.78, y: trunkTop.y + trunkH*0.32,  r: 0.55 },
+    // Mobile upper canopy fill — push foliage to top of frame
+    { x: root.x - spreadX*0.30, y: trunkTop.y - h*0.12, r: mobile ? 1.2 : 0.5 },
+    { x: root.x + spreadX*0.28, y: trunkTop.y - h*0.10, r: mobile ? 1.2 : 0.5 },
+    { x: root.x,                y: trunkTop.y - h*0.15,  r: mobile ? 1.1 : 0.4 },
+    { x: root.x - spreadX*0.55, y: trunkTop.y - h*0.05, r: mobile ? 1.0 : 0.4 },
+    { x: root.x + spreadX*0.52, y: trunkTop.y - h*0.04, r: mobile ? 1.0 : 0.4 },
   ];
 
   // Foliage palette: greens with slight blue-green and yellow-green variation
@@ -1486,7 +1497,7 @@ function drawBranches(fruitPositions, color) {
 
   leafSeeds.forEach((seed, si) => {
     const pal = leafPalettes[si % leafPalettes.length];
-    const baseR = (mobile ? 28 : 42) * seed.r;
+    const baseR = (mobile ? 48 : 42) * seed.r;
 
     // 3 layers per cluster: back (large, dark), mid, front (small, lighter)
     const layers = [
@@ -1507,15 +1518,13 @@ function drawBranches(fruitPositions, color) {
     });
 
     // Scattered individual leaf dots — tiny bright specks catching light
-    if(!mobile){
-      for(let li=0; li<5; li++){
-        const lx = seed.x + rng(si*31+li, -baseR*1.1, baseR*1.1);
-        const ly = seed.y + rng(si*31+li+1, -baseR*0.9, baseR*0.8);
-        const lr = rng(si*31+li+2, 2, 5);
-        const la = rng(si*31+li+3, 0.06, 0.18);
-        leaves += `<ellipse cx="${lx}" cy="${ly}" rx="${lr*1.6}" ry="${lr*0.9}"
-          fill="rgba(80,140,40,${la.toFixed(2)})" opacity="1"/>`;
-      }
+    for(let li=0; li<(mobile ? 3 : 5); li++){
+      const lx = seed.x + rng(si*31+li, -baseR*1.1, baseR*1.1);
+      const ly = seed.y + rng(si*31+li+1, -baseR*0.9, baseR*0.8);
+      const lr = rng(si*31+li+2, 2, 5);
+      const la = rng(si*31+li+3, 0.06, 0.18);
+      leaves += `<ellipse cx="${lx}" cy="${ly}" rx="${lr*1.6}" ry="${lr*0.9}"
+        fill="rgba(80,140,40,${la.toFixed(2)})" opacity="1"/>`;
     }
   });
 
