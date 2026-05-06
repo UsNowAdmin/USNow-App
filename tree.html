@@ -732,14 +732,14 @@ function getRootPos() {
 //        [7]     [8]       low-hanging, flank root
 //           [ROOT]
 const PYRAMID_SLOTS = [
-  { xf:  0.00, yf: 0.92 }, // 1 — top center
-  { xf: -0.40, yf: 0.65 }, // 2 — mid left
-  { xf:  0.40, yf: 0.65 }, // 3 — mid right
-  { xf: -0.72, yf: 0.36 }, // 4 — lower left
-  { xf:  0.00, yf: 0.32 }, // 5 — lower center
-  { xf:  0.72, yf: 0.36 }, // 6 — lower right
-  { xf: -0.30, yf: 0.10 }, // 7 — low left (near root)
-  { xf:  0.30, yf: 0.10 }, // 8 — low right (near root)
+  { xf:  0.00, yf: 0.95 }, // 1 — top center
+  { xf: -0.42, yf: 0.68 }, // 2 — mid left
+  { xf:  0.42, yf: 0.68 }, // 3 — mid right
+  { xf: -0.75, yf: 0.38 }, // 4 — lower left
+  { xf:  0.00, yf: 0.33 }, // 5 — lower center
+  { xf:  0.75, yf: 0.38 }, // 6 — lower right
+  { xf: -0.32, yf: 0.10 }, // 7 — low left (near root)
+  { xf:  0.32, yf: 0.10 }, // 8 — low right (near root)
 ];
 
 function getFruitPositions(n) {
@@ -945,8 +945,8 @@ function makeFruit(item, pos, isLayerType, isLeaf) {
   const color  = item.color || '#888';
   const isMobile = W() < 600;
   const sz = isLayerType
-    ? (isMobile ? 88 : 70)
-    : (isMobile ? 90 : 72);
+    ? (isMobile ? 76 : 70)
+    : (isMobile ? 78 : 72);
   const label  = item.label || '';
 
   const el = document.createElement('div');
@@ -1209,7 +1209,7 @@ function renderRoot() {
   updateNav(null);
 
   layerFruits.forEach((layer, i) => {
-    const sz = W() < 600 ? 95 : 76;
+    const sz = W() < 600 ? 80 : 76;
     const el = document.createElement('div');
     el.className = 'fruit fruit-layer-type';
     el.style.cssText = `
@@ -1458,12 +1458,19 @@ document.getElementById('logo').addEventListener('click', () => renderRoot());
 // ── MODAL ─────────────────────────────────────────
 
 function openModal(item, crumbLabels) {
-  // Always resolve to canonical card with full content
-  // Same ID may appear as empty stub in multiple places
-  if(item.id && _cardIndex[item.id] && _cardIndex[item.id].desc) {
+  // Step 1: resolve by ID — keep richest version
+  if(item.id && _cardIndex[item.id]) {
     const canonical = _cardIndex[item.id];
-    // Preserve color from passed item if canonical lacks it
     item = { ...canonical, color: canonical.color || item.color };
+  }
+  // Step 2: if still no desc, find any card with same label that has content
+  if(!item.desc || item.desc.length < 10) {
+    const label = (item.label || '').replace(/\n/g,' ').trim().toLowerCase();
+    const byLabel = Object.values(_cardIndex).find(c =>
+      c.desc && c.desc.length > 10 &&
+      (c.label || '').replace(/\n/g,' ').trim().toLowerCase() === label
+    );
+    if(byLabel) item = { ...byLabel, color: byLabel.color || item.color };
   }
   const color  = item.color || '#888';
   const hex    = color.replace('#','');
