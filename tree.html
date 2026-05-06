@@ -745,16 +745,21 @@ const PYRAMID_SLOTS = [
 function getFruitPositions(n) {
   if(n === 0) return [];
   const cx      = W() / 2;
-  const rootY   = H() * ROOT_Y_PCT;
   const mobile  = W() < 600;
-  // On mobile compress the vertical range so tree fits screen
-  const topY    = mobile ? H() * 0.12 : H() * 0.10;
+
+  // For 7–8 fruits on mobile, nudge the horizon down to reclaim sky space
+  const horizonPct = (mobile && n >= 7) ? 0.67 : HORIZON_PCT;
+  const rootY   = H() * ROOT_Y_PCT;
+
+  // topY: start just below topbar; tighten on mobile large counts
+  const topY    = mobile
+    ? (n >= 7 ? H() * 0.10 : H() * 0.12)
+    : H() * 0.10;
   const bottomY = rootY - 130; // always clear the 92px root orb
   const totalH  = bottomY - topY;
   const halfW   = mobile ? W() * 0.42 : W() * 0.46;
 
   // Symmetric order maps for small counts
-  // Always pair left/right, center goes top or middle
   const ORDER = {
     1: [0],
     2: [1, 2],
@@ -767,9 +772,23 @@ function getFruitPositions(n) {
   };
   const order = ORDER[Math.min(n, 8)] || ORDER[8];
 
+  // For 7–8 fruits: use a local slot override that spreads the low pair
+  // upward so they don't crowd the root orb
+  let slots = PYRAMID_SLOTS;
+  if(n >= 7) {
+    slots = PYRAMID_SLOTS.map((s, i) => {
+      // Slots 6 & 7 (indices 6 & 7) — push yf up from 0.10
+      if(i === 6) return { xf: s.xf, yf: 0.20 };
+      if(i === 7) return { xf: s.xf, yf: 0.20 };
+      // Compress the upper slots slightly to spread range evenly
+      if(i === 3 || i === 4 || i === 5) return { xf: s.xf, yf: s.yf * 0.92 + 0.04 };
+      return s;
+    });
+  }
+
   const positions = [];
   order.forEach(slotIdx => {
-    const slot = PYRAMID_SLOTS[slotIdx];
+    const slot = slots[slotIdx];
     const x = cx + slot.xf * halfW;
     const y = bottomY - slot.yf * totalH;
     positions.push({
@@ -941,12 +960,13 @@ function drawBranches(fruitPositions, color) {
 
 const FLOAT_ANIMS = ['fruitFloat','fruitFloatB','fruitFloatC'];
 
-function makeFruit(item, pos, isLayerType, isLeaf) {
+function makeFruit(item, pos, isLayerType, isLeaf, n) {
   const color  = item.color || '#888';
   const isMobile = W() < 600;
-  const sz = isLayerType
+  const densityScale = (n >= 7) ? 0.85 : 1.0; // 15% smaller for 7–8 fruits
+  const sz = Math.round((isLayerType
     ? (isMobile ? 76 : 70)
-    : (isMobile ? 78 : 72);
+    : (isMobile ? 78 : 72)) * densityScale);
   const label  = item.label || '';
 
   const el = document.createElement('div');
@@ -1166,7 +1186,7 @@ function renderTree(items, parentItem) {
     const children = item.topPills || [];
     const isLeaf = children.length === 0;
     const isLayerType = item._isLayer || false;
-    const fruit = makeFruit(item, positions[i], isLayerType, isLeaf);
+    const fruit = makeFruit(item, positions[i], isLayerType, isLeaf, items.length);
     container.appendChild(fruit);
   });
 
