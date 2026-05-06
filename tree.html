@@ -329,7 +329,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
   letter-spacing:0.01em;
   text-align:center;
   line-height:1.2;
-  padding:4px;
+  padding:4px 4px 2px;
+  margin-top:-10px;
   pointer-events:none;
   text-shadow:0 1px 6px rgba(0,0,0,1),0 0 12px rgba(0,0,0,0.95),0 2px 4px rgba(0,0,0,1);
   position:relative;
@@ -799,161 +800,457 @@ function getFruitPositions(n) {
   return positions;
 }
 
-// ── TREE BRANCHES (SVG) ───────────────────────────
+// ── TREE BRANCHES (SVG) — TREE OF LIFE ───────────────────────────
 
 function drawBranches(fruitPositions, color) {
   const svg = document.getElementById('tree-svg');
   const root = getRootPos();
   const c = color || '#8a6020';
   const mobile = W() < 600;
+  const w = W(), h = H();
 
-  // Parse color for glow effects
+  // ── COLOR PALETTE ─────────────────────────────────
   const hx = c.replace('#','');
   const cr = parseInt(hx.slice(0,2),16);
   const cg = parseInt(hx.slice(2,4),16);
   const cb = parseInt(hx.slice(4,6),16);
-  const cGlow = `rgba(${cr},${cg},${cb},0.25)`;
-  const cMid  = `rgba(${cr},${cg},${cb},0.55)`;
-  const cBase = `rgba(${cr},${cg},${cb},0.75)`;
+  const cGlow   = `rgba(${cr},${cg},${cb},0.22)`;
+  const cGlowHi = `rgba(${cr},${cg},${cb},0.45)`;
+  const cMid    = `rgba(${cr},${cg},${cb},0.60)`;
+  const cDark   = `rgba(${Math.round(cr*0.6)},${Math.round(cg*0.6)},${Math.round(cb*0.4)},0.85)`;
+  const cBark   = `rgba(${Math.round(cr*0.7+30)},${Math.round(cg*0.55+18)},${Math.round(cb*0.3+8)},0.9)`;
 
-  // Trunk geometry — tall, substantial, tapers naturally
-  const trunkBase = { x: root.x, y: root.y - 46 };
-  const trunkH    = mobile ? 80 : 120;
-  const trunkTop  = { x: root.x, y: trunkBase.y - trunkH };
-  const trunkW    = mobile ? 11 : 18;
+  // ── GEOMETRY ──────────────────────────────────────
+  const horizonY  = root.y - 46;          // where trunk meets earth
+  const trunkBase = { x: root.x, y: horizonY };
+  const trunkH    = mobile ? 100 : 160;
+  const trunkTop  = { x: root.x, y: horizonY - trunkH };
+  const trunkW    = mobile ? 14 : 24;
 
-  // Find vertical midpoint of all fruits to set split height
-  const avgY = fruitPositions.reduce((s,p) => s + p.y, 0) / (fruitPositions.length || 1);
-  const splitY = trunkTop.y + (avgY - trunkTop.y) * 0.35;
+  // Canopy spread — how wide the tree fills the screen
+  const spreadX = w * (mobile ? 0.42 : 0.46);
+  const canopyTop = mobile ? h * 0.05 : h * 0.04;
 
+  // ── DEFS ──────────────────────────────────────────
   let defs = `<defs>
-    <linearGradient id="trunkGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${c}" stop-opacity="0.8"/>
-      <stop offset="60%" stop-color="${c}" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="${c}" stop-opacity="0.1"/>
+    <linearGradient id="trunkGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="rgba(${Math.round(cr*0.45)},${Math.round(cg*0.32)},${Math.round(cb*0.18)},0.95)"/>
+      <stop offset="30%"  stop-color="${cBark}"/>
+      <stop offset="60%"  stop-color="rgba(${Math.round(cr*0.75)},${Math.round(cg*0.58)},${Math.round(cb*0.35)},0.85)"/>
+      <stop offset="100%" stop-color="rgba(${Math.round(cr*0.40)},${Math.round(cg*0.28)},${Math.round(cb*0.15)},0.9)"/>
+    </linearGradient>
+    <linearGradient id="trunkVertGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="${c}" stop-opacity="0.9"/>
+      <stop offset="50%"  stop-color="${c}" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="${c}" stop-opacity="0.15"/>
     </linearGradient>
     <radialGradient id="burstGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="${c}" stop-opacity="0.45"/>
-      <stop offset="40%"  stop-color="${c}" stop-opacity="0.15"/>
+      <stop offset="0%"   stop-color="${c}"                stop-opacity="0.9"/>
+      <stop offset="15%"  stop-color="${c}"                stop-opacity="0.55"/>
+      <stop offset="45%"  stop-color="${c}"                stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="${c}"                stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="burstCoreGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="rgba(255,240,200,0.95)"/>
+      <stop offset="40%"  stop-color="${c}"                stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="${c}"                stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rootGlowGrad" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="${c}" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="${c}" stop-opacity="0"/>
     </radialGradient>
-    <filter id="branchGlow">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <filter id="branchGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="rootBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>`;
 
-  let paths = defs;
+  let bg = '';    // farthest back — deep ghost canopy silhouette
+  let mid = '';   // background branches
+  let main = '';  // primary branches to fruit
+  let fg = '';    // foreground branches crossing in front
+  let glow = '';  // light/glow layer
 
-  // ── TRUNK ─────────────────────────────────────────
-  // Background glow trunk (fat, blurred)
-  paths += `<line x1="${trunkBase.x}" y1="${trunkBase.y}"
-    x2="${trunkTop.x}" y2="${trunkTop.y}"
-    stroke="${cGlow}" stroke-width="${trunkW * 3}"
-    stroke-linecap="round" filter="url(#branchGlow)"/>`;
-  // Main trunk body
-  paths += `<line x1="${trunkBase.x}" y1="${trunkBase.y}"
-    x2="${trunkTop.x}" y2="${trunkTop.y}"
-    stroke="url(#trunkGrad)" stroke-width="${trunkW}"
-    stroke-linecap="round"/>`;
-  // Highlight streak
-  paths += `<line x1="${trunkBase.x - 1}" y1="${trunkBase.y}"
-    x2="${trunkTop.x - 1}" y2="${trunkTop.y}"
-    stroke="rgba(255,255,255,0.12)" stroke-width="${trunkW * 0.3}"
-    stroke-linecap="round"/>`;
-
-  // ── BACKGROUND BRANCH SILHOUETTES (depth effect) ──
-  // Small ghost branches that suggest a fuller tree
-  const ghostBranches = [
-    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.3, dx: -W()*0.08, dy: -H()*0.06 },
-    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.5, dx:  W()*0.07, dy: -H()*0.05 },
-    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.15,dx: -W()*0.06, dy: -H()*0.08 },
-    { x1: trunkTop.x, y1: trunkTop.y + trunkH*0.6, dx:  W()*0.09, dy: -H()*0.04 },
+  // ── DEEP BACKGROUND: ghost canopy cloud ───────────
+  // Big soft organic blobs behind everything — sense of mass
+  const blobCenters = [
+    { x: root.x - spreadX*0.55, y: trunkTop.y + trunkH*0.15 },
+    { x: root.x + spreadX*0.50, y: trunkTop.y + trunkH*0.10 },
+    { x: root.x - spreadX*0.20, y: trunkTop.y - h*0.04 },
+    { x: root.x + spreadX*0.15, y: trunkTop.y - h*0.02 },
+    { x: root.x - spreadX*0.75, y: trunkTop.y + trunkH*0.40 },
+    { x: root.x + spreadX*0.70, y: trunkTop.y + trunkH*0.38 },
   ];
-  ghostBranches.forEach(gb => {
-    const cpx = gb.x1 + gb.dx * 0.5;
-    const cpy = gb.y1 + gb.dy * 0.3;
-    paths += `<path d="M ${gb.x1} ${gb.y1} Q ${cpx} ${cpy} ${gb.x1+gb.dx} ${gb.y1+gb.dy}"
-      fill="none" stroke="${cGlow}" stroke-width="1.5"
-      stroke-linecap="round" opacity="0.5"/>`;
-    // Small sub-twigs
-    paths += `<path d="M ${gb.x1+gb.dx*0.7} ${gb.y1+gb.dy*0.7}
-      Q ${gb.x1+gb.dx*0.8+gb.dy*0.3} ${gb.y1+gb.dy*0.5}
-        ${gb.x1+gb.dx+gb.dy*0.15} ${gb.y1+gb.dy*0.3}"
-      fill="none" stroke="${cGlow}" stroke-width="0.8"
-      stroke-linecap="round" opacity="0.35"/>`;
+  blobCenters.forEach((b,i) => {
+    const rx = (mobile ? 55 : 80) + i*8;
+    const ry = (mobile ? 40 : 62) + i*5;
+    bg += `<ellipse cx="${b.x}" cy="${b.y}" rx="${rx}" ry="${ry}"
+      fill="${cGlow}" opacity="0.28" filter="url(#softGlow)"/>`;
   });
 
-  // ── MAIN BRANCHES TO FRUIT ─────────────────────────
+  // ── DEEP BACKGROUND BRANCHES (behind everything) ───
+  // These are the "back" branches — darker, thinner, out of focus feel
+  const bgBranches = [
+    // far left upper
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.05,
+      ex: root.x - spreadX*0.88, ey: trunkTop.y - h*0.07,
+      cp1x: root.x - spreadX*0.15, cp1y: trunkTop.y - h*0.12 },
+    // far right upper
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.08,
+      ex: root.x + spreadX*0.85, ey: trunkTop.y - h*0.05,
+      cp1x: root.x + spreadX*0.18, cp1y: trunkTop.y - h*0.10 },
+    // mid left back
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.22,
+      ex: root.x - spreadX*0.65, ey: trunkTop.y + trunkH*0.05,
+      cp1x: root.x - spreadX*0.25, cp1y: trunkTop.y - h*0.04 },
+    // mid right back
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.25,
+      ex: root.x + spreadX*0.62, ey: trunkTop.y + trunkH*0.08,
+      cp1x: root.x + spreadX*0.22, cp1y: trunkTop.y - h*0.03 },
+    // center top back
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.02,
+      ex: root.x + spreadX*0.08, ey: canopyTop,
+      cp1x: root.x - spreadX*0.06, cp1y: trunkTop.y - h*0.08 },
+    // left low back
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.45,
+      ex: root.x - spreadX*0.50, ey: trunkTop.y + trunkH*0.30,
+      cp1x: root.x - spreadX*0.30, cp1y: trunkTop.y + trunkH*0.18 },
+    // right low back
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.48,
+      ex: root.x + spreadX*0.48, ey: trunkTop.y + trunkH*0.28,
+      cp1x: root.x + spreadX*0.28, cp1y: trunkTop.y + trunkH*0.16 },
+  ];
+
+  bgBranches.forEach((b, i) => {
+    const w2 = mobile ? 1.8 : 3.2;
+    const cp2x = b.ex - (b.ex - b.cp1x)*0.3;
+    const cp2y = b.ey + Math.abs(b.ey - b.sy)*0.18;
+    // glow pass
+    mid += `<path d="M ${b.sx} ${b.sy} C ${b.cp1x} ${b.cp1y}, ${cp2x} ${cp2y}, ${b.ex} ${b.ey}"
+      fill="none" stroke="${cGlow}" stroke-width="${w2*2.8}"
+      stroke-linecap="round" opacity="0.5" filter="url(#branchGlow)"/>`;
+    // body
+    mid += `<path d="M ${b.sx} ${b.sy} C ${b.cp1x} ${b.cp1y}, ${cp2x} ${cp2y}, ${b.ex} ${b.ey}"
+      fill="none" stroke="${cDark}" stroke-width="${w2}"
+      stroke-linecap="round" opacity="0.55"/>`;
+    // sub-twigs sprouting from midpoint
+    const mx = 0.5*0.5*0.5*b.sx + 3*0.5*0.5*0.5*b.cp1x + 3*0.5*0.5*0.5*cp2x + 0.5*0.5*0.5*b.ex;
+    const my = 0.5*0.5*0.5*b.sy + 3*0.5*0.5*0.5*b.cp1y + 3*0.5*0.5*0.5*cp2y + 0.5*0.5*0.5*b.ey;
+    const twigDx = (b.ex < root.x ? -1 : 1) * w * 0.06;
+    mid += `<path d="M ${mx} ${my} Q ${mx+twigDx*0.6} ${my-h*0.04} ${mx+twigDx} ${my-h*0.07}"
+      fill="none" stroke="${cDark}" stroke-width="${w2*0.55}"
+      stroke-linecap="round" opacity="0.4"/>`;
+    // tiny fork at end
+    mid += `<path d="M ${b.ex} ${b.ey} Q ${b.ex+twigDx*0.4} ${b.ey-h*0.03} ${b.ex+twigDx*0.7} ${b.ey-h*0.055}"
+      fill="none" stroke="${cDark}" stroke-width="${w2*0.4}"
+      stroke-linecap="round" opacity="0.35"/>`;
+    mid += `<path d="M ${b.ex} ${b.ey} Q ${b.ex-twigDx*0.3} ${b.ey-h*0.025} ${b.ex-twigDx*0.5} ${b.ey-h*0.05}"
+      fill="none" stroke="${cDark}" stroke-width="${w2*0.35}"
+      stroke-linecap="round" opacity="0.3"/>`;
+  });
+
+  // ── TRUNK ─────────────────────────────────────────
+  // Tapered trunk using a polygon for realistic width variation
+  const tw2 = trunkW * 0.45;  // narrower at top
+  const tw3 = trunkW * 1.35;  // flared at base (buttress roots)
+
+  // Outer bark shadow (right side dark)
+  main += `<path d="M ${trunkBase.x+trunkW*0.9} ${trunkBase.y}
+    C ${trunkTop.x+tw2*1.1} ${trunkBase.y - trunkH*0.3},
+      ${trunkTop.x+tw2*0.9} ${trunkBase.y - trunkH*0.7},
+      ${trunkTop.x+tw2*0.5} ${trunkTop.y}"
+    fill="none" stroke="rgba(${Math.round(cr*0.3)},${Math.round(cg*0.22)},${Math.round(cb*0.1)},0.7)"
+    stroke-width="${trunkW*0.55}" stroke-linecap="round"/>`;
+
+  // Trunk body — glow halo
+  main += `<line x1="${trunkBase.x}" y1="${trunkBase.y}"
+    x2="${trunkTop.x}" y2="${trunkTop.y}"
+    stroke="${cGlowHi}" stroke-width="${trunkW * 3.5}"
+    stroke-linecap="round" filter="url(#branchGlow)" opacity="0.4"/>`;
+
+  // Trunk body — tapered polygon
+  main += `<path d="
+    M ${trunkBase.x - tw3} ${trunkBase.y}
+    C ${trunkBase.x - trunkW*0.9} ${trunkBase.y - trunkH*0.25},
+      ${trunkTop.x - tw2*1.1} ${trunkBase.y - trunkH*0.65},
+      ${trunkTop.x - tw2*0.6} ${trunkTop.y}
+    L ${trunkTop.x + tw2*0.6} ${trunkTop.y}
+    C ${trunkTop.x + tw2*1.1} ${trunkBase.y - trunkH*0.65},
+      ${trunkBase.x + trunkW*0.9} ${trunkBase.y - trunkH*0.25},
+      ${trunkBase.x + tw3} ${trunkBase.y} Z"
+    fill="url(#trunkVertGrad)" opacity="0.82"/>`;
+
+  // Trunk highlight streak (light from upper left)
+  main += `<path d="M ${trunkBase.x - trunkW*0.25} ${trunkBase.y}
+    C ${trunkTop.x - tw2*0.5} ${trunkBase.y - trunkH*0.5},
+      ${trunkTop.x - tw2*0.3} ${trunkBase.y - trunkH*0.75},
+      ${trunkTop.x - tw2*0.1} ${trunkTop.y}"
+    fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="${trunkW*0.28}"
+    stroke-linecap="round"/>`;
+
+  // Bark texture lines — subtle vertical striations
+  for(let b=0; b<3; b++){
+    const bx = trunkBase.x + (b-1)*trunkW*0.28;
+    const wobble = (b-1)*trunkW*0.12;
+    main += `<path d="M ${bx} ${trunkBase.y}
+      C ${bx+wobble} ${trunkBase.y-trunkH*0.3},
+        ${bx-wobble*0.5} ${trunkBase.y-trunkH*0.65},
+        ${trunkTop.x + (b-1)*tw2*0.2} ${trunkTop.y}"
+      fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="1"
+      stroke-linecap="round" opacity="0.5"/>`;
+  }
+
+  // Buttress roots — flared base fading into earth
+  const buttressRoots = [
+    { dx: -tw3*1.4, dy: trunkH*0.18, angle: -0.7 },
+    { dx:  tw3*1.4, dy: trunkH*0.18, angle:  0.7 },
+    { dx: -tw3*0.7, dy: trunkH*0.08, angle: -0.4 },
+    { dx:  tw3*0.7, dy: trunkH*0.08, angle:  0.4 },
+  ];
+  buttressRoots.forEach(br => {
+    const ex = trunkBase.x + br.dx;
+    const ey = trunkBase.y + br.dy;
+    main += `<path d="M ${trunkBase.x} ${trunkBase.y}
+      Q ${trunkBase.x + br.dx*0.55} ${trunkBase.y + br.dy*0.3}
+        ${ex} ${ey}"
+      fill="none" stroke="${cMid}" stroke-width="${trunkW*0.35}"
+      stroke-linecap="round" opacity="0.45"/>`;
+  });
+
+  // ── PRIMARY BRANCHES TO FRUIT ──────────────────────
   fruitPositions.forEach((fp, i) => {
-    const isLeft = fp.x < root.x - 20;
-    const isRight = fp.x > root.x + 20;
+    const isLeft   = fp.x < root.x - 20;
+    const isRight  = fp.x > root.x + 20;
     const isCenter = !isLeft && !isRight;
+    const side = isLeft ? -1 : isRight ? 1 : 0;
 
-    // Branch thickness tapers: nearest fruits get thicker branches
-    const distFromRoot = Math.sqrt(Math.pow(fp.x - root.x,2) + Math.pow(fp.y - root.y,2));
-    const maxDist = H() * 0.6;
-    const taper = 1 - (distFromRoot / maxDist) * 0.5;
-    const branchW = Math.max(1.2, (mobile ? 2.5 : 3.5) * taper);
+    const distFromCenter = Math.sqrt(Math.pow(fp.x-root.x,2)+Math.pow(fp.y-root.y,2));
+    const maxDist = H() * 0.65;
+    const taper = 1 - (distFromCenter / maxDist) * 0.55;
+    const branchW = Math.max(1.5, (mobile ? 3.2 : 5.5) * taper);
 
-    // Branch starts from trunk at appropriate height
-    // Branches closer to fruit height split from trunk higher
-    const splitFraction = 0.3 + (trunkTop.y - fp.y) / (trunkTop.y - root.y) * 0.4;
-    const startY = trunkTop.y + (trunkBase.y - trunkTop.y) * Math.max(0, Math.min(0.6, splitFraction));
-    const startX = trunkTop.x;
+    // Branch origin — spread out along trunk height based on fruit Y
+    const fracH = Math.max(0.05, Math.min(0.7, (trunkBase.y - fp.y) / (trunkBase.y - trunkTop.y + trunkH*0.3)));
+    const startY = trunkTop.y + trunkH * (0.08 + fracH * 0.55);
+    const startX = trunkTop.x + side * trunkW * 0.3;
 
-    // Bezier control points for organic curve
-    const cp1x = startX + (fp.x - startX) * (isCenter ? 0.05 : 0.18);
-    const cp1y = startY - Math.abs(startY - fp.y) * 0.45;
-    const cp2x = fp.x - (fp.x - startX) * (isCenter ? 0.05 : 0.25);
-    const cp2y = fp.y + Math.abs(fp.y - startY) * 0.25;
+    // Intermediate fork point — makes branch look like it splits from trunk naturally
+    const forkT  = 0.28 + Math.random() * 0.15;
+    const forkX  = startX + (fp.x - startX) * forkT;
+    const forkY  = startY + (fp.y - startY) * forkT - h*0.04;
 
-    // Glow pass
-    paths += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
-      fill="none" stroke="${cGlow}" stroke-width="${branchW * 2.5}"
-      stroke-linecap="round" filter="url(#branchGlow)" opacity="0.6"/>`;
-    // Main branch
-    paths += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
+    // Control points — organic S-curve
+    const cp1x = startX + (fp.x - startX) * 0.12 + side * w * 0.025;
+    const cp1y = startY - h * (isCenter ? 0.06 : 0.08);
+    const cp2x = fp.x - (fp.x - startX) * 0.22;
+    const cp2y = fp.y + h * 0.04;
+
+    // Glow halo
+    main += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
+      fill="none" stroke="${cGlowHi}" stroke-width="${branchW * 3}"
+      stroke-linecap="round" filter="url(#branchGlow)" opacity="0.45"/>`;
+
+    // Main branch body
+    main += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
       fill="none" stroke="${cMid}" stroke-width="${branchW}"
       stroke-linecap="round"/>`;
 
-    // ── NODE DOTS along the branch ─────────────────
-    // 3 glowing dots evenly spaced between trunk and fruit
+    // Branch continues PAST fruit (doesn't stop at orb — passes through or behind)
+    const extT = 1.18 + (i%3)*0.06;
+    const extX = startX + (fp.x-startX)*extT + side*w*0.03;
+    const extY = fp.y - h*(0.04 + (i%4)*0.012);
+    main += `<path d="M ${fp.x} ${fp.y} C ${cp2x} ${fp.y-h*0.03}, ${extX-side*w*0.04} ${extY+h*0.02}, ${extX} ${extY}"
+      fill="none" stroke="${cDark}" stroke-width="${branchW*0.45}"
+      stroke-linecap="round" opacity="0.5"/>`;
+
+    // Secondary fork sprouting from mid-branch
+    const mt2 = 0.55;
+    const mx2 = (1-mt2)*(1-mt2)*(1-mt2)*startX + 3*(1-mt2)*(1-mt2)*mt2*cp1x + 3*(1-mt2)*mt2*mt2*cp2x + mt2*mt2*mt2*fp.x;
+    const my2 = (1-mt2)*(1-mt2)*(1-mt2)*startY + 3*(1-mt2)*(1-mt2)*mt2*cp1y + 3*(1-mt2)*mt2*mt2*cp2y + mt2*mt2*mt2*fp.y;
+    const secDx = side * w * (0.06 + (i%3)*0.02);
+    const secDy = -h * (0.05 + (i%4)*0.015);
+    main += `<path d="M ${mx2} ${my2} Q ${mx2+secDx*0.5} ${my2+secDy*0.6} ${mx2+secDx} ${my2+secDy}"
+      fill="none" stroke="${cDark}" stroke-width="${branchW*0.5}"
+      stroke-linecap="round" opacity="0.55"/>`;
+    // Tiny twig at secondary fork end
+    main += `<path d="M ${mx2+secDx} ${my2+secDy}
+      Q ${mx2+secDx+side*w*0.025} ${my2+secDy-h*0.025}
+        ${mx2+secDx+side*w*0.045} ${my2+secDy-h*0.045}"
+      fill="none" stroke="${cDark}" stroke-width="${branchW*0.28}"
+      stroke-linecap="round" opacity="0.4"/>`;
+
+    // Node dots along branch
     const dotCount = mobile ? 2 : 3;
-    for(let d = 1; d <= dotCount; d++) {
-      const t = d / (dotCount + 1);
-      // Cubic bezier point at parameter t
-      const mt = 1 - t;
+    for(let d=1; d<=dotCount; d++){
+      const t = d/(dotCount+1);
+      const mt = 1-t;
       const nx = mt*mt*mt*startX + 3*mt*mt*t*cp1x + 3*mt*t*t*cp2x + t*t*t*fp.x;
       const ny = mt*mt*mt*startY + 3*mt*mt*t*cp1y + 3*mt*t*t*cp2y + t*t*t*fp.y;
-      const dotR = mobile ? 2.5 : 3;
-      // Outer glow
-      paths += `<circle cx="${nx}" cy="${ny}" r="${dotR * 2.2}"
-        fill="${cGlow}" opacity="0.5" filter="url(#branchGlow)"/>`;
-      // Inner dot
-      paths += `<circle cx="${nx}" cy="${ny}" r="${dotR}"
-        fill="${c}" opacity="0.85"/>`;
-      // Specular
-      paths += `<circle cx="${nx - dotR*0.3}" cy="${ny - dotR*0.3}" r="${dotR * 0.4}"
-        fill="rgba(255,255,255,0.6)" opacity="0.7"/>`;
+      const dotR = mobile ? 2.2 : 2.8;
+      main += `<circle cx="${nx}" cy="${ny}" r="${dotR*2.5}"
+        fill="${cGlow}" opacity="0.4" filter="url(#branchGlow)"/>`;
+      main += `<circle cx="${nx}" cy="${ny}" r="${dotR}"
+        fill="${c}" opacity="0.9"/>`;
+      main += `<circle cx="${nx-dotR*0.3}" cy="${ny-dotR*0.3}" r="${dotR*0.38}"
+        fill="rgba(255,255,255,0.65)" opacity="0.75"/>`;
     }
   });
 
-  // ── HORIZON BURST behind root ──────────────────────
-  // Radial light emanating from where trunk meets earth
-  const burstX = root.x;
-  const burstY = trunkBase.y + 20;
-  const burstR = mobile ? 55 : 80;
-  // burstGrad defined in defs above
-  paths += `<ellipse cx="${burstX}" cy="${burstY}"
-    rx="${burstR * 1.6}" ry="${burstR * 0.7}"
-    fill="url(#burstGrad)" opacity="0.8"/>`;
-  // Tight bright core
-  paths += `<ellipse cx="${burstX}" cy="${burstY}"
-    rx="${burstR * 0.5}" ry="${burstR * 0.25}"
-    fill="${c}" opacity="0.18"/>`;
+  // ── FOREGROUND BRANCHES (cross in front of fruit) ──
+  // These are prominent branches that arc across the scene
+  // giving a sense that the tree exists around the orbs
+  const fgDefs = [
+    // Left foreground arm sweeping right-ward
+    { sx: trunkTop.x - tw2*0.4, sy: trunkTop.y + trunkH*0.35,
+      ex: root.x - spreadX*0.30, ey: trunkTop.y + trunkH*0.05,
+      cpx: root.x - spreadX*0.55, cpy: trunkTop.y - h*0.06,
+      w: mobile ? 2.8 : 4.8, op: 0.65 },
+    // Right foreground arm
+    { sx: trunkTop.x + tw2*0.4, sy: trunkTop.y + trunkH*0.32,
+      ex: root.x + spreadX*0.28, ey: trunkTop.y + trunkH*0.06,
+      cpx: root.x + spreadX*0.52, cpy: trunkTop.y - h*0.055,
+      w: mobile ? 2.6 : 4.5, op: 0.62 },
+    // Thick low-left crossing branch
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.55,
+      ex: root.x - spreadX*0.58, ey: trunkTop.y + trunkH*0.42,
+      cpx: root.x - spreadX*0.38, cpy: trunkTop.y + trunkH*0.28,
+      w: mobile ? 2.2 : 3.8, op: 0.58 },
+    // Low-right
+    { sx: trunkTop.x, sy: trunkTop.y + trunkH*0.52,
+      ex: root.x + spreadX*0.55, ey: trunkTop.y + trunkH*0.40,
+      cpx: root.x + spreadX*0.35, cpy: trunkTop.y + trunkH*0.26,
+      w: mobile ? 2.0 : 3.5, op: 0.55 },
+  ];
 
-  svg.innerHTML = paths;
+  fgDefs.forEach((b,i) => {
+    const cp2x = b.ex - (b.ex-b.cpx)*0.28;
+    const cp2y = b.ey + Math.abs(b.ey-b.sy)*0.12;
+    // Glow
+    fg += `<path d="M ${b.sx} ${b.sy} C ${b.cpx} ${b.cpy}, ${cp2x} ${cp2y}, ${b.ex} ${b.ey}"
+      fill="none" stroke="${cGlowHi}" stroke-width="${b.w*2.8}"
+      stroke-linecap="round" filter="url(#branchGlow)" opacity="${b.op*0.55}"/>`;
+    // Body
+    fg += `<path d="M ${b.sx} ${b.sy} C ${b.cpx} ${b.cpy}, ${cp2x} ${cp2y}, ${b.ex} ${b.ey}"
+      fill="none" stroke="${cBark}" stroke-width="${b.w}"
+      stroke-linecap="round" opacity="${b.op}"/>`;
+    // Highlight
+    fg += `<path d="M ${b.sx} ${b.sy} C ${b.cpx} ${b.cpy}, ${cp2x} ${cp2y}, ${b.ex} ${b.ey}"
+      fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="${b.w*0.22}"
+      stroke-linecap="round" opacity="${b.op}"/>`;
+    // Sub-fork at far end
+    const side = b.ex < root.x ? -1 : 1;
+    fg += `<path d="M ${b.ex} ${b.ey}
+      Q ${b.ex+side*w*0.07} ${b.ey-h*0.04}
+        ${b.ex+side*w*0.12} ${b.ey-h*0.07}"
+      fill="none" stroke="${cBark}" stroke-width="${b.w*0.45}"
+      stroke-linecap="round" opacity="${b.op*0.7}"/>`;
+    fg += `<path d="M ${b.ex} ${b.ey}
+      Q ${b.ex+side*w*0.04} ${b.ey-h*0.05}
+        ${b.ex+side*w*0.06} ${b.ey-h*0.09}"
+      fill="none" stroke="${cBark}" stroke-width="${b.w*0.35}"
+      stroke-linecap="round" opacity="${b.op*0.6}"/>`;
+  });
+
+  // ── ROOTS (below horizon, mirror of canopy) ────────
+  // Visible root system — Self layer lives here
+  const rootDepth = mobile ? h*0.16 : h*0.22;
+  const rootSpread = spreadX * (mobile ? 0.75 : 0.88);
+
+  const rootDefs = [
+    // Primary lateral roots
+    { ex: root.x - rootSpread*0.90, ey: horizonY + rootDepth*0.55, w: 4.5 },
+    { ex: root.x + rootSpread*0.88, ey: horizonY + rootDepth*0.52, w: 4.2 },
+    { ex: root.x - rootSpread*0.55, ey: horizonY + rootDepth*0.82, w: 3.5 },
+    { ex: root.x + rootSpread*0.52, ey: horizonY + rootDepth*0.80, w: 3.3 },
+    { ex: root.x - rootSpread*0.28, ey: horizonY + rootDepth*1.00, w: 3.0 },
+    { ex: root.x + rootSpread*0.25, ey: horizonY + rootDepth*0.98, w: 2.8 },
+    { ex: root.x - rootSpread*0.70, ey: horizonY + rootDepth*0.38, w: 2.5 },
+    { ex: root.x + rootSpread*0.68, ey: horizonY + rootDepth*0.36, w: 2.4 },
+  ];
+
+  rootDefs.forEach((r,i) => {
+    const side = r.ex < root.x ? -1 : 1;
+    const cp1x = trunkBase.x + side * trunkW * 0.6;
+    const cp1y = horizonY + rootDepth * 0.12;
+    const cp2x = r.ex + side * rootSpread * 0.08;
+    const cp2y = r.ey - rootDepth * 0.22;
+    const rw = mobile ? r.w * 0.65 : r.w;
+
+    // Glow
+    main += `<path d="M ${trunkBase.x} ${horizonY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${r.ex} ${r.ey}"
+      fill="none" stroke="${cGlow}" stroke-width="${rw*2.5}"
+      stroke-linecap="round" opacity="0.35" filter="url(#branchGlow)"/>`;
+    // Root body
+    main += `<path d="M ${trunkBase.x} ${horizonY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${r.ex} ${r.ey}"
+      fill="none" stroke="${cDark}" stroke-width="${rw}"
+      stroke-linecap="round" opacity="0.65"/>`;
+    // Root tip — fades to nothing
+    main += `<path d="M ${r.ex} ${r.ey}
+      Q ${r.ex+side*rootSpread*0.10} ${r.ey+rootDepth*0.12}
+        ${r.ex+side*rootSpread*0.16} ${r.ey+rootDepth*0.22}"
+      fill="none" stroke="${cDark}" stroke-width="${rw*0.45}"
+      stroke-linecap="round" opacity="0.35"/>`;
+
+    // Hairline rootlets
+    if(!mobile){
+      main += `<path d="M ${r.ex} ${r.ey}
+        Q ${r.ex+side*rootSpread*0.06} ${r.ey+rootDepth*0.18}
+          ${r.ex+side*rootSpread*0.04} ${r.ey+rootDepth*0.30}"
+        fill="none" stroke="${cDark}" stroke-width="${rw*0.25}"
+        stroke-linecap="round" opacity="0.25"/>`;
+    }
+  });
+
+  // ── HORIZON RADIAL BURST — the light source ────────
+  // Multi-layer radial: cosmic light emanating from where trunk meets earth
+  const bx = root.x;
+  const by = horizonY;
+  const burstR  = mobile ? 70 : 120;
+  const burstR2 = mobile ? 160 : 280;
+
+  // Outermost soft wash
+  glow += `<ellipse cx="${bx}" cy="${by}" rx="${burstR2*1.6}" ry="${burstR2*0.55}"
+    fill="url(#burstGrad)" opacity="0.55" filter="url(#softGlow)"/>`;
+
+  // Ray fingers — thin radial streaks
+  const rayCount = mobile ? 10 : 16;
+  for(let ri=0; ri<rayCount; ri++){
+    const ang = (ri / rayCount) * Math.PI; // 0 to PI (upper half only — horizon spread)
+    const rayLen = burstR2 * (0.6 + (ri%3)*0.15);
+    const rx2 = bx + Math.cos(Math.PI - ang) * rayLen * 2.2;
+    const ry2 = by - Math.sin(ang) * rayLen * 0.55;
+    const rayW = mobile ? 0.5 : 0.8;
+    glow += `<line x1="${bx}" y1="${by}" x2="${rx2}" y2="${ry2}"
+      stroke="${c}" stroke-width="${rayW}"
+      stroke-linecap="round" opacity="${0.06 + (ri%4)*0.015}"/>`;
+  }
+
+  // Mid burst ellipse
+  glow += `<ellipse cx="${bx}" cy="${by}" rx="${burstR*1.8}" ry="${burstR*0.65}"
+    fill="url(#burstGrad)" opacity="0.7"/>`;
+
+  // Core hot spot
+  glow += `<ellipse cx="${bx}" cy="${by}" rx="${burstR*0.55}" ry="${burstR*0.22}"
+    fill="url(#burstCoreGrad)" opacity="0.85"/>`;
+
+  // Tight white-gold core
+  glow += `<ellipse cx="${bx}" cy="${by}" rx="${burstR*0.18}" ry="${burstR*0.07}"
+    fill="rgba(255,248,220,0.9)" opacity="0.8" filter="url(#branchGlow)"/>`;
+
+  // Root glow wash downward into earth
+  glow += `<ellipse cx="${bx}" cy="${by+rootDepth*0.3}" rx="${burstR*1.2}" ry="${rootDepth*0.6}"
+    fill="url(#rootGlowGrad)" opacity="0.4"/>`;
+
+  // ── COMPOSE: back → mid → main → fg → glow ────────
+  svg.innerHTML = defs + bg + mid + main + fg + glow;
 }
 
 // ── FRUIT FACTORY ─────────────────────────────────
@@ -983,7 +1280,7 @@ function makeFruit(item, pos, isLayerType, isLeaf, n) {
 
   el.innerHTML = `
     <span class="fruit-label" style="font-size:${Math.max(9, sz*0.155)}px">${label}</span>
-    ${!isLeaf ? '<span class="fruit-more">▾ MORE</span>' : ''}
+    ${!isLeaf ? '<span class="fruit-more">SEE ▾</span>' : ''}
   `;
 
   // Hover glow
