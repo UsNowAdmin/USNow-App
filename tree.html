@@ -2485,6 +2485,11 @@ function applyGlories(root) {
       if(!p) return NodeFilter.FILTER_REJECT;
       if(['SCRIPT','STYLE','A','BUTTON','INPUT'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
       if(p.classList && p.classList.contains('glory-word')) return NodeFilter.FILTER_REJECT;
+      // Only highlight inside description text — skip title, pills, crumbs, sub, links
+      const skip = ['modal-title','modal-sub','modal-crumb','modal-crumb-part',
+                    'modal-pill','modal-section','modal-link','crumb','fruit-label',
+                    'fruit-more','root-label','search-highlight'];
+      if(skip.some(cls => p.closest('.'+cls))) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     }
   });
