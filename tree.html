@@ -2092,6 +2092,8 @@ function openModal(item, crumbLabels) {
     crumbEl.querySelectorAll('.modal-crumb-part[data-crumb-path]').forEach(span => {
       span.addEventListener('click', () => {
         closeModal();
+        document.getElementById('search-results-screen').style.display = 'none';
+        document.getElementById('search-input').value = '';
         // Find the card matching this path label
         const targetLabel = span.textContent.trim();
         // Check if it's a layer
