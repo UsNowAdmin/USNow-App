@@ -691,7 +691,13 @@ function buildCardIndex() {
   function walk(items, layerColor) {
     items.forEach(item => {
       if(!item || !item.id) return;
-      _cardIndex[item.id] = item;
+      // Keep whichever version has richer content — longer desc wins
+      const existing = _cardIndex[item.id];
+      const existingDesc = (existing && existing.desc) ? existing.desc.length : 0;
+      const newDesc = item.desc ? item.desc.length : 0;
+      if(!existing || newDesc > existingDesc) {
+        _cardIndex[item.id] = item;
+      }
       if(item.topPills) walk(item.topPills, layerColor);
       if(item.bottomPills) walk(item.bottomPills, layerColor);
       if(item.orbs) walk(item.orbs, layerColor);
@@ -1452,6 +1458,13 @@ document.getElementById('logo').addEventListener('click', () => renderRoot());
 // ── MODAL ─────────────────────────────────────────
 
 function openModal(item, crumbLabels) {
+  // Always resolve to canonical card with full content
+  // Same ID may appear as empty stub in multiple places
+  if(item.id && _cardIndex[item.id] && _cardIndex[item.id].desc) {
+    const canonical = _cardIndex[item.id];
+    // Preserve color from passed item if canonical lacks it
+    item = { ...canonical, color: canonical.color || item.color };
+  }
   const color  = item.color || '#888';
   const hex    = color.replace('#','');
   const r = parseInt(hex.slice(0,2),16);
