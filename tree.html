@@ -15,7 +15,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 /* ── SCENE ───────────────────────────────────────── */
 #scene{
   position:fixed;
-  top:50px;left:0;right:0;bottom:0;
+  top:58px;left:0;right:0;bottom:0;
   /* Deep cosmos above, warm earth below — the horizon is the membrane between them */
   background:
     radial-gradient(ellipse 160% 55% at 50% 0%,   #020210 0%, transparent 70%),
@@ -73,16 +73,21 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 #topbar{
   position:fixed;
   top:0;left:0;right:0;
-  height:50px;
+  height:58px;
   background:rgba(4,8,15,0.92);
   backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(201,168,76,0.15);
   display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:6px 16px 5px;
+  z-index:200;
+}
+#topbar-row{
+  display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 16px;
-  z-index:200;
-  /* position:fixed already establishes containing block for absolute children */
+  width:100%;
 }
 #logo{
   font-family:'Cinzel',serif;
@@ -104,16 +109,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
   align-items:baseline;
   line-height:1;
 }
-#logo-tagline{
+#topbar-tagline{
   font-family:'JetBrains Mono',monospace;
-  font-size:7px;
-  letter-spacing:0.13em;
-  color:rgba(255,255,255,0.25);
+  font-size:8.5px;
+  letter-spacing:0.16em;
+  color:rgba(255,255,255,0.5);
   line-height:1;
   text-transform:lowercase;
-}
-@media(max-width:500px){
-  #logo-tagline{ display:none; }
+  text-align:left;
+  padding:4px 0 0 0;
+  white-space:nowrap;
 }
 
 /* ── TOPBAR CENTER TITLE ─────────────────────────── */
@@ -142,7 +147,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 @media(max-width:500px){
   #topbar-title-main{ font-size:13px; letter-spacing:0.14em; }
   #topbar-title-sep{ display:none; }
-  #logo-tagline{ display:none; }
 }
 #topbar-right{
   display:flex;
@@ -367,7 +371,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 /* ── SEARCH RESULTS SCREEN ───────────────────────── */
 #search-results-screen{
   position:fixed;
-  top:50px;left:0;right:0;bottom:0;
+  top:58px;left:0;right:0;bottom:0;
   z-index:150;
   background:#06080f;
   display:none;
@@ -741,18 +745,18 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 </head>
 <body>
 <div id="topbar">
-  <div style="display:flex;align-items:center;gap:0;flex-shrink:0;">
-    <div id="logo">
-      <div id="logo-wordmark"><span class="us">US</span><span class="now">NOW</span><span class="app">.app</span></div>
-      <div id="logo-tagline">tap anywhere to explore</div>
+  <div id="topbar-row">
+    <div style="display:flex;align-items:center;gap:0;flex-shrink:0;">
+      <div id="logo">
+        <div id="logo-wordmark"><span class="us">US</span><span class="now">NOW</span><span class="app">.app</span></div>
+      </div>
+      <div id="topbar-title" style="margin-left:14px;">
+        <div id="topbar-title-sep">◆</div>
+        <div id="topbar-title-main">The Tree</div>
+      </div>
     </div>
-    <div id="topbar-title">
-      <div id="topbar-title-sep">◆</div>
-      <div id="topbar-title-main">The Tree</div>
-    </div>
-  </div>
-  <div id="back-btn">← BACK</div>
-  <div id="topbar-right">
+    <div id="back-btn">← BACK</div>
+    <div id="topbar-right">
     <div id="search-bar">
       <span id="search-toggle">⌕</span>
       <input id="search-input" type="text" placeholder="search…" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="search" enterkeyhint="search">
@@ -760,6 +764,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
     </div>
     <a href="index.html" id="layers-btn">← LAYERS</a>
   </div>
+  </div>
+  <div id="topbar-tagline">tap anywhere to explore</div>
 </div>
 
 <div id="search-results-screen">
@@ -1099,7 +1105,7 @@ function drawBranches(fruitPositions, color) {
     const rx = (mobile ? 90 : 80) + i*10;
     const ry = (mobile ? 70 : 62) + i*6;
     bg += `<ellipse cx="${b.x}" cy="${b.y}" rx="${rx}" ry="${ry}"
-      fill="${cGlow}" opacity="${mobile ? 0.38 : 0.28}" filter="url(#softGlow)"/>`;
+      fill="${cGlow}" opacity="${mobile ? 0.22 : 0.28}" filter="url(#softGlow)"/>`;
   });
 
   // ── DEEP BACKGROUND BRANCHES (behind everything) ───
@@ -1241,33 +1247,33 @@ function drawBranches(fruitPositions, color) {
     const distFromCenter = Math.sqrt(Math.pow(fp.x-root.x,2)+Math.pow(fp.y-root.y,2));
     const maxDist = H() * 0.65;
     const taper = 1 - (distFromCenter / maxDist) * 0.55;
-    const branchW = Math.max(1.5, (mobile ? 3.2 : 5.5) * taper);
+    const branchW = Math.max(1.5, (mobile ? 4.5 : 5.5) * taper);
 
     // Branch origin — spread out along trunk height based on fruit Y
     const fracH = Math.max(0.05, Math.min(0.7, (trunkBase.y - fp.y) / (trunkBase.y - trunkTop.y + trunkH*0.3)));
     const startY = trunkTop.y + trunkH * (0.08 + fracH * 0.55);
     const startX = trunkTop.x + side * trunkW * 0.3;
 
-    // Intermediate fork point — makes branch look like it splits from trunk naturally
+    // Intermediate fork point
     const forkT  = 0.28 + Math.random() * 0.15;
     const forkX  = startX + (fp.x - startX) * forkT;
     const forkY  = startY + (fp.y - startY) * forkT - h*0.04;
 
-    // Control points — organic S-curve
+    // Control points
     const cp1x = startX + (fp.x - startX) * 0.12 + side * w * 0.025;
     const cp1y = startY - h * (isCenter ? 0.06 : 0.08);
     const cp2x = fp.x - (fp.x - startX) * 0.22;
     const cp2y = fp.y + h * 0.04;
 
-    // Glow halo
+    // Glow halo — stronger on mobile
     main += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
-      fill="none" stroke="${cGlowHi}" stroke-width="${branchW * 3}"
-      stroke-linecap="round" filter="url(#branchGlow)" opacity="0.45"/>`;
+      fill="none" stroke="${cGlowHi}" stroke-width="${branchW * (mobile ? 4 : 3)}"
+      stroke-linecap="round" filter="url(#branchGlow)" opacity="${mobile ? 0.7 : 0.45}"/>`;
 
-    // Main branch body
+    // Main branch body — darker and more opaque on mobile to cut through green
     main += `<path d="M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${fp.x} ${fp.y}"
-      fill="none" stroke="${cMid}" stroke-width="${branchW}"
-      stroke-linecap="round"/>`;
+      fill="none" stroke="${mobile ? cBark : cMid}" stroke-width="${branchW}"
+      stroke-linecap="round" opacity="${mobile ? 0.9 : 1}"/>`;
 
     // Branch continues PAST fruit (doesn't stop at orb — passes through or behind)
     const extT = 1.18 + (i%3)*0.06;
@@ -1501,9 +1507,9 @@ function drawBranches(fruitPositions, color) {
 
     // 3 layers per cluster: back (large, dark), mid, front (small, lighter)
     const layers = [
-      { scale: 1.5,  alpha: 0.28, col: pal[0], blur: true  },
-      { scale: 1.1,  alpha: 0.38, col: pal[1], blur: false },
-      { scale: 0.72, alpha: 0.30, col: pal[2], blur: false },
+      { scale: 1.5,  alpha: mobile ? 0.16 : 0.28, col: pal[0], blur: true  },
+      { scale: 1.1,  alpha: mobile ? 0.22 : 0.38, col: pal[1], blur: false },
+      { scale: 0.72, alpha: mobile ? 0.18 : 0.30, col: pal[2], blur: false },
     ];
 
     layers.forEach((lyr, li) => {
