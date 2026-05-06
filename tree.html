@@ -12,6 +12,12 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 
+/* Landscape mobile — unlock scroll so full tree height is reachable */
+@media(max-height:500px) and (orientation:landscape){
+  html,body{overflow-y:auto;}
+  #scene{position:absolute;overflow:visible;bottom:auto;min-height:100vh;}
+}
+
 /* ── SCENE ───────────────────────────────────────── */
 #scene{
   position:fixed;
@@ -310,7 +316,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 /* ── HORIZON BREADCRUMBS ─────────────────────────── */
 #breadcrumb{
   position:absolute;
-  /* sits just above the horizon line */
   bottom:38%;
   left:50%;
   transform:translateX(-50%);
@@ -321,6 +326,23 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
   max-width:88vw;
   overflow:hidden;
   pointer-events:none;
+}
+
+/* THE TREE — root state label, etched at the horizon */
+.crumb-root-tree{
+  font-family:'Cinzel',serif;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  color:rgba(201,168,76,0.72);
+  pointer-events:none;
+  white-space:nowrap;
+  text-shadow:
+    0 0 20px rgba(201,168,76,0.4),
+    0 0 8px rgba(201,168,76,0.3),
+    0 1px 3px rgba(0,0,0,0.9);
+  /* No border, no background, no pill — just the name on the land */
 }
 .crumb{
   font-family:'JetBrains Mono',monospace;
@@ -1934,8 +1956,22 @@ function initRootOrb() {
   `;
   root.addEventListener('click', () => {
     if(history.length === 0) {
-      // At root — open ME MYSELF & I modal
-      openModal(LAYERS[0], ['ME, MYSELF & I']);
+      // At root — dive into ME MYSELF & I, render topPills as fruit in the tree
+      const selfLayer = LAYERS[0];
+      const selfItems = (selfLayer.topPills || []).map(o => ({...o, _layerColor: selfLayer.color}));
+      if(selfItems.length) {
+        history.push({
+          items: selfItems,
+          label: 'ROOT',
+          breadcrumbLabel: selfLayer.label,
+          color: selfLayer.color,
+          node: selfLayer,
+          isRoot: true
+        });
+        currentItems = selfItems;
+        renderTree(selfItems, selfLayer);
+        updateNav(selfLayer);
+      }
     } else {
       // Inside a layer/orb — open the parent node's modal
       const parent = history[history.length - 1].node;
@@ -2014,7 +2050,8 @@ function updateBreadcrumb(currentItem) {
       html += `<span class="crumb" data-idx="${c.index}">${c.label}</span>`;
     });
   } else {
-    html += `<span class="crumb active" style="color:rgba(212,168,85,0.6)">THE TREE</span>`;
+    // Root state — THE TREE etched at the horizon, timeless
+    html += `<span class="crumb-root-tree">THE TREE</span>`;
   }
 
   el.innerHTML = html;
@@ -2093,52 +2130,59 @@ function openModal(item, crumbLabels) {
   const crumbEl = document.getElementById('modal-crumb');
   const pathFromIndex = item.id && _cardPath[item.id] ? _cardPath[item.id] : null;
   const navCrumb = (crumbLabels || []).slice(0,-1).join(' › ').toUpperCase();
-  if(activeSearchQuery && pathFromIndex) {
-    // Show full taxonomy path as clickable crumbs — each navigates the tree
+  if(pathFromIndex) {
     const pathParts = pathFromIndex.split(' › ');
-    // Build crumb HTML — all parts except last (which is the card itself)
     const crumbParts = pathParts.slice(0, -1);
-    crumbEl.innerHTML = crumbParts.map((part, i) => {
-      return `<span class="modal-crumb-part" data-crumb-path="${pathParts.slice(0,i+1).join(' › ')}" style="cursor:pointer">${part.toUpperCase()}</span>`;
-    }).join('<span class="modal-crumb-sep"> › </span>');
-    crumbEl.style.marginBottom = '8px';
 
-    // Wire clicks — close modal and navigate tree to that ancestry level
-    crumbEl.querySelectorAll('.modal-crumb-part[data-crumb-path]').forEach(span => {
-      span.addEventListener('click', () => {
+    // Layer cards have no ancestors — show THE TREE as root crumb
+    if(crumbParts.length === 0) {
+      crumbEl.innerHTML = `<span class="modal-crumb-part" data-crumb-root="1" style="cursor:pointer">THE TREE</span>`;
+      crumbEl.style.marginBottom = '8px';
+      crumbEl.querySelector('[data-crumb-root]').addEventListener('click', () => {
         closeModal();
         document.getElementById('search-results-screen').style.display = 'none';
         document.getElementById('search-input').value = '';
-        // Find the card matching this path label
-        const targetLabel = span.textContent.trim();
-        // Check if it's a layer
-        const matchLayer = LAYERS.find(l => l.label.toUpperCase() === targetLabel);
-        if(matchLayer) {
-          // Navigate into that layer's orbs
-          history.length = 0;
-          const layerFruitItems = (matchLayer.orbs || []).map(o => ({...o, _layerColor: matchLayer.color}));
-          history.push({ items: [], label: 'ROOT', breadcrumbLabel: matchLayer.label, color: matchLayer.color, node: matchLayer, isRoot: true });
-          currentItems = layerFruitItems;
-          renderTree(layerFruitItems, matchLayer);
-          updateNav(matchLayer);
-          return;
-        }
-        // Otherwise find by label in card index
-        const matchCard = Object.values(_cardIndex).find(c =>
-          (c.label||'').replace(/\n/g,' ').toUpperCase() === targetLabel
-        );
-        if(matchCard) {
-          history.length = 0;
-          const children = matchCard.topPills || matchCard.orbs || [];
-          if(children.length) {
-            history.push({ items: [], label: 'ROOT', breadcrumbLabel: matchCard.label, color: matchCard.color || '#888', node: matchCard, isRoot: false });
-            currentItems = children;
-            renderTree(children, matchCard);
-            updateNav(matchCard);
-          }
-        }
+        renderRoot();
       });
-    });
+    } else {
+      crumbEl.innerHTML = crumbParts.map((part, i) => {
+        return `<span class="modal-crumb-part" data-crumb-path="${pathParts.slice(0,i+1).join(' › ')}" style="cursor:pointer">${part.toUpperCase()}</span>`;
+      }).join('<span class="modal-crumb-sep"> › </span>');
+      crumbEl.style.marginBottom = '8px';
+
+      // Wire clicks — close modal and navigate tree to that ancestry level
+      crumbEl.querySelectorAll('.modal-crumb-part[data-crumb-path]').forEach(span => {
+        span.addEventListener('click', () => {
+          closeModal();
+          document.getElementById('search-results-screen').style.display = 'none';
+          document.getElementById('search-input').value = '';
+          const targetLabel = span.textContent.trim();
+          const matchLayer = LAYERS.find(l => l.label.toUpperCase() === targetLabel);
+          if(matchLayer) {
+            history.length = 0;
+            const layerFruitItems = (matchLayer.orbs || []).map(o => ({...o, _layerColor: matchLayer.color}));
+            history.push({ items: [], label: 'ROOT', breadcrumbLabel: matchLayer.label, color: matchLayer.color, node: matchLayer, isRoot: true });
+            currentItems = layerFruitItems;
+            renderTree(layerFruitItems, matchLayer);
+            updateNav(matchLayer);
+            return;
+          }
+          const matchCard = Object.values(_cardIndex).find(c =>
+            (c.label||'').replace(/\n/g,' ').toUpperCase() === targetLabel
+          );
+          if(matchCard) {
+            history.length = 0;
+            const children = matchCard.topPills || matchCard.orbs || [];
+            if(children.length) {
+              history.push({ items: [], label: 'ROOT', breadcrumbLabel: matchCard.label, color: matchCard.color || '#888', node: matchCard, isRoot: false });
+              currentItems = children;
+              renderTree(children, matchCard);
+              updateNav(matchCard);
+            }
+          }
+        });
+      });
+    }
   } else {
     crumbEl.textContent = navCrumb;
   }
