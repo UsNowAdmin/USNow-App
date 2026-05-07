@@ -1,6 +1,6 @@
 # USNow
 
-> USNow (usnow.app) is a civic knowledge platform organized as two interfaces into one dataset:
+> USNow (usnow.app) is a public knowledge platform organized so far as two interfaces into one dataset:
 > the Scale — a working model of human experience organized by proximity across time —
 > and the Tree, a navigable taxonomy of how those topics connect to each other.
 > 7 layers · 29 orbs · 1,297 content cards.
@@ -8,7 +8,7 @@
 
 ## What USNow Is
 
-USNow is a nonpartisan civic knowledge tool. It does not editorialize. It does not advocate.
+USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. It does not editorialize. It does not advocate.
 It presents the record — political, historical, scientific, cultural — and lets the facts speak.
 Every layer, orb, and card can be entered from any direction. There is no required path.
 
