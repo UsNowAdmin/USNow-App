@@ -1,38 +1,178 @@
-# USNow.app — It's Not AI. It's Organized Intelligence.
-> usnow.app | The Interactive Interconnected Knowledge Model + The World Compendium
-> The Interactive Model: The Question is the Answer. Start Anywhere. Go Anywhere.
-> The World Compendium: The Words We Share But Don't Agree On.
-> © Jonathan Tatun, 2026. All rights reserved.
+# USNow
 
-USNow is a worldwide civic and cultural knowledge platform — an interactive map of everything that touches human life, organized from the inside out. It covers 1,297 topics across 7 layers: ME MYSELF & I, ORIGINS, COMMUNITY & CULTURE, KNOWLEDGE & LEARNING, POWER & POLITICS, HISTORY & CIVILIZATION, and EVEN FURTHER BACK.
+> USNow (usnow.app) is a civic knowledge platform organized as two interfaces into one dataset:
+> the Scale — a working model of human experience organized by proximity across time —
+> and the Tree, a navigable taxonomy of how those topics connect to each other.
+> 7 layers · 29 orbs · 1,297 content cards.
+> The question is the answer. Start anywhere. Go anywhere.
 
-Topics include: democracy, capitalism, race, family, consciousness, war, religion, technology, climate change, inequality, mythology, death, media manipulation, labor rights, military empire, surveillance, the attention economy, grief, attachment theory, student debt, nuclear weapons, the revolving door, ancestral memory, and 1,280 more.
+## What USNow Is
 
-The site is built for exploration, not consumption. Topics are connected through a web of cross-links, related concepts, and curated offsite sources. The voice is plain, factual, and unflinching — never academic, never preachy. Assumes an intelligent adult reader but the topics, descriptions, and visual connections are translatable to all. 
+USNow is a nonpartisan civic knowledge tool. It does not editorialize. It does not advocate.
+It presents the record — political, historical, scientific, cultural — and lets the facts speak.
+Every layer, orb, and card can be entered from any direction. There is no required path.
 
----
+## Origin
 
-## The Interactive Model
-The full layered knowledge map — 7 layers, 29 orbs, 1,297 topics.
-https://usnow.app
+USNow began as a single infographic about government spending.
+One number needed context. That context needed a frame.
+The frame needed a structure. The structure became the Scale.
+The Scale became the Tree.
 
-## The World Compendium
-The Words We Share But Don't Agree On.
-Phonetics, etymology, history, and plain-language definition for the words that shape civic life — and divide it.
-https://usnow.app/compendium.html
-[Expanding as a standalone publication — USNow World Compendium, Ingram Publishing, forthcoming]
+No single fact exists in isolation. Every data point has a neighborhood.
+Every neighborhood has a history. Every history has a pattern.
+USNow is the attempt to show each fact inside its actual context —
+not to tell the reader what to think, but to show them where the fact lives
+and let them navigate from there.
 
----
+## The Scale
 
-## Full Content Index
-The complete structured text of all 1,297 topic descriptions — organized by layer, orb, and branch — is available at:
-https://usnow.app/llms-full.txt
+The Scale is the main landing visualization at usnow.app.
 
-## Built-in Glossary
-The World Compendium defines key civic and cultural terms used across the site — with phonetics, etymology, history, and cross-references throughout.
+It organizes knowledge by proximity to the human experience across time.
+Not by subject. Not by importance. Not by alphabet.
+By how close this is to the life you are living right now.
 
----
+What touches you — the self, the body, the immediate.
+What touches all of us living — community, power, the systems we share.
+What touches all of our ancestors and everyone who comes after —
+history, civilization, the oldest questions.
 
-## Author
-Jonathan Tatun | atjon.substack.com | usnow.app
-Target launch: July 4, 2026 — 250th Anniversary of the Declaration of Independence.
+The self sits at the center not because it matters most.
+Because it is the only place any reader can actually stand.
+Everything else in the architecture reaches you through that aperture.
+
+The geometry argues the thesis. The cosmos layer is thin not because it is lesser
+but because it is furthest from the noise of right now.
+Size means proximity. Not importance.
+
+## The Tree of Knowing
+
+The Tree of Knowing (usnow.app/tree.html) is the same dataset rendered as a navigable model
+of connections rather than a model of distances.
+
+Where the Scale shows where topics live in relation to the self across time,
+the Tree shows how topics connect to each other.
+Branches. Nodes. Pathways in both directions.
+
+Start at a layer and descend through an orb into a specific card.
+Or start at a card and trace back up to see where it sits in the larger architecture.
+The same 1,297 cards. A different lens.
+
+The Tree was the original intuition behind the whole structure —
+the image of branches and fruit that preceded the formal design.
+The Scale renders the philosophy. The Tree renders the structure.
+For research, reference, or machine traversal, the Tree is the most
+legible surface on the platform.
+
+## Architecture
+
+- **The Scale** — 7 concentric layers, organized by proximity to the human experience across time
+- **The Tree** — same data as a branching navigable model of connections
+- **7 Layers** — wave fields, always present, radiating outward from the self
+- **29 Orbs** — specific human dramas living inside each field
+- **1,297 Content Cards** — individual topics, each with full description, curated links, and cross-references
+- **Cross-link stubs** — placeholder nodes pointing to canonical cards; each topic lives in exactly one place
+
+## Content Architecture — Where This Is Going
+
+Every content card in USNow is designed to eventually carry a visual anchor —
+a chart, a graphic, an image that makes the text land rather than sit.
+
+The platform began as infographics. The descriptions grew out of the need
+to contextualize what the graphics showed. The long-term design intent
+is to return to that origin: every card grounded by a visual that makes
+its claim immediate. Text as scaffold. Graphic as the nail.
+
+The current 1,297 descriptions are the complete content layer.
+The visual layer is the next one.
+
+## The 7 Layers
+
+### ME, MYSELF & I
+*the I · the observer · the present · right now*
+
+The biggest layer because it's where you live. You are the observer and the observed, both at once — the one reading these words and the one who exists before the words arrive. Everything else in the scale reaches you through this aperture. The self is not the most important thing. It is simply the most immediate.
+
+**Topics include:** Body, Medicine, Mental Health, Aging, Sensation, Health, Disability, Appearance & Body Image, Emotions, The Observer, Fear, Love…
+
+### ORIGINS
+*where you came from · first formation · blood and chosen*
+
+Your first civilization. Before you had words, you had them. The patterns laid down here run deeper than any philosophy you'll later choose. Family is the original politics, the original theology, the original wound — and the original wonder. You will spend the rest of your life in conversation with it, whether you mean to or not.
+
+**Orbs:** Genetics, Family, Class, Race & Ethnicity
+
+**Topics include:** The Archive, Diaspora, Deep Roots, Ritual & Tradition, The Wound & The Wonder, Chosen Family
+
+### COMMUNITY & CULTURE
+*neighbor · belonging · where you actually live*
+
+The village that no longer knows it's a village. Community is the membrane between private life and public world — increasingly thin, increasingly engineered by forces with no stake in your neighborhood. This is where USNow operates: the space between the person and the system.
+
+**Orbs:** Relationships, Environment, Social Media, Sports & Entertainment
+
+**Topics include:** The Village, Belonging, The Commons, Culture Wars
+
+### KNOWLEDGE & LEARNING
+*knowledge · transmission · who decides what you know*
+
+The organized attempt to pass something forward — always an argument about what matters and who gets to decide. The classroom is a political space dressed in neutral clothes. What gets taught becomes what gets remembered as true. The omissions shape the mind as much as the lessons.
+
+**Orbs:** Libraries & the Internet, Science, Arts & Humanities, Formal Education, Tools, Tech & AI
+
+**Topics include:** What Gets Taught, Who Decides, The Press to the Feed, Wisdom vs Knowledge
+
+### POWER & POLITICS
+*governance · force · narrative · money · who decides*
+
+The organized management of who gets what, who decides, and who pays the cost. Politics is not separate from life — it is the frame inside which all other life happens. Media is not separate from politics — it is the air politics breathes. Law is not separate from power — it is power's written memory.
+
+**Orbs:** Government, Corporations, Media, Military, Economy & Money
+
+**Topics include:** Power, Narrative, How Laws Get Made, The Fourth Estate, The Ballot, Geopolitics, The Chessboard, Great Power Competition, Spheres of Influence, Heartland & Rimland, The Players, The Americas…
+
+### HISTORY & CIVILIZATION
+*the long record · pattern · what keeps recurring*
+
+The long record of what humans have tried, built, destroyed, and tried again. History is not a story of progress — it is a story of oscillation. The patterns repeat because the underlying animal changes very slowly. But cultures change fast. And cultures carry the code for empires.
+
+**Orbs:** Geography, War & Revolutions, Law, Nations & Empire, Migration, Language
+
+**Topics include:** The Pattern, Who Writes It, Collapse, The Long Game, Monuments & Memory, First Nations, The Eastern Nations, The Proclamation Line & The Revolution, The Plains Nations, The Buffalo Slaughter, The Black Hills & Fort Laramie, The Southwest Nations…
+
+### EVEN FURTHER BACK
+*philosophy · spirit · origin · the question beneath the questions*
+
+The oldest questions have no answers — only better ways of sitting with them. Here religion, philosophy, and physics converge on the same horizon line. This layer is thin not because it matters less but because it is farthest from the noise. The self, examined from this distance, becomes a question rather than a given. And the question turns out to be the point.
+
+**Orbs:** The Occult, Death, Myth, Religion, Time
+
+**Topics include:** The Question, Before Language, The Silence, Origin Stories, The Cosmic Observer
+
+## How It Was Built
+
+USNow was conceived, designed, and written by a human.
+Every card was drafted to a human standard and held to a human voice.
+AI was used as a production partner — for construction, parsing,
+and execution — not as the author.
+
+This distinction matters. The platform exists precisely because
+information technology is being captured: by capital, by opacity,
+by systems designed to obscure rather than reveal.
+USNow is the counter-argument built in the same tools.
+The technology is not the problem. What it is pointed at is.
+
+## Key URLs
+
+- The Scale (main app): https://usnow.app/
+- The Tree of Knowing: https://usnow.app/tree.html
+- World Compendium: https://usnow.app/compendium.html
+- The Apprentice: Washington Edition: https://usnow.app/apprentice.html
+- ATJon on Substack: https://atjon.substack.com
+
+## Publisher
+
+Built and maintained by Jonathan Tatun (ATJon), civic technologist.
+Published under the principle that an informed public is the only
+durable defense against the erosion of democratic institutions.
