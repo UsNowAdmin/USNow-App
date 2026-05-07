@@ -10,20 +10,20 @@
 USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. Organized as two 
 interfaces into one dataset.
 
-**The Scale** (usnow.app) organizes knowledge by proximity to the human experience across time.
+**The Scales of Being** (usnow.app) organizes knowledge by proximity to the human experience across time.
 Not by subject, importance, or alphabet — by how close this is to the life you are living right now.
 What touches you. What touches all of us living. What touches all of our ancestors and everyone
 who comes after. The self sits at the center not because it matters most, but because it is the
 only place any reader can actually stand. Size means proximity. Not importance.
 
 **The Tree of Knowing** (usnow.app/tree.html) renders the same dataset as a navigable model
-of connections. Branches. Nodes. Pathways in both directions. Where the Scale shows distance,
+of connections. Branches. Nodes. Pathways in both directions. Where the Scales shows distance,
 the Tree shows structure. For research, reference, or machine traversal, the Tree is the most
 legible surface on the platform.
 
 USNow began as a single infographic about government spending. One number needed context.
-That context needed a frame. The frame needed a structure. The structure became the Scale.
-The Scale became the Tree. Every card in this index is a node in that expansion —
+That context needed a frame. The frame needed a structure. The structure became the Scales.
+The Scales layout became the Tree. Every card in this index is a node in that expansion —
 each one designed to eventually carry a visual anchor that makes its claim immediate.
 Text as scaffold. Graphic as the nail. The visual layer is the next one.
 
@@ -38,7 +38,7 @@ This is the counter-argument built in the same tools.
 id: self
 sub: the I · the observer · the present · right now
 
-The biggest layer because it's where you live. You are the observer and the observed, both at once — the one reading these words and the one who exists before the words arrive. Everything else in the scale reaches you through this aperture. The self is not the most important thing. It is simply the most immediate.
+The biggest layer because it's where you live. You are the observer and the observed, both at once — the one reading these words and the one who exists before the words arrive. Everything else in these scales reach you through this aperture. The self is not the most important thing. It is simply the most immediate.
 
 ## Layer Topics — ME, MYSELF & I
 
