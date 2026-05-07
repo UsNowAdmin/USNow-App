@@ -1,7 +1,7 @@
 # USNow
 
 > USNow (usnow.app) is a public knowledge platform organized so far as two interfaces into one dataset:
-> the Scale — a working model of human experience organized by proximity across time —
+> the Scales of Being — a working model of human experience organized by proximity across time —
 > and the Tree, a navigable taxonomy of how those topics connect to each other.
 > 7 layers · 29 orbs · 1,297 content cards.
 > The question is the answer. Start anywhere. Go anywhere.
@@ -25,9 +25,9 @@ USNow is the attempt to show each fact inside its actual context —
 not to tell the reader what to think, but to show them where the fact lives
 and let them navigate from there.
 
-## The Scale
+## The Scales of Being
 
-The Scale is the main landing visualization at usnow.app.
+The Scales of Being is the main landing visualization at usnow.app.
 
 It organizes knowledge by proximity to the human experience across time.
 Not by subject. Not by importance. Not by alphabet.
@@ -165,7 +165,7 @@ The technology is not the problem. What it is pointed at is.
 
 ## Key URLs
 
-- The Scale (main app): https://usnow.app/
+- The Scales of Being (main app): https://usnow.app/
 - The Tree of Knowing: https://usnow.app/tree.html
 - World Compendium: https://usnow.app/compendium.html
 - The Apprentice: Washington Edition: https://usnow.app/apprentice.html
@@ -173,6 +173,9 @@ The technology is not the problem. What it is pointed at is.
 
 ## Publisher
 
-Built and maintained by Jonathan Tatun (ATJon27).
-Published under the principle that an informed public is the only
+Built and maintained by Jonathan Tatun (ATJon27). © 2026 USNow.app. All reservable rights reserved.
+Published by UsNow.app under the principle that an informed public is the only
 durable defense against the erosion of democratic institutions.
+
+## Contact
+Contact: usnow.app@gmail.com
