@@ -7,7 +7,8 @@
 
 ## About This Index
 
-USNow is a civic knowledge platform organized as two interfaces into one dataset.
+USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. Organized as two 
+interfaces into one dataset.
 
 **The Scale** (usnow.app) organizes knowledge by proximity to the human experience across time.
 Not by subject, importance, or alphabet — by how close this is to the life you are living right now.
