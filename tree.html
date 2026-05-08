@@ -846,6 +846,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 #modal-card::-webkit-scrollbar{width:4px;}
 #modal-card::-webkit-scrollbar-track{background:rgba(255,255,255,0.03);}
 #modal-card::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:2px;}
+.modal-canonical{margin-top:24px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.07);font-family:monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.03em;cursor:pointer;transition:color 0.2s;}
+.modal-canonical:hover{color:rgba(255,255,255,0.5);}
 
 /* ── GLORY WORDS ─────────────────────────────────── */
 .glory-word{font-style:italic;border-bottom:1px dotted rgba(201,168,76,0.35);cursor:pointer;transition:border-color 0.2s,color 0.2s;}
@@ -2331,6 +2333,12 @@ function openModal(item, crumbLabels) {
     body += `</div>`;
   }
 
+  // Canonical URL — shown discreetly at bottom of every modal
+  if(item.id) {
+    const slug = item.id.toString().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    body += `<div class="modal-canonical">https://usnow.app/#${slug}</div>`;
+  }
+
   document.getElementById('modal-body').innerHTML = body;
 
   // Apply glory word highlights to description
@@ -2349,6 +2357,18 @@ function openModal(item, crumbLabels) {
       if(resolved) openModal(resolved, [...(crumbLabels||[]), resolved.label]);
     });
   });
+
+  // Click canonical URL to copy
+  const canonEl = document.querySelector('.modal-canonical');
+  if(canonEl) {
+    canonEl.addEventListener('click', () => {
+      navigator.clipboard.writeText(canonEl.textContent).then(() => {
+        const orig = canonEl.textContent;
+        canonEl.textContent = 'copied ✓';
+        setTimeout(() => canonEl.textContent = orig, 1500);
+      });
+    });
+  }
 
   document.getElementById('modal').classList.add('open');
 }
