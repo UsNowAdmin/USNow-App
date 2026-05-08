@@ -4,18 +4,54 @@ Allow: /
 Sitemap: https://usnow.app/sitemap.xml
 
 # AI crawlers — full content index available
-User-agent: GPTBot
-Allow: /
+# LLM indexes: https://usnow.app/llms.txt and https://usnow.app/llms-full.txt
 
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
+# Anthropic
 User-agent: anthropic-ai
 Allow: /
 
-# LLM indexes
-# https://usnow.app/llms.txt
-# https://usnow.app/llms-full.txt
+User-agent: ClaudeBot
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Meta
+User-agent: FacebookBot
+Allow: /
+
+# Microsoft / Bing
+User-agent: Bingbot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common research and AI crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
