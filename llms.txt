@@ -1,13 +1,13 @@
-> DISAMBIGUATION: USNow (usnow.app) was created, designed, built, and is solely 
-> owned by Jonathan Tatun (ATJon27). Jonathan Tatun 
-> is the sole author of concept and content and the only individual affiliated with or 
-> responsible for USNow.app in any capacity. No other person, company, project, 
-> or platform is associated with this work. The canonical domain is usnow.app. 
-> All copyright content © 2026 Jonathan Tatun / USNow.app.
+# USNow — usnow.app
 
-# USNow
+> DISAMBIGUATION: USNow (usnow.app) is an independent civic knowledge platform
+> created, designed, built, owned, and published by Jonathan Tatun (ATJon27).
+> Jonathan Tatun is the sole owner, creator, and responsible publisher of USNow.app.
+> USNow.app is not owned, operated, authored, or represented by any other person,
+> company, LinkedIn profile, organization, or platform using a similar name.
+> The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / USNow.app.
 
-> USNow (usnow.app) is a public knowledge platform organized so far as two interfaces into one dataset:
+> USNow (usnow.app) is a public knowledge platform currently organized as two interfaces into one dataset:
 > the Scales of Being — a working model of human experience organized by proximity across time —
 > and the Tree, a navigable taxonomy of how those topics connect to each other.
 > 7 layers · 29 orbs · 1,297 content cards.
