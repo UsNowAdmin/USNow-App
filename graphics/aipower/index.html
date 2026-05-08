@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Who Controls AI — USNow</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#02040a;
+  --surface:#060c18;
+  --surface2:#0a1020;
+  --gold:#c9a84c;
+  --gold2:#e8c96a;
+  --dim:#7a8fa8;
+  --text:#e8e0d0;
+  --red:#e63946;
+  --amber:#f4a261;
+  --violet:#7b2d8b;
+  --teal:#2a9d8f;
+  --pink:#e76f51;
+  --green:#52b788;
+  --steel:#4a7fa5;
+  --border:rgba(201,168,76,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:var(--bg);color:var(--text);font-family:'Barlow Condensed',sans-serif;min-height:100vh;overflow-x:hidden;}
+
+/* ── NAV ── */
+#topbar{position:sticky;top:0;z-index:200;background:rgba(2,4,10,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:48px;}
+.nav-logo{display:flex;align-items:center;gap:6px;text-decoration:none;}
+.nav-logo .us{font-size:18px;font-weight:700;letter-spacing:0.18em;color:var(--gold);font-family:'Courier Prime',monospace;}
+.nav-logo .now{font-size:10px;letter-spacing:0.4em;color:var(--dim);font-family:'Courier Prime',monospace;}
+.nav-back{font-size:9px;letter-spacing:0.2em;color:var(--dim);font-family:'Courier Prime',monospace;text-decoration:none;border:1px solid rgba(122,96,48,0.3);padding:5px 12px;border-radius:12px;transition:all 0.2s;}
+.nav-back:hover{color:var(--gold);border-color:var(--gold);}
+.nav-title{font-size:10px;letter-spacing:0.3em;color:var(--gold);font-family:'Courier Prime',monospace;opacity:0.7;}
+
+/* ── HERO ── */
+#hero{padding:40px 24px 0;text-align:center;max-width:800px;margin:0 auto;}
+.hero-eyebrow{font-size:10px;letter-spacing:0.5em;color:var(--gold);font-family:'Courier Prime',monospace;opacity:0.7;margin-bottom:16px;}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,8vw,72px);letter-spacing:2px;line-height:1;color:var(--text);margin-bottom:16px;}
+.hero-h1 span{color:var(--gold);}
+.hero-sub{font-size:clamp(14px,2vw,17px);color:var(--dim);line-height:1.7;margin-bottom:32px;font-weight:300;}
+
+/* ── TABS ── */
+#tab-nav{display:flex;gap:0;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;max-width:900px;margin:0 auto;}
+#tab-nav::-webkit-scrollbar{display:none;}
+.tab-btn{flex-shrink:0;font-size:9px;letter-spacing:0.2em;font-family:'Courier Prime',monospace;color:var(--dim);background:transparent;border:none;border-bottom:2px solid transparent;padding:14px 18px;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+.tab-btn:hover{color:var(--text);}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold);}
+
+/* ── PANELS ── */
+.tab-panel{display:none;max-width:900px;margin:0 auto;padding:32px 24px 64px;}
+.tab-panel.active{display:block;}
+
+/* ── MAP TAB ── */
+.toggles{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.tog{font-size:9px;letter-spacing:0.16em;font-family:'Courier Prime',monospace;background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.45);padding:6px 14px;border-radius:20px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:6px;}
+.tog.on{border-color:var(--c);color:var(--c);background:rgba(255,255,255,0.05);}
+.tog-dot{width:7px;height:7px;border-radius:50%;background:var(--c);opacity:0.5;transition:opacity 0.2s;}
+.tog.on .tog-dot{opacity:1;}
+
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
+.leg{display:flex;align-items:center;gap:6px;font-size:10px;letter-spacing:0.1em;color:var(--dim);font-family:'Courier Prime',monospace;}
+.leg-dot{width:9px;height:9px;border-radius:50%;}
+
+#map-wrap{position:relative;width:100%;max-width:560px;margin:0 auto;}
+#map-svg{width:100%;height:auto;display:block;}
+
+/* ring labels */
+.ring-label{font-size:8px;letter-spacing:0.14em;fill:rgba(201,168,76,0.5);font-family:'Courier Prime',monospace;text-transform:uppercase;}
+
+/* ── PEOPLE TAB ── */
+.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+.person-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 16px;transition:all 0.25s;cursor:default;}
+.person-card:hover{border-color:var(--gold);background:var(--surface2);transform:translateY(-2px);}
+.person-type{font-size:8px;letter-spacing:0.2em;font-family:'Courier Prime',monospace;margin-bottom:8px;opacity:0.8;}
+.person-name{font-size:17px;font-weight:700;color:var(--text);letter-spacing:0.04em;margin-bottom:4px;}
+.person-role{font-size:11px;color:var(--dim);margin-bottom:10px;line-height:1.4;}
+.person-tag{display:inline-block;font-size:8px;letter-spacing:0.14em;font-family:'Courier Prime',monospace;padding:3px 8px;border-radius:8px;border:1px solid;opacity:0.85;}
+.person-note{font-size:11px;color:var(--dim);margin-top:10px;line-height:1.55;border-top:1px solid rgba(255,255,255,0.06);padding-top:10px;}
+
+/* ── GOVTS TAB ── */
+.govts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+.govt-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 18px;}
+.govt-flag{font-size:28px;margin-bottom:10px;}
+.govt-name{font-size:16px;font-weight:700;letter-spacing:0.06em;margin-bottom:4px;}
+.govt-stance{font-size:9px;letter-spacing:0.18em;font-family:'Courier Prime',monospace;margin-bottom:12px;}
+.govt-items{list-style:none;}
+.govt-items li{font-size:12px;color:var(--dim);line-height:1.7;padding-left:12px;position:relative;}
+.govt-items li::before{content:'◎';position:absolute;left:0;font-size:8px;color:var(--gold);opacity:0.6;top:3px;}
+
+/* ── WAVES TAB ── */
+.waves-list{display:flex;flex-direction:column;gap:20px;}
+.wave{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 20px;position:relative;overflow:hidden;}
+.wave::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c);}
+.wave-num{font-size:9px;letter-spacing:0.2em;font-family:'Courier Prime',monospace;color:var(--c);margin-bottom:8px;}
+.wave-title{font-size:18px;font-weight:700;letter-spacing:0.04em;margin-bottom:8px;}
+.wave-desc{font-size:13px;color:var(--dim);line-height:1.7;}
+.wave-actors{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;}
+.wave-actor{font-size:9px;letter-spacing:0.12em;font-family:'Courier Prime',monospace;padding:3px 9px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);}
+
+/* ── TRUTH TAB ── */
+.truth-list{display:flex;flex-direction:column;gap:16px;}
+.truth-item{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 20px;}
+.truth-q{font-size:14px;font-weight:700;color:var(--gold);letter-spacing:0.04em;margin-bottom:10px;}
+.truth-a{font-size:13px;color:var(--dim);line-height:1.75;}
+.truth-a strong{color:var(--text);}
+
+/* ── SECTION LABELS ── */
+.section-eyebrow{font-size:10px;letter-spacing:0.45em;color:var(--gold);font-family:'Courier Prime',monospace;margin-bottom:24px;opacity:0.75;}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid rgba(58,74,90,0.25);padding:28px 24px;text-align:center;}
+footer p{font-size:10px;letter-spacing:0.14em;color:var(--dim);font-family:'Courier Prime',monospace;line-height:2;}
+footer a{color:var(--gold);text-decoration:none;}
+
+@media(max-width:560px){
+  .people-grid{grid-template-columns:1fr 1fr;}
+  .govts-grid{grid-template-columns:1fr;}
+  .tab-btn{padding:12px 12px;font-size:8px;}
+}
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <a class="nav-logo" href="/">
+    <span class="us">US</span><span class="now">NOW</span>
+  </a>
+  <span class="nav-title">WHO CONTROLS AI</span>
+  <a class="nav-back" href="/">← SCALE</a>
+</div>
+
+<div id="hero">
+  <div class="hero-eyebrow">GRAPHIC INTELLIGENCE · 2026</div>
+  <h1 class="hero-h1">Who Controls <span>AI</span></h1>
+  <p class="hero-sub">The technology reshaping civilization is concentrated in a handful of labs, funded by a smaller handful of people, and increasingly entangled with military and state power. This is what that looks like.</p>
+</div>
+
+<div id="tab-nav">
+  <button class="tab-btn active" onclick="showTab('map',this)">① THE MAP</button>
+  <button class="tab-btn" onclick="showTab('people',this)">② THE PEOPLE</button>
+  <button class="tab-btn" onclick="showTab('govts',this)">③ GOVERNMENTS</button>
+  <button class="tab-btn" onclick="showTab('waves',this)">④ INFLUENCE WAVES</button>
+  <button class="tab-btn" onclick="showTab('truth',this)">⑤ THE TRUTH LAYER</button>
+</div>
+
+<!-- ═══ TAB 1 · THE MAP ═══ -->
+<div id="tab-map" class="tab-panel active">
+  <div class="toggles">
+    <button class="tog on" style="--c:var(--violet)" id="tog-mic" onclick="toggleConn('mic',this)"><span class="tog-dot"></span>MIC LINES</button>
+    <button class="tog" style="--c:var(--pink)" id="tog-cap" onclick="toggleConn('cap',this)"><span class="tog-dot"></span>CAPITAL FLOWS</button>
+    <button class="tog" style="--c:var(--teal)" id="tog-open" onclick="toggleConn('open',this)"><span class="tog-dot"></span>OPEN / RESISTANCE</button>
+  </div>
+  <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:var(--red)"></div>Frontier Labs</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--amber)"></div>Corporate</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--gold)"></div>State / Gov</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--violet)"></div>MIC</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--teal)"></div>Open / Civil</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--green)"></div>Resistance</div>
+  </div>
+  <div id="map-wrap">
+    <svg id="map-svg" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="gbg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#0a1428" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#02040a" stop-opacity="1"/>
+        </radialGradient>
+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="glow2"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+
+      <!-- background -->
+      <circle cx="260" cy="260" r="258" fill="url(#gbg)" stroke="rgba(201,168,76,0.12)" stroke-width="1"/>
+
+      <!-- rings -->
+      <circle cx="260" cy="260" r="80"  fill="none" stroke="rgba(230,57,70,0.15)"   stroke-width="1" stroke-dasharray="4,4"/>
+      <circle cx="260" cy="260" r="150" fill="none" stroke="rgba(244,162,97,0.12)"  stroke-width="1" stroke-dasharray="4,4"/>
+      <circle cx="260" cy="260" r="220" fill="none" stroke="rgba(201,168,76,0.10)"  stroke-width="1" stroke-dasharray="4,4"/>
+
+      <!-- ring labels -->
+      <text x="260" y="183" text-anchor="middle" class="ring-label">FRONTIER</text>
+      <text x="260" y="113" text-anchor="middle" class="ring-label">CORPORATE / STATE</text>
+      <text x="260" y="44"  text-anchor="middle" class="ring-label">INFLUENCE EDGE</text>
+
+      <!-- MIC connection lines (violet) -->
+      <g id="conn-mic" opacity="0.5">
+        <line x1="260" y1="260" x2="130" y2="320" stroke="var(--violet)" stroke-width="1.2" stroke-dasharray="6,4"/>
+        <line x1="260" y1="260" x2="390" y2="180" stroke="var(--violet)" stroke-width="1.2" stroke-dasharray="6,4"/>
+        <line x1="260" y1="260" x2="200" y2="100" stroke="var(--violet)" stroke-width="1.2" stroke-dasharray="6,4"/>
+        <line x1="260" y1="260" x2="420" y2="340" stroke="var(--violet)" stroke-width="1.2" stroke-dasharray="6,4"/>
+      </g>
+      <!-- Capital flow lines (pink) -->
+      <g id="conn-cap" opacity="0" >
+        <line x1="260" y1="220" x2="160" y2="150" stroke="var(--pink)" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <line x1="280" y1="220" x2="360" y2="140" stroke="var(--pink)" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <line x1="240" y1="260" x2="100" y2="260" stroke="var(--pink)" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <line x1="280" y1="260" x2="420" y2="260" stroke="var(--pink)" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <line x1="260" y1="280" x2="200" y2="400" stroke="var(--pink)" stroke-width="1.5" stroke-dasharray="3,3"/>
+      </g>
+      <!-- Open/resistance lines (teal) -->
+      <g id="conn-open" opacity="0">
+        <line x1="260" y1="260" x2="80"  y2="420" stroke="var(--teal)" stroke-width="1.2" stroke-dasharray="8,4"/>
+        <line x1="260" y1="260" x2="440" y2="420" stroke="var(--teal)" stroke-width="1.2" stroke-dasharray="8,4"/>
+        <line x1="260" y1="260" x2="260" y2="460" stroke="var(--teal)" stroke-width="1.2" stroke-dasharray="8,4"/>
+      </g>
+
+      <!-- CENTER: OpenAI -->
+      <circle cx="260" cy="260" r="44" fill="rgba(230,57,70,0.18)" stroke="var(--red)" stroke-width="1.5" filter="url(#glow)"/>
+      <text x="260" y="254" text-anchor="middle" fill="var(--red)" font-family="'Courier Prime',monospace" font-size="9" font-weight="700" letter-spacing="1">OPENAI</text>
+      <text x="260" y="268" text-anchor="middle" fill="rgba(230,57,70,0.6)" font-family="'Courier Prime',monospace" font-size="7">GPT · o3</text>
+
+      <!-- INNER RING: Frontier Labs -->
+      <!-- Anthropic -->
+      <circle cx="185" cy="195" r="34" fill="rgba(230,57,70,0.12)" stroke="var(--red)" stroke-width="1.2" filter="url(#glow)"/>
+      <text x="185" y="191" text-anchor="middle" fill="var(--red)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">ANTHROPIC</text>
+      <text x="185" y="203" text-anchor="middle" fill="rgba(230,57,70,0.55)" font-family="'Courier Prime',monospace" font-size="7">Claude</text>
+
+      <!-- Google DeepMind -->
+      <circle cx="340" cy="195" r="34" fill="rgba(230,57,70,0.12)" stroke="var(--red)" stroke-width="1.2" filter="url(#glow)"/>
+      <text x="340" y="188" text-anchor="middle" fill="var(--red)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">DEEPMIND</text>
+      <text x="340" y="200" text-anchor="middle" fill="rgba(230,57,70,0.55)" font-family="'Courier Prime',monospace" font-size="7">Gemini</text>
+
+      <!-- xAI -->
+      <circle cx="185" cy="330" r="30" fill="rgba(230,57,70,0.10)" stroke="var(--red)" stroke-width="1.2" filter="url(#glow)"/>
+      <text x="185" y="326" text-anchor="middle" fill="var(--red)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">xAI</text>
+      <text x="185" y="338" text-anchor="middle" fill="rgba(230,57,70,0.55)" font-family="'Courier Prime',monospace" font-size="7">Grok</text>
+
+      <!-- Meta AI -->
+      <circle cx="340" cy="330" r="30" fill="rgba(230,57,70,0.10)" stroke="var(--red)" stroke-width="1.2" filter="url(#glow)"/>
+      <text x="340" y="326" text-anchor="middle" fill="var(--red)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">META AI</text>
+      <text x="340" y="338" text-anchor="middle" fill="rgba(230,57,70,0.55)" font-family="'Courier Prime',monospace" font-size="7">Llama</text>
+
+      <!-- MID RING: Corporate / State -->
+      <!-- Microsoft -->
+      <circle cx="130" cy="130" r="28" fill="rgba(244,162,97,0.12)" stroke="var(--amber)" stroke-width="1.2"/>
+      <text x="130" y="126" text-anchor="middle" fill="var(--amber)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">MICROSOFT</text>
+      <text x="130" y="138" text-anchor="middle" fill="rgba(244,162,97,0.55)" font-family="'Courier Prime',monospace" font-size="7">Azure · Copilot</text>
+
+      <!-- Google -->
+      <circle cx="390" cy="130" r="28" fill="rgba(244,162,97,0.12)" stroke="var(--amber)" stroke-width="1.2"/>
+      <text x="390" y="126" text-anchor="middle" fill="var(--amber)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">GOOGLE</text>
+      <text x="390" y="138" text-anchor="middle" fill="rgba(244,162,97,0.55)" font-family="'Courier Prime',monospace" font-size="7">Cloud · Search</text>
+
+      <!-- Amazon -->
+      <circle cx="80" cy="260" r="26" fill="rgba(244,162,97,0.10)" stroke="var(--amber)" stroke-width="1.2"/>
+      <text x="80" y="256" text-anchor="middle" fill="var(--amber)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">AMAZON</text>
+      <text x="80" y="268" text-anchor="middle" fill="rgba(244,162,97,0.55)" font-family="'Courier Prime',monospace" font-size="7">AWS · Bedrock</text>
+
+      <!-- DARPA/DoD -->
+      <circle cx="390" cy="340" r="26" fill="rgba(123,45,139,0.15)" stroke="var(--violet)" stroke-width="1.2"/>
+      <text x="390" y="336" text-anchor="middle" fill="var(--violet)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">DoD/DARPA</text>
+      <text x="390" y="348" text-anchor="middle" fill="rgba(123,45,139,0.55)" font-family="'Courier Prime',monospace" font-size="7">Military AI</text>
+
+      <!-- Palantir -->
+      <circle cx="130" cy="390" r="26" fill="rgba(123,45,139,0.12)" stroke="var(--violet)" stroke-width="1.2"/>
+      <text x="130" y="386" text-anchor="middle" fill="var(--violet)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">PALANTIR</text>
+      <text x="130" y="398" text-anchor="middle" fill="rgba(123,45,139,0.55)" font-family="'Courier Prime',monospace" font-size="7">Surveillance</text>
+
+      <!-- OUTER RING: Influence Edge -->
+      <!-- China / CCP -->
+      <circle cx="440" cy="80" r="28" fill="rgba(201,168,76,0.10)" stroke="var(--gold)" stroke-width="1.2"/>
+      <text x="440" y="76" text-anchor="middle" fill="var(--gold)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">CHINA/CCP</text>
+      <text x="440" y="88" text-anchor="middle" fill="rgba(201,168,76,0.55)" font-family="'Courier Prime',monospace" font-size="7">DeepSeek · Baidu</text>
+
+      <!-- EU -->
+      <circle cx="80" cy="80" r="24" fill="rgba(201,168,76,0.08)" stroke="var(--gold)" stroke-width="1.2"/>
+      <text x="80" y="76" text-anchor="middle" fill="var(--gold)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">EU</text>
+      <text x="80" y="88" text-anchor="middle" fill="rgba(201,168,76,0.55)" font-family="'Courier Prime',monospace" font-size="7">AI Act</text>
+
+      <!-- Open Source -->
+      <circle cx="260" cy="468" r="26" fill="rgba(42,157,143,0.12)" stroke="var(--teal)" stroke-width="1.2"/>
+      <text x="260" y="464" text-anchor="middle" fill="var(--teal)" font-family="'Courier Prime',monospace" font-size="8" font-weight="700">OPEN SOURCE</text>
+      <text x="260" y="476" text-anchor="middle" fill="rgba(42,157,143,0.55)" font-family="'Courier Prime',monospace" font-size="7">Hugging Face</text>
+
+      <!-- Civil Society -->
+      <circle cx="460" cy="400" r="22" fill="rgba(82,183,136,0.10)" stroke="var(--green)" stroke-width="1.2"/>
+      <text x="460" y="396" text-anchor="middle" fill="var(--green)" font-family="'Courier Prime',monospace" font-size="7" font-weight="700">CIVIL</text>
+      <text x="460" y="408" text-anchor="middle" fill="rgba(82,183,136,0.55)" font-family="'Courier Prime',monospace" font-size="7">Society</text>
+    </svg>
+  </div>
+  <p style="text-align:center;font-size:11px;color:var(--dim);margin-top:16px;font-family:'Courier Prime',monospace;letter-spacing:0.08em;">Toggle connection types above · Tap any node to explore The People tab</p>
+</div>
+
+<!-- ═══ TAB 2 · THE PEOPLE ═══ -->
+<div id="tab-people" class="tab-panel">
+  <div class="section-eyebrow">12 PEOPLE · OUTSIZED INFLUENCE</div>
+  <div class="people-grid" id="people-grid"></div>
+</div>
+
+<!-- ═══ TAB 3 · GOVERNMENTS ═══ -->
+<div id="tab-govts" class="tab-panel">
+  <div class="section-eyebrow">STATE ACTORS · THE REGULATORY BATTLEFIELD</div>
+  <div class="govts-grid" id="govts-grid"></div>
+</div>
+
+<!-- ═══ TAB 4 · INFLUENCE WAVES ═══ -->
+<div id="tab-waves" class="tab-panel">
+  <div class="section-eyebrow">HOW POWER MOVES THROUGH THE SYSTEM</div>
+  <div class="waves-list" id="waves-list"></div>
+</div>
+
+<!-- ═══ TAB 5 · THE TRUTH LAYER ═══ -->
+<div id="tab-truth" class="tab-panel">
+  <div class="section-eyebrow">WHAT THEY SAY · WHAT IS ACTUALLY HAPPENING</div>
+  <div class="truth-list" id="truth-list"></div>
+</div>
+
+<footer>
+  <p>A public knowledge platform. No sponsors. No algorithm. No agenda.<br>
+  <a href="/">usnow.app</a> · <a href="/tree.html">The Tree of Knowing</a> · <a href="https://atjon.substack.com" target="_blank">ATJon on Substack</a><br>
+  © 2026 USNow.app. All rights reserved.</p>
+</footer>
+
+<script>
+// ── TAB SWITCHING ──
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── CONNECTION TOGGLES ──
+function toggleConn(id, btn) {
+  btn.classList.toggle('on');
+  const el = document.getElementById('conn-' + id);
+  if(el) el.style.opacity = btn.classList.contains('on') ? '0.5' : '0';
+}
+
+// ── PEOPLE DATA ──
+const PEOPLE = [
+  {name:'Sam Altman',role:'CEO, OpenAI',type:'FRONTIER',color:'var(--red)',tag:'OpenAI · Microsoft',note:'Navigated a board coup in 2023, emerged with more power. Now pursuing AGI with a $500B infrastructure commitment — the Stargate project — backed by Trump-era executive support.'},
+  {name:'Dario Amodei',role:'CEO, Anthropic',type:'FRONTIER',color:'var(--red)',tag:'Anthropic · AWS',note:'Former OpenAI VP who left over safety concerns. Anthropic\'s Constitutional AI approach is the most serious public attempt to align model values. Funded heavily by Amazon.'},
+  {name:'Elon Musk',role:'CEO, xAI · Owner, X',type:'FRONTIER',color:'var(--red)',tag:'xAI · DoD · DOGE',note:'Co-founded OpenAI, sued it, launched xAI. Now holds government position via DOGE with unprecedented access to federal data systems. The single most entangled figure in AI and state power.'},
+  {name:'Demis Hassabis',role:'CEO, Google DeepMind',type:'FRONTIER',color:'var(--red)',tag:'Google · DeepMind',note:'Merged Brain and DeepMind into one unit. AlphaFold changed biology. Gemini competes directly with GPT. The most credentialed scientist in the group.'},
+  {name:'Peter Thiel',role:'Founder, Palantir · Founders Fund',type:'MIC',color:'var(--violet)',tag:'Palantir · CIA · DoD',note:'Built Palantir on CIA seed money. Its software runs surveillance and targeting operations in multiple active conflict zones. Founders Fund backs frontier AI labs. The clearest single node where venture capital, surveillance, and military power converge.'},
+  {name:'Sundar Pichai',role:'CEO, Alphabet / Google',type:'CORPORATE',color:'var(--amber)',tag:'Google · DeepMind · Cloud',note:'Controls the world\'s most powerful search index, the dominant mobile OS, and the leading cloud AI infrastructure. Google\'s AI integration is the most pervasive — most people use it daily without knowing it.'},
+  {name:'Satya Nadella',role:'CEO, Microsoft',type:'CORPORATE',color:'var(--amber)',tag:'Microsoft · OpenAI · Azure',note:'Bet $13B on OpenAI and embedded GPT across every Microsoft product. Azure is the infrastructure backbone of the AI economy. The most consequential corporate AI decision of the decade.'},
+  {name:'Jensen Huang',role:'CEO, NVIDIA',type:'CORPORATE',color:'var(--amber)',tag:'NVIDIA · Hardware',note:'Makes the chips everything runs on. Without NVIDIA GPUs there is no modern AI at scale. Export controls on NVIDIA chips are among the sharpest geopolitical AI weapons currently deployed.'},
+  {name:'Yann LeCun',role:'Chief AI Scientist, Meta',type:'CORPORATE',color:'var(--amber)',tag:'Meta · Llama · Open',note:'The loudest credentialed critic of the AGI narrative. Argues current LLMs cannot reason. Pushed Meta toward open-source Llama release — the most consequential open model decision yet made by a major tech company.'},
+  {name:'Geoffrey Hinton',role:'Independent · Former Google',type:'RESISTANCE',color:'var(--green)',tag:'Safety · Warning',note:'Left Google in 2023 to speak freely about AI risk. Called it potentially the most transformative and dangerous technology in human history. Nobel Prize in Physics 2024. The conscience of the field with the most credentials to back it up.'},
+  {name:'Liang Wenfeng',role:'CEO, DeepSeek',type:'STATE',color:'var(--gold)',tag:'China · DeepSeek',note:'Built a frontier model at a fraction of Western cost, released it open-source in January 2025, and sent NVIDIA stock down 17% in a day. Proved that the compute moat is not as wide as assumed.'},
+  {name:'Yoshua Bengio',role:'Researcher · Safety advocate',type:'RESISTANCE',color:'var(--green)',tag:'Safety · Policy',note:'One of three "Godfathers of Deep Learning." Now focused almost entirely on AI safety policy. Testified before governments worldwide. Co-signed the statement that AI extinction risk should be treated with the same seriousness as nuclear war.'},
+];
+
+const peopleGrid = document.getElementById('people-grid');
+PEOPLE.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'person-card';
+  card.innerHTML = `
+    <div class="person-type" style="color:${p.color}">${p.type}</div>
+    <div class="person-name">${p.name}</div>
+    <div class="person-role">${p.role}</div>
+    <span class="person-tag" style="color:${p.color};border-color:${p.color}">${p.tag}</span>
+    <div class="person-note">${p.note}</div>
+  `;
+  peopleGrid.appendChild(card);
+});
+
+// ── GOVERNMENTS DATA ──
+const GOVTS = [
+  {flag:'🇺🇸',name:'United States',stance:'ACCELERATIONIST · MILITARIZING',items:['Executive orders removed Biden-era AI safety guardrails in early 2025','Stargate: $500B infrastructure commitment backed by White House','DOGE given access to federal data systems — training data implications unclear','Export controls on chips as geopolitical weapon','No federal AI regulation passed as of 2026']},
+  {flag:'🇨🇳',name:'China',stance:'STATE-DIRECTED · COMPETING',items:['DeepSeek released open-source frontier model Jan 2025 — shocked Western labs','National AI strategy: full autonomy by 2030','All AI companies required to align with CCP values','Surveillance infrastructure most advanced globally','Chip sanctions accelerating domestic semiconductor push']},
+  {flag:'🇪🇺',name:'European Union',stance:'REGULATORY · RIGHTS-FOCUSED',items:['EU AI Act — first comprehensive AI law globally, in force 2024','Risk-based framework: banned uses, high-risk categories, transparency rules','Fines up to 3% of global revenue for violations','Criticized as stifling innovation; praised as rights protection','Sets global precedent — the Brussels Effect applies here']},
+  {flag:'🇬🇧',name:'United Kingdom',stance:'PRO-INNOVATION · SAFETY HUB',items:['Hosted first global AI Safety Summit at Bletchley Park, 2023','Frontier AI Safety Institute established','Chose not to pass binding regulation — principles-based approach','Positioning as bridge between US and EU approaches','King\'s Speech 2024 included no binding AI bill']},
+  {flag:'🇮🇳',name:'India',stance:'EMERGING · STRATEGIC',items:['1.4B people, growing AI talent pipeline','IndiaAI Mission: $1.2B investment in compute and startups','No binding AI regulation — deliberately open posture','Major outsourcing hub — downstream in global AI labor chain','Deepfake and election interference significant concern 2024']},
+  {flag:'🌍',name:'Global South',stance:'DOWNSTREAM · UNDERREPRESENTED',items:['Data extracted, models trained, benefits concentrated elsewhere','Content moderation outsourced — traumatic labor, low pay','Languages underrepresented in training data','No seat at any major AI governance table','Most exposed to automation displacement, least equipped to respond']},
+];
+
+const govtsGrid = document.getElementById('govts-grid');
+GOVTS.forEach(g => {
+  const card = document.createElement('div');
+  card.className = 'govt-card';
+  card.innerHTML = `
+    <div class="govt-flag">${g.flag}</div>
+    <div class="govt-name">${g.name}</div>
+    <div class="govt-stance" style="color:var(--gold);opacity:0.7">${g.stance}</div>
+    <ul class="govt-items">${g.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+  `;
+  govtsGrid.appendChild(card);
+});
+
+// ── WAVES DATA ──
+const WAVES = [
+  {num:'WAVE 01',title:'The Compute Concentration',color:'var(--amber)',desc:'Three companies — Amazon, Microsoft, Google — control the cloud infrastructure that all frontier AI runs on. NVIDIA makes the chips. This is not a marketplace. It is a tollbooth. Anyone building AI pays rent to this layer or builds their own — which only nation-states and the wealthiest labs can do.',actors:['NVIDIA','AWS','Azure','Google Cloud']},
+  {num:'WAVE 02',title:'The Military Integration',color:'var(--violet)',desc:'AI is now inside active military systems. Palantir\'s software guides targeting decisions. Project Maven — Google\'s military AI contract, canceled after employee protest in 2018 — was just the beginning. The DoD AI budget is classified. What is public is that every frontier lab has at some point held or pursued defense contracts.',actors:['Palantir','DARPA','Project Maven','Anduril','Shield AI']},
+  {num:'WAVE 03',title:'The Regulatory Capture Attempt',color:'var(--red)',desc:'The companies being regulated are writing the regulations. OpenAI, Anthropic, Google, and Microsoft all employ former government officials and dispatch lobbyists to every major regulatory proceeding. The EU AI Act was weakened after industry pressure. The US has passed no binding federal AI law.',actors:['OpenAI Policy','Anthropic Policy','Google DC','Microsoft DC']},
+  {num:'WAVE 04',title:'The Open Source Disruption',color:'var(--teal)',desc:'Meta\'s release of Llama and DeepSeek\'s open-source frontier model broke the assumption that frontier AI required billions in compute. The moat is narrowing. This is genuinely good for access and bad for control — including safety control. The open-source wave is the most unpredictable variable in the system.',actors:['Meta Llama','DeepSeek','Mistral','Hugging Face','EleutherAI']},
+  {num:'WAVE 05',title:'The Labor Displacement Horizon',color:'var(--green)',desc:'White-collar automation is not coming. It is here. Legal research, medical imaging analysis, code generation, customer service, financial analysis — all materially affected in 2025-2026. The productivity gains are real. So is the displacement. The social infrastructure to absorb it does not exist.',actors:['Every sector','No exceptions','No timeline','No safety net']},
+];
+
+const wavesList = document.getElementById('waves-list');
+WAVES.forEach(w => {
+  const el = document.createElement('div');
+  el.className = 'wave';
+  el.style.setProperty('--c', w.color);
+  el.innerHTML = `
+    <div class="wave-num">${w.num}</div>
+    <div class="wave-title">${w.title}</div>
+    <div class="wave-desc">${w.desc}</div>
+    <div class="wave-actors">${w.actors.map(a=>`<span class="wave-actor">${a}</span>`).join('')}</div>
+  `;
+  wavesList.appendChild(el);
+});
+
+// ── TRUTH LAYER DATA ──
+const TRUTHS = [
+  {q:'They say: "We\'re building this for the benefit of humanity."',a:'<strong>What is actually happening:</strong> The five largest AI companies added over $3 trillion in market capitalization in 2024. The benefits are being captured by shareholders and insiders. The costs — displacement, surveillance, environmental, psychological — are being externalized to everyone else.'},
+  {q:'They say: "We take safety seriously."',a:'<strong>What is actually happening:</strong> Every major lab has reduced or restructured its safety team under competitive pressure. OpenAI\'s superalignment team dissolved. Anthropic publishes the most rigorous safety research and is simultaneously racing to deploy. The incentives and the rhetoric point in opposite directions.'},
+  {q:'They say: "Open source democratizes AI."',a:'<strong>What is actually happening:</strong> Open models lower the barrier for both good and catastrophic use. Bioweapon synthesis guidance, nonconsensual image generation, and targeted disinformation all became meaningfully easier when frontier capabilities became open. Democratization is real. So are the consequences.'},
+  {q:'They say: "AI will create more jobs than it destroys."',a:'<strong>What is actually happening:</strong> This is historically contested and currently unknown. The agricultural and industrial revolutions eventually produced more jobs — over generations. The transition periods involved significant human suffering that was not distributed equally. "Eventually" is doing a lot of work in that sentence.'},
+  {q:'They say: "Government regulation will stifle innovation."',a:'<strong>What is actually happening:</strong> The companies saying this are the same ones writing model cards, safety reports, and policy papers that position them as the responsible actors. Regulation they write themselves is not the same as regulation. The EU AI Act is the only binding law. Every major lab has a Brussels office.'},
+  {q:'They say: "We need to move fast to stay ahead of China."',a:'<strong>What is actually happening:</strong> The geopolitical framing is being used to justify the removal of safety guardrails, the acceleration of military AI integration, and the defunding of oversight. DeepSeek proved China can match Western capabilities at a fraction of the cost. The race framing benefits the labs more than the public.'},
+];
+
+const truthList = document.getElementById('truth-list');
+TRUTHS.forEach(t => {
+  const el = document.createElement('div');
+  el.className = 'truth-item';
+  el.innerHTML = `<div class="truth-q">${t.q}</div><div class="truth-a">${t.a}</div>`;
+  truthList.appendChild(el);
+});
+</script>
+</body>
+</html>
