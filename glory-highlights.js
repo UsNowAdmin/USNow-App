@@ -12,6 +12,8 @@ function applyGlories(root){
       const tag = p.tagName;
       if(['SCRIPT','STYLE','A','BUTTON','INPUT'].includes(tag)) return NodeFilter.FILTER_REJECT;
       if(p.classList&&p.classList.contains('glory-word')) return NodeFilter.FILTER_REJECT;
+      if(p.classList&&p.classList.contains('modal-canonical')) return NodeFilter.FILTER_REJECT;
+      if(p.closest&&p.closest('.modal-canonical')) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     }
   });
