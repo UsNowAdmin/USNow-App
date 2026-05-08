@@ -16,7 +16,7 @@
 
 ## About This Index
 
-USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. Organized as two 
+USNow is a dynamic public knowledge platform. No sponsors. No algorithm. No agenda. Currently organized as two 
 interfaces into one dataset.
 
 **The Scales of Being** (usnow.app) organizes knowledge by proximity to the human experience across time.
