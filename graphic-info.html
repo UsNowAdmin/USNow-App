@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Graphic Images — USNow</title>
+<title>UsNow.app — Graphic Images</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -107,7 +107,8 @@ const TOP_PILLS=[
   {label:"Power & Money",color:"#1a5a8a",delay:0},
   {label:"Military & War",color:"#4a3a8a",delay:0.1},
   {label:"Policy & Aid",color:"#1a6a5a",delay:0.2},
-  {label:"Coming Soon",color:"#1a2a3a",sub:"COMING SOON",delay:0.3},
+  {label:"AI & Tech",color:"#2a1a6a",delay:0.3},
+  {label:"Coming Soon",color:"#1a2a3a",sub:"COMING SOON",delay:0.4},
 ];
 const topEl=document.getElementById('top-pills');
 TOP_PILLS.forEach(p=>buildPill(p,topEl));
@@ -118,8 +119,9 @@ const INFOGRAPHICS=[
   {name:"Hidden Costs\nof Defense",desc:"$886B · what it could buy",url:"https://www.usnow.app/graphics/hidden-costs",color:"#1a4a7a",size:112,delay:0.2},
   {name:"Israel Aid\nTimeline",desc:"$330B since 1948 · 55 years",url:"https://www.usnow.app/graphics/israel-aid-timeline",color:"#1a3a6a",size:104,delay:0.3},
   {name:"750 Bases\nWorldwide",desc:"80 countries · mapped",url:"https://www.usnow.app/graphics/750-bases",color:"#1a4a8a",size:110,delay:0.4},
-  {name:"Coming\nSoon",desc:"Federal budget · deep dive",url:null,color:"#0e2030",size:82,delay:0.5,soon:true},
-  {name:"Coming\nSoon",desc:"AI & democracy · data",url:null,color:"#0e2030",size:74,delay:0.6,soon:true},
+  {name:"AI: The\nPowers That Be",desc:"Who owns it · who controls it",url:"https://www.usnow.app/graphics/aipower/index.html",color:"#2a1a6a",size:112,delay:0.5},
+  {name:"Coming\nSoon",desc:"Federal budget · deep dive",url:null,color:"#0e2030",size:82,delay:0.6,soon:true},
+  {name:"Coming\nSoon",desc:"AI & democracy · data",url:null,color:"#0e2030",size:74,delay:0.7,soon:true},
 ];
 
 const field=document.getElementById('orbs-field');
@@ -140,7 +142,6 @@ INFOGRAPHICS.forEach(g=>{
   wrap.appendChild(sphere);wrap.appendChild(nameEl);wrap.appendChild(descEl);field.appendChild(wrap);
 });
 
-// BOTTOM PILLS — ready for future content
 const BOTTOM_PILLS=[];
 </script>
 </body>
