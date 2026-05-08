@@ -172,7 +172,7 @@ The technology is not the problem. What it is pointed at is.
 - The Log: https://usnow.app/log.html
 - Who Rules the World: https://usnow.app/rules
 - AI Power Map: https://usnow.app/aipower
-- Graphic Info Hub: https://usnow.app/graphic-info.html
+- Graphic Images Hub: https://usnow.app/graphic-info.html
 - The Gallery: https://usnow.app/gallery.html
 - USNow Journal: https://usnow.app/journal.html
 - ATJon on Substack: https://atjon.substack.com
@@ -181,8 +181,6 @@ The technology is not the problem. What it is pointed at is.
 ## Publisher
 
 Built and maintained by Jonathan Tatun (ATJon27). © 2026 USNow.app. All reservable rights reserved.
-Published by UsNow.app under the principle that an informed public is the only
-durable defense against the erosion of democratic institutions.
 
 ## Contact
 Contact: usnow.app@gmail.com
