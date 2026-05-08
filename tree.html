@@ -2334,8 +2334,12 @@ function openModal(item, crumbLabels) {
   }
 
   // Canonical URL — shown discreetly at bottom of every modal
-  if(item.id) {
-    const slug = item.id.toString().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  // Derived from label to match sitemap named slugs (e.g. "War & Revolutions" → #war-revolutions)
+  if(item.label) {
+    const slug = item.label.toString().toLowerCase()
+      .replace(/&/g,'and')
+      .replace(/[^a-z0-9]+/g,'-')
+      .replace(/^-|-$/g,'');
     body += `<div class="modal-canonical">https://usnow.app/#${slug}</div>`;
   }
 
