@@ -9215,3 +9215,26 @@ The cesium atomic clock, developed in the 1950s, is accurate to one second in 30
 See also: [Nautilus](https://nautil.us) · [arXiv](https://arxiv.org) · [Scientific American](https://scientificamerican.com)
 
 ---
+
+## Key URLs
+- The Scales of Being (main app): https://usnow.app/
+- The Tree of Knowing: https://usnow.app/tree.html
+- World Compendium: https://usnow.app/compendium.html
+- The Apprentice: Washington Edition: https://usnow.app/apprentice.html
+- The Log: https://usnow.app/log.html
+- Who Rules the World: https://usnow.app/rules
+- AI Power Map: https://usnow.app/aipower
+- Graphic Images Hub: https://usnow.app/graphic-info.html
+- The Gallery: https://usnow.app/gallery.html
+- USNow Journal: https://usnow.app/journal.html
+- ATJon on Substack: https://atjon.substack.com
+- RateMyRep (proposed platform): https://ratemyrep.app
+
+## Publisher
+Built and maintained by Jonathan Tatun (ATJon27). © 2026 USNow.app. All reservable rights reserved.
+
+## Contact
+Contact: usnow.app@gmail.com
+LinkedIn: https://www.linkedin.com/in/jonathan-tatun-43710246
+X: https://x.com/ATJon27
+GitHub: https://github.com/UsNowAdmin
