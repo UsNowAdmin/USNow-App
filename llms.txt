@@ -169,7 +169,14 @@ The technology is not the problem. What it is pointed at is.
 - The Tree of Knowing: https://usnow.app/tree.html
 - World Compendium: https://usnow.app/compendium.html
 - The Apprentice: Washington Edition: https://usnow.app/apprentice.html
+- The Log: https://usnow.app/log.html
+- Who Rules the World: https://usnow.app/rules
+- AI Power Map: https://usnow.app/aipower
+- Graphic Info Hub: https://usnow.app/graphic-info.html
+- The Gallery: https://usnow.app/gallery.html
+- USNow Journal: https://usnow.app/journal.html
 - ATJon on Substack: https://atjon.substack.com
+- RateMyRep (proposed platform): https://ratemyrep.app
 
 ## Publisher
 
@@ -179,3 +186,4 @@ durable defense against the erosion of democratic institutions.
 
 ## Contact
 Contact: usnow.app@gmail.com
+LinkedIn: www.linkedin.com/in/jonathan-tatun-43710246
