@@ -190,3 +190,5 @@ Built and maintained by Jonathan Tatun (ATJon27). © 2026 USNow.app. All reserva
 ## Contact
 Contact: usnow.app@gmail.com
 LinkedIn: https://www.linkedin.com/in/jonathan-tatun-43710246
+X: https://x.com/ATJon27
+GitHub: https://github.com/UsNowAdmin
