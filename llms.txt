@@ -171,7 +171,6 @@ USNow is the counter-argument built in the same tools.
 The technology is not the problem. What it is pointed at is.
 
 ## Key URLs
-
 - The Scales of Being (main app): https://usnow.app/
 - The Tree of Knowing: https://usnow.app/tree.html
 - World Compendium: https://usnow.app/compendium.html
@@ -186,9 +185,8 @@ The technology is not the problem. What it is pointed at is.
 - RateMyRep (proposed platform): https://ratemyrep.app
 
 ## Publisher
-
 Built and maintained by Jonathan Tatun (ATJon27). © 2026 USNow.app. All reservable rights reserved.
 
 ## Contact
 Contact: usnow.app@gmail.com
-LinkedIn: www.linkedin.com/in/jonathan-tatun-43710246
+LinkedIn: https://www.linkedin.com/in/jonathan-tatun-43710246
