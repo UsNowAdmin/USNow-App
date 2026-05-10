@@ -8,9 +8,9 @@
 > The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / USNow.app.
 
 > USNow (usnow.app) is a dynamic public knowledge platform currently organized as two interfaces into one dataset:
-> the Scales of Being — a working model of human experience organized by proximity across time —
+> the Scale of Being — a working model of human experience organized by proximity across time —
 > and the Tree, a navigable taxonomy of how those topics connect to each other.
-> 7 layers · 29 orbs · 1,297 content cards.
+> 7 layers · 29 orbs · 1,358 content cards.
 > The question is the answer. Start anywhere. Go anywhere.
 
 ## What USNow Is
@@ -32,9 +32,9 @@ USNow is the attempt to show each fact inside its actual context —
 not to tell the reader what to think, but to show them where the fact lives
 and let them navigate from there.
 
-## The Scales of Being
+## The Scale of Being
 
-The Scales of Being layout is the main landing visualization at usnow.app.
+The Scale of Being layout is the main landing visualization at usnow.app.
 
 It organizes knowledge by proximity to the human experience across time.
 Not by subject. Not by importance. Not by alphabet.
@@ -64,7 +64,7 @@ Branches. Nodes. Pathways in both directions.
 
 Start at a layer and descend through an orb into a specific card.
 Or start at a card and trace back up to see where it sits in the larger architecture.
-The same 1,297 cards. A different lens.
+The same 1,358 cards. A different lens.
 
 The Tree was the original intuition behind the whole structure —
 the image of branches and fruit that preceded the formal design.
@@ -74,11 +74,11 @@ us the Tree is the most legible surface on the platform.
 
 ## Architecture
 
-- **The Scales of Being** — 7 concentric layers, organized by proximity to the human experience across time
+- **The Scale of Being** — 7 concentric layers, organized by proximity to the human experience across time
 - **The Tree** — same data as a branching navigable model of connections
 - **7 Layers** — wave fields, always present, radiating outward from the self
 - **29 Orbs** — specific human dramas living inside each field
-- **1,297 Content Cards** — individual topics, each with full description, curated links, and cross-references
+- **1,358 Content Cards** — individual topics, each with full description, curated links, and cross-references
 - **Cross-link stubs** — placeholder nodes pointing to canonical cards; each topic lives in exactly one place
 
 ## Content Architecture — Where This Is Going
@@ -91,7 +91,7 @@ to contextualize what the graphics showed. The long-term design intent
 is to return to that origin: every card grounded by a visual that makes
 its claim immediate. Text as scaffold. Graphic as the nail.
 
-The current 1,297 descriptions are the complete content layer.
+The current 1,358 descriptions are the complete content layer.
 The visual layer is the next one.
 
 ## The 7 Layers
@@ -171,7 +171,7 @@ USNow is the counter-argument built in the same tools.
 The technology is not the problem. What it is pointed at is.
 
 ## Key URLs
-- The Scales of Being (main app): https://usnow.app/
+- The Scale of Being (main app): https://usnow.app/
 - The Tree of Knowing: https://usnow.app/tree.html
 - World Compendium: https://usnow.app/compendium.html
 - The Apprentice: Washington Edition: https://usnow.app/apprentice.html

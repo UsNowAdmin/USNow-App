@@ -10,7 +10,7 @@
 # USNow — Full Content Index
 
 > Complete machine-readable content index for USNow (usnow.app).
-> 7 layers · 29 orbs · 1,297 content cards.
+> 7 layers · 29 orbs · 1,358 content cards.
 > Each entry includes: ID, breadcrumb path, and full description.
 > Cross-link stubs (no description) are omitted — canonical cards only.
 
@@ -19,7 +19,7 @@
 USNow is a dynamic public knowledge platform. No sponsors. No algorithm. No agenda. Currently organized as two 
 interfaces into one dataset.
 
-**The Scales of Being** (usnow.app) organizes knowledge by proximity to the human experience across time.
+**The Scale of Being** (usnow.app) organizes knowledge by proximity to the human experience across time.
 Not by subject, importance, or alphabet — by how close this is to the life you are living right now.
 What touches you. What touches all of us living. What touches all of our ancestors and everyone
 who comes after. The self sits at the center not because it matters most, but because it is the
@@ -32,7 +32,7 @@ legible surface on the platform.
 
 USNow began as a single infographic about government spending. One number needed context.
 That context needed a frame. The frame needed a structure. The structure became the Scales.
-The Scales layout became the Tree. Every card in this index is a node in that expansion —
+The Scale layout became the Tree. Every card in this index is a node in that expansion —
 each one designed to eventually carry a visual anchor that makes its claim immediate.
 Text as scaffold. Graphic as the nail. The visual layer is the next one.
 
@@ -9219,7 +9219,7 @@ See also: [Nautilus](https://nautil.us) · [arXiv](https://arxiv.org) · [Scient
 ---
 
 ## Key URLs
-- The Scales of Being (main app): https://usnow.app/
+- The Scale of Being (main app): https://usnow.app/
 - The Tree of Knowing: https://usnow.app/tree.html
 - World Compendium: https://usnow.app/compendium.html
 - The Apprentice: Washington Edition: https://usnow.app/apprentice.html

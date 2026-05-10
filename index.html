@@ -155,21 +155,71 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   "@graph": [
     {
       "@type": "WebSite",
-      "name": "USNow.app",
-      "url": "https://usnow.app",
-      "description": "An interactive public and cultural knowledge platform — a model of everything that touches our lives, organized from the inside out across 7 layers of scale.",
-      "author": {
-        "@type": "Person",
-        "name": "Jonathan Tatun",
-        "url": "https://atjon.substack.com"
-      },
-      "keywords": "civic knowledge, democracy, history, culture, consciousness, power, politics, civilization, science, religion, mythology, economics"
+      "@id": "https://usnow.app/#website",
+      "name": "USNow",
+      "alternateName": "USNow.app",
+      "url": "https://usnow.app/",
+      "description": "A public knowledge platform organizing human experience across seven layers, from Self to Cosmos. 7 layers, 29 orbs, 1,358 content cards. No sponsors, no algorithm, no agenda.",
+      "inLanguage": "en-US",
+      "keywords": "civic knowledge, democracy, history, culture, consciousness, power, politics, civilization, science, religion, mythology, economics",
+      "author": { "@id": "https://usnow.app/#publisher" },
+      "publisher": { "@id": "https://usnow.app/#publisher" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://usnow.app/#publisher",
+      "name": "Jonathan Tatun",
+      "alternateName": "ATJon27",
+      "url": "https://usnow.app/",
+      "sameAs": [
+        "https://atjon.substack.com",
+        "https://x.com/ATJon27",
+        "https://github.com/UsNowAdmin",
+        "https://www.linkedin.com/in/jonathan-tatun-43710246"
+      ],
+      "email": "usnow.app@gmail.com"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://usnow.app/#dataset",
+      "name": "USNow Knowledge Architecture",
+      "description": "A structured taxonomy of 1,358 content cards organized into 29 orbs across 7 concentric layers, mapped both as the Layers of Being (proximity model) and the Tree of Knowing (connection model).",
+      "url": "https://usnow.app/",
+      "creator": { "@id": "https://usnow.app/#publisher" },
+      "isAccessibleForFree": true,
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://usnow.app/llms-full.txt"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://usnow.app/llms.txt"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://usnow.app/tree.html#tree",
+      "name": "The Tree of Knowing",
+      "url": "https://usnow.app/tree.html",
+      "description": "A navigable model of the USNow dataset organized as branches and nodes. Where the Layers of Being shows proximity to the self, the Tree shows how topics connect to each other. The primary search and research interface for the platform.",
+      "isPartOf": { "@id": "https://usnow.app/#website" },
+      "about": { "@id": "https://usnow.app/#layers" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://usnow.app/tree.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "DefinedTermSet",
-      "name": "The World Compendium",
-      "url": "https://usnow.app",
-      "description": "Seven layers of human experience — from individual consciousness to deep time — organized as an interactive knowledge map.",
+      "@id": "https://usnow.app/#layers",
+      "name": "The Layers of Being",
+      "url": "https://usnow.app/",
+      "description": "Seven layers organizing human experience by proximity to the self across time — from individual consciousness to deep time. The taxonomy underlying USNow.",
       "hasDefinedTerm": [
         { "@type": "DefinedTerm", "name": "Me, Myself & I", "url": "https://usnow.app/#me-myself-and-i", "description": "The self as observer and observed. The most immediate layer — where everything else arrives." },
         { "@type": "DefinedTerm", "name": "Origins", "url": "https://usnow.app/#origins", "description": "Genetics, family, class, race and ethnicity — the forces that shaped you before you had a say." },
