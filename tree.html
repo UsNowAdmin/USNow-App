@@ -2561,6 +2561,13 @@ function initSearch() {
 
     screen.style.display = 'flex';
   }
+  // ── URL PARAMETER SEARCH ─────────────────────────
+const urlQ = new URLSearchParams(window.location.search).get('q');
+if (urlQ && urlQ.trim().length >= 3) {
+  input.value = urlQ.trim();
+  clearBtn.classList.add('visible');
+  runSearch(urlQ.trim());
+}
 }
 
 window.addEventListener('resize', () => {
