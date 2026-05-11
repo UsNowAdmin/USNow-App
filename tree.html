@@ -938,7 +938,13 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
    ===================================================== */
 
 const W = () => window.innerWidth;
-const H = () => window.innerHeight;
+const H = () => {
+  if(window.innerHeight < window.innerWidth) {
+    const scene = document.getElementById('scene');
+    if(scene) return Math.max(scene.offsetHeight, window.innerWidth + 58);
+  }
+  return window.innerHeight;
+};
 
 // ── SPHERE RENDERING (from live site) ─────────────
 
