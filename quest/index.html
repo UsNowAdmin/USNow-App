@@ -1,1005 +1,1491 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>USNow — The Question is the Answer.</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" type="image/png" href="/icon.png">
-<link rel="apple-touch-icon" href="/icon.png">
-<link rel="stylesheet" href="index.css">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="USNow">
-<meta name="theme-color" content="#04080f">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
+<title>The Great Easter Quest of 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',serif;min-height:100vh;}
-::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-track{background:#040810}
-::-webkit-scrollbar-thumb{background:#1e2a38;border-radius:2px}
-*{scrollbar-width:thin;scrollbar-color:#1e2a38 #040810;}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes tw{0%,100%{opacity:0.03}50%{opacity:0.4}}
-@keyframes orbf{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-4px)}}
-@keyframes pulseCore{0%,100%{filter:drop-shadow(0 0 18px rgba(212,168,85,0.7)) drop-shadow(0 0 50px rgba(212,168,85,0.3))}50%{filter:drop-shadow(0 0 32px rgba(212,168,85,1)) drop-shadow(0 0 80px rgba(212,168,85,0.55))}}
-@keyframes coreRipple{0%{transform:translate(-50%,-50%) scale(1);opacity:0.65}100%{transform:translate(-50%,-50%) scale(2.8);opacity:0}}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
-@keyframes pulseCorrupt{0%,100%{box-shadow:0 0 18px #d4621a99,0 0 40px #d4621a44,inset 0 0 12px rgba(255,255,255,0.1)}50%{box-shadow:0 0 36px #d4621aee,0 0 80px #d4621a88,0 0 120px #d4621a33,inset 0 0 20px rgba(255,255,255,0.18)}}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes blink{0%,100%{opacity:0.85}50%{opacity:0.2}}
-@keyframes navFrame1{0%,28%{opacity:1}34%,94%{opacity:0}100%{opacity:1}}
-@keyframes navFrame2{0%,32%{opacity:0}38%,60%{opacity:1}66%,100%{opacity:0}}
-@keyframes navFrame3{0%,62%{opacity:0}68%,92%{opacity:1}98%,100%{opacity:0}}
-@keyframes navSignPulse{0%,100%{box-shadow:0 0 6px rgba(201,168,76,0.12)}50%{box-shadow:0 0 14px rgba(201,168,76,0.32),0 0 28px rgba(201,168,76,0.1)}}
-@keyframes ember{0%,100%{box-shadow:0 0 10px var(--fg,#9b2d2044),0 0 22px var(--fg,#9b2d2022),inset 0 0 8px rgba(255,140,60,0.04)}50%{box-shadow:0 0 22px var(--fg,#9b2d2077),0 0 44px var(--fg,#9b2d2033),inset 0 0 14px rgba(255,140,60,0.08)}}
-#ticker{position:fixed;top:0;left:0;right:0;z-index:600;background:#030609;border-bottom:1px solid rgba(122,96,48,0.44);overflow:hidden;height:30px;display:flex;align-items:center;}
-#ticker-inner{display:flex;gap:56px;animation:ticker 72s linear infinite;white-space:nowrap;}#ticker-inner span{text-transform:uppercase;}
-#ticker-inner span{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;opacity:0.75;}
-nav{position:fixed;top:30px;left:0;right:0;z-index:500;background:rgba(4,8,15,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(122,96,48,0.33);display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:44px;}
-.nav-logo{display:flex;align-items:center;gap:8px;}
-.nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
-.nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.85;}
-.nav-links{display:flex;gap:16px;align-items:center;}
-.nav-links a{font-size:9px;letter-spacing:0.22em;color:#8aa0b8;font-family:'Courier New',monospace;text-decoration:none;opacity:0.9;transition:all 0.2s;}
-.nav-links a:hover{color:#c9a84c;opacity:1;}
-.nav-cta{font-size:9px;letter-spacing:0.15em;color:#04080f!important;background:#c9a84c;padding:5px 12px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;opacity:1!important;}
-.nav-cta:hover{background:#e0b860!important;}
-#scale{position:relative;width:100%;height:100svh;min-height:580px;overflow:hidden;background:#04080f;cursor:default;}
-#scale-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;}
-.star{position:absolute;border-radius:50%;background:white;}
-.layer-band{position:absolute;left:0;right:0;cursor:pointer;}
-.layer-band:hover{filter:brightness(1.3);}
-.layer-label-wrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:25;}
-.layer-main-label{font-weight:700;letter-spacing:0.3em;font-family:'Courier New',monospace;white-space:nowrap;transition:text-shadow 0.2s;}
-.layer-sub-label{display:none;}
-.layer-band:hover .layer-main-label{color:#ffffff!important;text-shadow:0 0 28px rgba(255,255,255,0.55),0 0 60px rgba(255,255,255,0.18),0 2px 8px rgba(0,0,0,0.9)!important;letter-spacing:0.38em!important;}
-.layer-band:hover .layer-label-wrap{z-index:100;}
-.orb-node{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);z-index:20;transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;}
-.orb-node:hover{animation-play-state:paused;}
-.orb-label{color:#ffffff;font-family:'Georgia','Times New Roman',serif;font-weight:400;letter-spacing:0.01em;text-align:center;line-height:1.2;padding:3px;pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,1),0 0 12px rgba(0,0,0,0.95),0 2px 4px rgba(0,0,0,1);}
-#core-wrap{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:300;display:flex;flex-direction:column;align-items:center;gap:4px;overflow:visible;pointer-events:none;}
-#core-orbs{position:relative;width:210px;height:62px;pointer-events:none;}
-.core-satellite{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);transition:transform 0.18s,box-shadow 0.18s;z-index:299;pointer-events:all;}
-.core-satellite:hover{transform:translate(-50%,-50%) scale(1.15)!important;}
-#core-btn{width:106px;height:106px;border-radius:50%;background:radial-gradient(circle at 37% 32%,#f8e8b0 0%,#d4a855 35%,#8a6020 65%,#3a2408 90%);border:2px solid rgba(240,210,130,0.78);animation:pulseCore 3.5s ease-in-out infinite;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform 0.2s;user-select:none;position:relative;pointer-events:all;}
-#core-btn::before,#core-btn::after{content:'';position:absolute;top:50%;left:50%;width:100%;height:100%;border-radius:50%;border:1.5px solid rgba(212,168,85,0.5);animation:coreRipple 2.8s ease-out infinite;pointer-events:none;}
-#core-btn::after{animation-delay:1.4s;border-color:rgba(212,168,85,0.28);}
-#core-btn:hover{transform:scale(1.06);}
-#core-btn div{font-size:10px;font-weight:700;letter-spacing:0.22em;color:#1a0e02;font-family:'Courier New',monospace;line-height:1.4;text-align:center;}
-#scroll-hint{position:absolute;bottom:118px;left:50%;transform:translateX(-50%);z-index:301;text-align:center;pointer-events:none;}
-#scroll-hint div:first-child{font-size:8px;letter-spacing:0.22em;color:rgba(201,168,76,0.45);font-family:'Courier New',monospace;margin-bottom:5px;}
-#scroll-hint .arrow{font-size:14px;color:rgba(201,168,76,0.3);animation:bounce 2.1s ease-in-out infinite;}
-/* Foundation half-moons */
-.foundation-moon{position:absolute;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:298;transition:transform 0.22s ease,box-shadow 0.22s ease;text-decoration:none;animation:pulseFoundation 3.8s ease-in-out infinite;pointer-events:all;}
-.foundation-moon:hover{transform:translateY(-6px) scale(1.08);}
-.foundation-moon span{font-size:9.5px;font-weight:700;letter-spacing:0.04em;color:#3a1e08;font-family:'Georgia','Times New Roman',serif;text-align:center;line-height:1.3;pointer-events:none;text-shadow:0 -1px 1px rgba(255,255,255,0.45),0 1px 0 rgba(0,0,0,0.4),0 2px 6px rgba(255,180,60,0.55),0 0 12px rgba(255,150,40,0.3),0 0 22px rgba(201,168,76,0.18);position:absolute;top:7px;left:50%;transform:translateX(-50%);white-space:nowrap;}
-#hero{background:#04080f;padding:18px 24px 52px;border-top:1px solid rgba(122,96,48,0.13);}
-#hero .inner{max-width:680px;margin:0 auto;text-align:center;}
-.hero-tap-hint{font-size:8px;letter-spacing:0.28em;color:rgba(201,168,76,0.55);font-family:'Courier New',monospace;margin-bottom:18px;}
-.hero-eyebrow{font-size:10px;letter-spacing:0.5em;color:#9a7840;font-family:'Courier New',monospace;margin-bottom:24px;}
-.hero-h1{font-size:clamp(28px,5vw,50px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.28;margin:0 0 30px;letter-spacing:0.02em;}
-.hero-h1 em{color:#c9a84c;font-style:normal;}
-.hero-items{display:flex;flex-direction:column;gap:14px;text-align:left;max-width:540px;margin:0 auto 32px;}
-.hero-item{display:flex;gap:13px;align-items:flex-start;}
-.hero-rule{width:1px;background:rgba(122,96,48,0.35);align-self:stretch;flex-shrink:0;margin-top:5px;}
-.hero-item p{font-size:15px;line-height:1.78;color:#8898b0;font-family:'Georgia',serif;margin:0;}
-.hero-item strong{color:#f0ece4;font-weight:400;}
-.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-.btn-gold{font-size:9px;letter-spacing:0.22em;color:#04080f;background:#c9a84c;padding:11px 24px;border-radius:24px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;}
-.btn-gold:hover{background:#e0b860;}
-.btn-outline{font-size:9px;letter-spacing:0.22em;color:#c9a84c;border:1px solid rgba(122,96,48,0.4);padding:11px 24px;border-radius:24px;font-family:'Courier New',monospace;text-decoration:none;}
-.btn-outline:hover{border-color:#c9a84c;}
-#journal{background:#050a14;padding:68px 24px;border-top:1px solid rgba(122,96,48,0.13);}
-#journal .inner{max-width:740px;margin:0 auto;}
-.section-eyebrow{font-size:10px;letter-spacing:0.45em;color:#9a7840;font-family:'Courier New',monospace;margin-bottom:32px;text-align:center;}
-.journal-card{border:1px solid rgba(122,96,48,0.4);border-radius:14px;overflow:hidden;background:linear-gradient(155deg,#13100a 0%,rgba(9,7,4,0) 100%);transition:all 0.25s;text-decoration:none;display:block;}
-.journal-card:hover{border-color:#c9a84c;box-shadow:0 0 40px rgba(122,96,48,0.27);}
-.journal-card-body{padding:30px 26px 20px;border-bottom:1px solid rgba(122,96,48,0.2);}
-.journal-tag{font-size:9px;letter-spacing:0.35em;color:#c9a84c;font-family:'Courier New',monospace;margin-bottom:12px;opacity:0.8;}
-.journal-title{font-size:clamp(20px,3.5vw,34px);font-weight:300;color:#e8d49a;font-family:'Georgia',serif;margin:0 0 10px;letter-spacing:0.03em;line-height:1.28;}
-.journal-sub{font-size:12px;color:rgba(201,168,76,0.65);font-family:'Courier New',monospace;letter-spacing:0.08em;margin:0 0 6px;line-height:1.6;}
-.journal-desc{font-size:13px;color:#6a7888;font-family:'Georgia',serif;margin:0;line-height:1.65;}
-.journal-footer{padding:14px 26px;display:flex;justify-content:space-between;align-items:center;}
-.journal-footer span:first-child{font-size:11px;color:#6a7888;font-family:'Georgia',serif;font-style:italic;}
-.journal-footer span:last-child{font-size:9px;color:#c9a84c;font-family:'Courier New',monospace;letter-spacing:0.2em;}
-.journal-more{margin-top:18px;text-align:center;}
-.journal-more a{font-size:9px;letter-spacing:0.2em;color:#6a7888;font-family:'Courier New',monospace;text-decoration:none;transition:color 0.2s;}
-.journal-more a:hover{color:#8aa0b8;}
-#data{background:#020508;padding:68px 24px;border-top:1px solid rgba(122,96,48,0.13);}
-#data .inner{max-width:880px;margin:0 auto;}
-.data-header{text-align:center;margin-bottom:40px;}
-.data-h2{font-size:clamp(20px,3.5vw,34px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;margin:0;letter-spacing:0.03em;}
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:rgba(122,96,48,0.13);}
-.stat-card{display:block;padding:24px 20px;background:#070c16;text-decoration:none;transition:background 0.2s;}
-.stat-card:hover{background:#0d1624;}
-.stat-num{font-size:clamp(22px,3vw,34px);font-weight:700;color:#c9a84c;font-family:'Courier New',monospace;margin-bottom:7px;}
-.stat-label{font-size:13px;color:#f0ece4;font-family:'Georgia',serif;margin-bottom:5px;}
-.stat-sub{font-size:10px;color:#6a7888;font-family:'Courier New',monospace;letter-spacing:0.04em;line-height:1.5;}
-.data-links{margin-top:26px;display:flex;gap:9px;flex-wrap:wrap;justify-content:center;}
-.data-pill{font-size:9px;letter-spacing:0.15em;color:#8aa0b8;border:1px solid #3a4a5a;padding:8px 16px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;transition:all 0.2s;}
-.data-pill:hover{color:#c9a84c;border-color:#7a6030;}
-#sources{background:#04080f;padding:68px 24px 52px;border-top:1px solid rgba(122,96,48,0.2);}
-#sources .inner{max-width:840px;margin:0 auto;}
-.sources-intro{text-align:center;margin-bottom:32px;}
-.sources-intro p{font-size:13px;color:#6a7888;font-family:'Georgia',serif;margin:0;line-height:1.7;}
-.sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:1px;background:rgba(58,74,90,0.2);}
-.source-item{display:flex;align-items:center;gap:10px;padding:14px 15px;background:#060b18;text-decoration:none;transition:background 0.2s;}
-.source-item:hover{background:#0a1220;}
-.source-emoji{font-size:16px;}
-.source-name{font-size:11px;color:#f0ece4;font-family:'Georgia',serif;}
-.source-tag{font-size:8px;color:#5a6a7a;font-family:'Courier New',monospace;letter-spacing:0.16em;}
-footer{background:#020508;padding:32px 22px;border-top:1px solid rgba(58,74,90,0.25);}
-footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-@media(max-width:560px){.nav-links a{display:none;}.layer-main-label{letter-spacing:0.15em!important;}.nav-fields{display:none!important;}}
+  :root {
+    --parchment: #f8f0d8;
+    --parchment-mid: #f0e4c0;
+    --parchment-dark: #e2d0a0;
+    --ink: #1c1208;
+    --ink-mid: #3a2a10;
+    --ink-light: #6b5030;
+    --red: #7a1515;
+    --gold: #9a7208;
+    --gold-light: #c8960a;
+    --rule: #b09050;
+  }
+ 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+  body {
+    background: #1a1008;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 16px 50px;
+    font-family: 'Courier Prime', monospace;
+    background-image:
+      radial-gradient(ellipse at 30% 20%, rgba(80,40,5,0.6) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 80%, rgba(50,20,0,0.5) 0%, transparent 50%);
+  }
+ 
+  /* ── progress bar ── */
+  .progress-wrap {
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .progress-label {
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    min-width: 90px;
+  }
+  .progress-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+ 
+  /* ── document ── */
+  .doc {
+    background: var(--parchment);
+    width: 100%;
+    max-width: 720px;
+    padding: 52px 60px 48px;
+    position: relative;
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,0.25),
+      3px 3px 0 rgba(0,0,0,0.12),
+      7px 7px 0 rgba(0,0,0,0.07),
+      0 24px 60px rgba(0,0,0,0.55);
+    display: none;
+    animation: pageIn 0.35s ease;
+  }
+  .doc.active { display: block; }
+ 
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+ 
+  /* subtle vignette on pages */
+  .doc::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right,  rgba(0,0,0,0.035) 0%, transparent 5%),
+      linear-gradient(to left,   rgba(0,0,0,0.035) 0%, transparent 5%),
+      linear-gradient(to bottom, rgba(0,0,0,0.025) 0%, transparent 6%),
+      linear-gradient(to top,    rgba(0,0,0,0.045) 0%, transparent 8%);
+    pointer-events: none;
+  }
+ 
+  /* ── nav ── */
+  .nav {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    gap: 12px;
+  }
+  .btn {
+    font-family: 'Courier Prime', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 11px 28px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold-light);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn:hover { background: var(--gold); color: #1a1008; }
+  .btn:disabled { opacity: 0.2; cursor: default; }
+  .btn:disabled:hover { background: transparent; color: var(--gold-light); }
+  .btn-continue {
+    background: var(--gold);
+    color: #1a1008;
+  }
+  .btn-continue:hover { background: var(--gold-light); }
+  .btn-skip {
+    font-size: 11px;
+    padding: 11px 14px;
+    letter-spacing: 2px;
+  }
+  .page-indicator {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(200,150,10,0.5);
+    text-transform: uppercase;
+  }
+ 
+  /* ── typography ── */
+  .rule {
+    border: none;
+    border-top: 2px solid var(--rule);
+    margin: 18px 0;
+  }
+  .rule-double {
+    border: none;
+    border-top: 3px double var(--rule);
+    margin: 22px 0;
+  }
+  .small-ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 18px;
+    margin: 8px 0;
+    letter-spacing: 8px;
+  }
+ 
+  /* ── COVER ── */
+  .cover-eyebrow {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 6px;
+  }
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+  .cover-subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-mid);
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 14px 0 20px;
+  }
+  .cover-presented {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+  }
+  .cover-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .cover-by {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+  .cover-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 24px;
+    border: 1px solid var(--rule);
+    background: var(--parchment-mid);
+    margin: 0 auto;
+    max-width: 340px;
+  }
+  .cover-badge-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--ink);
+    text-align: center;
+  }
+  .cover-badge-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-light);
+    text-align: center;
+  }
+ 
+  /* ── T&C page ── */
+  .tc-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .tc-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .tc-section-head {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 14px 0 4px;
+  }
+  .tc-body {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+  .tc-agree {
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    color: var(--ink);
+    margin: 18px 0 10px;
+    letter-spacing: 1px;
+  }
+  .tc-go {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mid);
+    text-align: center;
+    line-height: 1.7;
+  }
+ 
+  /* ── STOP pages ── */
+  .stop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+  .stop-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--ink);
+    letter-spacing: 2px;
+  }
+  .stop-collect {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 3px 10px;
+  }
+  .stop-nicework {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 14px;
+  }
+  .challenge-head {
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .challenge-body {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+    margin-bottom: 20px;
+  }
+  .challenge-body p { margin-bottom: 5px; }
+ 
+  .clue-box {
+    background: var(--parchment-mid);
+    border-left: 3px solid var(--gold);
+    padding: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .clue-box-head {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .clue-box-body {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+ 
+  .prize-box {
+    background: var(--parchment-dark);
+    border: 1px solid var(--rule);
+    padding: 12px 18px;
+  }
+  .prize-box-head {
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 6px;
+  }
+  .prize-box-body {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink-mid);
+    font-weight: 700;
+  }
+ 
+  /* ── DECODER page ── */
+  .decoder-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .decoder-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .decoder-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 3px;
+    margin-bottom: 6px;
+  }
+  .decoder-cell {
+    border: 1px solid var(--rule);
+    height: 36px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .decoder-num {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 3px;
+    margin-bottom: 20px;
+  }
+  .decoder-num-cell {
+    text-align: center;
+    font-size: 9px;
+    color: var(--ink-light);
+    letter-spacing: 0;
+  }
+  .decoder-answer {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 8px;
+    color: var(--ink);
+    margin: 6px 0 4px;
+  }
+  .decoder-duh {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 18px;
+  }
+  .sig-line {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 20px 0 10px;
+  }
+  .sig-block {
+    text-align: center;
+  }
+  .sig-blank {
+    border-bottom: 1px solid var(--ink-mid);
+    width: 180px;
+    height: 28px;
+    margin-bottom: 4px;
+  }
+  .sig-label {
+    font-size: 11px;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+  .confirm-line {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--ink);
+    text-align: center;
+    margin: 10px 0;
+  }
+  .date-line {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 12px;
+    color: var(--ink-mid);
+    margin-top: 6px;
+  }
+  .date-blank {
+    display: inline-block;
+    border-bottom: 1px solid var(--ink-mid);
+    width: 160px;
+    margin-left: 8px;
+  }
+ 
+  /* ── cert page ── */
+  .cert-outer {
+    border: 2px solid var(--gold);
+    padding: 30px 36px;
+    position: relative;
+  }
+  .cert-outer::before {
+    content: '✦';
+    position: absolute;
+    top: -10px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--parchment);
+    padding: 0 12px;
+    color: var(--gold);
+    font-size: 16px;
+  }
+  .cert-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .cert-certifies {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+    color: var(--ink-mid);
+    margin-bottom: 6px;
+  }
+  .cert-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .cert-body {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .cert-prize {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .cert-clause {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-light);
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .cert-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--ink);
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+  .cert-finance {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--ink-light);
+    text-align: center;
+    line-height: 1.75;
+    margin-top: 12px;
+  }
+ 
+  @media (max-width: 600px) {
+    .doc { padding: 32px 24px 36px; }
+    .cover-name { font-size: 34px; }
+    .decoder-grid, .decoder-num { grid-template-columns: repeat(10, 1fr); }
+    .decoder-grid .decoder-cell:nth-child(n+11),
+    .decoder-num .decoder-num-cell:nth-child(n+11) { display: none; }
+    .sig-line { gap: 24px; }
+    .sig-blank { width: 120px; }
+  }
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DPZHKNB3E9');</script>
 </head>
 <body>
-
-<div id="ticker"><div id="ticker-inner">
-<span>◎ Non-partisan · Non-denominational · Non-negotiable.</span>
-<span>◎ The question is the answer. The data is the argument.</span>
-<span>◎ The us in USNow is not one thing.</span>
-<span>◎ ENJOY THE Interactive World Compendium Index©</span>
-<span>◎ PERSPECTIVE · CLARITY · SCALE · TRUST</span>
-<span>◎ CLARITY IN PROGRESS · UPDATING DAILY · TELL A FRIEND</span>
-<span>◎ START ANYWHERE. GO ANYWHERE.</span>
-<span>◎ Non-partisan · Non-denominational · Non-negotiable.</span>
-<span>◎ The question is the answer. The data is the argument.</span>
-<span>◎ The us in USNow is not one thing.</span>
-<span>◎ ENJOY THE Interactive World Compendium Index©</span>
-<span>◎ PERSPECTIVE · CLARITY · SCALE · TRUST</span>
-<span>◎ CLARITY IN PROGRESS · UPDATING DAILY · TELL A FRIEND</span>
-<span>◎ START ANYWHERE. GO ANYWHERE.</span>
-</div></div>
-
-<nav>
-  <div class="nav-logo" style="margin-bottom:8px;flex-direction:column;align-items:flex-start;gap:2px;">
-    <a href="log.html" style="text-decoration:none;display:flex;align-items:center;gap:8px;" title="The Log">
-      <span class="us">US</span>
-      <span class="now">NOW</span>
-    </a>
-    <span style="font-size:7px;letter-spacing:0.13em;color:rgba(201,168,76,0.48);font-family:'Courier New',monospace;white-space:nowrap;">THE QUESTION IS THE ANSWER.</span>
+ 
+<div class="progress-wrap">
+  <span class="progress-label" id="progLabel">Page 1 of 23</span>
+  <div class="progress-bar"><div class="progress-fill" id="progFill" style="width:4%"></div></div>
+</div>
+ 
+<!-- ══════════════════ PAGE 0 — COVER ══════════════════ -->
+<div class="doc active" id="p0">
+  <div class="cover-eyebrow">Official Document · Easter 2026</div>
+  <div class="rule-double"></div>
+  <div class="cover-title">The Great<br>Easter Quest<br>of 2026</div>
+  <div class="cover-subtitle">
+    A Scavenger Hunt of Math, Social Studies,<br>
+    Common Sense, and Mild Physical Effort
   </div>
-
-  <!-- Sign + timestamp — flex center between logo and button -->
-  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;margin:0 18px;margin-bottom:0;">
-    <span id="nav-sign" onclick="document.getElementById('thoughts').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;display:inline-flex;align-items:center;justify-content:center;max-width:420px;padding:0 6px;height:20px;border:1px solid rgba(201,168,76,0.38);border-radius:3px;background:rgba(201,168,76,0.04);overflow:visible;pointer-events:all;transition:opacity 0.25s;position:relative;margin-bottom:1px;animation:navSignPulse 4s ease-in-out infinite;white-space:nowrap;">
-      <!-- Ghost sizer — invisible, drives container width to longest string -->
-      <span style="visibility:hidden;font-size:10px;letter-spacing:0.22em;font-family:'Courier New',monospace;white-space:nowrap;pointer-events:none;">ADD YOUR VOICE ↓</span>
-      <span style="position:absolute;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame1 6s ease-in-out infinite;">START ANYWHERE</span>
-      <span style="position:absolute;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame2 6s ease-in-out infinite;">GO ANYWHERE</span>
-      <span style="position:absolute;text-align:center;font-size:10px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame3 6s ease-in-out infinite;">ADD YOUR VOICE ↓</span>
-    </span>
-    <span id="hero-date" style="font-size:7px;letter-spacing:0.14em;color:#04080f;font-family:'Courier New',monospace;white-space:nowrap;"></span>
+  <div class="rule"></div>
+  <div class="cover-presented">Presented To</div>
+  <div class="cover-name">Jacob</div>
+  <div class="cover-by">
+    by Mom &amp; Dad<br>
+    <em>with moral support from Lucy who also Loves your Love!</em>
   </div>
-  <!-- Contact toggle -->
-  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-    <!-- Button -->
-    <button id="nav-contact-btn" onclick="document.getElementById('thoughts').scrollIntoView({behavior:'smooth'})"
-      style="font-size:11px;letter-spacing:0.04em;background:transparent;border:1px solid rgba(122,96,48,0.45);padding:5px 14px;border-radius:16px;cursor:pointer;font-family:'Courier New',monospace;white-space:nowrap;transition:all 0.25s;"
-      onmouseover="this.style.borderColor='#c9a84c'"
-      onmouseout="this.style.borderColor='rgba(122,96,48,0.45)'">
-      <span style="color:#8aa0b8;letter-spacing:0.06em;">Contact </span><span style="color:#c9a84c;font-weight:700;letter-spacing:0.18em;">US</span><span style="color:#8aa0b8;letter-spacing:0.1em;">Now</span>
-    </button>
+  <div class="rule"></div>
+  <div class="cover-badge">
+    <div class="cover-badge-main">20 STOPS · PRIZES AT EVERY STOP</div>
+    <div class="cover-badge-main" style="color:var(--red)">FINAL PRIZE: ?$?</div>
+    <div class="cover-badge-sub">subject to the Spending Wisely Clause<br>— see Terms &amp; Conditions</div>
+  </div>
+  <div class="rule-double"></div>
+  <div class="small-ornament">✦ ✦ ✦</div>
+</div>
+ 
+<!-- ══════════════════ PAGE 1 — T&C ══════════════════ -->
+<div class="doc" id="p1">
+  <div class="tc-header">Official Terms &amp; Conditions</div>
+  <div class="tc-sub">The Great Quest — Quest Registration Agreement</div>
+  <div class="rule-double"></div>
+ 
+  <div class="tc-section-head">Preamble</div>
+  <div class="tc-body">By picking up this document and reading beyond this sentence, the Participant — hereinafter referred to as 'Jacob,' 'The Seeker,' 'That Kid Who Sets his Alarm not to Wake Up but to Negotiate,' or simply 'You' — hereby agrees to all terms below. These terms are binding under the Tatun Family Accord and the ancient laws of common sense.</div>
+ 
+  <div class="tc-section-head">Section 1 — Eligibility</div>
+  <div class="tc-body">This Quest is open to one (1) teenager currently residing in this household who owns a gaming setup, maintains a Twitch account, has a complicated relationship with mornings, and whose approach to playing with the dog is what veterinarians would describe as 'enthusiastic.' If this does not describe you, please return this document and back away slowly.</div>
+ 
+  <div class="tc-section-head">Section 2 — Video Documentation (Mandatory)</div>
+  <div class="tc-body">The Participant MUST video-record at least one clue being solved. The recording must show: (a) the Participant reading the clue aloud, (b) showing actual work — not just the answer, and (c) a genuine human reaction upon finding each prize. Going Live on Twitch for any portion of this Quest is permitted, encouraged, and will be noted in the official record. Failure to document on video shall result in forfeiture of the Final Prize Certificate and a conversation about it at family dinners for approximately one calendar year.</div>
+ 
+  <div class="tc-section-head">Section 3 — Hygiene Advisory</div>
+  <div class="tc-body">Teeth Brushing and a quick Face Wash prior to beginning The Quest is strongly recommended. The Quest Authority reserves the right to comment on this in the future regardless of outcome. This provision was not added arbitrarily.</div>
+ 
+  <div class="tc-section-head">Section 4 — Academic Honesty</div>
+  <div class="tc-body">The Participant agrees to: (a) show all math work, (b) genuinely think through logic problems rather than Googling them, and (c) refrain from complaining that this is 'too much school stuff.' Use of AI to solve puzzles must be disclosed and results in a 50% prize deduction. Asking Lucy for help is permitted but statistically unlikely to be productive. You may be able to find the next spot without solving a clue, but all clues must be completed to receive the Final Bonus Prize.</div>
+ 
+  <div class="tc-section-head">Section 5 — The Spending Wisely Clause</div>
+  <div class="tc-body">Upon successful completion, the Participant receives the Bonus Prize. This prize carries one condition: it must be spent wisely. The definition of 'wisely' belongs to the Participant. However, the Participant hereby acknowledges that if the funds are spent unwisely, they are morally obligated — under the Tatun Family Accord — to repay themselves using real income earned through real effort. This is not a punishment. This is the beginning of financial literacy.</div>
+ 
+  <div class="tc-section-head">Section 6 — Force Majeure</div>
+  <div class="tc-body">The Quest Authority is not responsible for clues disturbed, relocated, or partially consumed by Lucy. Any clue found in an unusual state of dampness should be handled with care and minimal drama.</div>
+ 
+  <div class="rule-double"></div>
+  <div class="tc-agree">BY PROCEEDING, THE PARTICIPANT ACCEPTS THESE TERMS IN FULL.</div>
+  <div class="tc-go">Now go. Stop #1 is under the place where your fingers fly the most —<br>and occasionally do so at 4 or 6 in the morning when you think no one knows.<br><br>** All Clues Must Be Answered to Collect Final Prize</div>
+</div>
+ 
+<!-- ══════════════════ STOPS 1–20 ══════════════════ -->
+ 
+<!-- STOP 1 -->
+<div class="doc" id="p2">
+  <div class="stop-header">
+    <div class="stop-number">STOP #1</div>
+    <div class="stop-collect">COLLECT: [ J ]</div>
+  </div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">An egg. A journey of 1000 miles begins with a single step, and a Quest of 20 Stops similarly begins with a single. 'Cold' Cash!</div>
+  </div>
+  
+  <div class="challenge-head">Your First Challenge — Warm-Up: IF/THEN Reasoning</div>
+  <div class="challenge-body">
+    <p>Welcome to The Great Quest.</p>
+    <p>Before you go anywhere — You Should have read the Terms and Conditions. Seriously. There's a video requirement. It is binding.</p>
+    <br>
+    <p>IF all squares are rectangles,</p>
+    <p>AND all rectangles have four sides,</p>
+    <p>THEN does a square have four sides?</p>
+    <br>
+    <p>Answer YES or NO and write one sentence explaining why.</p>
+    <p>What is this type of reasoning called — moving from a general rule to a specific conclusion?</p>
+    <p>It rhymes with 'deductive.'</p>
+    <p><strong>YOUR ANSWER: ____________________</strong></p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">It hums all day and never complains — unlike some people in this house when asked to take out the garbage. It keeps things cold without being asked. It does not negotiate. Look inside the 'right' one.</div>
+  </div>
+  
     
-  </div>
-
-</nav>
-
-<!-- Nav submit confirmation — floats above everything -->
-<div id="nav-confirm" style="display:none;position:fixed;top:84px;left:50%;transform:translateX(-50%);z-index:9999;background:linear-gradient(160deg,#0d1a2a,#071018);border:1px solid rgba(74,154,112,0.55);border-radius:10px;padding:14px 24px;text-align:center;box-shadow:0 0 40px rgba(74,154,112,0.18),0 8px 32px rgba(0,0,0,0.7);animation:fadeIn 0.3s ease;pointer-events:none;">
-  <div style="font-size:11px;letter-spacing:0.18em;color:#4a9a70;font-family:'Courier New',monospace;margin-bottom:5px;">✓ RECEIVED</div>
-  <div style="font-size:11px;color:#8ab8a0;font-family:'Georgia',serif;line-height:1.6;">Thanks for your input.<br>If you left an email, you'll hear back.</div>
 </div>
-<section id="scale" style="margin-top:74px;">
-  <div id="stars"></div>
-  <svg id="scale-svg" viewBox="0 0 1000 700" preserveAspectRatio="none"></svg>
-  <div id="layer-bands"></div>
-  <div id="core-wrap">
-    <div id="core-orbs"></div>
-    <div id="core-btn" onclick="openLayer(0)"><div>ME,<br>MYSELF<br>&amp; I</div></div>
-    <!-- Foundation half-moons injected by JS -->
+ 
+<!-- STOP 2 -->
+<div class="doc" id="p3">
+  <div class="stop-header">
+    <div class="stop-number">STOP #2</div>
+    <div class="stop-collect">COLLECT: [ A ]</div>
   </div>
-
-</section>
-
-<div id="modal-overlay" onclick="cardNavClose()">
-  <div id="modal-box" onclick="event.stopPropagation()">
-    <div class="modal-drag" id="modal-drag"></div>
-    <div id="card-nav-bar" style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;gap:8px;">
-      <div id="modal-layer-tag" style="font-size:10px;letter-spacing:0.3em;font-family:'Courier New',monospace;opacity:1;line-height:1.6;"></div>
-      <div id="modal-node-id" style="font-size:9px;letter-spacing:0.12em;font-family:'Courier New',monospace;opacity:0.28;margin-left:auto;white-space:nowrap;display:none;"></div>
-      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;">
-        <button id="modal-close" onclick="cardNavBack()" style="font-size:10px;letter-spacing:0.18em;font-family:'Courier New',monospace;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.5);color:#c9a84c;padding:6px 14px;border-radius:14px;cursor:pointer;transition:all 0.2s;line-height:1.4;white-space:nowrap;" onmouseenter="this.style.background='rgba(201,168,76,0.22)';this.style.borderColor='#c9a84c';" onmouseleave="this.style.background='rgba(201,168,76,0.12)';this.style.borderColor='rgba(201,168,76,0.5)';"></button>
-        <button id="thought-btn" onclick="openThoughtPanel()" style="font-size:9px;letter-spacing:0.14em;font-family:'Courier New',monospace;background:transparent;border:1px solid rgba(201,168,76,0.3);color:#c9a84c;padding:5px 13px;border-radius:10px;cursor:pointer;transition:all 0.2s;line-height:1.4;white-space:nowrap;">Thoughts?</button>
-      </div>
-    </div>
-
-    <!-- Thought? panel — overlays modal content, same card colors applied by JS -->
-    <div id="thought-panel">
-      <div style="display:flex;align-items:center;justify-content:space-between;">
-        <div class="tp-eyebrow" id="tp-context-tag">The Log</div>
-        <button class="tp-back" onclick="closeThoughtPanel()">← BACK</button>
-      </div>
-      <div>
-        <div class="tp-headline" id="tp-headline">What's wrong with this information?</div>
-      </div>
-      <hr class="tp-divider" id="tp-divider">
-     <p class="tp-copy">Maybe nothing. Maybe everything. Maybe you know something that should be added — another fact, another perspective, a lived experience, or a connection no one else has made yet.<br><br>Leave it here. Agree, disagree, expand, debate, correct. Everything coherent goes into <strong>The Log</strong> — a permanent, searchable record of responses. Profanity may be censored, and noise may be flagged, but the record remains.<br><br><em>This is a continuing record of Us Now. Add your voice - (with your name or not - no strings - no trackers).</em></p>
-      <div class="tp-field">
-        <div class="tp-label">Your name <span style="opacity:0.4;">(optional)</span></div>
-        <input id="tp-name" class="tp-input" type="text" placeholder="Anonymous is fine">
-      </div>
-      <div class="tp-field">
-        <div class="tp-label">Your thought</div>
-        <textarea id="tp-thought" class="tp-input" rows="4" placeholder="Say anything that matters."></textarea>
-      </div>
-      <input type="hidden" id="tp-node-id">
-      <input type="hidden" id="tp-node-label">
-      <div class="tp-actions">
-        <button class="tp-back" onclick="closeThoughtPanel()">← BACK</button>
-        <button class="tp-send" onclick="submitToLog()">SEND TO THE LOG →</button>
-      </div>
-      <!-- Confirmation state -->
-      <div class="tp-confirm" id="tp-confirm">
-        <div class="tp-confirm-mark">✦</div>
-        <div class="tp-confirm-title" id="tp-confirm-title">Received.</div>
-        <div class="tp-confirm-sub">Your thought is in The Log.<br>It will help expand the site.</div>
-        <button class="tp-confirm-back" id="tp-confirm-back-btn" onclick="closeThoughtPanel()">← BACK TO CARD</button>
-      </div>
-    </div>
-    <h2 id="modal-title"></h2>
-    <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:14px;display:none;"></div>
-    <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div id="modal-toppills-list"></div></div>
-    <p id="modal-desc"></p>
-    <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label" style="font-size:10px;letter-spacing:0.25em;font-family:'Courier New',monospace;margin-bottom:12px;opacity:0.7;">ON-SITE CONNECTIONS</div><div id="modal-bottompills-list"></div></div>
-    <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OFF-SITE CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
+  <div class="stop-nicework">NICE WORK — AWESOME!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Egg! This one Might be more like an Oval Fortune Cookie, but it comes with "Moral Support" &amp; "Unconditional Love"</div>
+  </div>
+  
+  <div class="challenge-head">Math + Science — The Cold Equations</div>
+  <div class="challenge-body">
+    <p>The refrigerator is set to 38°F. Water freezes at 32°F.</p>
+    <br>
+    <p>1. How many degrees above freezing is this fridge? _______________</p>
+    <p>2. IF the power goes out and temperature rises 3°F per hour,</p>
+    <p>how long until it reaches 50°F — the temp at which leftovers</p>
+    <p>become a biology experiment?</p>
+    <p>Show your work.</p>
+    <br>
+    <p>Lucy has been fed today. She will tell you otherwise.</p>
+    <p>She is a Knave. More on that later.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Now Go colder. Colder than the refrigerator. Colder than the feeling you get when you forget there's a test you should have studied for. Find the place where water goes to become a solid. Look in the tray.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 3 -->
+<div class="doc" id="p4">
+  <div class="stop-header">
+    <div class="stop-number">STOP #3</div>
+    <div class="stop-collect">COLLECT: [ C ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Didn't Miss A beat!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Speaking of Cold… This should help with the lingering cold days while Baseball Starts Up!</div>
+  </div>
+  
+  <div class="challenge-head">Geometry — The Angle of Your Next Destination</div>
+  <div class="challenge-body">
+    <p>A triangle has three angles that always add up to 180°.</p>
+    <p>Triangle A has angles of 90° and 22°.</p>
+    <p><strong>What is the third angle? _________ degrees</strong></p>
+    <br>
+    <p>Show Off Bonus: IF all right triangles have one 90° angle,</p>
+    <p>THEN what must always be true about the other two angles?</p>
+    <p>What do we call two angles that sum to 90°  They are _______ angles.</p>
+    <br>
+    <p>Your answer to the first question is a number of degrees.</p>
+    <p>That number is also a temperature in Fahrenheit.</p>
+    <p>It is the exact temperature your next destination is designed to maintain for this entire house (even though we usually go a bit higher).</p>
+    <p>Hint: It is not a room. It is a device. On a wall.</p>
+    <p>Everyone adjusts it. No one agrees on it.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Somewhere in this house there is a small device that everyone touches and no one agrees on. It controls the temperature of everything. It does not care about your opinions. It just is. Find it.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 4 -->
+<div class="doc" id="p5">
+  <div class="stop-header">
+    <div class="stop-number">STOP #4</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Now that's just Jacob!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Bill! Not the kind Mom Pays Online or the Kind Dad Should be Collecting… Your Very Own!</div>
+  </div>
+  
+  <div class="challenge-head">Civics — The Three Branches</div>
+  <div class="challenge-body">
+    <p>The United States government has three branches.</p>
+    <p><strong>Name all three.</strong></p>
+    <br>
+    <p>IF the President vetoes a bill passed by Congress,</p>
+    <p>THEN what must Congress do to override it?</p>
+    <p>What fraction of each chamber must agree to override?</p>
+    <p>Express that fraction as a decimal rounded to two places.</p>
+    <p>Multiply by 100. That can also be a temperature in Fahrenheit!</p>
+    <br>
+    <p>Bonus thought: The three branches exist so no single person holds all the power. But they give and take a little over time. The balance is not always the same.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">The next spot spins wet into dry with a lot of hot air — and occasionally eats one sock for reasons that science cannot fully explain. Look inside.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 5 -->
+<div class="doc" id="p6">
+  <div class="stop-header">
+    <div class="stop-number">STOP #5</div>
+    <div class="stop-collect">COLLECT: [ B ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Without even trying!?</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">A LATE NIGHT SNACK PERHAPS? Oh what a great start this is… (Remember… The milk is the meal)</div>
+  </div>
+  
+  <div class="challenge-head">Geometry — The Pythagorean Theorem</div>
+  <div class="challenge-body">
+    <p>A baseball diamond is a square. Each side is 90 feet.</p>
+    <p>IF you draw a line from home plate directly to second base,</p>
+    <p>you have split the square into two right triangles.</p>
+    <br>
+    <p>Using a² + b² = c², where a = 90 and b = 90:</p>
+    <p><strong>What is the distance from home plate to second base?</strong></p>
+    <p>Round to the nearest foot.</p>
+    <br>
+    <p>That's approximately half how far Jacob can throw on a good day —</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Find the ONE that comes BEFORE this one in this 'cleaning' process — the one that uses actual water and soap. Thanks Mom! I know it's a lot of Work! Check on top of it or inside.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 6 -->
+<div class="doc" id="p7">
+  <div class="stop-header">
+    <div class="stop-number">STOP #6</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Nailed it, kid!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">It Wouldn't be Easter without Some Sweet Colorful Treats… Not Peeps… but these!</div>
+  </div>
+  
+  <div class="challenge-head">Logic — The Laundry Syllogism</div>
+  <div class="challenge-body">
+    <p>IF dirty clothes go in the washer, THEN clean clothes come out.</p>
+    <p>IF clean clothes go in the dryer, THEN dry clean clothes come out.</p>
+    <p>IF dirty clothes go directly into the dryer —</p>
+    <p>skipping the washer entirely —</p>
+    <p>THEN what comes out?</p>
+    <p><strong>Think carefully. Write your answer. ——————————————————</strong></p>
+    <br>
+    <p>Follow-up question. Purely hypothetical. Not directed at anyone in particular:</p>
+    <p>IF a teenager's hamper is overflowing,</p>
+    <p>AND said teenager walks past it fourteen times without touching it,</p>
+    <p>THEN what is the teenager communicating about his priorities?</p>
+    <br>
+    <p>You don't have to answer that one out loud. We already know.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Something in this kitchen contains more sugar than anyone has officially admitted to. It lives in a box. It has some cartoon or logo on the front. It promised you a good morning and mostly delivered. But Remember, the Milk is the Meal. It's on one of them.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 7 -->
+<div class="doc" id="p8">
+  <div class="stop-header">
+    <div class="stop-number">STOP #7</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — No surprise there!!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">It had to be something that goes well on the outside of box… Bam! $ Add it up!</div>
+  </div>
+  
+  <div class="challenge-head">Nutrition Math — Serving Size Reality Check</div>
+  <div class="challenge-body">
+    <p>Find the nutrition label on this box.</p>
+    <p>1. What is the serving size?</p>
+    <p>2. How many servings are in the container?</p>
+    <p>3. Multiply them — total cereal in the box.</p>
+    <p>4. IF Jacob eats 2.5 times the serving size each morning (conservative estimate), how many days does this box actually last?</p>
+    <br>
+    <p>Now check sugar per serving. Multiply by your answer to #3.</p>
+    <p>That's total grams of sugar in the whole box.</p>
+    <p>IF there are 4 grams of sugar per teaspoon,</p>
+    <p>how many teaspoons of sugar are in this box?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">There is a creature in this house that cleans without being asked, never complains, never sleeps in, and asks for nothing but a charged battery. It is not Lucy. It is not you. Find it and look underneath. Gently.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 8 -->
+<div class="doc" id="p9">
+  <div class="stop-header">
+    <div class="stop-number">STOP #8</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Very impressive!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Flat and Sweet, a sensible amount for some online Fun!</div>
+  </div>
+  
+  <div class="challenge-head">Technology Logic — Conditional Programming</div>
+  <div class="challenge-body">
+    <p>The robot vacuum runs on a simple IF/THEN loop:</p>
+    <p>IF obstacle detected → THEN change direction</p>
+    <p>IF battery low → THEN return to dock</p>
+    <p>IF floor clean → THEN stop</p>
+    <br>
+    <p>IF the robot makes 4 direction changes per minute and runs a 50-minute cycle, how many total direction changes does it make?</p>
+    <br>
+    <p>Now the real question:</p>
+    <p>IF the robot cleans every day without being asked,</p>
+    <p>AND a certain teenager does not clean without being asked at least three times —</p>
+    <p>THEN which one has better programming?</p>
+    <br>
+    <p>This is not a trick question. The robot is winning.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Go to the dining room. Get on the floor. Look up. Your clue card may be taped underneath something.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 9 -->
+<div class="doc" id="p10">
+  <div class="stop-header">
+    <div class="stop-number">STOP #9</div>
+    <div class="stop-collect">COLLECT: [ G ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Sharp as ever!!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Unwrap at your own risk and convenience! Hope there's something cool in there!</div>
+  </div>
+  
+  <div class="challenge-head">Math — Area and Perimeter</div>
+  <div class="challenge-body">
+    <p>The dining room table is approximately 6 feet long and 3 feet wide.</p>
+    <p>1. What is its perimeter?</p>
+    <p>2. What is its area in square feet?</p>
+    <p>3. IF each chair takes up 2.5 square feet of floor space and there are 6 chairs (not overlapping or under the table), what is the total floor space used by table AND chairs combined?</p>
+    <br>
+    <p>This table — and the one before it — have had a lot of meals.</p>
+    <p>Some with Ma and Papa. Some with the cousins — Jack, Bella, and the whole crew.</p>
+    <p>Every single one of them louder than medically advisable.</p>
+    <br>
+    <p>IF this table could talk, what is the probability it would ask you to sit up straight?</p>
+    <p>Answer: 100%. That's not math. That's just family.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Not the big one. The other one. It's seen more asses than a donkey convention. Your next clue is under there somewhere wondering when you'd show up.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 10 -->
+<div class="doc" id="p11">
+  <div class="stop-header">
+    <div class="stop-number">STOP #10</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Made it look easy!?</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Another Egg! Maybe some Jelly Beans?</div>
+  </div>
+  
+  <div class="challenge-head">Logic — The Knight and the Knave</div>
+  <div class="challenge-body">
+    <p>On an island, two types of people exist:</p>
+    <p>Knights — who always tell the truth.</p>
+    <p>Knaves — who always lie.</p>
+    <br>
+    <p>You meet one of each:</p>
+    <p>Person A says: <strong>'At least one of us is a Knave.'</strong></p>
+    <p>Person B says: nothing.</p>
+    <br>
+    <p>So: which is Person A? And which is Person B?</p>
+    <br>
+    <p>A Knight is honest, reliable, clean and considerate.</p>
+    <p>A Knave avoids cleaning, leaves dishes, and is on his phone at the table.</p>
+    <p>We are not naming names, but we are in training.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">There is a room in this house that cleans itself approximately never — at least not by any knave or teenager currently residing here. (Thanks Again Mom!!) In that room sits a throne. Behind that throne's lid sits your next clue. It has been waiting patiently. Unlike us.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 11 -->
+<div class="doc" id="p12">
+  <div class="stop-header">
+    <div class="stop-number">STOP #11</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — RIGHT ON BRO!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Doubling up on a few prizes… 100% increase… add it to the other — you can open them together? (maybe too late?)</div>
+  </div>
+  
+  <div class="challenge-head">Health + Math — The Brushing Problem</div>
+  <div class="challenge-body">
+    <p>Dentists recommend 2 minutes of brushing, twice a day.</p>
+    <p>IF a certain teenager brushes once a day for 40 seconds (and we are being generous):</p>
+    <br>
+    <p>1. How many seconds of brushing is he missing per day?</p>
+    <p>2. How many minutes per week?</p>
+    <p>3. Over a full year, how many hours has he skipped?</p>
+    <p>4. The average cavity costs $200 to fill. IF skipping causes 1 cavity per year, how much money is lost between age 15 and age 25?</p>
+    <br>
+    <p>IF you answered $2,000 — that is almost exactly the prize you are hunting for. Except the actual prize is real (and worth much less) but the cavities are preventable.</p>
+    <br>
+    <p><strong>Brush. Your. Teeth.</strong></p>
+    <p>This message brought to you by everyone who loves you and wants you to keep your mouth from looking like Dad's.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">In the cabinet under the bathroom sink where we can brush our teeth and wash our faces. Your clue card is in there somewhere. Be gentle — the pipes under here can move easily, and shouldn't.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 12 -->
+<div class="doc" id="p13">
+  <div class="stop-header">
+    <div class="stop-number">STOP #12</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — That's showing some brainpower!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">A heavy Egg… it's better than a rotten egg.</div>
+  </div>
+  
+  <div class="challenge-head">Economics — The Lucy Problem</div>
+  <div class="challenge-body">
+    <p>Lucy eats 2.5 cups of food per day.</p>
+    <p>A 30-pound bag contains approximately 120 cups.</p>
+    <br>
+    <p>1. How many days does one bag last?</p>
+    <p>2. IF one bag costs $45, what is Lucy's daily food cost?</p>
+    <p>3. IF Lucy lives 12 more years, what is her total food cost — assuming prices stay flat? Round to the nearest dollar.</p>
+    <br>
+    <p>Lucy has never once paid for her own food.</p>
+    <p>But she does pay in loyalty. A virtuous trait to find and to have!</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Find your textbook — the one probably still performing structural duties for your monitor. Carefully remove it. Your clue card is inside (one of them!?). Do not let the monitor fall. Maybe find something else to support it, so your books can support your schoolwork?</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 13 -->
+<div class="doc" id="p14">
+  <div class="stop-header">
+    <div class="stop-number">STOP #13</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Proud of you!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Bam! $ If we paid you per pages you read… we'd be about even here…? These things are actually pretty cool… if you spend some time with them. Knowledge is power.</div>
+  </div>
+  
+  <div class="challenge-head">Social Studies — The Amendment Round</div>
+  <div class="challenge-body">
+    <p>The U.S. Constitution currently has 27 amendments. The first 10 are called the Bill of Rights.</p>
+    <br>
+    <p>1. What does the First Amendment protect?</p>
+    <p>2. IF a student gives a speech at school criticizing the principal, is the school legally required to allow it? Yes or No — and explain your reasoning.</p>
+    <p>(Hint: It's more complicated than you think. Look up Tinker v. Des Moines someday.)</p>
+    <p>3. The 19th Amendment gave women the right to vote. What year was it ratified?</p>
+    <br>
+    <p>Take the LAST TWO digits of that year. Subtract 6.</p>
+    <p>That number is maybe how many paces you are from the front door towards where you'll find your next clue — except don't actually count. Just go to the front door.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Every journey in this house begins and ends at the same place. One step out. It is at your feet every single time you leave or arrive. It has probably said "welcome" more times than anyone in this family. Lift it.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 14 -->
+<div class="doc" id="p15">
+  <div class="stop-header">
+    <div class="stop-number">STOP #14</div>
+    <div class="stop-collect">COLLECT: [ H ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Just like that!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">2 in a row is like doubling your prize in one stop… 100% increase… add it to the other. Also: register to vote when you can!</div>
+  </div>
+  
+  <div class="challenge-head">Civics — Local Government</div>
+  <div class="challenge-body">
+    <p>Suffolk County, New York has a County Executive form of government. Your town also has locally elected representatives.</p>
+    <br>
+    <p>IF a law is passed that a resident believes is unfair, THEN what is the correct first step in a functioning representative democracy?</p>
+    <br>
+    <p>(A) Post about it online and hope someone important sees it</p>
+    <p>(B) Contact your elected representative directly</p>
+    <p>(C) Complain loudly at dinner until someone changes the subject</p>
+    <p>(D) Accept it and move on forever</p>
+    <br>
+    <p>The answer is not C. Option C, while emotionally valid, is not civic participation.</p>
+    <p>IF more people chose answers or actions that can lead to solutions, things would be different.</p>
+    <p>Try it if the issue moves you… and you don't have to be 18.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Somewhere in this house is a piece of patient leather, always ready for another season and a good game! It doesn't care if you win or lose, it's still excellent, and it'll do the best it can for you. Look inside the pocket.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 15 -->
+<div class="doc" id="p16">
+  <div class="stop-header">
+    <div class="stop-number">STOP #15</div>
+    <div class="stop-collect">COLLECT: [ E ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Didn't even break a Sweat!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">I always say, if a baseball was an egg, how would you field it?</div>
+  </div>
+  
+  <div class="challenge-head">Sports + Math</div>
+  <div class="challenge-body">
+    <p>The FIFA World Cup is held every four years.</p>
+    <p>IF the last World Cup was in 2022, THEN when is the next one?</p>
+    <p>True or False: The 2026 World Cup is being co-hosted by the U.S., Canada, and Mexico.</p>
+    <br>
+    <p>Now baseball:</p>
+    <p>IF a pitcher throws 95 pitches over 6 innings, what is his average pitches per inning?</p>
+    <p>IF he maintains that pace for a full 9 innings, how many total pitches would he throw?</p>
+    <p>IF the league average is 15 pitches per inning, is this pitcher above or below average efficiency?</p>
+    <p>(Fewer pitches per inning = more efficient.)</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Go outside. Yes, outside. The place with sky and air and everything. Find the large metal object that breathes fire in summer and sits quietly judging you in the winter. Open it up.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 16 -->
+<div class="doc" id="p17">
+  <div class="stop-header">
+    <div class="stop-number">STOP #16</div>
+    <div class="stop-collect">COLLECT: [ _ ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Would you look at that!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Barbeque Eggs Anyone? :) $ (ooops sorry wrong one) Barbeque these!</div>
+  </div>
+  
+  <div class="challenge-head">Chemistry Logic — The Fire Triangle</div>
+  <div class="challenge-body">
+    <p>Fire requires three things to exist: Oxygen. Fuel. Heat.</p>
+    <p>Remove ANY one and the fire goes out.</p>
+    <br>
+    <p>IF you remove the fuel — what happens?</p>
+    <p>IF you remove the oxygen — what happens?</p>
+    <p>IF you remove the heat — what is the current state of this barbecue on a random day when no one has used it?</p>
+    <br>
+    <p>The grill is cold. The heat is already gone. You are safe. The clue is safe.</p>
+    <br>
+    <p>IF a loved one goes outside in the wind and rain to drop a clue inside a cold barbecue, THEN what does that tell you?</p>
+    <p>The answer is: a lot. Like… they couldn't think of more inside clues?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Back inside — you've earned it. Now find the closet where the clean things live. Towels. Sheets. Things that smell like they've been washed recently — a concept you may be vaguely familiar with. Your clue is on the door itself. Not inside. The door.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 17 -->
+<div class="doc" id="p18">
+  <div class="stop-header">
+    <div class="stop-number">STOP #17</div>
+    <div class="stop-collect">COLLECT: [ L ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — There he goes!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Re$spectable. Tape-able.</div>
+  </div>
+  
+  <div class="challenge-head">Algebra — Solve for X</div>
+  <div class="challenge-body">
+    <p><strong>3x + 7 = 25</strong></p>
+    <p>Show all your work.</p>
+    <br>
+    <p>IF x equals the number of minutes between 'I'll shower in a bit' and an actual shower — this equation is the most optimistic math problem ever written.</p>
+    <br>
+    <p>IF x equals the number of times someone must say 'time to get up' before Jacob appears on a school morning — we are going to need a bigger equation.</p>
+    <br>
+    <p>IF x equals the hour at which Jacob is still playing on his computer, is it a.m. or p.m.?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Take your value of x. Go down. Way down. To the lower level. To the bed that isn't your bed in the room that isn't your room. Find the pillow. Lift it.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 18 -->
+<div class="doc" id="p19">
+  <div class="stop-header">
+    <div class="stop-number">STOP #18</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Knew you could do it!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">These Again? Double up and $hare $ome with Dad!</div>
+  </div>
+  
+  <div class="challenge-head">Logic — The Sleeping Argument</div>
+  <div class="challenge-body">
+    <p>Evaluate the following argument:</p>
+    <br>
+    <p>Premise 1: IF you are sleeping, THEN you are not doing homework.</p>
+    <p>Premise 2: IF you are not doing homework, THEN it is not due tomorrow.</p>
+    <p>Conclusion: Therefore, IF you are sleeping, THEN homework is not due tomorrow.</p>
+    <br>
+    <p>Is this argument <strong>VALID</strong>? (Does the conclusion follow logically from the premises?)</p>
+    <p>Is this argument <strong>TRUE</strong>? (Are the premises actually correct in real life?)</p>
+    <br>
+    <p>Important: An argument can be perfectly valid and still be completely false.</p>
+    <p>Valid logic + wrong premises = wrong answer.</p>
+    <p>This is one of the most important things they don't teach enough.</p>
+    <br>
+    <p>Also: Was the homework due before you did it?</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">Almost there. Find the spot in this house that holds the boxes people are done with — recyclables. Not the plastics. Not the metals. On a bench. Not that Nice Work Out Bench in the corner… the Wood one… in your New Chore Spot… get to know it… and do it well.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 19 -->
+<div class="doc" id="p20">
+  <div class="stop-header">
+    <div class="stop-number">STOP #19</div>
+    <div class="stop-collect">COLLECT: [ O ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — That's our kid!</div>
+  <div class="rule"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">Least Perhaps but Not Quite Last… This Liquid Can Go a Long Way at the Right Time…</div>
+  </div>
+  
+  <div class="challenge-head">Personal Finance — The Most Important Math in This Hunt</div>
+  <div class="challenge-body">
+    <p>You are about to pick up $100. Before you do — complete this:</p>
+    <br>
+    <p>IF you invest $100 at 7% average annual return (the historical average of a basic index fund), THEN using the formula $100 × (1.07)^years:</p>
+    <br>
+    <p>In 10 years: $100 × (1.07)¹⁰ = $ _______</p>
+    <p>In 20 years: $100 × (1.07)²⁰ = $ _______</p>
+    <p>In 30 years: $100 × (1.07)³⁰ = $ _______</p>
+    <br>
+    <p>Answers: ~$197. ~$387. ~$761.</p>
+    <br>
+    <p>IF you spend $100 on something that disappears — food, a game, whatever — it is worth $0 by tomorrow.</p>
+    <p>IF you keep it and let it grow, it becomes $761 before you're 50.</p>
+    <br>
+    <p>The choice is yours. That is the whole point.</p>
+    <p>Spend it wisely — or you owe it back to yourself. With real income. From real work.</p>
+    <p>That is not a threat. That's part of this agreement.</p>
+  </div>
+  <div class="clue-box">
+    <div class="clue-box-head">Where to Find Your Next Clue Card</div>
+    <div class="clue-box-body">There is a room in this house where someone spends too much time staring at screens, writing things nobody asked for, and thinking about how the world could work better. It's not you and it is not your room — though the screen time hours might be comparable. Find the office. Look on the wall.</div>
+  </div>
+  
+    
+</div>
+ 
+<!-- STOP 20 -->
+<div class="doc" id="p21">
+  <div class="stop-header">
+    <div class="stop-number">STOP #20</div>
+    <div class="stop-collect">COLLECT: [ T ]</div>
+  </div>
+  <div class="stop-nicework">NICE WORK — Get it Done then Have Some Fun!</div>
+  <div class="rule"></div>
+  <div class="challenge-body" style="text-align:center; padding: 20px 0;">
+    <p><strong>Don't Sacrifice Accuracy for Speed, or Thoroughness for Anything.</strong></p>
+    <br>
+    <p><strong>Did you do a Little at a Time — or Save it All for Later?</strong></p>
+    <br>
+    <p><strong>It's all Good if you Get it Done!</strong></p>
+    <br>
+    <p><strong>NO MORE CLUES – BUT STILL MORE OBLIGATIONS!</strong></p>
+    <br>
+    <p style="font-family:'Playfair Display',serif; font-size:22px; font-weight:900; color:var(--ink);">LOVE YOU!</p>
+    <br>
+    <p>Read the Official Terms and Conditions if Needed for More Information.</p>
+    <p>They are Not on the Internet. Don't just click I Agree.</p>
+  </div>
+  <div class="rule-double"></div>
+  <div class="prize-box">
+    <div class="prize-box-head">Prize at This Stop</div>
+    <div class="prize-box-body">The Decoder and Final Prize 'VOUCHER'. Get it signed. Show someone the video. You choose which someone. You know which video. The rest takes care of itself.</div>
   </div>
 </div>
-
-<section id="hero">
-  <div class="inner">
-    <div class="hero-tap-hint">↑ tap any layer or orb above to explore</div>
-    <div class="hero-eyebrow">WHAT IS US · NOW</div>
-    <h1 class="hero-h1">The <em>US</em> in USNow<br>is not one thing.</h1>
-    <div class="hero-items">
-      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US in our country — your country</strong> — in the U.S. it's WE the People, our history, our government, the American dream - and the reality - along with our mutual obligations with the rest of the world.</p></div>
-      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  in our groups</strong> — our state, party, religion or sports team - the groups we are in or those we join - how they can bring us together and how they divide and separate us as well.</p></div>
-      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  in our relationships</strong> — the most natural bond - our family, our parents, our children and siblings - and those we choose or unchoose to be closest to us - spouse, friends, partners.</p></div>
-      <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  within ourselves</strong> — the innermost us. The me and the I. Our inner voice and the one who heeds it. The us that ultimately determines what we say and do and why.</p></div>
+ 
+<!-- ══════════════════ PAGE 22 — DECODER ══════════════════ -->
+<div class="doc" id="p22">
+  <div class="decoder-title">The Decoder &amp; Final Prize Voucher</div>
+  <div class="decoder-sub">Write your collected letters below — one per stop. Leave blanks where you found no letter.</div>
+  <div class="rule-double"></div>
+ 
+  <div class="decoder-grid">
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div><div class="decoder-cell"></div>
+    <div class="decoder-cell"></div><div class="decoder-cell"></div>
+  </div>
+  <div class="decoder-num">
+    <div class="decoder-num-cell">1</div><div class="decoder-num-cell">2</div><div class="decoder-num-cell">3</div>
+    <div class="decoder-num-cell">4</div><div class="decoder-num-cell">5</div><div class="decoder-num-cell">6</div>
+    <div class="decoder-num-cell">7</div><div class="decoder-num-cell">8</div><div class="decoder-num-cell">9</div>
+    <div class="decoder-num-cell">10</div><div class="decoder-num-cell">11</div><div class="decoder-num-cell">12</div>
+    <div class="decoder-num-cell">13</div><div class="decoder-num-cell">14</div><div class="decoder-num-cell">15</div>
+    <div class="decoder-num-cell">16</div><div class="decoder-num-cell">17</div><div class="decoder-num-cell">18</div>
+    <div class="decoder-num-cell">19</div><div class="decoder-num-cell">20</div>
+  </div>
+ 
+  <div style="text-align:center; font-size:13px; color:var(--ink-light); font-style:italic; margin-bottom:10px;">Read them left to right. What does it say?</div>
+  <div class="decoder-answer">_ _ _ _ _ _ _ _ _ _ _ _</div>
+  <div class="decoder-duh">Duh.<br>But You did it.<br>Now show this Voucher and Get Your Grand Prize and Certificate!</div>
+ 
+  <div class="rule"></div>
+ 
+  <div class="sig-line">
+    <div class="sig-block">
+      <div class="sig-blank"></div>
+      <div class="sig-label">Mom (Jaime)</div>
     </div>
-    <div class="hero-btns">
-      <a href="#scale" class="btn-gold">EXPLORE THE SCALE ↑</a>
-      <a href="#data" class="btn-outline">SEE THE DATA →</a>
+    <div class="sig-block">
+      <div class="sig-blank"></div>
+      <div class="sig-label">Dad (Jonathan)</div>
     </div>
   </div>
-</section>
-
-<section id="thoughts" style="position:relative;padding:52px 24px 56px;overflow:hidden;border-top:1px solid rgba(200,120,80,0.18);border-bottom:1px solid rgba(200,120,80,0.12);">
-
-  <!-- Warm glow background -->
-  <div style="position:absolute;inset:0;background:#06080f;z-index:0;"></div>
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 100% at 50% 110%,rgba(200,100,40,0.22) 0%,rgba(180,80,20,0.10) 45%,transparent 72%);z-index:1;pointer-events:none;"></div>
-  <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(200,100,40,0.35),transparent);z-index:2;"></div>
-
-  <div style="position:relative;z-index:3;max-width:560px;margin:0 auto;text-align:center;">
-
-    <!-- Branded header -->
-    <div style="margin-bottom:22px;">
-      <div style="display:inline-flex;align-items:baseline;gap:6px;margin-bottom:10px;">
-        <span style="font-size:11px;letter-spacing:0.12em;color:#8aa0b8;font-family:'Courier New',monospace;">Contact</span>
-        <span style="font-size:22px;font-weight:700;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;text-shadow:0 0 24px rgba(201,168,76,0.45),0 0 60px rgba(201,168,76,0.18);">US</span><span style="font-size:22px;letter-spacing:0.14em;color:#8aa0b8;font-family:'Courier New',monospace;">Now</span>
-      </div>
-      <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.5),transparent);margin:0 auto 14px;"></div>
-      <p style="font-size:13px;font-weight:300;color:#7a8fa8;font-family:'Georgia',serif;line-height:1.7;margin:0;">Leave feedback - Your thoughts, suggestions, and comments are welcome.<br>Name and Email Optional. No Strings. Help Build UsNow.</p>
-    </div>
-
-    <!-- Form -->
-    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:flex-end;">
-      <input id="t-email" type="email" placeholder="email (optional)"
-        style="background:rgba(255,255,255,0.06);border:none;border-bottom:1px solid rgba(200,120,60,0.35);padding:8px 10px;font-size:12px;color:#a0b4c8;font-family:'Courier New',monospace;outline:none;width:165px;border-radius:4px 4px 0 0;transition:border-color 0.2s;"
-        onfocus="this.style.borderBottomColor='rgba(201,168,76,0.7)'"
-        onblur="this.style.borderBottomColor='rgba(200,120,60,0.35)'"/>
-      <input id="t-note" type="text" placeholder="your thought..."
-        style="background:rgba(255,255,255,0.06);border:none;border-bottom:1px solid rgba(200,120,60,0.35);padding:8px 10px;font-size:12px;color:#a0b4c8;font-family:'Courier New',monospace;outline:none;width:240px;border-radius:4px 4px 0 0;transition:border-color 0.2s;"
-        onfocus="this.style.borderBottomColor='rgba(201,168,76,0.7)'"
-        onblur="this.style.borderBottomColor='rgba(200,120,60,0.35)'"/>
-      <button onclick="submitThought()"
-        style="font-size:9px;letter-spacing:0.22em;color:#c9a84c;background:transparent;border:1px solid rgba(200,120,60,0.5);padding:7px 18px;border-radius:16px;cursor:pointer;font-family:'Courier New',monospace;transition:all 0.2s;"
-        onmouseover="this.style.borderColor='#c9a84c';this.style.boxShadow='0 0 12px rgba(201,168,76,0.2)'"
-        onmouseout="this.style.borderColor='rgba(200,120,60,0.5)';this.style.boxShadow='none'">SEND →</button>
-    </div>
-    <div style="margin-top:14px;min-height:18px;">
-      <span id="t-confirm" style="font-size:10px;color:#4a9a70;font-family:'Courier New',monospace;letter-spacing:0.08em;opacity:0;transition:opacity 0.4s;">✓ Thanks for your input. If you left an email, you'll hear back.</span>
-    </div>
-
+  <div style="text-align:center; font-size:11px; color:var(--ink-light); margin-bottom:8px; font-style:italic;">(Both Signatures Required)</div>
+ 
+  <div class="confirm-line">VIDEO DOCUMENTATION CONFIRMED: &nbsp; YES &nbsp;/&nbsp; NO &nbsp; (circle one)</div>
+  <div class="date-line">
+    <span>DATE COMPLETED: <span class="date-blank"></span></span>
+    <span>TIME: <span class="date-blank" style="width:80px"></span></span>
   </div>
-</section>
-
-<!-- WHAT IS USNOW — mission statement -->
-<section id="about" style="background:#04080f;padding:64px 24px 72px;border-top:1px solid rgba(201,168,76,0.18);border-bottom:1px solid rgba(201,168,76,0.10);position:relative;overflow:hidden;">
-
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.04) 0%,transparent 70%);pointer-events:none;"></div>
-
-  <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;letter-spacing:4px;color:rgba(201,168,76,0.55);text-transform:uppercase;text-align:center;margin-bottom:28px;">WHAT IS THIS</div>
-
-  <div style="width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.6),transparent);margin:0 auto 24px;"></div>
-
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,8vw,62px);letter-spacing:3px;text-align:center;margin:0 0 48px;line-height:1;"><span style="color:#c9a84c;">Us</span><span style="color:#e8e0d0;">Now</span></h2>
-
-  <div style="max-width:680px;margin:0 auto;position:relative;z-index:1;">
-
-    <div style="position:absolute;left:-20px;top:6px;width:2px;height:calc(100% - 12px);background:linear-gradient(180deg,rgba(201,168,76,0.5),rgba(201,168,76,0.08));border-radius:2px;"></div>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      You are living inside more information than any human being in history has ever had to process. News, politics, history, science, war, money, culture — all of it arriving simultaneously, all of it demanding a reaction. Much of it is designed to make you <em>feel something</em>, even before you had time to <em>process anything</em>.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      USNow is a place to stop and see where we actually are. Not just in the news cycle, but in the larger picture — the one that includes everything that happened before this moment and everything that has unfolded from it. And where you fit inside all of that.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      We start with what's documented and work outward toward what it means.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 28px;">
-      The goal isn't to tell you what to think. It's to give you enough of the real picture that you can decide for yourself — not as a consumer of someone else's narrative, but as a citizen. As a neighbor. As a human, at your own pace, without all the noise.
-    </p>
-
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0;">
-      You're Early. This is just getting started and everything is always changing. Some sections have not been completed yet — but check back soon and share with others. Feel free to leave a note, your thoughts, or any proposed content additions or changes.
-    </p>
-
-  </div>
-
-  <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:52px;">
-    <div style="width:32px;height:1px;background:rgba(201,168,76,0.3);"></div>
-    <div style="width:5px;height:5px;border:1px solid rgba(201,168,76,0.5);transform:rotate(45deg);"></div>
-    <div style="width:32px;height:1px;background:rgba(201,168,76,0.3);"></div>
-  </div>
-
-</section>
-
-<footer>
-  <div class="inner" style="flex-direction:column;align-items:center;text-align:center;gap:20px;">
-    <div style="font-size:26px;font-weight:700;letter-spacing:0.22em;font-family:'Courier New',monospace;"><span style="color:#c9a84c;">Us</span><span style="color:#8aa0b8;">Now</span></div>
-    <div style="display:flex;gap:32px;flex-wrap:wrap;justify-content:center;align-items:baseline;">
-      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">PERSPECTIVE</span>
-      <span style="font-size:7px;color:#3a4a5a;font-family:'Courier New',monospace;">◆</span>
-      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">FOCUS</span>
-      <span style="font-size:7px;color:#3a4a5a;font-family:'Courier New',monospace;">◆</span>
-      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">SCALE</span>
-      <span style="font-size:7px;color:#3a4a5a;font-family:'Courier New',monospace;">◆</span>
-      <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">TRUST</span>
-    </div>
-    <div style="font-size:9px;letter-spacing:0.2em;color:#4a5a6a;font-family:'Courier New',monospace;">NON-PARTISAN &nbsp;·&nbsp; NON-DENOMINATIONAL &nbsp;·&nbsp; NON-NEGOTIABLE</div>
-    <div style="width:40px;height:1px;background:rgba(122,96,48,0.2);"></div>
-    <div style="font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:0.1em;">LAST UPDATED · APRIL 24, 2026</div>
-    <div style="font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:0.1em;line-height:2;">All Rights Reserved for Copyrightable Content &nbsp;©&nbsp; 2026 &nbsp;USNow.app</div>
-  </div>
-</footer>
 </div>
-
-<script src="layers.js"></script>
+ 
+<!-- ══════════════════ PAGE 23 — CERTIFICATE ══════════════════ -->
+<div class="doc" id="p23">
+  <div class="small-ornament" style="margin-bottom:16px;">✦ ✦ ✦</div>
+  <div class="cert-outer">
+    <div class="cert-title">✦ Official Prize Certificate ✦</div>
+    <div class="rule"></div>
+    <div class="cert-certifies">This certifies that</div>
+    <div class="cert-name">JACOB TATUN</div>
+    <div class="cert-body">
+      has successfully completed The Great Quest<br>
+      demonstrating acrobatics in academic excellence,<br>
+      personal finance literacy, mild physical effort,<br>
+      and the kind of determination that makes people proud.
+    </div>
+    <div class="rule"></div>
+    <div class="cert-prize">PRIZE AWARDED: $100.00 USD</div>
+    <div class="cert-clause">Subject to the Spending Wisely Clause as agreed in the Terms &amp; Conditions.</div>
+    <div class="cert-tagline">Spend it on something that lasts, grows, or matters.</div>
+    <div style="text-align:center; font-size:13px; color:var(--ink-mid); margin-top:6px; font-style:italic;">If you don't — you owe it back to yourself. With real income and interest!</div>
+    <div style="text-align:center; font-size:12px; color:var(--ink-light); margin-top:4px;">That's not a threat. That's the whole point.</div>
+    <div class="rule-double"></div>
+    <div class="cert-tagline" style="font-size:20px; color:var(--red);">JACOB T GOT THE LOOT</div>
+    <div class="cert-finance">
+      IF you invest $100 at a 7% average annual return (like an index fund),<br>
+      THEN in 10 years it becomes approximately $197. In 20 years? About $387. In 30 years? Nearly $761.<br>
+      IF you spend it wisely, you keep it. IF you don't, you owe yourself — with real income you earn.<br><br>
+      This is not only the official condition of your prize —<br>
+      this is how money works. You can work for it, but it can work for you too!
+    </div>
+  </div>
+  <div class="small-ornament" style="margin-top:16px;">✦ ✦ ✦</div>
+</div>
+ 
+<!-- ══════════════════ NAV ══════════════════ -->
+<div class="nav">
+  <button class="btn" id="btnBack" onclick="go(-1)" disabled>← Back</button>
+  <div style="display:flex;gap:8px;">
+    <button class="btn btn-skip" id="btnSkip3" onclick="go(3)">Skip 3</button>
+    <button class="btn btn-skip" id="btnSkip5" onclick="go(5)">Skip 5</button>
+  </div>
+  <button class="btn btn-continue" id="btnNext" onclick="go(1)">Continue →</button>
+</div>
+ 
 <script>
-const starsEl=document.getElementById('stars');
-for(let i=0;i<80;i++){const s=document.createElement('div');s.className='star';const sz=i%4===0?2:1;s.style.cssText=`left:${(i*43.1+11)%100}%;top:${(i*27.3+5)%58}%;width:${sz}px;height:${sz}px;opacity:${0.03+(i%5)*0.04};animation:tw ${3+(i%6)}s ease-in-out infinite;animation-delay:${(i%9)*0.35}s;`;starsEl.appendChild(s);}
-
-function getLayerGeometry(idx,W,H){const totalH=LAYERS.reduce((s,l)=>s+l.height,0);let acc=0;for(let i=0;i<idx;i++)acc+=LAYERS[i].height;const fromBottomPct=acc/totalH;const heightPct=LAYERS[idx].height/totalH;const yBottom=H-fromBottomPct*H;const yTop=H-(fromBottomPct+heightPct)*H;const t=idx/(LAYERS.length-1);const sagTop=H*(0.11-t*0.065);const sagBottom=H*(0.03-t*0.018);const taper=W*0.03;const path=[`M ${-taper} ${yBottom}`,`Q ${W/2} ${yBottom+sagBottom} ${W+taper} ${yBottom}`,`L ${W+taper} ${yTop}`,`Q ${W/2} ${yTop+sagTop} ${-taper} ${yTop}`,`Z`].join(' ');return{path,yTop,yBottom,sagTop,topPct:1-fromBottomPct-heightPct,heightPct};}
-
-function buildFoundationMoons(){
-  // Remove any existing moons
-  document.querySelectorAll('.foundation-moon').forEach(el=>el.remove());
-  const coreWrap=document.getElementById('core-wrap');
-  const coreBtnHeight=92;
-  const W=window.innerWidth;
-  const scale=Math.min(1, Math.max(0.38, W/780));
-  FOUNDATIONS.forEach(f=>{
-    const el=document.createElement('a');
-    el.className='foundation-moon';
-    el.href=f.href;
-    // Position: centered on core-btn center, offset horizontally
-    // core-wrap is centered, core-btn is 92px, core-orbs is 62px above
-    // We position relative to core-wrap using absolute positioning
-    const visiblePct=f.bottomPct/100; // how much shows above bottom
-    const pushDown=f.size*(1-visiblePct); // how many px below bottom edge
-    el.style.cssText=`
-      width:${f.size}px;
-      height:${f.size}px;
-      background:${f.grad};
-      border:2px solid ${f.border}bb;
-      --fg:${f.glow};
-      animation:ember 5s ease-in-out infinite;
-      animation-delay:${f.delay}s;
-      position:absolute;
-      left:calc(50% + ${Math.round(f.offsetX * scale)}px);
-      bottom:${-(f.size*(1-f.bottomPct/100))}px;
-      transform:translateX(-50%);
-      transition:transform 0.22s ease, box-shadow 0.22s ease;
-    `;
-    el.innerHTML=`<span style="font-size:9px;font-weight:700;letter-spacing:0.04em;color:#3a1e08;font-family:'Georgia','Times New Roman',serif;text-align:center;line-height:1.3;padding:4px;pointer-events:none;text-shadow:0 -1px 1px rgba(255,255,255,0.45),0 1px 0 rgba(0,0,0,0.4),0 2px 6px rgba(255,180,60,0.55),0 0 12px rgba(255,150,40,0.3),0 0 22px rgba(201,168,76,0.18);">${f.label.replace('\n','<br>')}</span>`;
-    el.addEventListener('mouseenter',()=>{
-      el.style.transform=`translateX(-50%) translateY(-8px) scale(1.09)`;
-      el.style.boxShadow=`0 0 ${f.size*0.7}px ${f.glow},0 0 ${f.size*0.35}px ${f.border}88`;
-    });
-    el.addEventListener('mouseleave',()=>{
-      el.style.transform=`translateX(-50%) translateY(0) scale(1)`;
-      el.style.boxShadow='';
-    });
-    var _fTmoved=false,_fTsx=0,_fTsy=0;
-    el.addEventListener('touchstart',function(e){
-      _fTsx=e.touches[0].clientX;_fTsy=e.touches[0].clientY;_fTmoved=false;
-      el.style.transform='translateX(-50%) translateY(-8px) scale(1.09)';
-      el.style.boxShadow='0 0 '+f.size*0.7+'px '+f.glow+',0 0 '+f.size*0.35+'px '+f.border+'88';
-    },{passive:true});
-    el.addEventListener('touchmove',function(e){
-      if(Math.abs(e.touches[0].clientX-_fTsx)>8||Math.abs(e.touches[0].clientY-_fTsy)>8){
-        _fTmoved=true;
-        el.style.transform='translateX(-50%) translateY(0) scale(1)';
-        el.style.boxShadow='';
-      }
-    },{passive:true});
-    el.addEventListener('touchend',function(e){
-      el.style.transform='translateX(-50%) translateY(0) scale(1)';
-      el.style.boxShadow='';
-    });
-    coreWrap.appendChild(el);
-  });
-}
-
-function orbIdleGlow(el,sz,color){el.style.boxShadow=sphereGlow(color,sz);}
-function orbHoverGlow(el,sz,color){el.style.cursor='pointer';el.style.transform='translate(-50%,-50%) scale(1.18)';el.style.zIndex='200';el.style.boxShadow=`0 0 ${sz*1.2}px ${color}cc,0 0 ${sz*0.6}px ${color}99,inset 0 0 ${sz*0.3}px rgba(0,0,0,0.3)`;el.style.border=`2px solid ${sphereBorder(color)}`;}
-function orbIdleReset(el,sz,color){el.style.transform='translate(-50%,-50%) scale(1)';el.style.zIndex='20';el.style.border=`1.5px solid ${sphereBorder(color)}`;orbIdleGlow(el,sz,color);}
-function orbActivePress(el,sz,color){el.style.transform='translate(-50%,-50%) scale(1.06)';el.style.boxShadow=`0 0 ${sz*0.7}px ${color}ff,0 0 ${sz*1.8}px ${color}55,inset 0 0 ${sz*0.5}px rgba(0,0,0,0.5)`;}
-function attachOrbEvents(orbEl,orb,openFn){
-  orbEl.style.cursor='pointer';
-  // Mouse
-  orbEl.addEventListener('mouseenter',()=>{orbHoverGlow(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('mouseleave',()=>{orbIdleReset(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('mousedown',()=>{orbActivePress(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('mouseup',()=>{orbHoverGlow(orbEl,orb.size,orb.color);});
-  orbEl.addEventListener('click',e=>{e.stopPropagation();e.stopImmediatePropagation();e.preventDefault();openFn();});
-  // Touch
-  let _tsx=0,_tsy=0,_tmoved=false;
-  orbEl.addEventListener('touchstart',e=>{e.stopPropagation();_tsx=e.touches[0].clientX;_tsy=e.touches[0].clientY;_tmoved=false;orbHoverGlow(orbEl,orb.size,orb.color);},{passive:true});
-  orbEl.addEventListener('touchmove',e=>{if(Math.abs(e.touches[0].clientX-_tsx)>8||Math.abs(e.touches[0].clientY-_tsy)>8){_tmoved=true;orbIdleReset(orbEl,orb.size,orb.color);}},{passive:true});
-  orbEl.addEventListener('touchend',e=>{e.stopPropagation();if(_tmoved){orbIdleReset(orbEl,orb.size,orb.color);return;}e.preventDefault();orbActivePress(orbEl,orb.size,orb.color);requestAnimationFrame(()=>{orbIdleReset(orbEl,orb.size,orb.color);openFn();});});
-}
-// Sphere gradient — light source from lower-left (ME orb direction)
-function sphereGrad(c){
-  // c = hex color e.g. "#b05050"
-  // Parse to get lighter and darker variants
-  const h=c.replace('#','');
-  const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
-  const lighten=(v,a)=>Math.min(255,Math.round(v+a));
-  const darken=(v,a)=>Math.max(0,Math.round(v-a));
-  // Specular: near-white hot spot
-  const spec=`rgba(255,255,255,0.76)`;
-  // Highlight: lightened color
-  const hl=`rgba(${lighten(r,70)},${lighten(g,70)},${lighten(b,53)},0.90)`;
-  // Base: the color itself
-  const base=`rgba(${r},${g},${b},1)`;
-  // Shadow: darkened
-  const shad=`rgba(${darken(r,60)},${darken(g,60)},${darken(b,50)},1)`;
-  // Deep shadow
-  const deep=`rgba(${darken(r,90)},${darken(g,90)},${darken(b,80)},1)`;
-  // Rim: slight color glow on opposite edge
-  const rim=`rgba(${lighten(r,40)},${lighten(g,40)},${lighten(b,50)},0.5)`;
-  // Light from lower-left (~30% 72%), shadow upper-right
-  return `radial-gradient(circle at 30% 68%, ${spec} 0%, ${spec} 4%, ${hl} 12%, ${base} 38%, ${shad} 68%, ${deep} 88%, ${rim} 100%)`;
-}
-function sphereBorder(c){
-  const h=c.replace('#','');
-  const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
-  return `rgba(${Math.min(255,r+60)},${Math.min(255,g+60)},${Math.min(255,b+50)},0.7)`;
-}
-function sphereGlow(c,sz){
-  return `0 0 ${sz*0.5}px ${c}88, 0 0 ${sz*0.2}px ${c}55, inset 0 0 ${sz*0.25}px rgba(0,0,0,0.4)`;
-}
-function buildScale(){const section=document.getElementById('scale');const W=section.offsetWidth||1000;const H=section.offsetHeight||700;
-// Desktop orb upsize: 1.0 on phones (<=640px), ramps to ~1.55 at desktop widths (>=1400px)
-const orbScale = W<=640 ? 1 : Math.min(1.55, 1 + (W-640)*0.55/760);
-const svg=document.getElementById('scale-svg');svg.setAttribute('viewBox',`0 0 ${W} ${H}`);let defs='<defs>';LAYERS.forEach((layer,idx)=>{defs+=`<linearGradient id="grad${idx}" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="${layer.color}" stop-opacity="${0.04+(idx/(LAYERS.length-1))*0.08}"/><stop offset="100%" stop-color="${layer.color}" stop-opacity="${0.11+(idx/(LAYERS.length-1))*0.22}"/></linearGradient>`;});defs+='<filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter></defs>';let paths='';LAYERS.forEach((layer,idx)=>{const g=getLayerGeometry(idx,W,H);paths+=`<g><path d="${g.path}" fill="url(#grad${idx})"/><path d="M ${-10} ${g.yTop} Q ${W/2} ${g.yTop+g.sagTop} ${W+10} ${g.yTop}" fill="none" stroke="${layer.color}" stroke-width="0.8" stroke-opacity="0.55" filter="url(#glow)"/></g>`;});svg.innerHTML=defs+paths;
-const bandsEl=document.getElementById('layer-bands');bandsEl.innerHTML='';LAYERS.forEach((layer,idx)=>{if(idx===0)return;const g=getLayerGeometry(idx,W,H);const div=document.createElement('div');div.className='layer-band';div.style.cssText=`top:${g.topPct*100}%;height:${g.heightPct*100}%;z-index:${idx+2};cursor:pointer;`;const fontSize=`clamp(9px,${1.1+idx*0.08}vw,13px)`;const labelBottom=layer.id==='family'?'0.75em':'6px';div.innerHTML=`<div class="layer-label-wrap" style="top:auto;bottom:${labelBottom};transform:translateX(-50%);z-index:150;pointer-events:none;"><div class="layer-main-label" style="font-size:${fontSize};color:${layer.color};text-shadow:0 0 20px ${layer.glow},0 0 40px ${layer.glow},0 1px 8px rgba(0,0,0,0.95),0 0 2px rgba(0,0,0,1);transition:all 0.25s ease;">${layer.label}</div></div>${layer.orbs.map(orb=>{const oz=Math.round(orb.size*orbScale);return `<div class="orb-node" data-orbid="${orb.id}" data-layeridx="${idx}" style="cursor:pointer;left:${orb.x}%;top:${orb.y}%;width:${oz}px;height:${oz}px;background:${sphereGrad(orb.color)};border:1.5px solid ${sphereBorder(orb.color)};box-shadow:${sphereGlow(orb.color,oz)};animation:${orb.pulse==='corrupt'?'pulseCorrupt 2.2s ease-in-out infinite':'orbf '+(3.2+(orb.size%4)*0.6)+'s ease-in-out infinite'};animation-delay:${(orb.size%8)*0.28}s;transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;"><span class="orb-label" style="font-size:${Math.max(8,oz*0.19)}px;">${orb.label}</span></div>`}).join('')}`;div.addEventListener('click',()=>openLayer(idx));div.querySelectorAll('.orb-node').forEach(orbEl=>{const layerIdx=parseInt(orbEl.dataset.layeridx);const orb=LAYERS[layerIdx].orbs.find(o=>o.id===orbEl.dataset.orbid);const scaledOrb={...orb,size:Math.round(orb.size*orbScale)};attachOrbEvents(orbEl,scaledOrb,()=>openOrb(orb,LAYERS[layerIdx]));});bandsEl.appendChild(div);});
-const coreOrbs=document.getElementById('core-orbs');coreOrbs.innerHTML='';const positions=[{left:'5%',top:'72%'},{left:'26%',top:'16%'},{left:'50%',top:'78%'},{left:'74%',top:'14%'},{left:'92%',top:'68%'}];LAYERS[0].orbs.forEach((orb,i)=>{const pos=positions[i]||positions[0];const sz=Math.round(orb.size*0.57*orbScale);const scaledOrb={...orb,size:sz};const el=document.createElement('div');el.className='core-satellite';el.style.cssText=`cursor:pointer;left:${pos.left};top:${pos.top};width:${sz}px;height:${sz}px;background:${sphereGrad(orb.color)};border:1.5px solid ${sphereBorder(orb.color)};box-shadow:${sphereGlow(orb.color,sz)};transition:transform 0.18s ease,box-shadow 0.18s ease,border 0.18s ease;`;el.innerHTML=`<span style="font-size:${Math.max(7,sz*0.18)}px;color:rgba(255,255,255,0.88);font-family:'Courier New',monospace;text-align:center;line-height:1.15;padding:2px;pointer-events:none;">${orb.label}</span>`;attachOrbEvents(el,scaledOrb,()=>openOrb(orb,LAYERS[0]));coreOrbs.appendChild(el);});
-buildFoundationMoons();}
-
-// Build flat card index by id for bottomPill cross-reference navigation
-window._cardIndex={};
-function _setIndex(id,entry){
-  var existing=window._cardIndex[id];
-  if(!existing||((!existing.desc||!existing.desc.trim())&&entry.desc&&entry.desc.trim())){
-    window._cardIndex[id]=entry;
+  const pages = document.querySelectorAll('.doc');
+  const total = pages.length;
+  let cur = 0;
+ 
+  const labels = ['Cover', 'Terms & Conditions',
+    'Stop #1','Stop #2','Stop #3','Stop #4','Stop #5',
+    'Stop #6','Stop #7','Stop #8','Stop #9','Stop #10',
+    'Stop #11','Stop #12','Stop #13','Stop #14','Stop #15',
+    'Stop #16','Stop #17','Stop #18','Stop #19','Stop #20',
+    'Decoder Voucher','Certificate'];
+ 
+  function go(dir) {
+    pages[cur].classList.remove('active');
+    let next = cur + dir;
+    // wrap to first if we go past last
+    if (next >= total) next = 0;
+    if (next < 0) next = 0;
+    cur = next;
+    pages[cur].classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    update();
   }
-}
-(function buildIndex(items,layerData,orbData){
-  if(!items)return;
-  items.forEach(item=>{
-    if(!item.id)return;
-    const color=item.color||(orbData&&orbData.color)||(layerData&&layerData.color)||'#888';
-    const hx=color.replace('#','');
-    const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
-    const glow=`rgba(${r},${g},${b},0.28)`;
-    const tag=(orbData&&orbData.label)||(layerData&&layerData.label)||'';
-    _setIndex(item.id,{color,glow,tag,scaleText:(layerData&&layerData.time)||null,title:item.label,sub:item.sub||null,desc:item.desc||'',links:item.links||[],topPills:item.topPills||[],bottomPills:item.bottomPills||[],isLayer:false,nodeId:item.id});
-    buildIndex(item.topPills,layerData,orbData||item);
-    buildIndex(item.bottomPills,layerData,orbData||item);
-  });
-})(LAYERS.flatMap(l=>[...l.orbs,...(l.topPills||[])]),null,null);
-// Deep-index layer topPill subcards
-LAYERS.forEach(function(l){
-  (l.topPills||[]).forEach(function(tp){
-    if(!tp||!tp.id)return;
-    var _c=(tp.color||l.color||'#888888');
-    var _hx=_c.replace('#','');
-    var _r=parseInt(_hx.slice(0,2),16),_g=parseInt(_hx.slice(2,4),16),_b=parseInt(_hx.slice(4,6),16);
-    _setIndex(tp.id,{color:_c,glow:'rgba('+_r+','+_g+','+_b+',0.28)',tag:l.label,scaleText:l.time,title:tp.label,sub:null,desc:tp.desc||'',links:tp.links||[],topPills:tp.topPills||[],bottomPills:tp.bottomPills||[],isLayer:false,nodeId:tp.id});
-    (function _wSub(pills){
-      if(!pills)return;
-      pills.forEach(function(p){
-        if(!p||!p.id)return;
-        var c2=(p.color||_c||'#888888');
-        var hx2=c2.replace('#','');
-        var r2=parseInt(hx2.slice(0,2),16),g2=parseInt(hx2.slice(2,4),16),b2=parseInt(hx2.slice(4,6),16);
-        _setIndex(p.id,{color:c2,glow:'rgba('+r2+','+g2+','+b2+',0.28)',tag:l.label,scaleText:l.time,title:p.label,sub:null,desc:p.desc||'',links:p.links||[],topPills:p.topPills||[],bottomPills:p.bottomPills||[],isLayer:false,nodeId:p.id});
-        _wSub(p.topPills);
-        _wSub(p.bottomPills);
-      });
-    })(tp.topPills);
-    (function _wSubB(pills){
-      if(!pills)return;
-      pills.forEach(function(p){
-        if(!p||!p.id)return;
-        var c2=(p.color||_c||'#888888');
-        var hx2=c2.replace('#','');
-        var r2=parseInt(hx2.slice(0,2),16),g2=parseInt(hx2.slice(2,4),16),b2=parseInt(hx2.slice(4,6),16);
-        _setIndex(p.id,{color:c2,glow:'rgba('+r2+','+g2+','+b2+',0.28)',tag:l.label,scaleText:l.time,title:p.label,sub:null,desc:p.desc||'',links:p.links||[],topPills:p.topPills||[],bottomPills:p.bottomPills||[],isLayer:false,nodeId:p.id});
-      });
-    })(tp.bottomPills);
-  });
-});
-LAYERS.forEach(layer=>{
-  _setIndex(layer.id,{color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub||null,desc:layer.desc||'',links:layer.links||[],topPills:layer.topPills||[],bottomPills:layer.bottomPills||[],isLayer:true,nodeId:layer.id});
-  layer.orbs.forEach(orb=>{
-    const hx=orb.color.replace('#','');
-    const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
-    _setIndex(orb.id,{color:orb.color,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc||'',links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,nodeId:orb.id});
-    (function indexDeep(pills,l,o){
-      if(!pills)return;
-      pills.forEach(p=>{
-        if(!p.id)return;
-        const c=p.color||o.color;const hx2=c.replace('#','');
-        const r2=parseInt(hx2.slice(0,2),16),g2=parseInt(hx2.slice(2,4),16),b2=parseInt(hx2.slice(4,6),16);
-        _setIndex(p.id,{color:c,glow:`rgba(${r2},${g2},${b2},0.28)`,tag:l.label,scaleText:l.time,title:p.label,sub:null,desc:p.desc||'',links:p.links||[],topPills:p.topPills||[],bottomPills:p.bottomPills||[],isLayer:false,nodeId:p.id});
-        indexDeep(p.topPills,l,o);
-        indexDeep(p.bottomPills,l,o);
-      });
-    })(orb.topPills,layer,orb);
-  });
-});
-
-function openLayer(idx){const layer=LAYERS[idx];window._currentLayer=layer;window._layerOrbsMap={};layer.orbs.forEach(o=>{window._layerOrbsMap[o.id]=o;});window._deepCards=window._deepCards||{};const orbPills=layer.orbs.map(orb=>{const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);window._deepCards['bp_'+orb.id]=JSON.stringify({color:c,glow:`rgba(${r},${g},${b},0.28)`,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,inProgress:orb.inProgress||false,subcard:orb.subcard?{...orb.subcard,orbColor:orb.color}:null});return {id:orb.id,label:orb.label,color:c};});const bottomPills=[...orbPills,...(layer.bottomPills||[])];cardNavOpen({color:layer.color,glow:layer.glow,tag:layer.label,scaleText:layer.time,title:layer.label,sub:layer.sub,desc:layer.desc,links:layer.links||[],topPills:layer.topPills||[],bottomPills:bottomPills,isLayer:true,inProgress:layer.inProgress||false,layer:layer});}
-function openOrb(orb,layer){const c=orb.color||layer.color;const hx=c.replace('#','');const r=parseInt(hx.slice(0,2),16),g2=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);const og=`rgba(${r},${g2},${b},0.28)`;cardNavOpen({color:c,glow:og,tag:layer.label,scaleText:layer.time,title:orb.label,sub:null,desc:orb.desc,links:orb.links||[],topPills:orb.topPills||[],bottomPills:orb.bottomPills||[],isLayer:false,inProgress:orb.inProgress||false});}
-
-// Unified card navigation stack
-window._cardStack=[];
-
-function isSafari(){
-  const ua=navigator.userAgent;
-  return /Safari/i.test(ua) && !/Chrome|CriOS|EdgiOS|FxiOS/i.test(ua);
-}
-function isZoomed(){
-  return !!(window.visualViewport && window.visualViewport.scale>1.02);
-}
-function applyZoomedSafariModalMode(){
-  const overlay=document.getElementById('modal-overlay');
-  if(!overlay) return;
-  if(isSafari() && isZoomed()) overlay.classList.add('zoomed-safari');
-  else overlay.classList.remove('zoomed-safari');
-}
-
-
-function cardNavOpen(data){
-  window._cardStack.push(data);
-  renderCard(data);
-  applyZoomedSafariModalMode();
-  document.getElementById('modal-overlay').classList.add('open');
-  document.body.style.overflow='hidden';
-  requestAnimationFrame(()=>{
-    const box=document.getElementById('modal-box');
-    if(box) box.scrollTop=0;
-  });
-}
-
-function cardNavBack(){
-  closeThoughtPanel();
-  window._cardStack.pop();
-  if(window._cardStack.length===0){
-    const overlay=document.getElementById('modal-overlay');
-    overlay.classList.remove('open');
-    overlay.classList.remove('zoomed-safari');
-    document.body.style.overflow='';
-  } else {
-    renderCard(window._cardStack[window._cardStack.length-1]);
-    applyZoomedSafariModalMode();
+ 
+  function update() {
+    const atEnd = cur === total - 1;
+    const nearEnd3 = (cur + 3 >= total); // skip3 would wrap
+    const nearEnd5 = (cur + 5 >= total); // skip5 would wrap
+ 
+    document.getElementById('btnBack').disabled = cur === 0;
+    document.getElementById('btnNext').textContent = atEnd ? 'Done ✦' : 'Continue →';
+ 
+    // Grey out skip buttons if the skip before them would already wrap
+    // i.e. skip3 greys if cur+2 >= total (meaning skip3 wraps but skip before doesn't cover it)
+    // Simpler rule: grey if going that many puts us at or past last page
+    document.getElementById('btnSkip3').disabled = nearEnd3;
+    document.getElementById('btnSkip5').disabled = nearEnd5;
+ 
+    document.getElementById('progLabel').textContent = labels[cur] || ('Page ' + (cur + 1));
+    document.getElementById('progFill').style.width = ((cur + 1) / total * 100) + '%';
   }
-}
-
-function cardNavClose(){
-  closeThoughtPanel();
-  window._cardStack=[];
-  const overlay=document.getElementById('modal-overlay');
-  overlay.classList.remove('open');
-  overlay.classList.remove('zoomed-safari');
-  document.body.style.overflow='';
-}
-
-if(window.visualViewport){
-  let _modalViewportResizeTimer=null;
-  const _onViewportChange=()=>{
-    if(!document.getElementById('modal-overlay').classList.contains('open')) return;
-    clearTimeout(_modalViewportResizeTimer);
-    _modalViewportResizeTimer=setTimeout(()=>{
-      applyZoomedSafariModalMode();
-    },120);
-  };
-  window.visualViewport.addEventListener('resize',_onViewportChange);
-  window.visualViewport.addEventListener('scroll',_onViewportChange);
-}
-
-function renderCard(data){
-  const box=document.getElementById('modal-box');
-  box.scrollTop=0;
-  // Colors
-  const hx=data.color.replace('#','');
-  const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
-  const lightenHex=(hex,amt)=>{
-    const h=hex.replace('#','');
-    const R=parseInt(h.slice(0,2),16),G=parseInt(h.slice(2,4),16),B=parseInt(h.slice(4,6),16);
-    const mix=(c)=>Math.min(255,Math.round(c+(255-c)*amt));
-    const toHex=(v)=>v.toString(16).padStart(2,'0');
-    return '#'+toHex(mix(R))+toHex(mix(G))+toHex(mix(B));
-  };
-  const lc=lightenHex(data.color,0.45);
-  document.getElementById('modal-drag').style.background=data.color+'77';
-  box.style.border=`3px solid rgba(${r},${g},${b},0.82)`;
-  box.style.boxShadow=`inset 0 0 0 1px rgba(255,255,255,0.04),inset 0 0 22px rgba(${r},${g},${b},0.065),0 0 0 1px rgba(${r},${g},${b},0.16),0 18px 46px rgba(0,0,0,0.5),0 0 16px rgba(${r},${g},${b},0.14)`;
-  // Header — 2 lines for layer/orb cards (tag + Scale: time), 1 line for subcards
-  const tagEl=document.getElementById('modal-layer-tag');
-  tagEl.style.color=lc;
-  if(data.scaleText&&data.isLayer){
-    tagEl.innerHTML=`<span style="display:block;">${data.tag}</span><span style="display:block;font-size:8px;letter-spacing:0.18em;opacity:0.6;margin-top:2px;">Scale: ${data.scaleText}</span>`;
-  } else {
-    tagEl.textContent=data.tag;
-  }
-  // Close / Back button
-  const closeBtn=document.getElementById('modal-close');
-  const isRoot=window._cardStack.length<=1;
-  closeBtn.textContent=isRoot?'CLOSE':'← BACK';
-  closeBtn.style.color=lc;
-  closeBtn.style.border=`1px solid ${data.color}66`;
-  closeBtn.onmouseenter=()=>{closeBtn.style.background=`${data.color}22`;};
-  closeBtn.onmouseleave=()=>{closeBtn.style.background='transparent';};
-  // Title / subtitle / desc
-  document.getElementById('modal-title').textContent=data.title;
-  var _ipEl=document.getElementById('modal-inprogress');
-  if(!_ipEl){
-    _ipEl=document.createElement('div');
-    _ipEl.id='modal-inprogress';
-    _ipEl.style.cssText='display:none;font-size:9px;letter-spacing:0.28em;font-family:\'Courier New\',monospace;color:#c9a84c;border-top:1px solid rgba(201,168,76,0.25);border-bottom:1px solid rgba(201,168,76,0.25);padding:6px 0;margin-bottom:14px;text-align:center;opacity:0.8;';
-    document.getElementById('modal-title').parentNode.insertBefore(_ipEl,document.getElementById('modal-title'));
-  }
-  if(data.inProgress){_ipEl.style.display='block';_ipEl.textContent='\u2014  check back soon  ·  in progress  —';}
-  else{_ipEl.style.display='none';}
-  var _idEl=document.getElementById('modal-node-id');
-  if(_idEl){_idEl.style.color=lc;_idEl.textContent=data.nodeId?'#'+data.nodeId:'';}
-  const subEl=document.getElementById('modal-sub');
-  if(data.sub){subEl.style.color=lc;subEl.style.opacity='0.9';subEl.textContent=data.sub;subEl.style.display='block';}else{subEl.style.display='none';}
-  document.getElementById('modal-desc').textContent=data.desc;
-  // TOP PILLS — topPills[] array + legacy subcard
-  const topSection=document.getElementById('modal-toppills-section');
-  const topList=document.getElementById('modal-toppills-list');
-  let topPills=[];
-  if(data.topPills&&data.topPills.length>0){
-    window._deepCards=window._deepCards||{};
-    data.topPills.forEach(d=>{
-      const c=d.color||data.color;const cl=lightenHex(c,0.45);
-      const key='dp_'+d.id;
-      window._deepCards[key]=JSON.stringify({color:c,glow:data.glow,tag:data.title,scaleText:null,title:d.label,sub:null,desc:d.desc||'',links:d.links||[],bottomPills:d.bottomPills||[],topPills:d.topPills||[],isLayer:false});
-      topPills.push(`<span class="modal-orb-tag" style="color:${cl};background:${c}28;border:1px solid ${c}66;" onclick="cardNavOpen(JSON.parse(window._deepCards['${key}']));"><span class="modal-orb-dot" style="background:${sphereGrad(c)};border:1px solid ${sphereBorder(c)};"></span>${d.label}</span>`);
-    });
-  }
-  if(topPills.length>0){topSection.style.display='block';topList.innerHTML=topPills.join('');}else{topSection.style.display='none';}
-  // BOTTOM PILLS — uniform across all card types; layer cards pre-build entries in openLayer
-  const botSection=document.getElementById('modal-bottompills-section');
-  const botList=document.getElementById('modal-bottompills-list');
-  let botPills=[];
-  const bpSource=data.bottomPills||[];
-  if(bpSource.length>0){
-    window._deepCards=window._deepCards||{};
-    botPills=bpSource.map(o=>{
-      // Resolve from card index first — gets full card with correct color and content
-      const resolved=(window._cardIndex&&window._cardIndex[o.id])||{color:o.color||data.color,glow:data.glow,tag:data.title,scaleText:null,title:o.label,sub:null,desc:o.desc||'',links:o.links||[],topPills:o.topPills||[],bottomPills:o.bottomPills||[],isLayer:false};
-      const resolvedColor=resolved.color||data.color;
-      const bg=resolvedColor+'28';const border=resolvedColor+'66';const ol=lightenHex(resolvedColor,0.45);
-      const key='bp_idx_'+o.id;
-      window._deepCards[key]=JSON.stringify(resolved);
-      return `<span class="modal-orb-tag" style="color:${ol};background:${bg};border:1px solid ${border};" onclick="cardNavOpen(JSON.parse(window._deepCards['${key}']));"><span class="modal-orb-dot" style="background:${sphereGrad(resolvedColor)};border:1px solid ${sphereBorder(resolvedColor)};"></span>${o.label}</span>`;
-    });
-  }
-  if(botPills.length>0){botSection.style.display='block';const bpLbl=document.getElementById('modal-bottompills-label');if(bpLbl){bpLbl.style.color=lc;}botList.innerHTML=botPills.join('');}else{botSection.style.display='none';}
-  // OTHER LINKS & CONNECTIONS — links[] merged with beyond[] (tagged items shown with tag)
-  const linksDiv=document.getElementById('modal-links');
-  document.getElementById('modal-links-label').style.color=lc;
- const allLinks=[...(data.links||[]),...(data.beyond||[])];
-  if(allLinks.length>0){
-    linksDiv.style.display='block';
-    document.getElementById('modal-links-list').innerHTML=allLinks.map(l=>{
-      const isTracker=l.url&&l.url.includes('corruption_tracker');
-      if(isTracker){return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link" style="color:#f0a060;border:1px solid #d4621a88;background:rgba(212,98,26,0.12);animation:pulseCorrupt 2.2s ease-in-out infinite;font-weight:700;letter-spacing:0.12em;" onmouseenter="this.style.background='rgba(212,98,26,0.22)';this.style.borderColor='#f0a060cc';" onmouseleave="this.style.background='rgba(212,98,26,0.12)';this.style.borderColor='#d4621a88';"><span style="opacity:1;">◆</span> ${l.label}</a>`;}
-      return `<a href="${l.url}" target="_blank" rel="noreferrer" class="modal-link"><span style="font-size:18px;line-height:1;">${l.emoji||'🔗'}</span><div><div style="font-size:12px;color:#f0ece4;font-family:'Georgia',serif;line-height:1.3;">${l.label}</div>${l.tag?`<div style="font-size:8px;color:#5a6a7a;font-family:'Courier New',monospace;letter-spacing:0.14em;margin-top:2px;">${l.tag}</div>`:''}</div></a>`;
-    }).join('');
-  }else{linksDiv.style.display='none';}
-}
-
-function closeModal(){cardNavClose();}
-function closeSubcard(){cardNavBack();}
-
-function submitThought(){
-  const note=document.getElementById('t-note').value.trim();
-  if(!note){document.getElementById('t-note').style.borderBottomColor='rgba(212,98,26,0.7)';document.getElementById('t-note').focus();return;}
-  const ENDPOINT='https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
-  fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:document.getElementById('t-email').value||'anonymous',topic:note,why:'',sources:'',submitted:new Date().toISOString()})});
-  document.getElementById('t-email').value='';document.getElementById('t-note').value='';
-  const c=document.getElementById('t-confirm');c.style.opacity='1';setTimeout(()=>c.style.opacity='0',3000);
-}
-
-
-
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){
-    const panel=document.getElementById('thought-panel');
-    if(panel.classList.contains('open')) closeThoughtPanel();
-    else cardNavBack();
-  }
-});
-
-// ── Thought? panel ──
-const LOG_ENDPOINT='https://script.google.com/macros/s/AKfycbwgKSDLQT9c5L4sz4g791w4C_fT9M8zV9r3PlnzyFaAqhigD0Cg265fI17QLoEp-83Q/exec';
-
-function openThoughtPanel(){
-  const panel=document.getElementById('thought-panel');
-  const box=document.getElementById('modal-box');
-  // Pull current card context
-  const stack=window._cardStack||[];
-  const current=stack[stack.length-1]||{};
-  const nodeId=current.nodeId||'';
-  const nodeLabel=current.title||'';
-  const color=current.color||'#c9a84c';
-  const hx=color.replace('#','');
-  const r=parseInt(hx.slice(0,2),16),g=parseInt(hx.slice(2,4),16),b=parseInt(hx.slice(4,6),16);
-  const lc=(()=>{const mix=(c)=>Math.min(255,Math.round(c+(255-c)*0.45));const toHex=(v)=>v.toString(16).padStart(2,'0');return '#'+toHex(mix(r))+toHex(mix(g))+toHex(mix(b));})();
-  // Set hidden fields
-  document.getElementById('tp-node-id').value=nodeId;
-  document.getElementById('tp-node-label').value=nodeLabel;
-  // Style panel to match card color
-  panel.style.background=`linear-gradient(160deg, rgba(${r},${g},${b},0.10) 0%, #0c1228 100%)`;
-  panel.style.borderTop=`1px solid rgba(${r},${g},${b},0.22)`;
-  // Context tag
-  const ctxTag=document.getElementById('tp-context-tag');
-  ctxTag.style.color=lc;
-  ctxTag.textContent=nodeLabel ? `THE LOG · ${nodeLabel.toUpperCase()}` : 'THE LOG';
-  // Headline color
-  document.getElementById('tp-headline').style.color='#f0ece4';
-  // Divider color
-  document.getElementById('tp-divider').style.borderColor=color;
-  // Inputs border color on focus via CSS already; tint placeholder
-  ['tp-name','tp-thought'].forEach(id=>{
-    const el=document.getElementById(id);
-    el.style.borderBottomColor=`rgba(${r},${g},${b},0.3)`;
-    el.addEventListener('focus',()=>el.style.borderBottomColor=`rgba(201,168,76,0.8)`,{once:false});
-    el.addEventListener('blur',()=>el.style.borderBottomColor=`rgba(${r},${g},${b},0.3)`,{once:false});
-  });
-  // Send button color
-  const sendBtn=document.querySelector('.tp-send');
-  sendBtn.style.color=lc;
-  sendBtn.style.borderColor=`rgba(${r},${g},${b},0.5)`;
-  // Confirm back button color
-  const confirmBack=document.getElementById('tp-confirm-back-btn');
-  confirmBack.style.color=lc;
-  confirmBack.style.border=`1px solid rgba(${r},${g},${b},0.35)`;
-  // Reset confirm state
-  document.getElementById('tp-confirm').classList.remove('show');
-  document.querySelector('.tp-actions').style.display='flex';
-  document.querySelectorAll('.tp-field').forEach(f=>f.style.display='flex');
-  document.getElementById('tp-thought').value='';
-  document.getElementById('tp-name').value='';
-  // Hide card content behind panel
-  const cardContent=['card-nav-bar','modal-layer-tag','modal-title','modal-sub','modal-toppills-section','modal-desc','modal-bottompills-section','modal-links','modal-inprogress','modal-node-id'];
-  cardContent.forEach(id=>{const el=document.getElementById(id);if(el)el.style.visibility='hidden';});
-  // Show panel, scroll to top
-  panel.classList.add('open');
-  box.scrollTop=0;
-}
-
-function closeThoughtPanel(){
-  document.getElementById('thought-panel').classList.remove('open');
-  // Restore card content
-  const cardContent=['card-nav-bar','modal-layer-tag','modal-title','modal-sub','modal-toppills-section','modal-desc','modal-bottompills-section','modal-links','modal-inprogress','modal-node-id'];
-  cardContent.forEach(id=>{const el=document.getElementById(id);if(el)el.style.visibility='';})
-  const box=document.getElementById('modal-box');
-  if(box) box.scrollTop=0;
-}
-
-function submitToLog(){
-  const thought=document.getElementById('tp-thought').value.trim();
-  if(!thought){
-    document.getElementById('tp-thought').focus();
-    document.getElementById('tp-thought').style.borderBottomColor='rgba(212,98,26,0.8)';
-    return;
-  }
-  const payload={
-    name: document.getElementById('tp-name').value.trim()||'Anonymous',
-    topic: document.getElementById('tp-node-label').value||'General',
-    nodeId: document.getElementById('tp-node-id').value||'',
-    why: thought,
-    sources: 'The Log',
-    submitted: new Date().toISOString()
-  };
-  fetch(LOG_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-  // Show confirmation
-  document.querySelector('.tp-actions').style.display='none';
-  document.querySelectorAll('.tp-field').forEach(f=>f.style.display='none');
-  const confirm=document.getElementById('tp-confirm');
-  const stack=window._cardStack||[];
-  const current=stack[stack.length-1]||{};
-  document.getElementById('tp-confirm-title').textContent=`Received.`;
-  confirm.classList.add('show');
-}
-const _days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];const _months=['January','February','March','April','May','June','July','August','September','October','November','December'];const _now=new Date();document.getElementById('hero-date').textContent=`${_days[_now.getDay()].toUpperCase()} · ${_months[_now.getMonth()].toUpperCase()} ${_now.getDate()}, ${_now.getFullYear()}`;
-buildScale();
-let resizeTimer;
-window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(buildScale,120);});
-</script>
-
-<style>
-/* ── Thought? panel ── */
-#thought-panel{display:none;position:absolute;inset:0;border-radius:28px 28px 18px 18px;z-index:10;padding:72px 26px 28px;overflow-y:auto;-webkit-overflow-scrolling:touch;top:0;left:0;right:0;bottom:0;}
-#thought-panel.open{display:flex;flex-direction:column;gap:18px;}
-.tp-eyebrow{font-size:9px;letter-spacing:0.35em;font-family:'Courier New',monospace;opacity:0.6;text-transform:uppercase;}
-.tp-headline{font-size:clamp(20px,4.5vw,26px);font-weight:400;font-family:'Georgia',serif;line-height:1.25;margin:0;}
-.tp-divider{height:1px;border:none;opacity:0.18;margin:2px 0;}
-.tp-copy{font-size:14px;line-height:1.8;font-family:'Georgia',serif;opacity:0.82;margin:0;}
-.tp-field{display:flex;flex-direction:column;gap:7px;}
-.tp-label{font-size:9px;letter-spacing:0.22em;font-family:'Courier New',monospace;opacity:0.55;text-transform:uppercase;}
-.tp-input{background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid rgba(255,255,255,0.18);padding:10px 4px;font-size:14px;font-family:'Georgia',serif;color:#e4eef8;outline:none;border-radius:0;width:100%;transition:border-color 0.2s;resize:none;}
-.tp-input:focus{border-bottom-color:rgba(201,168,76,0.8);}
-.tp-input::placeholder{opacity:0.35;}
-.tp-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:4px;}
-.tp-send{font-size:9px;letter-spacing:0.22em;font-family:'Courier New',monospace;font-weight:700;padding:10px 26px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid rgba(201,168,76,0.6);color:#c9a84c;background:rgba(201,168,76,0.06);}
-.tp-send:hover{background:rgba(201,168,76,0.14);border-color:#c9a84c;box-shadow:0 0 14px rgba(201,168,76,0.2);}
-.tp-back{font-size:9px;letter-spacing:0.18em;font-family:'Courier New',monospace;padding:10px 18px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;color:rgba(255,255,255,0.35);background:transparent;}
-.tp-back:hover{color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);}
-.tp-confirm{text-align:center;padding:28px 0 16px;display:none;flex-direction:column;gap:10px;align-items:center;}
-.tp-confirm.show{display:flex;}
-.tp-confirm-mark{font-size:28px;opacity:0.9;}
-.tp-confirm-title{font-size:16px;font-family:'Georgia',serif;letter-spacing:0.03em;}
-.tp-confirm-sub{font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.1em;opacity:0.5;}
-.tp-confirm-back{margin-top:8px;font-size:9px;letter-spacing:0.2em;font-family:'Courier New',monospace;padding:9px 22px;border-radius:18px;cursor:pointer;background:transparent;transition:all 0.2s;}
-.tp-confirm-back:hover{opacity:1;}
-
-.glory-word{font-style:italic;border-bottom:1px dotted rgba(201,168,76,0.35);cursor:pointer;transition:border-color 0.2s,color 0.2s;}
-.glory-word:hover{border-bottom-color:rgba(201,168,76,0.85);color:#e0c060;}
-#glory-pop{display:none;position:fixed;z-index:9000;background:linear-gradient(160deg,#0d1525,#070c1a);border:1px solid rgba(201,168,76,0.4);border-radius:10px;padding:14px 16px;max-width:280px;box-shadow:0 0 40px rgba(0,0,0,0.7),0 0 20px rgba(201,168,76,0.12);}
-#glory-pop .gp-word{font-size:13px;font-weight:700;letter-spacing:0.1em;color:#e0c060;font-family:'Courier New',monospace;margin-bottom:6px;}
-#glory-pop .gp-def{font-size:12px;line-height:1.6;color:#8898b0;font-family:'Georgia',serif;font-style:italic;margin-bottom:10px;}
-#glory-pop .gp-link{font-size:9px;letter-spacing:0.15em;color:rgba(201,168,76,0.6);font-family:'Courier New',monospace;text-decoration:none;transition:color 0.2s;}
-#glory-pop .gp-link:hover{color:#c9a84c;}
-</style>
-
-<div id="glory-pop">
-  <div class="gp-word" id="gp-word"></div>
-  <div class="gp-def" id="gp-def"></div>
-  <a class="gp-link" id="gp-link" href="compendium.html" target="_blank">→ THE WORLD COMPENDIUM</a>
-</div>
-
-<script src="glories.js"></script>
-<script>
-// ── Glory Highlights — definitions loaded from glories.js ──
-
-// Build regex from word list — whole words only, case insensitive
-const _words = Object.keys(GLORIES).sort((a,b)=>b.length-a.length);
-const _re = new RegExp('\\b(' + _words.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|') + ')\\b','gi');
-
-function applyGlories(root){
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-    acceptNode(n){
-      const p = n.parentElement;
-      if(!p) return NodeFilter.FILTER_REJECT;
-      const tag = p.tagName;
-      if(['SCRIPT','STYLE','A','BUTTON','INPUT'].includes(tag)) return NodeFilter.FILTER_REJECT;
-      if(p.classList&&p.classList.contains('glory-word')) return NodeFilter.FILTER_REJECT;
-      return NodeFilter.FILTER_ACCEPT;
-    }
-  });
-  const nodes=[];
-  while(walker.nextNode()) nodes.push(walker.currentNode);
-  nodes.forEach(node=>{
-    if(!_re.test(node.textContent)) return;
-    _re.lastIndex=0;
-    const frag = document.createDocumentFragment();
-    let last=0, m;
-    _re.lastIndex=0;
-    while((m=_re.exec(node.textContent))!==null){
-      if(m.index>last) frag.appendChild(document.createTextNode(node.textContent.slice(last,m.index)));
-      const span=document.createElement('span');
-      span.className='glory-word';
-      span.textContent=m[0];
-      span.dataset.glory=m[0].charAt(0).toUpperCase()+m[0].slice(1).toLowerCase();
-      frag.appendChild(span);
-      last=_re.lastIndex;
-    }
-    if(last<node.textContent.length) frag.appendChild(document.createTextNode(node.textContent.slice(last)));
-    node.parentNode.replaceChild(frag,node);
-  });
-}
-
-// Pop-up logic — capture phase so it fires before modal-box stopPropagation
-const pop=document.getElementById('glory-pop');
-document.addEventListener('click',e=>{
-  const t=e.target.closest('.glory-word');
-  if(t){
-    e.stopPropagation();
-    const key=t.dataset.glory;
-    const def=GLORIES[key]||GLORIES[Object.keys(GLORIES).find(k=>k.toLowerCase()===key.toLowerCase())];
-    if(!def) return;
-    document.getElementById('gp-word').textContent=key.toUpperCase();
-    document.getElementById('gp-def').textContent=def;
-    document.getElementById('gp-link').href='compendium.html#'+key.toLowerCase();
-    // Position near word
-    const r=t.getBoundingClientRect();
-    const pw=280, ph=120;
-    let left=r.left, top=r.bottom+8;
-    if(left+pw>window.innerWidth-10) left=window.innerWidth-pw-10;
-    if(top+ph>window.innerHeight-10) top=r.top-ph-8;
-    pop.style.left=Math.max(8,left)+'px';
-    pop.style.top=Math.max(8,top)+'px';
-    pop.style.display='block';
-    return;
-  }
-  if(!e.target.closest('#glory-pop')) pop.style.display='none';
-},true);
-
-// Apply to static content on load
-window.addEventListener('load',()=>{
-  ['hero','about','thoughts'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el) applyGlories(el);
-  });
-});
-
-// Apply to modal content after render
-const _origRender=window.renderCard;
-window.renderCard=function(data){
-  _origRender(data);
-  setTimeout(()=>{
-    const desc=document.getElementById('modal-desc');
-    if(desc) applyGlories(desc);
-  },50);
-};
-</script>
-<script>
-if('serviceWorker' in navigator){
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js');
-  });
-}
+ 
+  update();
 </script>
 </body>
 </html>
