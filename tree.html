@@ -12,6 +12,35 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 
+/* Landscape mobile — unlock scroll so full tree height is reachable */
+@media(max-height:500px) and (orientation:landscape){
+  html,body{
+    overflow-y:auto;
+    height:auto;
+    min-height:100%;
+  }
+  #topbar{
+    position:fixed; /* stays pinned at top while body scrolls */
+  }
+  #scene{
+    position:absolute;
+    top:58px; left:0; right:0;
+    bottom:auto;
+    overflow:visible;
+    /* Give the scene enough vertical room so the tree isn't squeezed.
+       100vw approximates the landscape height (former width) + topbar */
+    min-height:calc(100vw + 58px);
+  }
+  /* Modal still needs to clear the topbar in landscape */
+  #modal{
+    padding-top:68px;
+    align-items:flex-start;
+  }
+  #modal-card{
+    max-height:calc(100vh - 78px);
+  }
+}
+
 /* ── SCENE ───────────────────────────────────────── */
 #scene{
   position:fixed;
@@ -909,13 +938,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
    ===================================================== */
 
 const W = () => window.innerWidth;
-const H = () => {
-  if(window.innerHeight < window.innerWidth) {
-    const scene = document.getElementById('scene');
-    if(scene) return Math.max(scene.offsetHeight, window.innerWidth + 58);
-  }
-  return window.innerHeight;
-};
+const H = () => window.innerHeight;
 
 // ── SPHERE RENDERING (from live site) ─────────────
 
