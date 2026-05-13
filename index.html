@@ -924,7 +924,7 @@ function renderCard(data){
   }
   const subEl=document.getElementById('modal-sub');
   if(data.sub){subEl.style.color=lc;subEl.style.opacity='0.9';subEl.textContent=data.sub;subEl.style.display='block';subEl.style.marginBottom=(data.isLayer && data.nodeId!=='self')?'0':'14px';}else{subEl.style.display='none';}
-  document.getElementById('modal-desc').textContent=data.desc;
+  document.getElementById('modal-desc').innerHTML=data.desc?data.desc.split(/(?<=[.!?])\s{2,}(?=[A-Z])/).map(p=>'<p>'+p.trim()+'</p>').join(''):'';
   const descLabel=document.getElementById('modal-desc-label');
   if(descLabel){descLabel.style.display=data.desc?'block':'none';}
   // TOP PILLS — topPills[] array + legacy subcard
