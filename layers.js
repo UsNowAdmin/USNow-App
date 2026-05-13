@@ -167,7 +167,7 @@ const LAYERS = [
               {
                 "label": "Active Minds",
                 "url": "https://activeminds.org",
-                "emoji": "💬",
+                "emoji": "🎓",
                 "tag": "MIND"
               }
             ],
@@ -175,171 +175,1018 @@ const LAYERS = [
               {
                 "id": "c3d2_foundations",
                 "label": "Foundations of Functioning",
+                "color": "#2a9870",
                 "desc": "Before anyone names what is wrong, something has already happened. The outside world acts on a person before that person has any say in it. Family, community, circumstance, and chance shape the nervous system, the emotional baseline, and the lens through which everything that follows gets interpreted. This is not metaphor. It is biology and experience working together before the vocabulary exists to describe either.",
-                "links": [],
+                "links": [
+                  {
+                    "label": "CDC — Adverse Childhood Experiences",
+                    "url": "https://www.cdc.gov/violenceprevention/aces/",
+                    "emoji": "🧠",
+                    "tag": "MIND"
+                  },
+                  {
+                    "label": "APA — Attachment Theory",
+                    "url": "https://dictionary.apa.org/attachment-theory",
+                    "emoji": "🫀",
+                    "tag": "BODY"
+                  }
+                ],
                 "topPills": [
                   {
                     "id": "c3d2_forming_self",
                     "label": "The Forming Self",
+                    "color": "#2a9870",
                     "desc": "The self does not arrive whole. It emerges through contact. The I becomes legible only when there is a you — a face that responds, a voice that soothes or doesn't, a presence that is consistent or isn't. That first relational experience becomes the template not as conscious memory but as pattern. The body and mind learn what to expect from the world and organize themselves around that expectation. Attachment research has documented this with unusual clarity. The quality of early caregiving shapes not just emotional life but the nervous system's baseline — how threat is registered, how comfort is received, how close or far other people feel safe to be. These patterns form before language. They run underneath it for the rest of a person's life. This is not blame. Caregivers are themselves products of what was done to them. The patterns transmit across generations not through intention but through the only way anyone knows how to be. Understanding where a pattern comes from is the first step toward interrupting it.",
                     "links": [],
                     "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "crel_att",
+                    "label": "Attachment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s1",
+                    "label": "Identity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s1_selfimage",
+                    "label": "Self-Image",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "frc_id_self",
+                    "label": "Self-Identification",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_first_learning",
                     "label": "First Learning",
+                    "color": "#2a9870",
                     "desc": "What is learned first goes deepest. Not because it is more important in any objective sense but because it arrives before there is anything else to measure it against. It becomes the baseline. The default. The thing that feels like just the way things are. A child who learns early that certain people are dangerous, that certain feelings are unacceptable, that the self is unworthy or the world is unpredictable — carries that learning forward as structure. Later knowledge does not replace it. It grows from it. The correction lives on a branch of the original error. The trunk stays. This is why knowing better so often fails to feel better. A person can understand intellectually that they are safe and still brace for threat. Can know a belief is false and still act from it. The knowing lives in one place. The original wiring lives somewhere older and harder to reach — and it does not yield to argument alone.",
                     "links": [],
                     "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s4_childhood",
+                    "label": "Childhood Memory",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "crel_att",
+                    "label": "Attachment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_forming_self",
+                        "label": "The Forming Self",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_foundations",
+                        "label": "Foundations of Functioning",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "f_systems",
+                    "label": "Family Systems",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_foundations",
+                        "label": "Foundations of Functioning",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_first_learning",
+                        "label": "First Learning",
+                        "color": "#2a9870",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_stress_body",
                     "label": "Stress & the Body",
+                    "color": "#2a9870",
                     "desc": "Stress is not just psychological. Prolonged exposure to fear, instability, deprivation, or trauma does not stay in memory — it settles into the body. Into the nervous system's baseline. Into the thresholds for threat and calm that govern how a person moves through every ordinary day. The Adverse Childhood Experiences research made this concrete. Early stress — abuse, neglect, household instability, violence — has measurable long-term effects on physical and mental health that follow people across decades. Not as weakness. As biology. The body kept score before anyone thought to ask it questions. Chronic stress reshapes what feels normal. A nervous system calibrated for ongoing threat does not simply relax when the threat is gone. It stays ready. That readiness has a cost — in health, in relationships, in the capacity to tolerate uncertainty or closeness or rest. Recognizing stress as physical, not merely emotional, changes what recovery looks like. The body is part of the equation. Always has been.",
+                    "links": [
+                      {
+                        "label": "ACEs Aware",
+                        "url": "https://www.acesaware.org",
+                        "emoji": "🫀",
+                        "tag": "BODY"
+                      },
+                      {
+                        "label": "Polyvagal Institute",
+                        "url": "https://www.polyvagalinstitute.org",
+                        "emoji": "🫀",
+                        "tag": "BODY"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s4_trauma",
+                    "label": "Trauma",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s2",
+                    "label": "Body",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "f_sys_addict",
+                    "label": "Addiction",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_stress_body",
+                        "label": "Stress & the Body",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_treatment",
+                        "label": "Treatment Modalities",
+                        "color": "#3aa080",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_change_possible",
                     "label": "Change Is Possible",
+                    "color": "#2a9870",
                     "desc": "None of this is destiny. The brain retains more plasticity across the lifespan than was once believed. Patterns formed early can shift. Wiring laid down before language can be reached, slowly, through experience that contradicts it. But change requires more than information. More than insight. More than deciding to be different. It requires new experience — sustained, felt, relational. The same way the original patterns formed. Not through being told something new but through living something new long enough for the nervous system to update its expectations. This is slow work. It is not linear. It does not erase what came before. The trunk does not disappear. But the branches can grow so far from it that it becomes functionally irrelevant — present but no longer governing. That is not a small thing. For many people it is everything.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s4_trauma",
+                    "label": "Trauma",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "crel_att",
+                    "label": "Attachment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+              {
+                "id": "crel_att",
+                "label": "Attachment",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "s4_trauma",
+                "label": "Trauma",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "f_systems",
+                "label": "Family Systems",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "s4",
+                "label": "Memory",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d2_first_learning",
+                    "label": "First Learning",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_foundations",
+                    "label": "Foundations of Functioning",
+                    "color": "#2a9870",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   }
                 ],
-                "bottomPills": [],
+                "orbs": []
+              }
+                ],
                 "orbs": []
               },
               {
                 "id": "c3d2_diagnostic",
                 "label": "Diagnostic Classifications",
+                "color": "#1a7858",
                 "desc": "At some point someone had to decide what to call things. In American clinical practice that decision lives in one book — the Diagnostic and Statistical Manual of Mental Disorders, the DSM. It is what clinicians use to diagnose, insurers use to reimburse, and researchers use to define their work. It is not the world's framework. The World Health Organization maintains the International Classification of Diseases — the ICD — used by most countries. The two overlap substantially and differ in ways that matter. Neither is a biological map. There is no blood test, no scan that confirms a mental health diagnosis. These are organizational systems built by committees, revised over decades, shaped by the science and assumptions of the people who wrote them. That is not a dismissal. Naming has value. A person who spends years not knowing what is happening to them and then receives an accurate diagnosis often experiences it as relief. But the limits are real. The DSM was built on Western clinical populations. It assumes a particular kind of self, a particular relationship to symptom and function. Applied globally it fits imperfectly. Applied within diverse communities it misses things. Classification is a tool. These cards describe what lives inside the current framework — not as final truth, but as the most widely used map of genuinely difficult territory.",
-                "links": [],
+                "links": [
+                  {
+                    "label": "DSM-5-TR (APA)",
+                    "url": "https://www.psychiatry.org/psychiatrists/practice/dsm",
+                    "emoji": "📘",
+                    "tag": "MIND"
+                  },
+                  {
+                    "label": "ICD-11 (WHO)",
+                    "url": "https://icd.who.int/en",
+                    "emoji": "🌍",
+                    "tag": "MIND"
+                  }
+                ],
                 "topPills": [
                   {
                     "id": "c3d2_mood",
                     "label": "Mood",
+                    "color": "#1a7858",
                     "desc": "Mood disorders are conditions where the basic emotional register of a person's life becomes dysregulated — not in response to events, but as a persistent state that colors everything. Depression flattens experience. It withdraws energy and meaning. It affects how people think, sleep, eat, move, and relate. It is not a choice. It is one of the most treatable conditions in the DSM and one of the most undertreated in practice. Bipolar disorder involves cycling — elevated periods of energy and reduced sleep alternating with depressive episodes. The elevated states can feel productive before they become destabilizing. Diagnosis often takes years because the highs do not always present as illness. The categories are boundaries drawn for clinical utility, not hard biological lines. Two people with the same diagnosis can have very different lives. What they share is a disruption in the felt quality of being alive — and the knowledge that disruption can be addressed.",
+                    "links": [
+                      {
+                        "label": "NIMH — Bipolar Disorder",
+                        "url": "https://www.nimh.nih.gov/health/topics/bipolar-disorder",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s3_grief",
+                    "label": "Grief",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s3",
+                    "label": "Emotions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2",
+                        "label": "Mental Health",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_mood",
+                        "label": "Mood",
+                        "color": "#1a7858",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_anxiety",
                     "label": "Anxiety",
+                    "color": "#1a7858",
                     "desc": "Anxiety is the alarm running when there is no fire. The body mobilized for threat — heart rate, breath, vigilance — sustained past the point where it serves anyone. Everyone feels anxiety. The clinical question is whether it has become a persistent condition that shapes how a person moves through the world. Generalized anxiety is chronic worry cycling through catastrophic possibility without resolution. Panic disorder brings discrete episodes of intense physical fear that can be mistaken for cardiac events. Social anxiety makes ordinary interaction exhausting or impossible. Phobias attach intense fear to specific objects or situations. PTSD and OCD share the same locked-loop architecture — intrusive thought, compulsive response, the mind unable to exit through will alone. Anxiety disorders are the most common mental health conditions in the world. They are also among the most responsive to treatment. The gap between the two remains one of the largest in medicine.",
+                    "links": [
+                      {
+                        "label": "NIMH — Anxiety Disorders",
+                        "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      },
+                      {
+                        "label": "ADAA",
+                        "url": "https://adaa.org",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "crel_att_anx",
+                    "label": "Anxiety",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s3_fear",
+                    "label": "Fear",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_anxiety",
+                        "label": "Anxiety",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "crel_lo_anx",
+                    "label": "Social Anxiety",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_depression",
                     "label": "Depression",
+                    "color": "#1a7858",
                     "desc": "Depression is not sadness. Sadness is a response. Depression is a state — persistent, pervasive, disconnected from what is actually happening. Good news does not lift it. Rest does not resolve it. It shows up differently in different people. For some it is heaviness — slowed thought, distance from everything that once mattered. For others it is irritability, hollowness, a flatness that looks from the outside like disengagement. In children it often presents as physical complaints because the emotional language is not yet available or not yet safe. Depression is among the leading causes of disability worldwide. It affects people who appear by every external measure to be fine. Performing wellness while falling apart is one of its most common and least visible symptoms. It is also highly treatable. Therapy, medication, and newer approaches — ketamine-based treatment, transcranial magnetic stimulation — are expanding options for people who haven't responded to first-line care. Depression kills. The distance between effective treatment and the people who need it is not a clinical abstraction. It is urgent.",
+                    "links": [
+                      {
+                        "label": "NIMH — Depression",
+                        "url": "https://www.nimh.nih.gov/health/topics/depression",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      },
+                      {
+                        "label": "DBSA",
+                        "url": "https://www.dbsalliance.org",
+                        "emoji": "💙",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s3_grief",
+                    "label": "Grief",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "crel_lone",
+                    "label": "Loneliness & Belonging",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_depression",
+                        "label": "Depression",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_community_peer",
+                        "label": "Community & Peer",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "crel_lo_iso",
+                    "label": "Isolation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_depression",
+                        "label": "Depression",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_crisis",
+                        "label": "Crisis & Intervention",
+                        "color": "#cc4040",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_thinking",
                     "label": "Thinking",
+                    "color": "#1a7858",
                     "desc": "Some conditions affect not mood or anxiety but the structure of thought itself — the relationship between the mind and what is real. Schizophrenia is the most recognized and the most misrepresented. It involves psychosis — hallucinations, delusions, disorganized thinking. The cultural image bears almost no relationship to the lived experience. Violence is not a defining feature. Suffering is. Psychosis is a symptom, not a diagnosis. It appears in schizophrenia spectrum conditions, in severe mood disorders, in reactions to substances, in medical conditions affecting the brain. The experience and the cause are separate questions. These conditions carry the heaviest stigma in the DSM. People with schizophrenia spectrum conditions are more likely to be victims of violence than perpetrators. More likely to be isolated and without adequate housing than to be dangerous. The mind losing its grip on consensus reality is frightening to witness. It is more frightening to experience. What these people need is what everyone here needs — accurate information, accessible care, and a world that does not write them off at the door.",
+                    "links": [
+                      {
+                        "label": "NIMH — Schizophrenia",
+                        "url": "https://www.nimh.nih.gov/health/topics/schizophrenia",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      },
+                      {
+                        "label": "Schizophrenia & Psychosis Action Alliance",
+                        "url": "https://sczaction.org",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "e2_psych_mind",
+                    "label": "Mind",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s5",
+                    "label": "Perception",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_thinking",
+                        "label": "Thinking",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_internalized",
+                        "label": "Internalized Stigma",
+                        "color": "#1a8a60",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_personality",
                     "label": "Personality",
+                    "color": "#1a7858",
                     "desc": "Personality is the pattern — the consistent way a person relates to themselves, to others, to the world. For most people the pattern is flexible enough to adapt. Personality conditions are marked by patterns so rigid they create recurring difficulty across every area of life. Borderline personality involves intense emotional experience, unstable relationships, fear of abandonment, a fragile sense of self. It is also one of the conditions most associated with early trauma. The pattern may be disorder or adaptation. Often both. Narcissistic personality has entered casual language in ways that dilute its clinical meaning. Calling someone difficult a narcissist obscures a specific pattern — grandiosity, need for admiration, limited empathy — that causes real harm to the people around it and, less visibly, to the person carrying it. Personality patterns form early. They are not chosen. They can shift — with sustained work, appropriate support, and time. Fixed is not the same as permanent.",
+                    "links": [
+                      {
+                        "label": "NIMH — Borderline Personality Disorder",
+                        "url": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s1",
+                    "label": "Identity",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s4_trauma",
+                    "label": "Trauma",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_foundations",
+                        "label": "Foundations of Functioning",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_stress_body",
+                        "label": "Stress & the Body",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_first_learning",
+                        "label": "First Learning",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "f_sys_roles",
+                    "label": "Family Roles",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_development",
                     "label": "Development",
+                    "color": "#1a7858",
                     "desc": "Some conditions are not about what went wrong but about how a person is wired from the start. Autism describes people whose social communication, sensory experience, and processing differ from the statistical majority. The spectrum is genuinely wide. For many people the diagnosis is not a verdict — it is the first coherent explanation for why things that seem effortless for others have always required enormous effort. ADHD — once called ADD for presentations without hyperactivity — involves differences in attention regulation and executive function, not a deficit of effort or interest. People with ADHD can sustain intense focus on things that engage them. The difficulty is regulation — initiating and sustaining attention on demand rather than by interest. It is significantly underdiagnosed in women and girls whose presentations differ from the research base. Intellectual disability involves significant limitations in intellectual functioning and adaptive behavior present from early development. Most people with intellectual disability live in the community, hold relationships, and contribute in ways the clinical definition does not capture. Difference is not deficiency. The world built for one kind of mind excludes others by design. That is a design problem.",
+                    "links": [
+                      {
+                        "label": "Autism Society",
+                        "url": "https://autismsociety.org",
+                        "emoji": "🧩",
+                        "tag": "MIND"
+                      },
+                      {
+                        "label": "CHADD — ADHD",
+                        "url": "https://chadd.org",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      },
+                      {
+                        "label": "The Arc",
+                        "url": "https://thearc.org",
+                        "emoji": "💙",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s4_childhood",
+                    "label": "Childhood Memory",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s5_att",
+                    "label": "Attention",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+              {
+                "id": "e2_psych_mind",
+                "label": "Mind",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d2",
+                    "label": "Mental Health",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_psychoanalytic",
+                    "label": "Psychoanalytic",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_neuroscience",
+                    "label": "Neuroscience",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   }
                 ],
+                "orbs": []
+              },
+              {
+                "id": "s3",
+                "label": "Emotions",
+                "desc": "",
+                "links": [],
+                "topPills": [],
                 "bottomPills": [],
+                "orbs": []
+              }
+                ],
                 "orbs": []
               },
               {
                 "id": "c3d2_treatment",
                 "label": "Treatment Modalities",
+                "color": "#3aa080",
                 "desc": "There is no single treatment for mental health conditions. There is a landscape — wide, uneven, still being mapped. What works for one person does not work for another. What works at one point in a life may not work at another. The history of mental health treatment includes genuine breakthroughs and genuine harm, sometimes delivered by the same institutions in the same era. What has emerged is a range of approaches that address mental suffering from different angles — through thought, through relationship, through the body, through community, through chemistry, through the frontier of what science is only beginning to understand. None of them are complete answers. All of them have helped someone. The work is finding what fits.",
-                "links": [],
+                "links": [
+                  {
+                    "label": "SAMHSA Treatment Finder",
+                    "url": "https://findtreatment.gov",
+                    "emoji": "🧠",
+                    "tag": "MIND"
+                  }
+                ],
                 "topPills": [
                   {
                     "id": "c3d2_talk_therapy",
                     "label": "Talk Therapy",
+                    "color": "#3aa080",
                     "desc": "Conversation as treatment is not obvious. It became the foundation of modern mental health care because it works — not for everything, not for everyone, but reliably enough across enough conditions that it remains the most widely recommended first-line intervention for most of what the DSM names. Cognitive Behavioral Therapy — CBT — works with the relationship between thought, feeling, and behavior. The premise is that distorted thinking patterns drive emotional suffering and that changing the patterns changes the experience. It is structured, time-limited, and has strong evidence behind it for depression, anxiety, and a range of other conditions. Dialectical Behavior Therapy — DBT — combines cognitive approaches with mindfulness and radical acceptance. Originally developed for borderline personality, it has since proven useful far beyond its original population. EMDR uses bilateral stimulation to process traumatic memory in ways that reduce its grip on the present. It sounds strange. The evidence for it in trauma treatment is substantial. Psychodynamic therapy works more slowly, more deeply — exploring unconscious patterns, early experiences, and relational templates that shape current suffering. The research on therapeutic alliance is consistent — the quality of connection between therapist and client predicts outcome more reliably than technique.",
+                    "links": [
+                      {
+                        "label": "Psychology Today — Find a Therapist",
+                        "url": "https://www.psychologytoday.com/us/therapists",
+                        "emoji": "💬",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s3",
+                    "label": "Emotions",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "crel_att",
+                    "label": "Attachment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_medication",
                     "label": "Medication",
+                    "color": "#3aa080",
                     "desc": "Psychiatric medication does not fix mental illness. It changes the neurochemical conditions in which a person is trying to live — sometimes enough to make everything else possible. Antidepressants, mood stabilizers, antipsychotics, anti-anxiety medications, stimulants — each class works differently, targets different systems, carries different benefits and different costs. Finding the right medication at the right dose is rarely immediate. It is often a process of months, sometimes years, involving trial and adjustment. Medication is not a sign of failure or weakness. For some people it is a bridge — stabilizing enough to do the other work. For others it is long-term maintenance. Neither is more valid than the other. Cannabis and cannabinoid products are widely used for anxiety, depression, PTSD, and sleep. Evidence is mixed and highly individual — it helps some people and worsens symptoms in others, particularly around psychosis risk with heavy use. The pharmaceutical industry's role in shaping psychiatric diagnosis and treatment is real and worth knowing. Medications have been oversold, overprescribed, and prescribed to populations they were never tested on. That history does not negate the genuine relief medication has provided to millions of people. It does mean informed use matters.",
+                    "links": [
+                      {
+                        "label": "NAMI — Medication Information",
+                        "url": "https://www.nami.org/About-Mental-Illness/Treatments/Mental-Health-Medications",
+                        "emoji": "💊",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "c3d1",
+                    "label": "Medicine",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_body_movement",
                     "label": "Body & Movement",
+                    "color": "#3aa080",
                     "desc": "The body is not separate from mental health. It is the medium through which mental health is experienced — and one of the most direct routes toward changing it. Exercise has more evidence behind it as a treatment for depression and anxiety than most people realize. Regular physical movement changes brain chemistry, reduces stress hormones, improves sleep, and builds physical self-efficacy that transfers to emotional resilience. Somatic therapies work directly with the body's stored experience — the tension, the bracing, the physical patterns that encode psychological history. Approaches like Somatic Experiencing and trauma-sensitive yoga work on the premise that trauma lives in the body and has to be addressed there, not just talked about. Breathwork, nervous system regulation, sleep — these are entry points into the autonomic nervous system, the part of the body that governs the stress response and that conventional talk therapy often cannot reach directly. The body has always been part of this. The evidence now is too consistent to ignore.",
                     "links": [],
                     "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s2",
+                    "label": "Body",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s4_trauma",
+                    "label": "Trauma",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_community_peer",
                     "label": "Community & Peer",
+                    "color": "#3aa080",
                     "desc": "Recovery does not happen in isolation. It happens in relationship — and some of the most effective mental health support comes not from clinicians but from people who have been through it themselves. Peer support models place people with lived experience in active roles — as counselors, navigators, advocates, and companions for people currently in crisis or recovery. The evidence is strong. The mechanism is not complicated. Being met by someone who knows what this actually feels like from the inside is different from being met by someone who has only read about it. Group therapy offers something individual therapy cannot — the experience of not being alone in it. Hearing someone else describe what you have never been able to say out loud is its own form of treatment. Community mental health — at its best — embeds support in the places where people already live, work, and gather. The further treatment gets from ordinary life the harder it is to access and the less it addresses the conditions that produce suffering in the first place.",
+                    "links": [
+                      {
+                        "label": "Mental Health America — Peer Support",
+                        "url": "https://mhanational.org/peer-support",
+                        "emoji": "💬",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "community",
+                    "label": "Community & Culture",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   },
                   {
+                    "id": "crel_lone",
+                    "label": "Loneliness & Belonging",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "fam_tp6",
+                    "label": "Chosen Family",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  },
+                  {
                     "id": "c3d2_emerging",
                     "label": "Emerging Approaches",
+                    "color": "#3aa080",
                     "desc": "The frontier of mental health treatment is moving faster than at any point in decades. Some of what is being developed now will become standard care within a generation. Some will not survive the evidence. The honest position is attention without premature certainty. Ketamine and esketamine — delivered in clinical settings — have shown rapid and significant effects on treatment-resistant depression, including suicidal ideation. For people who have not responded to conventional medication this is not a small development. Psilocybin-assisted therapy has produced striking results in trials for depression, end-of-life anxiety, and addiction. The research is early but serious — Johns Hopkins, NYU, and Imperial College London are among the institutions running it. Transcranial Magnetic Stimulation — TMS — uses magnetic fields to stimulate specific brain regions and has become an established treatment for depression that hasn't responded to medication. Cannabis-based clinical research is expanding after decades of restricted access. Findings are condition-specific, ongoing, and often contested as much by policy as by science. The nervous system's plasticity is greater than previously understood. What was once considered treatment-resistant is being reconsidered. That is not hype. It is where the science is going.",
+                    "links": [
+                      {
+                        "label": "MAPS — Psychedelic Research",
+                        "url": "https://maps.org",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      },
+                      {
+                        "label": "Johns Hopkins Psychedelic Research",
+                        "url": "https://hopkinspsychedelic.org",
+                        "emoji": "🔬",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "e2",
+                    "label": "Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d1",
+                    "label": "Medicine",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+              {
+                "id": "e2_psych_mind",
+                "label": "Mind",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "c3d1",
+                "label": "Medicine",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "community",
+                "label": "Community & Culture",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d2_community_peer",
+                    "label": "Community & Peer",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_cultural_variation",
+                    "label": "Cultural Variation",
+                    "color": "#1a8a60",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   }
                 ],
-                "bottomPills": [],
+                "orbs": []
+              }
+                ],
                 "orbs": []
               },
               {
                 "id": "c3d2_crisis",
                 "label": "Crisis & Intervention — 988",
+                "color": "#cc4040",
                 "desc": "Crisis is not a diagnosis. It is a moment. The point where whatever a person has been carrying becomes too heavy to hold alone. It can arrive slowly or without warning. It does not always look like what people expect. Mental health crisis takes many forms — a person unable to function, unable to feel safe, unable to see a way forward. It can involve suicidal thinking, psychosis, severe dissociation, or simply a complete collapse of the ordinary capacity to cope. The common thread is that normal supports have stopped working and something else is needed right now. In the United States the primary crisis resource is 988 — call or text, 24 hours, connected to trained crisis counselors and local services. It has handled nearly 20 million contacts since launching in 2022. It is linked to measurable reductions in suicide deaths. It is also underfunded, unevenly staffed, and currently operating under federal cuts that have already eliminated specialized services for some of the highest-risk populations. The number works. The system around it is fragile. Beyond the phone line, crisis intervention includes mobile crisis teams, emergency psychiatric evaluation, short-term stabilization, and inpatient hospitalization when necessary. The quality and availability of these varies enormously by location, insurance status, and circumstance. Globally the picture is more uneven. Crisis infrastructure in many parts of the world is minimal or absent. Cultural responses to acute mental health crisis range from family containment to religious intervention to criminalization. What helps in a crisis is not always a system. Sometimes it is one person who stays. Who does not panic. Who does not try to fix everything but makes it possible to get through the next hour. That is not nothing. Often it is everything. 988 — call or text. Available now.",
                 "links": [
                   {
@@ -356,19 +1203,36 @@ const LAYERS = [
                   }
                 ],
                 "topPills": [],
+                "bottomPills": [
+              {
+                "id": "x2_fear",
+                "label": "Fear of Death",
+                "desc": "",
+                "links": [],
+                "topPills": [],
                 "bottomPills": [],
                 "orbs": []
               },
               {
-                "id": "c3d2_stigma",
-                "label": "Stigma & Culture",
-                "desc": "Mental health carries weight that has nothing to do with the condition itself. It carries what other people think. What communities allow. What families name and what they bury. The shame often arrives before the diagnosis. Sometimes it arrives instead of one. Stigma is not abstract ignorance. It is learned — passed down, reinforced, encoded early. A child watching an adult lower their voice when mental illness enters the conversation learns something permanent. Not a fact. A posture. Postures outlast facts by decades. Perception shapes everything here. How a condition is seen determines whether it gets named, treated, hidden, or punished. That perception varies by culture, generation, language, and who holds power in the room. It is not fixed. It has moved. It still has far to go. The cost of stigma is not symbolic. It is measured in people who suffer in silence, seek help too late, or never seek it at all.",
+                "id": "crel_lo_iso",
+                "label": "Isolation",
+                "desc": "",
                 "links": [],
-                "topPills": [
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "s3_shame",
+                "label": "Shame",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
                   {
-                    "id": "c3d2_stigma_itself",
-                    "label": "The Stigma Itself",
-                    "desc": "Stigma is a mark. Originally Greek — burned into the skin of slaves and criminals so everyone would know. The word carried that weight into medicine and never fully lost it. To be stigmatized is to be seen as less. As dangerous. As other. Mental health stigma operates through assumption. The person with schizophrenia is violent. The person with depression is weak. The person with addiction chose it. None of these hold as categorical truth. All of them circulate as common knowledge. It does not attach evenly. Some conditions have become almost socially tolerable. Others have not. The stigma clusters around whatever looks least like the dominant culture's idea of normal — and around the people who already carry other marks. The cost is concrete. People avoid diagnosis to avoid the label. They avoid treatment to avoid the record. They stay silent to avoid the consequence. Conditions worsen. Crises arrive without warning. Stigma is not one thing. It is institutional — written into law, medicine, employment. It is interpersonal — in how people are spoken to or avoided. It is cultural — in humor, in language, in what gets depicted and how. All three have to move for anything to change.",
+                    "id": "c3d2_stigma",
+                    "label": "Stigma & Culture",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
@@ -377,39 +1241,180 @@ const LAYERS = [
                   {
                     "id": "c3d2_internalized",
                     "label": "Internalized Stigma",
-                    "desc": "The outside voice becomes the inside voice. That is internalized stigma. It does not require a diagnosis to operate. It requires only exposure to the message — that struggling is weakness, that needing help is failure, that what is happening to you is something to be ashamed of. It arrives early and runs quietly. The person who learned that mental illness is something to hide does not unlearn that when they become the person struggling. They hide. They perform. They measure themselves against a standard they were handed and find themselves wanting. This is why people minimize. Why they say they're fine. Why they wait years before telling anyone. The barrier is not always access or cost — though those are real. Sometimes the barrier is the belief, installed before they had any say in it, that what they are experiencing does not deserve care. It distorts perception in both directions. Some cannot see how much they are struggling. Others cannot see anything but the struggle — the label colonizes the self. The person carrying internalized stigma learned something real from the world around them. The lesson was wrong. Unlearning it is not a matter of being told the truth once. It is slower than that. And it is possible.",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "c3d2_stigma",
+                "label": "Stigma & Culture",
+                "color": "#1a8a60",
+                "desc": "Mental health carries weight that has nothing to do with the condition itself. It carries what other people think. What communities allow. What families name and what they bury. The shame often arrives before the diagnosis. Sometimes it arrives instead of one. Stigma is not abstract ignorance. It is learned — passed down, reinforced, encoded early. A child watching an adult lower their voice when mental illness enters the conversation learns something permanent. Not a fact. A posture. Postures outlast facts by decades. Perception shapes everything here. How a condition is seen determines whether it gets named, treated, hidden, or punished. That perception varies by culture, generation, language, and who holds power in the room. It is not fixed. It has moved. It still has far to go. The cost of stigma is not symbolic. It is measured in people who suffer in silence, seek help too late, or never seek it at all.",
+                "links": [],
+                "topPills": [
+                  {
+                    "id": "c3d2_stigma_itself",
+                    "label": "The Stigma Itself",
+                    "color": "#1a8a60",
+                    "desc": "Stigma is a mark. Originally Greek — burned into the skin of slaves and criminals so everyone would know. The word carried that weight into medicine and never fully lost it. To be stigmatized is to be seen as less. As dangerous. As other. Mental health stigma operates through assumption. The person with schizophrenia is violent. The person with depression is weak. The person with addiction chose it. None of these hold as categorical truth. All of them circulate as common knowledge. It does not attach evenly. Some conditions have become almost socially tolerable. Others have not. The stigma clusters around whatever looks least like the dominant culture's idea of normal — and around the people who already carry other marks. The cost is concrete. People avoid diagnosis to avoid the label. They avoid treatment to avoid the record. They stay silent to avoid the consequence. Conditions worsen. Crises arrive without warning. Stigma is not one thing. It is institutional — written into law, medicine, employment. It is interpersonal — in how people are spoken to or avoided. It is cultural — in humor, in language, in what gets depicted and how. All three have to move for anything to change.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s3_shame",
+                    "label": "Shame",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "frc_st_class",
+                    "label": "Classification",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_internalized",
+                    "label": "Internalized Stigma",
+                    "color": "#1a8a60",
+                    "desc": "The outside voice becomes the inside voice. That is internalized stigma. It does not require a diagnosis to operate. It requires only exposure to the message — that struggling is weakness, that needing help is failure, that what is happening to you is something to be ashamed of. It arrives early and runs quietly. The person who learned that mental illness is something to hide does not unlearn that when they become the person struggling. They hide. They perform. They measure themselves against a standard they were handed and find themselves wanting. This is why people minimize. Why they say they're fine. Why they wait years before telling anyone. The barrier is not always access or cost — though those are real. Sometimes the barrier is the belief, installed before they had any say in it, that what they are experiencing does not deserve care. It distorts perception in both directions. Some cannot see how much they are struggling. Others cannot see anything but the struggle — the label colonizes the self. The person carrying internalized stigma learned something real from the world around them. The lesson was wrong. Unlearning it is not a matter of being told the truth once. It is slower than that. And it is possible.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "s3_shame",
+                    "label": "Shame",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s1_selfimage",
+                    "label": "Self-Image",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_internalized",
+                        "label": "Internalized Stigma",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_forming_self",
+                        "label": "The Forming Self",
+                        "color": "#2a9870",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_cultural_variation",
                     "label": "Cultural Variation",
+                    "color": "#1a8a60",
                     "desc": "Mental health is not experienced the same way across cultures. It is not named the same way. What one culture calls illness another calls spiritual crisis. What one community brings to a therapist another brings to an elder, a healer, a priest, or no one. No single framework owns this territory. Western clinical psychiatry developed one map. It is detailed, useful, and limited. It was built in specific places by specific people with specific assumptions about what a self is and how it breaks. Exported broadly, it fits imperfectly in places with different understandings of mind, community, and suffering. Within any society the variation runs deep. Communities carry their own histories with institutions, their own languages for pain, their own rules about what stays inside the family. Those histories are not obstacles to care. They are the context without which care cannot reach people. Stigma looks different depending on where you stand. In some communities it is acute and tied to family honor. In others it is wrapped in religious framework. In others it is embedded in generations of justified distrust of the systems offering help. None of these responses are irrational. All of them shape whether someone seeks care and whether the care available can actually meet them.",
                     "links": [],
                     "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "f_rc",
+                    "label": "Race & Ethnicity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "community",
+                    "label": "Community & Culture",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_shifting_ground",
                     "label": "Shifting Ground",
+                    "color": "#1a8a60",
                     "desc": "Something has changed. Not completely. Not evenly. But enough to be real. A generation is growing up in which mental health is part of ordinary conversation. Anxiety is named openly. Therapy is discussed without lowering the voice. Depression is not proof of deficiency — it is something that happens, the way other things happen, except invisible and harder to explain. The numbers reflect what the culture is beginning to say out loud. Close to half of all people will experience a diagnosable mental health condition at some point in their lives. That is not a crisis of weakness. It is what happens to human beings under the conditions of modern life — isolation, pressure, the erosion of the structures that once held people without them having to ask. Younger people disclose more, seek help earlier, build peer cultures around shared experience. They grew up with the language. They are less willing to perform wellness while falling apart. But the shift has edges. Access has not kept pace with willingness. The gap between naming the problem and getting help for it remains wide — and widest for the people who had the least to begin with. The ground has moved. The work is not finished. Both of those things are true at the same time.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "c2_ident",
+                    "label": "Identity & Attention",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   },
                   {
+                    "id": "community",
+                    "label": "Community & Culture",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  },
+                  {
                     "id": "c3d2_advocacy",
                     "label": "Advocacy & Movement",
+                    "color": "#1a8a60",
                     "desc": "People organized around this before it was acceptable to talk about it. They built something real. On college campuses, students began talking to students — building communities around mental health at the age when conditions most often first appear and when isolation runs deepest. Broader organizations built infrastructure — advocacy, policy, legal protection, funding. Others focused on access, on youth, on the hardest edges where crisis becomes something irreversible. The movement is also informal. The person who posts honestly about their experience and finds thousands who recognize themselves in it. The public figure who names their struggle and changes what is permissible for everyone watching. The family that talks at the table instead of around it. Movements do not fix systems overnight. They change what is sayable. That is where everything else begins.",
                     "links": [
                       {
                         "label": "Active Minds",
                         "url": "https://activeminds.org",
-                        "emoji": "💬",
+                        "emoji": "🎓",
                         "tag": "MIND"
                       },
                       {
@@ -438,75 +1443,316 @@ const LAYERS = [
                       }
                     ],
                     "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "community",
+                    "label": "Community & Culture",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
                     "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
                     "orbs": []
                   },
                   {
                     "id": "c3d2_language",
                     "label": "Language & Labeling",
+                    "color": "#1a8a60",
                     "desc": "Words do not just describe reality. They shape it. Disorder implies something has gone wrong with a person. It locates the problem inside the individual and implies deviation from a norm — a norm that is rarely examined, rarely neutral, and rarely arrived at without someone deciding whose experience counts as baseline. The shift from disorder to variation is not softening. It is a different argument about where the problem lives. A person wired differently in a world not designed for their wiring is not broken. The suffering is real. Some of it comes from the mismatch, not the person. Casual language carries damage too. Words used as punchlines flatten complex human experience and teach people to see certain kinds of minds as less than. People absorb those words about themselves. The harm is not hypothetical. But language also opens doors. When a person finds words for what they have been experiencing — when the unnamed thing finally gets named — something shifts. The isolation of having no language for your own interior is its own kind of suffering. Precise language, used carefully, is part of how people find their way toward understanding — their own and each other's. The words have always mattered here. Choosing them carefully is not decoration. In this territory it is everything.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "frc_eth_lang",
+                    "label": "Language & Identity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "frc_st_class",
+                    "label": "Classification",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+              {
+                "id": "s3_shame",
+                "label": "Shame",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "frc_struct",
+                "label": "Race as Structure",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "s1",
+                "label": "Identity",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d2_forming_self",
+                    "label": "The Forming Self",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_personality",
+                    "label": "Personality",
+                    "color": "#1a7858",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   }
                 ],
-                "bottomPills": [],
+                "orbs": []
+              }
+                ],
                 "orbs": []
               },
               {
                 "id": "c3d2_frameworks",
                 "label": "Other Frameworks",
+                "color": "#2a8068",
                 "desc": "The DSM is one way of organizing what happens to minds. It is the dominant clinical framework in the United States and influential globally. It is not the oldest. It is not the only one. And it does not have answers for everything it attempts to name. Human beings have been trying to understand mental suffering for as long as there have been human beings. Every culture, every tradition, every era has produced its own framework — its own account of why minds break, what that means, and what to do about it. Some of those frameworks have been displaced by Western clinical medicine. Some persist alongside it. Some are being rediscovered by the same neuroscience that once dismissed them. No single framework owns this territory. The most honest approach is to know what each one sees — and what each one misses.",
                 "links": [],
                 "topPills": [
                   {
                     "id": "c3d2_psychoanalytic",
                     "label": "Psychoanalytic",
+                    "color": "#2a8068",
                     "desc": "Psychoanalysis arrived before the DSM and shaped the ground it was built on. Freud's core claim — that much of mental life operates outside conscious awareness and that early experience leaves lasting marks — has proven more durable than many of his specific theories. The unconscious is no longer controversial. The mechanisms he proposed to explain it remain debated. Jung extended the framework outward — beyond the individual unconscious to a collective one, to archetypes, to the symbolic life of the psyche. His influence runs through depth psychology, through narrative therapy, through the way many people still reach for myth and story to make sense of inner experience. Psychoanalytic thought fell out of favor in academic psychiatry as medication and measurable outcomes became the standard. It never disappeared from practice. The insight that symptoms mean something — that they are communications from parts of the self that have no other voice — remains one of the most useful ideas in all of mental health.",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
+                    "bottomPills": [
                   {
-                    "id": "c3d2_neuroscience",
-                    "label": "Neuroscience",
-                    "desc": "The brain is the organ of the mind. What it means for how we understand and treat mental suffering is still being worked out. Neuroscience has reframed mental health conditions as patterns of brain activity, neural connectivity, and neurochemistry rather than purely psychological phenomena. Depression involves measurable changes in brain structure and function. Trauma leaves physical traces in the nervous system. The body is not a vehicle for the mind — it is the mind's medium. This framework has produced genuinely useful treatments — medications that reduce suffering for millions, brain stimulation approaches that help where other treatments fail, an understanding of stress and trauma that connects psychological experience to physical health in ways that demand to be taken seriously. It has also produced reductionism — the tendency to locate everything in the brain and lose the person in the process. A person is not just their neurochemistry. Context, meaning, relationship, and history shape the brain as much as the brain shapes them. The most honest neuroscience knows this.",
+                    "id": "e2_psych_mind",
+                    "label": "Mind",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   },
                   {
-                    "id": "c3d2_eastern_indigenous",
-                    "label": "Eastern & Indigenous",
-                    "desc": "Long before clinical diagnosis there were other ways of holding mental suffering. Many of them are still in use. Many of them work. Buddhist psychology offers one of the most sophisticated accounts of mind available — developed over two and a half millennia, focused on the nature of thought, the roots of suffering, and the possibility of liberation from habitual mental patterns. Mindfulness-based therapies now used in Western clinical settings draw directly from this tradition. Indigenous frameworks across cultures understand mental health as inseparable from community, land, spirit, and relational balance. Suffering is not located solely inside the individual — it reflects rupture in the web of relationships that holds a person. Healing is communal, not just personal. These frameworks were actively suppressed by colonization. Their persistence is its own form of resilience. Traditional healing practices — from Ayurvedic medicine to African traditional healing to curanderismo in Latin America — operate with their own coherent accounts of mental and emotional suffering. Dismissing them as primitive is itself a cultural assumption, not a clinical finding.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c3d2_spiritual",
-                    "label": "Spiritual & Religious",
-                    "desc": "For most of human history mental suffering was understood in spiritual terms. Possession, divine punishment, spiritual crisis, loss of soul — these are attempts to make meaning of experiences that resist purely material explanation. Faith traditions offer something clinical frameworks often cannot — a container for suffering that connects it to something larger than the individual. Meaning. Community. The sense that pain is not random but part of a story that extends beyond the present moment. For many people this is not a supplement to treatment. It is the primary frame through which their experience makes sense. Religious communities have also caused harm — stigmatizing mental illness as moral failure, substituting prayer for necessary care, or using spiritual authority to control rather than support. Both things are true. The framework is neither simply resource nor simply obstacle. It depends on how it is held and by whom. Spirituality and mental health treatment are not inherently in conflict. The most effective care often works with what a person already believes rather than around it.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c3d2_structural",
-                    "label": "Social & Structural",
-                    "desc": "Individual diagnosis locates the problem inside the person. The social and structural framework asks a different question — what kind of world produces this much suffering, and whose interests are served by calling it a disorder rather than a response? Poverty is a mental health condition. Not metaphorically — chronic economic insecurity produces measurable changes in stress, cognition, and emotional regulation. So does racism. So does housing instability, food insecurity, community violence, and the experience of being systematically excluded or devalued. These are not triggers for mental illness. They are causes. The structural framework does not dismiss individual treatment. It insists that treatment alone is insufficient when the conditions producing suffering remain unchanged. Medicating a person back into functioning in conditions that are making them sick is not neutral. It is a choice about where the intervention happens and who bears the cost of adaptation. The most honest mental health system acknowledges that some of what it treats is not pathology. It is the entirely rational response of human beings to conditions that were never designed for their flourishing.",
+                    "id": "s4",
+                    "label": "Memory",
+                    "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_neuroscience",
+                    "label": "Neuroscience",
+                    "color": "#2a8068",
+                    "desc": "The brain is the organ of the mind. What it means for how we understand and treat mental suffering is still being worked out. Neuroscience has reframed mental health conditions as patterns of brain activity, neural connectivity, and neurochemistry rather than purely psychological phenomena. Depression involves measurable changes in brain structure and function. Trauma leaves physical traces in the nervous system. The body is not a vehicle for the mind — it is the mind's medium. This framework has produced genuinely useful treatments — medications that reduce suffering for millions, brain stimulation approaches that help where other treatments fail, an understanding of stress and trauma that connects psychological experience to physical health in ways that demand to be taken seriously. It has also produced reductionism — the tendency to locate everything in the brain and lose the person in the process. A person is not just their neurochemistry. Context, meaning, relationship, and history shape the brain as much as the brain shapes them. The most honest neuroscience knows this.",
+                    "links": [
+                      {
+                        "label": "Society for Neuroscience",
+                        "url": "https://www.sfn.org",
+                        "emoji": "🧠",
+                        "tag": "MIND"
+                      }
+                    ],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "e2",
+                    "label": "Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "s2",
+                    "label": "Body",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e2_psych_mind",
+                    "label": "Mind",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_eastern_indigenous",
+                    "label": "Eastern & Indigenous",
+                    "color": "#2a8068",
+                    "desc": "Long before clinical diagnosis there were other ways of holding mental suffering. Many of them are still in use. Many of them work. Buddhist psychology offers one of the most sophisticated accounts of mind available — developed over two and a half millennia, focused on the nature of thought, the roots of suffering, and the possibility of liberation from habitual mental patterns. Mindfulness-based therapies now used in Western clinical settings draw directly from this tradition. Indigenous frameworks across cultures understand mental health as inseparable from community, land, spirit, and relational balance. Suffering is not located solely inside the individual — it reflects rupture in the web of relationships that holds a person. Healing is communal, not just personal. These frameworks were actively suppressed by colonization. Their persistence is its own form of resilience. Traditional healing practices — from Ayurvedic medicine to African traditional healing to curanderismo in Latin America — operate with their own coherent accounts of mental and emotional suffering. Dismissing them as primitive is itself a cultural assumption, not a clinical finding.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "x5_dharmic",
+                    "label": "Dharmic Religions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x5_africa_ind",
+                    "label": "African Spiritual Traditions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x5_am_lakota",
+                    "label": "Lakota & Plains Spirituality",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_spiritual",
+                    "label": "Spiritual & Religious",
+                    "color": "#2a8068",
+                    "desc": "For most of human history mental suffering was understood in spiritual terms. Possession, divine punishment, spiritual crisis, loss of soul — these are attempts to make meaning of experiences that resist purely material explanation. Faith traditions offer something clinical frameworks often cannot — a container for suffering that connects it to something larger than the individual. Meaning. Community. The sense that pain is not random but part of a story that extends beyond the present moment. For many people this is not a supplement to treatment. It is the primary frame through which their experience makes sense. Religious communities have also caused harm — stigmatizing mental illness as moral failure, substituting prayer for necessary care, or using spiritual authority to control rather than support. Both things are true. The framework is neither simply resource nor simply obstacle. It depends on how it is held and by whom. Spirituality and mental health treatment are not inherently in conflict. The most effective care often works with what a person already believes rather than around it.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x5_abrahamic",
+                    "label": "Abrahamic Religions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_structural",
+                    "label": "Social & Structural",
+                    "color": "#2a8068",
+                    "desc": "Individual diagnosis locates the problem inside the person. The social and structural framework asks a different question — what kind of world produces this much suffering, and whose interests are served by calling it a disorder rather than a response? Poverty is a mental health condition. Not metaphorically — chronic economic insecurity produces measurable changes in stress, cognition, and emotional regulation. So does racism. So does housing instability, food insecurity, community violence, and the experience of being systematically excluded or devalued. These are not triggers for mental illness. They are causes. The structural framework does not dismiss individual treatment. It insists that treatment alone is insufficient when the conditions producing suffering remain unchanged. Medicating a person back into functioning in conditions that are making them sick is not neutral. It is a choice about where the intervention happens and who bears the cost of adaptation. The most honest mental health system acknowledges that some of what it treats is not pathology. It is the entirely rational response of human beings to conditions that were never designed for their flourishing.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                  {
+                    "id": "f_class",
+                    "label": "Class",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "frc_struct",
+                    "label": "Race as Structure",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2",
+                    "label": "Economy & Money",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                    ],
+                    "orbs": []
+                  }
                 ],
+                "bottomPills": [
+              {
+                "id": "e2_psych_mind",
+                "label": "Mind",
+                "desc": "",
+                "links": [],
+                "topPills": [],
                 "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "x5",
+                "label": "Religion",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "e2",
+                "label": "Science",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              }
+                ],
                 "orbs": []
               }
             ],
@@ -1211,7 +2457,26 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d2_depression",
+                    "label": "Depression",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_mood",
+                    "label": "Mood",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -1828,7 +3093,26 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d2_first_learning",
+                    "label": "First Learning",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_forming_self",
+                    "label": "The Forming Self",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
@@ -4311,7 +5595,27 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_stigma",
+                        "label": "Stigma & Culture",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_structural",
+                        "label": "Social & Structural",
+                        "color": "#2a8068",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   }
                 ],
@@ -10152,7 +11456,17 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_anxiety",
+                        "label": "Anxiety",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
                   {
@@ -63127,7 +64441,26 @@ const LAYERS = [
                 "desc": "",
                 "links": [],
                 "topPills": [],
-                "bottomPills": [],
+                "bottomPills": [
+                  {
+                    "id": "c3d2_anxiety",
+                    "label": "Anxiety",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "c3d2_crisis",
+                    "label": "Crisis & Intervention",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
                 "orbs": []
               },
               {
