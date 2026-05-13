@@ -385,7 +385,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div id="modal-sub" style="position:static;opacity:1;transform:none;font-size:12px;font-family:'Courier New',monospace;letter-spacing:0.08em;margin-bottom:0;display:none;"></div>
     </div>
     <div id="modal-toppills-section" style="margin-bottom:18px;display:none;"><div class="modal-section-label">GO FURTHER</div><div id="modal-toppills-list"></div></div>
-    <div class="modal-section-label" id="modal-desc-label" style="display:none;">WHAT IT IS</div><p id="modal-desc"></p>
+    <div class="modal-section-label" id="modal-desc-label" style="display:none;">WHAT IT IS</div><div id="modal-desc"></div>
     <div id="modal-bottompills-section" style="margin-top:20px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-bottompills-label" id="modal-bottompills-label">RELATED CONNECTIONS</div><div id="modal-bottompills-list"></div></div>
     <div id="modal-links" style="margin-top:18px;border-top:1px solid rgba(128,128,128,0.1);padding-top:16px;display:none;"><div class="modal-links-label" id="modal-links-label">OFF-SITE CONNECTIONS</div><div id="modal-links-list" class="modal-links-grid"></div></div>
   </div>
@@ -924,7 +924,7 @@ function renderCard(data){
   }
   const subEl=document.getElementById('modal-sub');
   if(data.sub){subEl.style.color=lc;subEl.style.opacity='0.9';subEl.textContent=data.sub;subEl.style.display='block';subEl.style.marginBottom=(data.isLayer && data.nodeId!=='self')?'0':'14px';}else{subEl.style.display='none';}
-  document.getElementById('modal-desc').innerHTML=data.desc?data.desc.split(/(?<=[.!?])\s{2,}(?=[A-Z])/).map(p=>'<p>'+p.trim()+'</p>').join(''):'';
+  document.getElementById('modal-desc').innerHTML=data.desc?data.desc.split(/\n\n+/).map(p=>'<p>'+p.trim()+'</p>').join(''):'';
   const descLabel=document.getElementById('modal-desc-label');
   if(descLabel){descLabel.style.display=data.desc?'block':'none';}
   // TOP PILLS — topPills[] array + legacy subcard

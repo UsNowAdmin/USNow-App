@@ -2303,7 +2303,7 @@ function openModal(item, crumbLabels) {
     const sectionLabel = item._isLayer ? 'EXPLORE THIS LAYER' : (item.cardType === 'orb' ? 'INSIDE THIS ORB' : 'GO FURTHER');
     body += `<div class="modal-section">${sectionLabel}</div><div class="modal-pills">`;
     pills.slice(0,8).forEach(p => {
-      const pc = p.color || color;
+      const pc = color;
       const lcl = `rgba(${Math.min(255,parseInt(pc.replace('#','').slice(0,2),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(2,4),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(4,6),16)+50)},0.9)`;
       body += `<span class="modal-pill" style="color:${lcl};border-color:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16),0.4});background:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16)},0.12);" data-pill-id="${p.id}">${p.label}</span>`;
     });
@@ -2312,7 +2312,7 @@ function openModal(item, crumbLabels) {
 
   // Description
   if(item.desc) {
-    body += `<div class="modal-section">WHAT IT IS</div><div class="modal-desc">${item.desc.split(/(?<=[.!?])\s{2,}(?=[A-Z])/).map(p=>'<p>'+p.trim()+'</p>').join('')}</div>`;
+    body += `<div class="modal-section">WHAT IT IS</div><div class="modal-desc">${item.desc.split(/\n\n+/).map(p=>'<p>'+p.trim()+'</p>').join('')}</div>`;
   }
 
   // Bottom pills — RELATED CONNECTIONS (cross-links to other cards)
