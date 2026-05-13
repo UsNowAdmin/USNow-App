@@ -809,6 +809,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
   font-size:13.5px;line-height:1.8;
   color:rgba(255,255,255,0.72);
 }
+.modal-desc p{margin-bottom:1em;}
+.modal-desc p:last-child{margin-bottom:0;}
 .modal-pills{display:flex;flex-wrap:wrap;gap:7px;}
 .modal-pill{
   font-family:'JetBrains Mono',monospace;
@@ -2310,7 +2312,7 @@ function openModal(item, crumbLabels) {
 
   // Description
   if(item.desc) {
-    body += `<div class="modal-section">WHAT IT IS</div><div class="modal-desc">${item.desc}</div>`;
+    body += `<div class="modal-section">WHAT IT IS</div><div class="modal-desc">${item.desc.split(/(?<=[.!?])\s{2,}(?=[A-Z])/).map(p=>'<p>'+p.trim()+'</p>').join('')}</div>`;
   }
 
   // Bottom pills — RELATED CONNECTIONS (cross-links to other cards)
