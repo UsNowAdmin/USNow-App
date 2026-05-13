@@ -177,3 +177,6 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   grid-template-columns: 1fr 1fr;
   gap: 8px;
 }
+
+#modal-desc p{margin-bottom:1em;}
+#modal-desc p:last-child{margin-bottom:0;}
