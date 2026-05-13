@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPZHKNB3E9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DPZHKNB3E9');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Federal Corruption Tracker — Volume II</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0e0c0a;
+  --paper: #f5f0e8;
+  --aged: #e8e0cc;
+  --faded: #c8bfa8;
+  --accent: #c0392b;
+  --accent2: #e67e22;
+  --accent3: #2c7bb6;
+  --confirm: #7b2020;
+  --alleged: #8a5200;
+  --pattern: #1a4a6b;
+  --muted: #5c5448;
+  --rule: #b0a890;
+  --highlight: #fff3cd;
+  --new-flag: #1a6b2a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* ─── MASTHEAD ─── */
+#masthead {
+  border-bottom: 3px double var(--ink);
+  padding: 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.masthead-top-rule {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vol-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  margin-bottom: 0.6rem;
+}
+
+.masthead-inner {
+  padding: 1.5rem 2rem 1.2rem;
+}
+
+.kicker-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+h1 em { color: var(--accent); font-style: italic; }
+
+.vol-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.deck {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  color: var(--muted);
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  line-height: 1.7;
+}
+
+.deck strong { color: var(--accent); font-style: normal; }
+
+.rule-triple {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 0.8rem 0 0.4rem;
+}
+.rule-triple span { height: 1px; background: var(--ink); flex: 1; max-width: 80px; }
+.rule-triple b { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--muted); }
+
+.masthead-footer-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding: 0.5rem 2rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ─── LEGEND ─── */
+#legend-bar {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.6rem 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.leg { display: flex; align-items: center; gap: 6px; }
+.leg-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ─── BREADCRUMB ─── */
+#breadcrumb {
+  padding: 0.8rem 2rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  min-height: 38px;
+}
+#breadcrumb span { cursor: pointer; }
+#breadcrumb span:hover { color: var(--accent); text-decoration: underline; }
+#breadcrumb span.active { color: var(--ink); font-weight: 500; cursor: default; }
+.bc-sep { color: var(--faded); }
+
+/* ─── MAIN LAYOUT ─── */
+#stage {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.view { display: none; }
+.view.active {
+  display: block;
+  animation: fadeIn 0.28s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ─── OVERVIEW ─── */
+.overview-intro {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+.overview-intro p {
+  font-size: 1rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* NEW ENTRIES BANNER */
+.new-banner {
+  background: var(--new-flag);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1px;
+}
+
+.section-divider {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faded);
+  text-align: center;
+  padding: 1rem 0 0.4rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 1rem;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+.cat-card {
+  background: var(--paper);
+  padding: 1.4rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.cat-card.is-new { border-left: 3px solid var(--new-flag); }
+.cat-card.is-new .cat-new-flag {
+  display: inline-block;
+  background: var(--new-flag);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  margin-bottom: 0.3rem;
+}
+.cat-card::after {
+  content: '→';
+  position: absolute; right: 1.2rem; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--faded);
+  transition: color 0.15s, transform 0.15s;
+}
+.cat-card:hover { background: var(--aged); }
+.cat-card:hover::after { color: var(--accent); transform: translateY(-50%) translateX(3px); }
+.cat-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--faded);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.4rem;
+}
+.cat-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+.cat-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.4;
+  padding-right: 2rem;
+}
+.cat-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0.8rem;
+}
+.cat-stat {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.cat-stat-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+.severity-bar {
+  height: 3px;
+  background: var(--aged);
+  border-radius: 2px;
+  margin-top: 0.8rem;
+  overflow: hidden;
+}
+.severity-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.6s ease;
+}
+
+/* ─── EPSTEIN INTERSTITIAL ─── */
+.epstein-page {
+  border: 3px double var(--ink);
+  margin: 2rem 0;
+  position: relative;
+  background: var(--paper);
+  overflow: hidden;
+}
+.epstein-page::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--rule);
+  pointer-events: none;
+  z-index: 0;
+}
+.epstein-inner {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 600px) {
+  .epstein-inner { grid-template-columns: 1fr; }
+}
+.epstein-ad-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--faded);
+  text-align: center;
+  padding: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+.epstein-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 0.6rem;
+}
+.epstein-headline em { color: var(--accent); font-style: italic; }
+.epstein-subhead {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1rem;
+}
+.epstein-body p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin-bottom: 0.9rem;
+  color: var(--ink);
+}
+.epstein-body p:last-child { margin-bottom: 0; }
+.epstein-right {
+  text-align: center;
+}
+.epstein-face {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px double var(--ink);
+  background: var(--aged);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 5rem;
+  line-height: 1;
+  overflow: hidden;
+}
+.epstein-face-inner {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.epstein-face-inner .ears {
+  font-size: 2rem;
+  margin-top: -0.2rem;
+  color: var(--muted);
+}
+.epstein-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+.epstein-tagline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.epstein-worry {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--ink);
+  margin-top: 1rem;
+  font-style: italic;
+}
+.epstein-facts {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+}
+.epstein-fact-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--faded);
+  gap: 1rem;
+}
+.epstein-fact-row .ef-label { color: var(--muted); }
+.epstein-fact-row .ef-val { color: var(--ink); font-weight: 500; text-align: right; }
+
+/* ─── CATEGORY PAGE ─── */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border: none; background: none;
+  padding: 0;
+}
+.back-btn:hover { color: var(--accent); }
+.back-btn span { font-size: 0.9rem; }
+
+.cat-header { border-bottom: 2px solid var(--ink); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+.cat-header-top { display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+.cat-header-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--aged);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.cat-header-text { flex: 1; min-width: 200px; }
+.cat-header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.cat-header-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 560px;
+}
+.cat-bigstat {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.cat-bigstat-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  max-width: 120px;
+  line-height: 1.3;
+}
+
+/* LEADERBOARD */
+.leaderboard {
+  border: 1px solid var(--rule);
+  margin-bottom: 2rem;
+  background: var(--paper);
+}
+.leaderboard-header {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-style: italic;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leaderboard-header span {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--faded);
+}
+.lb-row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--aged);
+  align-items: start;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.lb-row:last-child { border-bottom: none; }
+.lb-rank {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--faded);
+  line-height: 1;
+}
+.lb-rank.top3 { color: var(--accent); }
+.lb-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.lb-detail { color: var(--muted); font-size: 0.82rem; }
+.lb-damage {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* FILTER BAR */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.filter-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--faded);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+/* CASES */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.case-card {
+  background: var(--paper);
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.12s;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+.case-card:hover { background: var(--aged); }
+.case-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 2px;
+  white-space: nowrap;
+  margin-top: 3px;
+  font-weight: 500;
+}
+.badge-confirmed { background: #f8e8e8; color: var(--confirm); border: 1px solid #e8c8c8; }
+.badge-alleged { background: #fef3e2; color: var(--alleged); border: 1px solid #f0d8a0; }
+.badge-pattern { background: #e8f0f8; color: var(--pattern); border: 1px solid #bcd0e8; }
+.case-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.case-preview { font-size: 0.88rem; color: var(--muted); line-height: 1.5; }
+.case-arrow { color: var(--faded); font-size: 1.1rem; padding-top: 2px; transition: color 0.15s, transform 0.15s; }
+.case-card:hover .case-arrow { color: var(--accent); transform: translateX(3px); }
+
+/* CASE DETAIL */
+.case-detail-header {
+  border-bottom: 3px double var(--ink);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.case-kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.case-detail-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+.case-detail-deck {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.case-byline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--faded);
+  margin-top: 0.8rem;
+}
+.case-body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 700px) { .case-body { grid-template-columns: 1fr; } }
+.case-narrative p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+.case-sources { margin-top: 1.5rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.sources-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--faded);
+  margin-bottom: 0.5rem;
+}
+.source-item { font-size: 0.78rem; color: var(--muted); font-style: italic; line-height: 1.8; }
+.case-facts {
+  border: 1px solid var(--rule);
+  padding: 1.2rem;
+  background: var(--aged);
+}
+.case-facts-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.fact-item { margin-bottom: 0.8rem; }
+.fact-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+.fact-value { font-size: 0.9rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.fact-value.big { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.8rem; }
+.tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
+  color: var(--muted);
+}
+
+.highlight-box {
+  background: var(--highlight);
+  border-left: 4px solid var(--accent2);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.highlight-box strong { color: var(--accent); }
+
+.related-cases { border-top: 2px solid var(--rule); padding-top: 1.5rem; margin-top: 1rem; }
+.related-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.related-card { background: var(--paper); padding: 1rem; cursor: pointer; transition: background 0.12s; }
+.related-card:hover { background: var(--aged); }
+.related-cat { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faded); margin-bottom: 0.3rem; }
+.related-name { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; }
+
+footer {
+  border-top: 3px double var(--ink);
+  padding: 1.5rem 2rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  color: var(--muted);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<!-- ══ MASTHEAD ══ -->
+<div id="masthead">
+  <div class="masthead-top-rule">
+    <span>Special Investigation · Federal Government</span>
+    <span>May 2026 · Yes, Already</span>
+    <span>AI-Compiled · Published by <a href="https://usnow.app" style="color:inherit;text-decoration:underline">USNow.app</a></span>
+  </div>
+  <div class="masthead-inner">
+    <div class="vol-badge">◆ Volume II ◆</div>
+    <h1>The <em>Corruption</em> Tracker</h1>
+    <div class="vol-subtitle">What Do You Mean There's More?</div>
+    <p class="deck">
+      Last time: crypto grift, foreign jets, Cabinet seats for cash, no blind trust, pardons for donors.<br>
+      This time: <strong>pardons for everybody</strong>, war trades, prediction market felonies,<br>
+      a pool painted blue on a no-bid contract, and a UAE sovereign fund<br>
+      pumping money directly into the president's personal cryptocurrency.<br>
+      We kept notes. The hits kept coming. So did we.
+    </p>
+    <div class="rule-triple"><span></span><b>☞ click any entry to read deeper ☜</b><span></span></div>
+  </div>
+  <div class="masthead-footer-line">
+    <span>Updated May 2026</span>
+    <span>·</span>
+    <span>New sections marked ◆ NEW</span>
+    <span>·</span>
+    <span>All entries sourced · Items marked alleged not proven in court</span>
+  </div>
+</div>
+
+<div id="legend-bar">
+  <div class="leg"><span class="leg-dot" style="background:#c0392b"></span> CONFIRMED / ADJUDICATED</div>
+  <div class="leg"><span class="leg-dot" style="background:#e67e22"></span> ALLEGED / UNDER SCRUTINY</div>
+  <div class="leg"><span class="leg-dot" style="background:#2c7bb6"></span> DOCUMENTED PATTERN</div>
+  <div class="leg"><span class="leg-dot" style="background:#1a6b2a"></span> NEW IN VOLUME II</div>
+  <div class="leg"><span class="leg-dot" style="background:#888"></span> HISTORICAL / STRUCTURAL</div>
+</div>
+
+<div id="breadcrumb">
+  <span class="active" id="bc-home" onclick="goHome()">ALL CATEGORIES</span>
+</div>
+
+<div id="stage">
+
+  <!-- LEVEL 0: OVERVIEW -->
+  <div class="view active" id="view-home">
+    <div class="overview-intro">
+      <p>Fourteen categories of documented and alleged misconduct. New in Volume II: The Pardon Racket, Iran War Insider Trading, and Government Property Grift. Plus: the page we wish we didn't have to write.</p>
+    </div>
+    <div id="cat-grid"></div>
+    <!-- EPSTEIN INTERSTITIAL -->
+    <div class="epstein-page" id="epstein-section">
+      <div class="epstein-ad-label">Special Section · The Files They Didn't Release · What the Record Shows</div>
+      <div class="epstein-inner">
+        <div class="epstein-left">
+          <div class="epstein-headline"><em>Alfred E. Epstein</em><br>Couldn't Be Reached<br>For Comment.</div>
+          <div class="epstein-subhead">"What, Me Worry?" — He never did. Neither, apparently, do the people whose names are in the files.</div>
+          <div class="epstein-body">
+            <p>Jeffrey Epstein died in federal custody in August 2019. The official finding was suicide. The facility's cameras malfunctioned. His cellmate had been transferred. The guards were asleep, or said they were. Two federal corrections officers were later charged with falsifying records. The forensic pathologist hired by the family concluded the injuries were more consistent with homicide. The official finding has not changed.</p>
+            <p>For years, advocates, journalists, and members of Congress demanded the release of the full Epstein client and contact files — flight logs, the "little black book," the sealed civil depositions, the documents held by the DOJ and FBI. The current administration came to office having promised transparency. What followed was selective.</p>
+            <p>Some documents were released. Others — particularly those touching on individuals currently holding or adjacent to power — moved more slowly, or not at all. The released material confirmed what partial reporting had long suggested: Epstein's network included prominent figures across finance, politics, academia, and media on both sides of the aisle. The documents do not prove crimes by named individuals beyond Epstein and his convicted associate Ghislaine Maxwell. What they do show is access, proximity, and a network that operated for years without serious scrutiny.</p>
+            <p>The corruption angle is not in the conspiracy. It is in the documented record of what was released, what was not, who benefited from the opacity, and who currently has the power to change that. That's a factual question with a factual answer. We are still waiting for the full answer.</p>
+          </div>
+          <div class="epstein-facts">
+            <div class="epstein-fact-row"><span class="ef-label">Epstein conviction</span><span class="ef-val">Pled guilty 2008 · Federal charges 2019 (died in custody)</span></div>
+            <div class="epstein-fact-row"><span class="ef-label">Maxwell conviction</span><span class="ef-val">Guilty on 5 counts including sex trafficking · Sentenced 2022</span></div>
+            <div class="epstein-fact-row"><span class="ef-label">Files status (2026)</span><span class="ef-val">Partial release · Key depositions still sealed or redacted</span></div>
+            <div class="epstein-fact-row"><span class="ef-label">Camera footage (night of death)</span><span class="ef-val">Unavailable — equipment malfunction</span></div>
+            <div class="epstein-fact-row"><span class="ef-label">Guards charged</span><span class="ef-val">2 federal officers · Falsifying records</span></div>
+            <div class="epstein-fact-row"><span class="ef-label">Family forensic finding</span><span class="ef-val">Dr. Michael Baden: injuries consistent with homicide</span></div>
+            <div class="epstein-fact-row"><span class="ef-label">Official finding</span><span class="ef-val">Suicide (unchanged)</span></div>
+            <div class="epstein-fact-row"><span class="ef-label">Named co-conspirators prosecuted</span><span class="ef-val">Maxwell only · Others unnamed in documents</span></div>
+          </div>
+        </div>
+        <div class="epstein-right">
+          <div class="epstein-face">
+            <div class="epstein-face-inner">
+              <div style="font-size:3.5rem;line-height:1">😬</div>
+              <div class="ears">◂ ▸</div>
+            </div>
+          </div>
+          <div class="epstein-name">Alfred E. Epstein</div>
+          <div class="epstein-tagline">
+            Friend to the Powerful<br>
+            Stranger to Accountability<br>
+            Client List: Classified<br>
+            Cameras: Broken<br>
+            Files: Pending<br>
+          </div>
+          <div class="epstein-worry">"What,<br>Me Worry?"</div>
+          <div style="margin-top:1.2rem;font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--faded);line-height:1.7">
+            He never did.<br>
+            Neither did the network.<br>
+            Neither, it appears,<br>
+            does anyone in a position<br>
+            to finish the job.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEVEL 1: CATEGORY -->
+  <div class="view" id="view-cat">
+    <button class="back-btn" onclick="goHome()"><span>←</span> All categories</button>
+    <div class="cat-header" id="cat-header-content"></div>
+    <div class="filter-bar" id="cat-filter-bar">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" data-filter="all" onclick="filterCases('all',this)">All</button>
+      <button class="filter-btn" data-filter="confirmed" onclick="filterCases('confirmed',this)">Confirmed</button>
+      <button class="filter-btn" data-filter="alleged" onclick="filterCases('alleged',this)">Alleged</button>
+      <button class="filter-btn" data-filter="pattern" onclick="filterCases('pattern',this)">Pattern</button>
+    </div>
+    <div id="leaderboard-container"></div>
+    <div class="cases-grid" id="cases-list"></div>
+  </div>
+
+  <!-- LEVEL 2: CASE DETAIL -->
+  <div class="view" id="view-case">
+    <button class="back-btn" id="case-back-btn"><span>←</span> Back to category</button>
+    <div id="case-detail-content"></div>
+  </div>
+
+</div>
+
+<footer>
+  Sources: House Oversight Committee Democratic Staff (Jan 2026) · Campaign Legal Center Corruption Tracker (Feb 2026) · Issue One Corruption Chronicles (Jul 2025) · House Judiciary Committee Democratic Staff (Nov 2025) · GovTrack Substack (Jan 2026) · CREW (Citizens for Responsibility and Ethics in Washington) · ProPublica · Reuters · NY Times · Washington Post · Axios · CNN · NPR · California Governor's Office (Mar 2026) · Wikipedia clemency records · DOJ Office of the Pardon Attorney · Paul Krugman / Substack · El País · Financial Times<br><br>
+  Items marked "alleged" or "pattern" have not been proven in a court of law. This tracker reflects documented reporting and official government watchdog analyses. All dollar figures are estimates from cited reporting. Nothing herein constitutes legal conclusions about unlisted individuals.
+</footer>
+
+<script>
+// ═══════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════
+const DATA = [
+  {
+    id: 'pardon-racket',
+    num: '01',
+    name: 'The Pardon Racket',
+    label: '1,600+ clemencies · corrupt politicians · donors · fraud criminals · victims unpaid',
+    stat: '$1.3B+',
+    statLabel: 'in victim restitution wiped out by pardons',
+    severity: 96,
+    color: '#c0392b',
+    isNew: true,
+    summary: 'Trump granted clemency to more than 1,600 individuals in his second term. More than half went to wealthy criminals. At least 20 corrupt politicians were pardoned. Victims lost over $1.3 billion in court-ordered restitution. A lobbying industry charging up to $1 million per pardon application emerged. The Office of the Pardon Attorney was gutted from 45 staff to two.',
+    leaderboard: [
+      { rank: 1, name: 'Trevor Milton — Nikola Founder', detail: 'Securities fraud · Defrauded investors of $676M. Pardoned March 2025. Donor connection: $1.8M to Trump reelection fund. Victims received $0 in restitution.', damage: '$676M wiped' },
+      { rank: 2, name: 'Todd & Julie Chrisley', detail: 'Reality TV stars · Bank fraud & tax evasion. Jointly owed $22M restitution to U.S. taxpayers. Pardoned 2025. Trump\'s own DOJ brought the original charges.', damage: '$22M wiped' },
+      { rank: 3, name: 'Julio Herrera Velutini', detail: 'Venezuelan banker · Bribery. His daughter donated $3.5M to MAGA Inc. before pardon. Federal investigation dropped.', damage: 'Prosecution ended' },
+      { rank: 4, name: 'Jason Galanis', detail: '"Serial fraudster" per sentencing judge · $80M scheme against union pension funds and the Oglala Sioux Nation. Commuted March 2025 after becoming a useful Republican witness. Previously denied clemency in Trump\'s first term.', damage: '$80M fraud forgiven' },
+      { rank: 5, name: 'Imaad Shah Zuberi', detail: 'Venture capitalist · 12-year sentence for foreign lobbying, illegal campaign contributions, obstruction. Donated $900K to inaugural committee. Sentence commuted to time served. Court-ordered restitution of $15.7M wiped.', damage: '$15.7M restitution wiped' },
+      { rank: 6, name: 'Rod Blagojevich', detail: 'Former Illinois Governor · Convicted of trying to sell Barack Obama\'s Senate seat. 14-year sentence. Pardoned February 2025.', damage: 'Federal sentence ended' },
+      { rank: 7, name: 'Michele Fiore', detail: 'Former Las Vegas Councilwoman · Stole $70K from memorial fund for slain police officers. Spent it on cosmetic surgery, rent, and daughter\'s wedding. Pardoned before sentencing.', damage: '$70K never repaid' },
+      { rank: 8, name: 'George Santos', detail: 'Former U.S. Congressman · Convicted of defrauding donors, lying to Congress. Seven-year sentence commuted after less than three months served.', damage: '7-yr sentence → 3 months' },
+      { rank: 9, name: 'Glen Casada + aide', detail: 'Tennessee House Speaker · Kickback scheme involving taxpayer money. Sentenced September 2025. Pardoned November 7, 2025 — avoided prison entirely.', damage: 'Prison avoided' },
+      { rank: 10, name: '77 Fake Electors (Proclamation 10989)', detail: 'Pardoned November 10, 2025 via proclamation. None were facing federal charges at the time. Pardon does not apply to state charges. Pardon Attorney Ed Martin announced via social media.', damage: 'Preemptive pardon' },
+    ],
+    cases: [
+      {
+        id: 'pardon-donors',
+        badge: 'confirmed',
+        title: 'Pardons for Donors — The Documented Pattern',
+        preview: 'Across 70+ fraud-related clemencies, a clear pattern: donation precedes pardon.',
+        kicker: 'Clemency · Pay-to-play · Donor connections',
+        deck: 'The New York Times documented that Trump has granted clemency to more than 70 individuals convicted of fraud. In the most prominent cases, a direct financial connection to Trump — a donation to his PAC, inaugural fund, or family business — preceded the pardon. In many cases, court-ordered victim restitution was wiped out entirely.',
+        body: [
+          'The campaign finance trail is documented across multiple cases. Trevor Milton gave $1.8 million to Trump\'s reelection fund and saw $676 million in defrauded investor restitution wiped when pardoned. Julio Herrera Velutini\'s daughter gave $3.5 million to MAGA Inc. Imaad Shah Zuberi gave $900,000 to the inaugural fund and had $15.7 million in court-ordered restitution erased.',
+          'An El País investigation documented the emergence of a "flourishing industry" of pardon-seekers in Washington, with lobbying firms disclosing nearly $5.2 million in clemency-related revenue in 2025 — approximately eight times the amount disclosed for similar Biden-era efforts. Reports indicate pardon-seekers are paying up to $1 million to access the pipeline.',
+          'The Office of the Pardon Attorney — the formal DOJ office designed to evaluate clemency applications on merit — was reduced from roughly 45 staff to two attorneys. Pardon Attorney Liz Oyer was fired after refusing to recommend restoring gun rights for Trump ally Mel Gibson. Her replacement, a former Stop the Steal activist, described the new standard as "No MAGA left behind."',
+          'For the many thousands who filed legitimate applications through the official process — veterans seeking gun rights restoration, elderly people with decades-old offenses — the answer remained: still waiting. As one attorney put it: "If you\'re a donor or political supporter, you move to the front of the line."',
+        ],
+        facts: [
+          { label: 'Fraud-related clemencies (both terms)', value: '70+', big: true },
+          { label: 'Victim restitution wiped', value: '$1.3B+' },
+          { label: 'Pardon lobbying revenue (2025)', value: '$5.2M — 8× the Biden-era rate' },
+          { label: 'Pardon Attorney staff', value: 'Reduced from ~45 to 2' },
+          { label: 'New standard (per replacement)', value: '"No MAGA left behind"' },
+        ],
+        sources: ['NY Times, March 2026', 'El País, March 2026', 'House Judiciary Democratic Staff, June 2025', 'ProPublica, November 2025', 'California Governor\'s Office, March 2026'],
+        tags: ['pardons', 'donors', 'restitution', 'pay-to-play'],
+        related: ['corrupt-politicians-pardoned', 'dropped-enforcement', 'cabinet-donors']
+      },
+      {
+        id: 'corrupt-politicians-pardoned',
+        badge: 'confirmed',
+        title: 'Corrupt Politicians Pardoned — At Least 20',
+        preview: 'Bribe-takers, kickback artists, and a councilwoman who stole from a police memorial fund.',
+        kicker: 'Political corruption · Clemency abuse · Public trust',
+        deck: 'CREW documented at least 20 elected officials — nine federal, eleven state and local — who were convicted of corruption offenses and then pardoned by Trump. The list includes a sheriff who sold deputy badges for bribes, a state House speaker convicted in a kickback scheme, and a Las Vegas councilwoman who pocketed donations meant to memorialize slain police officers.',
+        body: [
+          'The pardons send a signal that public corruption is not a priority — and that signal has a documented chilling effect on prosecutors. John Keller, a former DOJ public integrity prosecutor who resigned in 2025, said career prosecutors became reluctant to bring public corruption cases they believed would be unpopular with the incoming administration.',
+          'Michele Fiore\'s case is illustrative of the pattern. She was convicted by a federal jury for stealing $70,000 from a fund meant to build memorials to police officers killed in the line of duty. She spent the money on cosmetic surgery, rent, and her daughter\'s wedding. Trump pardoned her before sentencing — she never spent a day in custody and never repaid the stolen funds.',
+          'Rod Blagojevich — convicted of attempting to sell Barack Obama\'s Senate seat — received a pardon in February 2025. Former Tennessee House Speaker Glen Casada, convicted of kickbacks involving taxpayer money, was sentenced in September 2025 and pardoned by November 7 — avoiding prison entirely.',
+          'The Public Integrity Section of DOJ, which handles federal public corruption cases, was reduced from 40 attorneys to two and from 175–200 open matters to around 20. Experts warn the long-term effect is a corroded system where public officials are incentivized to serve themselves first.',
+        ],
+        facts: [
+          { label: 'Corrupt politicians pardoned', value: 'At least 20 (CREW, Jan 2026)', big: true },
+          { label: 'Federal elected officials', value: '9 documented' },
+          { label: 'State/local officials', value: '11 documented' },
+          { label: 'Public Integrity Section staff', value: '40 → 2 attorneys' },
+          { label: 'Open corruption matters (DOJ)', value: '175–200 → ~20' },
+        ],
+        sources: ['CREW, "Trump Has Granted Clemency to 20 Corrupt Politicians," Jan 2026', 'NPR, May 2026', 'House Judiciary Democratic Staff, June 2025'],
+        tags: ['pardons', 'political-corruption', 'DOJ', 'public-integrity'],
+        related: ['pardon-donors', 'dismantling-oversight', 'dropped-enforcement']
+      },
+      {
+        id: 'j6-blanket-pardon',
+        badge: 'confirmed',
+        title: 'January 6 Blanket Pardons — 1,500+',
+        preview: 'Day-one mass pardons for Capitol attack participants, including those convicted of violence.',
+        kicker: 'January 6 · Clemency · Rule of law',
+        deck: 'On his first day in office, Trump issued a sweeping clemency proclamation covering approximately 1,500 individuals charged or convicted in connection with the January 6, 2021 Capitol attack. The pardons included individuals convicted of assaulting police officers. Critics noted the scope may cover individuals not yet charged.',
+        body: [
+          'Proclamation 10887, issued January 20, 2025, granted pardons and commutations for federal offenses "relating to the events at or near the United States Capitol on January 6, 2021." The breadth of the language — "at or near" — raised questions about its scope.',
+          'The pardons covered not only those convicted of trespassing and misdemeanor offenses but individuals convicted of assaulting law enforcement officers. Former assistant U.S. attorney Greg Rosen, who resigned in protest, noted that individuals "duly and appropriately convicted of federal crimes ranging in culpability are immediately let loose without any supervision, without any remorse, without any rehabilitation."',
+          'On November 10, 2025, Pardon Attorney Ed Martin announced via social media that 77 individuals involved in the 2020 fake electors plot had also been pardoned — none of whom were facing federal charges at the time of the pardon. Federal pardons do not apply to state charges, which many of these individuals still face.',
+          'In March 2026, attorneys for Brian Cole Jr. — arrested in connection with the pipe bomb attacks near the DNC and RNC headquarters the night before January 6 — argued in court that the broad pardon language may cover Cole\'s case. The argument was directly foreseeable from the proclamation\'s language.',
+        ],
+        facts: [
+          { label: 'Day-one pardons/commutations', value: '~1,500 (J6 defendants)', big: true },
+          { label: 'Proclamation', value: 'Proclamation 10887, January 20, 2025' },
+          { label: 'Fake electors pardoned', value: '77 (Proclamation 10989, Nov 10, 2025)' },
+          { label: 'Assault on officers', value: 'Included in clemency scope' },
+          { label: 'State charges', value: 'Not affected by federal pardon' },
+        ],
+        sources: ['White House Proclamation 10887 (Jan 2025)', 'Politico / NPR, Nov 2025', 'CNN, March 2026', 'ProPublica, Nov 2025'],
+        tags: ['January-6', 'pardons', 'clemency', 'Capitol-attack'],
+        related: ['pardon-donors', 'corrupt-politicians-pardoned', 'dismantling-oversight']
+      },
+    ]
+  },
+  {
+    id: 'iran-insider-trading',
+    num: '02',
+    name: 'Iran War Insider Trading',
+    label: '$580M oil futures spike · $950M ceasefire trade · soldier indicted · WH warned staff',
+    stat: '$1.5B+',
+    statLabel: 'in suspicious trades placed minutes before war announcements',
+    severity: 94,
+    color: '#c0392b',
+    isNew: true,
+    summary: 'Each major U.S. military announcement related to the Iran conflict was preceded by massive, anomalous trades in oil futures and prediction markets. The White House internally warned staff not to bet on Polymarket. A U.S. soldier was indicted for using classified information to profit on the Maduro raid. The DOJ Public Integrity Section — which would investigate this — was reduced to two attorneys.',
+    cases: [
+      {
+        id: 'iran-oil-futures',
+        badge: 'alleged',
+        title: 'The $580M Oil Futures Spike — 16 Minutes Early',
+        preview: 'At 6:49 a.m., $580M in oil futures were sold. At 7:05 a.m., Trump announced a pause in Iran strikes.',
+        kicker: 'Iran war · Oil futures · Insider trading · National security',
+        deck: 'On March 23, 2026, the Chicago Mercantile Exchange recorded a sharp, isolated spike in S&P 500 e-Mini futures and $580 million in West Texas Intermediate oil contracts — with no public news to explain the move. Sixteen minutes later, Trump announced a pause in threatened strikes on Iranian power plants. Bloomberg analysis found average trading in that window over the prior five days was around 700 contracts.',
+        body: [
+          'The sequence was stark: at 6:49 a.m., markets that had been quiet moved dramatically. Oil futures worth approximately $580 million were sold, and S&P 500 e-Mini futures spiked — both moves consistent with someone knowing Trump was about to announce a de-escalation. At 7:05 a.m., Trump declared a five-day reprieve due to "productive talks." Iran denied any such talks were occurring.',
+          'The pattern was not isolated. Axios reported that "mysterious trading patterns follow Trump into war," documenting similar anomalous moves before previous Iran and Venezuela announcements. On January 2, a trader turned $32,000 into more than $400,000 betting on the capture of Venezuela\'s Nicolás Maduro before it was announced.',
+          'The same pattern then recurred. Senators Elizabeth Warren and Sheldon Whitehouse wrote to the CFTC chair documenting that in the hours before Trump announced a two-week Iran ceasefire, traders placed approximately $950 million in bets on falling oil prices — which then fell roughly 15%.',
+          'Economist Paul Krugman called it effectively a form of treason: trading on classified national security decisions reveals information to foreign adversaries, and "who needs to bribe agents within the government when you can infer the same information by keeping track of transactions on futures markets?"',
+        ],
+        facts: [
+          { label: 'March 23 oil futures spike', value: '$580M in 16 minutes pre-announcement', big: true },
+          { label: 'Ceasefire-day oil bets', value: '$950M (Warren/Whitehouse letter to CFTC)', big: false },
+          { label: 'Average prior-day volume (same window)', value: '~700 contracts' },
+          { label: 'DOJ investigation opened', value: 'None' },
+          { label: 'WH response', value: '"Baseless and irresponsible" (Kush Desai, WH spokesman)' },
+        ],
+        sources: ['Axios, March 25, 2026', 'Salon, March 26, 2026', 'Warren/Whitehouse letter to CFTC, April 2026', 'Bloomberg market analysis', 'Paul Krugman / Substack, April 2026'],
+        tags: ['insider-trading', 'Iran', 'oil-futures', 'national-security', 'market-manipulation'],
+        related: ['polymarket-soldier', 'tariff-whipsaw', 'congressional-trading']
+      },
+      {
+        id: 'polymarket-soldier',
+        badge: 'confirmed',
+        title: 'U.S. Soldier Indicted — Maduro Polymarket Bet',
+        preview: 'Special forces soldier used classified raid information to win $400,000 on Polymarket — 93% win rate.',
+        kicker: 'Criminal indictment · Classified information · Polymarket',
+        deck: 'The DOJ indicted a U.S. special forces soldier for allegedly using classified information about the raid to capture Venezuelan President Nicolás Maduro to make $400,000 on prediction market Polymarket. The analytics firm that discovered the trades called it "strong signaling of insider activity." The soldier won 93% of his bets.',
+        body: [
+          'The indictment alleged the soldier "misappropriated classified, nonpublic U.S. Government information about a U.S. military operation to capture Nicolás Maduro and his wife" and used it to place bets on Polymarket, turning approximately $34,000 into more than $400,000. His 93% win rate on related bets was described by analytics firm Bubblemaps CEO Nick Vaiman as "strong signaling of insider activity."',
+          'The case is significant not only for what it confirms — that classified information was being used for financial gain — but for what it implies about the larger pattern of suspicious pre-announcement trading. The soldier was caught. The oil futures traders were not.',
+          'When asked about the case at a press event, Trump compared the soldier to Pete Rose and said he was "not happy with any of that stuff" — a notably muted response. Trump allies promptly floated the idea of a pardon. The precedent of pardoning a convicted insider trader who used classified national security information would be significant.',
+          'The White House separately sent an internal email warning staff not to make prediction market bets related to the Iran war — an acknowledgment of the problem that the administration declined to make publicly.',
+        ],
+        facts: [
+          { label: 'Charge', value: 'Misappropriation of classified information for financial gain' },
+          { label: 'Profit', value: '$34K → $400K+ (Polymarket)', big: true },
+          { label: 'Win rate', value: '93% on related bets' },
+          { label: 'Trump response', value: 'Pete Rose comparison; "not happy with any of that stuff"' },
+          { label: 'WH staff warning', value: 'Internal email sent — do not bet on Polymarket re: Iran' },
+        ],
+        sources: ['CNN, April 2026', 'CNBC, April 2026', 'DOJ indictment', 'Bubblemaps / Nick Vaiman analysis'],
+        tags: ['insider-trading', 'classified', 'Polymarket', 'indictment', 'Maduro'],
+        related: ['iran-oil-futures', 'congressional-trading', 'pardon-donors']
+      },
+    ]
+  },
+  {
+    id: 'crypto',
+    num: '03',
+    name: 'Crypto Self-Enrichment',
+    label: '$TRUMP coin · $MELANIA · World Liberty Financial · UAE stablecoin · memecoin dinners',
+    stat: '$1B+',
+    statLabel: 'estimated Trump family crypto revenue (WLF, $TRUMP, $MELANIA combined)',
+    severity: 91,
+    color: '#c0392b',
+    isNew: false,
+    summary: 'The Trump family created and promoted multiple cryptocurrency products — $TRUMP coin, $MELANIA coin, and World Liberty Financial — while in office, with no blind trust and no regulatory oversight. A May 2026 deal gave a UAE sovereign-backed entity a stake in WLF\'s stablecoin infrastructure, directly merging presidential foreign policy with personal crypto revenue.',
+    cases: [
+      {
+        id: 'trump-coin',
+        badge: 'confirmed',
+        title: '$TRUMP Coin — Presidential Pump',
+        preview: 'Trump launched a memecoin 72 hours before inauguration. ~80% held by Trump Org affiliates.',
+        kicker: 'Memecoin · Self-enrichment · Conflict of interest',
+        deck: 'Three days before his second inauguration, Trump launched the $TRUMP memecoin. The Trump Organization and affiliated entities retained approximately 80% of the total supply. Every presidential statement boosting the coin\'s value primarily enriched Trump himself. When Trump offered White House dinner access to top coin buyers, the price rose ~60%.',
+        body: [
+          'The $TRUMP memecoin launched January 17, 2025 — 72 hours before Trump was inaugurated. With ~80% of supply held by Trump Org affiliates, any price movement driven by presidential statements primarily benefited Trump personally.',
+          'When Trump announced via Truth Social that the top 220 coin holders would be invited to a private White House dinner — and earlier that the top 25 would receive White House tour access — the coin\'s value rose approximately 60%. Retail buyers who purchased after the pump announcements faced significant losses as the price retraced.',
+          'The SEC under Trump had explicitly declined to apply securities law to meme coins, creating a regulatory vacuum. The structure — presidential statements moving a market in which the president holds a dominant position — would constitute securities fraud if applied to a registered security.',
+          '$MELANIA coin launched shortly after, with similar structure. Combined with the World Liberty Financial venture, the Trump family\'s crypto portfolio represents an unprecedented use of presidential office to generate personal wealth from financial markets.',
+        ],
+        facts: [
+          { label: 'Launch date', value: 'Jan 17, 2025 (72 hrs pre-inauguration)' },
+          { label: 'Trump Org supply share', value: '~80%' },
+          { label: 'Price increase on WH dinner announcement', value: '+60%', big: true },
+          { label: 'SEC regulation', value: 'None — SEC declined to regulate meme coins' },
+        ],
+        sources: ['House Oversight Democratic Staff, Jan 2026', 'Issue One Corruption Chronicles, Jul 2025', 'Reuters'],
+        tags: ['crypto', 'memecoin', '$TRUMP', 'pump', 'self-enrichment'],
+        related: ['wlf', 'uae-stablecoin', 'coin-pump']
+      },
+      {
+        id: 'wlf',
+        badge: 'confirmed',
+        title: 'World Liberty Financial — Family Crypto Venture',
+        preview: 'Foreign governments and sanctioned-adjacent figures invested in the Trump family\'s crypto firm.',
+        kicker: 'WLF · Foreign investment · Crypto · Conflicts of interest',
+        deck: 'World Liberty Financial, the Trump family cryptocurrency venture, raised hundreds of millions from investors including Binance (which then received a presidential pardon for its founder), Justin Sun (whose SEC case was dropped), and foreign-sovereign-linked entities — creating a direct financial relationship between the presidency and parties with matters before the U.S. government.',
+        body: [
+          'WLF launched in late 2024 and quickly became a vehicle through which foreign and domestic actors could make financial investments that directly benefited the Trump family while the president was conducting official government business.',
+          'The documented investment-then-benefit pattern: Binance invested $2 billion in WLF in May 2025 → CZ (Binance founder) received a presidential pardon in October 2025. Justin Sun invested $75 million in WLF → his SEC securities fraud case was paused within weeks of inauguration.',
+          'The House Judiciary Democratic Staff report identified at least eight cryptocurrency firms that received dropped or paused enforcement actions after investing in WLF or donating to Trump.',
+          'In May 2026, a UAE sovereign-backed entity announced a deal to use WLF\'s USD1 stablecoin infrastructure — merging a foreign government\'s financial system with the Trump family\'s personal cryptocurrency venture during active U.S.-UAE diplomatic engagement.',
+        ],
+        facts: [
+          { label: 'CZ / Binance investment → pardon', value: '$2B invested · Pardon Oct 2025' },
+          { label: 'Justin Sun investment → case dropped', value: '$75M invested · SEC case paused' },
+          { label: 'Crypto firms protected (pattern)', value: '8+ documented (House Judiciary)' },
+          { label: 'UAE stablecoin deal', value: 'May 2026 — sovereign-linked entity', big: false },
+        ],
+        sources: ['House Judiciary Democratic Staff, Nov 2025', 'GovTrack Substack, Jan 2026', 'Reuters, May 2026'],
+        tags: ['WLF', 'crypto', 'foreign-investment', 'pay-to-play', 'pardons'],
+        related: ['trump-coin', 'uae-stablecoin', 'cz-pardon']
+      },
+      {
+        id: 'uae-stablecoin',
+        badge: 'confirmed',
+        title: 'UAE Sovereign Fund — WLF Stablecoin Deal',
+        preview: 'A UAE sovereign-backed entity plugged into the Trump family crypto venture during active U.S.-UAE diplomacy.',
+        kicker: 'UAE · Stablecoin · Foreign government · Crypto · Emoluments',
+        deck: 'In May 2026, a UAE sovereign-wealth-backed entity announced a deal to use World Liberty Financial\'s USD1 stablecoin as part of its financial infrastructure — a direct financial relationship between a foreign government and the Trump family\'s personal business, conducted while Trump was simultaneously conducting major diplomatic and economic negotiations with the UAE.',
+        body: [
+          'The deal emerged during the same period in which Trump announced a $1.4 trillion UAE investment agreement — one of the largest announced foreign investment commitments in U.S. history. The timing placed a direct Trump family financial benefit alongside a major diplomatic deliverable.',
+          'Unlike registered securities or traditional foreign investments, cryptocurrency arrangements do not trigger the same disclosure requirements. The stablecoin deal was announced publicly but not subject to review by the Committee on Foreign Investment in the United States (CFIUS) or standard emoluments clause scrutiny.',
+          'The structure creates a durable financial relationship: the UAE sovereign entity\'s use of the Trump-family stablecoin generates ongoing revenue for WLF as long as the relationship continues — creating an ongoing financial incentive for the president to maintain favorable U.S.-UAE relations regardless of national interest considerations.',
+          'The Foreign Emoluments Clause (Article I, §9) was designed precisely for this scenario — prohibiting federal officials from receiving benefits from foreign governments. Whether a cryptocurrency arrangement constitutes an "emolument" has not been tested in court.',
+        ],
+        facts: [
+          { label: 'UAE investment deal (concurrent)', value: '$1.4T announced' },
+          { label: 'WLF stablecoin', value: 'USD1 — used by UAE sovereign-linked entity' },
+          { label: 'CFIUS review', value: 'Not triggered (crypto structure)' },
+          { label: 'Emoluments status', value: 'Alleged; no enforcement action' },
+        ],
+        sources: ['Reuters, May 2026', 'House Oversight reporting', 'NY Times'],
+        tags: ['UAE', 'stablecoin', 'WLF', 'foreign-government', 'emoluments', 'crypto'],
+        related: ['wlf', 'qatar-jet', 'emoluments']
+      },
+    ]
+  },
+  {
+    id: 'pay-to-play',
+    num: '04',
+    name: 'Pay-to-Play & Access Selling',
+    label: 'Cabinet picks · inauguration fund · Mar-a-Lago · 1789 Club',
+    stat: '30+',
+    statLabel: 'documented transactions (Campaign Legal Center)',
+    severity: 88,
+    color: '#c0392b',
+    isNew: false,
+    summary: 'Campaign Legal Center documented over 30 egregious cases where donors who gave millions to Trump PACs, the inaugural fund, or Trump businesses subsequently received Cabinet positions, dropped investigations, favorable policy, or other official government benefits.',
+    cases: [
+      {
+        id: 'cabinet-donors',
+        badge: 'confirmed',
+        title: 'Cabinet Seats for Donors',
+        preview: 'Seven-figure checks to Trump PACs led directly to Cabinet and senior executive appointments.',
+        kicker: 'Executive branch · Appointments · Quid pro quo',
+        deck: 'Multiple donors who wrote checks of $1 million or more to Trump-affiliated PACs or the inaugural fund in the weeks after the 2024 election received Cabinet positions or other senior executive appointments.',
+        body: [
+          'Campaign Legal Center identified that "some of the wealthiest members on this list cut seven-figure checks to Trump-affiliated PACs during the 2024 election or to the presidential inaugural fund — a well-known conduit for dark money — in the weeks after Trump secured reelection." Those donors then received Cabinet or senior executive branch positions.',
+          'The inaugural fund, which operates with minimal disclosure requirements, served as a particularly useful mechanism — allowing large donations to flow to Trump-affiliated entities with limited public transparency.',
+          'Multimillion-dollar corporate donations were rewarded with support for specific legislative and policy positions. Inaugural fund donations made federal investigations disappear.',
+          'CLC concluded: "The president openly abuses the power of his office in exchange for money, and the framework of laws and ethical norms that Americans rely on to protect our democracy is failing to stop him."',
+        ],
+        facts: [
+          { label: 'Documented quid-pro-quo transactions', value: '30+', big: true },
+          { label: 'Key conduit', value: 'Presidential Inaugural Fund (limited disclosure)' },
+          { label: 'Legal risk', value: 'Potential bribery / honest services fraud; no charges filed' },
+          { label: 'Watchdog', value: 'Campaign Legal Center Corruption Tracker' },
+        ],
+        sources: ['Campaign Legal Center, "Exposing Trump\'s Pay-to-Play Administration," Feb 2026'],
+        tags: ['cabinet', 'donations', 'quid-pro-quo', 'inaugural-fund'],
+        related: ['mar-a-lago-access', 'dropped-enforcement', 'foreign-grift']
+      },
+      {
+        id: 'mar-a-lago-access',
+        badge: 'confirmed',
+        title: 'Mar-a-Lago & The 1789 Club',
+        preview: '$150K–$500K+ initiation fees buy unofficial presidential access with no disclosure requirements.',
+        kicker: 'Private clubs · Emoluments · Access selling',
+        deck: 'Membership in Trump\'s private clubs functions as a de facto mechanism for purchasing access to the president. The new "1789" club in Washington D.C. charges $500,000+ and was described as providing direct access to Cabinet members and West Wing officials, with "no danger of running into reporters or Democrats."',
+        body: [
+          'Mar-a-Lago initiation fees rose to $150,000–$350,000+ after Trump\'s election victories, with annual dues on top. Foreign government officials, lobbyists, and corporate executives paid to join, with no disclosure requirements.',
+          'The new "1789" club, co-founded by Donald Trump Jr. in Washington D.C., charges $500,000+ in initiation fees. Unlike registered lobbyists, club members face no disclosure requirements for the access they receive.',
+          'Classified national security discussions were reportedly held in public areas of Mar-a-Lago during Trump\'s first term, where non-security-cleared members could observe. The practice of mixing official presidential activity with private club business continued in the second term.',
+        ],
+        facts: [
+          { label: 'Mar-a-Lago initiation fee', value: '$150K–$350K+', big: true },
+          { label: '1789 Club initiation fee', value: '$500,000+' },
+          { label: 'Disclosure requirement', value: 'None (private club)' },
+          { label: 'Lobbying registration required', value: 'No' },
+        ],
+        sources: ['Issue One Corruption Chronicles, Jul 2025', 'NY Magazine', 'ProPublica'],
+        tags: ['mar-a-lago', 'access', 'clubs', 'emoluments'],
+        related: ['cabinet-donors', 'foreign-grift', 'trump-org']
+      },
+    ]
+  },
+  {
+    id: 'foreign-grift',
+    num: '05',
+    name: 'Foreign Government Grift',
+    label: 'Qatar jet · Saudi deals · UAE $1.4T · tariff gifts · emoluments',
+    stat: '$400M+',
+    statLabel: 'Qatar jet alone; $1.2T+ in associated exchange deals',
+    severity: 92,
+    color: '#c0392b',
+    isNew: false,
+    summary: 'The Trump administration accepted a $400M+ luxury jet from Qatar, facilitated Trump-branded building deals in Saudi Arabia during presidential visits, reduced tariffs on Switzerland one week after Swiss executives gave the president gold gifts, and announced a $1.4 trillion UAE investment deal concurrent with a Trump family crypto arrangement with UAE sovereign entities.',
+    cases: [
+      {
+        id: 'qatar-jet',
+        badge: 'confirmed',
+        title: 'Qatar\'s $400M Luxury Jet',
+        preview: 'Qatar gave Trump a 747; Trump signed a NATO-style defense guarantee for Qatar days later.',
+        kicker: 'Foreign gift · Emoluments Clause · Quid pro quo',
+        deck: 'The Qatari government transferred a Boeing 747 jumbo jet valued at approximately $400 million to the U.S. for use as Air Force One during Trump\'s term. Shortly after, Trump signed an unprecedented security agreement committing the U.S. to defend Qatar from attack and a $1.2 trillion economic exchange deal.',
+        body: [
+          'The $400 million jet — the most valuable foreign gift to a sitting American president in modern history — was transferred by Qatar with the intention of retrofitting it as Air Force One while Trump remained in office, ensuring the political benefit would be immediate.',
+          'Within days of the White House accepting the jet, Trump signed a security agreement with Qatar described as resembling a NATO Article 5 mutual defense commitment, and a $1.2 trillion economic exchange agreement.',
+          'Critics noted the timing matched the textbook definition of an emoluments clause violation. Dan Pfeiffer: "This is no different than Qatar handing Trump $400 million in cash in a duffel bag under the table."',
+          'No emoluments enforcement action was taken. The Supreme Court had dismissed all emoluments suits as moot in 2021 and established broad presidential immunity for official acts in 2024.',
+        ],
+        facts: [
+          { label: 'Gift value (est.)', value: '$400M+', big: true },
+          { label: 'Security agreement', value: 'Unprecedented Qatar defense commitment' },
+          { label: 'Economic deal signed', value: '$1.2T+' },
+          { label: 'Emoluments enforcement', value: 'None' },
+        ],
+        sources: ['GovTrack Substack, Jan 2026', 'California Governor\'s Office, Mar 2026'],
+        tags: ['qatar', 'foreign-gift', 'emoluments', 'Air-Force-One'],
+        related: ['saudi-deals', 'emoluments', 'uae-stablecoin']
+      },
+      {
+        id: 'saudi-deals',
+        badge: 'confirmed',
+        title: 'Saudi Arabia — Deals During Diplomatic Visits',
+        preview: 'Trump-branded Jeddah tower announced during presidential visit; Saudi SWF invested in Trump ventures.',
+        kicker: 'Saudi Arabia · Foreign business · Conflicts of interest',
+        deck: 'During Trump\'s presidential visits to Saudi Arabia, a Trump-branded tower was announced in Jeddah while the Saudi sovereign wealth fund simultaneously invested in Trump-affiliated ventures including LIV Golf. The entanglement of presidential diplomacy and personal commercial real estate licensing reached new levels.',
+        body: [
+          'Trump traveled to Saudi Arabia in April and May 2025 for high-profile diplomatic visits. During or following these visits, a new Trump-branded building was announced in Jeddah — integrating presidential foreign policy travel with private commercial real estate licensing.',
+          'The Saudi sovereign wealth fund (PIF) invested in Trump-affiliated ventures through the LIV Golf partnership, directly benefiting Trump financially while the U.S. government conducted diplomacy with Riyadh.',
+          'Trump retained full ownership of the Trump Organization in his second term with no blind trust, meaning every foreign business deal directly enriches the sitting president. The Founding Fathers\' concern about foreign powers corrupting American political leaders was the precise reason the Foreign Emoluments Clause was written.',
+        ],
+        facts: [
+          { label: 'Trump-branded building', value: 'Jeddah, Saudi Arabia (announced 2025)' },
+          { label: 'Saudi SWF investment', value: 'LIV Golf and related Trump ventures' },
+          { label: 'Blind trust', value: 'Never established' },
+        ],
+        sources: ['Issue One Corruption Chronicles', 'ProPublica', 'Reuters'],
+        tags: ['Saudi-Arabia', 'foreign-business', 'emoluments', 'LIV-Golf'],
+        related: ['qatar-jet', 'emoluments', 'trump-org']
+      },
+    ]
+  },
+  {
+    id: 'property-grift',
+    num: '06',
+    name: 'Government Property Grift',
+    label: 'Reflecting Pool no-bid · 7× cost overrun · Secret Service payments · no divestment',
+    stat: '$15M',
+    statLabel: 'Reflecting Pool job — 10× Trump\'s stated cost',
+    severity: 75,
+    color: '#e67e22',
+    isNew: true,
+    summary: 'Trump drove a vehicle across the drained Lincoln Memorial Reflecting Pool, declared it would cost $1.5 million to renovate, and awarded a no-bid contract to a firm tied to his own golf club. Federal records show the actual cost approaching $15 million — roughly ten times his stated figure. A lawsuit was filed to halt the work. Separately, taxpayers continued to pay Trump\'s own properties for Secret Service stays.',
+    cases: [
+      {
+        id: 'reflecting-pool',
+        badge: 'confirmed',
+        title: 'The Reflecting Pool — No-Bid, 10× Cost Overrun',
+        preview: 'Trump said $1.5M. Federal records show ~$15M. No-bid contract went to a golf club-tied firm.',
+        kicker: 'No-bid contract · Self-dealing · Public property · Cost fraud',
+        deck: 'Trump authorized painting the Lincoln Memorial Reflecting Pool "American flag blue" and personally drove across the drained basin to survey the work. He publicly stated the cost would be $1.5 million. Federal contract records show actual expenditures approaching $15 million, with a no-bid contract awarded to a Virginia firm with ties to Trump\'s golf operation.',
+        body: [
+          'Trump drove a vehicle across the drained Reflecting Pool — historically gray — and declared it would be painted "American flag blue," predicting it would cost $1.5 million and become "the pride of Washington D.C. for decades to come." He framed the project as a dramatic cost savings over a $300–400 million alternative.',
+          'Federal contract records reviewed by ABC News show the cost approaching $15 million: $6.8 million to an Atlantic Industrial Coatings Virginia firm for the repainting, with an additional $6.2 million added to that contract the following week, plus $1.74 million to an Ohio firm for a new filtration system.',
+          'The Virginia firm that received the no-bid painting contract has reported ties to Trump\'s golf club operations — raising conflict-of-interest concerns consistent with the broader pattern of government contracts flowing to Trump-connected entities.',
+          'The Cultural Landscape Foundation filed suit in federal court, arguing the project violated federal laws requiring public notification and environmental review before altering a historic landmark. The case was assigned to Trump appointee Judge Carl Nichols. The lawsuit called the project "a permanent blemish on the National Mall, in open violation of Congressionally mandated procedures."',
+        ],
+        facts: [
+          { label: 'Trump\'s stated cost', value: '$1.5M' },
+          { label: 'Federal contract records show', value: '~$15M (10× stated)', big: true },
+          { label: 'Painting contract', value: '$6.8M + $6.2M added (Virginia firm, no-bid)' },
+          { label: 'Filtration contract', value: '$1.74M (Ohio firm)' },
+          { label: 'Lawsuit filed', value: 'Cultural Landscape Foundation, May 2026' },
+          { label: 'Contract type', value: 'No-bid; firm has reported golf-club ties' },
+        ],
+        sources: ['ABC News, May 2026', 'CNN, May 2026', 'Washington Post, May 2026', 'Chris Hayes / MSNBC, May 2026'],
+        tags: ['Reflecting-Pool', 'no-bid-contract', 'cost-overrun', 'public-property', 'self-dealing'],
+        related: ['golf-grift', 'trump-org', 'cabinet-donors']
+      },
+      {
+        id: 'golf-grift',
+        badge: 'confirmed',
+        title: 'Government Payments to Trump Properties',
+        preview: 'Taxpayers paid Trump\'s own companies for Secret Service stays across 300+ golf trips.',
+        kicker: 'Domestic emoluments · Self-dealing · Taxpayer funds',
+        deck: 'Because Trump retained ownership of his properties with no blind trust, every government expenditure at a Trump venue — Secret Service rooms, golf cart rentals, catering — was a direct transfer of taxpayer money to the president\'s own businesses.',
+        body: [
+          'The Secret Service paid Trump-owned properties for rooms, golf cart rentals, catering, and other expenses every time the president visited his own clubs. Trump visited his own golf courses more than 300 times during his first term, generating direct revenue for Trump businesses each time.',
+          'The Domestic Emoluments Clause (Article II, §1) prohibits the president from receiving any payment from government beyond his official salary. Government payments to Trump properties are a potential ongoing violation — no enforcement action has been taken.',
+          'Total government payments to Trump properties across both terms are estimated in the millions. The exact figure has never been fully disclosed.',
+        ],
+        facts: [
+          { label: 'Golf course visits (first term)', value: '300+' },
+          { label: 'Domestic Emoluments Clause', value: 'Potentially violated; no enforcement' },
+          { label: 'Blind trust', value: 'Never established — either term' },
+        ],
+        sources: ['ProPublica Trump property spending tracker', 'CREW', 'GAO reports'],
+        tags: ['golf', 'emoluments', 'Secret-Service', 'self-dealing'],
+        related: ['reflecting-pool', 'trump-org', 'emoluments']
+      },
+    ]
+  },
+  {
+    id: 'market-manipulation',
+    num: '07',
+    name: 'Stock & Market Manipulation',
+    label: 'Tariff whipsaw · $TRUMP pump · Truth Social moves markets · advance-knowledge trades',
+    stat: 'ongoing',
+    statLabel: 'no independent investigation opened',
+    severity: 82,
+    color: '#e67e22',
+    isNew: false,
+    summary: 'Repeated cycles of tariff imposition and rollback created massive market swings. The $TRUMP coin\'s value moved directly with presidential Truth Social posts. The April 2025 "Liberation Day" tariff pause was preceded by a surge of bullish trades minutes before the announcement. Presidential statements function as market-moving instruments in assets where Trump holds dominant positions.',
+    cases: [
+      {
+        id: 'tariff-whipsaw',
+        badge: 'alleged',
+        title: 'Tariff Announcement Whipsaw',
+        preview: 'Liberation Day pause preceded by surge of bullish trades minutes before the announcement.',
+        kicker: 'Market manipulation · Tariffs · Insider trading risk',
+        deck: 'The Trump administration engaged in a repeated pattern of announcing severe tariffs then suddenly reversing them, creating violent market swings. A surge of bullish stock trades appeared minutes before the April 2025 announcement of the 90-day "Liberation Day" tariff pause — consistent with advance knowledge of the reversal.',
+        body: [
+          'Throughout 2025, the administration announced dramatic tariff increases — sometimes 100%+ on major trading partners — followed by sudden rollbacks, pauses, or exemptions announced via Truth Social or unscheduled press appearances.',
+          'Each reversal caused dramatic market rallies. The Liberation Day pause in April 2025 — affecting virtually all U.S. trading partners — was preceded by an anomalous surge of bullish stock trades in the minutes before the announcement, consistent with the pattern documented in the Iran war trading cases.',
+          'Multiple members of Congress were reported to have traded in affected sectors during tariff announcement periods. The STOCK Act fine is $200. The DOJ has not opened any insider trading investigation related to tariff-period trading.',
+          'Nobel laureate Paul Krugman observed that the tariff whipsaw approach was "economically destructive by design" and created predictable trading opportunities for those with advance policy knowledge.',
+        ],
+        facts: [
+          { label: 'Liberation Day pre-announcement surge', value: 'Bullish trades, minutes before pause' },
+          { label: 'Market impact per announcement', value: 'Multiple 5–10% single-day swings' },
+          { label: 'STOCK Act fine', value: '$200 (rarely enforced)' },
+          { label: 'DOJ investigation', value: 'None opened' },
+        ],
+        sources: ['GovTrack Substack, Jan 2026', 'Reuters market analysis', 'Axios, March 2026'],
+        tags: ['tariffs', 'market-manipulation', 'insider-trading', 'STOCK-Act'],
+        related: ['iran-oil-futures', 'congressional-trading', 'coin-pump']
+      },
+      {
+        id: 'coin-pump',
+        badge: 'alleged',
+        title: '$TRUMP Coin — Presidential Price Pump',
+        preview: 'White House dinner offer sent coin +60%. Trump Org held ~80% of supply.',
+        kicker: 'Market manipulation · Crypto · Conflict of interest',
+        deck: 'Because the Trump Organization holds approximately 80% of $TRUMP coin supply, any presidential statement increasing the coin\'s value primarily benefits Trump personally. When Trump announced White House dinner access for top coin buyers, the price rose ~60% — while retail investors were left holding.',
+        body: [
+          'The structure of $TRUMP coin makes every market-moving presidential statement about it a mechanism for presidential self-enrichment. With ~80% held by Trump Org affiliates, even a modest price increase translates to enormous personal gain.',
+          'When Trump offered White House dinner access to the top 220 coin holders and White House tour access to the top 25, the coin\'s value rose approximately 60%. Retail buyers who purchased after the announcement faced significant losses as the coin gave back gains.',
+          'The SEC under Trump dismantled its crypto enforcement division and explicitly declined to apply securities law to meme coins — creating a regulatory vacuum perfectly tailored to this arrangement.',
+        ],
+        facts: [
+          { label: 'Price increase on WH dinner announcement', value: '+60%', big: true },
+          { label: 'Trump Org supply share', value: '~80%' },
+          { label: 'SEC regulation', value: 'None — meme coins exempted' },
+        ],
+        sources: ['House Oversight Democratic Staff, Jan 2026', 'Issue One Corruption Chronicles'],
+        tags: ['crypto', 'memecoin', 'pump', '$TRUMP', 'manipulation'],
+        related: ['trump-coin', 'tariff-whipsaw', 'wlf']
+      },
+    ]
+  },
+  {
+    id: 'dropped-enforcement',
+    num: '08',
+    name: 'Dropped Enforcement for Donors',
+    label: 'Musk / DOGE · 165+ investigations dropped · tech sector gutted',
+    stat: '165+',
+    statLabel: 'corporate investigations dropped or paused (2025)',
+    severity: 85,
+    color: '#e67e22',
+    isNew: false,
+    summary: 'The Trump administration dropped or paused enforcement actions against 165 corporations in 2025, including a third of all targeted tech investigations. Elon Musk spent $250M+ electing Trump, became de facto head of DOGE, and had 40+ federal probes into his businesses dropped. In nearly every documented case, the company or its leadership had financially supported Trump.',
+    cases: [
+      {
+        id: 'musk-investigations',
+        badge: 'confirmed',
+        title: 'Musk / DOGE — 40+ Agency Probes Dropped',
+        preview: 'Musk spent $250M+ electing Trump; 40+ investigations into SpaceX, Tesla, Neuralink were dropped.',
+        kicker: 'Conflict of interest · DOGE · Federal agencies',
+        deck: 'Elon Musk spent hundreds of millions in the 2024 election and became de facto head of DOGE. The administration then dropped or paused more than 40 agency investigations into Musk\'s businesses — an unprecedented conflict of interest with no historical parallel.',
+        body: [
+          'Elon Musk contributed an estimated $250 million or more to support Trump and affiliated candidates in the 2024 election cycle.',
+          'After the election, Musk was placed as de facto head of DOGE — given unprecedented access to federal agency systems, personnel databases, and payment infrastructure, without Senate confirmation.',
+          'The administration subsequently dropped or paused more than 40 agency investigations into Musk\'s businesses, spanning SpaceX (FAA and OSHA investigations), Tesla (NHTSA safety probes and NLRB labor cases), and Neuralink (FDA inquiries).',
+          'The arrangement — a private citizen without Senate confirmation helping run federal agencies while those agencies halted investigations into his companies — was described by ethics experts as without historical precedent.',
+        ],
+        facts: [
+          { label: 'Musk 2024 election spending', value: '$250M+', big: true },
+          { label: 'Investigations dropped', value: '40+ across SpaceX, Tesla, Neuralink' },
+          { label: 'DOGE access', value: 'IRS, SSA, OPM databases; $6T in payment systems' },
+          { label: 'Senate confirmation', value: 'None' },
+        ],
+        sources: ['GovTrack Substack, Jan 2026', 'House Judiciary Democratic Staff, Nov 2025'],
+        tags: ['Musk', 'DOGE', 'conflict-of-interest', 'SpaceX', 'Tesla'],
+        related: ['tech-enforcement', 'dismantling-oversight', 'cabinet-donors']
+      },
+      {
+        id: 'tech-enforcement',
+        badge: 'confirmed',
+        title: 'Tech Sector Enforcement Gutted',
+        preview: 'One-third of targeted tech investigations dropped; industry gave heavily to Trump.',
+        kicker: 'Tech regulation · DOJ antitrust · FTC',
+        deck: 'The Trump administration dropped or paused approximately one-third of all targeted technology sector investigations in 2025. The NCET — the DOJ\'s National Cryptocurrency Enforcement Team — was dissolved entirely.',
+        body: [
+          'In 2025, the Trump administration dropped or paused enforcement actions against 165 corporations — including a disproportionate share of technology sector investigations.',
+          'The House Judiciary documented that the administration "intervened to halt or terminate federal investigations and enforcement actions involving multiple cryptocurrency firms that have donated to the President or invested in his companies, including Coinbase, Gemini, Robinhood, Ripple, Crypto.com, Uniswap, Yuga Labs, and Kraken."',
+          'The DOJ\'s National Cryptocurrency Enforcement Team, established specifically to pursue criminal crypto fraud, was dissolved entirely. Biden-era investor protection rules for digital assets were repealed.',
+        ],
+        facts: [
+          { label: 'Total investigations dropped', value: '165+ corporations', big: true },
+          { label: 'Crypto firms protected', value: 'Coinbase, Gemini, Robinhood, Ripple, Kraken + others' },
+          { label: 'NCET status', value: 'Dissolved' },
+        ],
+        sources: ['House Judiciary Democratic Staff, Nov 2025', 'GovTrack Substack, Jan 2026'],
+        tags: ['tech', 'enforcement', 'DOJ', 'SEC', 'crypto'],
+        related: ['musk-investigations', 'wlf', 'dismantling-oversight']
+      },
+    ]
+  },
+  {
+    id: 'dismantling-oversight',
+    num: '09',
+    name: 'Dismantling Oversight',
+    label: '17+ IGs fired · ethics office gutted · DOGE · Public Integrity Section → 2 lawyers',
+    stat: '17+',
+    statLabel: 'inspectors general fired in a single night (Jan 2025)',
+    severity: 93,
+    color: '#e67e22',
+    isNew: false,
+    summary: 'The systematic removal of oversight mechanisms enables all other categories of corruption to operate with reduced accountability. 17+ inspectors general fired in one night. The DOJ\'s Public Integrity Section reduced from 40 attorneys to two. DOGE given unaccountable access to federal systems. The machinery designed to catch what\'s documented in this tracker was intentionally dismantled.',
+    cases: [
+      {
+        id: 'ig-firings',
+        badge: 'confirmed',
+        title: '17+ Inspectors General Fired Overnight',
+        preview: 'Mass removal of independent watchdogs from DoD, DHS, State, and others — night one.',
+        kicker: 'Oversight · Inspectors General · Accountability',
+        deck: 'On a single night in January 2025, Trump fired 17 or more inspectors general — the independent watchdogs responsible for investigating fraud, waste, and abuse within federal agencies. The mass firing was unprecedented in scope.',
+        body: [
+          'Inspectors general are independent officers who report to both agency heads and Congress, with independence protected by statute. Their role is to investigate fraud, waste, and abuse — including exactly the kinds of conflicts of interest documented elsewhere in this tracker.',
+          'In the first days of the administration, 17 or more IGs were simultaneously fired — a mass removal with no historical precedent across the Department of Defense, Homeland Security, State Department, and others.',
+          'Courts issued mixed rulings on the legality of the firings under the Inspector General Reform Act of 2022. The administration proceeded regardless.',
+          'The practical effect: independent oversight was removed precisely when it was most needed, at the start of an administration with extensive, documented financial conflicts of interest.',
+        ],
+        facts: [
+          { label: 'IGs removed', value: '17+ in single overnight action', big: true },
+          { label: 'Agencies affected', value: 'DoD, DHS, State, and others' },
+          { label: 'Legal challenge', value: 'IG Reform Act of 2022 — mixed rulings' },
+          { label: 'Historical precedent', value: 'None' },
+        ],
+        sources: ['GovTrack Substack, Jan 2026', 'House Oversight Committee', 'Multiple news outlets, Jan 2025'],
+        tags: ['IGs', 'oversight', 'accountability', 'watchdogs'],
+        related: ['doge-access', 'dropped-enforcement', 'public-integrity-gutted']
+      },
+      {
+        id: 'public-integrity-gutted',
+        badge: 'confirmed',
+        title: 'DOJ Public Integrity Section — 40 Lawyers to 2',
+        preview: 'The unit created after Watergate to prosecute corrupt officials was effectively dismantled.',
+        kicker: 'DOJ · Public corruption · Enforcement · Post-Watergate',
+        deck: 'The DOJ\'s Public Integrity Section — created after Watergate specifically to prosecute corrupt public officials — was reduced from approximately 40 attorneys to two. Open matters dropped from 175–200 to around 20. The unit has been stripped of authority to file new cases.',
+        body: [
+          'The Public Integrity Section has handled federal corruption prosecutions for decades, including against officials of both parties. It was designed to be insulated from political pressure — prosecuting the government from within.',
+          'Under the second Trump administration, the section was reduced from ~40 attorneys to two full-time lawyers. The ~175–200 open matters were reduced to around 20. Many were declined or handed off to U.S. attorneys\' offices where they were subsequently dropped.',
+          'The section\'s gutting came immediately after its leadership refused to dismiss a corruption case against then-New York City Mayor Eric Adams — a refusal that prompted a wave of resignations and marked the start of the dismantling.',
+          'Legal experts warn the long-term effect is corrosive: without federal prosecution of public corruption, the incentive structure for officials at every level shifts toward self-dealing. Smaller jurisdictions that relied on the section\'s resources are particularly exposed.',
+        ],
+        facts: [
+          { label: 'Staff reduction', value: '~40 attorneys → 2', big: true },
+          { label: 'Open matters reduction', value: '175–200 → ~20' },
+          { label: 'Trigger event', value: 'Refusal to drop Adams corruption case → resignations' },
+          { label: 'Created after', value: 'Watergate — designed to be insulated from political pressure' },
+        ],
+        sources: ['NPR, May 2026', 'NOTUS reporting', 'NY Magazine, Feb 2026'],
+        tags: ['DOJ', 'public-integrity', 'corruption', 'oversight', 'Watergate'],
+        related: ['ig-firings', 'corrupt-politicians-pardoned', 'dropped-enforcement']
+      },
+      {
+        id: 'doge-access',
+        badge: 'confirmed',
+        title: 'DOGE — Unaccountable Private Citizen Access',
+        preview: 'Unelected, unconfirmed private citizens given access to IRS, SSA, and $6T in payment systems.',
+        kicker: 'DOGE · Data access · Conflicts of interest · Oversight',
+        deck: 'DOGE gave unelected, unconfirmed private citizens — led by Elon Musk — unprecedented access to the most sensitive federal databases in existence, including IRS taxpayer records, Social Security Administration files, and Treasury payment systems controlling $6 trillion in annual disbursements.',
+        body: [
+          'DOGE was established as a private advisory body not subject to the Federal Advisory Committee Act\'s transparency requirements. Its personnel required no Senate confirmation.',
+          'Despite its informal status, DOGE personnel were embedded within agencies and given access to IRS individual tax records, Social Security beneficiary information, and Treasury payment systems.',
+          'Musk, as effective DOGE head, simultaneously had 40+ federal investigations into his companies dropped. The combination — executive access over agencies, and those agencies halting probes of his businesses — represents a textbook conflict of interest.',
+          'Courts issued some injunctions limiting DOGE access, but enforcement was inconsistent. The full scope of what data was accessed, copied, or retained was not publicly disclosed.',
+        ],
+        facts: [
+          { label: 'Databases accessed', value: 'IRS, SSA, OPM, Treasury payment systems' },
+          { label: 'Annual disbursements controlled', value: '$6T' },
+          { label: 'Senate confirmation', value: 'None' },
+          { label: 'Musk conflict', value: '40+ probes into his businesses simultaneously dropped' },
+        ],
+        sources: ['GovTrack Substack, Jan 2026', 'Federal court filings, 2025', 'Reuters'],
+        tags: ['DOGE', 'Musk', 'data-access', 'oversight', 'conflict-of-interest'],
+        related: ['musk-investigations', 'ig-firings', 'dropped-enforcement']
+      },
+    ]
+  },
+  {
+    id: 'emoluments',
+    num: '10',
+    name: 'Emoluments & Constitutional Violations',
+    label: 'Foreign & domestic clauses · SCOTUS dismissal · no enforcement pathway',
+    stat: 'unenforceable',
+    statLabel: 'SCOTUS dismissed all suits; presidential immunity established 2024',
+    severity: 80,
+    color: '#2c7bb6',
+    isNew: false,
+    summary: 'The Foreign and Domestic Emoluments Clauses prohibit the president from accepting foreign gifts or government payments beyond his salary. Multiple violations are alleged across both terms. The Supreme Court dismissed the only legal enforcement vehicle and established broad presidential immunity. Justice Sotomayor\'s dissent: "Takes a bribe in exchange for a pardon? Immune, immune, immune."',
+    cases: [
+      {
+        id: 'emoluments-clause',
+        badge: 'alleged',
+        title: 'Emoluments Clause — Alleged Systematic Violations',
+        preview: 'Qatar jet, Saudi deals, UAE crypto, foreign coin buyers — the clause exists; enforcement doesn\'t.',
+        kicker: 'Constitution · Foreign Emoluments · Enforcement gap',
+        deck: 'The Foreign Emoluments Clause was placed in the Constitution because the Founders feared foreign powers would corrupt American officials through gifts. The Qatar jet, Saudi business deals, UAE stablecoin arrangement, and foreign purchases of Trump cryptocurrency all potentially violate it. No enforcement pathway exists.',
+        body: [
+          'The Foreign Emoluments Clause (Article I, §9) prohibits federal officials from accepting any gift, payment, or benefit from foreign governments without congressional consent. The Founders were explicit: they had seen foreign powers corrupt officials in other nations and intended to foreclose the practice.',
+          'Potential violations in Trump\'s second term alone include: the $400M Qatari jet; foreign nationals and state-linked entities purchasing $TRUMP coins and WLF tokens; Saudi royal family investments in Trump ventures; the UAE stablecoin deal; and various diplomatic gifts received during foreign travel.',
+          'The Supreme Court\'s 2024 decision in Trump v. United States established broad presidential immunity for official acts. Combined with the 2021 dismissal of all emoluments lawsuits as moot, no judicial enforcement pathway currently exists.',
+          'Justice Sotomayor\'s dissent in Trump v. United States: "Takes a bribe in exchange for a pardon? Immune, immune, immune." The dissent was prescient — pardons for donors have since been extensively documented.',
+        ],
+        facts: [
+          { label: 'Foreign Emoluments Clause', value: 'Art. I, §9 — requires Congressional consent for foreign gifts' },
+          { label: 'SCOTUS 2021', value: 'All emoluments suits dismissed as moot' },
+          { label: 'SCOTUS 2024', value: 'Presidential immunity for official acts (Trump v. US)' },
+          { label: 'Current enforcement', value: 'No viable legal pathway' },
+          { label: 'Sotomayor dissent', value: '"Immune, immune, immune"' },
+        ],
+        sources: ['Trump v. United States, SCOTUS (2024)', 'GovTrack Substack, Jan 2026', 'Issue One Corruption Chronicles'],
+        tags: ['emoluments', 'Constitution', 'SCOTUS', 'enforcement', 'foreign-gifts'],
+        related: ['qatar-jet', 'uae-stablecoin', 'saudi-deals']
+      },
+    ]
+  },
+  {
+    id: 'insider-trading',
+    num: '11',
+    name: 'Congressional Insider Trading',
+    label: 'STOCK Act · $200 fine · tariff-period trading · no enforcement',
+    stat: 'systemic',
+    statLabel: '$200 fine; no DOJ probe opened for 2025 tariff-period trading',
+    severity: 62,
+    color: '#2c7bb6',
+    isNew: false,
+    summary: 'Congressional members routinely trade individual stocks in sectors they regulate, with portfolios that consistently outperform the market. The STOCK Act fine is $200. Multiple members traded in tariff-affected sectors during major 2025 announcements. No administration has opened an investigation. A bill to ban the practice has been introduced and killed multiple times.',
+    cases: [
+      {
+        id: 'congressional-trading',
+        badge: 'pattern',
+        title: 'Congressional Stock Trading — The $200 Fine Problem',
+        preview: 'Studies show Congress beats the market. The penalty for not disclosing: $200.',
+        kicker: 'Congress · Insider trading · STOCK Act · Both parties',
+        deck: 'Multiple academic studies found that congressional portfolios outperform the market at rates difficult to explain without informational advantages. The STOCK Act requires disclosure but the fine is $200. Multiple members traded in tariff-affected sectors during 2025 major announcements. No investigation followed.',
+        body: [
+          'The STOCK Act of 2012 requires members of Congress to disclose trades within 45 days. The fine for non-disclosure is $200 — a trivial penalty for a legislator with a $174,000 salary and substantial personal wealth.',
+          'Academic research has consistently found congressional portfolios outperform the market at statistically anomalous rates, particularly in sectors regulated by committees the members serve on.',
+          'Multiple members of Congress were documented trading in tariff-affected sectors during and around major 2025 tariff announcements. The DOJ has not opened any insider trading investigation.',
+          'A bill to ban congressional stock trading has been introduced multiple times and has never passed — stalling due to opposition from members who would be most affected.',
+        ],
+        facts: [
+          { label: 'STOCK Act fine', value: '$200 (rarely enforced)' },
+          { label: 'Disclosure window', value: '45 days after trade' },
+          { label: 'Senate outperformance (2004 study)', value: '+12%/year vs. market' },
+          { label: 'DOJ investigation (2025)', value: 'None opened' },
+          { label: 'Trading ban bill', value: 'Introduced repeatedly; never passed' },
+        ],
+        sources: ['Ziobrowski et al. (2004, 2011)', 'Unusual Whales congressional trading tracker', 'GovTrack reporting'],
+        tags: ['congress', 'insider-trading', 'STOCK-Act', 'both-parties'],
+        related: ['iran-oil-futures', 'tariff-whipsaw', 'dropped-enforcement']
+      },
+    ]
+  },
+  {
+    id: 'merchandise-grift',
+    num: '12',
+    name: 'Merchandise & Product Grift',
+    label: 'Bibles · NFTs · sneakers · cologne · watches · branded products off presidential platform',
+    stat: '$100M+',
+    statLabel: 'estimated personal revenue from branded sales via presidential platform',
+    severity: 50,
+    color: '#e67e22',
+    isNew: false,
+    summary: 'Trump used his presidential platform to sell commercial products — Bibles, NFT cards, sneakers, cologne, watches — blurring the line between official presidential communications and personal commercial activity. No regulatory action was taken.',
+    cases: [
+      {
+        id: 'trump-bible',
+        badge: 'confirmed',
+        title: 'Bibles, NFTs, Sneakers & the Presidential Storefront',
+        preview: 'Truth Social used to sell $59.99 Bibles, $399 sneakers, $100K+ watches, and NFT cards.',
+        kicker: 'Commercial activity · Presidential platform · Ethics',
+        deck: 'Trump used his Truth Social account and presidential communications to promote a range of personal merchandise — a $59.99 co-branded Bible, NFT trading cards, sneakers, cologne, watches — generating substantial personal revenue while using the presidential platform.',
+        body: [
+          'The "God Bless the USA Bible" — co-branded with Lee Greenwood — was promoted through Trump\'s Truth Social at $59.99. Multiple NFT card series sold at $99–$499+, with top buyers receiving access perks that functioned as another tier of the access-selling ecosystem.',
+          'Trump-branded sneakers ($399+), cologne ("Fight Fight Fight" fragrance), watches ($100,000+), and playing cards were all promoted through presidential communications channels.',
+          'Ethics experts noted that using presidential communications to promote personal commercial products had no historical precedent and violated the spirit of federal ethics regulations. No enforcement action was taken.',
+        ],
+        facts: [
+          { label: 'Bible price', value: '$59.99' },
+          { label: 'NFT card range', value: '$99–$499+' },
+          { label: 'Watch price', value: '$100,000+' },
+          { label: 'Regulatory action', value: 'None' },
+        ],
+        sources: ['Issue One Corruption Chronicles, Jul 2025', 'California Governor\'s Office, Mar 2026'],
+        tags: ['merchandise', 'Bible', 'NFT', 'branded-products', 'ethics'],
+        related: ['trump-coin', 'trump-org']
+      },
+    ]
+  },
+  {
+    id: 'structural',
+    num: '13',
+    name: 'Historical & Structural Federal Corruption',
+    label: 'Dark money · revolving door · no-bid contracts · STOCK Act failures · both parties',
+    stat: 'multi-decade',
+    statLabel: 'systemic issues predating current administration',
+    severity: 55,
+    color: '#888888',
+    isNew: false,
+    summary: 'Beyond the current administration, the U.S. federal government faces well-documented structural corruption issues spanning both parties and decades: Citizens United dark money, the revolving door, no-bid contracting, and the STOCK Act\'s toothlessness. These are the conditions that allow everything else in this tracker to happen.',
+    cases: [
+      {
+        id: 'dark-money',
+        badge: 'pattern',
+        title: 'Dark Money & Super PAC Influence',
+        preview: 'Citizens United (2010) enabled unlimited secret corporate political spending. ~$1B in 2020, both parties.',
+        kicker: 'Campaign finance · Citizens United · Structural · Both parties',
+        deck: 'The Supreme Court\'s 2010 Citizens United decision eliminated restrictions on corporate political spending, enabling "dark money" — contributions whose source need not be publicly disclosed — to flood elections. This structural change is the foundation on which the current pay-to-play system operates.',
+        body: [
+          'Citizens United v. FEC (2010) held that corporations cannot be restricted from unlimited political spending. Combined with 501(c)(4) "social welfare" organizations, this created political spending with minimal disclosure.',
+          'Dark money totaled approximately $1 billion across both parties in 2020. The opacity makes it impossible to fully map the quid-pro-quo relationships it enables — the presidential inaugural fund used in Category 04 is one direct example.',
+          'The DISCLOSE Act, which would require disclosure of large dark money donations, has repeatedly failed in the Senate, blocked by filibusters. Both parties have at various times benefited, complicating reform.',
+        ],
+        facts: [
+          { label: 'Key case', value: 'Citizens United v. FEC (2010)' },
+          { label: 'Dark money in 2020', value: '~$1B+ (both parties)' },
+          { label: 'DISCLOSE Act status', value: 'Never passed; repeatedly filibustered' },
+        ],
+        sources: ['OpenSecrets.org', 'Brennan Center for Justice', 'FEC data'],
+        tags: ['dark-money', 'Citizens-United', 'campaign-finance', 'structural', 'both-parties'],
+        related: ['cabinet-donors', 'congressional-trading']
+      },
+      {
+        id: 'revolving-door',
+        badge: 'pattern',
+        title: 'The Revolving Door',
+        preview: 'Regulators take jobs in industries they regulated. The incentive to go easy on future employers is structural.',
+        kicker: 'Regulatory capture · Revolving door · Both parties',
+        deck: 'Across administrations of both parties, senior regulators routinely move into highly-compensated jobs in the industries they regulated — creating structural incentives to go easy on future employers. The one-year cooling-off period is widely regarded as inadequate.',
+        body: [
+          'The revolving door creates structural corruption without requiring explicit bribery. A banking regulator who expects a job at Goldman Sachs has a financial incentive not to be too aggressive. The incentive doesn\'t need to be discussed aloud.',
+          'This pattern runs across administrations of both parties. SEC officials move to Wall Street law firms. FDA officials move to pharmaceutical companies. Defense officials move to defense contractors — sometimes within days of leaving government.',
+          'Restrictions exist — a one-year cooling-off period for most officials, two years for senior financial regulators — but industries willing to pay are willing to wait.',
+        ],
+        facts: [
+          { label: 'Cooling-off period (most officials)', value: '1 year' },
+          { label: 'Senior financial regulators', value: '2-year restriction' },
+          { label: 'Pattern', value: 'Both parties, multiple administrations' },
+        ],
+        sources: ['ProPublica revolving door tracker', 'Issue One', 'POGO'],
+        tags: ['revolving-door', 'regulatory-capture', 'structural', 'both-parties'],
+        related: ['dropped-enforcement', 'dark-money']
+      },
+    ]
+  },
+];
+
+// ═══════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════
+let currentCat = null;
+let currentCase = null;
+let currentFilter = 'all';
+
+// ═══════════════════════════════════════
+// BUILD OVERVIEW GRID
+// ═══════════════════════════════════════
+function buildOverview() {
+  const grid = document.getElementById('cat-grid');
+  grid.innerHTML = '';
+
+  // New entries banner
+  const newBanner = document.createElement('div');
+  newBanner.className = 'new-banner';
+  newBanner.style.gridColumn = '1 / -1';
+  newBanner.textContent = '◆ NEW IN VOLUME II — The Pardon Racket · Iran War Insider Trading · Government Property Grift · Updated: Crypto, Foreign Grift, Market Manipulation, Oversight ◆';
+  grid.appendChild(newBanner);
+
+  DATA.forEach(cat => {
+    const el = document.createElement('div');
+    el.className = 'cat-card' + (cat.isNew ? ' is-new' : '');
+    el.innerHTML = `
+      ${cat.isNew ? '<div class="cat-new-flag">◆ New in Vol. II</div>' : ''}
+      <div class="cat-num">Category ${cat.num}</div>
+      <div class="cat-name" style="color:${cat.color}">${cat.name}</div>
+      <div class="cat-label">${cat.label}</div>
+      <div class="cat-meta">
+        <span class="cat-stat">${cat.stat}</span>
+        <span class="cat-stat-label">${cat.statLabel}</span>
+      </div>
+      <div class="severity-bar"><div class="severity-fill" style="width:${cat.severity}%;background:${cat.color}"></div></div>
+    `;
+    el.addEventListener('click', () => openCat(cat));
+    grid.appendChild(el);
+  });
+}
+
+// ═══════════════════════════════════════
+// OPEN CATEGORY
+// ═══════════════════════════════════════
+function openCat(cat) {
+  currentCat = cat;
+  currentFilter = 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+
+  const header = document.getElementById('cat-header-content');
+  header.innerHTML = `
+    <div class="cat-header-top">
+      <div class="cat-header-num" style="color:${cat.color}20">${cat.num}</div>
+      <div class="cat-header-text">
+        <div class="cat-header-title" style="color:${cat.color}">${cat.name}</div>
+        <div class="cat-header-sub">${cat.summary}</div>
+      </div>
+      <div style="text-align:right;flex-shrink:0">
+        <div class="cat-bigstat">${cat.stat}</div>
+        <div class="cat-bigstat-label">${cat.statLabel}</div>
+      </div>
+    </div>
+  `;
+
+  // Render leaderboard if exists
+  const lbContainer = document.getElementById('leaderboard-container');
+  if (cat.leaderboard && cat.leaderboard.length > 0) {
+    let lbHtml = `
+      <div class="leaderboard">
+        <div class="leaderboard-header">
+          The Top 10 — Ranked by Audacity, Damage & Donor Connection
+          <span>Scroll for full ledger below</span>
+        </div>
+    `;
+    cat.leaderboard.forEach(item => {
+      lbHtml += `
+        <div class="lb-row">
+          <div class="lb-rank ${item.rank <= 3 ? 'top3' : ''}">${item.rank}</div>
+          <div>
+            <div class="lb-name">${item.name}</div>
+            <div class="lb-detail">${item.detail}</div>
+          </div>
+          <div class="lb-damage">${item.damage}</div>
+        </div>
+      `;
+    });
+    lbHtml += '</div>';
+    lbContainer.innerHTML = lbHtml;
+  } else {
+    lbContainer.innerHTML = '';
+  }
+
+  renderCases(cat.cases);
+  showView('cat');
+  updateBreadcrumb([{ label: cat.name, action: () => openCat(cat) }]);
+  window.scrollTo(0, 0);
+}
+
+function renderCases(cases) {
+  const list = document.getElementById('cases-list');
+  const filtered = currentFilter === 'all' ? cases : cases.filter(c => c.badge === currentFilter);
+  list.innerHTML = '';
+  if (filtered.length === 0) {
+    list.innerHTML = '<div style="padding:2rem;text-align:center;color:var(--muted);font-style:italic;background:var(--paper)">No cases match this filter.</div>';
+    return;
+  }
+  filtered.forEach(c => {
+    const el = document.createElement('div');
+    el.className = 'case-card';
+    el.innerHTML = `
+      <span class="case-badge badge-${c.badge}">${c.badge}</span>
+      <div>
+        <div class="case-title">${c.title}</div>
+        <div class="case-preview">${c.preview}</div>
+        <div class="tag-row">${(c.tags||[]).slice(0,4).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      </div>
+      <span class="case-arrow">→</span>
+    `;
+    el.addEventListener('click', () => openCase(c));
+    list.appendChild(el);
+  });
+}
+
+function filterCases(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCases(currentCat.cases);
+}
+
+// ═══════════════════════════════════════
+// OPEN CASE
+// ═══════════════════════════════════════
+function openCase(c) {
+  currentCase = c;
+
+  const relatedCases = [];
+  if (c.related) {
+    c.related.forEach(rid => {
+      DATA.forEach(cat => {
+        cat.cases.forEach(rc => {
+          if (rc.id === rid) relatedCases.push({ ...rc, catName: cat.name });
+        });
+      });
+    });
+  }
+
+  const content = document.getElementById('case-detail-content');
+  content.innerHTML = `
+    <div class="case-detail-header">
+      <div class="case-kicker">
+        <span class="case-badge badge-${c.badge}">${c.badge}</span>
+        ${c.kicker}
+      </div>
+      <div class="case-detail-title">${c.title}</div>
+      <div class="case-detail-deck">${c.deck}</div>
+      <div class="case-byline">Federal Corruption Tracker Vol. II · ${(c.tags||[]).join(' · ')}</div>
+    </div>
+    <div class="case-body">
+      <div class="case-narrative">
+        ${c.body.map(p => `<p>${p}</p>`).join('')}
+        <div class="case-sources">
+          <div class="sources-label">Primary sources</div>
+          ${c.sources.map(s => `<div class="source-item">${s}</div>`).join('')}
+        </div>
+      </div>
+      <div>
+        <div class="case-facts">
+          <div class="case-facts-title">Key facts at a glance</div>
+          ${c.facts.map(f => `
+            <div class="fact-item">
+              <div class="fact-label">${f.label}</div>
+              <div class="fact-value${f.big ? ' big' : ''}">${f.value}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="tag-row" style="margin-top:1rem">
+          ${(c.tags||[]).map(t => `<span class="tag">${t}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+    ${relatedCases.length > 0 ? `
+    <div class="related-cases">
+      <div class="related-title">Related cases — click to explore</div>
+      <div class="related-grid">
+        ${relatedCases.map(rc => `
+          <div class="related-card" onclick="openCaseById('${rc.id}')">
+            <div class="related-cat">${rc.catName}</div>
+            <div class="related-name">${rc.title}</div>
+            <div class="case-preview" style="margin-top:0.4rem;font-size:0.8rem">${rc.preview}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>` : ''}
+  `;
+
+  document.getElementById('case-back-btn').onclick = () => openCat(currentCat);
+  showView('case');
+  updateBreadcrumb([
+    { label: currentCat.name, action: () => openCat(currentCat) },
+    { label: c.title, action: null }
+  ]);
+  window.scrollTo(0, 0);
+}
+
+function openCaseById(id) {
+  let foundCase = null, foundCat = null;
+  DATA.forEach(cat => {
+    cat.cases.forEach(c => {
+      if (c.id === id) { foundCase = c; foundCat = cat; }
+    });
+  });
+  if (foundCase) {
+    currentCat = foundCat;
+    openCase(foundCase);
+  }
+}
+
+// ═══════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════
+function goHome() {
+  currentCat = null; currentCase = null;
+  showView('home');
+  updateBreadcrumb([]);
+  window.scrollTo(0, 0);
+}
+
+function showView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+}
+
+function updateBreadcrumb(trail) {
+  const bc = document.getElementById('breadcrumb');
+  let html = '<span id="bc-home" onclick="goHome()">ALL CATEGORIES</span>';
+  trail.forEach((item, i) => {
+    html += '<span class="bc-sep">›</span>';
+    if (i === trail.length - 1 && !item.action) {
+      html += `<span class="active">${item.label}</span>`;
+    } else {
+      html += `<span onclick="(${item.action})()">${item.label}</span>`;
+    }
+  });
+  bc.innerHTML = html;
+}
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+buildOverview();
+</script>
+</body>
+</html>
