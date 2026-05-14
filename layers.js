@@ -200,42 +200,42 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "crel_att",
-                    "label": "Attachment",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s1",
-                    "label": "Identity",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s1_selfimage",
-                    "label": "Self-Image",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "frc_id_self",
-                    "label": "Self-Identification",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "crel_att",
+                        "label": "Attachment",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "s1",
+                        "label": "Identity",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "s1_selfimage",
+                        "label": "Self-Image",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "frc_id_self",
+                        "label": "Self-Identification",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -247,25 +247,9 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s4_childhood",
-                    "label": "Childhood Memory",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_att",
-                    "label": "Attachment",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2_forming_self",
-                        "label": "The Forming Self",
+                        "id": "s4_childhood",
+                        "label": "Childhood Memory",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -273,46 +257,62 @@ const LAYERS = [
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_foundations",
-                        "label": "Foundations of Functioning",
+                        "id": "crel_att",
+                        "label": "Attachment",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "f_systems",
-                    "label": "Family Systems",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "c3d2_foundations",
-                        "label": "Foundations of Functioning",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_forming_self",
+                            "label": "The Forming Self",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_foundations",
+                            "label": "Foundations of Functioning",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_first_learning",
-                        "label": "First Learning",
-                        "color": "#2a9870",
+                        "id": "f_systems",
+                        "label": "Family Systems",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_foundations",
+                            "label": "Foundations of Functioning",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_first_learning",
+                            "label": "First Learning",
+                            "color": "#2a9870",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -337,34 +337,9 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s4_trauma",
-                    "label": "Trauma",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s2",
-                    "label": "Body",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "f_sys_addict",
-                    "label": "Addiction",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2_stress_body",
-                        "label": "Stress & the Body",
+                        "id": "s4_trauma",
+                        "label": "Trauma",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -372,18 +347,43 @@ const LAYERS = [
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_treatment",
-                        "label": "Treatment Modalities",
-                        "color": "#3aa080",
+                        "id": "s2",
+                        "label": "Body",
                         "desc": "",
                         "links": [],
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "f_sys_addict",
+                        "label": "Addiction",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_stress_body",
+                            "label": "Stress & the Body",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_treatment",
+                            "label": "Treatment Modalities",
+                            "color": "#3aa080",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
+                        "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -395,6 +395,38 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
+                      {
+                        "id": "s4_trauma",
+                        "label": "Trauma",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "crel_att",
+                        "label": "Attachment",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "crel_att",
+                    "label": "Attachment",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
                   {
                     "id": "s4_trauma",
                     "label": "Trauma",
@@ -405,56 +437,8 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "crel_att",
-                    "label": "Attachment",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                    ],
-                    "orbs": []
-                  }
-                ],
-                "bottomPills": [
-              {
-                "id": "crel_att",
-                "label": "Attachment",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "s4_trauma",
-                "label": "Trauma",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "f_systems",
-                "label": "Family Systems",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "s4",
-                "label": "Memory",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c3d2_first_learning",
-                    "label": "First Learning",
+                    "id": "f_systems",
+                    "label": "Family Systems",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -462,18 +446,34 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "c3d2_foundations",
-                    "label": "Foundations of Functioning",
-                    "color": "#2a9870",
+                    "id": "s4",
+                    "label": "Memory",
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_first_learning",
+                        "label": "First Learning",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_foundations",
+                        "label": "Foundations of Functioning",
+                        "color": "#2a9870",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   }
-                ],
-                "orbs": []
-              }
                 ],
                 "orbs": []
               },
@@ -512,25 +512,9 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s3_grief",
-                    "label": "Grief",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s3",
-                    "label": "Emotions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2",
-                        "label": "Mental Health",
+                        "id": "s3_grief",
+                        "label": "Grief",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -538,18 +522,34 @@ const LAYERS = [
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_mood",
-                        "label": "Mood",
-                        "color": "#1a7858",
+                        "id": "s3",
+                        "label": "Emotions",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2",
+                            "label": "Mental Health",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_mood",
+                            "label": "Mood",
+                            "color": "#1a7858",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -574,43 +574,43 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "crel_att_anx",
-                    "label": "Anxiety",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s3_fear",
-                    "label": "Fear",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2_anxiety",
+                        "id": "crel_att_anx",
                         "label": "Anxiety",
                         "desc": "",
                         "links": [],
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "s3_fear",
+                        "label": "Fear",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_anxiety",
+                            "label": "Anxiety",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
+                        "orbs": []
+                      },
+                      {
+                        "id": "crel_lo_anx",
+                        "label": "Social Anxiety",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_lo_anx",
-                    "label": "Social Anxiety",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -635,25 +635,9 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s3_grief",
-                    "label": "Grief",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_lone",
-                    "label": "Loneliness & Belonging",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2_depression",
-                        "label": "Depression",
+                        "id": "s3_grief",
+                        "label": "Grief",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -661,46 +645,62 @@ const LAYERS = [
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_community_peer",
-                        "label": "Community & Peer",
+                        "id": "crel_lone",
+                        "label": "Loneliness & Belonging",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_lo_iso",
-                    "label": "Isolation",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "c3d2_depression",
-                        "label": "Depression",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_depression",
+                            "label": "Depression",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_community_peer",
+                            "label": "Community & Peer",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_crisis",
-                        "label": "Crisis & Intervention",
-                        "color": "#cc4040",
+                        "id": "crel_lo_iso",
+                        "label": "Isolation",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_depression",
+                            "label": "Depression",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_crisis",
+                            "label": "Crisis & Intervention",
+                            "color": "#cc4040",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -725,25 +725,9 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "e2_psych_mind",
-                    "label": "Mind",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s5",
-                    "label": "Perception",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2_thinking",
-                        "label": "Thinking",
+                        "id": "e2_psych_mind",
+                        "label": "Mind",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -751,18 +735,34 @@ const LAYERS = [
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_internalized",
-                        "label": "Internalized Stigma",
-                        "color": "#1a8a60",
+                        "id": "s5",
+                        "label": "Perception",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_thinking",
+                            "label": "Thinking",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_internalized",
+                            "label": "Internalized Stigma",
+                            "color": "#1a8a60",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -781,25 +781,9 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s1",
-                    "label": "Identity",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s4_trauma",
-                    "label": "Trauma",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2_foundations",
-                        "label": "Foundations of Functioning",
+                        "id": "s1",
+                        "label": "Identity",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -807,35 +791,51 @@ const LAYERS = [
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_stress_body",
-                        "label": "Stress & the Body",
+                        "id": "s4_trauma",
+                        "label": "Trauma",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_foundations",
+                            "label": "Foundations of Functioning",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_stress_body",
+                            "label": "Stress & the Body",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_first_learning",
+                            "label": "First Learning",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_first_learning",
-                        "label": "First Learning",
+                        "id": "f_sys_roles",
+                        "label": "Family Roles",
                         "desc": "",
                         "links": [],
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "f_sys_roles",
-                    "label": "Family Roles",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -866,75 +866,75 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s4_childhood",
-                    "label": "Childhood Memory",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s5_att",
-                    "label": "Attention",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "s4_childhood",
+                        "label": "Childhood Memory",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "s5_att",
+                        "label": "Attention",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   }
                 ],
                 "bottomPills": [
-              {
-                "id": "e2_psych_mind",
-                "label": "Mind",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
                   {
-                    "id": "c3d2",
-                    "label": "Mental Health",
+                    "id": "e2_psych_mind",
+                    "label": "Mind",
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2",
+                        "label": "Mental Health",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_psychoanalytic",
+                        "label": "Psychoanalytic",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_neuroscience",
+                        "label": "Neuroscience",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   },
                   {
-                    "id": "c3d2_psychoanalytic",
-                    "label": "Psychoanalytic",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c3d2_neuroscience",
-                    "label": "Neuroscience",
+                    "id": "s3",
+                    "label": "Emotions",
                     "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
                   }
-                ],
-                "orbs": []
-              },
-              {
-                "id": "s3",
-                "label": "Emotions",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
                 ],
                 "orbs": []
               },
@@ -967,24 +967,24 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s3",
-                    "label": "Emotions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_att",
-                    "label": "Attachment",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "s3",
+                        "label": "Emotions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "crel_att",
+                        "label": "Attachment",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1003,15 +1003,15 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "c3d1",
-                    "label": "Medicine",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "c3d1",
+                        "label": "Medicine",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1023,24 +1023,24 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s2",
-                    "label": "Body",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s4_trauma",
-                    "label": "Trauma",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "s2",
+                        "label": "Body",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "s4_trauma",
+                        "label": "Trauma",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1059,33 +1059,33 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "community",
-                    "label": "Community & Culture",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "crel_lone",
-                    "label": "Loneliness & Belonging",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "fam_tp6",
-                    "label": "Chosen Family",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "community",
+                        "label": "Community & Culture",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "crel_lone",
+                        "label": "Loneliness & Belonging",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "fam_tp6",
+                        "label": "Chosen Family",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1110,9 +1110,32 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
+                      {
+                        "id": "e2",
+                        "label": "Science",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d1",
+                        "label": "Medicine",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
                   {
-                    "id": "e2",
-                    "label": "Science",
+                    "id": "e2_psych_mind",
+                    "label": "Mind",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -1127,59 +1150,36 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
-                  }
+                  },
+                  {
+                    "id": "community",
+                    "label": "Community & Culture",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_community_peer",
+                        "label": "Community & Peer",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_cultural_variation",
+                        "label": "Cultural Variation",
+                        "color": "#1a8a60",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   }
-                ],
-                "bottomPills": [
-              {
-                "id": "e2_psych_mind",
-                "label": "Mind",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "c3d1",
-                "label": "Medicine",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "community",
-                "label": "Community & Culture",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "c3d2_community_peer",
-                    "label": "Community & Peer",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "c3d2_cultural_variation",
-                    "label": "Cultural Variation",
-                    "color": "#1a8a60",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              }
                 ],
                 "orbs": []
               },
@@ -1204,34 +1204,9 @@ const LAYERS = [
                 ],
                 "topPills": [],
                 "bottomPills": [
-              {
-                "id": "x2_fear",
-                "label": "Fear of Death",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "crel_lo_iso",
-                "label": "Isolation",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "s3_shame",
-                "label": "Shame",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
                   {
-                    "id": "c3d2_stigma",
-                    "label": "Stigma & Culture",
+                    "id": "x2_fear",
+                    "label": "Fear of Death",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -1239,17 +1214,42 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "c3d2_internalized",
-                    "label": "Internalized Stigma",
+                    "id": "crel_lo_iso",
+                    "label": "Isolation",
                     "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "s3_shame",
+                    "label": "Shame",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_stigma",
+                        "label": "Stigma & Culture",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_internalized",
+                        "label": "Internalized Stigma",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
                   }
-                ],
-                "orbs": []
-              }
                 ],
                 "orbs": []
               },
@@ -1268,24 +1268,24 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s3_shame",
-                    "label": "Shame",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "frc_st_class",
-                    "label": "Classification",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "s3_shame",
+                        "label": "Shame",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "frc_st_class",
+                        "label": "Classification",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1297,25 +1297,9 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "s3_shame",
-                    "label": "Shame",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s1_selfimage",
-                    "label": "Self-Image",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
                       {
-                        "id": "c3d2_internalized",
-                        "label": "Internalized Stigma",
+                        "id": "s3_shame",
+                        "label": "Shame",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -1323,18 +1307,34 @@ const LAYERS = [
                         "orbs": []
                       },
                       {
-                        "id": "c3d2_forming_self",
-                        "label": "The Forming Self",
-                        "color": "#2a9870",
+                        "id": "s1_selfimage",
+                        "label": "Self-Image",
                         "desc": "",
                         "links": [],
                         "topPills": [],
-                        "bottomPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "c3d2_internalized",
+                            "label": "Internalized Stigma",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "c3d2_forming_self",
+                            "label": "The Forming Self",
+                            "color": "#2a9870",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
                         "orbs": []
                       }
-                    ],
-                    "orbs": []
-                  }
                     ],
                     "orbs": []
                   },
@@ -1346,33 +1346,33 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "f_rc",
-                    "label": "Race & Ethnicity",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x5",
-                    "label": "Religion",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "community",
-                    "label": "Community & Culture",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "f_rc",
+                        "label": "Race & Ethnicity",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5",
+                        "label": "Religion",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "community",
+                        "label": "Community & Culture",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1384,24 +1384,24 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "c2_ident",
-                    "label": "Identity & Attention",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "community",
-                    "label": "Community & Culture",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "c2_ident",
+                        "label": "Identity & Attention",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "community",
+                        "label": "Community & Culture",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1444,15 +1444,15 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "community",
-                    "label": "Community & Culture",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "community",
+                        "label": "Community & Culture",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1464,57 +1464,32 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "frc_eth_lang",
-                    "label": "Language & Identity",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "frc_st_class",
-                    "label": "Classification",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "frc_eth_lang",
+                        "label": "Language & Identity",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "frc_st_class",
+                        "label": "Classification",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   }
                 ],
                 "bottomPills": [
-              {
-                "id": "s3_shame",
-                "label": "Shame",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "frc_struct",
-                "label": "Race as Structure",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "s1",
-                "label": "Identity",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [
                   {
-                    "id": "c3d2_forming_self",
-                    "label": "The Forming Self",
+                    "id": "s3_shame",
+                    "label": "Shame",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -1522,18 +1497,43 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "c3d2_personality",
-                    "label": "Personality",
-                    "color": "#1a7858",
+                    "id": "frc_struct",
+                    "label": "Race as Structure",
                     "desc": "",
                     "links": [],
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "s1",
+                    "label": "Identity",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "c3d2_forming_self",
+                        "label": "The Forming Self",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c3d2_personality",
+                        "label": "Personality",
+                        "color": "#1a7858",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
                   }
-                ],
-                "orbs": []
-              }
                 ],
                 "orbs": []
               },
@@ -1552,24 +1552,24 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "e2_psych_mind",
-                    "label": "Mind",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s4",
-                    "label": "Memory",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "e2_psych_mind",
+                        "label": "Mind",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "s4",
+                        "label": "Memory",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1588,33 +1588,33 @@ const LAYERS = [
                     ],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "e2",
-                    "label": "Science",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "s2",
-                    "label": "Body",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "e2_psych_mind",
-                    "label": "Mind",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "e2",
+                        "label": "Science",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "s2",
+                        "label": "Body",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "e2_psych_mind",
+                        "label": "Mind",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1626,33 +1626,33 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "x5_dharmic",
-                    "label": "Dharmic Religions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x5_africa_ind",
-                    "label": "African Spiritual Traditions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x5_am_lakota",
-                    "label": "Lakota & Plains Spirituality",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "x5_dharmic",
+                        "label": "Dharmic Religions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5_africa_ind",
+                        "label": "African Spiritual Traditions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5_am_lakota",
+                        "label": "Lakota & Plains Spirituality",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1664,24 +1664,24 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "x5",
-                    "label": "Religion",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "x5_abrahamic",
-                    "label": "Abrahamic Religions",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "x5",
+                        "label": "Religion",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "x5_abrahamic",
+                        "label": "Abrahamic Religions",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   },
@@ -1693,65 +1693,65 @@ const LAYERS = [
                     "links": [],
                     "topPills": [],
                     "bottomPills": [
-                  {
-                    "id": "f_class",
-                    "label": "Class",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "frc_struct",
-                    "label": "Race as Structure",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "p2",
-                    "label": "Economy & Money",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
+                      {
+                        "id": "f_class",
+                        "label": "Class",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "frc_struct",
+                        "label": "Race as Structure",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p2",
+                        "label": "Economy & Money",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
                     ],
                     "orbs": []
                   }
                 ],
                 "bottomPills": [
-              {
-                "id": "e2_psych_mind",
-                "label": "Mind",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "x5",
-                "label": "Religion",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "e2",
-                "label": "Science",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              }
+                  {
+                    "id": "e2_psych_mind",
+                    "label": "Mind",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "x5",
+                    "label": "Religion",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "e2",
+                    "label": "Science",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
                 ],
                 "orbs": []
               }
@@ -31062,6 +31062,33 @@ const LAYERS = [
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "h1_china",
+                        "label": "The Chinese Dynasties",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_china_opening",
+                        "label": "Opening Up",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_china_xi",
+                        "label": "Xi's Consolidation",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
                     ]
                   },
@@ -31118,6 +31145,24 @@ const LAYERS = [
                         "topPills": [],
                         "bottomPills": [],
                         "orbs": []
+                      },
+                      {
+                        "id": "h1_china",
+                        "label": "The Chinese Dynasties",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_china_xi",
+                        "label": "Xi's Consolidation",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
                       }
                     ]
                   },
@@ -31169,6 +31214,24 @@ const LAYERS = [
                       {
                         "id": "pmil_nuc",
                         "label": "Nuclear Weapons",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_china",
+                        "label": "The Chinese Dynasties",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_china_1c2s",
+                        "label": "One Country Two Systems",
                         "desc": "",
                         "links": [],
                         "topPills": [],
@@ -32070,6 +32133,24 @@ const LAYERS = [
                   {
                     "id": "hist_tp1",
                     "label": "The Pattern",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_china_us",
+                    "label": "The US-China Relationship",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -35668,6 +35749,430 @@ const LAYERS = [
                     "orbs": []
                   }
                 ],
+                "orbs": []
+              }
+            ],
+            "orbs": []
+          },
+          {
+            "id": "h1_megalomania",
+            "label": "Megalomania & the Crown",
+            "color": "#7a1a3a",
+            "desc": "Power doesn't find megalomaniacs. It makes them. The process is slow and it looks like success the entire time. Deference comes first. Then insulation. Then the removal of consequence. By the time the grandiosity is visible the architecture that would have corrected it is already gone. We call it corruption. It's more like a conversion.",
+            "links": [
+              {
+                "label": "JSTOR",
+                "url": "https://jstor.org",
+                "emoji": "🔬",
+                "tag": "RESEARCH"
+              }
+            ],
+            "topPills": [
+              {
+                "id": "h1_meg_pattern",
+                "label": "The Megalomaniac Pattern",
+                "color": "#8a2a4a",
+                "desc": "The mechanics are consistent across centuries and cultures. The sequence doesn't vary much. What varies is the speed. Deference loops form first — surrounded by people whose survival depends on agreement, dissent becomes career-ending, then dangerous, then impossible, and the feedback loop closes. Insulation follows — physical first, then informational, and what reaches the leader is curated by people who know what he wants to hear. The gap between the map and the territory widens without anyone announcing it. Then consequence is removed — legal immunity formal or informal, no mechanism left to correct behavior, actions that would have ended a career or a freedom for anyone else pass without friction. Once all three are in place the process stops being reversible from inside. External pressure is the only remaining corrective. External pressure gets called an attack. The system doesn't fail all at once. It fails one accommodation at a time.",
+                "links": [
+                  {
+                    "label": "World History Encyclopedia",
+                    "url": "https://worldhistory.org",
+                    "emoji": "🗄️",
+                    "tag": "HISTORY"
+                  },
+                  {
+                    "label": "Stanford Encyclopedia of Philosophy",
+                    "url": "https://plato.stanford.edu",
+                    "emoji": "🔬",
+                    "tag": "MIND"
+                  },
+                  {
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_megalomania",
+                    "label": "Megalomania & the Crown",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "hist_tp1",
+                    "label": "The Pattern",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_20th_totalitarian",
+                    "label": "The Rise of Totalitarianism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_record",
+                "label": "The Historical Record",
+                "color": "#7a2a3a",
+                "desc": "The names change. The structure doesn't. Caesar crossed the Rubicon with a popular mandate and a Senate that had one structural check left — they used it with knives, and the Republic died anyway because the conditions that produced him were still intact. Caligula and Nero show what happens after the precedent is set: the office becomes the pathology accelerant, and the second generation is always worse because the first one had to fight for it. The Mongol succession problem — when the institution is a person, the institution dies when he does. Napoleon: the revolution that produced him was exhausted and hungry for order, he gave them order and took everything else. Stalin: paranoia as governance, the purges weren't irrational, they were efficient — everyone who could have stopped him was removed before they knew they were a threat. Hitler: a functional democracy dismantled legally, the Enabling Act passed by vote, the people inside the system who could have stopped it mostly decided not to. Mao: true believer first, megalomaniac second, the ideology became the insulation and the body count became negotiable. Amin and Gaddafi: power in the complete absence of institutional friction, which removes even the pretense of constraint. The echo is left to the reader.",
+                "links": [
+                  {
+                    "label": "Lapham's Quarterly",
+                    "url": "https://laphamsquarterly.org",
+                    "emoji": "📖",
+                    "tag": "HISTORY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_megalomania",
+                    "label": "Megalomania & the Crown",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_pattern",
+                    "label": "The Megalomaniac Pattern",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "hist_tp3",
+                    "label": "Collapse",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_taxonomy",
+                "label": "The Active Cases",
+                "color": "#6a1a3a",
+                "desc": "Four current types, documented, present tense. Authoritarian consolidators work through institutions, dismantling them from inside while maintaining the appearance of legitimacy — slow, methodical, hard to stop because nothing looks illegal until it's too late. Opportunistic disruptors surf genuine institutional failure — they didn't build the conditions, they read them correctly and moved, faster and louder, potentially less structurally durable. Inherited rulers operate in zero-accountability architecture from birth — no path to power meant no friction, no testing, no corrective. The pathology has no origin story because there was never a moment it could have been stopped. Techno-feudalists purchase proximity to state power without election or inheritance — this is genuinely new, no historical sub-card fits it yet, the mechanism is being written in real time.",
+                "links": [
+                  {
+                    "label": "Council on Foreign Relations",
+                    "url": "https://cfr.org",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "Human Rights Watch",
+                    "url": "https://hrw.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  }
+                ],
+                "topPills": [
+                  {
+                    "id": "h1_meg_con",
+                    "label": "Authoritarian Consolidators",
+                    "color": "#7a2a3a",
+                    "desc": "The slowest and most durable form. Works through existing institutions — courts, media, elections — dismantling them from inside while maintaining the appearance of legitimacy. Nothing looks illegal until it's too late because legality is being redefined in real time. The democratic forms remain; the democratic function is hollowed out. Requires patience, bureaucratic precision, and a population that mistakes procedure for protection. Putin. Orbán. Erdoğan.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "glories_checksbalances",
+                        "label": "Checks & Balances",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p_gov",
+                        "label": "Government",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h6",
+                        "label": "Law",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_dis",
+                    "label": "Opportunistic Disruptors",
+                    "color": "#7a4a1a",
+                    "desc": "The fastest and loudest form. Doesn't build the conditions — reads them correctly and moves. Genuine institutional failure, genuine economic grievance, genuine cultural anxiety — all real, all pre-existing. The disruptor didn't create the kindling. They brought the match. Potentially less structurally durable than the consolidator because the institutions haven't been fully captured — but durability is not the point. The point is the window, and the window is open. Trump. Milei. Bolsonaro.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_gov_author",
+                        "label": "Authoritarianism",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "hist_tp1",
+                        "label": "The Pattern",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p5",
+                        "label": "Media",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_inh",
+                    "label": "Inherited Sovereigns",
+                    "color": "#5a2a5a",
+                    "desc": "Zero-accountability architecture from birth. No path to power meant no friction, no testing, no corrective moment where the system could have said no. The pathology has no origin story because there was never a point it could have been stopped. What the others had to dismantle — checks, oversight, dissent — never existed here. The question is not how they got this way. The question is what a human being becomes when no one has ever said no to them. MBS. Kim Jong-un. The Gulf monarchies.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "h1_empires",
+                        "label": "The Age of Empires",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "h1_ancient",
+                        "label": "The Ancient World",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "occ_ss_elite",
+                        "label": "Elite Networks",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [
+                          {
+                            "id": "occ_ss_el_bilderberg",
+                            "label": "Bilderberg & Davos",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "occ_ss_el_cfr",
+                            "label": "Council on Foreign Relations",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          },
+                          {
+                            "id": "occ_ss_el_roundtable",
+                            "label": "The Round Table & Rhodes Network",
+                            "desc": "",
+                            "links": [],
+                            "topPills": [],
+                            "bottomPills": [],
+                            "orbs": []
+                          }
+                        ],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_tech",
+                    "label": "Techno-Feudalists",
+                    "color": "#1a3a6a",
+                    "desc": "Genuinely new. No historical sub-card fits it because the mechanism didn't exist before. Private capital accumulation reaching the scale of state power, then purchasing proximity to state power without election or inheritance. Satellite internet. AI frontier. Global public discourse infrastructure. The formal democratic process wasn't circumvented — it was made irrelevant by operating in the spaces between it. One private citizen with zero democratic oversight and more direct leverage over daily life than most elected governments. The taxonomy doesn't have a name for this yet because it just arrived. Musk — and whoever comes next.",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "p_corp",
+                        "label": "Corporations",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "p2",
+                        "label": "Economy & Money",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "c7",
+                        "label": "Tools, Tech & AI",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  }
+                ],
+                "bottomPills": [
+                  {
+                    "id": "h1_megalomania",
+                    "label": "Megalomania & the Crown",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_con",
+                    "label": "Authoritarian Consolidators",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_dis",
+                    "label": "Opportunistic Disruptors",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_failure",
+                "label": "The Structural Failure",
+                "color": "#5a1a2a",
+                "desc": "The checks existed. Most of them. For a while. What failed wasn't just the architecture. It was the assumption underneath it — that the people inside the system shared something basic with the people it was built to protect. The ones who did rarely made it far enough to matter.",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_megalomania",
+                    "label": "Megalomania & the Crown",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_meg_pattern",
+                    "label": "The Megalomaniac Pattern",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "hist_tp3",
+                    "label": "Collapse",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              }
+            ],
+            "bottomPills": [
+              {
+                "id": "h1_meg_pattern",
+                "label": "The Megalomaniac Pattern",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_meg_con",
+                "label": "Authoritarian Consolidators",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "hist_tp1",
+                "label": "The Pattern",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
                 "orbs": []
               }
             ],
@@ -42085,7 +42590,17 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "h1_china",
+                        "label": "The Chinese Dynasties",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
                     "orbs": []
                   }
                 ],
@@ -52408,6 +52923,15 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -52803,6 +53327,15 @@ const LAYERS = [
                   {
                     "id": "x5_confucianism",
                     "label": "Confucianism",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -53990,24 +54523,36 @@ const LAYERS = [
             "orbs": []
           },
           {
-            "id": "h1_megalomania",
-            "label": "Megalomania & the Crown",
-            "color": "#7a1a3a",
-            "desc": "Power doesn't find megalomaniacs. It makes them. The process is slow and it looks like success the entire time. Deference comes first. Then insulation. Then the removal of consequence. By the time the grandiosity is visible the architecture that would have corrected it is already gone. We call it corruption. It's more like a conversion.",
+            "id": "h1_china",
+            "label": "The Chinese Dynasties",
+            "color": "#7a2020",
+            "desc": "China is the oldest continuous civilization on earth. By 1800 it was the largest economy in the world.\n\nThen Europe arrived with warships and opium.\n\nThe next hundred and ten years are called the Century of Humiliation. Foreign powers carved out concessions in Chinese cities. Britain took Hong Kong. Portugal kept Macau. Japan took Taiwan and later invaded the mainland, killing millions. The emperor fell in 1912. The country fractured.\n\nIn 1949 Mao Zedong won. The Great Leap Forward starved tens of millions. The Cultural Revolution turned the country against itself. By 1976 China was broken and isolated.\n\nDeng Xiaoping changed the bet. Keep the party. Open the economy. Build zones where capitalism could be tested without infecting the whole. Shenzhen rose from villages to a megacity in a generation. Hundreds of millions left poverty.\n\nXi Jinping took power in 2012 and the opening began to close. Hong Kong's autonomy collapsed. Xinjiang was placed under surveillance and mass detention. Chinese capital reached across three continents through the Belt and Road.\n\nChina today is the second largest economy. The largest manufacturer. The defining counterweight to American power.\n\nIt is also a country shaped by a wound that has not healed. Everything it does now is in some way an answer to what was done to it then.\n\nThe story told here is the story as it can be told in the open, by anyone, anywhere. There are other tellings. There always are. What matters is that the facts are kept, the dead are counted, and the long arc is visible to anyone who looks.",
             "links": [
               {
-                "label": "JSTOR",
-                "url": "https://jstor.org",
-                "emoji": "🔬",
-                "tag": "RESEARCH"
+                "label": "Foreign Affairs",
+                "url": "https://foreignaffairs.com",
+                "emoji": "🌍",
+                "tag": "GEOPOLITICS"
+              },
+              {
+                "label": "World History Encyclopedia",
+                "url": "https://worldhistory.org",
+                "emoji": "🗄️",
+                "tag": "HISTORY"
+              },
+              {
+                "label": "Human Rights Watch",
+                "url": "https://hrw.org",
+                "emoji": "⚖️",
+                "tag": "RIGHTS"
               }
             ],
             "topPills": [
               {
-                "id": "h1_meg_pattern",
-                "label": "The Megalomaniac Pattern",
-                "color": "#8a2a4a",
-                "desc": "The mechanics are consistent across centuries and cultures. The sequence doesn't vary much. What varies is the speed. Deference loops form first — surrounded by people whose survival depends on agreement, dissent becomes career-ending, then dangerous, then impossible, and the feedback loop closes. Insulation follows — physical first, then informational, and what reaches the leader is curated by people who know what he wants to hear. The gap between the map and the territory widens without anyone announcing it. Then consequence is removed — legal immunity formal or informal, no mechanism left to correct behavior, actions that would have ended a career or a freedom for anyone else pass without friction. Once all three are in place the process stops being reversible from inside. External pressure is the only remaining corrective. External pressure gets called an attack. The system doesn't fail all at once. It fails one accommodation at a time.",
+                "id": "h1_china_humiliation",
+                "label": "The Century of Humiliation",
+                "color": "#8a2828",
+                "desc": "It started with opium.\n\nBritain controlled India. India grew opium. Britain needed something China would buy because China wanted nothing else and was draining British silver in exchange for tea, silk, and porcelain.\n\nSo Britain pushed opium into China by the ton. Millions became addicted. The silver flowed back.\n\nWhen China tried to stop it, Britain sent warships. The First Opium War ended in 1842 with the Treaty of Nanking. China ceded Hong Kong. A Second Opium War extracted more.\n\nThen came the others. France, Germany, Russia, Japan, and the United States carved out concessions on Chinese soil with their own courts and their own troops.\n\nIn 1900 the Boxer Rebellion rose against foreign presence. Eight nations sent armies to crush it. Beijing was sacked.\n\nIn 1937 Japan invaded. Nanking fell. Hundreds of thousands were massacred in six weeks. The war lasted until 1945.\n\nBy the time it ended, China had been bled for over a hundred years.\n\nThis is the story most Americans never learned. China remembers it daily.",
                 "links": [
                   {
                     "label": "World History Encyclopedia",
@@ -54016,68 +54561,23 @@ const LAYERS = [
                     "tag": "HISTORY"
                   },
                   {
-                    "label": "Stanford Encyclopedia of Philosophy",
-                    "url": "https://plato.stanford.edu",
-                    "emoji": "🔬",
-                    "tag": "MIND"
-                  },
-                  {
-                    "label": "Foreign Affairs",
-                    "url": "https://foreignaffairs.com",
-                    "emoji": "🌍",
-                    "tag": "GEOPOLITICS"
-                  }
-                ],
-                "topPills": [],
-                "bottomPills": [
-                  {
-                    "id": "h1_megalomania",
-                    "label": "Megalomania & the Crown",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "hist_tp1",
-                    "label": "The Pattern",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h1_20th_totalitarian",
-                    "label": "The Rise of Totalitarianism",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  }
-                ],
-                "orbs": []
-              },
-              {
-                "id": "h1_meg_record",
-                "label": "The Historical Record",
-                "color": "#7a2a3a",
-                "desc": "The names change. The structure doesn't. Caesar crossed the Rubicon with a popular mandate and a Senate that had one structural check left — they used it with knives, and the Republic died anyway because the conditions that produced him were still intact. Caligula and Nero show what happens after the precedent is set: the office becomes the pathology accelerant, and the second generation is always worse because the first one had to fight for it. The Mongol succession problem — when the institution is a person, the institution dies when he does. Napoleon: the revolution that produced him was exhausted and hungry for order, he gave them order and took everything else. Stalin: paranoia as governance, the purges weren't irrational, they were efficient — everyone who could have stopped him was removed before they knew they were a threat. Hitler: a functional democracy dismantled legally, the Enabling Act passed by vote, the people inside the system who could have stopped it mostly decided not to. Mao: true believer first, megalomaniac second, the ideology became the insulation and the body count became negotiable. Amin and Gaddafi: power in the complete absence of institutional friction, which removes even the pretense of constraint. The echo is left to the reader.",
-                "links": [
-                  {
                     "label": "Lapham's Quarterly",
                     "url": "https://laphamsquarterly.org",
                     "emoji": "📖",
+                    "tag": "HISTORY"
+                  },
+                  {
+                    "label": "UK National Archives",
+                    "url": "https://nationalarchives.gov.uk",
+                    "emoji": "🗄️",
                     "tag": "HISTORY"
                   }
                 ],
                 "topPills": [],
                 "bottomPills": [
                   {
-                    "id": "h1_megalomania",
-                    "label": "Megalomania & the Crown",
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54085,8 +54585,8 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "h1_meg_pattern",
-                    "label": "The Megalomaniac Pattern",
+                    "id": "h1_empires",
+                    "label": "The Age of Empires",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54094,8 +54594,17 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "hist_tp3",
-                    "label": "Collapse",
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_china",
+                    "label": "China & Asia",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54106,17 +54615,165 @@ const LAYERS = [
                 "orbs": []
               },
               {
-                "id": "h1_meg_taxonomy",
-                "label": "The Active Cases",
-                "color": "#6a1a3a",
-                "desc": "Four current types, documented, present tense. Authoritarian consolidators work through institutions, dismantling them from inside while maintaining the appearance of legitimacy — slow, methodical, hard to stop because nothing looks illegal until it's too late. Opportunistic disruptors surf genuine institutional failure — they didn't build the conditions, they read them correctly and moved, faster and louder, potentially less structurally durable. Inherited rulers operate in zero-accountability architecture from birth — no path to power meant no friction, no testing, no corrective. The pathology has no origin story because there was never a moment it could have been stopped. Techno-feudalists purchase proximity to state power without election or inheritance — this is genuinely new, no historical sub-card fits it yet, the mechanism is being written in real time.",
+                "id": "h1_china_mao",
+                "label": "Mao and the Revolution",
+                "color": "#922020",
+                "desc": "Mao Zedong led a peasant army to victory in a country exhausted by foreign domination and civil war. On October 1, 1949, he founded the People's Republic.\n\nLand was redistributed. Tibet was invaded in 1950 and absorbed. Korea brought China into direct war with the United States.\n\nThen came the Great Leap Forward. Mao tried to industrialize China overnight through collective agriculture and backyard steel furnaces. It failed catastrophically. The resulting famine killed an estimated thirty to forty-five million people. It is the deadliest famine in human history.\n\nThe Cultural Revolution followed in 1966. Universities closed. Intellectuals were beaten, exiled, or killed. Temples and books were destroyed. Families turned in families. The country tore itself apart for a decade.\n\nMao died in 1976. The party's later verdict judged him seventy percent right, thirty percent wrong.\n\nThe seventy percent was unifying China. The thirty percent was the tens of millions of dead.",
                 "links": [
                   {
-                    "label": "Council on Foreign Relations",
-                    "url": "https://cfr.org",
+                    "label": "World History Encyclopedia",
+                    "url": "https://worldhistory.org",
+                    "emoji": "🗄️",
+                    "tag": "HISTORY"
+                  },
+                  {
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
                     "emoji": "🌍",
                     "tag": "GEOPOLITICS"
                   },
+                  {
+                    "label": "Wilson Center Digital Archive",
+                    "url": "https://digitalarchive.wilsoncenter.org",
+                    "emoji": "🗄️",
+                    "tag": "HISTORY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h3_revolutions",
+                    "label": "Revolutions",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_china_rise",
+                    "label": "The Rise of China",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_china_opening",
+                "label": "Opening Up",
+                "color": "#7a2828",
+                "desc": "Deng Xiaoping took power in 1978 and made the decision that built modern China. Capitalism would be allowed inside communism, in controlled zones, under party supervision.\n\nThe first experiment was Shenzhen. A fishing village across the border from Hong Kong. Within a generation it was a city of millions with a GDP larger than Hong Kong's.\n\nMore zones followed. Then coastal cities. Then inland. Foreign investment flooded in. The countryside emptied into the cities. Made in China became universal.\n\nSix hundred million people moved out of poverty in a generation. It is the largest reduction in human suffering by economic policy ever recorded.\n\nIt also produced staggering inequality, environmental devastation, and a population that had grown used to freedoms the party had not authorized.\n\nThat tension is the seed of everything that came next.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "World History Encyclopedia",
+                    "url": "https://worldhistory.org",
+                    "emoji": "🗄️",
+                    "tag": "HISTORY"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "p2",
+                    "label": "Economy & Money",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "h1_china_xi",
+                    "label": "Xi's Consolidation",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [
+                      {
+                        "id": "geo_china_bri",
+                        "label": "Belt & Road",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      },
+                      {
+                        "id": "geo_shift_china_rise",
+                        "label": "China's Challenge",
+                        "desc": "",
+                        "links": [],
+                        "topPills": [],
+                        "bottomPills": [],
+                        "orbs": []
+                      }
+                    ],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_china_rise",
+                    "label": "The Rise of China",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_china_bri",
+                    "label": "Belt & Road",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_china_1c2s",
+                "label": "One Country Two Systems",
+                "color": "#6a2030",
+                "desc": "Hong Kong was returned by Britain in 1997. Macau by Portugal in 1999. China promised both they could keep their own legal systems, currencies, courts, and civil liberties for fifty years.\n\nThis was One Country Two Systems. Designed by Deng Xiaoping. Intended also as the model for eventual Taiwan reunification.\n\nIt held at first. Hong Kong remained a global financial hub with a free press and a protest culture. Macau leaned into gambling and quietly integrated.\n\nIn 2019 Hong Kong erupted. Millions marched against creeping mainland control. The protests lasted months.\n\nBeijing's answer came in 2020. A national security law that criminalized dissent. Opposition leaders jailed or driven into exile. Newspapers shut down. The fifty year promise became a formality.\n\nMacau saw none of this. Taiwan watched all of it.\n\nHong Kong's deadline is 2047. Macau's is 2049. Taiwan's answer is already clear.",
+                "links": [
                   {
                     "label": "Foreign Affairs",
                     "url": "https://foreignaffairs.com",
@@ -54128,194 +54785,19 @@ const LAYERS = [
                     "url": "https://hrw.org",
                     "emoji": "⚖️",
                     "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Hong Kong Free Press",
+                    "url": "https://hongkongfp.com",
+                    "emoji": "📰",
+                    "tag": "JOURNALISM"
                   }
                 ],
-                "topPills": [
-                  {
-                    "id": "h1_meg_con",
-                    "label": "Authoritarian Consolidators",
-                    "color": "#7a2a3a",
-                    "desc": "The slowest and most durable form. Works through existing institutions — courts, media, elections — dismantling them from inside while maintaining the appearance of legitimacy. Nothing looks illegal until it's too late because legality is being redefined in real time. The democratic forms remain; the democratic function is hollowed out. Requires patience, bureaucratic precision, and a population that mistakes procedure for protection. Putin. Orbán. Erdoğan.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "glories_checksbalances",
-                        "label": "Checks & Balances",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p_gov",
-                        "label": "Government",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h6",
-                        "label": "Law",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h1_meg_dis",
-                    "label": "Opportunistic Disruptors",
-                    "color": "#7a4a1a",
-                    "desc": "The fastest and loudest form. Doesn't build the conditions — reads them correctly and moves. Genuine institutional failure, genuine economic grievance, genuine cultural anxiety — all real, all pre-existing. The disruptor didn't create the kindling. They brought the match. Potentially less structurally durable than the consolidator because the institutions haven't been fully captured — but durability is not the point. The point is the window, and the window is open. Trump. Milei. Bolsonaro.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "p_gov_author",
-                        "label": "Authoritarianism",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "hist_tp1",
-                        "label": "The Pattern",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p5",
-                        "label": "Media",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h1_meg_inh",
-                    "label": "Inherited Sovereigns",
-                    "color": "#5a2a5a",
-                    "desc": "Zero-accountability architecture from birth. No path to power meant no friction, no testing, no corrective moment where the system could have said no. The pathology has no origin story because there was never a point it could have been stopped. What the others had to dismantle — checks, oversight, dissent — never existed here. The question is not how they got this way. The question is what a human being becomes when no one has ever said no to them. MBS. Kim Jong-un. The Gulf monarchies.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "h1_empires",
-                        "label": "The Age of Empires",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "h1_ancient",
-                        "label": "The Ancient World",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "occ_ss_elite",
-                        "label": "Elite Networks",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [
-                          {
-                            "id": "occ_ss_el_bilderberg",
-                            "label": "Bilderberg & Davos",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "occ_ss_el_cfr",
-                            "label": "Council on Foreign Relations",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          },
-                          {
-                            "id": "occ_ss_el_roundtable",
-                            "label": "The Round Table & Rhodes Network",
-                            "desc": "",
-                            "links": [],
-                            "topPills": [],
-                            "bottomPills": [],
-                            "orbs": []
-                          }
-                        ],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  },
-                  {
-                    "id": "h1_meg_tech",
-                    "label": "Techno-Feudalists",
-                    "color": "#1a3a6a",
-                    "desc": "Genuinely new. No historical sub-card fits it because the mechanism didn't exist before. Private capital accumulation reaching the scale of state power, then purchasing proximity to state power without election or inheritance. Satellite internet. AI frontier. Global public discourse infrastructure. The formal democratic process wasn't circumvented — it was made irrelevant by operating in the spaces between it. One private citizen with zero democratic oversight and more direct leverage over daily life than most elected governments. The taxonomy doesn't have a name for this yet because it just arrived. Musk — and whoever comes next.",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "p_corp",
-                        "label": "Corporations",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "p2",
-                        "label": "Economy & Money",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "c7",
-                        "label": "Tools, Tech & AI",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
-                    "orbs": []
-                  }
-                ],
+                "topPills": [],
                 "bottomPills": [
                   {
-                    "id": "h1_megalomania",
-                    "label": "Megalomania & the Crown",
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54323,8 +54805,8 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "h1_meg_con",
-                    "label": "Authoritarian Consolidators",
+                    "id": "geo_china_taiwan",
+                    "label": "Taiwan & the Pacific",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54332,8 +54814,8 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "h1_meg_dis",
-                    "label": "Opportunistic Disruptors",
+                    "id": "p_gov_intl",
+                    "label": "International Order",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54344,13 +54826,47 @@ const LAYERS = [
                 "orbs": []
               },
               {
-                "id": "h1_meg_failure",
-                "label": "The Structural Failure",
-                "color": "#5a1a2a",
-                "desc": "The checks existed. Most of them. For a while. What failed wasn't just the architecture. It was the assumption underneath it — that the people inside the system shared something basic with the people it was built to protect. The ones who did rarely made it far enough to matter.",
-                "links": [],
+                "id": "h1_china_xi",
+                "label": "Xi's Consolidation",
+                "color": "#8a1818",
+                "desc": "Xi Jinping took power in 2012. By 2018 he had ended presidential term limits. He may rule for life.\n\nHis anti-corruption campaign removed rivals and disciplined the party. The opening era's tolerance for private wealth ended. Jack Ma, China's most famous entrepreneur, vanished from public view after criticizing regulators.\n\nXinjiang was placed under mass surveillance. Over a million Uyghurs were detained in camps. Mosques were demolished. Children were separated from families. Multiple governments have called it genocide.\n\nTibet's repression deepened. Hong Kong's autonomy was crushed. Artificial islands were built and militarized across the South China Sea.\n\nThe Belt and Road Initiative pushed Chinese infrastructure investment into Africa, Central Asia, Latin America, and Europe. A twenty-first century Silk Road backed by state capital, often leaving recipient countries in debt to Beijing.\n\nTaiwan reunification was named non-negotiable.\n\nThe China that opened under Deng is closing under Xi.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "Human Rights Watch",
+                    "url": "https://hrw.org",
+                    "emoji": "⚖️",
+                    "tag": "RIGHTS"
+                  },
+                  {
+                    "label": "Council on Foreign Relations",
+                    "url": "https://cfr.org",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "Xinjiang Documentation Project",
+                    "url": "https://xjdp.aspi.org.au",
+                    "emoji": "🔍",
+                    "tag": "RESEARCH"
+                  }
+                ],
                 "topPills": [],
                 "bottomPills": [
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
                   {
                     "id": "h1_megalomania",
                     "label": "Megalomania & the Crown",
@@ -54361,8 +54877,41 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "h1_meg_pattern",
-                    "label": "The Megalomaniac Pattern",
+                    "id": "h3_genocide",
+                    "label": "Genocide",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  }
+                ],
+                "orbs": []
+              },
+              {
+                "id": "h1_china_us",
+                "label": "The US-China Relationship",
+                "color": "#6a1818",
+                "desc": "Nixon went to China in 1972. Two nations that had not spoken in twenty-three years suddenly had a relationship. The strategic logic was Cold War — split China from the Soviet Union.\n\nIt worked. The Soviet Union fell. China stayed.\n\nWhat followed was forty years of economic integration. American companies moved production to Chinese factories. American consumers bought Chinese goods. American debt was financed by Chinese savings. The assumption was that wealth would bring democratization. It did not.\n\nBy 2018 the relationship had broken. Trump launched a trade war. Biden continued it. Semiconductors became the central front. Taiwan became the central flashpoint.\n\nThe two largest economies on earth are now locked in a slow decoupling that nobody quite knows how to manage. Supply chains are rerouting. Technology controls are tightening. Military planning runs in both directions.\n\nThe defining bilateral relationship of the twenty-first century is a rivalry between a rising power that remembers being humiliated and a declining one that does not remember why it should care.",
+                "links": [
+                  {
+                    "label": "Foreign Affairs",
+                    "url": "https://foreignaffairs.com",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  },
+                  {
+                    "label": "Council on Foreign Relations",
+                    "url": "https://cfr.org",
+                    "emoji": "🌍",
+                    "tag": "GEOPOLITICS"
+                  }
+                ],
+                "topPills": [],
+                "bottomPills": [
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54370,8 +54919,35 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "hist_tp3",
-                    "label": "Collapse",
+                    "id": "h1_american",
+                    "label": "The American Empire",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_shifting",
+                    "label": "The Shifting Order",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_china",
+                    "label": "China & Asia",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_shift_china_rise",
+                    "label": "China's Challenge",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54384,8 +54960,8 @@ const LAYERS = [
             ],
             "bottomPills": [
               {
-                "id": "h1_meg_pattern",
-                "label": "The Megalomaniac Pattern",
+                "id": "h1_empires",
+                "label": "The Age of Empires",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -54393,8 +54969,8 @@ const LAYERS = [
                 "orbs": []
               },
               {
-                "id": "h1_meg_con",
-                "label": "Authoritarian Consolidators",
+                "id": "h3_genocide",
+                "label": "Genocide",
                 "desc": "",
                 "links": [],
                 "topPills": [],
@@ -54402,8 +54978,26 @@ const LAYERS = [
                 "orbs": []
               },
               {
-                "id": "hist_tp1",
-                "label": "The Pattern",
+                "id": "geo_china_rise",
+                "label": "The Rise of China",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "geo_china",
+                "label": "China & Asia",
+                "desc": "",
+                "links": [],
+                "topPills": [],
+                "bottomPills": [],
+                "orbs": []
+              },
+              {
+                "id": "h1_anc_han",
+                "label": "Han China",
                 "desc": "",
                 "links": [],
                 "topPills": [],
