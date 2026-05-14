@@ -31324,6 +31324,15 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "h1_china",
+                    "label": "The Chinese Dynasties",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ]
               },
@@ -42590,17 +42599,7 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "h1_china",
-                        "label": "The Chinese Dynasties",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
+                    "bottomPills": [],
                     "orbs": []
                   }
                 ],
@@ -54526,7 +54525,7 @@ const LAYERS = [
             "id": "h1_china",
             "label": "The Chinese Dynasties",
             "color": "#5030a8",
-            "desc": "China is the oldest continuous civilization on earth. By 1800 it was the largest economy in the world.\n\nThen Europe arrived with warships and opium.\n\nThe next hundred and ten years are called the Century of Humiliation. Foreign powers carved out concessions in Chinese cities. Britain took Hong Kong. Portugal kept Macau. Japan took Taiwan and later invaded the mainland, killing millions. The emperor fell in 1912. The country fractured.\n\nIn 1949 Mao Zedong won. The Great Leap Forward starved tens of millions. The Cultural Revolution turned the country against itself. By 1976 China was broken and isolated.\n\nDeng Xiaoping changed the bet. Keep the party. Open the economy. Build zones where capitalism could be tested without infecting the whole. Shenzhen rose from villages to a megacity in a generation. Hundreds of millions left poverty.\n\nXi Jinping took power in 2012 and the opening began to close. Hong Kong's autonomy collapsed. Xinjiang was placed under surveillance and mass detention. Chinese capital reached across three continents through the Belt and Road.\n\nChina today is the second largest economy. The largest manufacturer. The defining counterweight to American power.\n\nIt is also a country shaped by a wound that has not healed. Everything it does now is in some way an answer to what was done to it then.\n\nThe story told here is the story as it can be told in the open, by anyone, anywhere. There are other tellings. There always are. What matters is that the facts are kept, the dead are counted, and the long arc is visible to anyone who looks.",
+            "desc": "China is the oldest continuous civilization on earth. By 1800 it was the largest economy in the world.\\n\\nThen Europe arrived with warships and opium.\\n\\nThe next hundred and ten years are called the Century of Humiliation. Foreign powers carved out concessions in Chinese cities. Britain took Hong Kong. Portugal kept Macau. Japan took Taiwan and later invaded the mainland, killing millions. The emperor fell in 1912. The country fractured.\\n\\nIn 1949 Mao Zedong won. The Great Leap Forward starved tens of millions. The Cultural Revolution turned the country against itself. By 1976 China was broken and isolated.\\n\\nDeng Xiaoping changed the bet. Keep the party. Open the economy. Build zones where capitalism could be tested without infecting the whole. Shenzhen rose from villages to a megacity in a generation. Hundreds of millions left poverty.\\n\\nXi Jinping took power in 2012 and the opening began to close. Hong Kong's autonomy collapsed. Xinjiang was placed under surveillance and mass detention. Chinese capital reached across three continents through the Belt and Road.\\n\\nChina today is the second largest economy. The largest manufacturer. The defining counterweight to American power.\\n\\nIt is also a country shaped by a wound that has not healed. Everything it does now is in some way an answer to what was done to it then.\\n\\nThe story told here is the story as it can be told in the open, by anyone, anywhere. There are other tellings. There always are. What matters is that the facts are kept, the dead are counted, and the long arc is visible to anyone who looks.",
             "links": [
               {
                 "label": "Foreign Affairs",
@@ -54551,8 +54550,8 @@ const LAYERS = [
               {
                 "id": "h1_china_humiliation",
                 "label": "The Century of Humiliation",
-                "color": "#8a2828",
-                "desc": "It started with opium.\n\nBritain controlled India. India grew opium. Britain needed something China would buy because China wanted nothing else and was draining British silver in exchange for tea, silk, and porcelain.\n\nSo Britain pushed opium into China by the ton. Millions became addicted. The silver flowed back.\n\nWhen China tried to stop it, Britain sent warships. The First Opium War ended in 1842 with the Treaty of Nanking. China ceded Hong Kong. A Second Opium War extracted more.\n\nThen came the others. France, Germany, Russia, Japan, and the United States carved out concessions on Chinese soil with their own courts and their own troops.\n\nIn 1900 the Boxer Rebellion rose against foreign presence. Eight nations sent armies to crush it. Beijing was sacked.\n\nIn 1937 Japan invaded. Nanking fell. Hundreds of thousands were massacred in six weeks. The war lasted until 1945.\n\nBy the time it ended, China had been bled for over a hundred years.\n\nThis is the story most Americans never learned. China remembers it daily.",
+                "color": "#5838a8",
+                "desc": "It started with opium.\\n\\nBritain controlled India. India grew opium. Britain needed something China would buy because China wanted nothing else and was draining British silver in exchange for tea, silk, and porcelain.\\n\\nSo Britain pushed opium into China by the ton. Millions became addicted. The silver flowed back.\\n\\nWhen China tried to stop it, Britain sent warships. The First Opium War ended in 1842 with the Treaty of Nanking. China ceded Hong Kong. A Second Opium War extracted more.\\n\\nThen came the others. France, Germany, Russia, Japan, and the United States carved out concessions on Chinese soil with their own courts and their own troops.\\n\\nIn 1900 the Boxer Rebellion rose against foreign presence. Eight nations sent armies to crush it. Beijing was sacked.\\n\\nIn 1937 Japan invaded. Nanking fell. Hundreds of thousands were massacred in six weeks. The war lasted until 1945.\\n\\nBy the time it ended, China had been bled for over a hundred years.\\n\\nThis is the story most Americans never learned. China remembers it daily.",
                 "links": [
                   {
                     "label": "World History Encyclopedia",
@@ -54617,8 +54616,8 @@ const LAYERS = [
               {
                 "id": "h1_china_mao",
                 "label": "Mao and the Revolution",
-                "color": "#922020",
-                "desc": "Mao Zedong led a peasant army to victory in a country exhausted by foreign domination and civil war. On October 1, 1949, he founded the People's Republic.\n\nLand was redistributed. Tibet was invaded in 1950 and absorbed. Korea brought China into direct war with the United States.\n\nThen came the Great Leap Forward. Mao tried to industrialize China overnight through collective agriculture and backyard steel furnaces. It failed catastrophically. The resulting famine killed an estimated thirty to forty-five million people. It is the deadliest famine in human history.\n\nThe Cultural Revolution followed in 1966. Universities closed. Intellectuals were beaten, exiled, or killed. Temples and books were destroyed. Families turned in families. The country tore itself apart for a decade.\n\nMao died in 1976. The party's later verdict judged him seventy percent right, thirty percent wrong.\n\nThe seventy percent was unifying China. The thirty percent was the tens of millions of dead.",
+                "color": "#5030a8",
+                "desc": "Mao Zedong led a peasant army to victory in a country exhausted by foreign domination and civil war. On October 1, 1949, he founded the People's Republic.\\n\\nLand was redistributed. Tibet was invaded in 1950 and absorbed. Korea brought China into direct war with the United States.\\n\\nThen came the Great Leap Forward. Mao tried to industrialize China overnight through collective agriculture and backyard steel furnaces. It failed catastrophically. The resulting famine killed an estimated thirty to forty-five million people. It is the deadliest famine in human history.\\n\\nThe Cultural Revolution followed in 1966. Universities closed. Intellectuals were beaten, exiled, or killed. Temples and books were destroyed. Families turned in families. The country tore itself apart for a decade.\\n\\nMao died in 1976. The party's later verdict judged him seventy percent right, thirty percent wrong.\\n\\nThe seventy percent was unifying China. The thirty percent was the tens of millions of dead.",
                 "links": [
                   {
                     "label": "World History Encyclopedia",
@@ -54683,8 +54682,8 @@ const LAYERS = [
               {
                 "id": "h1_china_opening",
                 "label": "Opening Up",
-                "color": "#7a2828",
-                "desc": "Deng Xiaoping took power in 1978 and made the decision that built modern China. Capitalism would be allowed inside communism, in controlled zones, under party supervision.\n\nThe first experiment was Shenzhen. A fishing village across the border from Hong Kong. Within a generation it was a city of millions with a GDP larger than Hong Kong's.\n\nMore zones followed. Then coastal cities. Then inland. Foreign investment flooded in. The countryside emptied into the cities. Made in China became universal.\n\nSix hundred million people moved out of poverty in a generation. It is the largest reduction in human suffering by economic policy ever recorded.\n\nIt also produced staggering inequality, environmental devastation, and a population that had grown used to freedoms the party had not authorized.\n\nThat tension is the seed of everything that came next.",
+                "color": "#4828a8",
+                "desc": "Deng Xiaoping took power in 1978 and made the decision that built modern China. Capitalism would be allowed inside communism, in controlled zones, under party supervision.\\n\\nThe first experiment was Shenzhen. A fishing village across the border from Hong Kong. Within a generation it was a city of millions with a GDP larger than Hong Kong's.\\n\\nMore zones followed. Then coastal cities. Then inland. Foreign investment flooded in. The countryside emptied into the cities. Made in China became universal.\\n\\nSix hundred million people moved out of poverty in a generation. It is the largest reduction in human suffering by economic policy ever recorded.\\n\\nIt also produced staggering inequality, environmental devastation, and a population that had grown used to freedoms the party had not authorized.\\n\\nThat tension is the seed of everything that came next.",
                 "links": [
                   {
                     "label": "Foreign Affairs",
@@ -54725,26 +54724,7 @@ const LAYERS = [
                     "desc": "",
                     "links": [],
                     "topPills": [],
-                    "bottomPills": [
-                      {
-                        "id": "geo_china_bri",
-                        "label": "Belt & Road",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      },
-                      {
-                        "id": "geo_shift_china_rise",
-                        "label": "China's Challenge",
-                        "desc": "",
-                        "links": [],
-                        "topPills": [],
-                        "bottomPills": [],
-                        "orbs": []
-                      }
-                    ],
+                    "bottomPills": [],
                     "orbs": []
                   },
                   {
@@ -54771,8 +54751,8 @@ const LAYERS = [
               {
                 "id": "h1_china_1c2s",
                 "label": "One Country Two Systems",
-                "color": "#6a2030",
-                "desc": "Hong Kong was returned by Britain in 1997. Macau by Portugal in 1999. China promised both they could keep their own legal systems, currencies, courts, and civil liberties for fifty years.\n\nThis was One Country Two Systems. Designed by Deng Xiaoping. Intended also as the model for eventual Taiwan reunification.\n\nIt held at first. Hong Kong remained a global financial hub with a free press and a protest culture. Macau leaned into gambling and quietly integrated.\n\nIn 2019 Hong Kong erupted. Millions marched against creeping mainland control. The protests lasted months.\n\nBeijing's answer came in 2020. A national security law that criminalized dissent. Opposition leaders jailed or driven into exile. Newspapers shut down. The fifty year promise became a formality.\n\nMacau saw none of this. Taiwan watched all of it.\n\nHong Kong's deadline is 2047. Macau's is 2049. Taiwan's answer is already clear.",
+                "color": "#5030a8",
+                "desc": "Hong Kong was returned by Britain in 1997. Macau by Portugal in 1999. China promised both they could keep their own legal systems, currencies, courts, and civil liberties for fifty years.\\n\\nThis was One Country Two Systems. Designed by Deng Xiaoping. Intended also as the model for eventual Taiwan reunification.\\n\\nIt held at first. Hong Kong remained a global financial hub with a free press and a protest culture. Macau leaned into gambling and quietly integrated.\\n\\nIn 2019 Hong Kong erupted. Millions marched against creeping mainland control. The protests lasted months.\\n\\nBeijing's answer came in 2020. A national security law that criminalized dissent. Opposition leaders jailed or driven into exile. Newspapers shut down. The fifty year promise became a formality.\\n\\nMacau saw none of this. Taiwan watched all of it.\\n\\nHong Kong's deadline is 2047. Macau's is 2049. Taiwan's answer is already clear.",
                 "links": [
                   {
                     "label": "Foreign Affairs",
@@ -54806,7 +54786,7 @@ const LAYERS = [
                   },
                   {
                     "id": "geo_china_taiwan",
-                    "label": "Taiwan & the Pacific",
+                    "label": "Taiwan & The Pacific",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54828,8 +54808,8 @@ const LAYERS = [
               {
                 "id": "h1_china_xi",
                 "label": "Xi's Consolidation",
-                "color": "#8a1818",
-                "desc": "Xi Jinping took power in 2012. By 2018 he had ended presidential term limits. He may rule for life.\n\nHis anti-corruption campaign removed rivals and disciplined the party. The opening era's tolerance for private wealth ended. Jack Ma, China's most famous entrepreneur, vanished from public view after criticizing regulators.\n\nXinjiang was placed under mass surveillance. Over a million Uyghurs were detained in camps. Mosques were demolished. Children were separated from families. Multiple governments have called it genocide.\n\nTibet's repression deepened. Hong Kong's autonomy was crushed. Artificial islands were built and militarized across the South China Sea.\n\nThe Belt and Road Initiative pushed Chinese infrastructure investment into Africa, Central Asia, Latin America, and Europe. A twenty-first century Silk Road backed by state capital, often leaving recipient countries in debt to Beijing.\n\nTaiwan reunification was named non-negotiable.\n\nThe China that opened under Deng is closing under Xi.",
+                "color": "#5838a8",
+                "desc": "Xi Jinping took power in 2012. By 2018 he had ended presidential term limits. He may rule for life.\\n\\nHis anti-corruption campaign removed rivals and disciplined the party. The opening era's tolerance for private wealth ended. Jack Ma, China's most famous entrepreneur, vanished from public view after criticizing regulators.\\n\\nXinjiang was placed under mass surveillance. Over a million Uyghurs were detained in camps. Mosques were demolished. Children were separated from families. Multiple governments have called it genocide.\\n\\nTibet's repression deepened. Hong Kong's autonomy was crushed. Artificial islands were built and militarized across the South China Sea.\\n\\nThe Belt and Road Initiative pushed Chinese infrastructure investment into Africa, Central Asia, Latin America, and Europe. A twenty-first century Silk Road backed by state capital, often leaving recipient countries in debt to Beijing.\\n\\nTaiwan reunification was named non-negotiable.\\n\\nThe China that opened under Deng is closing under Xi.",
                 "links": [
                   {
                     "label": "Foreign Affairs",
@@ -54884,6 +54864,24 @@ const LAYERS = [
                     "topPills": [],
                     "bottomPills": [],
                     "orbs": []
+                  },
+                  {
+                    "id": "geo_china_bri",
+                    "label": "Belt & Road",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
+                  },
+                  {
+                    "id": "geo_shift_china_rise",
+                    "label": "China's Challenge",
+                    "desc": "",
+                    "links": [],
+                    "topPills": [],
+                    "bottomPills": [],
+                    "orbs": []
                   }
                 ],
                 "orbs": []
@@ -54891,8 +54889,8 @@ const LAYERS = [
               {
                 "id": "h1_china_us",
                 "label": "The US-China Relationship",
-                "color": "#6a1818",
-                "desc": "Nixon went to China in 1972. Two nations that had not spoken in twenty-three years suddenly had a relationship. The strategic logic was Cold War — split China from the Soviet Union.\n\nIt worked. The Soviet Union fell. China stayed.\n\nWhat followed was forty years of economic integration. American companies moved production to Chinese factories. American consumers bought Chinese goods. American debt was financed by Chinese savings. The assumption was that wealth would bring democratization. It did not.\n\nBy 2018 the relationship had broken. Trump launched a trade war. Biden continued it. Semiconductors became the central front. Taiwan became the central flashpoint.\n\nThe two largest economies on earth are now locked in a slow decoupling that nobody quite knows how to manage. Supply chains are rerouting. Technology controls are tightening. Military planning runs in both directions.\n\nThe defining bilateral relationship of the twenty-first century is a rivalry between a rising power that remembers being humiliated and a declining one that does not remember why it should care.",
+                "color": "#4828a8",
+                "desc": "Nixon went to China in 1972. Two nations that had not spoken in twenty-three years suddenly had a relationship. The strategic logic was Cold War — split China from the Soviet Union.\\n\\nIt worked. The Soviet Union fell. China stayed.\\n\\nWhat followed was forty years of economic integration. American companies moved production to Chinese factories. American consumers bought Chinese goods. American debt was financed by Chinese savings. The assumption was that wealth would bring democratization. It did not.\\n\\nBy 2018 the relationship had broken. Trump launched a trade war. Biden continued it. Semiconductors became the central front. Taiwan became the central flashpoint.\\n\\nThe two largest economies on earth are now locked in a slow decoupling that nobody quite knows how to manage. Supply chains are rerouting. Technology controls are tightening. Military planning runs in both directions.\\n\\nThe defining bilateral relationship of the twenty-first century is a rivalry between a rising power that remembers being humiliated and a declining one that does not remember why it should care.",
                 "links": [
                   {
                     "label": "Foreign Affairs",
@@ -54928,8 +54926,8 @@ const LAYERS = [
                     "orbs": []
                   },
                   {
-                    "id": "geo_shifting",
-                    "label": "The Shifting Order",
+                    "id": "geo_shift_china_rise",
+                    "label": "China's Challenge",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54939,15 +54937,6 @@ const LAYERS = [
                   {
                     "id": "geo_china",
                     "label": "China & Asia",
-                    "desc": "",
-                    "links": [],
-                    "topPills": [],
-                    "bottomPills": [],
-                    "orbs": []
-                  },
-                  {
-                    "id": "geo_shift_china_rise",
-                    "label": "China's Challenge",
                     "desc": "",
                     "links": [],
                     "topPills": [],
@@ -54989,15 +54978,6 @@ const LAYERS = [
               {
                 "id": "geo_china",
                 "label": "China & Asia",
-                "desc": "",
-                "links": [],
-                "topPills": [],
-                "bottomPills": [],
-                "orbs": []
-              },
-              {
-                "id": "h1_anc_han",
-                "label": "Han China",
                 "desc": "",
                 "links": [],
                 "topPills": [],
