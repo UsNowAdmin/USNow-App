@@ -2599,6 +2599,8 @@ function applySearchHighlight(root, query) {
       if(['SCRIPT','STYLE','INPUT'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
       if(p.classList && p.classList.contains('search-highlight')) return NodeFilter.FILTER_REJECT;
       if(p.closest('.modal-canonical')) return NodeFilter.FILTER_REJECT;
+      if(p.closest('.modal-pill')) return NodeFilter.FILTER_REJECT;
+      if(p.closest('.modal-section')) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     }
   });
