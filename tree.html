@@ -2473,7 +2473,8 @@ function initSearch() {
         (items || []).forEach(item => {
           if(!item || !item.id) return;
           allCards.push({ item, layerColor: item.color || layerColor });
-          walk(item.topPills, item.color || layerColor); // bottomPills skipped — stubs only, canonical cards exist as topPills
+          walk(item.topPills, item.color || layerColor);
+          walk(item.bottomPills, item.color || layerColor);
         });
       }
       walk(layer.topPills, layer.color);
@@ -2639,7 +2640,7 @@ function applyGlories(root) {
       // Only highlight inside description text — skip title, pills, crumbs, sub, links
       const skip = ['modal-title','modal-sub','modal-crumb','modal-crumb-part',
                     'modal-pill','modal-section','modal-link','crumb','fruit-label',
-                    'fruit-more','root-label','search-highlight','modal-canonical'];
+                    'fruit-more','root-label','search-highlight'];
       if(skip.some(cls => p.closest('.'+cls))) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     }
