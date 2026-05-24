@@ -621,13 +621,13 @@ const GLORY_DATA = [
     origin: "Afrikaans <em>apartheid</em> \u2014 separateness, apartness. From <em>apart</em> + the suffix <em>-heid</em> (hood). Formally became the name of South Africa's racial classification and separation system in 1948 when the National Party came to power.",
     howUsed: "Used specifically to describe South Africa's legal racial classification system from 1948 to 1994. Applied by analogy to other systems of enforced separation based on race, religion, or ethnicity \u2014 most controversially in debates about Israeli policies toward Palestinians, where the term has been used by Israeli human rights organizations including B'Tselem and by the International Criminal Court's chief prosecutor. The analogy is contested." },
 
-  { word: "Accountability", category: "Power & Politics",
+  { word: "Accountable", category: "Power & Politics",
     definition: "The requirement to answer for one's actions \u2014 universally endorsed, inconsistently applied",
     phonetic: "\u0259\u00b7kown\u00b7t\u0259\u00b7bil\u00b7i\u00b7tee",
     origin: "From <em>account</em> \u2014 ultimately Latin <em>computare</em>, to count. The metaphor is financial: being required to render an account, to show the numbers. Accountability as a political and institutional concept developed in the 17th and 18th centuries alongside democratic theory.",
     howUsed: "Invoked constantly in political speech, corporate governance, and education policy. Almost always refers to accountability for others. The word does real work when it is backed by consequences \u2014 when it is not, it is a placeholder for wanting things to be different without specifying how they will change." },
 
-  { word: "Authoritarianism", category: "Power & Politics",
+  { word: "Authoritarian", category: "Power & Politics",
     definition: "Government by command rather than consent \u2014 the permanent temptation of power",
     phonetic: "aw\u00b7thor\u00b7i\u00b7tair\u00b7ee\u00b7\u0259n\u00b7iz\u00b7\u0259m",
     origin: "From Latin <em>auctoritas</em> \u2014 authority, weight of opinion, influence. The political science term emerged in the mid-20th century to describe regimes that concentrate power, suppress opposition, and demand obedience without the ideological totality of totalitarianism.",
@@ -639,7 +639,7 @@ const GLORY_DATA = [
     origin: "French <em>bureau</em> (office, desk \u2014 originally the cloth covering a desk) + Greek <em>-kratia</em> (rule). Coined in the 18th century, initially as a pejorative for rule by officeholders. Max Weber rehabilitated it in the early 20th century as the rational-legal form of modern organization.",
     howUsed: "Used almost exclusively as a complaint \u2014 'bureaucratic red tape,' 'government bureaucracy.' Rarely acknowledged that bureaucracy also means consistent application of rules, protection from arbitrary decisions, and institutional memory. The same system that makes you wait at the DMV also ensures the same regulations apply to the powerful and the powerless." },
 
-  { word: "Colonialism", category: "History & Civilization",
+  { word: "Colonization", category: "History & Civilization",
     definition: "The political control of one people by another \u2014 the administrative fact behind most of modern history",
     phonetic: "k\u0259\u00b7loh\u00b7nee\u00b7\u0259\u00b7liz\u00b7\u0259m",
     origin: "Latin <em>colonia</em> \u2014 a settlement of Roman citizens in a conquered territory. From <em>colonus</em> \u2014 farmer, settler. The modern political meaning \u2014 European domination of non-European peoples \u2014 developed in the 19th century as the practice it described reached its peak.",
@@ -926,7 +926,7 @@ const GLORY_DATA = [
     origin: "Not mentioned in the Constitution by name. Derives from Article II's grant of 'executive power' and the instruction to 'take care that the laws be faithfully executed.' George Washington issued the first one in 1789. The practice expanded dramatically in the 20th century — FDR issued 3,721 of them, including the internment of Japanese Americans.",
     howUsed: "Used when Congress won't act, or when a president prefers speed over durability. Executive orders can be reversed by the next president on day one — which is both their weakness and, for opponents, their only immediate remedy. The volume of orders issued in any administration is a rough measure of how far the president is operating outside legislative consensus." },
 
-  { word: "The Deep State", category: "Power & Politics",
+  { word: "Deep State", category: "Power & Politics",
     definition: "Career government employees, or the conspiracy theory used to justify firing them",
     phonetic: "thuh deep stayt",
     origin: "The concept of a permanent administrative layer operating beneath elected government is real and has serious academic literature behind it — political scientists call it the 'administrative state' or 'permanent government.' The phrase 'deep state' came from Turkish politics in the 1990s, describing the military and intelligence networks that operated outside civilian control. It entered American political rhetoric around 2017.",
