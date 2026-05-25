@@ -520,3 +520,14 @@
   .entry.glory-flash {
     animation: gloryFlash 1.8s ease-out;
   }
+
+  /* Highlight inside search results — shows the user *where* the match
+     was found in each entry. Amber background + bold, similar to the
+     main-site tree search. */
+  mark.search-hit {
+    background: rgba(212,150,10,0.32);
+    color: var(--text);
+    font-weight: 600;
+    padding: 0 2px;
+    border-radius: 2px;
+  }

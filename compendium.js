@@ -245,6 +245,36 @@ function render() {
   }
 }
 
+// Wrap occurrences of `query` in <mark class="search-hit">…</mark>
+// inside an HTML string, without touching tag names or attributes.
+// Used to make search results show *where* the match was found.
+function highlightMatches(html, query) {
+  if (!query) return html;
+  // Escape regex specials in the query so things like "U.S." don't break.
+  const safe = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(safe, 'gi');
+
+  // Walk the string outside-of-tags only. Anything between < and > is
+  // left alone; everything else gets the regex applied.
+  let out = '';
+  let i = 0;
+  while (i < html.length) {
+    const lt = html.indexOf('<', i);
+    if (lt === -1) {
+      out += html.slice(i).replace(re, m => `<mark class="search-hit">${m}</mark>`);
+      break;
+    }
+    // Text segment before the tag — apply highlight here.
+    out += html.slice(i, lt).replace(re, m => `<mark class="search-hit">${m}</mark>`);
+    // Tag segment — pass through untouched.
+    const gt = html.indexOf('>', lt);
+    if (gt === -1) { out += html.slice(lt); break; }
+    out += html.slice(lt, gt + 1);
+    i = gt + 1;
+  }
+  return out;
+}
+
 // Convert italic words inside parentheticals — (see X), (see also X),
 // (compare with X) — into clickable links to other glossary entries.
 // Strict: only matches those three lead-ins. Other <em> uses (Latin
@@ -298,11 +328,12 @@ function buildEntry(entry) {
     </div>`;
   }).join('');
 
-  const definitionHTML = linkifySeeAlso(entry.definition);
+  const definitionHTML = highlightMatches(linkifySeeAlso(entry.definition), searchQuery);
+  const wordHTML       = highlightMatches(entry.word, searchQuery);
 
   div.innerHTML = `
     <div class="entry-main" onclick="toggleEntry(this)">
-      <span class="entry-word"><span class="entry-toggle">&#x203A;</span>${entry.word}</span>
+      <span class="entry-word"><span class="entry-toggle">&#x203A;</span>${wordHTML}</span>
       <span class="entry-definition">${definitionHTML}</span>
     </div>
     <div class="entry-detail">
@@ -359,14 +390,18 @@ function submitSuggestion() {
 
 window.addEventListener('load', () => {
   init();
+  // Hash links from popups, see-also references, or shared URLs
+  // (e.g. compendium.html#power) should scroll to that specific entry,
+  // not filter the page down to a search result.
   if (window.location.hash) {
     const target = window.location.hash.slice(1);
     const found = glossary.find(e =>
       e.word.toLowerCase().replace(/\s/g,'-') === target
     );
     if (found) {
-      searchQuery = found.word.toLowerCase();
-      render();
+      // scrollToEntry handles the smooth scroll and flash. Defer one
+      // frame so the just-rendered DOM is in place before we scroll.
+      setTimeout(() => scrollToEntry(target), 50);
     }
   }
 });
