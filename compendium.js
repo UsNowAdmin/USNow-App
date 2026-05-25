@@ -13,7 +13,7 @@ const CATEGORIES = [
   "Knowledge & Learning",
   "Power & Politics",
   "History & Civilization",
-  "Further",
+  "Even Further Back",
   "Not Classified"
 ];
 
@@ -24,7 +24,7 @@ const CATEGORY_COLORS = {
   "Knowledge & Learning": "#5878b8",
   "Power & Politics":     "#b05050",
   "History & Civilization": "#7858b0",
-  "Further":              "#4888c8",
+  "Even Further Back":    "#4888c8",
   "Not Classified":       "#888888"
 };
 
@@ -93,7 +93,49 @@ function init() {
     render();
   });
 
+  // See-also click handler — delegated, so it survives re-renders.
+  // Clicking a .glory-ref smooth-scrolls to the destination entry and
+  // briefly flashes it. If the target is currently filtered out, we
+  // clear filters first so it can be found.
+  document.addEventListener('click', e => {
+    const link = e.target.closest('.glory-ref');
+    if (!link) return;
+    e.preventDefault();
+    const slug = link.dataset.target;
+    if (!slug) return;
+    scrollToEntry(slug);
+  });
+
   render();
+}
+
+function scrollToEntry(slug) {
+  let target = document.getElementById('entry-' + slug);
+
+  // If not currently rendered (filtered out), clear filters and re-render.
+  if (!target) {
+    activeCategory = null;
+    activeLetter   = null;
+    searchQuery    = '';
+    document.getElementById('search').value = '';
+    document.querySelectorAll('.cat-btn, .alpha-btn').forEach(b => b.classList.remove('active'));
+    const allBtn = document.getElementById('cat-all');
+    if (allBtn) allBtn.classList.add('active');
+    render();
+    target = document.getElementById('entry-' + slug);
+  }
+
+  if (!target) return; // word not in glossary — fail quiet
+
+  // Update URL hash for shareable deep links (no extra scroll).
+  history.replaceState(null, '', '#' + slug);
+
+  target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  target.classList.remove('glory-flash');
+  // Force reflow so the animation restarts if re-clicked rapidly.
+  void target.offsetWidth;
+  target.classList.add('glory-flash');
+  setTimeout(() => target.classList.remove('glory-flash'), 1800);
 }
 
 function toggleCategory(cat, btn) {
@@ -135,8 +177,11 @@ function clearAll() {
 function getFiltered() {
   return glossary.filter(entry => {
     if (searchQuery) {
+      // Strip HTML tags (e.g. <em>) from definition before matching,
+      // so a search for "em" doesn't match every italicized entry.
+      const defText = entry.definition.replace(/<[^>]+>/g, '');
       return entry.word.toLowerCase().includes(searchQuery) ||
-             entry.definition.toLowerCase().includes(searchQuery);
+             defText.toLowerCase().includes(searchQuery);
     }
     if (activeCategory) return entry.category === activeCategory;
     if (activeLetter)   return entry.word[0].toUpperCase() === activeLetter;
@@ -200,9 +245,38 @@ function render() {
   }
 }
 
+// Convert italic words inside parentheticals — (see X), (see also X),
+// (compare with X) — into clickable links to other glossary entries.
+// Strict: only matches those three lead-ins. Other <em> uses (Latin
+// etymology, foreign-language source words, etc.) are left untouched.
+function linkifySeeAlso(definition) {
+  // Match the whole parenthetical, then transform <em>...</em> inside it.
+  return definition.replace(
+    /\(\s*(see also|see|compare with)\b([^)]*)\)/gi,
+    (full, lead, body) => {
+      const transformed = body.replace(
+        /<em>([^<]+)<\/em>/g,
+        (_, word) => {
+          // Match against actual glossary entries case-insensitively;
+          // fall back to the raw word if no match (still rendered as link).
+          const match = glossary.find(
+            e => e.word.toLowerCase() === word.toLowerCase()
+          );
+          const target = match ? match.word : word;
+          const slug = target.toLowerCase().replace(/\s/g, '-');
+          return `<a class="glory-ref" data-target="${slug}" href="#${slug}">${word}</a>`;
+        }
+      );
+      return '(' + lead + transformed + ')';
+    }
+  );
+}
+
 function buildEntry(entry) {
   const div = document.createElement('div');
   div.className = 'entry';
+  // Stable id so see-also links can scroll to it.
+  div.id = 'entry-' + entry.word.toLowerCase().replace(/\s/g, '-');
 
   if (window.location.hash === '#' + entry.word.toLowerCase().replace(/\s/g,'-')) {
     div.classList.add('open');
@@ -224,10 +298,12 @@ function buildEntry(entry) {
     </div>`;
   }).join('');
 
+  const definitionHTML = linkifySeeAlso(entry.definition);
+
   div.innerHTML = `
     <div class="entry-main" onclick="toggleEntry(this)">
       <span class="entry-word"><span class="entry-toggle">&#x203A;</span>${entry.word}</span>
-      <span class="entry-definition">${entry.definition}</span>
+      <span class="entry-definition">${definitionHTML}</span>
     </div>
     <div class="entry-detail">
       <div class="entry-pills">${pillsHTML}</div>

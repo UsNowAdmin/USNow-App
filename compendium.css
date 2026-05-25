@@ -485,3 +485,28 @@
     padding: 12px 14px 4px 28px;
     font-style: normal;
   }
+
+  /* ── See-also cross-reference links ── */
+  /* Italic words inside (see ...), (see also ...), or (compare with ...)
+     parentheticals are linkified at render time and styled in amber. */
+  .glory-ref {
+    color: var(--amber);
+    text-decoration: none;
+    font-style: italic;
+    border-bottom: 1px dotted rgba(212,150,10,0.35);
+    transition: color 0.15s, border-color 0.15s;
+    cursor: pointer;
+  }
+  .glory-ref:hover {
+    color: var(--amber-glow);
+    border-bottom-color: var(--amber-glow);
+  }
+
+  /* Brief flash on the entry that was scrolled to. */
+  @keyframes gloryFlash {
+    0%   { background: rgba(212,150,10,0.18); }
+    100% { background: transparent; }
+  }
+  .entry.glory-flash {
+    animation: gloryFlash 1.8s ease-out;
+  }
