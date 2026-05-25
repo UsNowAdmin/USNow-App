@@ -15,9 +15,9 @@ const GLORY_DATA = [
 
   { word: "Accountable", category: "Power & Politics",
     definition: "The requirement to answer for one's actions. Or at least the expectation.",
-    phonetic: "\\u0259\\u00b7kown\\u00b7t\\u0259\\u00b7bil\\u00b7i\\u00b7tee",
-    origin: "From <em>account</em> \\u2014 ultimately Latin <em>computare</em>, to count. The metaphor is financial: being required to render an account, to show the numbers. Accountability as a political and institutional concept developed in the 17th and 18th centuries alongside democratic theory.",
-    howUsed: "Invoked constantly in political speech, corporate governance, and education policy. Almost always refers to accountability for others. The word does real work when it is backed by consequences \\u2014 when it is not, it is a placeholder for wanting things to be different without specifying how they will change." },
+    phonetic: "ə·kown·tə·bil·i·tee",
+    origin: "From <em>account</em> \— ultimately Latin <em>computare</em>, to count. The metaphor is financial: being required to render an account, to show the numbers. Accountability as a political and institutional concept developed in the 17th and 18th centuries alongside democratic theory.",
+    howUsed: "Invoked constantly in political speech, corporate governance, and education policy. Almost always refers to accountability for others. The word does real work when it is backed by consequences \— when it is not, it is a placeholder for wanting things to be different without specifying how they will change." },
 
   { word: "Addiction", category: "Myself & I",
     definition: "When we feed our body what it wants beyond the point of what it needs — drugs, money, power, or anything.",
@@ -57,15 +57,15 @@ const GLORY_DATA = [
 
   { word: "Apartheid", category: "History & Civilization",
     definition: "A legal system of racial segregation where the minority rules — South Africa's word, but the structure appears elsewhere and is not limited to race.",
-    phonetic: "\\u0259\\u00b7par\\u00b7t\\u0101t",
-    origin: "Afrikaans <em>apartheid</em> \\u2014 separateness, apartness. From <em>apart</em> + the suffix <em>-heid</em> (hood). Formally became the name of South Africa's racial classification and separation system in 1948 when the National Party came to power.",
-    howUsed: "Used specifically to describe South Africa's legal racial classification system from 1948 to 1994. Applied by analogy to other systems of enforced separation based on race, religion, or ethnicity \\u2014 most controversially in debates about Israeli policies toward Palestinians, where the term has been used by Israeli human rights organizations including B'Tselem and by the International Criminal Court's chief prosecutor. The analogy is contested." },
+    phonetic: "ə·par·tāt",
+    origin: "Afrikaans <em>apartheid</em> \— separateness, apartness. From <em>apart</em> + the suffix <em>-heid</em> (hood). Formally became the name of South Africa's racial classification and separation system in 1948 when the National Party came to power.",
+    howUsed: "Used specifically to describe South Africa's legal racial classification system from 1948 to 1994. Applied by analogy to other systems of enforced separation based on race, religion, or ethnicity \— most controversially in debates about Israeli policies toward Palestinians, where the term has been used by Israeli human rights organizations including B'Tselem and by the International Criminal Court's chief prosecutor. The analogy is contested." },
 
   { word: "Authoritarian", category: "Power & Politics",
     definition: "Government by command rather than consent. The permanent temptation of power.",
-    phonetic: "aw\\u00b7thor\\u00b7i\\u00b7tair\\u00b7ee\\u00b7\\u0259n\\u00b7iz\\u00b7\\u0259m",
-    origin: "From Latin <em>auctoritas</em> \\u2014 authority, weight of opinion, influence. The political science term emerged in the mid-20th century to describe regimes that concentrate power, suppress opposition, and demand obedience without the ideological totality of totalitarianism.",
-    howUsed: "Political scientists distinguish authoritarianism \\u2014 concentrated power, limited pluralism \\u2014 from totalitarianism, which seeks to control all aspects of life. In contemporary use, the word is often applied loosely to any government behavior considered excessive. The precision matters: an authoritarian government can hold elections, allow limited civil society, and maintain market economies while suppressing meaningful political opposition." },
+    phonetic: "aw·thor·i·tair·ee·ən·iz·əm",
+    origin: "From Latin <em>auctoritas</em> \— authority, weight of opinion, influence. The political science term emerged in the mid-20th century to describe regimes that concentrate power, suppress opposition, and demand obedience without the ideological totality of totalitarianism.",
+    howUsed: "Political scientists distinguish authoritarianism \— concentrated power, limited pluralism \— from totalitarianism, which seeks to control all aspects of life. In contemporary use, the word is often applied loosely to any government behavior considered excessive. The precision matters: an authoritarian government can hold elections, allow limited civil society, and maintain market economies while suppressing meaningful political opposition." },
 
   { word: "Belief", category: "Knowledge & Learning",
     definition: "Conviction without proof — faith, trust, or opinion — often used interchangeably.",
@@ -105,9 +105,9 @@ const GLORY_DATA = [
 
   { word: "Bureaucracy", category: "Power & Politics",
     definition: "The machinery of government and institutions, designed to serve the people. Serves the design of power.",
-    phonetic: "byoo\\u00b7rok\\u00b7r\\u0259\\u00b7see",
-    origin: "French <em>bureau</em> (office, desk \\u2014 originally the cloth covering a desk) + Greek <em>-kratia</em> (rule). Coined in the 18th century, initially as a pejorative for rule by officeholders. Max Weber rehabilitated it in the early 20th century as the rational-legal form of modern organization.",
-    howUsed: "Used almost exclusively as a complaint \\u2014 'bureaucratic red tape,' 'government bureaucracy.' Rarely acknowledged that bureaucracy also means consistent application of rules, protection from arbitrary decisions, and institutional memory. The same system that makes you wait at the DMV also ensures the same regulations apply to the powerful and the powerless." },
+    phonetic: "byoo·rok·rə·see",
+    origin: "French <em>bureau</em> (office, desk \— originally the cloth covering a desk) + Greek <em>-kratia</em> (rule). Coined in the 18th century, initially as a pejorative for rule by officeholders. Max Weber rehabilitated it in the early 20th century as the rational-legal form of modern organization.",
+    howUsed: "Used almost exclusively as a complaint \— 'bureaucratic red tape,' 'government bureaucracy.' Rarely acknowledged that bureaucracy also means consistent application of rules, protection from arbitrary decisions, and institutional memory. The same system that makes you wait at the DMV also ensures the same regulations apply to the powerful and the powerless." },
 
   { word: "Capitalism", category: "Power & Politics",
     definition: "Freedom through markets or organized extraction — still being decided.",
@@ -165,9 +165,9 @@ const GLORY_DATA = [
 
   { word: "Colonization", category: "History & Civilization",
     definition: "The political control of one people by another. Built on extraction, enforced by propaganda or violence.",
-    phonetic: "k\\u0259\\u00b7loh\\u00b7nee\\u00b7\\u0259\\u00b7liz\\u00b7\\u0259m",
-    origin: "Latin <em>colonia</em> \\u2014 a settlement of Roman citizens in a conquered territory. From <em>colonus</em> \\u2014 farmer, settler. The modern political meaning \\u2014 European domination of non-European peoples \\u2014 developed in the 19th century as the practice it described reached its peak.",
-    howUsed: "Often treated as historical \\u2014 something that ended when formal empires dissolved. Political scientists and economists point to continuing economic arrangements, debt structures, and trade relationships that maintain colonial-era patterns of extraction without the administrative infrastructure. 'Neo-colonialism' names this argument. The debate about whether colonialism is past or present is itself a political one." },
+    phonetic: "kə·loh·nee·ə·liz·əm",
+    origin: "Latin <em>colonia</em> \— a settlement of Roman citizens in a conquered territory. From <em>colonus</em> \— farmer, settler. The modern political meaning \— European domination of non-European peoples \— developed in the 19th century as the practice it described reached its peak.",
+    howUsed: "Often treated as historical \— something that ended when formal empires dissolved. Political scientists and economists point to continuing economic arrangements, debt structures, and trade relationships that maintain colonial-era patterns of extraction without the administrative infrastructure. 'Neo-colonialism' names this argument. The debate about whether colonialism is past or present is itself a political one." },
 
   { word: "Common Sense", category: "Not Classified",
     definition: "Accumulated knowledge deemed applicable by the person or group who raises it.",
@@ -226,14 +226,14 @@ const GLORY_DATA = [
   { word: "Coup", category: "Power & Politics",
     definition: "The sudden seizure or replacement of government. Often scripted by others, far in advance.",
     phonetic: "koo",
-    origin: "French <em>coup d'\\u00e9tat</em> \\u2014 stroke of state. <em>Coup</em> from Latin <em>colpus</em> \\u2014 a blow. The full phrase implies a blow struck against the state itself, not just a change of personnel but a change of the rules.",
-    howUsed: "Military coups \\u2014 armed forces removing a civilian government \\u2014 are the classic form. 'Soft coups' or 'constitutional coups' describe the use of legal mechanisms to remove or neutralize an elected government without military action. In American political debate, the word has been applied to the events of January 6, 2021 \\u2014 a usage that is contested but documented in court proceedings." },
+    origin: "French <em>coup d'\état</em> \— stroke of state. <em>Coup</em> from Latin <em>colpus</em> \— a blow. The full phrase implies a blow struck against the state itself, not just a change of personnel but a change of the rules.",
+    howUsed: "Military coups \— armed forces removing a civilian government \— are the classic form. 'Soft coups' or 'constitutional coups' describe the use of legal mechanisms to remove or neutralize an elected government without military action. In American political debate, the word has been applied to the events of January 6, 2021 \— a usage that is contested but documented in court proceedings." },
 
   { word: "Covenant", category: "Even Further Back",
     definition: "A binding agreement between parties — in theology, between God and humanity; in law, between humans. Enforceability varies.",
-    phonetic: "kuv\\u00b7\\u0259\\u00b7n\\u0259nt",
-    origin: "Old French <em>covenant</em> \\u2014 agreement. From Latin <em>convenire</em> \\u2014 to come together, agree. In English law it referred to a formal sealed agreement. In theology it took on the weight of the biblical relationship between God and Israel.",
-    howUsed: "Carries different weight in different contexts. In Jewish theology, the covenant is the central relationship between God and the Jewish people \\u2014 binding, mutual, and permanent. In American history, 'covenant' appears in the Mayflower Compact and Puritan political thought. In real estate law, a 'restrictive covenant' was used well into the 20th century to prevent Black families from buying property in white neighborhoods." },
+    phonetic: "kuv·ə·nənt",
+    origin: "Old French <em>covenant</em> \— agreement. From Latin <em>convenire</em> \— to come together, agree. In English law it referred to a formal sealed agreement. In theology it took on the weight of the biblical relationship between God and Israel.",
+    howUsed: "Carries different weight in different contexts. In Jewish theology, the covenant is the central relationship between God and the Jewish people \— binding, mutual, and permanent. In American history, 'covenant' appears in the Mayflower Compact and Puritan political thought. In real estate law, a 'restrictive covenant' was used well into the 20th century to prevent Black families from buying property in white neighborhoods." },
 
   { word: "Crime", category: "History & Civilization",
     definition: "An act or event that violates the rights of others — defined by law, which is defined by some of those others.",
@@ -279,9 +279,9 @@ const GLORY_DATA = [
 
   { word: "Decolonization", category: "History & Civilization",
     definition: "The end of formal colonial rule and the beginning of arguing about what that means. (see also <em>Colonization</em>)",
-    phonetic: "dee\\u00b7kol\\u00b7\\u0259\\u00b7n\\u012b\\u00b7zay\\u00b7sh\\u0259n",
+    phonetic: "dee·kol·ə·nī·zay·shən",
     origin: "From <em>de-</em> (removal) + <em>colonization</em>. Emerged as a political term in the mid-20th century as African and Asian independence movements dismantled European empires. Used in academic contexts since the 1960s.",
-    howUsed: "In historical use: the wave of independence movements between 1945 and 1975. In contemporary use: extended to culture, education, and institutions \\u2014 'decolonizing the curriculum' means examining whose knowledge is taught and whose is excluded. Critics argue this extends the word beyond its useful meaning. Supporters argue formal political independence without cultural and intellectual independence is incomplete decolonization." },
+    howUsed: "In historical use: the wave of independence movements between 1945 and 1975. In contemporary use: extended to culture, education, and institutions \— 'decolonizing the curriculum' means examining whose knowledge is taught and whose is excluded. Critics argue this extends the word beyond its useful meaning. Supporters argue formal political independence without cultural and intellectual independence is incomplete decolonization." },
 
   { word: "Deep State", category: "Power & Politics",
     definition: "The powers that inform the politicians that run the government. Often entrenched through generations. Purgeable but permanent.",
@@ -309,9 +309,9 @@ const GLORY_DATA = [
 
   { word: "Diaspora", category: "Origins",
     definition: "A people scattered from their homeland. Physically here, but culturally, historically, and/or spiritually from somewhere else.",
-    phonetic: "d\\u012b\\u00b7as\\u00b7p\\u0259r\\u00b7\\u0259",
-    origin: "Greek <em>diaspora</em> \\u2014 scattering, dispersion. From <em>dia-</em> (across) + <em>speirein</em> (to sow, scatter). Originally used specifically for the scattering of Jews from the Land of Israel beginning with the Babylonian exile. Later applied to other dispersed peoples.",
-    howUsed: "Applied to the Jewish, Armenian, African, Irish, Palestinian, and Indian diasporas among many others. Each diaspora is different \\u2014 some formed by choice, some by expulsion, some by slavery. The word carries the weight of maintained identity across distance and time: the community that remains a community without territory. It has become one of the more useful terms in contemporary discussions of identity and migration." },
+    phonetic: "dī·as·pər·ə",
+    origin: "Greek <em>diaspora</em> \— scattering, dispersion. From <em>dia-</em> (across) + <em>speirein</em> (to sow, scatter). Originally used specifically for the scattering of Jews from the Land of Israel beginning with the Babylonian exile. Later applied to other dispersed peoples.",
+    howUsed: "Applied to the Jewish, Armenian, African, Irish, Palestinian, and Indian diasporas among many others. Each diaspora is different \— some formed by choice, some by expulsion, some by slavery. The word carries the weight of maintained identity across distance and time: the community that remains a community without territory. It has become one of the more useful terms in contemporary discussions of identity and migration." },
 
   { word: "Dignity", category: "Community & Culture",
     definition: "Inherent or earned respect — the oldest human argument.",
@@ -321,9 +321,9 @@ const GLORY_DATA = [
 
   { word: "Disinformation", category: "Knowledge & Learning",
     definition: "Deliberately false or misleading information spread with intent to deceive — misinformation with intent. (see also <em>Information</em> or <em>Misinformation</em>)",
-    phonetic: "dis\\u00b7in\\u00b7f\\u0259r\\u00b7may\\u00b7sh\\u0259n",
-    origin: "Translated from Russian <em>dezinformatsiya</em> \\u2014 a term used by Soviet intelligence for the deliberate planting of false information in enemy information environments. Entered English through Cold War intelligence literature in the 1950s.",
-    howUsed: "Distinct from misinformation (false information spread without intent to deceive) and propaganda (persuasion, not necessarily false). In practice the distinction is hard to maintain \\u2014 the same false claim can be disinformation at the source and misinformation as it spreads through people who believe it. Used in contemporary political debate so broadly that it has lost some precision. The original Cold War meaning \\u2014 state-sponsored deliberate falsification \\u2014 remains the most useful anchor." },
+    phonetic: "dis·in·fər·may·shən",
+    origin: "Translated from Russian <em>dezinformatsiya</em> \— a term used by Soviet intelligence for the deliberate planting of false information in enemy information environments. Entered English through Cold War intelligence literature in the 1950s.",
+    howUsed: "Distinct from misinformation (false information spread without intent to deceive) and propaganda (persuasion, not necessarily false). In practice the distinction is hard to maintain \— the same false claim can be disinformation at the source and misinformation as it spreads through people who believe it. Used in contemporary political debate so broadly that it has lost some precision. The original Cold War meaning \— state-sponsored deliberate falsification \— remains the most useful anchor." },
 
   { word: "Diversity", category: "Community & Culture",
     definition: "Recognizing the differences between us — an attempt to bring us together — but corporatized and weaponized to keep us apart.",
@@ -351,9 +351,9 @@ const GLORY_DATA = [
 
   { word: "Embargo", category: "Power & Politics",
     definition: "A prohibition on trade — economic war by another name. (see also Sanction or Tariff)",
-    phonetic: "em\\u00b7bar\\u00b7goh",
-    origin: "Spanish <em>embargar</em> \\u2014 to bar, restrain. From <em>em-</em> (in) + <em>barra</em> (bar, obstruction). Originally referred to a government order detaining ships in port. Extended to prohibition on trade in general.",
-    howUsed: "Used as a foreign policy tool \\u2014 the US embargo on Cuba has lasted more than sixty years. Embargoes are theoretically targeted at governments; in practice they affect civilian populations who depend on imported goods. The gap between the stated target (a government) and the actual effect (the people) is a persistent critique of embargo as a policy instrument." },
+    phonetic: "em·bar·goh",
+    origin: "Spanish <em>embargar</em> \— to bar, restrain. From <em>em-</em> (in) + <em>barra</em> (bar, obstruction). Originally referred to a government order detaining ships in port. Extended to prohibition on trade in general.",
+    howUsed: "Used as a foreign policy tool \— the US embargo on Cuba has lasted more than sixty years. Embargoes are theoretically targeted at governments; in practice they affect civilian populations who depend on imported goods. The gap between the stated target (a government) and the actual effect (the people) is a persistent critique of embargo as a policy instrument." },
 
   { word: "Emotion", category: "Myself & I",
     definition: "Things we feel and often act on — fear, anger, pride, etc. May be our own, but also induced, coerced, or manufactured.",
@@ -363,9 +363,9 @@ const GLORY_DATA = [
 
   { word: "Empire", category: "History & Civilization",
     definition: "A state that rules over other peoples by force, law, and/or economic \"arrangement.\"",
-    phonetic: "em\\u00b7p\\u012br",
-    origin: "Latin <em>imperium</em> \\u2014 command, supreme power, dominion. From <em>imperare</em> \\u2014 to command. The Roman empire gave the word its weight. Entered English through Old French <em>empire</em> in the 13th century.",
-    howUsed: "Applied historically to Rome, Britain, the Mongols, the Ottomans, and others. In contemporary politics, 'empire' is both a descriptive term for US global power and a polemical one \\u2014 American foreign policy debates turn partly on whether the word applies and what follows if it does. The academic field of empire studies distinguishes formal empire (direct rule) from informal empire (economic and political dominance without administration)." },
+    phonetic: "em·pīr",
+    origin: "Latin <em>imperium</em> \— command, supreme power, dominion. From <em>imperare</em> \— to command. The Roman empire gave the word its weight. Entered English through Old French <em>empire</em> in the 13th century.",
+    howUsed: "Applied historically to Rome, Britain, the Mongols, the Ottomans, and others. In contemporary politics, 'empire' is both a descriptive term for US global power and a polemical one \— American foreign policy debates turn partly on whether the word applies and what follows if it does. The academic field of empire studies distinguishes formal empire (direct rule) from informal empire (economic and political dominance without administration)." },
 
   { word: "Evidence", category: "Knowledge & Learning",
     definition: "Actual proof, inconvenience, or invented facts.",
@@ -423,9 +423,9 @@ const GLORY_DATA = [
 
   { word: "Fascism", category: "Power & Politics",
     definition: "A political system built on ultranationalism, authoritarian leadership, and the active suppression of opposition. Usually recognized afterwards.",
-    phonetic: "fash\\u00b7iz\\u00b7\\u0259m",
-    origin: "Italian <em>fascismo</em>, from <em>fascio</em> \\u2014 bundle, group. From Latin <em>fasces</em> \\u2014 a bundle of rods with an axe, carried before Roman magistrates as a symbol of authority. Mussolini's movement took the fasces as its symbol in 1919.",
-    howUsed: "The original fascist movements \\u2014 Mussolini's Italy, Hitler's Germany, Franco's Spain \\u2014 shared specific features: ultranationalism, a charismatic leader claiming to embody the nation's will, suppression of political opposition, use of political violence, and corporate-state partnership. The word is now applied so broadly in political argument that historians argue it has lost analytical utility. When everything is fascism, nothing is. The precision matters." },
+    phonetic: "fash·iz·əm",
+    origin: "Italian <em>fascismo</em>, from <em>fascio</em> \— bundle, group. From Latin <em>fasces</em> \— a bundle of rods with an axe, carried before Roman magistrates as a symbol of authority. Mussolini's movement took the fasces as its symbol in 1919.",
+    howUsed: "The original fascist movements \— Mussolini's Italy, Hitler's Germany, Franco's Spain \— shared specific features: ultranationalism, a charismatic leader claiming to embody the nation's will, suppression of political opposition, use of political violence, and corporate-state partnership. The word is now applied so broadly in political argument that historians argue it has lost analytical utility. When everything is fascism, nothing is. The precision matters." },
 
   { word: "Fear", category: "Myself & I",
     definition: "Perhaps the prime mover of all human behavior. (see <em>Emotion</em>)",
@@ -447,9 +447,9 @@ const GLORY_DATA = [
 
   { word: "Fundamentalism", category: "Even Further Back",
     definition: "A rigid return to foundational texts or principles against the encroachment of change — found in every major religion and most ideologies.",
-    phonetic: "fun\\u00b7d\\u0259\\u00b7men\\u00b7tl\\u00b7iz\\u00b7\\u0259m",
-    origin: "Coined in early 20th century American Protestantism \\u2014 specifically a series of pamphlets called <em>The Fundamentals</em>, published 1910-1915, defending core Protestant doctrines against liberal theology and Darwinism. Applied to other religions later.",
-    howUsed: "In common use, 'fundamentalist' has become almost synonymous with 'extremist' or 'radical.' The original meaning is more specific: a return to foundational texts read literally, against the accommodations that more liberal interpretations make with modern knowledge and culture. Fundamentalism exists across Christianity, Islam, Judaism, Hinduism, and other traditions \\u2014 and within each, it looks quite different." },
+    phonetic: "fun·də·men·tl·iz·əm",
+    origin: "Coined in early 20th century American Protestantism \— specifically a series of pamphlets called <em>The Fundamentals</em>, published 1910-1915, defending core Protestant doctrines against liberal theology and Darwinism. Applied to other religions later.",
+    howUsed: "In common use, 'fundamentalist' has become almost synonymous with 'extremist' or 'radical.' The original meaning is more specific: a return to foundational texts read literally, against the accommodations that more liberal interpretations make with modern knowledge and culture. Fundamentalism exists across Christianity, Islam, Judaism, Hinduism, and other traditions \— and within each, it looks quite different." },
 
   { word: "Future", category: "Not Classified",
     definition: "What we plan for, what's actually coming, or abstraction to defer action.",
@@ -465,15 +465,15 @@ const GLORY_DATA = [
 
   { word: "Gerrymandering", category: "Power & Politics",
     definition: "Drawing electoral district lines to favor one party — legal, pervasive, and defeating the purpose of fair representation.",
-    phonetic: "jer\\u00b7ee\\u00b7man\\u00b7d\\u0259r\\u00b7ing",
-    origin: "Named for Elbridge Gerry, Governor of Massachusetts, who in 1812 signed a bill redrawing a state senate district into a shape that resembled a salamander \\u2014 prompting the portmanteau. The practice predates the name.",
+    phonetic: "jer·ee·man·dər·ing",
+    origin: "Named for Elbridge Gerry, Governor of Massachusetts, who in 1812 signed a bill redrawing a state senate district into a shape that resembled a salamander \— prompting the portmanteau. The practice predates the name.",
     howUsed: "Legal at the federal level and in most states despite Supreme Court challenges. Both parties practice it where they hold state legislative power. The result: politicians choosing their voters rather than voters choosing their politicians. Redistricting technology has made modern gerrymandering far more precise than anything Gerry contemplated. Independent redistricting commissions in some states attempt to remove partisan control from the process." },
 
   { word: "Global South", category: "History & Civilization",
     definition: "The nations left out of the postwar order — not a geography, a structural condition with a plan. (see also BRICS)",
-    phonetic: "gloh\\u00b7b\\u0259l sowth",
-    origin: "Replaced 'Third World' after the Cold War ended and the binary it implied \\u2014 First World (West), Second World (Soviet bloc), Third World (everyone else) \\u2014 dissolved. 'Global South' emerged in development discourse in the 1990s and became widely used by the 2000s.",
-    howUsed: "Covers Africa, Latin America, South and Southeast Asia, and parts of the Middle East \\u2014 the nations that share a history of colonization, economic extraction, and exclusion from the institutions that set global rules. The term is geographic but the category is political. Some nations in the geographic south (Australia, New Zealand) are not Global South in the political sense. China's position \\u2014 largest economy in the group, also a major power \\u2014 creates ongoing definitional tension." },
+    phonetic: "gloh·bəl sowth",
+    origin: "Replaced 'Third World' after the Cold War ended and the binary it implied \— First World (West), Second World (Soviet bloc), Third World (everyone else) \— dissolved. 'Global South' emerged in development discourse in the 1990s and became widely used by the 2000s.",
+    howUsed: "Covers Africa, Latin America, South and Southeast Asia, and parts of the Middle East \— the nations that share a history of colonization, economic extraction, and exclusion from the institutions that set global rules. The term is geographic but the category is political. Some nations in the geographic south (Australia, New Zealand) are not Global South in the political sense. China's position \— largest economy in the group, also a major power \— creates ongoing definitional tension." },
 
   { word: "God", category: "Even Further Back",
     definition: "Creator, metaphor, authority, or comfort — the most contested word in history.",
@@ -507,8 +507,8 @@ const GLORY_DATA = [
 
   { word: "Hegemony", category: "Power & Politics",
     definition: "A dominant military, economic, and cultural force in a given region (i.e., global).",
-    phonetic: "he\\u00b7jem\\u00b7\\u0259\\u00b7nee",
-    origin: "Greek <em>hegemonia</em> \\u2014 leadership, supremacy. From <em>hegem\\u00f3n</em> \\u2014 leader, guide. Used in ancient Greece to describe the dominant city-state in an alliance. Reintroduced into political theory through the Italian Marxist Antonio Gramsci, whose concept of 'cultural hegemony' \\u2014 dominance through ideas rather than force \\u2014 has been enormously influential.",
+    phonetic: "he·jem·ə·nee",
+    origin: "Greek <em>hegemonia</em> \— leadership, supremacy. From <em>hegem\ón</em> \— leader, guide. Used in ancient Greece to describe the dominant city-state in an alliance. Reintroduced into political theory through the Italian Marxist Antonio Gramsci, whose concept of 'cultural hegemony' \— dominance through ideas rather than force \— has been enormously influential.",
     howUsed: "In international relations: the dominance of a single state. In cultural theory (Gramsci's usage): the way a dominant group maintains power by making its values, assumptions, and worldview seem natural and universal rather than particular and imposed. 'American hegemony' can refer to military and economic dominance; 'cultural hegemony' refers to the global spread of American media, language, and values." },
 
   { word: "Heritage", category: "Origins",
@@ -537,15 +537,15 @@ const GLORY_DATA = [
 
   { word: "Immunity", category: "Power & Politics",
     definition: "Protection from consequence — in medicine, from disease; in law, from prosecution. More often a veil for accountability and a shield for power.",
-    phonetic: "i\\u00b7myoo\\u00b7ni\\u00b7tee",
-    origin: "Latin <em>immunitas</em> \\u2014 exemption from public service or obligation. From <em>in-</em> (not) + <em>munus</em> (duty, service). Originally meant exemption from civic obligations. Medical use (protection from disease) developed in the 19th century. Legal use parallels the original Latin meaning.",
-    howUsed: "Several distinct legal categories: sovereign immunity (governments generally cannot be sued), qualified immunity (protection for government officials acting in good faith), prosecutorial immunity, and witness immunity. The Supreme Court's 2024 ruling on presidential immunity \\u2014 holding that former presidents have broad immunity from criminal prosecution for official acts \\u2014 significantly expanded the concept in ways that remain actively debated." },
+    phonetic: "i·myoo·ni·tee",
+    origin: "Latin <em>immunitas</em> \— exemption from public service or obligation. From <em>in-</em> (not) + <em>munus</em> (duty, service). Originally meant exemption from civic obligations. Medical use (protection from disease) developed in the 19th century. Legal use parallels the original Latin meaning.",
+    howUsed: "Several distinct legal categories: sovereign immunity (governments generally cannot be sued), qualified immunity (protection for government officials acting in good faith), prosecutorial immunity, and witness immunity. The Supreme Court's 2024 ruling on presidential immunity \— holding that former presidents have broad immunity from criminal prosecution for official acts \— significantly expanded the concept in ways that remain actively debated." },
 
   { word: "Imperialism", category: "History & Civilization",
     definition: "The extension of a nation's power over others. By conquest, trade, or culture. Consent not required.",
-    phonetic: "im\\u00b7peer\\u00b7ee\\u00b7\\u0259\\u00b7liz\\u00b7\\u0259m",
-    origin: "From Latin <em>imperium</em> \\u2014 command, empire. The modern political term emerged in the 1870s-1880s during the height of European colonial expansion. Became a central term of Marxist and anti-colonial political theory in the 20th century.",
-    howUsed: "Describes both formal empire (direct political control of territory) and informal empire (economic and political dominance without administration). Lenin's 1917 pamphlet <em>Imperialism, the Highest Stage of Capitalism</em> defined it as capitalism's inevitable global expansion \\u2014 a definition that shaped anti-colonial movements worldwide. In contemporary use, it is applied to US foreign policy, Chinese Belt and Road investment, and other forms of great power influence. The word carries significant political charge." },
+    phonetic: "im·peer·ee·ə·liz·əm",
+    origin: "From Latin <em>imperium</em> \— command, empire. The modern political term emerged in the 1870s-1880s during the height of European colonial expansion. Became a central term of Marxist and anti-colonial political theory in the 20th century.",
+    howUsed: "Describes both formal empire (direct political control of territory) and informal empire (economic and political dominance without administration). Lenin's 1917 pamphlet <em>Imperialism, the Highest Stage of Capitalism</em> defined it as capitalism's inevitable global expansion \— a definition that shaped anti-colonial movements worldwide. In contemporary use, it is applied to US foreign policy, Chinese Belt and Road investment, and other forms of great power influence. The word carries significant political charge." },
 
   { word: "Incarceration", category: "History & Civilization",
     definition: "Confinement as punishment, deterrent, or rehabilitation. Sometimes just for being. State function and business model.",
@@ -561,8 +561,8 @@ const GLORY_DATA = [
 
   { word: "Indigenous", category: "Origins",
     definition: "People who originate in a given place through ancestry. Most applicable when displaced or destroyed.",
-    phonetic: "in\\u00b7dij\\u00b7\\u0259\\u00b7n\\u0259s",
-    origin: "Latin <em>indigena</em> \\u2014 native, from <em>indi-</em> (within) + <em>gena</em> (born, from <em>gignere</em> \\u2014 to beget). Literally: born within. Used in English since the 17th century to mean native to a place.",
+    phonetic: "in·dij·ə·nəs",
+    origin: "Latin <em>indigena</em> \— native, from <em>indi-</em> (within) + <em>gena</em> (born, from <em>gignere</em> \— to beget). Literally: born within. Used in English since the 17th century to mean native to a place.",
     howUsed: "In biology: species native to an ecosystem. In politics and law: peoples who inhabited a territory before colonial conquest and maintain distinct cultures, languages, and relationships to land. The UN Declaration on the Rights of Indigenous Peoples (2007) gives the term legal weight. In the United States, 'Indigenous' and 'Native American' are both used, with preference varying by community. The word carries legal implications for land rights, resource rights, and sovereignty that 'native' does not." },
 
   { word: "Inflation", category: "Power & Politics",
@@ -591,9 +591,9 @@ const GLORY_DATA = [
 
   { word: "Jihad", category: "Even Further Back",
     definition: "At its core, struggle. Striving and exerting oneself toward something worthy. Translation subject to misuse and manipulation.",
-    phonetic: "ji\\u00b7had",
-    origin: "Arabic <em>jihad</em> \\u2014 struggle, effort, striving. From the root <em>j-h-d</em> \\u2014 to strive, to exert effort. In Islamic theology, the term encompasses both the inner spiritual struggle to live according to God's will and outward struggle in defense of the Muslim community. The Prophet Muhammad reportedly called the inner struggle 'the greater jihad.'",
-    howUsed: "In Western media, almost exclusively used to mean holy war or terrorism. In Islamic theology and practice, the overwhelming majority of uses refer to the internal spiritual struggle \\u2014 against one's own failings, temptations, and moral shortcomings. Armed jihad exists as a concept in Islamic law with specific conditions and limitations. The reduction of a complex theological concept to a single violent meaning is one of the more consequential translation failures in contemporary political discourse." },
+    phonetic: "ji·had",
+    origin: "Arabic <em>jihad</em> \— struggle, effort, striving. From the root <em>j-h-d</em> \— to strive, to exert effort. In Islamic theology, the term encompasses both the inner spiritual struggle to live according to God's will and outward struggle in defense of the Muslim community. The Prophet Muhammad reportedly called the inner struggle 'the greater jihad.'",
+    howUsed: "In Western media, almost exclusively used to mean holy war or terrorism. In Islamic theology and practice, the overwhelming majority of uses refer to the internal spiritual struggle \— against one's own failings, temptations, and moral shortcomings. Armed jihad exists as a concept in Islamic law with specific conditions and limitations. The reduction of a complex theological concept to a single violent meaning is one of the more consequential translation failures in contemporary political discourse." },
 
   { word: "Judgment", category: "Community & Culture",
     definition: "Private thoughts, public criticism, legal ruling, and divine reckoning.",
@@ -603,9 +603,9 @@ const GLORY_DATA = [
 
   { word: "Jurisdiction", category: "Power & Politics",
     definition: "The authority that creates the authority that decides the law in a given place; and also the place.",
-    phonetic: "joor\\u00b7is\\u00b7dik\\u00b7sh\\u0259n",
-    origin: "Latin <em>jurisdictio</em> \\u2014 administration of justice. From <em>juris</em> (of law) + <em>dictio</em> (saying, declaration). The legal authority to hear and decide cases.",
-    howUsed: "Defines who has legal authority over a person, place, or subject matter. Federal versus state jurisdiction in the US produces ongoing conflicts. International jurisdiction \\u2014 whether courts in one country can prosecute crimes committed in another \\u2014 is contested. Questions of jurisdiction frequently determine whether accountability is possible at all: crimes committed in places with weak jurisdictional frameworks often go unprosecuted not because they are unknown but because no court has authority to act." },
+    phonetic: "joor·is·dik·shən",
+    origin: "Latin <em>jurisdictio</em> \— administration of justice. From <em>juris</em> (of law) + <em>dictio</em> (saying, declaration). The legal authority to hear and decide cases.",
+    howUsed: "Defines who has legal authority over a person, place, or subject matter. Federal versus state jurisdiction in the US produces ongoing conflicts. International jurisdiction \— whether courts in one country can prosecute crimes committed in another \— is contested. Questions of jurisdiction frequently determine whether accountability is possible at all: crimes committed in places with weak jurisdictional frameworks often go unprosecuted not because they are unknown but because no court has authority to act." },
 
   { word: "Justice", category: "Power & Politics",
     definition: "Punishment that fits the crime, reasonable restitution, and fairness for all — good luck with that.",
@@ -651,7 +651,7 @@ const GLORY_DATA = [
 
   { word: "Lobby", category: "Power & Politics",
     definition: "People, groups, and money that influence politicians. Legislative telemarketing — named for where it originally took place.",
-    phonetic: "lob\\u00b7ee",
+    phonetic: "lob·ee",
     origin: "The <em>lobby</em> of the British House of Commons where members of the public could approach legislators. Came to mean the act of approaching and influencing them. The term 'lobbying' in its modern sense was established in American political usage by the mid-19th century.",
     howUsed: "Legal in the United States under First Amendment protections for petitioning government. Lobbyists are required to register under the Lobbying Disclosure Act. The industry spent approximately $4 billion in 2023. The term covers everything from a citizen contacting their representative to a former senator being paid millions to advocate for a corporation. The distance between those two activities is the distance between the word's democratic legitimacy and its current practice." },
 
@@ -693,9 +693,9 @@ const GLORY_DATA = [
 
   { word: "Meritocracy", category: "Power & Politics",
     definition: "The extent to which a system's outcomes are determined by talent and effort, and not just opportunity. (see also <em>Opportunity</em>)",
-    phonetic: "mer\\u00b7i\\u00b7tok\\u00b7r\\u0259\\u00b7see",
-    origin: "Coined by British sociologist Michael Young in his 1958 satirical novel <em>The Rise of the Meritocracy</em> \\u2014 as a warning, not a celebration. Young intended it as a critique of a society that sorted people by test scores and called the result fair.",
-    howUsed: "Adopted as the opposite of its original intent. 'Meritocracy' is now invoked to justify inequality \\u2014 if outcomes are based on merit, then unequal outcomes reflect unequal merit. Young spent his last years dismayed that his coinage had been turned into an endorsement of what he had meant to satirize. Research consistently shows that outcomes in supposedly meritocratic systems are strongly predicted by family income, parental education, and ZIP code \\u2014 variables that have nothing to do with individual merit." },
+    phonetic: "mer·i·tok·rə·see",
+    origin: "Coined by British sociologist Michael Young in his 1958 satirical novel <em>The Rise of the Meritocracy</em> \— as a warning, not a celebration. Young intended it as a critique of a society that sorted people by test scores and called the result fair.",
+    howUsed: "Adopted as the opposite of its original intent. 'Meritocracy' is now invoked to justify inequality \— if outcomes are based on merit, then unequal outcomes reflect unequal merit. Young spent his last years dismayed that his coinage had been turned into an endorsement of what he had meant to satirize. Research consistently shows that outcomes in supposedly meritocratic systems are strongly predicted by family income, parental education, and ZIP code \— variables that have nothing to do with individual merit." },
 
   { word: "The Middle East", category: "History & Civilization",
     definition: "On the way to the Far East, a region divided by foreigners drawing lines on a map with heavy hands — disregarding sovereignty and the people who lived there.",
@@ -705,9 +705,9 @@ const GLORY_DATA = [
 
   { word: "Military Industrial Complex", category: "Power & Politics",
     definition: "The self-sustaining relationship between defense, government, and industry — and its revolving door. Also, a five-star-general-prior-President’s predictive warning. (see also <em>The Revolving Door</em>)",
-    phonetic: "mil\\u00b7i\\u00b7ter\\u00b7ee in\\u00b7dus\\u00b7tree\\u00b7\\u0259l kom\\u00b7pleks",
-    origin: "Coined by President Dwight D. Eisenhower in his farewell address on January 17, 1961. Eisenhower \\u2014 Supreme Commander of Allied Forces in WWII \\u2014 warned specifically against 'the acquisition of unwarranted influence, whether sought or unsought, by the military-industrial complex.'",
-    howUsed: "Describes the self-reinforcing system of defense contractors, Pentagon procurement, congressional defense appropriations, and the revolving door between military service and contractor employment. The US defense budget exceeds $900 billion annually \\u2014 more than the next ten countries combined. The Pentagon has failed five consecutive audits. The term is used both as analysis and as accusation; its usefulness is that it identifies a structural problem rather than individual corruption." },
+    phonetic: "mil·i·ter·ee in·dus·tree·əl kom·pleks",
+    origin: "Coined by President Dwight D. Eisenhower in his farewell address on January 17, 1961. Eisenhower \— Supreme Commander of Allied Forces in WWII \— warned specifically against 'the acquisition of unwarranted influence, whether sought or unsought, by the military-industrial complex.'",
+    howUsed: "Describes the self-reinforcing system of defense contractors, Pentagon procurement, congressional defense appropriations, and the revolving door between military service and contractor employment. The US defense budget exceeds $900 billion annually \— more than the next ten countries combined. The Pentagon has failed five consecutive audits. The term is used both as analysis and as accusation; its usefulness is that it identifies a structural problem rather than individual corruption." },
 
   { word: "Minority", category: "Origins",
     definition: "Numerical or structural — not always the same.",
@@ -765,9 +765,9 @@ const GLORY_DATA = [
 
   { word: "Nationalism", category: "History & Civilization",
     definition: "Love of country as a political force. Ranges from pride to persecution.",
-    phonetic: "nash\\u00b7\\u0259\\u00b7n\\u0259\\u00b7liz\\u00b7\\u0259m",
-    origin: "From Latin <em>natio</em> \\u2014 birth, tribe, people born together. Nationalism as a political movement emerged in Europe in the late 18th and 19th centuries, tied to the French Revolution's idea of the sovereign nation-people. Before nationalism, loyalty was typically to dynasties, religions, or localities rather than nations.",
-    howUsed: "Political scientists distinguish civic nationalism (attachment to shared political values and institutions, open to anyone who joins) from ethnic nationalism (attachment to a particular people defined by ancestry, language, or religion). Both exist along spectrums. The 19th century's nationalist movements created modern nation-states and freed peoples from empires. The 20th century's nationalist movements also produced two world wars and the Holocaust. The word has no fixed valence \\u2014 what matters is what kind and toward whom." },
+    phonetic: "nash·ə·nə·liz·əm",
+    origin: "From Latin <em>natio</em> \— birth, tribe, people born together. Nationalism as a political movement emerged in Europe in the late 18th and 19th centuries, tied to the French Revolution's idea of the sovereign nation-people. Before nationalism, loyalty was typically to dynasties, religions, or localities rather than nations.",
+    howUsed: "Political scientists distinguish civic nationalism (attachment to shared political values and institutions, open to anyone who joins) from ethnic nationalism (attachment to a particular people defined by ancestry, language, or religion). Both exist along spectrums. The 19th century's nationalist movements created modern nation-states and freed peoples from empires. The 20th century's nationalist movements also produced two world wars and the Holocaust. The word has no fixed valence \— what matters is what kind and toward whom." },
 
   { word: "Native", category: "Origins",
     definition: "Where you were born. And who was there before.",
@@ -801,9 +801,9 @@ const GLORY_DATA = [
 
   { word: "Occupation", category: "History & Civilization",
     definition: "Military control of an area; often starts as temporary. Also your job. Also the space you take up.",
-    phonetic: "ok\\u00b7yoo\\u00b7pay\\u00b7sh\\u0259n",
-    origin: "Latin <em>occupatio</em> \\u2014 a taking possession, from <em>occupare</em> \\u2014 to seize, take up. In international law, military occupation has a specific meaning established by the Hague Regulations of 1907 and the Fourth Geneva Convention of 1949: temporary military control of territory that does not transfer sovereignty.",
-    howUsed: "International humanitarian law places specific obligations on occupying powers \\u2014 to protect civilian populations, maintain public order, and not permanently alter the territory. The Israeli military occupation of the West Bank, ongoing since 1967, is the longest military occupation in the modern era and the subject of extensive legal and political debate. Germany's occupation of France during WWII and the US occupation of Japan and Germany after WWII are historical examples. The word carries legal weight that 'control' does not." },
+    phonetic: "ok·yoo·pay·shən",
+    origin: "Latin <em>occupatio</em> \— a taking possession, from <em>occupare</em> \— to seize, take up. In international law, military occupation has a specific meaning established by the Hague Regulations of 1907 and the Fourth Geneva Convention of 1949: temporary military control of territory that does not transfer sovereignty.",
+    howUsed: "International humanitarian law places specific obligations on occupying powers \— to protect civilian populations, maintain public order, and not permanently alter the territory. The Israeli military occupation of the West Bank, ongoing since 1967, is the longest military occupation in the modern era and the subject of extensive legal and political debate. Germany's occupation of France during WWII and the US occupation of Japan and Germany after WWII are historical examples. The word carries legal weight that 'control' does not." },
 
   { word: "Oligarchy", category: "Power & Politics",
     definition: "\"Government\" by those who can buy government. The private extraction of public wealth and resources in a collapsing society — like birds of prey.",
@@ -831,9 +831,9 @@ const GLORY_DATA = [
 
   { word: "Original Sin", category: "Even Further Back",
     definition: "The theological and secular concept that humanity inherits the guilt of Adam and Eve's desire for knowledge — also called disobedience.",
-    phonetic: "\\u0259\\u00b7rij\\u00b7\\u0259\\u00b7n\\u0259l sin",
-    origin: "The doctrine was systematized by Augustine of Hippo in the 4th-5th century CE, drawing on Paul's letter to the Romans. Augustine argued that Adam's sin was transmitted to all humanity through reproduction \\u2014 a formulation that shaped Western Christianity's understanding of human nature, sexuality, and the need for redemption.",
-    howUsed: "In theology: the condition of inherited sinfulness requiring divine grace for salvation. Protestant and Catholic traditions understand it differently; Eastern Orthodox Christianity has a distinct formulation. In secular use: applied metaphorically to foundational wrongs that continue to shape a society \\u2014 American slavery as 'original sin,' the dispossession of indigenous peoples as 'original sin.' The metaphor is apt in that it captures something transmitted, present before any individual's choices, and requiring more than individual effort to address." },
+    phonetic: "ə·rij·ə·nəl sin",
+    origin: "The doctrine was systematized by Augustine of Hippo in the 4th-5th century CE, drawing on Paul's letter to the Romans. Augustine argued that Adam's sin was transmitted to all humanity through reproduction \— a formulation that shaped Western Christianity's understanding of human nature, sexuality, and the need for redemption.",
+    howUsed: "In theology: the condition of inherited sinfulness requiring divine grace for salvation. Protestant and Catholic traditions understand it differently; Eastern Orthodox Christianity has a distinct formulation. In secular use: applied metaphorically to foundational wrongs that continue to shape a society \— American slavery as 'original sin,' the dispossession of indigenous peoples as 'original sin.' The metaphor is apt in that it captures something transmitted, present before any individual's choices, and requiring more than individual effort to address." },
 
   { word: "Pain", category: "Myself & I",
     definition: "Significant physical, psychological, or existential suffering. Always relative. Perhaps the price of too much pleasure, or just being alive. (see also <em>Pleasure</em> or <em>Suffering</em>)",
@@ -855,9 +855,9 @@ const GLORY_DATA = [
 
   { word: "Petrodollar", category: "Power & Politics",
     definition: "The so-far dominant, self-sustaining system of selling oil in US dollars through extraction enforcement. Replaced the gold standard with military might and more money.",
-    phonetic: "pe\\u00b7troh\\u00b7dol\\u00b7\\u0259r",
+    phonetic: "pe·troh·dol·ər",
     origin: "Coined by Georgetown economist Ibrahim Oweiss in 1973 following the Arab oil embargo and the Nixon administration's decision to take the dollar off the gold standard. The arrangement formalized by the US-Saudi agreement of 1974.",
-    howUsed: "The petrodollar system \\u2014 Saudi Arabia and OPEC pricing oil in dollars and recycling oil revenues into US Treasury bonds \\u2014 gives the dollar its status as global reserve currency and allows the US to run persistent trade deficits without the consequences other countries would face. It is why the US can sanction countries by cutting off their dollar access, and why challenges to dollar-denominated oil pricing (Saddam Hussein's 2000 switch to euros, Iran's attempts to trade in other currencies) are taken seriously as strategic threats." },
+    howUsed: "The petrodollar system \— Saudi Arabia and OPEC pricing oil in dollars and recycling oil revenues into US Treasury bonds \— gives the dollar its status as global reserve currency and allows the US to run persistent trade deficits without the consequences other countries would face. It is why the US can sanction countries by cutting off their dollar access, and why challenges to dollar-denominated oil pricing (Saddam Hussein's 2000 switch to euros, Iran's attempts to trade in other currencies) are taken seriously as strategic threats." },
 
   { word: "Pleasure", category: "Myself & I",
     definition: "The opposite, or flip side, of pain and suffering. What we seek, what we're sold, and what we're warned to moderate. (see also <em>Pain</em> or <em>Suffering</em>)",
@@ -897,9 +897,9 @@ const GLORY_DATA = [
 
   { word: "Precedent", category: "Power & Politics",
     definition: "A prior decision that guides future ones, whether honored, adapted, or abandoned. The mechanism of consistency and change, in law and in life.",
-    phonetic: "pres\\u00b7\\u0259\\u00b7d\\u0259nt",
-    origin: "Latin <em>praecedere</em> \\u2014 to go before. The legal doctrine of <em>stare decisis</em> \\u2014 to stand by decided cases \\u2014 formalizes precedent as the basis of common law. Courts are generally bound by their own prior decisions and by higher courts' decisions.",
-    howUsed: "In law: prior court decisions that must be followed unless overturned. In politics: established norms and practices that shape expectations even without legal force. The Supreme Court's 2022 overturning of <em>Roe v. Wade</em> \\u2014 precedent since 1973 \\u2014 raised questions about the doctrine's stability. Presidential precedents (two-term limit, peaceful transfer of power) function as constitutional norms even when not legally binding." },
+    phonetic: "pres·ə·dənt",
+    origin: "Latin <em>praecedere</em> \— to go before. The legal doctrine of <em>stare decisis</em> \— to stand by decided cases \— formalizes precedent as the basis of common law. Courts are generally bound by their own prior decisions and by higher courts' decisions.",
+    howUsed: "In law: prior court decisions that must be followed unless overturned. In politics: established norms and practices that shape expectations even without legal force. The Supreme Court's 2022 overturning of <em>Roe v. Wade</em> \— precedent since 1973 \— raised questions about the doctrine's stability. Presidential precedents (two-term limit, peaceful transfer of power) function as constitutional norms even when not legally binding." },
 
   { word: "Private", category: "Not Classified",
     definition: "What belongs to you and what's hidden from view. Also, what's no longer public. I.e. utilities, prisons, and schools… and land and water… (compare with <em>Public</em>)",
@@ -945,9 +945,9 @@ const GLORY_DATA = [
 
   { word: "Proxy War", category: "History & Civilization",
     definition: "A conflict where outside powers fuel or exploit local combatants, keeping the battlefield — and the destruction — over there.",
-    phonetic: "prok\\u00b7see wor",
-    origin: "<em>Proxy</em> from medieval Latin <em>procuracy</em> \\u2014 the authority to act for another. Proxy war as a strategic concept was formalized during the Cold War when nuclear deterrence made direct US-Soviet conflict too dangerous and both powers fought instead through allies, clients, and insurgent movements.",
-    howUsed: "Vietnam, Korea, Angola, Nicaragua, Afghanistan (1979-89), Yemen, Ukraine \\u2014 each involves outside powers supplying weapons, money, intelligence, and advisors to local forces fighting their adversaries. The populations of proxy states bear the casualties. Proxy war has the advantage (for the external powers) of advancing strategic objectives without the political cost of body bags coming home. It has the disadvantage that proxy forces pursue their own interests, not just their sponsors'." },
+    phonetic: "prok·see wor",
+    origin: "<em>Proxy</em> from medieval Latin <em>procuracy</em> \— the authority to act for another. Proxy war as a strategic concept was formalized during the Cold War when nuclear deterrence made direct US-Soviet conflict too dangerous and both powers fought instead through allies, clients, and insurgent movements.",
+    howUsed: "Vietnam, Korea, Angola, Nicaragua, Afghanistan (1979-89), Yemen, Ukraine \— each involves outside powers supplying weapons, money, intelligence, and advisors to local forces fighting their adversaries. The populations of proxy states bear the casualties. Proxy war has the advantage (for the external powers) of advancing strategic objectives without the political cost of body bags coming home. It has the disadvantage that proxy forces pursue their own interests, not just their sponsors'." },
 
   { word: "Public", category: "Not Classified",
     definition: "The people. The spaces and resources that belong to everyone. Funded by all, maintained by few, but controlled by who? (compare with <em>Private</em>)",
@@ -981,9 +981,9 @@ const GLORY_DATA = [
 
   { word: "Reconstruction", category: "History & Civilization",
     definition: "The period after the Civil War when the US attempted constitutional enforcement and multiracial democracy — and failed at least both.",
-    phonetic: "ree\\u00b7k\\u0259n\\u00b7struk\\u00b7sh\\u0259n",
-    origin: "Used to describe the rebuilding of the Confederate states after the Civil War. The formal Reconstruction era is dated 1865-1877 \\u2014 from the war's end to the Compromise of 1877, which resolved the disputed presidential election by withdrawing federal troops from the South.",
-    howUsed: "The most contested period in American historiography. For a generation, the dominant narrative \\u2014 shaped by Southern historians and the Lost Cause tradition \\u2014 portrayed Reconstruction as a period of Northern oppression and Black incompetence. Revisionist historians from the 1960s onward, led by W.E.B. Du Bois and later Eric Foner, documented it as a genuine democratic experiment \\u2014 Black political participation, constitutional amendments, public education \\u2014 betrayed by the withdrawal of federal enforcement. The contemporary understanding is closer to the revisionist account." },
+    phonetic: "ree·kən·struk·shən",
+    origin: "Used to describe the rebuilding of the Confederate states after the Civil War. The formal Reconstruction era is dated 1865-1877 \— from the war's end to the Compromise of 1877, which resolved the disputed presidential election by withdrawing federal troops from the South.",
+    howUsed: "The most contested period in American historiography. For a generation, the dominant narrative \— shaped by Southern historians and the Lost Cause tradition \— portrayed Reconstruction as a period of Northern oppression and Black incompetence. Revisionist historians from the 1960s onward, led by W.E.B. Du Bois and later Eric Foner, documented it as a genuine democratic experiment \— Black political participation, constitutional amendments, public education \— betrayed by the withdrawal of federal enforcement. The contemporary understanding is closer to the revisionist account." },
 
   { word: "Reform", category: "Power & Politics",
     definition: "Promised improvement. Often celebrated prematurely.",
@@ -993,9 +993,9 @@ const GLORY_DATA = [
 
   { word: "Regime", category: "Power & Politics",
     definition: "A system of government, or a faction that runs it. Theirs or ours. Neutral in origin, weaponized in media.",
-    phonetic: "r\\u0259\\u00b7zheem",
-    origin: "French <em>r\\u00e9gime</em>, from Latin <em>regimen</em> \\u2014 rule, guidance. From <em>regere</em> \\u2014 to rule, direct. Originally purely descriptive \\u2014 the <em>ancien r\\u00e9gime</em> simply meant the old system of government in pre-revolutionary France.",
-    howUsed: "In political science: any system of governance, including democracies. 'Democratic regime,' 'authoritarian regime,' 'hybrid regime' are standard analytical terms. In American political speech: almost exclusively used for adversary governments. American officials do not refer to 'the Biden regime' or 'the Trump regime' \\u2014 but routinely refer to 'the Iranian regime,' 'the North Korean regime.' The word's pejorative use in American politics is itself a political choice that encodes assumptions about legitimacy." },
+    phonetic: "rə·zheem",
+    origin: "French <em>r\égime</em>, from Latin <em>regimen</em> \— rule, guidance. From <em>regere</em> \— to rule, direct. Originally purely descriptive \— the <em>ancien r\égime</em> simply meant the old system of government in pre-revolutionary France.",
+    howUsed: "In political science: any system of governance, including democracies. 'Democratic regime,' 'authoritarian regime,' 'hybrid regime' are standard analytical terms. In American political speech: almost exclusively used for adversary governments. American officials do not refer to 'the Biden regime' or 'the Trump regime' \— but routinely refer to 'the Iranian regime,' 'the North Korean regime.' The word's pejorative use in American politics is itself a political choice that encodes assumptions about legitimacy." },
 
   { word: "Relative", category: "Knowledge & Learning",
     definition: "A view or comparison dependent on context and perspective. Also, one of your clan by blood or affinity.",
@@ -1011,9 +1011,9 @@ const GLORY_DATA = [
 
   { word: "Reparations", category: "History & Civilization",
     definition: "Compensation for historical injustice. Deserved if not delivered.",
-    phonetic: "rep\\u00b7\\u0259\\u00b7ray\\u00b7sh\\u0259nz",
-    origin: "Latin <em>reparare</em> \\u2014 to restore, repair. Applied to international law after WWI when Germany was required to pay reparations for war damages \\u2014 a requirement widely blamed for contributing to economic instability and the rise of Nazism. After WWII, Germany paid reparations to Israel and Jewish survivors.",
-    howUsed: "The case for reparations for American slavery and Jim Crow rests on documented economic harm \\u2014 estimates of wealth extracted from enslaved labor and subsequent discrimination. The political debate turns on questions of lineage (who pays, who receives), practicality, and whether financial compensation can address non-financial harm. H.R. 40 \\u2014 a bill establishing a commission to study reparations \\u2014 has been introduced in Congress every year since 1989 without passing. Several cities and universities have established their own reparations programs." },
+    phonetic: "rep·ə·ray·shənz",
+    origin: "Latin <em>reparare</em> \— to restore, repair. Applied to international law after WWI when Germany was required to pay reparations for war damages \— a requirement widely blamed for contributing to economic instability and the rise of Nazism. After WWII, Germany paid reparations to Israel and Jewish survivors.",
+    howUsed: "The case for reparations for American slavery and Jim Crow rests on documented economic harm \— estimates of wealth extracted from enslaved labor and subsequent discrimination. The political debate turns on questions of lineage (who pays, who receives), practicality, and whether financial compensation can address non-financial harm. H.R. 40 \— a bill establishing a commission to study reparations \— has been introduced in Congress every year since 1989 without passing. Several cities and universities have established their own reparations programs." },
 
   { word: "Representation", category: "Power & Politics",
     definition: "Those who speak for us — in government, in court, and in culture. Whether we ask, agree, or even know.",
@@ -1071,9 +1071,9 @@ const GLORY_DATA = [
 
   { word: "Sanction", category: "Power & Politics",
     definition: "A penalty, punishment, or embargo. Same root as sanctity — something sacred and protected. (see also <em>Embargo</em> or <em>Tariff</em>)",
-    phonetic: "sangk\\u00b7sh\\u0259n",
-    origin: "Latin <em>sanctio</em> \\u2014 act of making sacred or inviolable, from <em>sancire</em> \\u2014 to make holy, to decree. Originally referred to the penalty clause of a law that gave it force. Acquired its meaning of 'approval' through the idea that what is decreed is thereby legitimized.",
-    howUsed: "Uniquely, 'sanction' means both to authorize (the board sanctioned the decision) and to penalize (the country was sanctioned). In international relations, sanctions are economic penalties imposed on countries, companies, or individuals to change behavior \\u2014 trade restrictions, asset freezes, travel bans. The US has more than 30 active sanctions programs. Research on their effectiveness is mixed: they impose costs but rarely achieve their stated political objectives without other pressure." },
+    phonetic: "sangk·shən",
+    origin: "Latin <em>sanctio</em> \— act of making sacred or inviolable, from <em>sancire</em> \— to make holy, to decree. Originally referred to the penalty clause of a law that gave it force. Acquired its meaning of 'approval' through the idea that what is decreed is thereby legitimized.",
+    howUsed: "Uniquely, 'sanction' means both to authorize (the board sanctioned the decision) and to penalize (the country was sanctioned). In international relations, sanctions are economic penalties imposed on countries, companies, or individuals to change behavior \— trade restrictions, asset freezes, travel bans. The US has more than 30 active sanctions programs. Research on their effectiveness is mixed: they impose costs but rarely achieve their stated political objectives without other pressure." },
 
   { word: "Science", category: "Knowledge & Learning",
     definition: "Method, data, consensus, and authority. Pseudoscience obscures at least one.",
@@ -1083,9 +1083,9 @@ const GLORY_DATA = [
 
   { word: "Secular", category: "Even Further Back",
     definition: "Of this world, not the next. Centuries of separating church and state — actually, church from power.",
-    phonetic: "sek\\u00b7yoo\\u00b7l\\u0259r",
-    origin: "Latin <em>saeculum</em> \\u2014 generation, age, the present world (as opposed to eternity). In medieval Latin, <em>saecularis</em> distinguished things of the world from things of the church. A 'secular' priest was one who lived in the world rather than a monastery.",
-    howUsed: "In political theory: the separation of religious authority from state authority. 'Secular state' means government does not derive authority from religion and does not enforce religious practice \\u2014 not that it is hostile to religion. In sociology, 'secularization' describes the declining role of religion in public life in modern societies \\u2014 a trend that is less universal than once assumed. In common use, 'secular' often means simply 'non-religious' \\u2014 a narrowing from its original meaning of 'belonging to this world.'" },
+    phonetic: "sek·yoo·lər",
+    origin: "Latin <em>saeculum</em> \— generation, age, the present world (as opposed to eternity). In medieval Latin, <em>saecularis</em> distinguished things of the world from things of the church. A 'secular' priest was one who lived in the world rather than a monastery.",
+    howUsed: "In political theory: the separation of religious authority from state authority. 'Secular state' means government does not derive authority from religion and does not enforce religious practice \— not that it is hostile to religion. In sociology, 'secularization' describes the declining role of religion in public life in modern societies \— a trend that is less universal than once assumed. In common use, 'secular' often means simply 'non-religious' \— a narrowing from its original meaning of 'belonging to this world.'" },
 
   { word: "Security", category: "Power & Politics",
     definition: "Safety and defense. Also surveillance, monitoring, and control. (see also <em>Surveillance</em>)",
@@ -1095,9 +1095,9 @@ const GLORY_DATA = [
 
   { word: "Settler", category: "History & Civilization",
     definition: "Someone who moves to a new territory and calls it their own.",
-    phonetic: "set\\u00b7l\\u0259r",
-    origin: "From <em>settle</em> \\u2014 Old English <em>setlan</em>, to seat, place. 'Settler' emerged in colonial contexts to describe European migrants to territories occupied by indigenous peoples. The word implies permanence and a claimed relationship to land.",
-    howUsed: "In American history: the people who moved west, displacing indigenous nations. In contemporary usage, particularly regarding the West Bank: Israelis who have established communities in territory occupied since 1967, which Israel does not formally annex but controls militarily. Israeli settlers in the West Bank number over 700,000. Their legal status under international law \\u2014 specifically the Fourth Geneva Convention's prohibition on an occupying power transferring its civilian population into occupied territory \\u2014 is the subject of active legal proceedings. The word's use is itself contested." },
+    phonetic: "set·lər",
+    origin: "From <em>settle</em> \— Old English <em>setlan</em>, to seat, place. 'Settler' emerged in colonial contexts to describe European migrants to territories occupied by indigenous peoples. The word implies permanence and a claimed relationship to land.",
+    howUsed: "In American history: the people who moved west, displacing indigenous nations. In contemporary usage, particularly regarding the West Bank: Israelis who have established communities in territory occupied since 1967, which Israel does not formally annex but controls militarily. Israeli settlers in the West Bank number over 700,000. Their legal status under international law \— specifically the Fourth Geneva Convention's prohibition on an occupying power transferring its civilian population into occupied territory \— is the subject of active legal proceedings. The word's use is itself contested." },
 
   { word: "Shadow Government", category: "Power & Politics",
     definition: "The parallel power structures operating beneath the visible one — real in some forms, imagined in others. (see also Deep State)",
@@ -1161,9 +1161,9 @@ const GLORY_DATA = [
 
   { word: "Tariff", category: "Power & Politics",
     definition: "A tax on imported goods. Trade policy, revenue tool, and weapon of diplomacy and war. (see also <em>Embargo</em> or <em>Sanction</em>)",
-    phonetic: "tar\\u00b7if",
-    origin: "Arabic <em>ta'rif</em> \\u2014 notification, inventory, price list. Entered European languages through Italian and Spanish trading contact with the Arab world. The original meaning was simply a schedule of prices or fees.",
-    howUsed: "Tariffs are among the oldest instruments of economic policy \\u2014 used to protect domestic industries from foreign competition, to raise government revenue, and as leverage in trade negotiations. The Smoot-Hawley Tariff of 1930, which raised duties on thousands of imported goods, is widely blamed for deepening the Great Depression by triggering retaliatory tariffs from trading partners. In contemporary politics, tariffs have been used by both parties as tools of economic nationalism \\u2014 their distributional effects (who bears the cost) are routinely obscured in political debate." },
+    phonetic: "tar·if",
+    origin: "Arabic <em>ta'rif</em> \— notification, inventory, price list. Entered European languages through Italian and Spanish trading contact with the Arab world. The original meaning was simply a schedule of prices or fees.",
+    howUsed: "Tariffs are among the oldest instruments of economic policy \— used to protect domestic industries from foreign competition, to raise government revenue, and as leverage in trade negotiations. The Smoot-Hawley Tariff of 1930, which raised duties on thousands of imported goods, is widely blamed for deepening the Great Depression by triggering retaliatory tariffs from trading partners. In contemporary politics, tariffs have been used by both parties as tools of economic nationalism \— their distributional effects (who bears the cost) are routinely obscured in political debate." },
 
   { word: "Tax", category: "Power & Politics",
     definition: "Civic contribution or government theft. You pay either way. Unless you're very poor or rich enough.",
@@ -1191,9 +1191,9 @@ const GLORY_DATA = [
 
   { word: "Theocracy", category: "Even Further Back",
     definition: "Government by divine authority. Or those who say it is. Sometimes sudden.",
-    phonetic: "thee\\u00b7ok\\u00b7r\\u0259\\u00b7see",
-    origin: "Greek <em>theokratia</em> \\u2014 rule by God. From <em>theos</em> (God) + <em>kratein</em> (to rule). Coined by the Jewish historian Josephus in the 1st century CE to describe the government of ancient Israel as ruled by divine law rather than human kings.",
-    howUsed: "Iran since 1979 is the clearest contemporary example \\u2014 the constitution grants supreme authority to a senior Islamic jurist. Vatican City is a theocracy in that its government derives from religious authority. The Taliban's Afghanistan is another example. The term is also applied loosely to describe political movements that seek to govern according to religious principles \\u2014 Christian nationalism in the United States, for instance \\u2014 though these are more accurately described as theocratic movements than as theocracies." },
+    phonetic: "thee·ok·rə·see",
+    origin: "Greek <em>theokratia</em> \— rule by God. From <em>theos</em> (God) + <em>kratein</em> (to rule). Coined by the Jewish historian Josephus in the 1st century CE to describe the government of ancient Israel as ruled by divine law rather than human kings.",
+    howUsed: "Iran since 1979 is the clearest contemporary example \— the constitution grants supreme authority to a senior Islamic jurist. Vatican City is a theocracy in that its government derives from religious authority. The Taliban's Afghanistan is another example. The term is also applied loosely to describe political movements that seek to govern according to religious principles \— Christian nationalism in the United States, for instance \— though these are more accurately described as theocratic movements than as theocracies." },
 
   { word: "Theory", category: "Knowledge & Learning",
     definition: "In math, proof. In science, a well-tested explanation. In common use, a guess or a belief. To each their own evidence.",
@@ -1221,20 +1221,20 @@ const GLORY_DATA = [
 
   { word: "Transparency", category: "Power & Politics",
     definition: "Openness in operation. Operational due to concealment.",
-    phonetic: "trans\\u00b7pair\\u00b7\\u0259n\\u00b7see",
-    origin: "Medieval Latin <em>transparere</em> \\u2014 to show through. From <em>trans-</em> (through) + <em>parere</em> (to appear, be visible). The political meaning \\u2014 openness of government to public scrutiny \\u2014 developed alongside democratic theory in the 17th and 18th centuries.",
-    howUsed: "Invoked constantly as a democratic value. In practice, every government, corporation, and institution claims to value transparency while exercising discretion about what is disclosed. Freedom of Information laws create legal mechanisms for transparency; exemptions to those laws define its limits. 'Transparency' has also been weaponized \\u2014 requiring individuals to disclose private information under the banner of public interest. The word is most useful when it is specific: transparent about what, to whom, enforced how." },
+    phonetic: "trans·pair·ən·see",
+    origin: "Medieval Latin <em>transparere</em> \— to show through. From <em>trans-</em> (through) + <em>parere</em> (to appear, be visible). The political meaning \— openness of government to public scrutiny \— developed alongside democratic theory in the 17th and 18th centuries.",
+    howUsed: "Invoked constantly as a democratic value. In practice, every government, corporation, and institution claims to value transparency while exercising discretion about what is disclosed. Freedom of Information laws create legal mechanisms for transparency; exemptions to those laws define its limits. 'Transparency' has also been weaponized \— requiring individuals to disclose private information under the banner of public interest. The word is most useful when it is specific: transparent about what, to whom, enforced how." },
 
   { word: "Treason", category: "Power & Politics",
     definition: "The betrayal of one's country — the most serious political crime, and the most serious false allegation.",
-    phonetic: "tree\\u00b7z\\u0259n",
-    origin: "Old French <em>traison</em>, from Latin <em>traditio</em> \\u2014 a handing over, betrayal. From <em>tradere</em> \\u2014 to hand over (the same root as 'tradition'). Originally meant simply betrayal; acquired its specific political meaning in medieval law.",
-    howUsed: "The US Constitution defines treason narrowly: 'levying War against them, or in adhering to their Enemies, giving them Aid and Comfort.' The framers deliberately made it hard to charge \\u2014 they had seen treason accusations used as political weapons in England. In American political speech, 'treason' is invoked frequently and charged almost never. The gap between the accusation and the constitutional definition is where most political uses of the word live." },
+    phonetic: "tree·zən",
+    origin: "Old French <em>traison</em>, from Latin <em>traditio</em> \— a handing over, betrayal. From <em>tradere</em> \— to hand over (the same root as 'tradition'). Originally meant simply betrayal; acquired its specific political meaning in medieval law.",
+    howUsed: "The US Constitution defines treason narrowly: 'levying War against them, or in adhering to their Enemies, giving them Aid and Comfort.' The framers deliberately made it hard to charge \— they had seen treason accusations used as political weapons in England. In American political speech, 'treason' is invoked frequently and charged almost never. The gap between the accusation and the constitutional definition is where most political uses of the word live." },
 
   { word: "Treaty", category: "History & Civilization",
     definition: "A binding agreement between nations. A record of what's ignored when convenient.",
-    phonetic: "tree\\u00b7tee",
-    origin: "Old French <em>trait\\u00e9</em>, from Latin <em>tractatus</em> \\u2014 handling, treatment. From <em>tractare</em> \\u2014 to handle, manage. Treaties have governed relations between states since ancient times \\u2014 one of the oldest known is the 1259 BCE treaty between Egypt and the Hittites.",
+    phonetic: "tree·tee",
+    origin: "Old French <em>trait\é</em>, from Latin <em>tractatus</em> \— handling, treatment. From <em>tractare</em> \— to handle, manage. Treaties have governed relations between states since ancient times \— one of the oldest known is the 1259 BCE treaty between Egypt and the Hittites.",
     howUsed: "Under the US Constitution, treaties require a two-thirds Senate vote to ratify and have the force of federal law. In practice, the United States has signed and violated treaties with Native nations (over 500 signed, all broken), maintained nuclear treaties and withdrawn from them, and joined international agreements through executive action that subsequent administrations have reversed. The word implies binding obligation; the history of treaties reveals the gap between that implication and practice." },
 
   { word: "Truth", category: "Knowledge & Learning",
@@ -1251,9 +1251,9 @@ const GLORY_DATA = [
 
   { word: "Veto", category: "Power & Politics",
     definition: "The power to say no. Line item or wholesale. A check that can block. If applicable.",
-    phonetic: "vee\\u00b7toh",
-    origin: "Latin <em>veto</em> \\u2014 I forbid. Used by Roman tribunes who could block actions of the Senate to protect plebeian interests. The word entered constitutional language directly \\u2014 the Latin term retained because it was already in use for the concept.",
-    howUsed: "In the US: the President's power to reject legislation, overridable by two-thirds of Congress. In the UN Security Council: the five permanent members (US, UK, France, Russia, China) each hold absolute veto power over binding resolutions \\u2014 a design that has blocked action on numerous crises including Syria and Ukraine. 'Pocket veto' \\u2014 allowing a bill to die by not signing it at the end of a congressional session \\u2014 is a specific American variant. The veto is simultaneously a protection against majority overreach and a mechanism for blocking legitimate action." },
+    phonetic: "vee·toh",
+    origin: "Latin <em>veto</em> \— I forbid. Used by Roman tribunes who could block actions of the Senate to protect plebeian interests. The word entered constitutional language directly \— the Latin term retained because it was already in use for the concept.",
+    howUsed: "In the US: the President's power to reject legislation, overridable by two-thirds of Congress. In the UN Security Council: the five permanent members (US, UK, France, Russia, China) each hold absolute veto power over binding resolutions \— a design that has blocked action on numerous crises including Syria and Ukraine. 'Pocket veto' \— allowing a bill to die by not signing it at the end of a congressional session \— is a specific American variant. The veto is simultaneously a protection against majority overreach and a mechanism for blocking legitimate action." },
 
   { word: "Violence", category: "History & Civilization",
     definition: "Actual harm upon people, groups, and institutions. With or without guns. (see also <em>War</em>)",
