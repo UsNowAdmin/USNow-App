@@ -656,7 +656,7 @@ const GLORY_DATA = [
     howUsed: "Legal in the United States under First Amendment protections for petitioning government. Lobbyists are required to register under the Lobbying Disclosure Act. The industry spent approximately $4 billion in 2023. The term covers everything from a citizen contacting their representative to a former senator being paid millions to advocate for a corporation. The distance between those two activities is the distance between the word's democratic legitimacy and its current practice." },
 
   { word: "Loser", category: "Community & Culture",
-    definition: "The one who didn't get there first, didn't get lucky, or was eliminated by the competition. Also, someone we don't like.",
+    definition: "The one who didn't get there first, didn't get lucky, or was eliminated by the competition. Also, someone we don't like. (see also <em>Winner</em>) ",
     phonetic: "loo·zər",
     origin: "From Old English <em>losian</em> — to perish, be destroyed. From <em>los</em> — destruction, loss. The agentive sense — one who loses — developed in Middle English. The pejorative social use — 'loser' as a class of person rather than a participant who lost a contest — is largely 20th-century American.",
     howUsed: "Sharpened as a social epithet in late 20th-century American slang — from teen-movie shorthand to a defining vocabulary of Donald Trump's political rhetoric, where 'loser' was applied to opponents, journalists, and even soldiers. The word carries an unusual weight in American culture where winning is itself moralized. Compare with cultures that traditionally honor the dignified loser." },
@@ -1280,7 +1280,7 @@ const GLORY_DATA = [
     howUsed: "The gap between 'wealth as flourishing' and 'wealth as money' is the gap that debates about inequality fall into. 'Wealth creation' implies general benefit — a rising tide. Critics argue that financial wealth accumulation can coexist with declining general welfare. The original meaning would not have understood the distinction." },
 
   { word: "Winner", category: "Community & Culture",
-    definition: "The one who got there first, got there lucky, or got there by eliminating the competition. Also, someone we like better.",
+    definition: "The one who got there first, got there lucky, or got there by eliminating the competition. Also, someone we like better.(see also <em>Loser</em>) ",
     phonetic: "win·ər",
     origin: "Old English <em>winnan</em> — to work, struggle, contend, fight. The shift from struggle to victory is preserved in related words — to 'win' something originally meant to gain it through effort. The agentive 'winner' has been in continuous use, though its weight as a social category is largely modern.",
     howUsed: "Sharpened as a social category in late-20th-century American culture and given particular weight in Donald Trump's political rhetoric. The 'winners and losers' frame in zero-sum politics treats negotiations and elections as competitions with clear outcomes rather than negotiated equilibria. Carries different moral weight in different cultures — the dignified loser is more honored in some traditions." },
