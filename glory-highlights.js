@@ -49,7 +49,11 @@ document.addEventListener('click',e=>{
     const def=GLORIES[key]||GLORIES[Object.keys(GLORIES).find(k=>k.toLowerCase()===key.toLowerCase())];
     if(!def) return;
     document.getElementById('gp-word').textContent=key.toUpperCase();
-    document.getElementById('gp-def').textContent=def;
+    // Use innerHTML so styled markup in definitions — e.g. <em>Word</em>
+    // for see-also references — renders as italic instead of literal text.
+    // Safe here because definitions are authored content from glories.js,
+    // not user input.
+    document.getElementById('gp-def').innerHTML=def;
     document.getElementById('gp-link').href='compendium.html#'+key.toLowerCase();
     // Position near word
     const r=t.getBoundingClientRect();
