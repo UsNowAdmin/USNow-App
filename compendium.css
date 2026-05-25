@@ -186,16 +186,6 @@
     margin-bottom: 8px;
   }
 
-  /* On mobile the sticky controls eat too much of the viewport.
-     Release them so they scroll away with the page; scroll up to reach them. */
-  @media (max-width: 600px) {
-    .controls {
-      position: static;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-    }
-  }
-
   .search-row {
     display: flex;
     gap: 10px;
