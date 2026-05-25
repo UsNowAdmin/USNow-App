@@ -348,10 +348,10 @@
   .entry-definition {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.02rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
-    color: var(--text-dim);
-    font-style: italic;
+    color: var(--text);
+    font-style: normal;
   }
 
   /* Expandable: category + tags — hidden until click */
