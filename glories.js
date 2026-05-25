@@ -607,14 +607,6 @@ const GLORY_DATA = [
     origin: "Old English <em>weorc</em> — something done, labor, deed. Proto-Germanic. Related to the Greek <em>ergon</em> — work, deed (as in <em>energy</em>). Among the oldest words in the language — work needed naming before almost everything else.",
     howUsed: "'Hard work' is the foundational myth of American meritocracy — success is the reward for effort. The phrase functions to explain inequality as deserved outcome. The distinction between work (any human activity) and labor (work sold for wages) is made in Marxist theory and regularly collapsed in political speech." },
 
-
-
-  { word: "Amendment", category: "Power & Politics",
-    definition: "A formal change to a law or constitution \u2014 sounds procedural, carries enormous weight",
-    phonetic: "\u0259\u00b7mend\u00b7m\u0259nt",
-    origin: "Latin <em>emendare</em> \u2014 to correct, remove faults. From <em>e-</em> (out) + <em>mendum</em> (fault). Entered English in the 14th century meaning correction of an error. Applied to legislation by the 18th century.",
-    howUsed: "In American political life, amendments to the Constitution are treated almost as sacred \u2014 the Bill of Rights, the 13th abolishing slavery, the 19th giving women the vote. In everyday use, 'amendment' can mean anything from a minor tweak to a fundamental rewriting. The distance between those two uses is politically significant." },
-
   { word: "Apartheid", category: "History & Civilization",
     definition: "A legal system of racial segregation \u2014 South Africa's word, but the structure has appeared elsewhere",
     phonetic: "\u0259\u00b7par\u00b7t\u0101t",
@@ -693,12 +685,6 @@ const GLORY_DATA = [
     origin: "Italian <em>fascismo</em>, from <em>fascio</em> \u2014 bundle, group. From Latin <em>fasces</em> \u2014 a bundle of rods with an axe, carried before Roman magistrates as a symbol of authority. Mussolini's movement took the fasces as its symbol in 1919.",
     howUsed: "The original fascist movements \u2014 Mussolini's Italy, Hitler's Germany, Franco's Spain \u2014 shared specific features: ultranationalism, a charismatic leader claiming to embody the nation's will, suppression of political opposition, use of political violence, and corporate-state partnership. The word is now applied so broadly in political argument that historians argue it has lost analytical utility. When everything is fascism, nothing is. The precision matters." },
 
-  { word: "Fairness Doctrine", category: "Knowledge & Learning",
-    definition: "The FCC rule requiring broadcasters to present contrasting views \u2014 abolished in 1987, still shaping what followed",
-    phonetic: "fair\u00b7nes dok\u00b7trin",
-    origin: "Established by the Federal Communications Commission in 1949. Based on the principle that broadcast spectrum is a public resource, and therefore licensees have obligations to public interest \u2014 including presenting controversial issues of public importance in a balanced way.",
-    howUsed: "Its repeal in 1987 under the Reagan administration is frequently cited as a contributing cause of the rise of partisan talk radio in the late 1980s and 1990s. Whether the Fairness Doctrine's reinstatement would change the current media environment is debated \u2014 the internet has fundamentally altered the scarcity argument on which broadcast regulation rested." },
-
   { word: "Fundamentalism", category: "Even Further Back",
     definition: "A return to foundational texts against the encroachment of modernity \u2014 found in every major religion",
     phonetic: "fun\u00b7d\u0259\u00b7men\u00b7tl\u00b7iz\u00b7\u0259m",
@@ -759,12 +745,6 @@ const GLORY_DATA = [
     origin: "The <em>lobby</em> of the British House of Commons where members of the public could approach legislators. Came to mean the act of approaching and influencing them. The term 'lobbying' in its modern sense was established in American political usage by the mid-19th century.",
     howUsed: "Legal in the United States under First Amendment protections for petitioning government. Lobbyists are required to register under the Lobbying Disclosure Act. The industry spent approximately $4 billion in 2023. The term covers everything from a citizen contacting their representative to a former senator being paid millions to advocate for a corporation. The distance between those two activities is the distance between the word's democratic legitimacy and its current practice." },
 
-  { word: "Lost Cause", category: "History & Civilization",
-    definition: "The mythology that the Confederacy fought for honor rather than slavery \u2014 constructed after the fact, taught for generations",
-    phonetic: "lawst kawz",
-    origin: "The phrase was popularized by Edward Pollard's 1866 book <em>The Lost Cause: A New Southern History of the War of the Confederates</em> \u2014 written the year after Confederate defeat. The United Daughters of the Confederacy systematized its spread through textbooks and monument campaigns beginning in the 1890s.",
-    howUsed: "The Lost Cause rewrote the Civil War as a conflict about states' rights and Southern honor rather than slavery, portrayed Confederate soldiers as noble defenders of a way of life, and presented Reconstruction as a period of Northern oppression. This version was taught in Southern schools for generations and shaped the political culture of the region into the 21st century. Historians classify it as one of the most successful disinformation campaigns in American history." },
-
   { word: "Meritocracy", category: "Power & Politics",
     definition: "A system where talent and effort determine outcomes \u2014 the flattering story every system tells about itself",
     phonetic: "mer\u00b7i\u00b7tok\u00b7r\u0259\u00b7see",
@@ -782,12 +762,6 @@ const GLORY_DATA = [
     phonetic: "nash\u00b7\u0259\u00b7n\u0259\u00b7liz\u00b7\u0259m",
     origin: "From Latin <em>natio</em> \u2014 birth, tribe, people born together. Nationalism as a political movement emerged in Europe in the late 18th and 19th centuries, tied to the French Revolution's idea of the sovereign nation-people. Before nationalism, loyalty was typically to dynasties, religions, or localities rather than nations.",
     howUsed: "Political scientists distinguish civic nationalism (attachment to shared political values and institutions, open to anyone who joins) from ethnic nationalism (attachment to a particular people defined by ancestry, language, or religion). Both exist along spectrums. The 19th century's nationalist movements created modern nation-states and freed peoples from empires. The 20th century's nationalist movements also produced two world wars and the Holocaust. The word has no fixed valence \u2014 what matters is what kind and toward whom." },
-
-  { word: "News Desert", category: "Knowledge & Learning",
-    definition: "A community with no local news coverage \u2014 the civic consequence of the media business model collapse",
-    phonetic: "nooz dez\u00b7\u0259rt",
-    origin: "Emerged in journalism research in the 2010s as newspapers closed across the United States. The term maps the disappearance of local news to the concept of food deserts \u2014 communities without access to a basic necessity.",
-    howUsed: "More than 2,500 American newspapers have closed since 2005. The communities that lose local coverage lose primary accountability for local government \u2014 school boards, city councils, courts, police departments. Research shows higher corruption, lower civic participation, and worse bond ratings in communities without local news. The term is now used in journalism research, policy discussions, and philanthropy targeting local news restoration." },
 
   { word: "Occupation", category: "History & Civilization",
     definition: "Military control of territory without annexation \u2014 a legal category with specific obligations and ongoing debates",
@@ -855,18 +829,6 @@ const GLORY_DATA = [
     origin: "From <em>settle</em> \u2014 Old English <em>setlan</em>, to seat, place. 'Settler' emerged in colonial contexts to describe European migrants to territories occupied by indigenous peoples. The word implies permanence and a claimed relationship to land.",
     howUsed: "In American history: the people who moved west, displacing indigenous nations. In contemporary usage, particularly regarding the West Bank: Israelis who have established communities in territory occupied since 1967, which Israel does not formally annex but controls militarily. Israeli settlers in the West Bank number over 700,000. Their legal status under international law \u2014 specifically the Fourth Geneva Convention's prohibition on an occupying power transferring its civilian population into occupied territory \u2014 is the subject of active legal proceedings. The word's use is itself contested." },
 
-  { word: "Sphere of Influence", category: "Power & Politics",
-    definition: "The zone where a great power claims dominance and expects deference \u2014 never officially declared, always enforced",
-    phonetic: "sfeer uv in\u00b7floo\u00b7\u0259ns",
-    origin: "Emerged in 19th century diplomatic language to describe the informal zones of control claimed by colonial powers. The Congress of Berlin (1884-85) formalized spheres of influence in Africa. The term was used in 20th century superpower competition to describe US and Soviet zones of influence.",
-    howUsed: "Officially, great powers rarely acknowledge spheres of influence \u2014 doing so would concede that small states within the sphere lack genuine sovereignty. In practice, the Monroe Doctrine (Western Hemisphere as US sphere), Soviet dominance of Eastern Europe, and Russian insistence on influence over former Soviet states are all spheres of influence operating by different names. Understanding the concept explains foreign policy decisions that otherwise seem irrational \u2014 the US intervening in Latin American governments, Russia's response to NATO expansion \u2014 within a framework of great power logic." },
-
-  { word: "Sykes-Picot", category: "History & Civilization",
-    definition: "The 1916 secret agreement that drew the modern Middle East \u2014 lines on a map that became borders",
-    phonetic: "s\u012bks pee\u00b7koh",
-    origin: "Named for British diplomat Mark Sykes and French diplomat Fran\u00e7ois Georges-Picot, who negotiated the secret agreement in 1916 dividing the Arab territories of the Ottoman Empire between Britain and France after the expected Allied victory in WWI.",
-    howUsed: "The borders established by Sykes-Picot \u2014 and subsequent agreements \u2014 created modern Iraq, Syria, Lebanon, Jordan, and Palestine without regard for the ethnic, religious, and tribal communities living there. The resulting states contained peoples who had not chosen each other as neighbors and excluded peoples \u2014 Kurds especially \u2014 who had expected autonomy. Nearly every major conflict in the modern Middle East has roots in this cartography. ISIS explicitly framed its 2014 territorial expansion as erasing the Sykes-Picot border." },
-
   { word: "Tariff", category: "Power & Politics",
     definition: "A tax on imported goods \u2014 trade policy, revenue tool, and political weapon",
     phonetic: "tar\u00b7if",
@@ -878,12 +840,6 @@ const GLORY_DATA = [
     phonetic: "thee\u00b7ok\u00b7r\u0259\u00b7see",
     origin: "Greek <em>theokratia</em> \u2014 rule by God. From <em>theos</em> (God) + <em>kratein</em> (to rule). Coined by the Jewish historian Josephus in the 1st century CE to describe the government of ancient Israel as ruled by divine law rather than human kings.",
     howUsed: "Iran since 1979 is the clearest contemporary example \u2014 the constitution grants supreme authority to a senior Islamic jurist. Vatican City is a theocracy in that its government derives from religious authority. The Taliban's Afghanistan is another example. The term is also applied loosely to describe political movements that seek to govern according to religious principles \u2014 Christian nationalism in the United States, for instance \u2014 though these are more accurately described as theocratic movements than as theocracies." },
-
-  { word: "Thucydides Trap", category: "History & Civilization",
-    definition: "The pattern where a rising power and an established one slide toward war \u2014 named for an ancient historian, applied to a modern rivalry",
-    phonetic: "thoo\u00b7sid\u00b7i\u00b7deez trap",
-    origin: "Named for the Greek historian Thucydides, who wrote of the Peloponnesian War: 'It was the rise of Athens and the fear that this instilled in Sparta that made war inevitable.' The modern concept was developed by Harvard political scientist Graham Allison in his 2017 book <em>Destined for War</em>.",
-    howUsed: "Allison examined sixteen historical cases of power transition between a rising and a ruling power. Twelve ended in war. The four that did not \u2014 Britain and the US in the early 20th century being the clearest example \u2014 required deliberate effort by both parties to avoid conflict. The framework is applied directly to US-China relations: China is the rising power, the US is the ruling power, and the question is whether the transition can be managed without war. Critics note the framework can become self-fulfilling \u2014 treating conflict as inevitable may make it so." },
 
   { word: "Transparency", category: "Power & Politics",
     definition: "Openness in governance \u2014 universally demanded, selectively practiced",
