@@ -189,7 +189,7 @@ var CONTENT = {
   },
 
   /* ============================================================
-     2. AMERICA'S INDIGENOUS SIN — THE ESSAY
+     2. AMERICA'S ABORIGNAL SIN — THE ESSAY
      Journal · article · companion image at end links to gallery
      ============================================================ */
   "indigenous-sin": {
@@ -198,7 +198,7 @@ var CONTENT = {
     kind: "article",
     hero_style: "dark-paper",
     eyebrow: "Essay",
-    title: "America's Indigenous Sin",
+    title: "America's Aboriginal Sin",
     subtitle: "The technology evolves. The pattern stays the same.",
     date: "March 28, 2026",
     decade: "2020s",
@@ -285,7 +285,7 @@ var CONTENT = {
 `,
     companion_image: {
       src: "graphics/sin.PNG",
-      alt: "America's Indigenous Sin — symbolic image of generational violence and national trauma",
+      alt: "America's Aborigial Sin — symbolic image of generational violence and national trauma",
       caption: "AI-generated, 2026.",
       gallery_id: "indigenous-sin-image"
     },
@@ -306,14 +306,14 @@ var CONTENT = {
     kind: "image",
     hero_style: "dark-cosmic",
     eyebrow: "AI-Generated · 2026",
-    title: "America's Indigenous Sin",
+    title: "America's Aboriginal Sin",
     subtitle: "Companion image to the essay.",
     date: "March 2026",
     meta: ["GALLERY", "HISTORY"],
     media: {
       type: "image",
       src: "graphics/sin.PNG",
-      alt: "America's Indigenous Sin — symbolic image of generational violence and national trauma",
+      alt: "America's Aboriginal Sin — symbolic image of generational violence and national trauma",
       caption: "Tap the image to open the full-resolution viewer. Pinch, scroll, or drag to inspect."
     },
     related_article: "indigenous-sin",
