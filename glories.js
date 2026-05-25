@@ -894,12 +894,6 @@ const GLORY_DATA = [
     origin: "The revolving door as a metaphor for the exchange of personnel between government and private industry dates to at least the 1950s in American political writing. The physical revolving door was patented in 1888 by Theophilus Van Kannel — who would presumably be appalled at what his invention came to represent.",
     howUsed: "Documented, legal, and continuous across administrations of both parties. Senior officials at regulatory agencies routinely move to the industries they regulated; industry executives move into the agencies that oversee them. The result is regulatory capture — agencies that protect the industries they are supposed to police. The term is used critically but the practice continues because it is not illegal." },
 
-  { word: "False Flag", category: "Power & Politics",
-    definition: "An operation designed to be blamed on someone else — documented in history, weaponized in conspiracy culture",
-    phonetic: "fols flag",
-    origin: "From naval warfare — literally flying the flag of another nation to avoid engagement or gain access. The practice was legal under the laws of war until the moment of attack. As a political concept, documented examples include the Gleiwitz incident (1939), in which Nazi Germany staged a Polish attack on a German radio station to justify the invasion of Poland.",
-    howUsed: "Has a documented history in state-sponsored operations going back centuries. Has also become the default explanation for every mass casualty event in certain corners of the internet, applied without evidence to discredit victims and derail accountability. The documented history makes the conspiracy version harder to dismiss and more dangerous when misapplied." },
-
   { word: "Shadow Government", category: "Power & Politics",
     definition: "The parallel power structure operating beneath the visible one — real in some forms, imagined in others",
     phonetic: "shad·oh guv·ərn·mənt",
