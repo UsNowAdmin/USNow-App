@@ -944,12 +944,6 @@ const GLORY_DATA = [
     origin: "From naval warfare — literally flying the flag of another nation to avoid engagement or gain access. The practice was legal under the laws of war until the moment of attack. As a political concept, documented examples include the Gleiwitz incident (1939), in which Nazi Germany staged a Polish attack on a German radio station to justify the invasion of Poland.",
     howUsed: "Has a documented history in state-sponsored operations going back centuries. Has also become the default explanation for every mass casualty event in certain corners of the internet, applied without evidence to discredit victims and derail accountability. The documented history makes the conspiracy version harder to dismiss and more dangerous when misapplied." },
 
-  { word: "Mandate of Heaven", category: "History & Civilization",
-    definition: "The divine permission to rule — revocable by disaster, defeat, or uprising, retroactively",
-    phonetic: "man·dayt uv hev·ən",
-    origin: "Chinese: <em>Tiānmìng</em> (天命). Developed by the Zhou dynasty around 1046 BCE to justify their overthrow of the Shang. The theory held that Heaven granted rulers legitimacy based on virtue and just governance, and withdrew it — signaled through natural disasters, military defeat, or popular revolt — when rulers became corrupt or incompetent.",
-    howUsed: "One of the oldest and most elegant accountability mechanisms in political theory — and one of the most easily gamed. The winner of any conflict could claim Heaven had revoked the previous ruler's mandate and granted it to them. This made it simultaneously a check on power and a retroactive justification for whoever seized it. Its logic resurfaces in every theocracy and every revolution that claims divine or historical inevitability." },
-
   { word: "Shadow Government", category: "Power & Politics",
     definition: "The parallel power structure operating beneath the visible one — real in some forms, imagined in others",
     phonetic: "shad·oh guv·ərn·mənt",
