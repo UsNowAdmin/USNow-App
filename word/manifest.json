@@ -1,0 +1,24 @@
+{
+  "name": "The Living Word Almanack",
+  "short_name": "Word Almanack",
+  "description": "Every word is a doorway.",
+  "start_url": "/word/",
+  "display": "standalone",
+  "background_color": "#080b14",
+  "theme_color": "#080b14",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/word-assets/almanack-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/word-assets/almanack-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
