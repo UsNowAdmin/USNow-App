@@ -1,0 +1,12 @@
+{
+  "name": "usnow-words-generator",
+  "version": "1.0.0",
+  "description": "Static page generator for the USNow World Compendium — one page per glory.",
+  "scripts": {
+    "build:words": "node scripts/build-words.js",
+    "build": "node scripts/build-words.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
