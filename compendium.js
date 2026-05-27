@@ -94,13 +94,14 @@ function init() {
   });
 
   // See-also click handler — delegated, so it survives re-renders.
-  // Clicking a .glory-ref smooth-scrolls to the destination entry and
-  // briefly flashes it. If the target is currently filtered out, we
-  // clear filters first so it can be found.
+  // Clicking a .glory-ref or .glory-link smooth-scrolls to the destination
+  // entry and briefly flashes it. If the target is currently filtered
+  // out, we clear filters first so it can be found.
   document.addEventListener('click', e => {
-    const link = e.target.closest('.glory-ref');
+    const link = e.target.closest('.glory-ref, .glory-link');
     if (!link) return;
     e.preventDefault();
+    e.stopPropagation();
     const slug = link.dataset.target;
     if (!slug) return;
     scrollToEntry(slug);
@@ -302,6 +303,81 @@ function linkifySeeAlso(definition) {
   );
 }
 
+// Auto-link the first occurrence per section of every glory word matched
+// in the given HTML. Walks the string outside of <em> and <a> tags so
+// existing italics and see-also refs are left alone. Skips the page's
+// own headword. Whole-word, case-insensitive matching, longest-first
+// so multi-word entries like "American Dream" match before "Dream".
+//
+// The resulting <a class="glory-link" data-target="..."> tags are picked
+// up by the same click handler that handles .glory-ref — clicking them
+// scrolls to the target entry and flashes it (no navigation, no popup).
+function autoLinkGlories(html, selfWord) {
+  if (!html) return html;
+  const selfLower = (selfWord || '').toLowerCase();
+
+  const words = glossary
+    .map(g => g.word.toLowerCase())
+    .filter(w => w !== selfLower)
+    .sort((a, b) => b.length - a.length);
+  if (!words.length) return html;
+
+  const escaped = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  const re = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+
+  // Build a quick lookup: lowercase -> canonical word.
+  const canonical = new Map();
+  glossary.forEach(g => canonical.set(g.word.toLowerCase(), g.word));
+
+  // Walk the string, only transforming text segments NOT inside
+  // <em> or <a> tags. Same state-machine pattern as highlightMatches.
+  const linkedInSection = new Set();
+  let out = '';
+  let i = 0;
+  let skipDepth = 0;
+  const skipTags = ['em', 'a'];
+
+  const transform = (text) => {
+    return text.replace(re, (match) => {
+      const key = match.toLowerCase();
+      if (linkedInSection.has(key)) return match;
+      const target = canonical.get(key);
+      if (!target) return match;
+      linkedInSection.add(key);
+      const slug = target.toLowerCase().replace(/\s/g, '-');
+      return `<a class="glory-link" data-target="${slug}" href="#${slug}">${match}</a>`;
+    });
+  };
+
+  while (i < html.length) {
+    const lt = html.indexOf('<', i);
+    if (lt === -1) {
+      out += skipDepth > 0 ? html.slice(i) : transform(html.slice(i));
+      break;
+    }
+    const segment = html.slice(i, lt);
+    out += skipDepth > 0 ? segment : transform(segment);
+
+    const gt = html.indexOf('>', lt);
+    if (gt === -1) { out += html.slice(lt); break; }
+
+    const tag = html.slice(lt, gt + 1);
+    out += tag;
+
+    const tagMatch = tag.match(/^<\s*(\/?)\s*([a-zA-Z][a-zA-Z0-9]*)/);
+    if (tagMatch) {
+      const isClose = tagMatch[1] === '/';
+      const tagName = tagMatch[2].toLowerCase();
+      if (skipTags.includes(tagName)) {
+        skipDepth += isClose ? -1 : 1;
+        if (skipDepth < 0) skipDepth = 0;
+      }
+    }
+    i = gt + 1;
+  }
+  return out;
+}
+
 function buildEntry(entry) {
   const div = document.createElement('div');
   div.className = 'entry';
@@ -320,15 +396,27 @@ function buildEntry(entry) {
 
   const pillsHTML = pills.map(p => {
     if (!entry[p.key]) return '';
+    // Auto-link glory words in the howUsed section.
+    // Etymology (origin) and phonetic are NEVER auto-linked —
+    // those italics are Latin/Greek/foreign source words, not glory refs.
+    let content = entry[p.key];
+    if (p.key === 'howUsed') {
+      content = autoLinkGlories(linkifySeeAlso(content), entry.word);
+      content = highlightMatches(content, searchQuery);
+    }
     return `<div class="pill-block" data-pill="${p.key}">
       <button class="pill-btn" onclick="event.stopPropagation();togglePill(this)" style="border-color:${p.color}55;color:${p.color};">
         <span class="pill-dot" style="background:${p.color};"></span>${p.label}
       </button>
-      <div class="pill-content ${p.isPhonetic ? 'pill-phonetic' : ''}">${entry[p.key]}</div>
+      <div class="pill-content ${p.isPhonetic ? 'pill-phonetic' : ''}">${content}</div>
     </div>`;
   }).join('');
 
-  const definitionHTML = highlightMatches(linkifySeeAlso(entry.definition), searchQuery);
+  // Definition gets see-also linkified, then auto-linked, then search-highlighted.
+  const definitionHTML = highlightMatches(
+    autoLinkGlories(linkifySeeAlso(entry.definition), entry.word),
+    searchQuery
+  );
   const wordHTML       = highlightMatches(entry.word, searchQuery);
 
   div.innerHTML = `
