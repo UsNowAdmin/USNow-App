@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────
    USNow WORDS — shared stylesheet
-   Drives /word/ index and every /word/[slug]/ page.
+   Drives /word/ index, every /word/[slug]/ page, and category pages.
    Inherits compendium color tokens, adds site nav + page layout.
    ───────────────────────────────────────────────────────────── */
 
@@ -31,7 +31,7 @@
   --nav-amber-hot: #e0b860;
   --nav-text:      #8aa0b8;
   --nav-h:         44px;
-  --ticker-h:      30px;
+  /* (ticker removed) */
 }
 
 html { scroll-behavior: smooth; }
@@ -43,7 +43,7 @@ body {
   font-weight: 300;
   min-height: 100vh;
   overflow-x: hidden;
-  padding-top: calc(var(--nav-h) + var(--ticker-h));
+  padding-top: var(--nav-h);
 }
 
 /* Background field — matches compendium atmosphere */
@@ -77,42 +77,11 @@ body::after {
   z-index: 0;
 }
 
-/* ── SITE NAV (canonical USNow ticker + nav) ──────────────── */
-
-#ticker {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 600;
-  background: #030609;
-  border-bottom: 1px solid rgba(122,96,48,0.44);
-  overflow: hidden;
-  height: var(--ticker-h);
-  display: flex;
-  align-items: center;
-}
-#ticker-inner {
-  display: flex;
-  gap: 56px;
-  animation: ticker 72s linear infinite;
-  white-space: nowrap;
-  padding-left: 100%;
-}
-.ticker-item {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: var(--nav-amber);
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
+/* ── SITE NAV (no ticker — clean header) ──────────────────── */
 
 nav {
   position: fixed;
-  top: var(--ticker-h);
+  top: 0;
   left: 0; right: 0;
   z-index: 500;
   background: var(--nav-bg);
@@ -189,9 +158,10 @@ nav {
   border-color: var(--nav-amber-hot);
 }
 
-@media (max-width: 560px) {
-  nav { padding: 0 14px; }
-  .nav-pill { padding: 4px 9px; font-size: 9px; letter-spacing: 0.12em; }
+@media (max-width: 720px) {
+  nav { padding: 0 14px; gap: 8px; }
+  .nav-links { gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+  .nav-pill { padding: 4px 8px; font-size: 9px; letter-spacing: 0.1em; }
   .nav-logo .now { letter-spacing: 0.25em; }
   .nav-logo .app { display: none; }
 }
@@ -325,6 +295,25 @@ nav {
   padding: 4px 10px;
   text-transform: uppercase;
 }
+/* Clickable category — links to /word/category/[slug]/ */
+.meta-cat-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.meta-cat-link:hover {
+  background: rgba(255,255,255,0.04);
+}
+.meta-cat-hint {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  margin-top: 6px;
+  opacity: 0.6;
+  font-style: italic;
+}
 
 /* ── Glory cross-references in body text ──────────────────── */
 /* Two flavors:
@@ -355,47 +344,73 @@ nav {
   border-bottom-color: var(--amber);
 }
 
-/* ── Pagination + related ─────────────────────────────────── */
+/* ── Pagination — full-width prev/next strip ──────────────── */
 
 .word-pagination {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
-  margin-top: 64px;
-  padding: 24px 0;
+  margin-top: 72px;
+  padding: 28px 0;
   border-top: 1px solid var(--border2);
   border-bottom: 1px solid var(--border2);
 }
 .page-prev,
 .page-next {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  gap: 14px;
   text-decoration: none;
   color: var(--text-dim);
-  transition: color 0.2s;
-  font-size: 14px;
+  transition: color 0.2s, transform 0.15s;
+  padding: 6px 4px;
+  min-width: 0; /* allow text truncation if needed */
 }
-.page-next { align-items: flex-end; text-align: right; }
+.page-next {
+  justify-content: flex-end;
+  text-align: right;
+}
 .page-prev:hover,
-.page-next:hover { color: var(--amber); }
+.page-next:hover { color: var(--amber-glow); }
+.page-prev:hover .page-arrow { transform: translateX(-3px); }
+.page-next:hover .page-arrow { transform: translateX(3px); }
+
+.page-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.page-next .page-stack { align-items: flex-end; }
+
 .page-arrow {
   font-family: 'DM Mono', monospace;
   color: var(--amber-dim);
+  font-size: 20px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
 }
 .page-direction {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-faint);
 }
 .page-word {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.15;
   color: var(--amber-glow);
+  letter-spacing: 0.01em;
 }
+.page-prev:hover .page-word,
+.page-next:hover .page-word {
+  color: #f5c842;
+}
+
 .page-index {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
@@ -445,16 +460,31 @@ nav {
   color: var(--amber-glow);
   border-bottom-color: var(--amber-glow);
 }
+.related-all {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.related-all:hover { color: var(--amber-glow); }
 
 @media (max-width: 600px) {
   .word-pagination {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    gap: 12px;
   }
   .page-index { grid-column: 1 / -1; grid-row: 2; text-align: center; justify-self: center; }
+  .page-word { font-size: 20px; }
+  .page-arrow { font-size: 16px; }
 }
 
-/* ── INDEX PAGE (/word/) ──────────────────────────────────── */
+/* ── INDEX PAGE (/word/) and CATEGORY PAGES ───────────────── */
 
 .index-header { margin-bottom: 32px; }
 .index-eyebrow {
@@ -476,7 +506,7 @@ nav {
 }
 .index-title em {
   color: var(--amber);
-  font-style: italic;
+  font-style: normal;
 }
 .index-subtitle {
   font-family: 'DM Mono', monospace;
@@ -487,7 +517,7 @@ nav {
 
 .index-controls {
   position: sticky;
-  top: calc(var(--nav-h) + var(--ticker-h));
+  top: var(--nav-h);
   z-index: 10;
   background: rgba(8,11,20,0.92);
   backdrop-filter: blur(12px);

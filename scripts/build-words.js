@@ -3,8 +3,9 @@
 // ─────────────────────────────────────────────────────────────
 // USNow WORDS — Static Page Generator
 // Reads glories.js (GLORY_DATA array), writes:
-//   /word/index.html                          ← directory page
+//   /word/index.html                          ← directory page (The Words)
 //   /word/[slug]/index.html                   ← one per glory
+//   /word/category/[slug]/index.html          ← one per category
 //   /sitemap-words.xml                        ← all word URLs
 //
 // Usage:    node scripts/build-words.js
@@ -17,8 +18,9 @@ const path = require('path');
 // ── Config ───────────────────────────────────────────────────
 const SITE_URL    = 'https://www.usnow.app';
 const SITE_NAME   = 'UsNow.app';
-const PROJECT_NAME = 'The Living Word Almanack';
-const OG_IMAGE    = '/apple-touch-icon.png';  // swap for a dedicated 1200x630 og.png anytime
+const PROJECT_NAME = 'The 📖 Words';      // site name (with emoji glyph)
+const LIST_NAME    = 'The 📜 List';        // compendium → renamed
+const OG_IMAGE    = '/word-assets/almanack-social.png';  // existing 1200x630 social card in word-assets/
 const REPO_ROOT  = path.resolve(__dirname, '..');
 const OUT_DIR    = path.join(REPO_ROOT, 'word');
 const ASSETS_DIR = path.join(REPO_ROOT, 'word-assets');
@@ -76,6 +78,17 @@ const buildDescription = (definition) => {
   const lastSpace = cut.lastIndexOf(' ');
   return (lastSpace > 100 ? cut.slice(0, lastSpace) : cut) + '…';
 };
+
+// Fisher-Yates shuffle for randomized related-word picks.
+// Reseeded per page; build output changes each run.
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 // ── Cross-reference linking ──────────────────────────────────
 //
@@ -204,35 +217,23 @@ function autoLinkGlories(html, gloryMap, selfSlug, selfWordLower) {
 }
 
 // ── Header (shared site nav) ─────────────────────────────────
-// Matches the canonical USNow nav style from index.css:
-// 30px ticker bar + 44px nav bar with US/NOW.app wordmark and pill links.
+// Ticker removed. Just the wordmark + pills.
+// Pill labels match other USNow pages: "THE {emoji} {NAME}" pattern.
 function renderHeader(active) {
-  // active: 'words' | null — controls active-state styling.
+  // active: 'words' | 'list' | 'tree' | 'scale' | null
   const pill = (label, href, isActive) =>
     `<a class="nav-pill${isActive ? ' active' : ''}" href="${href}">${label}</a>`;
 
   return `
-<div id="ticker" aria-hidden="true">
-  <div id="ticker-inner">
-    <span class="ticker-item">◦ The question is the answer.</span>
-    <span class="ticker-item">◦ Every word is a doorway.</span>
-    <span class="ticker-item">◦ Start anywhere.</span>
-    <span class="ticker-item">◦ The record is still open.</span>
-    <span class="ticker-item">◦ The question is the answer.</span>
-    <span class="ticker-item">◦ Every word is a doorway.</span>
-    <span class="ticker-item">◦ Start anywhere.</span>
-    <span class="ticker-item">◦ The record is still open.</span>
-  </div>
-</div>
 <nav role="navigation" aria-label="USNow">
   <a class="nav-logo" href="/" aria-label="USNow home">
     <span class="us">US</span><span class="now">NOW</span><span class="app">.app</span>
   </a>
   <div class="nav-links">
-    ${pill('TREE',       '/tree.html',         active === 'tree')}
-    ${pill('SCALE',      '/index.html',        active === 'scale')}
-    ${pill('COMPENDIUM', '/compendium.html',   active === 'compendium')}
-    ${pill('WORDS',      '/word/',             active === 'words')}
+    ${pill('THE 🌳 TREE',   '/tree.html',       active === 'tree')}
+    ${pill('THE ⚛️ SCALE',  '/index.html',      active === 'scale')}
+    ${pill('THE 📜 LIST',   '/compendium.html', active === 'list')}
+    ${pill('THE 📖 WORDS',  '/word/',           active === 'words')}
   </div>
 </nav>
 `.trim();
@@ -240,19 +241,20 @@ function renderHeader(active) {
 
 const FOOTER_HTML = `
 <footer class="page-footer">
-  <div class="footer-text">The Living Word Almanack</div>
+  <div class="footer-text">The 📖 Words</div>
   <div class="footer-tagline">©2026 All rights reserved — UsNow.app</div>
 </footer>`.trim();
 
-// ── Page template ────────────────────────────────────────────
+// ── Page template (individual word) ──────────────────────────
 function renderWordPage(entry, gloryMap, glories) {
   const slug      = slugify(entry.word);
   const selfLower = entry.word.toLowerCase();
   const url       = `${SITE_URL}/word/${slug}/`;
   const title     = `${entry.word} · ${PROJECT_NAME} · ${SITE_NAME}`;
-  const ogTitle   = `${entry.word} · ${SITE_NAME}`;
+  const ogTitle   = `${entry.word} — ${PROJECT_NAME} — ${SITE_NAME}`;
   const desc      = buildDescription(entry.definition);
   const catColor  = CATEGORY_COLORS[entry.category] || '#888888';
+  const catSlug   = slugify(entry.category);
 
   // Transform body fields.
   // Definition: explicit see-also linkified FIRST, then auto-link glories.
@@ -276,10 +278,10 @@ function renderWordPage(entry, gloryMap, glories) {
   const prev = idx > 0 ? sorted[idx - 1] : null;
   const next = idx < sorted.length - 1 ? sorted[idx + 1] : null;
 
-  // Other words in same category — show up to 8, excluding self.
-  const sameCat = glories
-    .filter(g => g.category === entry.category && g.word !== entry.word)
-    .slice(0, 8);
+  // Related: RANDOMIZED 5–6 from same category, excluding self.
+  const catPool = glories.filter(g => g.category === entry.category && g.word !== entry.word);
+  const pickCount = Math.min(6, catPool.length);
+  const sameCat = shuffle(catPool).slice(0, pickCount);
 
   // ── Structured data (Schema.org DefinedTerm) ───────────────
   const structuredData = {
@@ -327,8 +329,10 @@ function renderWordPage(entry, gloryMap, glories) {
 <meta name="twitter:image" content="${SITE_URL}${OG_IMAGE}">
 
 <!-- Icons -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/word-assets/almanack-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/word-assets/almanack-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/word-assets/almanack-icon-512.png">
+<link rel="icon" href="/word-assets/almanack-icon-192.png">
 
 <!-- Fonts (same stack as compendium) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -349,7 +353,7 @@ ${renderHeader('words')}
   <article class="word-article">
 
     <div class="word-eyebrow">
-      <a href="/word/" class="eyebrow-link">UsNow.app · The Living Word Almanack</a>
+      <a href="/word/" class="eyebrow-link">UsNow.app · ${PROJECT_NAME}</a>
       <span class="eyebrow-sep">·</span>
       <span class="word-cat-eyebrow">${escapeHtml(entry.category)}</span>
     </div>
@@ -387,9 +391,13 @@ ${renderHeader('words')}
 
     <section class="word-meta">
       <div class="meta-label">Category</div>
-      <div class="meta-cat" style="border-color:${catColor}66;color:${catColor};">
+      <a class="meta-cat meta-cat-link"
+         href="/word/category/${catSlug}/"
+         style="border-color:${catColor}66;color:${catColor};"
+         title="Click for all words in this category">
         ${escapeHtml(entry.category)}
-      </div>
+      </a>
+      <div class="meta-cat-hint">Click for all words in this category</div>
     </section>
 
   </article>
@@ -398,14 +406,18 @@ ${renderHeader('words')}
     ${prev ? `
     <a class="page-prev" href="/word/${slugify(prev.word)}/">
       <span class="page-arrow">←</span>
-      <span class="page-direction">Previous</span>
-      <span class="page-word">${escapeHtml(prev.word)}</span>
+      <div class="page-stack">
+        <span class="page-direction">Previous</span>
+        <span class="page-word">${escapeHtml(prev.word)}</span>
+      </div>
     </a>` : '<span class="page-spacer"></span>'}
     <a class="page-index" href="/word/">All Words</a>
     ${next ? `
     <a class="page-next" href="/word/${slugify(next.word)}/">
-      <span class="page-direction">Next</span>
-      <span class="page-word">${escapeHtml(next.word)}</span>
+      <div class="page-stack">
+        <span class="page-direction">Next</span>
+        <span class="page-word">${escapeHtml(next.word)}</span>
+      </div>
       <span class="page-arrow">→</span>
     </a>` : '<span class="page-spacer"></span>'}
   </nav>
@@ -418,6 +430,7 @@ ${renderHeader('words')}
         <li><a href="/word/${slugify(g.word)}/">${escapeHtml(g.word)}</a></li>
       `).join('')}
     </ul>
+    <a class="related-all" href="/word/category/${catSlug}/">See all in ${escapeHtml(entry.category)} →</a>
   </section>` : ''}
 
 </main>
@@ -486,8 +499,10 @@ function renderIndexPage(glories) {
 <meta name="twitter:description" content="${escapeHtml(desc)}">
 <meta name="twitter:image" content="${SITE_URL}${OG_IMAGE}">
 
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/word-assets/almanack-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/word-assets/almanack-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/word-assets/almanack-icon-512.png">
+<link rel="icon" href="/word-assets/almanack-icon-192.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -503,7 +518,7 @@ ${renderHeader('words')}
 
   <header class="index-header">
     <div class="index-eyebrow">UsNow.app</div>
-    <h1 class="index-title">The Living Word <em>Almanack</em></h1>
+    <h1 class="index-title">The <em>📖</em> Words</h1>
     <div class="index-subtitle">${glories.length} entries · alphabetical · each its own page</div>
   </header>
 
@@ -530,11 +545,115 @@ ${FOOTER_HTML}
 `;
 }
 
+// ── /word/category/[slug]/ — alphabetical list per category ──
+function renderCategoryPage(category, entries, glories) {
+  const sorted = [...entries].sort((a, b) =>
+    a.word.toLowerCase().localeCompare(b.word.toLowerCase())
+  );
+  const catSlug = slugify(category);
+  const catColor = CATEGORY_COLORS[category] || '#888888';
+  const url = `${SITE_URL}/word/category/${catSlug}/`;
+  const title = `${category} · ${PROJECT_NAME} · ${SITE_NAME}`;
+  const ogTitle = `${category} — ${PROJECT_NAME} — ${SITE_NAME}`;
+  const desc = `All words in the ${category} category — ${entries.length} entries, alphabetical. Part of ${PROJECT_NAME} on ${SITE_NAME}.`;
+
+  // Letter groups within the category.
+  const grouped = {};
+  for (const g of sorted) {
+    const letter = g.word[0].toUpperCase();
+    if (!grouped[letter]) grouped[letter] = [];
+    grouped[letter].push(g);
+  }
+  const letters = Object.keys(grouped).sort();
+
+  const listHTML = letters.map(letter => `
+    <section class="letter-section" id="letter-${letter}">
+      <div class="letter-heading">— ${letter} —</div>
+      <ul class="word-list">
+        ${grouped[letter].map(g => `
+          <li class="word-list-item">
+            <a href="/word/${slugify(g.word)}/" class="word-list-link">
+              <span class="word-list-word">${escapeHtml(g.word)}</span>
+              <span class="word-list-def">${stripTags(g.definition)}</span>
+            </a>
+          </li>
+        `).join('')}
+      </ul>
+    </section>
+  `).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHtml(title)}</title>
+<meta name="description" content="${escapeHtml(desc)}">
+<link rel="canonical" href="${url}">
+<meta name="author" content="${SITE_NAME}">
+<meta name="publisher" content="${SITE_NAME}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="${SITE_NAME}">
+<meta property="og:title" content="${escapeHtml(ogTitle)}">
+<meta property="og:description" content="${escapeHtml(desc)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${SITE_URL}${OG_IMAGE}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${escapeHtml(ogTitle)}">
+<meta name="twitter:description" content="${escapeHtml(desc)}">
+<meta name="twitter:image" content="${SITE_URL}${OG_IMAGE}">
+
+<link rel="apple-touch-icon" href="/word-assets/almanack-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/word-assets/almanack-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/word-assets/almanack-icon-512.png">
+<link rel="icon" href="/word-assets/almanack-icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/word-assets/word.css">
+</head>
+<body class="words-index" style="--cat-color:${catColor};">
+
+${renderHeader('words')}
+
+<main class="index-main">
+
+  <header class="index-header">
+    <div class="index-eyebrow">
+      <a href="/word/" class="eyebrow-link">${PROJECT_NAME}</a>
+      <span class="eyebrow-sep">·</span>
+      <span style="color:${catColor};">Category</span>
+    </div>
+    <h1 class="index-title" style="color:${catColor};">${escapeHtml(category)}</h1>
+    <div class="index-subtitle">${entries.length} entries · alphabetical</div>
+  </header>
+
+  <div class="index-list">
+    ${listHTML}
+  </div>
+
+</main>
+
+${FOOTER_HTML}
+
+</body>
+</html>
+`;
+}
+
 // ── sitemap-words.xml ────────────────────────────────────────
-function renderSitemap(glories) {
+function renderSitemap(glories, categories) {
   const today = new Date().toISOString().split('T')[0];
   const urls = [
     `<url><loc>${SITE_URL}/word/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
+    ...categories.map(cat => {
+      const slug = slugify(cat);
+      return `<url><loc>${SITE_URL}/word/category/${slug}/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
+    }),
     ...glories.map(g => {
       const slug = slugify(g.word);
       return `<url><loc>${SITE_URL}/word/${slug}/</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`;
@@ -586,10 +705,33 @@ function build() {
   fs.writeFileSync(path.join(OUT_DIR, 'index.html'), renderIndexPage(glories));
   console.log(`Generated /word/index.html`);
 
+  // Category pages: /word/category/[slug]/index.html
+  const byCategory = {};
+  for (const g of glories) {
+    const cat = g.category || 'Not Classified';
+    if (!byCategory[cat]) byCategory[cat] = [];
+    byCategory[cat].push(g);
+  }
+  const categories = Object.keys(byCategory).sort();
+  const categoryRoot = path.join(OUT_DIR, 'category');
+  fs.mkdirSync(categoryRoot, { recursive: true });
+  let catCount = 0;
+  for (const cat of categories) {
+    const catSlug = slugify(cat);
+    const catDir = path.join(categoryRoot, catSlug);
+    fs.mkdirSync(catDir, { recursive: true });
+    fs.writeFileSync(
+      path.join(catDir, 'index.html'),
+      renderCategoryPage(cat, byCategory[cat], glories)
+    );
+    catCount++;
+  }
+  console.log(`Generated ${catCount} category pages → /word/category/[slug]/index.html`);
+
   // sitemap-words.xml
   const sitemapPath = path.join(REPO_ROOT, 'sitemap-words.xml');
-  fs.writeFileSync(sitemapPath, renderSitemap(glories));
-  console.log(`Generated sitemap-words.xml (${glories.length + 1} URLs)`);
+  fs.writeFileSync(sitemapPath, renderSitemap(glories, categories));
+  console.log(`Generated sitemap-words.xml (${glories.length + categories.length + 1} URLs)`);
 
   console.log('─────────────────────');
   console.log('Done.');
