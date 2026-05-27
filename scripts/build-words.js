@@ -390,6 +390,18 @@ ${renderHeader('words')}
     </section>` : ''}
 
     <section class="word-meta">
+      <div class="meta-label">Jump to Letter</div>
+      <div class="meta-alpha">
+        ${'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => {
+          const hasEntries = glories.some(g => g.word[0].toUpperCase() === letter);
+          return hasEntries
+            ? `<a class="meta-alpha-letter" href="/word/#letter-${letter}">${letter}</a>`
+            : `<span class="meta-alpha-letter no-entries">${letter}</span>`;
+        }).join('')}
+      </div>
+    </section>
+
+    <section class="word-meta">
       <div class="meta-label">Category</div>
       <a class="meta-cat meta-cat-link"
          href="/word/category/${catSlug}/"

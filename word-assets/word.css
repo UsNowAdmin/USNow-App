@@ -315,6 +315,42 @@ nav {
   font-style: italic;
 }
 
+/* A–Z jump row — sits above the category section, lets readers
+   hop to any letter on the /word/ directory page without going
+   prev/next or back to All Words. */
+.meta-alpha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.meta-alpha-letter {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  text-decoration: none;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+.meta-alpha-letter:hover {
+  color: var(--amber);
+  border-color: var(--amber-dim);
+}
+.meta-alpha-letter.no-entries {
+  color: var(--text-faint);
+  opacity: 0.25;
+  cursor: default;
+}
+.meta-alpha-letter.no-entries:hover {
+  color: var(--text-faint);
+  border-color: transparent;
+}
+
 /* ── Glory cross-references in body text ──────────────────── */
 /* Two flavors:
    .glory-ref  → explicit (see X) parenthetical links — italic, dotted
