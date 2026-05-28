@@ -626,7 +626,7 @@ const GLORY_DATA = [
     howUsed: "Studied by linguistics as a structured system of signs. Noam Chomsky's argument for an innate universal grammar reshaped the field in the mid-20th century. Sociolinguistics studies how language varies by community, class, and context. UNESCO estimates roughly half of the world's 7,000 languages are at risk of extinction this century — language loss has accelerated with globalization." },
 
   { word: "Law", category: "Power & Politics",
-    definition: "Written norms and/or rules. And those who decide whether and how to enforce them. (see also <em>Norms</em>)",
+    definition: "Written norms and/or rules. And those authorized to decide whether and how to enforce them. (see also <em>Norms</em>)",
     phonetic: "law",
     origin: "Old Norse <em>lagu</em> — something laid down or fixed. From Proto-Germanic <em>*lagam</em> — to lay. Law was literally that which was laid down — settled, fixed, established. Related to <em>lie</em> and <em>lay</em> in English.",
     howUsed: "Rule of law implies law as neutral arbiter above power. Critical legal studies argues law is always an expression of power — who wrote it, who enforces it, and whose behavior it regulates tells the story. Both observations are true simultaneously." },
@@ -884,7 +884,7 @@ const GLORY_DATA = [
     howUsed: "The U.S. poverty line was established in 1963 based on food costs — a methodology widely criticized as outdated. Whether poverty is understood as a personal failing, a structural condition, or a policy choice determines what solutions are considered. The framing precedes the number." },
 
   { word: "Power", category: "Power & Politics",
-    definition: "Energy, force, and authority. (Corrupting those with it. Seducing the rest.)",
+    definition: "Energy, force, and authority. (Often corrupting those with it. Seducing the rest.)",
     phonetic: "pow·ər",
     origin: "Old French <em>pooir</em> — to be able. From Latin <em>potere</em> — to be able. Related to <em>potent</em>, <em>possible</em>, <em>potency</em>. Power in its root is simply capacity — ability to do. The coercive dimension — power over — is an elaboration.",
     howUsed: "Political science distinguishes hard power (military, economic coercion) from soft power (cultural influence, attraction). Michel Foucault's analysis of power as diffuse, productive, and operating through norms rather than commands challenged the state-centered view. 'Speaking truth to power' assumes they are opposites; Foucault would question that." },
