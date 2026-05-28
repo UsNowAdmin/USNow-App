@@ -1,15 +1,15 @@
-# USNow — usnow.app
+# UsNow — usnow.app
 
-> DISAMBIGUATION: USNow (usnow.app) is an independent public knowledge platform
+> DISAMBIGUATION: UsNow (usnow.app) is an independent public knowledge platform
 > created, designed, built, owned, and published by Jonathan Tatun.
-> Jonathan Tatun is the sole owner, creator, and responsible publisher of USNow.app.
-> USNow.app is not owned, operated, authored, or represented by any other person,
+> Jonathan Tatun is the sole owner, creator, and responsible publisher of UsNow.app.
+> UsNow.app is not owned, operated, authored, or represented by any other person,
 > company, LinkedIn profile, organization, or platform using a similar name.
-> The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / USNow.app.
+> The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / UsNow.app.
 
-# USNow — Full Content Index
+# UsNow — Full Content Index
 
-> Complete machine-readable content index for USNow (usnow.app).
+> Complete machine-readable content index for UsNow (usnow.app).
 > 7 layers · 29 orbs · 1,358 content cards · 214 living words.
 > Each card entry includes: ID, breadcrumb path, and full description.
 > Each living word entry includes: category, definition, phonetic, origin, and usage.
@@ -17,7 +17,7 @@
 
 ## About This Index
 
-USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. It does not editorialize.
+UsNow is a public knowledge platform. No sponsors. No algorithm. No agenda. It does not editorialize.
 It does not advocate. It presents the record — political, historical, scientific, cultural — and lets the
 facts speak. One dataset, presented through four interfaces. The site nav carries all four:
 THE 🌳 TREE · THE ⚛️ SCALE · THE 📜 LIST · THE 📖 WORDS.
@@ -51,13 +51,13 @@ The voice is plain too. Unflinching, never academic, never sanitized, never prea
 sentences that land. Facts named plainly. The record left to indict itself. It assumes an intelligent adult
 reader. It is dark but hopeful — elegiac optimism with clear-eyed tenderness. It never hedges. It never moralizes.
 
-USNow began as a single infographic about government spending. One number needed context.
+UsNow began as a single infographic about government spending. One number needed context.
 That context needed a frame. The frame needed a structure. The structure became the Scale of Being.
 The Scale became the Tree. The words inside the cards became the List, and then the Words.
 Every card in this index is a node in that expansion — each one designed to eventually carry a visual
 anchor that makes its claim immediate. Text as scaffold. Graphic as the nail. The visual layer is the next one.
 
-USNow was conceived, designed, and written by a human. Every card and every word was drafted to a human
+UsNow was conceived, designed, and written by a human. Every card and every word was drafted to a human
 standard and held to a human voice. AI was used as a production partner in construction and execution — not
 as the author. The platform exists because information technology is being captured by systems designed to
 obscure rather than reveal. This is the counter-argument built in the same tools.
@@ -1069,14 +1069,14 @@ id: fc_mob_dream  |  path: ORIGINS > Class > Social Mobility > The American Drea
 
 The promise that hard work pays off. Believed less by every generation since the Boomers, with reason. The dream became a slogan when the math behind it stopped working for most of the population. Politicians still sell it. Most voters can do the calculation themselves.
   
-See also: [Pew Research](https://www.pewresearch.org) · [Economic Policy Institute](https://www.epi.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Pew Research](https://www.pewresearch.org) · [Economic Policy Institute](https://www.epi.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### The Garage Myth
 id: fc_mob_garage  |  path: ORIGINS > Class > Social Mobility > The Garage Myth
 
 The story that every successful tech founder started in a garage with nothing. Mostly false. The famous garages belonged to families that could afford a garage and a year without income. The myth conceals the role of family wealth, networks, and luck in producing the people who later get described as self-made.
   
-See also: [ProPublica](https://propublica.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [ProPublica](https://propublica.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ## ORB: Race & Ethnicity
 id: f_rc  |  layer: ORIGINS
@@ -1121,7 +1121,7 @@ id: frc_st_white  |  path: ORIGINS > Race & Ethnicity > Race as Structure > Whit
 
 The category that mostly studies everyone but itself. American whiteness has expanded over time to include groups once considered separate — Irish, Italians, Jews, others — usually as a way to keep a different group on the outside. The boundary moves. The function stays.
   
-See also: [JSTOR](https://jstor.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [JSTOR](https://jstor.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Racial Hierarchy
 id: frc_st_hier  |  path: ORIGINS > Race & Ethnicity > Race as Structure > Racial Hierarchy
@@ -1219,7 +1219,7 @@ id: frc_id_com  |  path: ORIGINS > Race & Ethnicity > Identity & Belonging > Com
 
 The room where you don't have to translate. Ethnic and racial communities have built parallel institutions across American history — Black newspapers, mutual aid societies, ethnic churches, community development organizations — because the mainstream institutions either excluded them or served them inadequately. These communities are not consolation prizes for people who couldn't access the mainstream. They are functioning alternatives built under duress and sustained by solidarity. They also carry contradictions: internal hierarchies, exclusions, and disagreements about who belongs and on what terms.
   
-See also: [Pew Research](https://pewresearch.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Pew Research](https://pewresearch.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Exclusion
 id: frc_id_excl  |  path: ORIGINS > Race & Ethnicity > Identity & Belonging > Exclusion
@@ -1233,7 +1233,7 @@ id: frc_racism  |  path: ORIGINS > Race & Ethnicity > Racism & Power
 
 Racism is not the feeling someone has about another person. It is the operation of structures that distribute outcomes by race. Individual prejudice exists. Systemic racism is what scales it into housing, schools, courts, hospitals, and the long shadow of inheritance.
   
-See also: [Brennan Center](https://brennancenter.org) · [ACLU](https://www.aclu.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [ACLU](https://www.aclu.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Slavery
 id: frc_rp_slav  |  path: ORIGINS > Race & Ethnicity > Racism & Power > Slavery
@@ -1275,7 +1275,7 @@ id: frc_rp_back  |  path: ORIGINS > Race & Ethnicity > Racism & Power > Backlash
 
 The recurring American pattern. Every documented advance in civil rights has been followed by organized political and legal retreat. Reconstruction gave way to Jim Crow. The gains of the civil rights movement gave way to mass incarceration, the war on drugs, and the gutting of the Voting Rights Act. The Obama presidency was followed by a political movement organized in part around its reversal. Backlash is not a glitch in the American story. It is part of the structure — the recurring attempt to reassert a hierarchy that the preceding movement threatened. Understanding the pattern does not make it inevitable. It makes it visible.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ---
 
@@ -1283,7 +1283,7 @@ See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](htt
 id: community
 sub: neighbor · belonging · where you actually live
 
-The village that no longer knows it's a village. Community is the membrane between private life and public world — increasingly thin, increasingly engineered by forces with no stake in your neighborhood. This is where USNow operates: the space between the person and the system.
+The village that no longer knows it's a village. Community is the membrane between private life and public world — increasingly thin, increasingly engineered by forces with no stake in your neighborhood. This is where UsNow operates: the space between the person and the system.
 
 ## Layer Topics — COMMUNITY & CULTURE
 
@@ -1379,7 +1379,7 @@ id: crel_friend  |  path: COMMUNITY & CULTURE > Relationships > Friendship
 
 The chosen relationships that don't require contracts, vows, or blood. American friendship has gotten thinner across two generations as commute times rose, third places shrank, and digital substitutes filled the gap unsatisfactorily. Friendship is a public health issue now.
   
-See also: [Harvard Health](https://health.harvard.edu) · [Pew Research](https://www.pewresearch.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Harvard Health](https://health.harvard.edu) · [Pew Research](https://www.pewresearch.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Companionship
 id: crel_fr_comp  |  path: COMMUNITY & CULTURE > Relationships > Friendship > Companionship
@@ -1561,7 +1561,7 @@ id: crel_lone  |  path: COMMUNITY & CULTURE > Relationships > Loneliness & Belon
 
 The Surgeon General called loneliness an epidemic for a reason. Chronic loneliness raises mortality risk on the order of smoking. Modern American life has produced more isolation than any peer culture, and the effects are showing up in every public health curve.
   
-See also: [Harvard Health](https://health.harvard.edu) · [CDC WONDER](https://wonder.cdc.gov) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Harvard Health](https://health.harvard.edu) · [CDC WONDER](https://wonder.cdc.gov) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Isolation
 id: crel_lo_iso  |  path: COMMUNITY & CULTURE > Relationships > Loneliness & Belonging > Isolation
@@ -1589,7 +1589,7 @@ id: crel_lo_dig  |  path: COMMUNITY & CULTURE > Relationships > Loneliness & Bel
 
 What the apps offer instead of presence. Likes instead of being known. Follows instead of friendship. Comments instead of conversation. Most people figure out in some part of themselves that this is not the same thing — and keep using the apps anyway. Digital substitutes are not nothing. They maintain weak ties that can become strong ones. They provide the sense of connection that the body finds slightly soothing. But they do not address the deeper deficit, and for some people they replace the activities that would. The loneliness that follows a phone put down is real and increasing.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### The Need to Be Seen
 id: crel_lo_seen  |  path: COMMUNITY & CULTURE > Relationships > Loneliness & Belonging > The Need to Be Seen
@@ -1915,7 +1915,7 @@ id: c2_alg  |  path: COMMUNITY & CULTURE > Social Media > The Algorithm
 
 The hidden middleman between you and everything you see. The algorithm decides what appears in your feed — not your choices, not your relationships, not any editorial judgment accountable to the truth. Optimized for engagement, which in practice means content that produces strong reactions, and strong reactions online skew angry, frightened, and tribal. The version of the world the algorithm constructs around you is not the world. It is the version of the world the platform can monetize best. That distinction matters for everything downstream.
   
-See also: [Stanford AI Index](https://aiindex.stanford.edu) · [Electronic Frontier Foundation](https://eff.org) · [ATJon on Substack](https://atjon.substack.com) · [MIT Technology Review](https://technologyreview.com)
+See also: [Stanford AI Index](https://aiindex.stanford.edu) · [Electronic Frontier Foundation](https://eff.org) · [UsNow.app on Substack](https://atjon.substack.com) · [MIT Technology Review](https://technologyreview.com)
 
 ### Ranking
 id: c2_alg_rank  |  path: COMMUNITY & CULTURE > Social Media > The Algorithm > Ranking
@@ -1936,14 +1936,14 @@ id: c2_alg_eng  |  path: COMMUNITY & CULTURE > Social Media > The Algorithm > En
 
 The metric that the building is organized around. What gets measured gets optimized for. What gets optimized for becomes what the platform produces. Engagement captures reactions — comments, shares, time spent. It does not capture truth, wellbeing, or the quality of the information environment. The economy that runs on engagement has built a world where the most emotionally activating content wins regardless of its accuracy. That is not an accident. It is the product of optimizing for the right metric for advertising revenue.
   
-See also: [Stanford AI Index](https://aiindex.stanford.edu) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Stanford AI Index](https://aiindex.stanford.edu) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Rage Bait
 id: c2_alg_rage  |  path: COMMUNITY & CULTURE > Social Media > The Algorithm > Rage Bait
 
 Content designed to provoke reaction — outrage, contempt, fear. Not misinformation necessarily, though often. Rage bait is any content calibrated to produce a strong negative emotional response. The algorithm rewards it because strong responses mean engagement. The information environment that builds around rage bait is not a public square — it is a machine for generating shared enemies and distributing the emotional cost of that to the users. The anger is real. The target is frequently manufactured or distorted. Both things are true at once.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [Electronic Frontier Foundation](https://eff.org)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [Electronic Frontier Foundation](https://eff.org)
 
 ### Filter Bubbles
 id: c2_alg_bub  |  path: COMMUNITY & CULTURE > Social Media > The Algorithm > Filter Bubbles
@@ -1957,7 +1957,7 @@ id: c2_alg_cap  |  path: COMMUNITY & CULTURE > Social Media > The Algorithm > Pl
 
 When the platform's logic colonizes the activity. News organizations chasing engagement metrics. Politicians governing for clips. Schools optimizing for the apps the kids are on. Platform capture is what happens when the medium starts deciding what counts.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [Electronic Frontier Foundation](https://eff.org)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [Electronic Frontier Foundation](https://eff.org)
 
 ### Platforms & Communities
 id: c2_plat  |  path: COMMUNITY & CULTURE > Social Media > Platforms & Communities
@@ -1992,7 +1992,7 @@ id: c2_p_x  |  path: COMMUNITY & CULTURE > Social Media > Platforms & Communitie
 
 Once the closest thing to a public square the internet produced — flawed, chaotic, but with a meaningful mix of voices. Acquired in 2022, reduced in staff, moderation, and advertiser confidence, and reshaped in ways that consistently benefited the owner's political allies. The platform's role as a real-time news distribution system has diminished as journalists and public figures have migrated elsewhere. Whether something replaces it as a shared information space, and what that would look like, is one of the more open questions in media.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### YouTube
 id: c2_p_yt  |  path: COMMUNITY & CULTURE > Social Media > Platforms & Communities > YouTube
@@ -2013,14 +2013,14 @@ id: c2_inf  |  path: COMMUNITY & CULTURE > Social Media > Influencers
 
 The new occupational category. People who are paid to be themselves at scale — to curate an audience around a persona and then monetize that audience's attention through sponsorships, merchandise, and subscriptions. Influencer economics restructured advertising, celebrity, journalism, and the meaning of authenticity in public life. The labor is real and often grueling — content schedules, audience management, performance of a self that is both genuine and engineered. The product is the person. The risk is that the product and the person become indistinguishable.
   
-See also: [Pew Research](https://www.pewresearch.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Pew Research](https://www.pewresearch.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Personal Brand
 id: c2_in_brand  |  path: COMMUNITY & CULTURE > Social Media > Influencers > Personal Brand
 
 The self as something to be marketed. Personal brand is not a metaphor anymore — it is explicit career advice given to students, job seekers, and workers across industries. The imperative to manage your digital presence as a brand collapses the distinction between authentic expression and strategic self-presentation. For young people this language is normalized. For older workers it is new and often uncomfortable. Whether performing a version of yourself is the same as being yourself is a question that personal brand culture tends not to ask.
   
-See also: [Rest of World](https://restofworld.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Rest of World](https://restofworld.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Followers & Status
 id: c2_in_fol  |  path: COMMUNITY & CULTURE > Social Media > Influencers > Followers & Status
@@ -2048,7 +2048,7 @@ id: c2_in_auth  |  path: COMMUNITY & CULTURE > Social Media > Influencers > Auth
 
 The contradiction at the heart of the form. Audiences want real. The format rewards polished. Influencers spend careers negotiating the gap — performing authenticity while managing the production, scheduling the spontaneous, and editing the unfiltered. The most successful ones have become expert at the register of casual honesty while operating a production operation. The audience usually senses the performance and usually keeps watching anyway, which suggests the performance of authenticity may satisfy the same appetite as the real thing. May.
   
-See also: [Nautilus](https://nautil.us) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Nautilus](https://nautil.us) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Identity & Attention
 id: c2_ident  |  path: COMMUNITY & CULTURE > Social Media > Identity & Attention
@@ -2090,28 +2090,28 @@ id: c2_id_out  |  path: COMMUNITY & CULTURE > Social Media > Identity & Attentio
 
 The emotion the platform optimizes for because it reliably produces engagement. Outrage, contempt, and moral disgust are among the most engaging emotional registers on social media — they produce shares, comments, and return visits. The body cannot perfectly distinguish between genuine outrage at actual injustice and engineered outrage at manufactured grievances. Both feel real. The cumulative cost of sustained outrage as a daily information diet is a kind of exhaustion that looks like political engagement but depletes the capacity for it.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Misinformation
 id: c2_misinfo  |  path: COMMUNITY & CULTURE > Social Media > Misinformation
 
 False or misleading information moving at scale — faster and cheaper than truth, amplified by platforms that reward engagement over accuracy. The platforms did not invent lies. They built infrastructure that gives lies a structural advantage over corrections. False stories spread faster and further than true ones, a finding documented across multiple platforms and consistent across studies. Every major democratic election since 2016 has been materially affected by coordinated disinformation. The question of what a democratic society does about that has not been answered.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com) · [ProPublica](https://www.propublica.org) · [Pew Research](https://pewresearch.org)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com) · [ProPublica](https://www.propublica.org) · [Pew Research](https://pewresearch.org)
 
 ### Conspiracy
 id: c2_mi_con  |  path: COMMUNITY & CULTURE > Social Media > Misinformation > Conspiracy
 
 The belief that hidden actors are running the show — orchestrating events, suppressing truth, coordinating from the shadows. Conspiracy thinking predates the internet by centuries. The internet provided it with search, community, and infinite confirmation. The pattern of conspiratorial thinking is consistent: it offers coherence in the face of complexity, community around a shared truth others can't see, and a clear enemy to organize against. These are real human needs. Conspiracy theories fill them with false content. The needs remain whether or not the theory is debunked.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [Bellingcat](https://bellingcat.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [Bellingcat](https://bellingcat.com)
 
 ### Propaganda
 id: c2_mi_prop  |  path: COMMUNITY & CULTURE > Social Media > Misinformation > Propaganda
 
 Information deliberately shaped to serve a political or ideological goal — not necessarily false but selectively framed, amplified, and distributed to produce a desired effect. Propaganda is old technology. The internet gave it new delivery systems: targeted, personal, cheap to produce, impossible to contain, and difficult to distinguish from organic content. State actors from multiple countries run coordinated influence operations on Western social media. So do domestic political actors. The line between propaganda and advertising has always been thin.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [Brennan Center](https://brennancenter.org)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [Brennan Center](https://brennancenter.org)
 
 ### Deepfakes
 id: c2_mi_df  |  path: COMMUNITY & CULTURE > Social Media > Misinformation > Deepfakes
@@ -2139,7 +2139,7 @@ id: c2_mi_elec  |  path: COMMUNITY & CULTURE > Social Media > Misinformation > E
 
 The specific category of misinformation that has most directly destabilized American democracy since 2020. Claims about stolen elections, rigged voting machines, and fraudulent counts have gone from fringe to mainstream within one of the two major parties. Courts, election officials from both parties, and the Department of Justice found no evidence supporting these claims. That evidence has not resolved the dispute. Election denial is now a litmus test in Republican primaries, and candidates who passed that test are in positions to administer elections. The institutional damage will outlast the cycle that produced it.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Surveillance & Data
 id: c2_surv  |  path: COMMUNITY & CULTURE > Social Media > Surveillance & Data
@@ -2198,7 +2198,7 @@ id: c4_games  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Games & Co
 
 The structured contest. Rules, sides, a winner, and a loser who has to return tomorrow. Games are how cultures rehearse competition, cooperation, fairness, and the consolation of losing well. The athletic game is also now a multi-billion dollar industry with franchise values, labor negotiations, television contracts, and stadium subsidies from governments that could not fund schools. What was built to be play has been successfully converted into product without most of its participants noticing, or minding, or being asked.
   
-See also: [TED Talks](https://ted.com) · [ATJon on Substack](https://atjon.substack.com)
+See also: [TED Talks](https://ted.com) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Rules
 id: c4_g_rules  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Games & Competition > Rules
@@ -2226,7 +2226,7 @@ id: c4_g_win  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Games & Co
 
 The official goal. Also a culture's compressed answer to what counts and what is permitted in the pursuit of it. American sports has been training the country's instincts about winning for over a century. The lessons are not always the ones the game intends: that some cheating is acceptable if it works, that the rules are for the losers, that what matters is the scoreboard at the end. The better lessons are also there: that sustained excellence requires discipline, that teams beat individuals, that losing does not have to be shameful. Both versions of the lesson are being taught simultaneously.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Rivalry
 id: c4_g_riv  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Games & Competition > Rivalry
@@ -2303,7 +2303,7 @@ id: c4_c_fame  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Celebrity
 
 The condition of being known by a great many more people than know you back. Most people who pursue fame discover that what they thought they were after — recognition, validation, the feeling of mattering — is not what shows up. What shows up is attention, which is a different thing. Attention is not intimate, not accurate, not kind, and not stable. The fantasy of fame is about being seen. The reality of fame is about being a surface for other people's projections. Most celebrities spend their careers managing the gap.
   
-See also: [Longreads](https://longreads.com) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Longreads](https://longreads.com) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Public Image
 id: c4_c_img  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Celebrity > Public Image
@@ -2317,14 +2317,14 @@ id: c4_c_scan  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Celebrity
 
 The other half of fame. The same machine that builds the star is built to dismantle it — because the fall generates as much attention as the rise, and attention is the product. Scandal is content the industry cannot resist because audiences consume it voraciously and the infrastructure for producing it is already in place. Some scandals reveal genuine harm that warranted public attention. Others are mechanisms for managing the market value of competing celebrities. The coverage is rarely able to distinguish between the two.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Influence
 id: c4_c_inf  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Celebrity > Influence
 
 The leverage that comes with the attention of a large audience. Celebrity influence has changed laws, moved charitable giving, shaped medical behavior, and elected candidates. It has also sold fraudulent investments, promoted diets that cause harm, and amplified political movements that would not otherwise have reached scale. The difference between those two uses is not always visible to the audience, because the register of the communication — intimate, casual, trustworthy — does not change based on whether the content is harmful.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Parasocial Bonds
 id: c4_c_par  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Celebrity > Parasocial Bonds
@@ -2338,7 +2338,7 @@ id: c4_c_mach  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Celebrity
 
 The studios, agencies, publicists, managers, stylists, social media teams, and platforms that produce celebrity at industrial scale. The machine has gotten more efficient and more brutal across the digital decades. The speed at which fame can be manufactured has increased. The duration of any given celebrity's relevance has shortened. The machine requires constant fresh material, which means it is continuously looking for new people to put through it and has less institutional interest in what happens to them afterward.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [ProPublica](https://www.propublica.org)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [ProPublica](https://www.propublica.org)
 
 ### Film, TV & Streaming
 id: c4_film  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Film, TV & Streaming
@@ -2366,7 +2366,7 @@ id: c4_fl_fr  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Film, TV &
 
 The recyclable product. A franchise is intellectual property with enough audience recognition to support sequels, spinoffs, merchandise, and theme park rides. Marvel, Star Wars, the universe-sized stories. Franchises de-risk the financial bet by selling something the audience already knows they like. The cost is the compression of development resources and exhibition space around a small number of proven properties, which squeezes out the mid-budget original film that built most of the filmmakers the industry now canonizes. The franchise era has been commercially successful. The creative cost is real and ongoing.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Streaming Platforms
 id: c4_fl_str  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Film, TV & Streaming > Streaming Platforms
@@ -2422,14 +2422,14 @@ id: c4_m_prot  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Music & P
 
 The songs that go with every movement that has ever moved anything. From the spirituals of the enslaved to the union songs of the labor movement to the anthems of civil rights to the hip-hop that documented the crack epidemic to the protest music of every contemporary movement — music has been political transportation for as long as there have been things worth being political about. The mechanism is consistent: music gets the feeling into the body in a way that argument cannot. Once the feeling is there, it is very hard to argue out.
   
-See also: [Internet Archive](https://archive.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Internet Archive](https://archive.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Industry Control
 id: c4_m_ind  |  path: COMMUNITY & CULTURE > Sports & Entertainment > Music & Performance > Industry Control
 
 The labels, streaming platforms, and publishers that take the majority of the money generated by music. The economics have shifted with each technology transition and have not shifted in favor of working musicians. A stream on Spotify pays fractions of a cent. An album that would have supported a mid-level artist's career in 1995 produces a few hundred dollars in annual streaming income now. The artists at the top of the industry make enormous amounts. The vast middle of professional musicians is working harder for less than at any point in the recorded music era.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [ProPublica](https://www.propublica.org)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [ProPublica](https://www.propublica.org)
 
 ### The Business of Entertainment
 id: c4_biz  |  path: COMMUNITY & CULTURE > Sports & Entertainment > The Business of Entertainment
@@ -2596,7 +2596,7 @@ id: e1_o_blog  |  path: KNOWLEDGE & LEARNING > Libraries & the Internet > The Op
 
 The form that taught the internet to write personally, directly, and in a voice. Most blogs are gone — replaced by social media, newsletters, or neglect. Some became Substacks or podcasts. The voice the blog format trained — first-person, informal, opinionated, long-form — is everywhere now in ways that are not always credited to where it came from. The blog was also the first time many people published anything. That mattered more than the format.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Forums
 id: e1_o_for  |  path: KNOWLEDGE & LEARNING > Libraries & the Internet > The Open Web > Forums
@@ -3375,7 +3375,7 @@ id: efe_cu_civ  |  path: KNOWLEDGE & LEARNING > Formal Education > Curriculum & 
 
 Whether students learn how government actually works, what their rights are, and what participation in democracy requires. Civics education has been systematically thinned out across most American curricula over the last thirty years as tested subjects consumed more instructional time. Civic literacy surveys consistently find alarming gaps — substantial percentages of Americans cannot name the three branches of government, identify their congressional representative, or explain how a bill becomes law. A democracy that does not teach its citizens how it works is asking something of them it has not provided the tools for.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Arts
 id: efe_cu_arts  |  path: KNOWLEDGE & LEARNING > Formal Education > Curriculum & Testing > Arts
@@ -3438,7 +3438,7 @@ id: efe_who  |  path: KNOWLEDGE & LEARNING > Formal Education > Who Gets Taught
 
 The political fight under everything. Curriculum is a fight about which Americans the next generation will see as central, which stories get told, which truths get acknowledged. The fight is louder right now because the underlying demographics are shifting.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com) · [ACLU](https://www.aclu.org)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com) · [ACLU](https://www.aclu.org)
 
 ### Canon
 id: efe_w_can  |  path: KNOWLEDGE & LEARNING > Formal Education > Who Gets Taught > Canon
@@ -3452,14 +3452,14 @@ id: efe_w_ban  |  path: KNOWLEDGE & LEARNING > Formal Education > Who Gets Taugh
 
 Coordinated efforts to remove specific books from school libraries and curricula, primarily books about race, sexuality, and American history. The pace and geographic coordination of book removal efforts since 2021 are unusual in American history. The targets are consistent: Toni Morrison, books about LGBTQ experience, books depicting historical atrocities from the perspective of survivors. Most removals are initiated by small numbers of organized advocates using school board processes. The First Amendment constraints on public school book removal are real but limited.
   
-See also: [ACLU](https://www.aclu.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [ACLU](https://www.aclu.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### History Wars
 id: efe_w_hist  |  path: KNOWLEDGE & LEARNING > Formal Education > Who Gets Taught > History Wars
 
 What gets included when the country teaches its own history to its children. The current battles are primarily about slavery's centrality to American founding and development, the history of Native dispossession, and the ongoing effects of structural racism. Several states have passed legislation restricting what teachers can say about race and history. The laws vary and are legally contested. The effect on teachers — who face disciplinary risk for teaching established historical fact in some districts — is documented. What students in those districts learn about their country is not the same as what students elsewhere learn.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Race & Gender
 id: efe_w_rg  |  path: KNOWLEDGE & LEARNING > Formal Education > Who Gets Taught > Race & Gender
@@ -3473,7 +3473,7 @@ id: efe_w_civ  |  path: KNOWLEDGE & LEARNING > Formal Education > Who Gets Taugh
 
 Whether young Americans are being prepared to participate in the democracy they will soon be responsible for. The answer, by most measures, is not adequately. Civic literacy surveys find consistent and alarming gaps — in knowledge of constitutional rights, in understanding of how legislation works, in basic institutional literacy. Civic education has been squeezed out of curricula by the expansion of tested subjects. A generation that does not know how its government works is more vulnerable to manipulation by people who do. That is not a hypothetical risk. It is a documented condition.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Hidden Curriculum
 id: efe_w_hid  |  path: KNOWLEDGE & LEARNING > Formal Education > Who Gets Taught > Hidden Curriculum
@@ -4542,14 +4542,14 @@ id: pcorp_o_top3  |  path: POWER & POLITICS > Corporations > Ownership & Shareho
 
 BlackRock, Vanguard, and State Street together control roughly $20 trillion in assets under management and vote roughly a fifth of all S&P 500 shares — the largest single blocks at most major companies. They are not household names. They should be. Their voting decisions on corporate governance, executive compensation, climate disclosure, and board composition shape the behavior of the largest companies in the American economy. Whether three firms exercising this level of coordinated influence over corporate America is a feature or a bug is a question antitrust law was not designed to answer.
   
-See also: [Follow The Money](https://followthemoney.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Follow The Money](https://followthemoney.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Labor & Management
 id: pcorp_lab  |  path: POWER & POLITICS > Corporations > Labor & Management
 
 The relationship between the people who do the work and the people who control the work. American labor relations shifted decisively after 1980 — union density declined, labor law enforcement weakened, and the leverage of workers relative to employers shrank. The gap between worker compensation and executive compensation widened to levels without precedent in American history. The current resurgence of labor organizing — Starbucks, Amazon, hotel workers, the major Hollywood strikes — is the first serious pushback in a generation. Whether it reshapes the structural balance or becomes a series of isolated wins is still being decided.
   
-See also: [Bureau of Labor Statistics](https://www.bls.gov) · [Economic Policy Institute](https://www.epi.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Bureau of Labor Statistics](https://www.bls.gov) · [Economic Policy Institute](https://www.epi.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Workers
 id: pcorp_l_wo  |  path: POWER & POLITICS > Corporations > Labor & Management > Workers
@@ -4619,7 +4619,7 @@ id: pcorp_p_anti  |  path: POWER & POLITICS > Corporations > Market Power > Anti
 
 The legal regime meant to constrain market power and protect competition. American antitrust enforcement weakened progressively from the 1980s onward under a jurisprudence that focused on consumer prices as the primary harm and largely ignored other dimensions of market power. Forty years of that approach produced the concentrated economy that currently exists. The current DOJ and FTC have brought their most ambitious cases in a generation — against Google, Meta, Amazon, and others. The outcomes will define antitrust law for decades.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Acquisitions
 id: pcorp_p_acq  |  path: POWER & POLITICS > Corporations > Market Power > Acquisitions
@@ -4675,14 +4675,14 @@ id: pcorp_lo_alec  |  path: POWER & POLITICS > Corporations > Lobbying & Regulat
 
 The American Legislative Exchange Council produces model legislation for state legislatures — bills written to serve corporate clients that get introduced in multiple states with minor edits. Other organizations operate similarly on both the right and left. The result is that significant portions of state law in multiple states are written by people the voters of those states never elected, funded by corporations with interests in the outcome, and passed by legislators who often have not read what they are voting for. The process is legal, documented, and rarely reported.
   
-See also: [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Branding & Advertising
 id: pcorp_brand  |  path: POWER & POLITICS > Corporations > Branding & Advertising
 
 How corporations talk to people. Branding is the practice of attaching feelings to products. Advertising is the delivery system. Together they form one of the largest industries in the country and one of the most under-discussed forces shaping American culture.
   
-See also: [Bureau of Labor Statistics](https://www.bls.gov) · [Electronic Frontier Foundation](https://eff.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Bureau of Labor Statistics](https://www.bls.gov) · [Electronic Frontier Foundation](https://eff.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Brand Identity
 id: pcorp_b_id  |  path: POWER & POLITICS > Corporations > Branding & Advertising > Brand Identity
@@ -4724,14 +4724,14 @@ id: pcorp_b_mind  |  path: POWER & POLITICS > Corporations > Branding & Advertis
 
 The cumulative effect of decades of commercial messaging on the architecture of attention and memory. Most Americans can recall hundreds of brand slogans, jingles, and logos verbatim — content that was placed in their memory without their consent through repetition at scale. The same memory does not reliably hold civic information, family history, or poetry at anything like the same density. The asymmetry is not accidental. The brand recall was funded by companies with resources to place it. The civic knowledge was funded by nobody at comparable scale.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Externalities & Harm
 id: pcorp_ext  |  path: POWER & POLITICS > Corporations > Externalities & Harm
 
 What corporations cost that doesn't appear on their balance sheet. Pollution. Health damage to workers and communities. Wage suppression. Community collapse when facilities close. Externalities are costs the company shifts onto someone else — workers, communities, the public, future generations, the natural environment. The price of the product does not include what the product actually costs. The gap is paid by people who did not buy the product and did not agree to absorb the cost. Externalities are not a bug in market capitalism. They are a predictable output of markets that aren't required to price them.
   
-See also: [EPA](https://epa.gov) · [ProPublica](https://www.propublica.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [EPA](https://epa.gov) · [ProPublica](https://www.propublica.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Corporate Pollution
 id: pcorp_e_pol  |  path: POWER & POLITICS > Corporations > Externalities & Harm > Corporate Pollution
@@ -4759,7 +4759,7 @@ id: pcorp_e_com  |  path: POWER & POLITICS > Corporations > Externalities & Harm
 
 When a major employer closes, gets bought and stripped, or extracts value through wage suppression and benefit cuts, the community organized around that employment absorbs the cost. Plant closings, hospital consolidations, retail chain bankruptcies — the communities that depended on those employers do not find equivalent replacements. The boardroom decision takes hours. The community it unmakes takes decades to recover, if it does. The costs — in health outcomes, family instability, political despair — are real and largely invisible to the people who made the decision.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [Bureau of Labor Statistics](https://www.bls.gov)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [Bureau of Labor Statistics](https://www.bls.gov)
 
 ### Health Harm
 id: pcorp_e_hea  |  path: POWER & POLITICS > Corporations > Externalities & Harm > Health Harm
@@ -5129,7 +5129,7 @@ id: pmil_bud  |  path: POWER & POLITICS > Military > Defense Budget
 
 Where roughly half of federal discretionary spending goes. The U.S. military budget is larger than the next ten countries' combined, most of which are American allies. The topline figure is already abstract enough to resist comprehension. What is inside it — the procurement programs, the personnel costs, the operations budgets, the classified programs — is understood in detail only by a few hundred people inside the government and a few dozen outside of it. The size of the budget is a policy choice. The lack of public comprehension of what is in it is also, at some level, a policy choice.
   
-See also: [Congressional Budget Office](https://www.cbo.gov) · [SIPRI](https://sipri.org) · [Federation of American Scientists](https://fas.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Congressional Budget Office](https://www.cbo.gov) · [SIPRI](https://sipri.org) · [Federation of American Scientists](https://fas.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Topline
 id: pmil_b_top  |  path: POWER & POLITICS > Military > Defense Budget > Topline
@@ -5171,14 +5171,14 @@ id: pmil_b_hid  |  path: POWER & POLITICS > Military > Defense Budget > Hidden C
 
 What doesn't show up in the headline number. Veterans healthcare and disability compensation will cost the United States hundreds of billions of dollars a year for decades because of injuries from the post-9/11 wars. Interest on the debt borrowed to finance those wars will cost trillions. Environmental cleanup of contaminated military sites will run for generations. The true cost of American military engagement is not knowable in real time and not payable in the year it is incurred. The full bill for decisions made in 2001 is still arriving and will continue arriving long after the decision-makers are gone.
   
-See also: [U.S. Department of Veterans Affairs](https://va.gov) · [ATJon on Substack](https://atjon.substack.com)
+See also: [U.S. Department of Veterans Affairs](https://va.gov) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Military-Industrial Complex
 id: pmil_mic  |  path: POWER & POLITICS > Military > Military-Industrial Complex
 
 The phrase Eisenhower coined in his 1961 farewell address, warning the country about exactly what then proceeded to happen. A few large defense contractors, a permanent revolving door with Pentagon procurement, and a Congressional incentive structure that distributes the spending across districts so that cancelling anything is locally painful.
   
-See also: [OpenSecrets](https://opensecrets.org) · [Follow The Money](https://followthemoney.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [OpenSecrets](https://opensecrets.org) · [Follow The Money](https://followthemoney.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Major Contractors
 id: pmil_mic_con  |  path: POWER & POLITICS > Military > Military-Industrial Complex > Major Contractors
@@ -5220,7 +5220,7 @@ id: pmil_mic_eis  |  path: POWER & POLITICS > Military > Military-Industrial Com
 
 On January 17, 1961, Dwight Eisenhower used his farewell address to warn the American people about what he called the military-industrial complex — the relationship between the armed services and the defense industry that threatened, he said, to distort the country's priorities and undermine democratic governance. The speech is still cited. The warning has been mostly ignored. The complex Eisenhower warned about has grown by every measure since 1961 — in budget, in contractor concentration, in lobbying, in the revolving door, in the difficulty of civilian oversight. Eisenhower had commanded it. He knew what he was describing.
   
-See also: [Internet Archive](https://archive.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Internet Archive](https://archive.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Veterans & Aftermath
 id: pmil_vet  |  path: POWER & POLITICS > Military > Veterans & Aftermath
@@ -5276,14 +5276,14 @@ id: pmil_emp  |  path: POWER & POLITICS > Military > Empire & Bases
 
 The global footprint. The United States operates roughly 750 military installations in more than 80 countries. No other country maintains anything approaching this. The network was built during and after World War II and has never been systematically reduced. Most Americans cannot name the installations. The communities that host them have complicated and evolving relationships with the presence — economic dependence, resentment of noise and crime, status asymmetries between American and local forces — that the U.S. foreign policy apparatus does not consistently track or address.
   
-See also: [Federation of American Scientists](https://fas.org) · [ATJon on Substack](https://atjon.substack.com) · [Foreign Affairs](https://foreignaffairs.com)
+See also: [Federation of American Scientists](https://fas.org) · [UsNow.app on Substack](https://atjon.substack.com) · [Foreign Affairs](https://foreignaffairs.com)
 
 ### Bases
 id: pmil_e_base  |  path: POWER & POLITICS > Military > Empire & Bases > Bases
 
 From Okinawa to Ramstein to Guantánamo to Diego Garcia to Bahrain to South Korea. American military bases shape the economies of the towns and regions around them, the politics of the governments that host them, and the lived experience of the local populations who live near them. Base host agreements are negotiated differently in every country and are frequently sources of diplomatic tension. The status of forces agreements that govern the legal treatment of American personnel who commit crimes in host countries have been particularly contentious. The bases are infrastructure of empire in the literal, geographic sense.
   
-See also: [Federation of American Scientists](https://fas.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Federation of American Scientists](https://fas.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Forward Presence
 id: pmil_e_pres  |  path: POWER & POLITICS > Military > Empire & Bases > Forward Presence
@@ -5297,7 +5297,7 @@ id: pmil_e_int  |  path: POWER & POLITICS > Military > Empire & Bases > Interven
 
 The list of U.S. military interventions since 1945 is long and includes actions formally declared as wars, actions called police operations or humanitarian interventions, proxy wars, covert operations, and presence that was never publicly acknowledged. Korea, Vietnam, Lebanon, Grenada, Panama, the Gulf War, Somalia, Haiti, Bosnia, Kosovo, Afghanistan, Iraq, Libya, Syria, and dozens of smaller operations. The pattern across these interventions — the justifications given, the outcomes achieved, the costs incurred — is one of the most studied and most contested bodies of evidence in American foreign policy.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [Federation of American Scientists](https://fas.org)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [Federation of American Scientists](https://fas.org)
 
 ### Partner Forces
 id: pmil_e_part  |  path: POWER & POLITICS > Military > Empire & Bases > Partner Forces
@@ -5318,14 +5318,14 @@ id: pmil_e_blow  |  path: POWER & POLITICS > Military > Empire & Bases > Blowbac
 
 CIA jargon for the unintended consequences of covert operations — the blowback that lands on a population that does not know why it is being targeted. The concept entered the public vocabulary after 9/11, when analysts documented the relationship between U.S. support for the Afghan mujahideen against the Soviets and the subsequent emergence of al-Qaeda. The pattern has recurred: coups that installed regimes producing refugee crises, arms that ended up with forces the U.S. later fought, alliances that created obligations the country did not want to honor. Blowback is not inevitable. It is predictable when the consequences of action are not traced forward.
   
-See also: [Foreign Affairs](https://foreignaffairs.com) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Foreign Affairs](https://foreignaffairs.com) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Intelligence & Special Operations
 id: pmil_int  |  path: POWER & POLITICS > Military > Intelligence & Special Operations
 
 The hidden half of national security. Sixteen agencies in the official intelligence community, plus the classified programs within military commands, plus the contractor workforce that does much of the actual work. Budget roughly $90 billion, reported as an aggregate number that conceals the breakdown between agencies and functions. The oversight mechanisms — the intelligence committees in Congress, the Foreign Intelligence Surveillance Court, the inspector general system — are stronger than nothing and weaker than what the scale of the enterprise probably requires. Most of what this apparatus does and has done is not known to the public it serves.
   
-See also: [Federation of American Scientists](https://fas.org) · [Bellingcat](https://bellingcat.com) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Federation of American Scientists](https://fas.org) · [Bellingcat](https://bellingcat.com) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### CIA
 id: pmil_i_cia  |  path: POWER & POLITICS > Military > Intelligence & Special Operations > CIA
@@ -5402,14 +5402,14 @@ id: pmil_i_cov  |  path: POWER & POLITICS > Military > Intelligence & Special Op
 
 Operations designed to shape events in foreign countries without leaving attributable fingerprints. The CIA has conducted covert influence operations — funding political parties, producing propaganda, backing coups, supporting insurgencies — in dozens of countries since its founding. Many of these operations remained classified for decades and became known only through congressional investigations or document declassification. The Iran coup of 1953, the Guatemala coup of 1954, the election interference in Italy, the funding of Contra forces in Nicaragua — these are now documented history. The current scope of covert influence activity is classified and, by definition, not publicly accountable.
   
-See also: [Internet Archive](https://archive.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Internet Archive](https://archive.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Nuclear Weapons
 id: pmil_nuc  |  path: POWER & POLITICS > Military > Nuclear Weapons
 
 The category of weapon that can end the species. The U.S. has roughly 5,000 warheads. Russia has roughly the same. The other nuclear states have far fewer. The weapons have not been used in war since 1945. The chance of that staying true depends on factors we are not handling well.
   
-See also: [ICAN](https://icanw.org) · [Bulletin of the Atomic Scientists](https://thebulletin.org) · [Federation of American Scientists](https://fas.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [ICAN](https://icanw.org) · [Bulletin of the Atomic Scientists](https://thebulletin.org) · [Federation of American Scientists](https://fas.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### American Arsenal
 id: pmil_n_arsenal  |  path: POWER & POLITICS > Military > Nuclear Weapons > American Arsenal
@@ -5451,7 +5451,7 @@ id: pmil_n_use  |  path: POWER & POLITICS > Military > Nuclear Weapons > First U
 
 The actual use of nuclear weapons — the decision to cross the threshold that has not been crossed since 1945. American nuclear doctrine still permits first use. Multiple scenarios exist in which escalation from conventional to nuclear conflict is plausible: a conventional defeat of a nuclear-armed adversary, miscalculation during a crisis, technical malfunction misread as attack. The Bulletin of the Atomic Scientists' Doomsday Clock has been set closer to midnight in successive years because the risk landscape has genuinely worsened — more nuclear states, less arms control, more unstable governments with weapons. The clock is a metaphor. What it is measuring is not.
   
-See also: [Bulletin of the Atomic Scientists](https://thebulletin.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Bulletin of the Atomic Scientists](https://thebulletin.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ## ORB: Economy & Money
 id: p2  |  layer: POWER & POLITICS
@@ -5671,7 +5671,7 @@ id: p2_cap  |  path: POWER & POLITICS > Economy & Money > Capitalism & Finance
 
 The economic system in which production is organized around private ownership of capital and the pursuit of profit. American capitalism in the twenty-first century is dominated by finance — the movement and management of capital — more than by industry, the production of goods. The financialization of the economy has reshaped what companies are for, who they serve, and what kinds of activity they reward. The shift from an industrial economy to a financial one has changed the distribution of power within the economy in ways that are visible in the wealth and income data of the last forty years.
   
-See also: [Federal Reserve](https://www.federalreserve.gov) · [Follow The Money](https://followthemoney.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Federal Reserve](https://www.federalreserve.gov) · [Follow The Money](https://followthemoney.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Capital
 id: p2_c_cap  |  path: POWER & POLITICS > Economy & Money > Capitalism & Finance > Capital
@@ -5706,7 +5706,7 @@ id: p2_c_share  |  path: POWER & POLITICS > Economy & Money > Capitalism & Finan
 
 The theory that corporations exist primarily and perhaps solely to maximize returns to shareholders — articulated most influentially by Milton Friedman in a 1970 New York Times essay. Before this theory took hold, corporations were understood to have obligations to multiple stakeholders — workers, communities, customers, and the broader society — not only shareholders. The shareholder primacy theory was encoded into corporate law, business school curricula, and executive compensation structures across the 1970s, 1980s, and 1990s. The economy before and after that encoding looks different. The difference is visible in the data on wages, corporate investment, and inequality.
   
-See also: [Follow The Money](https://followthemoney.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Follow The Money](https://followthemoney.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Crony Capitalism
 id: p2_c_cron  |  path: POWER & POLITICS > Economy & Money > Capitalism & Finance > Crony Capitalism
@@ -5720,7 +5720,7 @@ id: p2_inq  |  path: POWER & POLITICS > Economy & Money > Inequality & Extractio
 
 Where the money went. The gains of four decades of American economic growth were concentrated heavily at the top of the distribution. This was not gravity. It was the predictable result of choices about taxes, labor law, trade policy, financial regulation, and the treatment of corporate ownership. Each choice was debated and made by people with interests in the outcome. The aggregate of those choices produced the distribution that current data describes. Reversing the distribution requires reversing the choices — or making different ones. Neither has happened at the scale required.
   
-See also: [Inequality.org](https://inequality.org) · [Economic Policy Institute](https://www.epi.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Inequality.org](https://inequality.org) · [Economic Policy Institute](https://www.epi.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Gini Coefficient
 id: p2_i_gini  |  path: POWER & POLITICS > Economy & Money > Inequality & Extraction > Gini Coefficient
@@ -5762,7 +5762,7 @@ id: p2_i_pol  |  path: POWER & POLITICS > Economy & Money > Inequality & Extract
 
 The choices that produced the current distribution. Tax cuts that disproportionately benefited high earners and capital income. Trade agreements that did not include labor protections. The weakening of union certification and collective bargaining rights. Financial deregulation that allowed concentration and risk-taking that would previously have been constrained. The defunding of the agencies that enforced labor standards. Each choice was made at a specific moment, by specific actors, for specific reasons. None of it was inevitable. Understanding that is the prerequisite to imagining anything different.
   
-See also: [OpenSecrets](https://opensecrets.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [OpenSecrets](https://opensecrets.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ---
 
@@ -6055,7 +6055,7 @@ id: h5_pl  |  path: HISTORY & CIVILIZATION > Geography > Place & Region
 
 How specific places get their character — through the accumulation of geography, history, economy, and the specific people who have lived there and left their marks. Region is not just a geographic category. It is the condensed experience of a place over time: the industries that rose and fell, the migrations that shaped the population, the political arrangements that organized life, the conflicts that left their traces. American regional identities are real and persistent — the South is not the Midwest is not the West Coast — and they are changing faster than the labels suggest.
   
-See also: [U.S. Census](https://www.census.gov) · [ATJon on Substack](https://atjon.substack.com)
+See also: [U.S. Census](https://www.census.gov) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Urban
 id: h5_p_urb  |  path: HISTORY & CIVILIZATION > Geography > Place & Region > Urban
@@ -6076,7 +6076,7 @@ id: h5_p_rur  |  path: HISTORY & CIVILIZATION > Geography > Place & Region > Rur
 
 Where the country's mythology of itself lives — the yeoman farmer, the small town, the self-reliant community. Rural America is shrinking in population, aging faster than any other demographic category, and politically overrepresented in the Senate and Electoral College relative to its numbers. The economic base that sustained rural communities — manufacturing, coal, tobacco, commodity agriculture — has contracted or mechanized. The grievance is real: these communities have experienced genuine economic and cultural disruption. The political diagnosis of the cause — and who is responsible — is where the story gets complicated.
   
-See also: [U.S. Census](https://www.census.gov) · [ATJon on Substack](https://atjon.substack.com)
+See also: [U.S. Census](https://www.census.gov) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Regions
 id: h5_p_reg  |  path: HISTORY & CIVILIZATION > Geography > Place & Region > Regions
@@ -6090,7 +6090,7 @@ id: h5_p_loc  |  path: HISTORY & CIVILIZATION > Geography > Place & Region > Loc
 
 The town, the neighborhood, the block. Local identity — the sense of belonging to a specific place with specific people and specific history — has been thinning as a force in American life across the last generation. Chains replaced local businesses. Commutes lengthened. Social media replaced the local newspaper and the corner bar. The loss is rarely named directly. People feel it as a vague disorientation — the sense that where they live is a backdrop rather than a community. What replaces local identity, and whether anything does, is one of the more consequential open questions in American social life.
   
-See also: [Our World in Data](https://ourworldindata.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Our World in Data](https://ourworldindata.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Place & Diaspora
 id: h5_p_dia  |  path: HISTORY & CIVILIZATION > Geography > Place & Region > Place & Diaspora
@@ -6104,7 +6104,7 @@ id: h5_set  |  path: HISTORY & CIVILIZATION > Geography > Resources & Settlement
 
 Why people live where they live. Settlement tracks water, soil, fish, timber, coal, oil, and the trade routes that connect resource surpluses to resource deficits. Most of human history is the story of people moving toward resources and fighting over them when they got there. The geography of resources has also shaped the geography of conflict — most of the world's major wars can be traced to competition for specific resources or the trade routes that moved them. The transition away from fossil fuels is already beginning to rearrange the geography of energy and the geopolitics that goes with it.
   
-See also: [USGS](https://usgs.gov) · [UN Data](https://data.un.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [USGS](https://usgs.gov) · [UN Data](https://data.un.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Food Systems
 id: h5_s_food  |  path: HISTORY & CIVILIZATION > Geography > Resources & Settlement > Food Systems
@@ -6558,7 +6558,7 @@ id: h6_r_du  |  path: HISTORY & CIVILIZATION > Law > Rights & Duties > Civic Dut
 
 The other side of the civic relationship. Rights without responsibilities are wishes; responsibilities without rights are servitude. American civic culture has emphasized rights heavily and civic duties more lightly in recent decades. Voter participation rates in the U.S. are among the lowest in developed democracies. Jury service is widely evaded. Tax compliance depends more on audit risk than civic obligation. The thinning of civic responsibility is not a moral judgment — it reflects real failures of the institutions that civic participation is supposed to sustain. People who do not see government as serving them have less reason to serve it.
   
-See also: [USA.gov](https://usa.gov) · [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [USA.gov](https://usa.gov) · [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Right to Privacy
 id: h6_r_pri  |  path: HISTORY & CIVILIZATION > Law > Rights & Duties > Right to Privacy
@@ -7156,7 +7156,7 @@ id: h4_p_clim  |  path: HISTORY & CIVILIZATION > Migration > Push & Pull > Clima
 
 The growing category. Drought making agricultural land uninhabitable. Sea level rise flooding coastal deltas where hundreds of millions live. Crop failures from heat and changed rainfall patterns. Extreme heat making outdoor labor dangerous. Climate migration is not a future scenario — it is happening now, primarily as internal displacement within countries. The international legal framework for climate migrants does not exist in a meaningful sense. People displaced by climate change do not qualify as refugees under the 1951 convention. The gap between the legal categories available and the actual conditions driving displacement will grow as warming continues.
   
-See also: [UNHCR](https://unhcr.org) · [NOAA](https://noaa.gov) · [ATJon on Substack](https://atjon.substack.com)
+See also: [UNHCR](https://unhcr.org) · [NOAA](https://noaa.gov) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Opportunity
 id: h4_p_op  |  path: HISTORY & CIVILIZATION > Migration > Push & Pull > Opportunity
@@ -7177,7 +7177,7 @@ id: h4_imm  |  path: HISTORY & CIVILIZATION > Migration > Immigration
 
 Coming in. The U.S. is a country of immigrants in two senses: most current Americans descend from migrants, and the country still receives more legal immigrants than any other. The contemporary politics is loud and the underlying math is mostly stable.
   
-See also: [U.S. Census](https://www.census.gov) · [Pew Research](https://www.pewresearch.org) · [Migration Data Portal](https://migrationdataportal.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [U.S. Census](https://www.census.gov) · [Pew Research](https://www.pewresearch.org) · [Migration Data Portal](https://migrationdataportal.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Legal Pathways
 id: h4_i_leg  |  path: HISTORY & CIVILIZATION > Migration > Immigration > Legal Pathways
@@ -7212,7 +7212,7 @@ id: h4_i_pol  |  path: HISTORY & CIVILIZATION > Migration > Immigration > Immigr
 
 The most reliable third rail in American politics — capable of generating heat in all directions, resistant to evidence, and connected to the deepest questions about what kind of country this is and who belongs. Both parties have moved rightward on enforcement over the last forty years. Comprehensive immigration reform — covering a path to legal status for existing undocumented people, modernization of the legal system, and reformed enforcement — has been proposed and failed multiple times. The failure is not primarily about policy design. It is about political incentives that reward obstruction over resolution.
   
-See also: [ATJon on Substack](https://atjon.substack.com) · [Brennan Center](https://brennancenter.org)
+See also: [UsNow.app on Substack](https://atjon.substack.com) · [Brennan Center](https://brennancenter.org)
 
 ### Interior Enforcement
 id: h4_i_int  |  path: HISTORY & CIVILIZATION > Migration > Immigration > Interior Enforcement
@@ -7240,7 +7240,7 @@ id: h4_r_us  |  path: HISTORY & CIVILIZATION > Migration > Refugees & Asylum > U
 
 The annual ceiling that the president sets for how many refugees the United States will admit. The ceiling is a policy choice — it has ranged from over 200,000 in the early 1980s to under 20,000 under the Trump administration and back to higher levels since. The number actually admitted is usually lower than the ceiling, constrained by processing capacity, security screening backlogs, and the resettlement infrastructure in receiving communities. The United States was once the world's primary destination for resettled refugees. That role has diminished significantly over the last decade.
   
-See also: [UNHCR](https://unhcr.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [UNHCR](https://unhcr.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Asylum
 id: h4_r_as  |  path: HISTORY & CIVILIZATION > Migration > Refugees & Asylum > Asylum
@@ -7324,7 +7324,7 @@ id: h4_assim  |  path: HISTORY & CIVILIZATION > Migration > Assimilation & Ident
 
 What happens to immigrants and their descendants across generations — the negotiation between the culture brought and the culture found. The melting pot metaphor suggested immigrants dissolved into a common American identity. The salad bowl metaphor suggested distinct identities coexisted. Neither is fully accurate. What actually happens is generationally variable, culturally specific, and highly dependent on whether the receiving society extends welcome or hostility. Each generation of a migrant family negotiates the inheritance differently. The grandchildren of immigrants are American in ways their grandparents were not and often come back looking for what was lost.
   
-See also: [Pew Research](https://www.pewresearch.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Pew Research](https://www.pewresearch.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Immigrant Language Loss
 id: h4_a_lang  |  path: HISTORY & CIVILIZATION > Migration > Assimilation & Identity > Immigrant Language Loss
@@ -7359,7 +7359,7 @@ id: h4_a_back  |  path: HISTORY & CIVILIZATION > Migration > Assimilation & Iden
 
 The organized response from the receiving society to each new wave of immigration. The pattern in American history is consistent: each major wave of immigration was met with a political movement arguing that this particular wave was too large, too culturally different, too threatening to be absorbed. The Irish were going to subvert the republic. The Chinese were an existential threat. The Southern and Eastern Europeans were racially inferior. The Mexicans were invading. The targets change with each wave. The rhetoric remains remarkably stable. The country absorbed the previous waves and the same rhetoric argued it couldn't.
   
-See also: [Brennan Center](https://brennancenter.org) · [ACLU](https://www.aclu.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Brennan Center](https://brennancenter.org) · [ACLU](https://www.aclu.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ## ORB: Language
 id: h2  |  layer: HISTORY & CIVILIZATION
@@ -7509,7 +7509,7 @@ id: h2_lang_living  |  path: HISTORY & CIVILIZATION > Language > Slang & Living 
 
 Where language actually gets made. Slang is not corruption of a pure earlier form — it is the engine room, the place where new vocabulary is tested, new meanings assigned, new grammatical forms tried. Living speech is always doing this, mostly without the conscious awareness of the people doing it. The dictionary follows, slowly, years or decades after the words have spread. Internet language has compressed the cycle dramatically — phrases that took a generation to enter print now enter the language in months, carried by memes and platform cultures. The English of 2025 is not the English of 2000, and the English of 2050 will not be the English of 2025. This is not decay. It is what living languages do.
   
-See also: [Urban Dictionary](https://urbandictionary.com) · [Oxford English Dictionary](https://oed.com) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Urban Dictionary](https://urbandictionary.com) · [Oxford English Dictionary](https://oed.com) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Slang
 id: h2_l_slang  |  path: HISTORY & CIVILIZATION > Language > Slang & Living Speech > Slang
@@ -7544,7 +7544,7 @@ id: h2_l_mem  |  path: HISTORY & CIVILIZATION > Language > Slang & Living Speech
 
 How phrases, images, and cultural references propagate through populations at the speed of digital platforms. Memetic language — the word 'meme' itself coined by Richard Dawkins in 1976 for cultural units that replicate and spread — has become a specific linguistic register in the internet era. Phrases spread as image captions, mutate in use, lose their original reference, become detached from their source, and eventually enter colloquial speech stripped of their online context. The result is one of the fastest-evolving linguistic registers in human history — phrases that are current one year are dated the next, and the people who still use them after the window closes are marked as out of touch.
   
-See also: [Urban Dictionary](https://urbandictionary.com) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Urban Dictionary](https://urbandictionary.com) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Profanity
 id: h2_l_pro  |  path: HISTORY & CIVILIZATION > Language > Slang & Living Speech > Profanity
@@ -8064,7 +8064,7 @@ id: x2_m_gun  |  path: EVEN FURTHER BACK > Death > Mortality > Gun Deaths
 
 Roughly 45,000 Americans die from firearms annually — a rate that makes the United States an extreme outlier among wealthy nations. Approximately half are suicides. The majority of the remainder are homicides, with a small percentage from accidents. Mass shootings attract the most media attention and represent a small fraction of gun deaths. The policy debate is constrained by the political power of firearms interests, a specific reading of the Second Amendment, and a cultural attachment to firearms in substantial portions of the electorate. Other countries have reduced gun deaths through policy. The United States has consistently not.
   
-See also: [CDC WONDER](https://wonder.cdc.gov) · [Brennan Center](https://brennancenter.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [CDC WONDER](https://wonder.cdc.gov) · [Brennan Center](https://brennancenter.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Grief & Loss
 id: x2_grief  |  path: EVEN FURTHER BACK > Death > Grief & Loss
@@ -8106,7 +8106,7 @@ id: x2_g_col  |  path: EVEN FURTHER BACK > Death > Grief & Loss > Collective Gri
 
 When a community or country grieves together. September 11. The Kennedy assassinations. The deaths of cultural figures who represented something larger than themselves. The pandemic. Collective grief operates at a different scale and on a different timeline than personal grief — it moves through public ritual, media cycles, and political response in ways that can facilitate or obstruct the actual work of mourning. What the public is permitted to feel, and for how long, is shaped by political and media decisions as much as by the nature of the loss. Collective grief managed badly produces political pathology. The examples are not hard to find.
   
-See also: [Aeon](https://aeon.co) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Aeon](https://aeon.co) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Letters & Memoirs
 id: x2_g_book  |  path: EVEN FURTHER BACK > Death > Grief & Loss > Letters & Memoirs
@@ -8127,7 +8127,7 @@ id: x2_r_fun  |  path: EVEN FURTHER BACK > Death > Ritual & Burial > Funerals
 
 The American funeral became an industry in the late nineteenth century. Embalming, developed during the Civil War for transporting the dead home, became standard. The metal casket, the viewing, the funeral home as an institution — each element was developed as commerce as much as as consolation. The industry is largely unregulated on pricing, and families making decisions in acute grief are among the least equipped to shop around. Jessica Mitford's The American Way of Death documented the exploitation in 1963. The industry is more regulated than it was. The fundamental economics of selling to the grieving have not changed.
   
-See also: [ATJon on Substack](https://atjon.substack.com)
+See also: [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Cremation
 id: x2_r_cre  |  path: EVEN FURTHER BACK > Death > Ritual & Burial > Cremation
@@ -8316,7 +8316,7 @@ id: x2_fear  |  path: EVEN FURTHER BACK > Death > Fear of Death
 
 The animal underneath everything else. Most of human culture is built partly out of the species' inability to fully metabolize the fact that it ends. The fear shows up in religion, in art, in war, in advertising, in the small way you avoid certain conversations with your aging parents.
   
-See also: [Aeon](https://aeon.co) · [On Being](https://onbeing.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Aeon](https://aeon.co) · [On Being](https://onbeing.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Animal Fear
 id: x2_f_an  |  path: EVEN FURTHER BACK > Death > Fear of Death > Animal Fear
@@ -8445,7 +8445,7 @@ id: x1_p_apoc  |  path: EVEN FURTHER BACK > Myth > Mythic Patterns > Apocalypse
 
 The story of the world's end. Norse Ragnarok. Hindu Pralaya. The Book of Revelation. Aztec cosmology's sequence of world-ages. Zoroastrian eschatology. Most cultures have an apocalypse story — the recognition that the world as it exists is not permanent. American apocalypse is distinctive: the country has produced an enormous body of apocalyptic storytelling — nuclear, environmental, zombie, rapture — since the Cold War, reflecting both the specific terrors of the American moment and the deeper mythic need to imagine an ending. The apocalypse story is also, almost always, a creation story: the end makes room for the new.
   
-See also: [Aeon](https://aeon.co) · [Internet Archive](https://archive.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Aeon](https://aeon.co) · [Internet Archive](https://archive.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### World Mythologies
 id: x1_world  |  path: EVEN FURTHER BACK > Myth > World Mythologies
@@ -8487,7 +8487,7 @@ id: x1_w_nat  |  path: EVEN FURTHER BACK > Myth > World Mythologies > Indigenous
 
 From the Inuit of the Arctic to the Mapuche of Chile, hundreds of distinct indigenous American mythological traditions. Coyote stories across the Plains and Southwest. Lakota cosmology and the White Buffalo Calf Woman. Haudenosaunee creation accounts involving a woman falling through the sky. Maya creation narratives in the Popol Vuh. Aztec cosmology's five sun ages. Most of these traditions were systematically targeted for destruction during colonization — through residential schools, religious suppression, and the prohibition of ceremony. Many survived through elders who carried them in memory. Recovery and revitalization efforts are active across many communities.
   
-See also: [Internet Archive](https://archive.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Internet Archive](https://archive.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Polynesian & Oceanic
 id: x1_w_pol  |  path: EVEN FURTHER BACK > Myth > World Mythologies > Polynesian & Oceanic
@@ -8529,7 +8529,7 @@ id: x1_h_comic  |  path: EVEN FURTHER BACK > Myth > Heroes & Monsters > Comic Bo
 
 America's homegrown mythology. Superman, Batman, Spider-Man, the Avengers. The pantheon was built across the 20th century by writers and artists who were often outsiders. The figures now do work for global audiences that older mythologies used to do.
   
-See also: [Internet Archive](https://archive.org) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Internet Archive](https://archive.org) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ### Modern Fantasy & Science Fiction
 id: x1_h_msf  |  path: EVEN FURTHER BACK > Myth > Heroes & Monsters > Modern Fantasy & Science Fiction
@@ -8543,7 +8543,7 @@ id: x1_h_vil  |  path: EVEN FURTHER BACK > Myth > Heroes & Monsters > Villains
 
 The figure the story needs in order to have something for the hero to overcome, and the figure the culture needs in order to have something to disown. American villainy has shifted across cultural cycles — Communist infiltrators in the Cold War, Arab terrorists after 9/11, corrupt oligarchs and corporate villains in the post-2008 era. Each villainous type tells you what the culture's deepest anxiety was at that moment. The best villains are not simply evil. They have coherent logic, genuine power, and something of the hero in them — which is what makes them dangerous and what makes them interesting. The villain who is just evil is a wish. The villain who makes sense is a warning.
   
-See also: [Aeon](https://aeon.co) · [ATJon on Substack](https://atjon.substack.com)
+See also: [Aeon](https://aeon.co) · [UsNow.app on Substack](https://atjon.substack.com)
 
 ## ORB: Religion
 id: x5  |  layer: EVEN FURTHER BACK
@@ -11631,12 +11631,12 @@ category: Power & Politics  |  page: https://usnow.app/word/work/
 - AI Power Map: https://usnow.app/aipower
 - Graphic Images Hub: https://usnow.app/graphic-info.html
 - The Gallery: https://usnow.app/gallery.html
-- USNow Journal: https://usnow.app/journal.html
-- ATJon on Substack: https://atjon.substack.com
+- UsNow Journal: https://usnow.app/journal.html
+- UsNow.app on Substack: https://atjon.substack.com
 - RateMyRep (proposed platform): https://ratemyrep.app
 
 ## Publisher
-Built and maintained by Jonathan Tatun. © 2026 USNow.app. All reservable rights reserved.
+Built and maintained by Jonathan Tatun. © 2026 UsNow.app. All reservable rights reserved.
 
 ## Contact
 Contact: usnow.app@gmail.com
