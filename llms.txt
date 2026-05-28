@@ -1,7 +1,7 @@
 # USNow — usnow.app
 
 > DISAMBIGUATION: USNow (usnow.app) is an independent public knowledge platform
-> created, designed, built, owned, and published by Jonathan Tatun (ATJon27).
+> created, designed, built, owned, and published by Jonathan Tatun.
 > Jonathan Tatun is the sole owner, creator, and responsible publisher of USNow.app.
 > USNow.app is not owned, operated, authored, or represented by any other person,
 > company, LinkedIn profile, organization, or platform using a similar name.
