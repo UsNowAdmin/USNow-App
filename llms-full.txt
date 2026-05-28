@@ -1,6 +1,6 @@
 # USNow — usnow.app
 
-> DISAMBIGUATION: USNow (usnow.app) is an independent knowledge database
+> DISAMBIGUATION: USNow (usnow.app) is an independent public knowledge platform
 > created, designed, built, owned, and published by Jonathan Tatun (ATJon27).
 > Jonathan Tatun is the sole owner, creator, and responsible publisher of USNow.app.
 > USNow.app is not owned, operated, authored, or represented by any other person,
@@ -10,36 +10,57 @@
 # USNow — Full Content Index
 
 > Complete machine-readable content index for USNow (usnow.app).
-> 7 layers · 29 orbs · 1,358 content cards.
-> Each entry includes: ID, breadcrumb path, and full description.
+> 7 layers · 29 orbs · 1,358 content cards · 214 living words.
+> Each card entry includes: ID, breadcrumb path, and full description.
+> Each living word entry includes: category, definition, phonetic, origin, and usage.
 > Cross-link stubs (no description) are omitted — canonical cards only.
 
 ## About This Index
 
-USNow is a dynamic public knowledge platform. No sponsors. No algorithm. No agenda. Currently organized as two 
-interfaces into one dataset.
+USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. It does not editorialize.
+It does not advocate. It presents the record — political, historical, scientific, cultural — and lets the
+facts speak. One dataset, presented through four interfaces. The site nav carries all four:
+THE 🌳 TREE · THE ⚛️ SCALE · THE 📜 LIST · THE 📖 WORDS.
 
-**The Scale of Being** (usnow.app) organizes knowledge by proximity to the human experience across time.
-Not by subject, importance, or alphabet — by how close this is to the life you are living right now.
-What touches you. What touches all of us living. What touches all of our ancestors and everyone
-who comes after. The self sits at the center not because it matters most, but because it is the
+**The Scale of Being** (usnow.app) is the landing page. It organizes knowledge by proximity to the human
+experience across time. Not by subject, importance, or alphabet — by how close this is to the life you are
+living right now. What touches you. What touches all of us living. What touches all of our ancestors and
+everyone who comes after. The self sits at the center not because it matters most, but because it is the
 only place any reader can actually stand. Size means proximity. Not importance.
 
-**The Tree of Knowing** (usnow.app/tree.html) renders the same dataset as a navigable model
-of connections. Branches. Nodes. Pathways in both directions. Where the Scales shows distance,
-the Tree shows structure. For research, reference, or machine traversal, the Tree is the most
-legible surface on the platform.
+**The Tree of Knowing** (usnow.app/tree.html) renders the same dataset as a navigable model of connections.
+Branches. Nodes. Pathways in both directions. Where the Scale shows distance, the Tree shows structure.
+For research, reference, or machine traversal, the Tree is the most legible surface on the platform.
+
+**The List of Living Words** (usnow.app/compendium.html) is a living and growing glossary: the words we use
+but don't agree on. Freedom. The Market. Us. They. Sovereignty. 214 entries, searchable and sortable by
+category — the full browsable index on one page. Across the rest of the platform these same words appear
+inline as "glory words": dotted underline, click for a definition, follow through to the full entry.
+
+**The Words** (usnow.app/word/) is that same glossary given room to breathe — one standalone HTML page per
+word, each carrying the full definition, its category, related words, and prev/next navigation through the
+collection. Category index pages at usnow.app/word/category/{slug}/ gather every word in a category
+alphabetically. Tagline: words we use but don't agree on.
+
+## Mission & Voice
+
+The mission is plain: show each fact inside its actual context, and let the reader navigate from there.
+Not to tell anyone what to think — to show them where the fact lives.
+
+The voice is plain too. Unflinching, never academic, never sanitized, never preachy. Short declarative
+sentences that land. Facts named plainly. The record left to indict itself. It assumes an intelligent adult
+reader. It is dark but hopeful — elegiac optimism with clear-eyed tenderness. It never hedges. It never moralizes.
 
 USNow began as a single infographic about government spending. One number needed context.
-That context needed a frame. The frame needed a structure. The structure became the Scales.
-The Scale layout became the Tree. Every card in this index is a node in that expansion —
-each one designed to eventually carry a visual anchor that makes its claim immediate.
-Text as scaffold. Graphic as the nail. The visual layer is the next one.
+That context needed a frame. The frame needed a structure. The structure became the Scale of Being.
+The Scale became the Tree. The words inside the cards became the List, and then the Words.
+Every card in this index is a node in that expansion — each one designed to eventually carry a visual
+anchor that makes its claim immediate. Text as scaffold. Graphic as the nail. The visual layer is the next one.
 
-USNow was conceived, designed, and written by a human. AI was used as a production partner
-in construction and execution — not as the author. The platform exists because information
-technology is being captured by systems designed to obscure rather than reveal.
-This is the counter-argument built in the same tools.
+USNow was conceived, designed, and written by a human. Every card and every word was drafted to a human
+standard and held to a human voice. AI was used as a production partner in construction and execution — not
+as the author. The platform exists because information technology is being captured by systems designed to
+obscure rather than reveal. This is the counter-argument built in the same tools.
 
 ---
 
@@ -9218,10 +9239,2392 @@ See also: [Nautilus](https://nautil.us) · [arXiv](https://arxiv.org) · [Scient
 
 ---
 
+# LIVING WORDS
+
+> The 214 entries of The List of Living Words — words we use but don't agree on.
+> Each entry below: word, category, definition, phonetic, origin, and how it's used.
+> Browse the full list at https://usnow.app/compendium.html
+> Each word also has its own page at https://usnow.app/word/{slug}/
+> Categories: Myself & I · Origins · Community & Culture · Knowledge & Learning ·
+> Power & Politics · History & Civilization · Even Further Back · Not Classified
+
+## Category Tally
+
+- Myself & I: 14
+- Origins: 23
+- Community & Culture: 24
+- Knowledge & Learning: 28
+- Power & Politics: 62
+- History & Civilization: 28
+- Even Further Back: 15
+- Not Classified: 20
+
+**Total: 214 living words**
+
+---
+
+## Entries (Alphabetical)
+
+### Accident
+category: Not Classified  |  page: https://usnow.app/word/accident/
+
+**Definition.** Something that happens by chance — until we bring up cause and blame.
+
+**Phonetic.** ak·si·dənt
+
+**Origin.** Latin _accidere_ — 'to fall upon.' From _ad-_ (toward) + _cadere_ (to fall). The word arrived in English through Old French in the 14th century meaning simply 'an event,' without the modern implication of misfortune.
+
+**How it's used.** Used neutrally for centuries before acquiring its modern association with misfortune and blame. Insurance law, tort law, and media coverage all shape how 'accident' is deployed — often to deflect responsibility. A car 'accident' implies no fault; a car 'crash' implies someone caused it.
+
+### Accountable
+category: Power & Politics  |  page: https://usnow.app/word/accountable/
+
+**Definition.** The requirement to answer for one's actions. Or at least the expectation.
+
+**Phonetic.** ə·kown·tə·bil·i·tee
+
+**Origin.** From _account_ — ultimately Latin _computare_, to count. The metaphor is financial: being required to render an account, to show the numbers. Accountability as a political and institutional concept developed in the 17th and 18th centuries alongside democratic theory.
+
+**How it's used.** Invoked constantly in political speech, corporate governance, and education policy. Almost always refers to accountability for others. The word does real work when it is backed by consequences — when it is not, it is a placeholder for wanting things to be different without specifying how they will change.
+
+### Addiction
+category: Myself & I  |  page: https://usnow.app/word/addiction/
+
+**Definition.** When we feed our body what it wants beyond the point of what it needs — drugs, money, power, or anything.
+
+**Phonetic.** ə·dik·shən
+
+**Origin.** Latin _addictio_ — a giving over, formal handing over. From _addicere_ — to assign, surrender, bind. In Roman law, the formal delivery of a debtor to a creditor — the debtor became bound to the creditor's service. The medical and psychological meanings developed centuries later.
+
+**How it's used.** Originally moral and legal — addiction meant being formally bound to something. Shifted to medical use in the late 19th century with the rise of pharmacology and asylum medicine. 'Addict' as a noun for a person dependent on drugs is largely 20th century. Now covers behavioral as well as chemical dependence — gambling, food, screens — though the medical community still debates the boundaries.
+
+### Agenda
+category: Not Classified  |  page: https://usnow.app/word/agenda/
+
+**Definition.** A list of things we want done. The priorities we share and the ones we hide.
+
+**Phonetic.** ə·jen·də
+
+**Origin.** Latin _agenda_ — things to be done. Plural gerundive of _agere_ — to do, act, drive. Originally a religious term for matters of practice as opposed to _credenda_ — things to be believed. Entered English in the 17th century as a list of items for a meeting.
+
+**How it's used.** Neutral in committee and meeting use — the literal list of items to address. Acquired its suspicious sense in political speech, where 'pushing an agenda' implies hidden motives. 'Hidden agenda' is a mid-20th century coinage. The shift from list of business to imputed conspiracy reflects how political distrust reshapes vocabulary.
+
+### AI
+category: Knowledge & Learning  |  page: https://usnow.app/word/ai/
+
+**Definition.** A fancy calculator that mirrors us incomprehensibly. Artificial intelligence. Not actual.
+
+**Phonetic.** ay eye
+
+**Origin.** Initialism for _artificial intelligence_. Coined by computer scientist John McCarthy for the 1956 Dartmouth conference — the founding event of the field. _Artificial_ from Latin _artificialis_ — made by art. _Intelligence_ from Latin _intelligere_ — to understand.
+
+**How it's used.** Used for decades in academic computer science before entering mainstream usage around 2022 with large language models. The term is contested — some researchers prefer 'machine learning' as more accurate. Marketing has flattened the distinctions; nearly any statistical software is now called AI.
+
+### Algorithm
+category: Knowledge & Learning  |  page: https://usnow.app/word/algorithm/
+
+**Definition.** The rules that define how you and your data are processed, classified, and directed. (see also _Media_)
+
+**Phonetic.** al·gə·rith·əm
+
+**Origin.** From the name of 9th-century Persian mathematician al-Khwarizmi, whose treatises on Indian numerals entered Europe through Latin translation. The Latinized _algorismus_ originally meant the decimal number system. The modern computational meaning emerged in the 20th century.
+
+**How it's used.** Technical in computer science — a finite sequence of well-defined instructions. Acquired its cultural weight with social media and recommendation systems in the 2010s. 'The algorithm' is now used as a quasi-mythic actor that decides what people see, hear, and buy — a deflection of responsibility from the humans who design and deploy them.
+
+### American Dream
+category: Origins  |  page: https://usnow.app/word/american-dream/
+
+**Definition.** The promise that effort equals outcome — more myth than mechanism.
+
+**Phonetic.** ə·mer·i·kən dreem
+
+**Origin.** Coined by historian James Truslow Adams in 1931 in _The Epic of America_ — during the Depression. Originally meant a social order where each person could achieve the fullest stature of which they are capable, regardless of birth.
+
+**How it's used.** Quickly narrowed from Adams' broad civic vision to a economic promise: work hard, get ahead, own a home. Used by politicians across the spectrum as shorthand for upward mobility. Increasingly invoked as critique — a myth that justifies inequality by making failure personal.
+
+### Anarchy
+category: History & Civilization  |  page: https://usnow.app/word/anarchy/
+
+**Definition.** Order without permission.
+
+**Phonetic.** an·ər·kee
+
+**Origin.** Greek _anarkhia_ — without a ruler. From _an-_ (without) + _arkhos_ (leader, ruler). Used by Greek writers to describe states between kings or moments of civil collapse. Entered English in the 16th century as a term of disorder before being claimed as a political philosophy in the 19th.
+
+**How it's used.** Used pejoratively in mainstream political speech to mean chaos and lawlessness. Used affirmatively by anarchist thinkers — Proudhon, Bakunin, Kropotkin — to describe stateless cooperative order. The two uses describe completely different conditions but share the word. Modern 'anarcho-capitalism' and 'anarcho-syndicalism' show how far the philosophical tradition diverged from the popular sense.
+
+### Apartheid
+category: History & Civilization  |  page: https://usnow.app/word/apartheid/
+
+**Definition.** A legal system of racial segregation where the minority rules — South Africa's word, but the structure appears elsewhere and is not limited to race.
+
+**Phonetic.** ə·par·tāt
+
+**Origin.** Afrikaans _apartheid_ — separateness, apartness. From _apart_ + the suffix _-heid_ (hood). Formally became the name of South Africa's racial classification and separation system in 1948 when the National Party came to power.
+
+**How it's used.** Used specifically to describe South Africa's legal racial classification system from 1948 to 1994. Applied by analogy to other systems of enforced separation based on race, religion, or ethnicity — most controversially in debates about Israeli policies toward Palestinians, where the term has been used by Israeli human rights organizations including B'Tselem and by the International Criminal Court's chief prosecutor. The analogy is contested.
+
+### Authoritarian
+category: Power & Politics  |  page: https://usnow.app/word/authoritarian/
+
+**Definition.** Government by command rather than consent. The permanent temptation of power.
+
+**Phonetic.** aw·thor·i·tair·ee·ən·iz·əm
+
+**Origin.** From Latin _auctoritas_ — authority, weight of opinion, influence. The political science term emerged in the mid-20th century to describe regimes that concentrate power, suppress opposition, and demand obedience without the ideological totality of totalitarianism.
+
+**How it's used.** Political scientists distinguish authoritarianism — concentrated power, limited pluralism — from totalitarianism, which seeks to control all aspects of life. In contemporary use, the word is often applied loosely to any government behavior considered excessive. The precision matters: an authoritarian government can hold elections, allow limited civil society, and maintain market economies while suppressing meaningful political opposition.
+
+### Belief
+category: Knowledge & Learning  |  page: https://usnow.app/word/belief/
+
+**Definition.** Conviction without proof — faith, trust, or opinion — often used interchangeably.
+
+**Phonetic.** bi·leef
+
+**Origin.** Old English _geleafa_ — trust, confidence. Related to the German _Glaube_. Rooted in Proto-Germanic words meaning 'to love' or 'to hold dear.' Originally closer to trust in a person than acceptance of a proposition.
+
+**How it's used.** Flattened over time to mean any held opinion. The phrase 'I believe' now covers everything from theological conviction to preference. The conflation of belief with fact is one of the defining rhetorical moves of contemporary discourse.
+
+### Bias
+category: Knowledge & Learning  |  page: https://usnow.app/word/bias/
+
+**Definition.** Everyone has it — only other people are accused of it.
+
+**Phonetic.** bī·əs
+
+**Origin.** 16th century French _biais_ — oblique, slant. Originally a sewing and bowling term describing a diagonal cut in fabric or the weighted side of a bowl that makes it curve. Entered the language of the mind much later.
+
+**How it's used.** Expanded from a technical term to a psychological and political one in the 20th century. 'Cognitive bias' entered scientific language in the 1970s. In political use, almost always attributed to others — rarely acknowledged in oneself.
+
+### Body
+category: Myself & I  |  page: https://usnow.app/word/body/
+
+**Definition.** Self, vessel, political battleground, or crime scene.
+
+**Phonetic.** bod·ee
+
+**Origin.** Old English _bodig_ — trunk of a person or animal. Related to Old High German _botah_. Original meaning was strictly physical — the trunk separate from the limbs. The spiritual and political dimensions accumulated later.
+
+**How it's used.** Expanded to carry enormous weight — political terrain, site of law, object of medicine, instrument of labor, subject of art. 'Bodily autonomy,' 'body politic,' 'body count' — the word absorbs whatever the culture needs it to carry.
+
+### Border
+category: History & Civilization  |  page: https://usnow.app/word/border/
+
+**Definition.** A line on a map, a security concept, or a human rights crisis.
+
+**Phonetic.** bor·dər
+
+**Origin.** Old French _bordure_ — edge of a shield. From _border_, to border. Originally referred to the decorative edge of a textile or heraldic device before it became a political term for territorial limits.
+
+**How it's used.** Militarized and politicized most intensely in the 20th century as nation-states hardened. Before that, borders were porous, contested, and often irrelevant to the people living near them. Today the word carries the full weight of immigration policy, nationalism, and human movement.
+
+### BRICS
+category: History & Civilization  |  page: https://usnow.app/word/brics/
+
+**Definition.** The most significant geopolitical realignment most people can't define — and it's still aligning.
+
+**Phonetic.** briks
+
+**Origin.** Initialism for Brazil, Russia, India, China, South Africa. Coined as 'BRIC' in 2001 by Goldman Sachs economist Jim O'Neill to describe four large emerging economies expected to dominate growth. South Africa joined the formal grouping in 2010, adding the S. The bloc has since expanded to include additional members.
+
+**How it's used.** Began as a financial-analyst shorthand, became a formal political and economic bloc when the countries themselves adopted the label. Holds annual summits since 2009. Promotes alternative financial infrastructure to the dollar-dominated system — the New Development Bank, currency-swap arrangements, discussions of a common settlement mechanism. Increasingly framed as a counterweight to the G7.
+
+### Bully
+category: Community & Culture  |  page: https://usnow.app/word/bully/
+
+**Definition.** One who uses verbal or physical assault to intimidate and subjugate. Euphemism for terrorism. Continuing the cycle. (see also _Terrorism_)
+
+**Phonetic.** bool·ee
+
+**Origin.** 16th-century English, originally a term of endearment meaning 'sweetheart' or 'fine fellow' — from Middle Dutch _boele_ (lover). Shifted to mean a swaggering ruffian by the late 17th century, then narrowed to one who harasses the weaker. Theodore Roosevelt's 'bully pulpit' used the older positive sense — 'bully' as 'excellent.'
+
+**How it's used.** Schoolyard application is 20th-century — the systematic study of bullying as a social phenomenon dates to research by Dan Olweus in Scandinavia in the 1970s. Now extends to workplace bullying, cyberbullying, and political characterizations of leaders. The word's reach has expanded faster than agreement on what behavior qualifies.
+
+### Bureaucracy
+category: Power & Politics  |  page: https://usnow.app/word/bureaucracy/
+
+**Definition.** The machinery of government and institutions, designed to serve the people. Serves the design of power.
+
+**Phonetic.** byoo·rok·rə·see
+
+**Origin.** French _bureau_ (office, desk — originally the cloth covering a desk) + Greek _-kratia_ (rule). Coined in the 18th century, initially as a pejorative for rule by officeholders. Max Weber rehabilitated it in the early 20th century as the rational-legal form of modern organization.
+
+**How it's used.** Used almost exclusively as a complaint — 'bureaucratic red tape,' 'government bureaucracy.' Rarely acknowledged that bureaucracy also means consistent application of rules, protection from arbitrary decisions, and institutional memory. The same system that makes you wait at the DMV also ensures the same regulations apply to the powerful and the powerless.
+
+### Capitalism
+category: Power & Politics  |  page: https://usnow.app/word/capitalism/
+
+**Definition.** Freedom through markets or organized extraction — still being decided.
+
+**Phonetic.** kap·i·tl·iz·əm
+
+**Origin.** From Latin _caput_ — head, chief, principal sum of money. _Capital_ entered English in the 17th century meaning wealth used to produce more wealth. _Capitalism_ as a system-word emerged in the mid-19th century, first used critically by socialist writers.
+
+**How it's used.** Almost never defined before being invoked. Defenders use it to mean free markets and individual liberty; critics use it to mean exploitation and concentrated ownership. Both are describing real features of the same system.
+
+### Censorship
+category: Knowledge & Learning  |  page: https://usnow.app/word/censorship/
+
+**Definition.** Suppression of truth or protection from someone's view of harm.
+
+**Phonetic.** sen·sər·ship
+
+**Origin.** Latin _censor_ — a Roman magistrate who assessed citizens' property and morals. The _censor_'s role included supervising public conduct and could remove citizens from the rolls for moral failings. The English word entered use in the 16th century.
+
+**How it's used.** Contested almost entirely at the definitional level — what counts as censorship versus content moderation, editorial judgment, or deplatforming. Who has the power to censor matters enormously. Governments, corporations, and communities all do it differently and call it different things.
+
+### Change
+category: Not Classified  |  page: https://usnow.app/word/change/
+
+**Definition.** Hope or threat depending on what you have to lose.
+
+**Phonetic.** chaynj
+
+**Origin.** Old French _changier_ — to alter, exchange. From Late Latin _cambiare_ — to barter. Originally economic before it became existential.
+
+**How it's used.** 'Change' became a political slogan in the 20th century — promising something without specifying what. Obama's 2008 campaign made it explicit. The word is nearly meaningless without context; its power comes from what the listener projects onto it.
+
+### Charity
+category: Community & Culture  |  page: https://usnow.app/word/charity/
+
+**Definition.** Generosity, tax strategy, or substitute for justice.
+
+**Phonetic.** char·i·tee
+
+**Origin.** Old French _charité_, from Latin _caritas_ — love, esteem. In early Christian usage it referred to the highest form of love — love of God and neighbor — before narrowing to mean giving money to the poor.
+
+**How it's used.** Descended from theological virtue to tax category. The gap between its origins (love) and its current function (giving away surplus) is a measure of what the word lost. Critics argue charity substitutes for structural justice; defenders argue it fills gaps the state won't.
+
+### Checks and Balances
+category: Power & Politics  |  page: https://usnow.app/word/checks-and-balances/
+
+**Definition.** The constitutional design that presumes power will be abused — and purports to reveal, test, and deter it.
+
+**Phonetic.** cheks and bal·əns·iz
+
+**Origin.** The phrase synthesizes two older ideas: 'checks' from the practice of verifying accounts against a ledger, and 'balance' from the physical scale. Montesquieu theorized the separation of powers in _The Spirit of the Laws_ (1748); Madison and Hamilton operationalized it in the Federalist Papers. The phrase as a unit entered American political vocabulary in the late 18th century.
+
+**How it's used.** Invoked reverentially when your branch is under threat; dismissed as obstruction when your branch holds power. The checks were designed not for good-faith actors — those don't need them — but for the ones who would dismantle the system if they could. The design works only as long as the people inside it choose to honor it.
+
+### Citizen
+category: Community & Culture  |  page: https://usnow.app/word/citizen/
+
+**Definition.** A person deemed part of a given state or nation, with all its benefits and burdens.
+
+**Phonetic.** si·tə·zən
+
+**Origin.** Old French _citeain_ — inhabitant of a city. From Latin _civitas_ — citizenship, body of citizens. From _civis_ — member of a community. In Rome, citizenship was a specific legal status with rights and duties — not residency. The word still carries that legal-political weight rather than mere geography.
+
+**How it's used.** Defined differently in every legal system. Birthright citizenship (jus soli) is common in the Americas; descent-based citizenship (jus sanguinis) dominates Europe and Asia. The word also functions metaphorically — 'global citizen,' 'citizen journalist,' 'citizen scientist.' Distinctions between citizen, resident, and subject are politically loaded.
+
+### Citizens United
+category: Power & Politics  |  page: https://usnow.app/word/citizens-united/
+
+**Definition.** The law that allows corporations to outvoice, outfund, and outvote citizens without accountability or retribution. The most ironically named Supreme Court decision.
+
+**Phonetic.** si·tə·zənz yoo·nī·təd
+
+**Origin.** Named for the conservative nonprofit Citizens United, plaintiff in _Citizens United v. FEC_, decided by the U.S. Supreme Court in 2010. The case began as a dispute over a film about Hillary Clinton. The 5–4 ruling held that political spending by corporations and unions is protected speech under the First Amendment.
+
+**How it's used.** Used as shorthand for the broader regime of unlimited independent political spending it enabled — though the ruling addressed a narrower question. Spawned the rise of super PACs and dark-money 501(c)(4) groups. Has been the target of decades of failed constitutional amendments seeking to reverse it. The name's irony — 'citizens' meaning corporations — is widely noted.
+
+### Civilized
+category: History & Civilization  |  page: https://usnow.app/word/civilized/
+
+**Definition.** What the conqueror and the conquered each called themselves.
+
+**Phonetic.** siv·ə·līzd
+
+**Origin.** From Latin _civilis_ — relating to citizens. The verb 'civilize' entered English in the 17th century meaning to bring under settled government and law. The adjective 'civilized' as a marker of cultural advancement crystallized during European colonial expansion — defining civilization was inseparable from defining who lacked it.
+
+**How it's used.** Central to the rhetoric of empire — colonized peoples were described as savage or uncivilized, justifying intervention as a civilizing mission. Anthropology in the 20th century challenged the hierarchy, arguing that 'civilized' marked cultural preference, not objective progress. The word survives in everyday speech with its judgmental weight largely unexamined.
+
+### Class
+category: Origins  |  page: https://usnow.app/word/class/
+
+**Definition.** Economic position, cultural identity, and claiming either as merit or fault.
+
+**Phonetic.** klas
+
+**Origin.** Latin _classis_ — a division of the Roman people by property for military and tax purposes. Six classes ranked by wealth. The English word retained this structural meaning before it was softened into social 'class' — a category Americans particularly resist.
+
+**How it's used.** Americans use 'class' as cultural signifier (working class values, upper class manners) more readily than as economic category. The reluctance to discuss economic class structurally is itself a cultural phenomenon — widely noted by sociologists since at least the 1940s.
+
+### Colonization
+category: History & Civilization  |  page: https://usnow.app/word/colonization/
+
+**Definition.** The political control of one people by another. Built on extraction, enforced by propaganda or violence.
+
+**Phonetic.** kə·loh·nee·ə·liz·əm
+
+**Origin.** Latin _colonia_ — a settlement of Roman citizens in a conquered territory. From _colonus_ — farmer, settler. The modern political meaning — European domination of non-European peoples — developed in the 19th century as the practice it described reached its peak.
+
+**How it's used.** Often treated as historical — something that ended when formal empires dissolved. Political scientists and economists point to continuing economic arrangements, debt structures, and trade relationships that maintain colonial-era patterns of extraction without the administrative infrastructure. 'Neo-colonialism' names this argument. The debate about whether colonialism is past or present is itself a political one.
+
+### Common Sense
+category: Not Classified  |  page: https://usnow.app/word/common-sense/
+
+**Definition.** Accumulated knowledge deemed applicable by the person or group who raises it.
+
+**Phonetic.** kom·ən sens
+
+**Origin.** Translation of Latin _sensus communis_ — the faculty by which the five senses unify into perception. The shift to mean ordinary practical judgment happened in 17th- and 18th-century English. Thomas Paine's 1776 pamphlet _Common Sense_ gave the term its political resonance.
+
+**How it's used.** Invoked as a self-evident standard requiring no further justification — which is what makes it suspect. Sociology and cognitive psychology have documented that 'common sense' often encodes unexamined assumptions of a particular culture or class. 'It's just common sense' usually signals the end of an argument, not the result of one.
+
+### Communism
+category: Power & Politics  |  page: https://usnow.app/word/communism/
+
+**Definition.** Collective control of the production and distribution of resources, without class and without the state — an idea that has outlived every attempt to do so. So far, in theory, not in practice.
+
+**Phonetic.** kom·yə·niz·əm
+
+**Origin.** From Latin _communis_ — common, shared. The modern political sense crystallized with Marx and Engels' _Communist Manifesto_ in 1848. Marx distinguished communism from socialism as a later, stateless stage after the proletariat had abolished class.
+
+**How it's used.** In Cold War American usage, expanded to cover any state-managed economy or left politics — a Red Scare deployment that conflated Soviet bureaucracy with Marx's stateless ideal. China, Vietnam, and Cuba still use 'communist' as the party name despite market economies. The gap between the word's theoretical meaning and any historical regime that claimed it is one of the persistent disputes of political theory.
+
+### Community
+category: Origins  |  page: https://usnow.app/word/community/
+
+**Definition.** Shared place, shared trait, or unity someone wants you to feel.
+
+**Phonetic.** kə·myoo·ni·tee
+
+**Origin.** Latin _communitas_ — fellowship, from _communis_ — common, shared. Related to _commune_ and _communication_. Originally implied actual shared life and mutual obligation, not just shared identity.
+
+**How it's used.** Expanded and hollowed simultaneously. 'The community' now refers to everyone from a ZIP code's residents to a Reddit forum. Used in political speech to imply solidarity without specifying it. 'Community standards,' 'community policing,' 'community college' — each use carries different assumptions.
+
+### Confucianism
+category: Community & Culture  |  page: https://usnow.app/word/confucianism/
+
+**Definition.** An East Asian philosophy of right relationship — that we each have duties to the other. For instance, even a ruler protected by the Mandate of Heaven who fails the relationship loses the mandate — and the right to rule with it.
+
+**Phonetic.** kən·fyoo·shə·niz·əm
+
+**Origin.** Named for Kong Fuzi — Latinized as Confucius — the Chinese teacher who lived around 551–479 BCE. The system is more accurately called _Rujia_ in Chinese — the school of the scholars. The English term was coined by Jesuit missionaries in the 17th century.
+
+**How it's used.** Functioned as the official state philosophy of imperial China from the Han dynasty through the early 20th century — shaping bureaucracy, education, and family structure across East Asia. Suppressed during China's Cultural Revolution, then officially rehabilitated. Often contrasted with Western liberalism in debates about governance, hierarchy, and social harmony.
+
+### Consciousness
+category: Myself & I  |  page: https://usnow.app/word/consciousness/
+
+**Definition.** The subjective state of one's awareness and knowing — our personal version of the universe. Indescribable. Cannot be measured, verified, or transferred.
+
+**Phonetic.** kon·shəs·nəs
+
+**Origin.** From Latin _conscius_ — knowing with. From _com-_ (with) + _scire_ (to know). Originally implied shared knowledge. The introspective sense — awareness of one's own mental states — was developed by John Locke in the late 17th century as a foundational philosophical term.
+
+**How it's used.** Central to philosophy of mind, neuroscience, and the unresolved 'hard problem' of how subjective experience arises from physical processes. Used loosely to mean awareness or presence. Expanded in social movements — 'consciousness raising,' 'class consciousness' — to mean recognition of structural conditions one had previously taken for granted.
+
+### Consent
+category: Not Classified  |  page: https://usnow.app/word/consent/
+
+**Definition.** Agreement or permission — whether informed, induced, coerced, or manufactured. Notice only one of these is real.
+
+**Phonetic.** kən·sent
+
+**Origin.** Latin _consentire_ — to feel together, agree. From _com-_ (together) + _sentire_ (to feel). The political doctrine of consent of the governed traces to Locke and the social-contract tradition. Informed consent is a 20th-century elaboration.
+
+**How it's used.** Operates in distinct legal domains with different standards — contract, medical ethics, sexual conduct, political legitimacy. The Nuremberg Code (1947) established informed consent as a baseline of medical ethics in response to Nazi experimentation. Affirmative-consent standards in sexual assault law are more recent. Each domain debates what makes consent free, informed, and meaningful.
+
+### Constitution
+category: Power & Politics  |  page: https://usnow.app/word/constitution/
+
+**Definition.** The rulebook that grants authority, defines power, and protects rights — in theory.
+
+**Phonetic.** kon·sti·too·shən
+
+**Origin.** Latin _constitutio_ — an ordinance, regulation. From _constituere_ — to set up, establish. Originally meant any decree or arrangement. The American Constitution gave the word its modern political weight globally.
+
+**How it's used.** The central battleground of American legal and political argument. 'The Constitution says' is deployed to end debates that the Constitution actually leaves open. Originalism versus living constitutionalism is ultimately a dispute over whose present the document should serve.
+
+### Corruption
+category: Not Classified  |  page: https://usnow.app/word/corruption/
+
+**Definition.** The natural result of unaccountable power — personal gain at another's expense. Can be private, public, or institutional.
+
+**Phonetic.** kə·rup·shən
+
+**Origin.** Latin _corruptio_ — destruction, decay. From _corrumpere_ — to break to pieces, spoil. From _com-_ (intensive) + _rumpere_ (to break). Originally physical decay — rotting matter — before extending to moral and political senses. The metaphor of political corruption as decay is built into the word.
+
+**How it's used.** Classified by transparency advocates into petty corruption, grand corruption (state capture by elites), and political corruption. Transparency International's Corruption Perceptions Index has measured the phenomenon since 1995. What counts as corruption versus normal political influence varies by jurisdiction — campaign contributions in the U.S. would be bribery in many systems.
+
+### Country
+category: Community & Culture  |  page: https://usnow.app/word/country/
+
+**Definition.** A state with borders, a government, and international recognition. Also, one's nation. (see also _Nation_)
+
+**Phonetic.** kun·tree
+
+**Origin.** Old French _contrée_ — region, district. From Vulgar Latin _contrata_ (terra) — land lying opposite, the land spread before one. From Latin _contra_ — against, facing. Originally referred to the landscape one faces — a region — before acquiring its modern sense of a sovereign state.
+
+**How it's used.** Used interchangeably with 'nation' and 'state' in everyday speech, though political theorists distinguish them — country as territory, nation as people, state as government. Also used in opposition to city ('the country' as rural), preserving the older geographic sense. The number of countries depends on who is counting — the UN recognizes 193 member states, but other lists vary by recognition disputes.
+
+### Coup
+category: Power & Politics  |  page: https://usnow.app/word/coup/
+
+**Definition.** The sudden seizure or replacement of government. Often scripted by others, far in advance.
+
+**Phonetic.** koo
+
+**Origin.** French _coup d'état_ — stroke of state. _Coup_ from Latin _colpus_ — a blow. The full phrase implies a blow struck against the state itself, not just a change of personnel but a change of the rules.
+
+**How it's used.** Military coups — armed forces removing a civilian government — are the classic form. 'Soft coups' or 'constitutional coups' describe the use of legal mechanisms to remove or neutralize an elected government without military action. In American political debate, the word has been applied to the events of January 6, 2021 — a usage that is contested but documented in court proceedings.
+
+### Covenant
+category: Even Further Back  |  page: https://usnow.app/word/covenant/
+
+**Definition.** A binding agreement between parties — in theology, between God and humanity; in law, between humans. Enforceability varies.
+
+**Phonetic.** kuv·ə·nənt
+
+**Origin.** Old French _covenant_ — agreement. From Latin _convenire_ — to come together, agree. In English law it referred to a formal sealed agreement. In theology it took on the weight of the biblical relationship between God and Israel.
+
+**How it's used.** Carries different weight in different contexts. In Jewish theology, the covenant is the central relationship between God and the Jewish people — binding, mutual, and permanent. In American history, 'covenant' appears in the Mayflower Compact and Puritan political thought. In real estate law, a 'restrictive covenant' was used well into the 20th century to prevent Black families from buying property in white neighborhoods.
+
+### Crime
+category: History & Civilization  |  page: https://usnow.app/word/crime/
+
+**Definition.** An act or event that violates the rights of others — defined by law, which is defined by some of those others.
+
+**Phonetic.** krīm
+
+**Origin.** Latin _crimen_ — accusation, fault, offense. From _cernere_ — to decide, to judge. The word carries its judicial origin — crime is not just an act but an act decided to be criminal by a legal process.
+
+**How it's used.** Defined by statute, which is defined by legislatures, which are shaped by power. What counts as crime shifts with political pressure. The same act — marijuana possession, insider trading, civil disobedience — moves in and out of criminality depending on era and who is doing it.
+
+### Crisis
+category: Not Classified  |  page: https://usnow.app/word/crisis/
+
+**Definition.** An emergency requiring action, or an excuse for overreach — often both.
+
+**Phonetic.** krī·sis
+
+**Origin.** Greek _krisis_ — decision, turning point. From _krinein_ — to decide, to separate. Originally a medical term for the turning point of a disease — the moment it would improve or kill. Carried urgency and decisive action in its original meaning.
+
+**How it's used.** Inflated through overuse. When everything is a crisis, nothing is. Politicians use crisis to justify emergency powers; media uses it to drive engagement. The word's original precision — a specific decisive moment — has been almost entirely lost.
+
+### Culture
+category: Origins  |  page: https://usnow.app/word/culture/
+
+**Definition.** Shared practices, collective identities, and deciding which count.
+
+**Phonetic.** kul·chər
+
+**Origin.** Latin _cultura_ — tending, cultivation. From _colere_ — to till, cultivate, worship. Originally agricultural — the tending of land — before transferring to the tending of the mind. _Cultura animi_ — cultivation of the soul — was Cicero's phrase.
+
+**How it's used.** Expanded until it means nearly everything — and therefore sometimes nothing. 'Culture war,' 'cancel culture,' 'corporate culture,' 'pop culture' — each use implies something different. Anthropologists use it one way; politicians another; marketers a third.
+
+### Data
+category: Knowledge & Learning  |  page: https://usnow.app/word/data/
+
+**Definition.** Any raw, aggregate, analyzed, or framed information. Also our personal preferences and habits — packaged and sold without actual consent or remuneration.
+
+**Phonetic.** day·tə
+
+**Origin.** Latin _data_ — things given. Plural of _datum_ — that which is given. From _dare_ — to give. Originally a mathematical and logical term for premises taken as given. Entered scientific English in the 17th century, then statistics in the 19th, and computing in the 20th.
+
+**How it's used.** Grammatically plural in formal scientific writing — 'the data are' — though singular use ('the data is') has become standard in everyday speech. 'Big data' entered usage in the 1990s. The shift from data as scientific observation to data as commodity — what tech companies collect, package, and sell — is one of the defining transformations of the digital era.
+
+### Death
+category: Myself & I  |  page: https://usnow.app/word/death/
+
+**Definition.** Our end, a transition, or the thing that makes everything else matter.
+
+**Phonetic.** deth
+
+**Origin.** Old English _dēath_ — dying, death. Proto-Germanic root related to Old Norse _dauði_, Gothic _dauþus_. Among the oldest words in the language — death needed naming before almost anything else.
+
+**How it's used.** Handled differently across every culture and era. Medicalized in the modern West — moved from home to hospital, from family to professional management. 'Death with dignity,' 'death tax,' 'death panels' — politically loaded in ways that obscure the biological fact.
+
+### Debate
+category: Knowledge & Learning  |  page: https://usnow.app/word/debate/
+
+**Definition.** Historically, a method of sharing and testing opposite or incompatible points of view — used to obtain more knowledge, consensus, and/or resolution. Now, often just theater.
+
+**Phonetic.** di·bayt
+
+**Origin.** Old French _debatre_ — to fight, contend. From Latin _battuere_ — to beat, strike. Related to _battle_ and _combat_. The word carries its martial origin — debate as verbal combat. Formal debate as structured exchange traces to medieval university disputation and ancient Greek and Roman rhetoric.
+
+**How it's used.** Codified across institutions — parliamentary debate, presidential debates, competitive debate in schools, Oxford-style formats. The expectation that debate produces clarity through opposed argument has eroded as televised political debates have shifted toward performance, soundbites, and avoidance. Scholarly study of deliberation distinguishes genuine debate from positional posturing.
+
+### Debt
+category: Power & Politics  |  page: https://usnow.app/word/debt/
+
+**Definition.** Investment, trap, or moral failing — depending on who owes.
+
+**Phonetic.** det
+
+**Origin.** Latin _debitum_ — that which is owed. Related to _debere_ — to owe. The silent _b_ was reinserted in the 16th century by scholars wanting to honor the Latin root, overriding centuries of spoken English that had dropped it.
+
+**How it's used.** Carries moral weight beyond the financial — 'in debt' implies obligation and shame in ways that 'owe money' does not. Debt forgiveness invokes this moral dimension. The framing of national debt as household debt is one of the most consequential and contested metaphors in economics.
+
+### Decolonization
+category: History & Civilization  |  page: https://usnow.app/word/decolonization/
+
+**Definition.** The end of formal colonial rule and the beginning of arguing about what that means. (see also _Colonization_)
+
+**Phonetic.** dee·kol·ə·nī·zay·shən
+
+**Origin.** From _de-_ (removal) + _colonization_. Emerged as a political term in the mid-20th century as African and Asian independence movements dismantled European empires. Used in academic contexts since the 1960s.
+
+**How it's used.** In historical use: the wave of independence movements between 1945 and 1975. In contemporary use: extended to culture, education, and institutions — 'decolonizing the curriculum' means examining whose knowledge is taught and whose is excluded. Critics argue this extends the word beyond its useful meaning. Supporters argue formal political independence without cultural and intellectual independence is incomplete decolonization.
+
+### Deep State
+category: Power & Politics  |  page: https://usnow.app/word/deep-state/
+
+**Definition.** The powers that inform the politicians that run the government. Often entrenched through generations. Purgeable but permanent.
+
+**Phonetic.** thuh deep stayt
+
+**Origin.** The concept of a permanent administrative layer operating beneath elected government is real and has serious academic literature behind it — political scientists call it the 'administrative state' or 'permanent government.' The phrase 'deep state' came from Turkish politics in the 1990s, describing the military and intelligence networks that operated outside civilian control. It entered American political rhetoric around 2017.
+
+**How it's used.** Split cleanly between two meanings that rarely meet. The academic meaning: career professionals in intelligence, defense, and regulatory agencies who continue across administrations and hold institutional knowledge. The political meaning: a shadowy network of ideological enemies using government machinery to sabotage the will of the people. The second meaning is useful primarily for justifying the removal of the first.
+
+### Defense
+category: History & Civilization  |  page: https://usnow.app/word/defense/
+
+**Definition.** Personal safety, national security, and the claim that justifies attack.
+
+**Phonetic.** di·fens
+
+**Origin.** Latin _defensio_ — protection, warding off. From _defendere_ — to ward off, protect. The legal sense and the military sense developed simultaneously — both about protecting something from attack.
+
+**How it's used.** The U.S. Department of War became the Department of Defense in 1947. The renaming is itself a study in how language launders function. Defense spending almost always includes offensive capability; the word frames it otherwise.
+
+### Democracy
+category: Power & Politics  |  page: https://usnow.app/word/democracy/
+
+**Definition.** Majority rule, representative republic — an experiment with varying results.
+
+**Phonetic.** di·mok·rə·see
+
+**Origin.** Greek _dēmokratia_ — rule of the people. From _dēmos_ (people) + _kratos_ (power, rule). Athenian democracy excluded women, slaves, and foreigners — 'the people' was always a partial category.
+
+**How it's used.** Claimed by nearly every government on earth, including authoritarian ones. 'Democratic People's Republic' appears in the names of single-party states. In American use, contested between majoritarian and constitutional definitions — whether democracy means majority rule or protection of minority rights.
+
+### Deserve
+category: Community & Culture  |  page: https://usnow.app/word/deserve/
+
+**Definition.** Outcome justified by merit, luck, or moral presumption.
+
+**Phonetic.** di·zurv
+
+**Origin.** Old French _deservir_ — to merit. From Latin _deservire_ — to serve zealously. Originally meant to earn through service — you deserved something by actively earning it. The passive sense (deserving by virtue of who you are) came later.
+
+**How it's used.** One of the most morally loaded words in the language. 'They don't deserve it' is used to deny aid, rights, and compassion. Underpins debates about welfare, punishment, and wealth — whether outcomes reflect merit or circumstance.
+
+### Diaspora
+category: Origins  |  page: https://usnow.app/word/diaspora/
+
+**Definition.** A people scattered from their homeland. Physically here, but culturally, historically, and/or spiritually from somewhere else.
+
+**Phonetic.** dī·as·pər·ə
+
+**Origin.** Greek _diaspora_ — scattering, dispersion. From _dia-_ (across) + _speirein_ (to sow, scatter). Originally used specifically for the scattering of Jews from the Land of Israel beginning with the Babylonian exile. Later applied to other dispersed peoples.
+
+**How it's used.** Applied to the Jewish, Armenian, African, Irish, Palestinian, and Indian diasporas among many others. Each diaspora is different — some formed by choice, some by expulsion, some by slavery. The word carries the weight of maintained identity across distance and time: the community that remains a community without territory. It has become one of the more useful terms in contemporary discussions of identity and migration.
+
+### Dignity
+category: Community & Culture  |  page: https://usnow.app/word/dignity/
+
+**Definition.** Inherent or earned respect — the oldest human argument.
+
+**Phonetic.** dig·ni·tee
+
+**Origin.** Latin _dignitas_ — worth, merit, prestige. From _dignus_ — worthy. In Roman use, dignity was earned through rank and conduct — it was a social status, not an inherent quality. The idea of inherent human dignity came much later.
+
+**How it's used.** Human dignity as an inherent, inalienable quality entered Western legal thinking through Enlightenment philosophy and was enshrined in the UN Declaration of Human Rights in 1948. Still contested — whether dignity is something you have or something that must be accorded.
+
+### Disinformation
+category: Knowledge & Learning  |  page: https://usnow.app/word/disinformation/
+
+**Definition.** Deliberately false or misleading information spread with intent to deceive — misinformation with intent. (see also _Information_ or _Misinformation_)
+
+**Phonetic.** dis·in·fər·may·shən
+
+**Origin.** Translated from Russian _dezinformatsiya_ — a term used by Soviet intelligence for the deliberate planting of false information in enemy information environments. Entered English through Cold War intelligence literature in the 1950s.
+
+**How it's used.** Distinct from misinformation (false information spread without intent to deceive) and propaganda (persuasion, not necessarily false). In practice the distinction is hard to maintain — the same false claim can be disinformation at the source and misinformation as it spreads through people who believe it. Used in contemporary political debate so broadly that it has lost some precision. The original Cold War meaning — state-sponsored deliberate falsification — remains the most useful anchor.
+
+### Diversity
+category: Community & Culture  |  page: https://usnow.app/word/diversity/
+
+**Definition.** Recognizing the differences between us — an attempt to bring us together — but corporatized and weaponized to keep us apart.
+
+**Phonetic.** di·vur·si·tee
+
+**Origin.** Latin _diversitas_ — difference. From _diversus_ — turned different ways. Originally meant divergence or disagreement — a neutral or even negative term. The positive valence — diversity as a value — is largely a 20th-century development.
+
+**How it's used.** Became central in American institutional life after the Supreme Court's 1978 Bakke decision held racial diversity could be a compelling interest in university admissions. Adopted by corporations and universities as a value — sometimes operational, sometimes ornamental. Critics from the left say diversity rhetoric substitutes for structural change; critics from the right say it produces quotas.
+
+### Due Process
+category: Power & Politics  |  page: https://usnow.app/word/due-process/
+
+**Definition.** Freedom from government except by fair procedure. The line between the law and the color of law.
+
+**Phonetic.** dyoo pros·es
+
+**Origin.** From the Magna Carta (1215): _nisi per legale judicium parium suorum vel per legem terrae_ — 'except by lawful judgment of his peers or by the law of the land.' The phrase 'due process of law' appeared in a 1354 statute of Edward III and was carried into the Fifth and Fourteenth Amendments to the U.S. Constitution.
+
+**How it's used.** Appears in two constitutional amendments because the founders understood it needed saying twice — once to limit the federal government, once to limit the states. In practice, contested at every edge: who gets it, when it applies, what procedures satisfy it. Governments under pressure tend to find ways to suspend it while insisting they haven't.
+
+### Education
+category: Knowledge & Learning  |  page: https://usnow.app/word/education/
+
+**Definition.** Learning, indoctrination, credentials, or liberation — depends.
+
+**Phonetic.** ej·oo·kay·shən
+
+**Origin.** Latin _educatio_ — a rearing, training. From _educare_ — to bring up, rear. Related to _educere_ — to lead out. The two roots suggest different models: filling (bringing up) versus drawing out what is already there.
+
+**How it's used.** The tension between those two etymological models — deposit vs. liberation — runs through every education debate. Paulo Freire named it explicitly in 1968. Who controls curriculum controls what counts as educated — this is why education is always a political battleground.
+
+### Elite
+category: Power & Politics  |  page: https://usnow.app/word/elite/
+
+**Definition.** Those enriched by capitalism and those democracy can't touch.
+
+**Phonetic.** i·leet
+
+**Origin.** French _élite_ — choice, selected. From Old French _eslite_ — chosen. From Latin _eligere_ — to choose, select. Originally a neutral term for the chosen or selected — without the resentment the word now carries.
+
+**How it's used.** Became a pejorative in populist politics of the 20th and 21st centuries. 'Elite' now implies unearned privilege and disconnection from ordinary life — deployed against academics, media figures, and politicians regardless of actual wealth or power.
+
+### Embargo
+category: Power & Politics  |  page: https://usnow.app/word/embargo/
+
+**Definition.** A prohibition on trade — economic war by another name. (see also Sanction or Tariff)
+
+**Phonetic.** em·bar·goh
+
+**Origin.** Spanish _embargar_ — to bar, restrain. From _em-_ (in) + _barra_ (bar, obstruction). Originally referred to a government order detaining ships in port. Extended to prohibition on trade in general.
+
+**How it's used.** Used as a foreign policy tool — the US embargo on Cuba has lasted more than sixty years. Embargoes are theoretically targeted at governments; in practice they affect civilian populations who depend on imported goods. The gap between the stated target (a government) and the actual effect (the people) is a persistent critique of embargo as a policy instrument.
+
+### Emotion
+category: Myself & I  |  page: https://usnow.app/word/emotion/
+
+**Definition.** Things we feel and often act on — fear, anger, pride, etc. May be our own, but also induced, coerced, or manufactured.
+
+**Phonetic.** i·moh·shən
+
+**Origin.** French _émotion_, from Old French _emouvoir_ — to stir up. From Latin _emovere_ — to remove, move out, agitate. From _e-_ (out) + _movere_ (to move). Originally referred to physical or social movement — agitation, disturbance — before narrowing in the 17th and 18th centuries to internal mental states.
+
+**How it's used.** Replaced older terms — 'passions,' 'affections,' 'sentiments' — as the dominant English word for inner feeling states in the 19th century. Psychology has cataloged emotions in many ways — Paul Ekman's six basic emotions, Plutchik's wheel, dimensional models of valence and arousal. Marketing, politics, and media increasingly engineer emotional response as a primary target.
+
+### Empire
+category: History & Civilization  |  page: https://usnow.app/word/empire/
+
+**Definition.** A state that rules over other peoples by force, law, and/or economic "arrangement."
+
+**Phonetic.** em·pīr
+
+**Origin.** Latin _imperium_ — command, supreme power, dominion. From _imperare_ — to command. The Roman empire gave the word its weight. Entered English through Old French _empire_ in the 13th century.
+
+**How it's used.** Applied historically to Rome, Britain, the Mongols, the Ottomans, and others. In contemporary politics, 'empire' is both a descriptive term for US global power and a polemical one — American foreign policy debates turn partly on whether the word applies and what follows if it does. The academic field of empire studies distinguishes formal empire (direct rule) from informal empire (economic and political dominance without administration).
+
+### Evidence
+category: Knowledge & Learning  |  page: https://usnow.app/word/evidence/
+
+**Definition.** Actual proof, inconvenience, or invented facts.
+
+**Phonetic.** ev·i·dəns
+
+**Origin.** Latin _evidentia_ — clearness, distinctness. From _evidens_ — clear, obvious. From _ex-_ (out) + _videre_ (to see). Originally meant something so clear it could be seen directly — not something that required interpretation.
+
+**How it's used.** The gap between its Latin origin (obvious to sight) and its current use (something requiring evaluation) is the gap that gets exploited. 'Show me the evidence' can mean a genuine request for proof or a rhetorical device to dismiss what is already well established.
+
+### Evil
+category: Community & Culture  |  page: https://usnow.app/word/evil/
+
+**Definition.** Intentional cruelty, moral failure, and the word that ends further inquiry.
+
+**Phonetic.** ee·vəl
+
+**Origin.** Old English _yfel_ — bad, vicious, ill. One of the oldest words in the Germanic languages. Proto-Germanic root possibly meaning 'exceeding due limits.' The theological sense of evil as an active force or entity developed through Christian doctrine.
+
+**How it's used.** Political use of 'evil' — 'axis of evil,' 'evil empire' — borrows the theological charge to make political opponents into moral absolutes. The word forecloses negotiation; you cannot compromise with evil. Its use in political speech is therefore almost always a signal that nuance is unwelcome.
+
+### Executive Order
+category: Power & Politics  |  page: https://usnow.app/word/executive-order/
+
+**Definition.** Presidential declaration. Legislation without the legislature. Effective before checks and balances.
+
+**Phonetic.** ig·zek·yoo·tiv or·dər
+
+**Origin.** Not mentioned in the Constitution by name. Derives from Article II's grant of 'executive power' and the instruction to 'take care that the laws be faithfully executed.' George Washington issued the first one in 1789. The practice expanded dramatically in the 20th century — FDR issued 3,721 of them, including the internment of Japanese Americans.
+
+**How it's used.** Used when Congress won't act, or when a president prefers speed over durability. Executive orders can be reversed by the next president on day one — which is both their weakness and, for opponents, their only immediate remedy. The volume of orders issued in any administration is a rough measure of how far the president is operating outside legislative consensus.
+
+### Expert
+category: Knowledge & Learning  |  page: https://usnow.app/word/expert/
+
+**Definition.** Trusted authority or paid researcher, depending on whether you like the results.
+
+**Phonetic.** ek·spurt
+
+**Origin.** Latin _expertus_ — tried, proved, known by experience. From _experiri_ — to try, test. Related to _experience_ and _experiment_. Originally someone who had been tested — knowledge earned through trial, not certification.
+
+**How it's used.** Authority based on expertise was broadly respected through much of the 20th century. Populist politics of the 21st century attacked expert authority as elitist and undemocratic. Michael Gove's 2016 claim that 'people in this country have had enough of experts' marked a turning point in how the word is used.
+
+### Fact
+category: Knowledge & Learning  |  page: https://usnow.app/word/fact/
+
+**Definition.** What we observe, agree upon, or declare — most often the latter.
+
+**Phonetic.** fakt
+
+**Origin.** Latin _factum_ — a thing done, a deed. From _facere_ — to do, make. Originally meant an act or deed — something that had been done. The sense of 'something known to be true' developed gradually through the 16th and 17th centuries.
+
+**How it's used.** The phrase 'alternative facts' entered the language in 2017 and crystallized a long-building crisis: the word 'fact' was already doing more work than it could hold. The move from 'fact' to 'factual claim' to 'my facts' traces the collapse of shared epistemic ground.
+
+### Failure
+category: Myself & I  |  page: https://usnow.app/word/failure/
+
+**Definition.** When things don't go as planned or expected. Often seen as a negative — but the best teacher we may ever have. (compare with _Success_)
+
+**Phonetic.** fayl·yər
+
+**Origin.** Anglo-French _failer_ — to fail. From Vulgar Latin _fallire_ — to deceive, disappoint, miss. From Latin _fallere_ — to deceive, trip up. Related to _fallacy_ and _false_. The financial sense — bankruptcy — was common in early modern English before the general meaning broadened.
+
+**How it's used.** Stigmatized in achievement cultures and recast in Silicon Valley as 'fail fast, fail forward' — a productive stage in iteration. Educational and developmental psychology distinguishes between fixed and growth mindsets in how failure is processed. Aviation, medicine, and engineering treat failure analysis — incident reports, post-mortems, root-cause analysis — as central to safety improvement.
+
+### Fair
+category: Community & Culture  |  page: https://usnow.app/word/fair/
+
+**Definition.** Equal, equitable, or whatever suits the moment.
+
+**Phonetic.** fair
+
+**Origin.** Old English _fæger_ — beautiful, pleasant. Separately, Old English _fæger_ also meant fitting, proper. The two senses — aesthetic and ethical — ran in parallel for centuries before the ethical meaning dominated.
+
+**How it's used.** Among the most contested words in politics because it contains two irreconcilable definitions: equal treatment (same rules for everyone) versus equitable treatment (different rules to produce equal outcomes). 'That's not fair' is a primal complaint; what it means is never obvious.
+
+### Faith
+category: Even Further Back  |  page: https://usnow.app/word/faith/
+
+**Definition.** Trust, religion, or belief beyond proof.
+
+**Phonetic.** fayth
+
+**Origin.** Latin _fides_ — trust, confidence, reliance. Related to _fidere_ — to trust. Root of _fidelity_, _fiduciary_, _confide_. Originally about trust in a person or promise before it became attached specifically to religious belief.
+
+**How it's used.** The narrowing of 'faith' to mean specifically religious belief happened gradually. 'Faith community,' 'faith-based' — these are modern coinages. The original Latin sense survives in legal and financial language: fiduciary duty, bona fide, confident.
+
+### Family
+category: Origins  |  page: https://usnow.app/word/family/
+
+**Definition.** Bonds by blood, choice, or cohesion — recognized or not.
+
+**Phonetic.** fam·uh·lee
+
+**Origin.** Latin _familia_ — household, including servants and slaves. From _famulus_ — servant. The Roman _familia_ was an economic and legal unit under the authority of the _paterfamilias_ — not primarily a unit of affection.
+
+**How it's used.** 'Family values' became a political phrase in the 1970s and 80s — a shorthand for a specific social conservative vision. 'Chosen family' emerged as a counter-claim. The word is fought over because it carries legal rights, tax implications, and moral authority simultaneously.
+
+### Fascism
+category: Power & Politics  |  page: https://usnow.app/word/fascism/
+
+**Definition.** A political system built on ultranationalism, authoritarian leadership, and the active suppression of opposition. Usually recognized afterwards.
+
+**Phonetic.** fash·iz·əm
+
+**Origin.** Italian _fascismo_, from _fascio_ — bundle, group. From Latin _fasces_ — a bundle of rods with an axe, carried before Roman magistrates as a symbol of authority. Mussolini's movement took the fasces as its symbol in 1919.
+
+**How it's used.** The original fascist movements — Mussolini's Italy, Hitler's Germany, Franco's Spain — shared specific features: ultranationalism, a charismatic leader claiming to embody the nation's will, suppression of political opposition, use of political violence, and corporate-state partnership. The word is now applied so broadly in political argument that historians argue it has lost analytical utility. When everything is fascism, nothing is. The precision matters.
+
+### Fear
+category: Myself & I  |  page: https://usnow.app/word/fear/
+
+**Definition.** Perhaps the prime mover of all human behavior. (see _Emotion_)
+
+**Phonetic.** feer
+
+**Origin.** Old English _fær_ — calamity, danger, sudden attack. From Proto-Germanic _*feraz_ — danger. Originally referred to the external threat itself, not the internal response. The shift to mean the emotion of being afraid happened gradually in Middle English.
+
+**How it's used.** Studied across psychology, neuroscience, and political science as a primary motivator of behavior — including political behavior. Fear-based appeals are documented across advertising, campaigning, and authoritarian rhetoric. Distinguished from anxiety (anticipatory, diffuse) and phobia (specific, disproportionate). In many traditions, distinguished from courage — which is action despite fear, not its absence.
+
+### Feminine
+category: Origins  |  page: https://usnow.app/word/feminine/
+
+**Definition.** The receptive, nurturing, yielding, and intuitive forces of the universe — cyclical and perennial, but eternal. (compare with _Masculine_)
+
+**Phonetic.** fem·ə·nin
+
+**Origin.** Latin _femininus_ — of a woman. From _femina_ — woman. Originally a grammatical term in Latin and Greek — one of three grammatical genders along with masculine and neuter. The extension of grammatical gender to social and cosmological categories is ancient but contested.
+
+**How it's used.** Operates in multiple registers — grammatical, biological, psychological, archetypal, and cosmological. Carl Jung's anima and animus, Taoist yin and yang, Hindu Shakti — many traditions treat feminine and masculine as cosmic principles rather than properties of bodies. Modern gender theory has unsettled the assumed correspondence between biological sex, gender identity, and these older symbolic systems.
+
+### Freedom
+category: Power & Politics  |  page: https://usnow.app/word/freedom/
+
+**Definition.** Personal choice, political voice, or collective liberation. (see also _Liberty_)
+
+**Phonetic.** free·dəm
+
+**Origin.** Old English _frēodōm_ — power of self-determination. From _frēo_ (free) + _dōm_ (judgment, condition). The Proto-Germanic root is related to 'love' — the free person was one who belonged to the beloved community, not to a master.
+
+**How it's used.** The most contested word in American political life. Liberty and freedom are often used interchangeably but carry different weights — freedom tends toward the personal and emotional, liberty toward the legal and civic. 'Freedom' has been invoked to justify both abolition and slavery, both protest and suppression.
+
+### Fundamentalism
+category: Even Further Back  |  page: https://usnow.app/word/fundamentalism/
+
+**Definition.** A rigid return to foundational texts or principles against the encroachment of change — found in every major religion and most ideologies.
+
+**Phonetic.** fun·də·men·tl·iz·əm
+
+**Origin.** Coined in early 20th century American Protestantism — specifically a series of pamphlets called _The Fundamentals_, published 1910-1915, defending core Protestant doctrines against liberal theology and Darwinism. Applied to other religions later.
+
+**How it's used.** In common use, 'fundamentalist' has become almost synonymous with 'extremist' or 'radical.' The original meaning is more specific: a return to foundational texts read literally, against the accommodations that more liberal interpretations make with modern knowledge and culture. Fundamentalism exists across Christianity, Islam, Judaism, Hinduism, and other traditions — and within each, it looks quite different.
+
+### Future
+category: Not Classified  |  page: https://usnow.app/word/future/
+
+**Definition.** What we plan for, what's actually coming, or abstraction to defer action.
+
+**Phonetic.** fyoo·chər
+
+**Origin.** Latin _futurus_ — about to be, going to be. Future participle of _esse_ — to be. Grammatically, the future is just the 'being' that hasn't happened yet. The word entered English in the 14th century.
+
+**How it's used.** Used politically to defer present action — 'for future generations' licenses sacrifice now for benefits that may never arrive. Also used to make present decisions feel inevitable: 'the future is X' implies resistance is futile. Both moves are worth watching for.
+
+### Gender
+category: Origins  |  page: https://usnow.app/word/gender/
+
+**Definition.** Biology, identity, expression, or range — apparently fluid.
+
+**Phonetic.** jen·dər
+
+**Origin.** Latin _genus_ — kind, type, birth. Related to _generare_ — to generate. In grammar, gender referred to noun categories — masculine, feminine, neuter — not to human biology. The word's application to human identity is relatively recent.
+
+**How it's used.** Sex and gender were used interchangeably until the 1950s-60s when researchers began distinguishing biological sex from social identity. That distinction is now the fault line of one of the most intense political conflicts of the 21st century — a debate that is ultimately about who has the authority to define categories.
+
+### Gerrymandering
+category: Power & Politics  |  page: https://usnow.app/word/gerrymandering/
+
+**Definition.** Drawing electoral district lines to favor one party — legal, pervasive, and defeating the purpose of fair representation.
+
+**Phonetic.** jer·ee·man·dər·ing
+
+**Origin.** Named for Elbridge Gerry, Governor of Massachusetts, who in 1812 signed a bill redrawing a state senate district into a shape that resembled a salamander — prompting the portmanteau. The practice predates the name.
+
+**How it's used.** Legal at the federal level and in most states despite Supreme Court challenges. Both parties practice it where they hold state legislative power. The result: politicians choosing their voters rather than voters choosing their politicians. Redistricting technology has made modern gerrymandering far more precise than anything Gerry contemplated. Independent redistricting commissions in some states attempt to remove partisan control from the process.
+
+### Global South
+category: History & Civilization  |  page: https://usnow.app/word/global-south/
+
+**Definition.** The nations left out of the postwar order — not a geography, a structural condition with a plan. (see also BRICS)
+
+**Phonetic.** gloh·bəl sowth
+
+**Origin.** Replaced 'Third World' after the Cold War ended and the binary it implied — First World (West), Second World (Soviet bloc), Third World (everyone else) — dissolved. 'Global South' emerged in development discourse in the 1990s and became widely used by the 2000s.
+
+**How it's used.** Covers Africa, Latin America, South and Southeast Asia, and parts of the Middle East — the nations that share a history of colonization, economic extraction, and exclusion from the institutions that set global rules. The term is geographic but the category is political. Some nations in the geographic south (Australia, New Zealand) are not Global South in the political sense. China's position — largest economy in the group, also a major power — creates ongoing definitional tension.
+
+### God
+category: Even Further Back  |  page: https://usnow.app/word/god/
+
+**Definition.** Creator, metaphor, authority, or comfort — the most contested word in history.
+
+**Phonetic.** god
+
+**Origin.** Proto-Germanic _*guthan_ — that which is invoked, or possibly that which is poured as a libation. Among the oldest words in any Germanic language. The capitalized singular God — the monotheistic deity — is a usage specific to the Abrahamic traditions.
+
+**How it's used.** Invoked in American political life with unusual frequency for a secular democracy. 'One nation under God' was added to the Pledge of Allegiance in 1954. 'In God We Trust' became the national motto the same decade — both additions were Cold War moves, distinguishing America from godless communism.
+
+### Good
+category: Community & Culture  |  page: https://usnow.app/word/good/
+
+**Definition.** What's right, what works, or what feels nice — used as if they're the same.
+
+**Phonetic.** good
+
+**Origin.** Old English _gōd_ — virtuous, desirable, fitting. Proto-Germanic root. Separate from the word for God — a common misconception. Related to the German _gut_ and Dutch _goed_.
+
+**How it's used.** Carries moral, functional, and aesthetic meanings simultaneously — 'a good person,' 'a good tool,' 'a good painting' use the same word for different things. The conflation is rarely noticed but shapes how moral arguments are made: things that work are assumed to be right.
+
+### Government
+category: Power & Politics  |  page: https://usnow.app/word/government/
+
+**Definition.** Servant to the people or threat to liberty — usually the same institution.
+
+**Phonetic.** guv·ərn·mənt
+
+**Origin.** Latin _gubernare_ — to steer, to pilot a ship. From Greek _kybernan_ — same meaning. The governing metaphor was always navigation — finding a course through unpredictable conditions. _Cybernetics_ and _governor_ share the same root.
+
+**How it's used.** In American political culture, 'government' became a term of suspicion in the late 20th century. Reagan's 1981 claim that 'government is not the solution; government is the problem' crystallized an anti-government politics that has since shaped policy for decades.
+
+### Growth
+category: Power & Politics  |  page: https://usnow.app/word/growth/
+
+**Definition.** Physical development, economic expansion, or population increase — not always good.
+
+**Phonetic.** grohth
+
+**Origin.** Old Norse _grōthr_ — growth. From Proto-Germanic roots related to growing, greening. Originally biological — plants growing — before becoming the primary metric of economic health in the 20th century.
+
+**How it's used.** GDP growth became the dominant measure of national success after World War II. Critics argue this conflates economic activity with wellbeing — a growing economy can coexist with falling life expectancy, rising inequality, and environmental destruction. Alternative metrics (happiness index, human development index) challenge the growth assumption.
+
+### Health
+category: Myself & I  |  page: https://usnow.app/word/health/
+
+**Definition.** Physical state, commercial industry, or human right.
+
+**Phonetic.** helth
+
+**Origin.** Old English _hælth_ — wholeness, a being whole. From _hāl_ — whole, uninjured. Related to _whole_, _heal_, and _holy_ — all from the same root. Health was originally about wholeness, not just the absence of disease.
+
+**How it's used.** The WHO's 1948 definition — 'a state of complete physical, mental and social well-being' — was radical in its scope. In American political life, health is debated primarily as a market commodity or as a government program. The original sense of wholeness rarely enters the policy conversation.
+
+### Hegemony
+category: Power & Politics  |  page: https://usnow.app/word/hegemony/
+
+**Definition.** A dominant military, economic, and cultural force in a given region (i.e., global).
+
+**Phonetic.** he·jem·ə·nee
+
+**Origin.** Greek _hegemonia_ — leadership, supremacy. From _hegemón_ — leader, guide. Used in ancient Greece to describe the dominant city-state in an alliance. Reintroduced into political theory through the Italian Marxist Antonio Gramsci, whose concept of 'cultural hegemony' — dominance through ideas rather than force — has been enormously influential.
+
+**How it's used.** In international relations: the dominance of a single state. In cultural theory (Gramsci's usage): the way a dominant group maintains power by making its values, assumptions, and worldview seem natural and universal rather than particular and imposed. 'American hegemony' can refer to military and economic dominance; 'cultural hegemony' refers to the global spread of American media, language, and values.
+
+### Heritage
+category: Origins  |  page: https://usnow.app/word/heritage/
+
+**Definition.** Pride, mythology, or inheritance — rarely examined.
+
+**Phonetic.** her·i·tij
+
+**Origin.** Old French _heritage_ — inheritance, legacy. From _heriter_ — to inherit. From Latin _heres_ — heir. Originally strictly legal — what you were entitled to inherit — before becoming cultural and emotional.
+
+**How it's used.** 'Heritage' carries a soft glow that 'history' doesn't — it implies something worth preserving, something to be proud of. 'Heritage sites,' 'heritage language,' 'Southern heritage' — each use involves a claim about what deserves to be passed forward, and what does not.
+
+### History
+category: Not Classified  |  page: https://usnow.app/word/history/
+
+**Definition.** What happened in the past, less what we recorded, less what gets lost or erased.
+
+**Phonetic.** his·tə·ree
+
+**Origin.** Greek _historia_ — inquiry, knowledge obtained by inquiry. From _histor_ — knowing, learned. Herodotus used it to describe his method — asking questions, gathering accounts. Originally a process, not a body of content.
+
+**How it's used.** 'History is written by the winners' is the folk wisdom that captures the word's political dimension. Curriculum battles over what history gets taught are battles over national identity. 'We're on the right side of history' borrows the word's authority to claim future vindication.
+
+### Home
+category: Myself & I  |  page: https://usnow.app/word/home/
+
+**Definition.** Where we're from, where we live, and where we belong — defined by us and by others.
+
+**Phonetic.** hohm
+
+**Origin.** Old English _hām_ — village, estate, dwelling place. Proto-Germanic root. Originally referred to a settled place and community — closer to 'homeland' than 'house.' The intimate, interior sense of home as sanctuary developed later.
+
+**How it's used.** Home carries enormous emotional and legal weight — property rights, privacy protections, family law all pivot on it. 'Homeland' was a relatively unused word in American English until 2001, when the Department of Homeland Security gave it a new and specific charge.
+
+### Immigrant
+category: Origins  |  page: https://usnow.app/word/immigrant/
+
+**Definition.** Welcome newcomer, despised threat, or needed labor force — depending on the decade.
+
+**Phonetic.** im·i·grənt
+
+**Origin.** Latin _immigrare_ — to move into. From _in-_ (into) + _migrare_ (to move). The word distinguishes the direction of movement — immigration is into a place, emigration is out of one. Neutral in origin; politically charged in use.
+
+**How it's used.** The word choice matters: 'immigrant,' 'migrant,' 'undocumented immigrant,' 'illegal alien,' 'newcomer' — each frames the same person differently and implies different policy responses. The shift from 'illegal alien' (a legal category) to 'undocumented immigrant' (a status description) was itself a political act.
+
+### Immunity
+category: Power & Politics  |  page: https://usnow.app/word/immunity/
+
+**Definition.** Protection from consequence — in medicine, from disease; in law, from prosecution. More often a veil for accountability and a shield for power.
+
+**Phonetic.** i·myoo·ni·tee
+
+**Origin.** Latin _immunitas_ — exemption from public service or obligation. From _in-_ (not) + _munus_ (duty, service). Originally meant exemption from civic obligations. Medical use (protection from disease) developed in the 19th century. Legal use parallels the original Latin meaning.
+
+**How it's used.** Several distinct legal categories: sovereign immunity (governments generally cannot be sued), qualified immunity (protection for government officials acting in good faith), prosecutorial immunity, and witness immunity. The Supreme Court's 2024 ruling on presidential immunity — holding that former presidents have broad immunity from criminal prosecution for official acts — significantly expanded the concept in ways that remain actively debated.
+
+### Imperialism
+category: History & Civilization  |  page: https://usnow.app/word/imperialism/
+
+**Definition.** The extension of a nation's power over others. By conquest, trade, or culture. Consent not required.
+
+**Phonetic.** im·peer·ee·ə·liz·əm
+
+**Origin.** From Latin _imperium_ — command, empire. The modern political term emerged in the 1870s-1880s during the height of European colonial expansion. Became a central term of Marxist and anti-colonial political theory in the 20th century.
+
+**How it's used.** Describes both formal empire (direct political control of territory) and informal empire (economic and political dominance without administration). Lenin's 1917 pamphlet _Imperialism, the Highest Stage of Capitalism_ defined it as capitalism's inevitable global expansion — a definition that shaped anti-colonial movements worldwide. In contemporary use, it is applied to US foreign policy, Chinese Belt and Road investment, and other forms of great power influence. The word carries significant political charge.
+
+### Incarceration
+category: History & Civilization  |  page: https://usnow.app/word/incarceration/
+
+**Definition.** Confinement as punishment, deterrent, or rehabilitation. Sometimes just for being. State function and business model.
+
+**Phonetic.** in·kar·sə·ray·shən
+
+**Origin.** Latin _incarcerare_ — to imprison. From _in-_ (in) + _carcer_ (prison, enclosure). The Latin _carcer_ is also the root of _cancel_. The systematic, large-scale use of incarceration as criminal punishment is a development of the 18th and 19th centuries.
+
+**How it's used.** The United States incarcerates more people per capita than any other country — roughly 1.8 million in state and federal facilities. 'Mass incarceration' entered scholarly and activist usage in the 1990s and 2000s. Sociology distinguishes punishment, deterrence, rehabilitation, and incapacitation as competing rationales — though research generally finds incapacitation does the most actual work.
+
+### Independence
+category: Not Classified  |  page: https://usnow.app/word/independence/
+
+**Definition.** Self-determination. For nations, individuals, and anyone who can sustain it.
+
+**Phonetic.** in·di·pen·dəns
+
+**Origin.** From Latin _in-_ (not) + _dependere_ (to hang from, depend on). Entered English in the 17th century. Its modern political meaning — a state's sovereignty from another — was cemented by the American Declaration of Independence in 1776 and successive independence movements through the 19th and 20th centuries.
+
+**How it's used.** Designates the legal-political status of self-governance. Independence Day is celebrated in dozens of countries marking liberation from colonial rule. The word can mask actual conditions — formal political independence often coexists with economic dependence and foreign influence. Postcolonial scholarship has interrogated this gap.
+
+### Indigenous
+category: Origins  |  page: https://usnow.app/word/indigenous/
+
+**Definition.** People who originate in a given place through ancestry. Most applicable when displaced or destroyed.
+
+**Phonetic.** in·dij·ə·nəs
+
+**Origin.** Latin _indigena_ — native, from _indi-_ (within) + _gena_ (born, from _gignere_ — to beget). Literally: born within. Used in English since the 17th century to mean native to a place.
+
+**How it's used.** In biology: species native to an ecosystem. In politics and law: peoples who inhabited a territory before colonial conquest and maintain distinct cultures, languages, and relationships to land. The UN Declaration on the Rights of Indigenous Peoples (2007) gives the term legal weight. In the United States, 'Indigenous' and 'Native American' are both used, with preference varying by community. The word carries legal implications for land rights, resource rights, and sovereignty that 'native' does not.
+
+### Inflation
+category: Power & Politics  |  page: https://usnow.app/word/inflation/
+
+**Definition.** When prices go up — which means when money's worth less. Natural or engineered. Intentional or not.
+
+**Phonetic.** in·flay·shən
+
+**Origin.** Latin _inflatio_ — a swelling, blowing up. From _inflare_ — to blow into, swell. The monetary sense — a general rise in prices — emerged in the 19th century as a metaphor: prices swelling, currency expanding. Earlier monetary disturbances were described as debasement or depreciation rather than inflation.
+
+**How it's used.** Measured by indices — the Consumer Price Index, Producer Price Index, and others. Central banks since the 1970s have generally targeted around 2% annual inflation as optimal. Hyperinflation — Weimar Germany, Zimbabwe, Venezuela — shows what happens when monetary discipline collapses. The political assignment of blame for inflation varies by ideology and rarely matches the economic evidence.
+
+### Information
+category: Knowledge & Learning  |  page: https://usnow.app/word/information/
+
+**Definition.** Raw material of knowledge. Not necessarily what happens to it after. (see also _Disinformation_ or _Misinformation_)
+
+**Phonetic.** in·fər·may·shən
+
+**Origin.** Latin _informatio_ — formation, conception, an outline. From _informare_ — to give form to, shape. From _in-_ (into) + _forma_ (form). Originally meant the giving of form or character — instruction, education. The modern sense of data communicated or received emerged in the 19th century.
+
+**How it's used.** Reframed in technical terms by Claude Shannon's 1948 information theory — information as the reduction of uncertainty, measured in bits. The 'Information Age' became a label for the post-industrial economy. 'Information warfare,' 'information ecosystem,' 'information overload' — the word now carries the weight of an environmental condition, something humans live inside rather than just receive.
+
+### Internet
+category: Knowledge & Learning  |  page: https://usnow.app/word/internet/
+
+**Definition.** The network that connects anyone to anything and isolates everyone from many things. Infrastructure, marketplace, and battlefield.
+
+**Phonetic.** in·tər·net
+
+**Origin.** Short for _internetwork_ — a network of networks. The term emerged in the 1970s with the development of TCP/IP protocols that let disparate networks interconnect. The Department of Defense's ARPANET, launched in 1969, was its precursor. Became the dominant global network through the 1990s.
+
+**How it's used.** Distinguished from the World Wide Web — the Web is one service running on the Internet, alongside email, file transfer, and others. Public commercial use began in the early 1990s. The transition from a relatively decentralized network to one dominated by a few platform companies is one of the major political-economic developments of the early 21st century.
+
+### Investment
+category: Power & Politics  |  page: https://usnow.app/word/investment/
+
+**Definition.** Building something or extracting value — both use the same word.
+
+**Phonetic.** in·vest·mənt
+
+**Origin.** Medieval Latin _investire_ — to clothe, to surround. From _in-_ + _vestire_ — to dress. Originally meant to clothe someone in the robes of an office — to invest with authority. The financial sense developed from the idea of committing resources to a purpose.
+
+**How it's used.** Government spending on education, healthcare, and infrastructure is called 'investment' by supporters and 'spending' by critics — same allocation, opposite framings. The word launders expenditure by implying return. 'Invest in your future' is used to sell everything from college tuition to lottery tickets.
+
+### Jihad
+category: Even Further Back  |  page: https://usnow.app/word/jihad/
+
+**Definition.** At its core, struggle. Striving and exerting oneself toward something worthy. Translation subject to misuse and manipulation.
+
+**Phonetic.** ji·had
+
+**Origin.** Arabic _jihad_ — struggle, effort, striving. From the root _j-h-d_ — to strive, to exert effort. In Islamic theology, the term encompasses both the inner spiritual struggle to live according to God's will and outward struggle in defense of the Muslim community. The Prophet Muhammad reportedly called the inner struggle 'the greater jihad.'
+
+**How it's used.** In Western media, almost exclusively used to mean holy war or terrorism. In Islamic theology and practice, the overwhelming majority of uses refer to the internal spiritual struggle — against one's own failings, temptations, and moral shortcomings. Armed jihad exists as a concept in Islamic law with specific conditions and limitations. The reduction of a complex theological concept to a single violent meaning is one of the more consequential translation failures in contemporary political discourse.
+
+### Judgment
+category: Community & Culture  |  page: https://usnow.app/word/judgment/
+
+**Definition.** Private thoughts, public criticism, legal ruling, and divine reckoning.
+
+**Phonetic.** juj·mənt
+
+**Origin.** Old French _jugement_ — legal decision. From Latin _judicare_ — to judge, from _jus_ (law, right) + _dicere_ (to say). Originally strictly legal — a formal pronouncement — before expanding to mean any evaluative opinion.
+
+**How it's used.** 'Don't judge' became a cultural injunction in the late 20th century — a democratizing of moral authority that also evacuated the concept of content. The religious sense (Last Judgment, divine reckoning) persists alongside the casual social sense.
+
+### Jurisdiction
+category: Power & Politics  |  page: https://usnow.app/word/jurisdiction/
+
+**Definition.** The authority that creates the authority that decides the law in a given place; and also the place.
+
+**Phonetic.** joor·is·dik·shən
+
+**Origin.** Latin _jurisdictio_ — administration of justice. From _juris_ (of law) + _dictio_ (saying, declaration). The legal authority to hear and decide cases.
+
+**How it's used.** Defines who has legal authority over a person, place, or subject matter. Federal versus state jurisdiction in the US produces ongoing conflicts. International jurisdiction — whether courts in one country can prosecute crimes committed in another — is contested. Questions of jurisdiction frequently determine whether accountability is possible at all: crimes committed in places with weak jurisdictional frameworks often go unprosecuted not because they are unknown but because no court has authority to act.
+
+### Justice
+category: Power & Politics  |  page: https://usnow.app/word/justice/
+
+**Definition.** Punishment that fits the crime, reasonable restitution, and fairness for all — good luck with that.
+
+**Phonetic.** jus·tis
+
+**Origin.** Latin _justitia_ — righteousness, equity. From _justus_ — just, righteous. From _jus_ — law, right. Justice and law were not synonyms in Latin — justice was the principle, law was the instrument. The gap between them is still the central problem of jurisprudence.
+
+**How it's used.** Three competing systems all use the word: retributive justice (punishment), restorative justice (repair), distributive justice (fairness of outcomes). Criminal justice, social justice, and economic justice describe different problems with the same word — and policy debates are often really disputes about which definition applies.
+
+### Labor
+category: Power & Politics  |  page: https://usnow.app/word/labor/
+
+**Definition.** The individual or collective workforce that produces goods and services — including better technology that reduces the need for labor. (see also _Work_)
+
+**Phonetic.** lay·bər
+
+**Origin.** Latin _labor_ — toil, exertion, hardship, suffering. The double meaning — work and the pain of work — is ancient. Entered English through Old French _labour_. The specifically obstetric sense — labor as childbirth — preserves the older meaning of painful exertion.
+
+**How it's used.** Central to political economy from Adam Smith through Marx — the labor theory of value held that human labor is the source of economic value. 'Labor' as a collective political actor — organized labor, the labor movement — distinguishes itself from 'work' which can be individual. The Labor Party in Britain and labor parties in other democracies institutionalize the worker as a political subject.
+
+### Language
+category: Origins  |  page: https://usnow.app/word/language/
+
+**Definition.** How we communicate and define our realities. Spoken, signed, written, drummed. Our first tool. (see also _Technology_)
+
+**Phonetic.** lang·gwij
+
+**Origin.** Old French _langage_. From Latin _lingua_ — tongue. The metaphor of language as tongue is nearly universal across language families. Romance languages, Germanic languages, Slavic languages, and many others derive their word for language from the word for the physical organ.
+
+**How it's used.** Studied by linguistics as a structured system of signs. Noam Chomsky's argument for an innate universal grammar reshaped the field in the mid-20th century. Sociolinguistics studies how language varies by community, class, and context. UNESCO estimates roughly half of the world's 7,000 languages are at risk of extinction this century — language loss has accelerated with globalization.
+
+### Law
+category: Power & Politics  |  page: https://usnow.app/word/law/
+
+**Definition.** Written norms and/or rules. And those authorized to decide whether and how to enforce them. (see also _Norms_)
+
+**Phonetic.** law
+
+**Origin.** Old Norse _lagu_ — something laid down or fixed. From Proto-Germanic _*lagam_ — to lay. Law was literally that which was laid down — settled, fixed, established. Related to _lie_ and _lay_ in English.
+
+**How it's used.** Rule of law implies law as neutral arbiter above power. Critical legal studies argues law is always an expression of power — who wrote it, who enforces it, and whose behavior it regulates tells the story. Both observations are true simultaneously.
+
+### Legacy
+category: Not Classified  |  page: https://usnow.app/word/legacy/
+
+**Definition.** What we leave behind and what we're blamed for.
+
+**Phonetic.** leg·ə·see
+
+**Origin.** Medieval Latin _legatia_ — office of a legate, then bequest. From _legare_ — to send as a deputy, to bequeath. Originally strictly about property left at death. The broader sense — what one leaves behind in terms of influence or reputation — is a modern extension.
+
+**How it's used.** Politicians, athletes, and executives are evaluated constantly on their 'legacy' — an accounting that happens before and after death. The word implies that actions will be judged by a future that may have different values. 'Legacy admission' to universities repurposes the word to describe inherited privilege.
+
+### Liberty
+category: Power & Politics  |  page: https://usnow.app/word/liberty/
+
+**Definition.** Freedom to learn and freedom to act without harm. (see also _Freedom_)
+
+**Phonetic.** lib·ər·tee
+
+**Origin.** Latin _libertas_ — freedom, the condition of a free person. From _liber_ — free. In Roman law, a specific legal status — the opposite of slavery. The Statue of Liberty, the Liberty Bell — the word carries a formal, civic weight that 'freedom' does not always.
+
+**How it's used.** In American political philosophy, liberty tends toward the negative — freedom from interference, especially from government. The word has been claimed most insistently by libertarian and conservative movements. 'Civil liberties' is a different usage — specific protections against state power.
+
+### Life
+category: Myself & I  |  page: https://usnow.app/word/life/
+
+**Definition.** Biological and biographical — defined by us and by others.
+
+**Phonetic.** līf
+
+**Origin.** Old English _lif_ — existence, way of living. Proto-Germanic root. Among the oldest words in the language. Biologically, legally, and philosophically contested at both ends — when it begins and when it ends.
+
+**How it's used.** 'Pro-life' as a political label emerged in the 1970s, appropriating the word's broadest possible meaning for a specific legislative agenda. The claim that opposing abortion is 'pro-life' while other life-related policies are not was noted early and has been contested ever since.
+
+### Lobby
+category: Power & Politics  |  page: https://usnow.app/word/lobby/
+
+**Definition.** People, groups, and money that influence politicians. Legislative telemarketing — named for where it originally took place.
+
+**Phonetic.** lob·ee
+
+**Origin.** The _lobby_ of the British House of Commons where members of the public could approach legislators. Came to mean the act of approaching and influencing them. The term 'lobbying' in its modern sense was established in American political usage by the mid-19th century.
+
+**How it's used.** Legal in the United States under First Amendment protections for petitioning government. Lobbyists are required to register under the Lobbying Disclosure Act. The industry spent approximately $4 billion in 2023. The term covers everything from a citizen contacting their representative to a former senator being paid millions to advocate for a corporation. The distance between those two activities is the distance between the word's democratic legitimacy and its current practice.
+
+### Loser
+category: Community & Culture  |  page: https://usnow.app/word/loser/
+
+**Definition.** The one who didn't get there first, didn't get lucky, or was eliminated by the competition. Also, someone we don't like. (see also _Winner_)
+
+**Phonetic.** loo·zər
+
+**Origin.** From Old English _losian_ — to perish, be destroyed. From _los_ — destruction, loss. The agentive sense — one who loses — developed in Middle English. The pejorative social use — 'loser' as a class of person rather than a participant who lost a contest — is largely 20th-century American.
+
+**How it's used.** Sharpened as a social epithet in late 20th-century American slang — from teen-movie shorthand to a defining vocabulary of Donald Trump's political rhetoric, where 'loser' was applied to opponents, journalists, and even soldiers. The word carries an unusual weight in American culture where winning is itself moralized. Compare with cultures that traditionally honor the dignified loser.
+
+### Love
+category: Myself & I  |  page: https://usnow.app/word/love/
+
+**Definition.** Connection and caring for another. Not possessive or conditional. Our driving force and only real salvation. Whether we realize it or not.
+
+**Phonetic.** luv
+
+**Origin.** Old English _lufu_. From Proto-Germanic _*lubo_. Related to Latin _libet_ (it pleases). Ancient Greek distinguished multiple types — _eros_ (passionate), _philia_ (friendship), _storge_ (familial), _agape_ (selfless). English flattens them all into one word.
+
+**How it's used.** Used across religious, romantic, familial, civic, and aesthetic registers without distinguishing them grammatically. The Greek typology has been revived in psychology and theology to mark distinctions the English word obscures. C.S. Lewis's _The Four Loves_ popularized the framework. Modern psychological research distinguishes attachment, passion, and intimacy as separable components.
+
+### Masculine
+category: Origins  |  page: https://usnow.app/word/masculine/
+
+**Definition.** The active, protective, assertive, and logical forces of the universe — linear and momentary, but perpetual. (compare with _Feminine_)
+
+**Phonetic.** mas·kyə·lin
+
+**Origin.** Latin _masculinus_ — male, of male sex. From _masculus_ — male, manly. Originally a grammatical term, one of three Latin genders along with feminine and neuter. The extension to social and cosmological categories is ancient and varies across cultures.
+
+**How it's used.** Operates in grammatical, biological, psychological, archetypal, and cosmological registers. Jung's animus, the yang in Taoist thought, the Hindu Shiva — many traditions treat masculine and feminine as complementary cosmic principles independent of bodies. Modern gender theory has produced extensive analysis of how masculine identity is constructed, performed, and contested.
+
+### Media
+category: Knowledge & Learning  |  page: https://usnow.app/word/media/
+
+**Definition.** The space between the event and the audience. Print, broadcast, digital, social — and now, the algorithm. (see also _Algorithm_)
+
+**Phonetic.** mee·dee·ə
+
+**Origin.** Latin _media_ — plural of _medium_, meaning middle, intermediate. From _medius_ — middle. The use of 'media' to mean channels of communication emerged in the 1920s, shortened from 'mass media.' Marshall McLuhan's _Understanding Media_ (1964) gave the term its current theoretical weight.
+
+**How it's used.** Plural in formal use — 'the media are' — though singular use is now standard. Distinguished in scholarship by type: print, broadcast, social, digital. 'The media' as a collective political actor — to be praised or blamed — is largely a late-20th-century usage. Media literacy as an educational discipline emerged in response to the saturation of information environments.
+
+### Memory
+category: Not Classified  |  page: https://usnow.app/word/memory/
+
+**Definition.** Individual, collective, and media-managed — simultaneously.
+
+**Phonetic.** mem·ə·ree
+
+**Origin.** Latin _memoria_ — remembrance. From _memor_ — mindful. Related to _mourn_ — both from Proto-Indo-European roots meaning to be anxious, to care about. Memory and grief were linguistically adjacent from the beginning.
+
+**How it's used.** Individual memory is unreliable in ways now well documented by psychology. Collective memory — what a culture chooses to remember — is shaped by power. Monuments, holidays, and textbooks are memory management systems. 'Never forget' is an instruction to override forgetting that would otherwise occur naturally.
+
+### Meritocracy
+category: Power & Politics  |  page: https://usnow.app/word/meritocracy/
+
+**Definition.** The extent to which a system's outcomes are determined by talent and effort, and not just opportunity. (see also _Opportunity_)
+
+**Phonetic.** mer·i·tok·rə·see
+
+**Origin.** Coined by British sociologist Michael Young in his 1958 satirical novel _The Rise of the Meritocracy_ — as a warning, not a celebration. Young intended it as a critique of a society that sorted people by test scores and called the result fair.
+
+**How it's used.** Adopted as the opposite of its original intent. 'Meritocracy' is now invoked to justify inequality — if outcomes are based on merit, then unequal outcomes reflect unequal merit. Young spent his last years dismayed that his coinage had been turned into an endorsement of what he had meant to satirize. Research consistently shows that outcomes in supposedly meritocratic systems are strongly predicted by family income, parental education, and ZIP code — variables that have nothing to do with individual merit.
+
+### Military Industrial Complex
+category: Power & Politics  |  page: https://usnow.app/word/military-industrial-complex/
+
+**Definition.** The self-sustaining relationship between defense, government, and industry — and its revolving door. Also, a five-star-general-prior-President’s predictive warning. (see also _The Revolving Door_)
+
+**Phonetic.** mil·i·ter·ee in·dus·tree·əl kom·pleks
+
+**Origin.** Coined by President Dwight D. Eisenhower in his farewell address on January 17, 1961. Eisenhower — Supreme Commander of Allied Forces in WWII — warned specifically against 'the acquisition of unwarranted influence, whether sought or unsought, by the military-industrial complex.'
+
+**How it's used.** Describes the self-reinforcing system of defense contractors, Pentagon procurement, congressional defense appropriations, and the revolving door between military service and contractor employment. The US defense budget exceeds $900 billion annually — more than the next ten countries combined. The Pentagon has failed five consecutive audits. The term is used both as analysis and as accusation; its usefulness is that it identifies a structural problem rather than individual corruption.
+
+### Minority
+category: Origins  |  page: https://usnow.app/word/minority/
+
+**Definition.** Numerical or structural — not always the same.
+
+**Phonetic.** mi·nor·i·tee
+
+**Origin.** Latin _minoritas_ — lesser number. From _minor_ — smaller, lesser. Originally strictly mathematical — the smaller of two quantities. Applied to people and groups, the word carries the mathematical sense but also implies reduced power and rights.
+
+**How it's used.** Numerical minority and structural minority are not the same — women are a numerical majority in most societies but have historically held minority power. 'Minority rights' in constitutional law protects the smaller group from the larger; 'minority community' in social usage refers to groups marginalized by race, ethnicity, or identity.
+
+### Miracle
+category: Even Further Back  |  page: https://usnow.app/word/miracle/
+
+**Definition.** Divine intervention or improbable event — depends on belief.
+
+**Phonetic.** mir·i·kəl
+
+**Origin.** Latin _miraculum_ — object of wonder. From _mirari_ — to wonder at. Related to _mirror_ — both from seeing something astonishing. Originally a neutral word for something wonderful before narrowing to mean specifically divine intervention.
+
+**How it's used.** Retained religious meaning while also acquiring secular uses — 'economic miracle,' 'medical miracle.' The secular uses borrow the emotional charge of divine intervention without the theological commitment. Whether the gap between the two uses matters is exactly the question the word raises.
+
+### Misinformation
+category: Knowledge & Learning  |  page: https://usnow.app/word/misinformation/
+
+**Definition.** False facts, or information that those in power call false. (see also _Information_ or _Disinformation_)
+
+**Phonetic.** mis·in·fər·may·shən
+
+**Origin.** From _mis-_ (wrongly) + _information_. The prefix _mis-_ is from Old English, implying wrongness or error. Distinct from _disinformation_ (deliberately false) and _malinformation_ (true but used harmfully) — a distinction rarely made in public debate.
+
+**How it's used.** The word gained enormous political currency in the 2010s as social media amplified false content. Its use became contested when the same label was applied to heterodox scientific claims later proven correct, suppressed political speech, and genuinely false propaganda — without distinguishing between them.
+
+### Modern
+category: Not Classified  |  page: https://usnow.app/word/modern/
+
+**Definition.** Current, superior, or Western — often the latter.
+
+**Phonetic.** mod·ərn
+
+**Origin.** Late Latin _modernus_ — of the present time. From _modo_ — just now, recently. The word is only about recency — modern means now. Its association with progress, Western development, and superiority to the past are cultural assumptions layered on top.
+
+**How it's used.** 'Modernization' became development policy language in the mid-20th century — implying a single path from traditional to modern that all societies should follow. Critics noted this path looked remarkably like the Western industrialized one. The word still carries assumptions about whose present counts as the standard.
+
+### Monarchy
+category: History & Civilization  |  page: https://usnow.app/word/monarchy/
+
+**Definition.** Rule by birthright: royalty, nobility, and aristocrats. Kings, queens, and dynasties. Celebrated, ceremonial, and sometimes unseen.
+
+**Phonetic.** mon·ər·kee
+
+**Origin.** Greek _monarkhia_ — rule by a single person. From _monos_ (alone) + _arkhein_ (to rule). Distinguished by Aristotle from aristocracy and democracy. Constitutional monarchy — sovereign authority limited by law and parliament — developed in English political history from the 17th century.
+
+**How it's used.** Survives in 43 sovereign states, including 26 with reigning monarchs as heads of state. Roles range from ceremonial (Sweden, Japan) to active governance (Saudi Arabia, Brunei). Constitutional monarchies in Europe maintain royal families as symbolic institutions. Debates about abolition recur — most often in the U.K., the Netherlands, and other Commonwealth nations.
+
+### Morality
+category: Community & Culture  |  page: https://usnow.app/word/morality/
+
+**Definition.** What is said to be right and wrong — by nature, by God, or by edict. To some, dynamic or even a reason to destroy.
+
+**Phonetic.** mə·ral·i·tee
+
+**Origin.** Latin _moralitas_ — moral character, manner. From _moralis_ — relating to morals. From _mos_ (plural _mores_) — custom, character. Cicero coined the Latin term as a translation of the Greek _ethikos_. Originally about custom and character before being narrowed to questions of right and wrong.
+
+**How it's used.** Distinguished by some philosophers from ethics — morality as the actual norms a culture holds, ethics as the philosophical reflection on them. Moral psychology, including Jonathan Haidt's work on moral foundations, has mapped how moral intuitions vary across cultures and political orientations. The relativism-versus-universalism debate runs through anthropology and theology.
+
+### Myth
+category: Origins  |  page: https://usnow.app/word/myth/
+
+**Definition.** The obscure stories of our creation and original history. Basic to humanity. Captured, controlled, and corrupted by our institutions.
+
+**Phonetic.** mith
+
+**Origin.** Greek _mythos_ — speech, word, story. Originally just 'a story told' without the connotation of falsehood. The opposition between _mythos_ and _logos_ (rational discourse) was developed by Greek philosophers. The modern sense of myth as a false belief is a contraction of the older meaning.
+
+**How it's used.** Studied by mythography, comparative religion, and depth psychology as sacred narrative carrying cultural meaning — Joseph Campbell's hero's journey, Mircea Eliade's sacred time, Carl Jung's archetypes. In journalism and politics, 'myth' typically means a widely held false belief to be debunked. The same word covers both senses.
+
+### Narrative
+category: Knowledge & Learning  |  page: https://usnow.app/word/narrative/
+
+**Definition.** Story or spin — the frame around the facts. (see also _Spin_ or _Agenda_)
+
+**Phonetic.** nar·ə·tiv
+
+**Origin.** Latin _narrare_ — to tell, relate. From _gnarus_ — knowing. Related to _knowledge_ — narrative was always tied to knowing and telling. Entered political and media language heavily in the late 20th century.
+
+**How it's used.** 'Controlling the narrative' entered political language as a substitute for 'controlling the story' — but 'narrative' carries more intellectual weight, implying a constructed frame rather than merely a sequence of events. Widely used and widely distrusted — 'that's just a narrative' is now a dismissal.
+
+### Nation
+category: Origins  |  page: https://usnow.app/word/nation/
+
+**Definition.** A place, a people, a government, or an idea. May also be a country. (see also _Country_)
+
+**Phonetic.** nay·shən
+
+**Origin.** Latin _natio_ — birth, origin, race of people. From _nasci_ — to be born. Originally meant a people united by birth or origin — ethnic rather than political. The idea of a nation as a political-territorial unit came much later, emerging strongly in the 19th century.
+
+**How it's used.** Nation and state are often conflated but were designed to solve different problems. A state is a political-legal entity; a nation is a cultural-ethnic identity. Nation-states — where the two align — are the 20th century norm but were never universal. Nationalism is the political doctrine that they should align.
+
+### Nationalism
+category: History & Civilization  |  page: https://usnow.app/word/nationalism/
+
+**Definition.** Love of country as a political force. Ranges from pride to persecution.
+
+**Phonetic.** nash·ə·nə·liz·əm
+
+**Origin.** From Latin _natio_ — birth, tribe, people born together. Nationalism as a political movement emerged in Europe in the late 18th and 19th centuries, tied to the French Revolution's idea of the sovereign nation-people. Before nationalism, loyalty was typically to dynasties, religions, or localities rather than nations.
+
+**How it's used.** Political scientists distinguish civic nationalism (attachment to shared political values and institutions, open to anyone who joins) from ethnic nationalism (attachment to a particular people defined by ancestry, language, or religion). Both exist along spectrums. The 19th century's nationalist movements created modern nation-states and freed peoples from empires. The 20th century's nationalist movements also produced two world wars and the Holocaust. The word has no fixed valence — what matters is what kind and toward whom.
+
+### Native
+category: Origins  |  page: https://usnow.app/word/native/
+
+**Definition.** Where you were born. And who was there before.
+
+**Phonetic.** nay·tiv
+
+**Origin.** Latin _nativus_ — innate, natural, from birth. From _nasci_ — to be born. Related to _nation_ and _nature_. The same root — being born — generates all three words. Who counts as native depends entirely on where you start the clock.
+
+**How it's used.** 'Native American' as a term replaced 'Indian' in official usage in the latter 20th century — a shift in naming that carried political weight. 'Going native' was a colonial phrase for assimilation into local culture, invariably pejorative. The word's authority rests entirely on how far back 'native' is taken.
+
+### Natural
+category: Community & Culture  |  page: https://usnow.app/word/natural/
+
+**Definition.** From nature, or morally correct. The confusion sells.
+
+**Phonetic.** nach·ər·əl
+
+**Origin.** Latin _naturalis_ — by birth, according to nature. From _natura_ — nature, character, essence. From _nasci_ — to be born. Natural, nation, and native all share the birth root — what is natural is what was there at birth.
+
+**How it's used.** 'Natural' is among the most powerful rhetorical moves in moral argument — if something is natural, it appears beyond human choice or criticism. 'Unnatural' works the same way in reverse. The fallacy of moving from 'is natural' to 'is good' — the naturalistic fallacy — was identified by philosophers but thrives in everyday argument.
+
+### News
+category: Knowledge & Learning  |  page: https://usnow.app/word/news/
+
+**Definition.** Events we select and report. Some manufactured. The picking may be the story.
+
+**Phonetic.** nyooz
+
+**Origin.** Middle English _newes_ — new things, tidings. Plural of _new_. The word is simply the plural of new — news was originally just new things. The institutional machinery of journalism is entirely absent from the etymology.
+
+**How it's used.** The business model of news has shaped its content at every stage — town crier, penny press, broadcast, cable, social media. 'Fake news' as a phrase was coined to describe fabricated content and then repurposed by politicians to describe unfavorable coverage, draining it of specific meaning.
+
+### Normal
+category: Origins  |  page: https://usnow.app/word/normal/
+
+**Definition.** The average, the standard, and what we agree not to question.
+
+**Phonetic.** nor·məl
+
+**Origin.** Latin _normalis_ — made according to a carpenter's square. From _norma_ — carpenter's square, rule, pattern. Originally a technical term meaning 'at right angles' — perfectly perpendicular — before becoming a social category.
+
+**How it's used.** The shift from 'normal' as statistical average to 'normal' as social standard is the shift that does the most work. 'That's not normal' can mean it's rare (descriptive) or it's unacceptable (prescriptive). The two meanings are conflated constantly, most harmfully in medical and psychological contexts.
+
+### Norms
+category: Community & Culture  |  page: https://usnow.app/word/norms/
+
+**Definition.** The mostly unwritten rules of acceptable behavior in a given place and time. Enforced by others, even without law or in spite of it. (see also _Reasonable_, _Normal_, or _Law_)
+
+**Phonetic.** norms
+
+**Origin.** Latin _norma_ — carpenter's square, rule, pattern. Originally a physical tool for ensuring right angles. By analogy, a standard or rule of behavior. The sociological sense — shared expectations governing conduct in a group — was developed by Emile Durkheim and later sociologists in the late 19th and 20th centuries.
+
+**How it's used.** Distinguished by sociology and political science from laws (codified, enforced by the state) and customs (informal, varying by group). Constitutional democracies are widely understood to rely on unwritten norms — the willingness of officials to follow conventions not strictly required by law. Erosion of democratic norms became a major theme of political analysis in the 2010s.
+
+### Occupation
+category: History & Civilization  |  page: https://usnow.app/word/occupation/
+
+**Definition.** Military control of an area; often starts as temporary. Also your job. Also the space you take up.
+
+**Phonetic.** ok·yoo·pay·shən
+
+**Origin.** Latin _occupatio_ — a taking possession, from _occupare_ — to seize, take up. In international law, military occupation has a specific meaning established by the Hague Regulations of 1907 and the Fourth Geneva Convention of 1949: temporary military control of territory that does not transfer sovereignty.
+
+**How it's used.** International humanitarian law places specific obligations on occupying powers — to protect civilian populations, maintain public order, and not permanently alter the territory. The Israeli military occupation of the West Bank, ongoing since 1967, is the longest military occupation in the modern era and the subject of extensive legal and political debate. Germany's occupation of France during WWII and the US occupation of Japan and Germany after WWII are historical examples. The word carries legal weight that 'control' does not.
+
+### Oligarchy
+category: Power & Politics  |  page: https://usnow.app/word/oligarchy/
+
+**Definition.** "Government" by those who can buy government. The private extraction of public wealth and resources in a collapsing society — like birds of prey.
+
+**Phonetic.** ol·ə·gar·kee
+
+**Origin.** Greek _oligarkhia_ — rule by the few. From _oligoi_ (few) + _arkhein_ (to rule). Aristotle distinguished oligarchy as the corrupted form of aristocracy — rule by the wealthy in their own interest rather than the common good. Entered English in the 16th century with its critical edge intact.
+
+**How it's used.** Applied to post-Soviet Russia in the 1990s when a small group acquired immense wealth through privatization of state assets. Increasingly applied in scholarly analysis of the United States — a 2014 Princeton study by Gilens and Page found policy outcomes correlate more with the preferences of the wealthy than with majority opinion. The word has lost its purely historical sense.
+
+### Opinion
+category: Knowledge & Learning  |  page: https://usnow.app/word/opinion/
+
+**Definition.** Public and private personal views. Often treated as fact. (see _Fact_)
+
+**Phonetic.** ə·pin·yən
+
+**Origin.** Latin _opinio_ — belief, conjecture, reputation. From _opinari_ — to think, believe. Always carried a sense of uncertainty — an opinion was a belief held without certainty, distinct from knowledge. The distinction has largely collapsed in common use.
+
+**How it's used.** 'That's just your opinion' is used to dismiss established findings — a move that exploits the original sense (uncertain belief) to undermine what is actually well-evidenced. The phrase 'in my opinion' disclaims responsibility for a claim rather than honestly flagging uncertainty.
+
+### Opportunity
+category: Community & Culture  |  page: https://usnow.app/word/opportunity/
+
+**Definition.** Access to possibility. The inequality in nature is exacerbated by design. Sold as meritocracy. (see also _Meritocracy_)
+
+**Phonetic.** op·ər·too·ni·tee
+
+**Origin.** Latin _opportunitas_ — fitness, advantage. From _opportunus_ — favorable, suitable. Originally a nautical term — _ob portum veniens_ meant 'coming toward the port,' said of winds favorable for entering harbor. The word's metaphor of a moment of favorable conditions is built into its origin.
+
+**How it's used.** Central to liberal political philosophy and American civic mythology — equality of opportunity as the alternative to equality of outcome. Sociology distinguishes opportunity from access; opportunity from outcome. Pierre Bourdieu's work on cultural capital showed how unequal access to social, cultural, and economic resources reproduces inequality across generations even where formal opportunity is equal.
+
+### Order
+category: Power & Politics  |  page: https://usnow.app/word/order/
+
+**Definition.** Natural rhythm, structured routine, or authority to restrict liberty.
+
+**Phonetic.** or·dər
+
+**Origin.** Latin _ordo_ — row, arrangement, rank. From Proto-Indo-European roots meaning to put in order. Military rank, religious orders, social hierarchy, and the injunction to 'restore order' all descend from the same root: arrangement by rank.
+
+**How it's used.** 'Law and order' as a political phrase dates to the Nixon era and has been reliably deployed since to signal tough-on-crime politics. 'Order' implies there was order before, that disorder is an intrusion, and that restoration is the goal — all contestable assumptions.
+
+### Original Sin
+category: Even Further Back  |  page: https://usnow.app/word/original-sin/
+
+**Definition.** The theological and secular concept that humanity inherits the guilt of Adam and Eve's desire for knowledge — also called disobedience.
+
+**Phonetic.** ə·rij·ə·nəl sin
+
+**Origin.** The doctrine was systematized by Augustine of Hippo in the 4th-5th century CE, drawing on Paul's letter to the Romans. Augustine argued that Adam's sin was transmitted to all humanity through reproduction — a formulation that shaped Western Christianity's understanding of human nature, sexuality, and the need for redemption.
+
+**How it's used.** In theology: the condition of inherited sinfulness requiring divine grace for salvation. Protestant and Catholic traditions understand it differently; Eastern Orthodox Christianity has a distinct formulation. In secular use: applied metaphorically to foundational wrongs that continue to shape a society — American slavery as 'original sin,' the dispossession of indigenous peoples as 'original sin.' The metaphor is apt in that it captures something transmitted, present before any individual's choices, and requiring more than individual effort to address.
+
+### Pain
+category: Myself & I  |  page: https://usnow.app/word/pain/
+
+**Definition.** Significant physical, psychological, or existential suffering. Always relative. Perhaps the price of too much pleasure, or just being alive. (see also _Pleasure_ or _Suffering_)
+
+**Phonetic.** payn
+
+**Origin.** Old French _peine_ — punishment, suffering. From Latin _poena_ — penalty, punishment. From Greek _poine_ — fine, ransom. Originally a juridical term — the penalty imposed for an offense — before broadening to mean suffering generally. The link between pain and punishment is embedded in the word.
+
+**How it's used.** Studied across neuroscience, medicine, and philosophy. The International Association for the Study of Pain has revised its definition to capture both sensory and emotional dimensions. Chronic pain is now understood as a condition distinct from acute pain. The opioid crisis in the U.S. emerged from medical responses to pain in the late 1990s and 2000s.
+
+### Patriot
+category: Power & Politics  |  page: https://usnow.app/word/patriot/
+
+**Definition.** Lover of country, or our version of it. Hating the others — optional.
+
+**Phonetic.** pay·tree·ət
+
+**Origin.** Greek _patriōtēs_ — fellow-countryman. From _patrios_ — of one's fathers, ancestral. From _patēr_ — father. Originally meant a fellow citizen or compatriot — without the specific devotion implied today. Patriotism as an actively celebrated virtue is relatively modern.
+
+**How it's used.** The word has been weaponized to mean political conformity. 'Patriot Act,' 'Patriot' as a name for militias, far-right media outlets, and political parties — all claim ownership of love of country as a way of questioning others' loyalty. Ambrose Bierce defined it in 1906 as 'combustible rubbish ready to the torch of any one ambitious to illuminate his name.'
+
+### Perspective
+category: Knowledge & Learning  |  page: https://usnow.app/word/perspective/
+
+**Definition.** The angle or viewpoint from which we see and understand the world. Shapes everything we each think we know.
+
+**Phonetic.** pər·spek·tiv
+
+**Origin.** Latin _perspectiva_ — the science of optics. From _perspicere_ — to see through, look at closely. From _per-_ (through) + _specere_ (to look). Originally a technical term in optics and visual art — the geometric rendering of three-dimensional space on a two-dimensional surface, formalized in the Italian Renaissance.
+
+**How it's used.** Borrowed from visual representation into cognition and discourse — one's perspective as one's vantage point. The extension carries the implication that other vantage points exist. Multiple-perspectives reasoning is foundational to empathy, journalism, history, and law. The phrase 'put it in perspective' invokes the original optical sense — to see the whole proportionally.
+
+### Petrodollar
+category: Power & Politics  |  page: https://usnow.app/word/petrodollar/
+
+**Definition.** The so-far dominant, self-sustaining system of selling oil in US dollars through extraction enforcement. Replaced the gold standard with military might and more money.
+
+**Phonetic.** pe·troh·dol·ər
+
+**Origin.** Coined by Georgetown economist Ibrahim Oweiss in 1973 following the Arab oil embargo and the Nixon administration's decision to take the dollar off the gold standard. The arrangement formalized by the US-Saudi agreement of 1974.
+
+**How it's used.** The petrodollar system — Saudi Arabia and OPEC pricing oil in dollars and recycling oil revenues into US Treasury bonds — gives the dollar its status as global reserve currency and allows the US to run persistent trade deficits without the consequences other countries would face. It is why the US can sanction countries by cutting off their dollar access, and why challenges to dollar-denominated oil pricing (Saddam Hussein's 2000 switch to euros, Iran's attempts to trade in other currencies) are taken seriously as strategic threats.
+
+### Pleasure
+category: Myself & I  |  page: https://usnow.app/word/pleasure/
+
+**Definition.** The opposite, or flip side, of pain and suffering. What we seek, what we're sold, and what we're warned to moderate. (see also _Pain_ or _Suffering_)
+
+**Phonetic.** plezh·ər
+
+**Origin.** Old French _plaisir_ — to please, delight. From Latin _placere_ — to be pleasing. Related to _placid_ and _placate_. The hedonistic philosophical tradition — Epicurus through Bentham and Mill — has analyzed pleasure as central to ethics, while many religious traditions have warned against it.
+
+**How it's used.** Central to utilitarian ethics — Jeremy Bentham proposed a 'felicific calculus' to compute pleasure and pain. Modern neuroscience has identified the reward circuits — dopamine, opioid, endocannabinoid systems — that mediate pleasurable experience. The hedonic treadmill describes the tendency for sustained pleasure to recalibrate to a baseline, requiring escalation to maintain intensity.
+
+### Police
+category: Power & Politics  |  page: https://usnow.app/word/police/
+
+**Definition.** "Public" safety built from private security. State authority or occupying force. Sometimes all in the same shift.
+
+**Phonetic.** pə·lees
+
+**Origin.** Latin _politia_ — civil administration. From Greek _polis_ — city. The modern professional police force emerged with London's Metropolitan Police in 1829, founded by Sir Robert Peel — hence 'bobbies.' In the American South, early police forces grew partly out of slave patrols.
+
+**How it's used.** Varies enormously across countries — armed and military-style in the U.S., often unarmed in much of Europe, militarized in conflict zones. The 2020 protests following George Floyd's murder prompted significant reform debates — defunding, abolition, community policing — with limited implementation. The relationship between police and policed communities has been a persistent source of conflict throughout U.S. history.
+
+### Populism
+category: Power & Politics  |  page: https://usnow.app/word/populism/
+
+**Definition.** The people's voice against the powers that be — may be mob rule, even when created by the powers that be.
+
+**Phonetic.** pop·yoo·liz·əm
+
+**Origin.** Latin _populus_ — the people. The American Populist Party emerged in the 1890s as a farmers' movement against railroad monopolies and financial elites — a specific left-wing movement with specific economic demands. The generic use of 'populism' as a style came later.
+
+**How it's used.** Populism now describes both left and right political movements that claim to represent 'the people' against 'the elite' — so broad it has nearly lost descriptive power. Academics debate whether populism is a thin ideology, a political style, or a rhetorical strategy. The one constant: its definition of 'the people' always excludes someone.
+
+### Poverty
+category: Power & Politics  |  page: https://usnow.app/word/poverty/
+
+**Definition.** Living below some standard. The individual, the group, and the system each blame another.
+
+**Phonetic.** pov·ər·tee
+
+**Origin.** Old French _poverté_. Latin _paupertas_ — smallness of means. From _pauper_ — poor. The Latin root implied not destitution but insufficiency — having less than required. The threshold of poverty is always defined relative to something.
+
+**How it's used.** The U.S. poverty line was established in 1963 based on food costs — a methodology widely criticized as outdated. Whether poverty is understood as a personal failing, a structural condition, or a policy choice determines what solutions are considered. The framing precedes the number.
+
+### Power
+category: Power & Politics  |  page: https://usnow.app/word/power/
+
+**Definition.** Energy, force, and authority. (Often corrupting those with it. Seducing the rest.)
+
+**Phonetic.** pow·ər
+
+**Origin.** Old French _pooir_ — to be able. From Latin _potere_ — to be able. Related to _potent_, _possible_, _potency_. Power in its root is simply capacity — ability to do. The coercive dimension — power over — is an elaboration.
+
+**How it's used.** Political science distinguishes hard power (military, economic coercion) from soft power (cultural influence, attraction). Michel Foucault's analysis of power as diffuse, productive, and operating through norms rather than commands challenged the state-centered view. 'Speaking truth to power' assumes they are opposites; Foucault would question that.
+
+### Prayer
+category: Even Further Back  |  page: https://usnow.app/word/prayer/
+
+**Definition.** Communication with the divine. Or wishful thinking.
+
+**Phonetic.** prair
+
+**Origin.** Old French _preiere_. Latin _precaria_ — obtained by entreaty. From _precari_ — to entreat, pray. Related to _precarious_ — both come from asking for something you have no right to demand. Prayer is etymologically an uncertain request.
+
+**How it's used.** 'Thoughts and prayers' became a phrase of critique after mass shootings — shorthand for performed empathy without policy action. The phrase exposed the gap between the religious meaning (sincere petition to the divine) and its political deployment (public statement of sympathy).
+
+### Precedent
+category: Power & Politics  |  page: https://usnow.app/word/precedent/
+
+**Definition.** A prior decision that guides future ones, whether honored, adapted, or abandoned. The mechanism of consistency and change, in law and in life.
+
+**Phonetic.** pres·ə·dənt
+
+**Origin.** Latin _praecedere_ — to go before. The legal doctrine of _stare decisis_ — to stand by decided cases — formalizes precedent as the basis of common law. Courts are generally bound by their own prior decisions and by higher courts' decisions.
+
+**How it's used.** In law: prior court decisions that must be followed unless overturned. In politics: established norms and practices that shape expectations even without legal force. The Supreme Court's 2022 overturning of _Roe v. Wade_ — precedent since 1973 — raised questions about the doctrine's stability. Presidential precedents (two-term limit, peaceful transfer of power) function as constitutional norms even when not legally binding.
+
+### Private
+category: Not Classified  |  page: https://usnow.app/word/private/
+
+**Definition.** What belongs to you and what's hidden from view. Also, what's no longer public. I.e. utilities, prisons, and schools… and land and water… (compare with _Public_)
+
+**Phonetic.** prī·vət
+
+**Origin.** Latin _privatus_ — withdrawn from public life, belonging to oneself. From _privare_ — to deprive, separate. The Romans used the term for a person not holding public office — a private citizen as the absence of public role. The shift to mean owned by an individual is central to modern liberal political thought.
+
+**How it's used.** Operates across multiple domains — private property, private life, private sector. The boundary between private and public has shifted dramatically — public utilities have been privatized, private surveillance has eroded private life. The contested status of healthcare, education, and prisons as public or private is one of the central political questions of the era.
+
+### Privilege
+category: Origins  |  page: https://usnow.app/word/privilege/
+
+**Definition.** Advantage, blessing, or grievance.
+
+**Phonetic.** priv·uh·lij
+
+**Origin.** Latin _privilegium_ — a law applying to one person. From _privus_ (private, individual) + _lex/legis_ (law). Originally meant a special legal advantage — a specific law written for one person. The modern sense of unearned social advantage came through academic sociology in the late 20th century.
+
+**How it's used.** Peggy McIntosh's 1989 essay 'White Privilege: Unpacking the Invisible Knapsack' introduced the term to mainstream discourse. It then became one of the most contested words in American culture — simultaneously a sociological tool and a political flashpoint. Those who reject it most often conflate structural advantage with personal accusation.
+
+### Professional
+category: Community & Culture  |  page: https://usnow.app/word/professional/
+
+**Definition.** Trained, credentialed, and paid. The line between amateur and authority — sometimes just a fee.
+
+**Phonetic.** prə·fesh·ən·əl
+
+**Origin.** Latin _professio_ — public declaration, profession of faith. From _profiteri_ — to declare openly. Originally a religious term — taking holy orders required a public declaration. Extended to medicine, law, and divinity, which required formal training and oaths. The modern sense of any trained occupation emerged in the 19th century.
+
+**How it's used.** Sociology distinguishes professions by formal training, credentialing, codes of ethics, and self-regulation — doctors, lawyers, engineers, accountants. The professionalization of fields has been celebrated as quality control and criticized as gatekeeping. 'Professional' as an adjective ('that was unprofessional') invokes implicit standards that are often class-coded.
+
+### Progress
+category: Not Classified  |  page: https://usnow.app/word/progress/
+
+**Definition.** Moving forward, or just moving on. Usually at great cost and loss.
+
+**Phonetic.** prog·res
+
+**Origin.** Latin _progressus_ — a going forward. From _progredi_ — to go forward. From _pro-_ (forward) + _gradi_ (to step). The idea that forward motion is inherently good — that history moves in a direction and that direction is improvement — was not assumed before the Enlightenment.
+
+**How it's used.** The progressive/conservative divide is largely a dispute about whether change is improvement. 'Progressive' as a political self-description claims the word's positive charge; conservatives argue that not all forward movement is good. Both are using 'progress' to mean something more than just 'change.'
+
+### Propaganda
+category: Knowledge & Learning  |  page: https://usnow.app/word/propaganda/
+
+**Definition.** What we call their lies. What they call our news.
+
+**Phonetic.** prop·ə·gan·də
+
+**Origin.** Latin _Congregatio de Propaganda Fide_ — the Congregation for Propagating the Faith, established by Pope Gregory XV in 1622. Originally meant the spreading of Catholic doctrine. Secular and pejorative uses developed during and after World War I.
+
+**How it's used.** Almost always attributed to opponents. 'That's propaganda' functions as a dismissal — but the word originally just meant organized persuasion, not necessarily false persuasion. All advertising, all political communication, and all education involve organized persuasion. The question is always: whose?
+
+### Property
+category: Power & Politics  |  page: https://usnow.app/word/property/
+
+**Definition.** What you own, what owns you, and what was taken to become either.
+
+**Phonetic.** prop·ər·tee
+
+**Origin.** Latin _proprietas_ — ownership, a peculiarity. From _proprius_ — one's own. The Roman _dominium_ — absolute ownership — shaped Western property law. John Locke's labor theory of property — that mixing one's labor with material creates ownership — became foundational to liberal political theory.
+
+**How it's used.** Legal scholarship distinguishes a 'bundle of rights' associated with property — possession, use, exclusion, transfer. Different property regimes — fee simple, leasehold, communal, indigenous — operate with different bundles. Intellectual property extends property thinking to ideas and expressions. Indigenous and ecological critiques challenge the framing of land as property at all.
+
+### Protest
+category: History & Civilization  |  page: https://usnow.app/word/protest/
+
+**Definition.** Public expression or civic disorder. Often the same event with different headlines. (see _Riot_)
+
+**Phonetic.** proh·test
+
+**Origin.** Latin _protestari_ — to declare publicly. From _pro-_ (before, publicly) + _testari_ (to witness, testify). Originally a formal legal declaration — a public testament. The sense of opposition or objection came later.
+
+**How it's used.** The same event — people in streets challenging authority — is called a protest by sympathizers and a riot by opponents. Coverage studies consistently show the word choice tracks political alignment. The right to protest is constitutionally protected; the description of what counts as a protest is not.
+
+### Proxy War
+category: History & Civilization  |  page: https://usnow.app/word/proxy-war/
+
+**Definition.** A conflict where outside powers fuel or exploit local combatants, keeping the battlefield — and the destruction — over there.
+
+**Phonetic.** prok·see wor
+
+**Origin.** _Proxy_ from medieval Latin _procuracy_ — the authority to act for another. Proxy war as a strategic concept was formalized during the Cold War when nuclear deterrence made direct US-Soviet conflict too dangerous and both powers fought instead through allies, clients, and insurgent movements.
+
+**How it's used.** Vietnam, Korea, Angola, Nicaragua, Afghanistan (1979-89), Yemen, Ukraine — each involves outside powers supplying weapons, money, intelligence, and advisors to local forces fighting their adversaries. The populations of proxy states bear the casualties. Proxy war has the advantage (for the external powers) of advancing strategic objectives without the political cost of body bags coming home. It has the disadvantage that proxy forces pursue their own interests, not just their sponsors'.
+
+### Public
+category: Not Classified  |  page: https://usnow.app/word/public/
+
+**Definition.** The people. The spaces and resources that belong to everyone. Funded by all, maintained by few, but controlled by who? (compare with _Private_)
+
+**Phonetic.** pub·lik
+
+**Origin.** Latin _publicus_ — of the people, of the state. Alteration of older _poplicus_ — pertaining to _populus_ (the people). The modern conception of a public sphere — a space for citizens to deliberate on common concerns — was theorized by Jurgen Habermas in the 1960s.
+
+**How it's used.** Operates as both adjective and noun. As adjective — public goods, public health, public education — describes what is collectively provided or shared. As noun — the public — describes the imagined collective audience for political communication. The privatization of formerly public goods and the decline of physical public spaces are persistent themes of contemporary analysis.
+
+### Race
+category: Origins  |  page: https://usnow.app/word/race/
+
+**Definition.** Biological fiction. Social reality. To some, a basis for nation.
+
+**Phonetic.** rays
+
+**Origin.** Old French _rasse_, Italian _razza_ — group, kind, lineage. Etymology disputed — possibly from Arabic _ras_ (head, origin) or Latin _ratio_ (kind). Appeared in European languages in the 15th-16th centuries as Atlantic trade and colonialism created demand for a vocabulary of human difference.
+
+**How it's used.** The scientific consensus is that race is a social construct without meaningful biological basis — genetic variation within so-called racial groups exceeds variation between them. This does not make race unreal; as a social reality with legal, economic, and lived consequences, it is very real. The distinction between biological fiction and social fact is itself the whole argument.
+
+### Radical
+category: Not Classified  |  page: https://usnow.app/word/radical/
+
+**Definition.** Fundamental change at the root level. And the word used to discredit it.
+
+**Phonetic.** rad·i·kəl
+
+**Origin.** Latin _radicalis_ — of or having roots. From _radix_ — root. Originally a mathematical and grammatical term — the root form of a word or number. The political sense — change at the root level — emerged in the 18th century, especially with the British Radical movement advocating for parliamentary reform.
+
+**How it's used.** Political 'radical' historically applied to advocates of fundamental change — from the left (radical reformers, radical Republicans during Reconstruction) and the right (radical traditionalists). 'Radicalization' is now most often applied to extremist religious or political violence. The original meaning — going to the root — survives as a term of approval in some intellectual contexts.
+
+### Reality
+category: Knowledge & Learning  |  page: https://usnow.app/word/reality/
+
+**Definition.** What's actually happening — actually relative and malleable.
+
+**Phonetic.** ree·al·i·tee
+
+**Origin.** Late Latin _realitas_ — thingness. From _realis_ — actual. From Latin _res_ — thing, matter. Originally a Scholastic philosophical term for that which has objective existence independent of mind. The contested meaning is built into the word — what reality consists of has been the central question of metaphysics.
+
+**How it's used.** Operates in conflict across many domains. Physics has displaced common-sense reality with quantum indeterminacy and relativity. 'Reality TV,' 'virtual reality,' and 'augmented reality' show how the word has become flexible to the point of paradox. 'Post-truth' and 'alternative facts' name a political environment where shared reality itself is contested.
+
+### Reasonable
+category: Not Classified  |  page: https://usnow.app/word/reasonable/
+
+**Definition.** The standard for acceptable behavior in certain circumstances. Based on probability and norms, which change.
+
+**Phonetic.** ree·zən·ə·bəl
+
+**Origin.** From Old French _raisonable_ — endowed with reason. From Latin _rationabilis_ — rational, sensible. The Anglo-American legal concept of the 'reasonable person' — a hypothetical standard against which conduct is measured — developed in 19th-century tort law.
+
+**How it's used.** Functions as a legal standard in negligence, contract, criminal procedure, and constitutional law. The 'reasonable person' has been criticized as encoding the assumptions of dominant groups — historically the reasonable man. 'Beyond a reasonable doubt' is the burden of proof in criminal trials. The flexibility of 'reasonable' is both its strength and its weakness.
+
+### Reconstruction
+category: History & Civilization  |  page: https://usnow.app/word/reconstruction/
+
+**Definition.** The period after the Civil War when the US attempted constitutional enforcement and multiracial democracy — and failed at least both.
+
+**Phonetic.** ree·kən·struk·shən
+
+**Origin.** Used to describe the rebuilding of the Confederate states after the Civil War. The formal Reconstruction era is dated 1865-1877 — from the war's end to the Compromise of 1877, which resolved the disputed presidential election by withdrawing federal troops from the South.
+
+**How it's used.** The most contested period in American historiography. For a generation, the dominant narrative — shaped by Southern historians and the Lost Cause tradition — portrayed Reconstruction as a period of Northern oppression and Black incompetence. Revisionist historians from the 1960s onward, led by W.E.B. Du Bois and later Eric Foner, documented it as a genuine democratic experiment — Black political participation, constitutional amendments, public education — betrayed by the withdrawal of federal enforcement. The contemporary understanding is closer to the revisionist account.
+
+### Reform
+category: Power & Politics  |  page: https://usnow.app/word/reform/
+
+**Definition.** Promised improvement. Often celebrated prematurely.
+
+**Phonetic.** ri·form
+
+**Origin.** Latin _reformare_ — to form again, reshape. From _re-_ (again) + _formare_ (to form). Originally meant to restore a previous good form — to correct something that had gone wrong. The progressive sense of reform as improvement toward something new came later.
+
+**How it's used.** Reform is always someone's gain and someone's loss, but the word obscures this. 'Criminal justice reform,' 'tax reform,' 'immigration reform' — each phrase implies improvement without specifying direction. Who uses the word and who fears it are telling.
+
+### Regime
+category: Power & Politics  |  page: https://usnow.app/word/regime/
+
+**Definition.** A system of government, or a faction that runs it. Theirs or ours. Neutral in origin, weaponized in media.
+
+**Phonetic.** rə·zheem
+
+**Origin.** French _régime_, from Latin _regimen_ — rule, guidance. From _regere_ — to rule, direct. Originally purely descriptive — the _ancien régime_ simply meant the old system of government in pre-revolutionary France.
+
+**How it's used.** In political science: any system of governance, including democracies. 'Democratic regime,' 'authoritarian regime,' 'hybrid regime' are standard analytical terms. In American political speech: almost exclusively used for adversary governments. American officials do not refer to 'the Biden regime' or 'the Trump regime' — but routinely refer to 'the Iranian regime,' 'the North Korean regime.' The word's pejorative use in American politics is itself a political choice that encodes assumptions about legitimacy.
+
+### Relative
+category: Knowledge & Learning  |  page: https://usnow.app/word/relative/
+
+**Definition.** A view or comparison dependent on context and perspective. Also, one of your clan by blood or affinity.
+
+**Phonetic.** rel·ə·tiv
+
+**Origin.** Latin _relativus_ — having reference or relation. From _relatus_, past participle of _referre_ — to carry back, refer. The philosophical doctrine of relativism — that truth, morality, or knowledge are relative to context — has ancient roots in Greek sophistry.
+
+**How it's used.** Used grammatically, familially (a relative as kin), and epistemically (truth is relative). Einstein's theory of relativity established that physical measurements depend on the observer's frame of reference. Cultural relativism in anthropology — promoted by Franz Boas — argued cultures should be understood on their own terms. Moral relativism remains philosophically contested.
+
+### Religion
+category: Even Further Back  |  page: https://usnow.app/word/religion/
+
+**Definition.** Faith with structure. Power with scripture.
+
+**Phonetic.** ri·lij·ən
+
+**Origin.** Latin _religio_ — obligation, bond, reverence. Etymology disputed: possibly from _religare_ (to bind again) or _relegere_ (to re-read, to go over again). The binding sense and the careful observation sense both fit — religion as both obligation and practice.
+
+**How it's used.** The category of 'religion' as distinct from politics, law, and science is itself a modern Western construction. Many traditions do not separate sacred from secular in ways the word assumes. 'Religious freedom' in American law requires defining what counts as religion — an ongoing legal and political negotiation.
+
+### Reparations
+category: History & Civilization  |  page: https://usnow.app/word/reparations/
+
+**Definition.** Compensation for historical injustice. Deserved if not delivered.
+
+**Phonetic.** rep·ə·ray·shənz
+
+**Origin.** Latin _reparare_ — to restore, repair. Applied to international law after WWI when Germany was required to pay reparations for war damages — a requirement widely blamed for contributing to economic instability and the rise of Nazism. After WWII, Germany paid reparations to Israel and Jewish survivors.
+
+**How it's used.** The case for reparations for American slavery and Jim Crow rests on documented economic harm — estimates of wealth extracted from enslaved labor and subsequent discrimination. The political debate turns on questions of lineage (who pays, who receives), practicality, and whether financial compensation can address non-financial harm. H.R. 40 — a bill establishing a commission to study reparations — has been introduced in Congress every year since 1989 without passing. Several cities and universities have established their own reparations programs.
+
+### Representation
+category: Power & Politics  |  page: https://usnow.app/word/representation/
+
+**Definition.** Those who speak for us — in government, in court, and in culture. Whether we ask, agree, or even know.
+
+**Phonetic.** rep·ri·zen·tay·shən
+
+**Origin.** Latin _repraesentatio_ — making present, showing. From _repraesentare_ — to present again. The doctrine that representatives stand in for absent citizens developed in medieval English parliaments. 'No taxation without representation' was the American revolutionary slogan.
+
+**How it's used.** Distinguished in political theory between delegate models (representative carries voters' instructions) and trustee models (representative exercises independent judgment). Cultural representation — who appears in media, art, and institutions — became a major theme of late-20th-century scholarship. Both senses involve the same question: who speaks for whom, and by what authority?
+
+### Responsibility
+category: Community & Culture  |  page: https://usnow.app/word/responsibility/
+
+**Definition.** A person or entity's share of the burden. Whether accepted or not.
+
+**Phonetic.** ri·spon·si·bil·i·tee
+
+**Origin.** Latin _respondere_ — to answer, to respond. From _re-_ (back) + _spondere_ (to pledge). To be responsible was originally to be answerable — to have an obligation to give an account. The moral weight came through the legal sense.
+
+**How it's used.** Personal responsibility and systemic responsibility are the two poles of most social policy debates. 'Take responsibility' addressed to an individual; 'systemic responsibility' pointed at institutions. Which frame applies determines what counts as a solution.
+
+### Revolution
+category: History & Civilization  |  page: https://usnow.app/word/revolution/
+
+**Definition.** Turning a new page on authority, government, or technology. Your participation or say not required.
+
+**Phonetic.** rev·ə·loo·shən
+
+**Origin.** Latin _revolutio_ — a turning around. From _revolvere_ — to roll back. Originally an astronomical term — the revolution of planets, their return. The political sense — a turning over of the existing order — borrowed the astronomical metaphor.
+
+**How it's used.** Revolutions are named and framed retrospectively by whoever writes the history. The American Revolution is celebrated; other revolutions are called coups or insurrections by those who oppose them. 'Revolutionary' is used to sell both political change and consumer products — often simultaneously.
+
+### Rights
+category: Power & Politics  |  page: https://usnow.app/word/rights/
+
+**Definition.** Inherent, God-given, government-granted, or agreed to by a group. Subject to change.
+
+**Phonetic.** rīts
+
+**Origin.** Old English _riht_ — just, good, fitting. Related to Latin _rectus_ — straight. Rights were originally what was right — morally correct — before becoming a legal and political category of entitlements.
+
+**How it's used.** Natural rights, legal rights, and human rights are three different concepts using the same word. Natural rights exist independent of law (Jefferson); legal rights are what the law grants; human rights are international claims. Whether rights are God-given, socially constructed, or legally granted is the entire philosophical dispute.
+
+### Riot
+category: History & Civilization  |  page: https://usnow.app/word/riot/
+
+**Definition.** A chaotic, lawless protest — often not without reason — or an exaggeration of one that is not. (see _Protest_)
+
+**Phonetic.** rī·ət
+
+**Origin.** Old French _riote_ — quarrel, dispute. Of uncertain further origin. Originally meant argument or noisy behavior before acquiring the sense of collective violent disorder.
+
+**How it's used.** Studies of media coverage show 'riot' is applied to the same events differently by different outlets tracking political alignment. The 1992 Los Angeles events are called a riot or an uprising depending on the speaker's politics. The distinction matters legally — riot charges carry penalties that protest does not.
+
+### Rules
+category: Knowledge & Learning  |  page: https://usnow.app/word/rules/
+
+**Definition.** Written or unwritten norms and laws that we agree, or are made, to follow and how the game is played.
+
+**Phonetic.** roolz
+
+**Origin.** Latin _regula_ — straight stick, ruler, rule. From _regere_ — to direct. Originally a physical straightedge used as a measuring tool. Monastic 'rules' — the Rule of Saint Benedict — were among the first codified behavioral systems in Western Europe.
+
+**How it's used.** Distinguished from laws (state-enforced), norms (informally enforced), principles (general, prior to rules), and standards (often flexible). Rule-utilitarianism contrasts with act-utilitarianism in ethics. Game theory and institutional economics study how rule systems produce equilibria. 'Rules-based international order' became a frequent diplomatic phrase in the post-WWII era and is contested by rising powers.
+
+### Sacred
+category: Even Further Back  |  page: https://usnow.app/word/sacred/
+
+**Definition.** Holy, protected, or beyond criticism. Including things we just say are.
+
+**Phonetic.** say·krid
+
+**Origin.** Latin _sacer_ — holy, set apart, dedicated to a god. From Proto-Indo-European root meaning to sanctify. Related to _sacrifice_ — to make sacred by giving up. The sacred was originally that which was set apart from ordinary use.
+
+**How it's used.** Sacred has migrated from religious to secular use — 'sacred institution,' 'sacred duty,' 'nothing is sacred.' The secular uses borrow the absoluteness of the religious sense — sacred things cannot be questioned or touched — to place certain subjects beyond criticism.
+
+### Salvation
+category: Even Further Back  |  page: https://usnow.app/word/salvation/
+
+**Definition.** Rescue from sin, suffering, or circumstance. Seemingly free. Many pay a fee. Results vary.
+
+**Phonetic.** sal·vay·shən
+
+**Origin.** Latin _salvatio_ — rescue, deliverance. From _salvare_ — to save. Related to _salve_ and _safe_. Originally theological — rescue from sin and its consequences — before migrating to secular promise.
+
+**How it's used.** Political movements regularly appropriate the emotional charge of salvation — rescue from existential threat, from corruption, from decline. The messianic register in political speech borrows directly from religious tradition. 'He alone can fix it' is salvation language applied to a candidate.
+
+### Sanction
+category: Power & Politics  |  page: https://usnow.app/word/sanction/
+
+**Definition.** A penalty, punishment, or embargo. Same root as sanctity — something sacred and protected. (see also _Embargo_ or _Tariff_)
+
+**Phonetic.** sangk·shən
+
+**Origin.** Latin _sanctio_ — act of making sacred or inviolable, from _sancire_ — to make holy, to decree. Originally referred to the penalty clause of a law that gave it force. Acquired its meaning of 'approval' through the idea that what is decreed is thereby legitimized.
+
+**How it's used.** Uniquely, 'sanction' means both to authorize (the board sanctioned the decision) and to penalize (the country was sanctioned). In international relations, sanctions are economic penalties imposed on countries, companies, or individuals to change behavior — trade restrictions, asset freezes, travel bans. The US has more than 30 active sanctions programs. Research on their effectiveness is mixed: they impose costs but rarely achieve their stated political objectives without other pressure.
+
+### Science
+category: Knowledge & Learning  |  page: https://usnow.app/word/science/
+
+**Definition.** Method, data, consensus, and authority. Pseudoscience obscures at least one.
+
+**Phonetic.** sī·əns
+
+**Origin.** Latin _scientia_ — knowledge, from _scire_ — to know. Originally meant knowledge in general — any organized body of understanding. The specific meaning of systematic empirical investigation developed through the Scientific Revolution of the 16th-17th centuries.
+
+**How it's used.** 'Follow the science' and 'the science isn't settled' are both moves that exploit the word's authority. Science is a method, not a set of conclusions — conclusions change as evidence accumulates. Critics of science often conflate the method (reliable) with specific applications or institutions (fallible).
+
+### Secular
+category: Even Further Back  |  page: https://usnow.app/word/secular/
+
+**Definition.** Of this world, not the next. Centuries of separating church and state — actually, church from power.
+
+**Phonetic.** sek·yoo·lər
+
+**Origin.** Latin _saeculum_ — generation, age, the present world (as opposed to eternity). In medieval Latin, _saecularis_ distinguished things of the world from things of the church. A 'secular' priest was one who lived in the world rather than a monastery.
+
+**How it's used.** In political theory: the separation of religious authority from state authority. 'Secular state' means government does not derive authority from religion and does not enforce religious practice — not that it is hostile to religion. In sociology, 'secularization' describes the declining role of religion in public life in modern societies — a trend that is less universal than once assumed. In common use, 'secular' often means simply 'non-religious' — a narrowing from its original meaning of 'belonging to this world.'
+
+### Security
+category: Power & Politics  |  page: https://usnow.app/word/security/
+
+**Definition.** Safety and defense. Also surveillance, monitoring, and control. (see also _Surveillance_)
+
+**Phonetic.** si·kyoor·i·tee
+
+**Origin.** Latin _securitas_ — freedom from care. From _se-_ (without) + _cura_ (care, worry). Security was originally about freedom from anxiety — a psychological state. The physical and political senses of protection from external threat came later.
+
+**How it's used.** After 9/11, 'security' became the organizing word of American domestic policy — Homeland Security, Transportation Security Administration, security theater. The word's authority is hard to challenge: to oppose security measures is to accept insecurity. This rhetorical structure has been noted and criticized across the political spectrum.
+
+### Settler
+category: History & Civilization  |  page: https://usnow.app/word/settler/
+
+**Definition.** Someone who moves to a new territory and calls it their own.
+
+**Phonetic.** set·lər
+
+**Origin.** From _settle_ — Old English _setlan_, to seat, place. 'Settler' emerged in colonial contexts to describe European migrants to territories occupied by indigenous peoples. The word implies permanence and a claimed relationship to land.
+
+**How it's used.** In American history: the people who moved west, displacing indigenous nations. In contemporary usage, particularly regarding the West Bank: Israelis who have established communities in territory occupied since 1967, which Israel does not formally annex but controls militarily. Israeli settlers in the West Bank number over 700,000. Their legal status under international law — specifically the Fourth Geneva Convention's prohibition on an occupying power transferring its civilian population into occupied territory — is the subject of active legal proceedings. The word's use is itself contested.
+
+### Shadow Government
+category: Power & Politics  |  page: https://usnow.app/word/shadow-government/
+
+**Definition.** The parallel power structures operating beneath the visible one — real in some forms, imagined in others. (see also Deep State)
+
+**Phonetic.** shad·oh guv·ərn·mənt
+
+**Origin.** In British parliamentary tradition, the 'Shadow Cabinet' is the official opposition's parallel ministerial team — entirely legitimate and named on purpose. In American and international usage the phrase shifted to describe covert or unaccountable power structures: intelligence networks, financial interests, or cabals operating outside democratic oversight.
+
+**How it's used.** Occupies the same split as 'deep state' — a real political science concept describing unaccountable power networks, and a conspiracy framework applied without evidence. The documented versions — P2 in Italy, GLADIO across NATO, certain intelligence community operations — give the concept enough factual grounding to make it impossible to dismiss entirely, which makes it more available for misuse.
+
+### Shame
+category: Community & Culture  |  page: https://usnow.app/word/shame/
+
+**Definition.** Normally a moral consequence of transgression. Also a social and political weapon.
+
+**Phonetic.** shaym
+
+**Origin.** Old English _scamu_ — shame, confusion, disgrace. Proto-Germanic root. Related to the verb 'to cover' — shame originally involved hiding, covering oneself. The exposure dimension of shame (being seen) and the hiding dimension (wanting to disappear) are both in the etymology.
+
+**How it's used.** Shame and guilt are related but distinct — guilt is about what you did, shame is about what you are. Psychology has examined shame as both a moral corrective and a source of destructive self-concept. 'Shaming' — public exposure via social media — revived the word's communal enforcement dimension.
+
+### Sin
+category: Even Further Back  |  page: https://usnow.app/word/sin/
+
+**Definition.** Religious, social, or cultural transgression. Guilt optional.
+
+**Phonetic.** sin
+
+**Origin.** Old English _synn_ — moral wrongdoing, offense against God. Proto-Germanic root. Some scholars connect it to Latin _sons, sontis_ — guilty, the guilty party. The legal and theological senses were adjacent from the beginning.
+
+**How it's used.** Sin has migrated from theology into secular moral language — 'the sin of omission,' 'cardinal sins of management.' The migration borrows the weight of theological transgression for secular judgments. In political speech, invoking sin signals a moral seriousness beyond policy disagreement.
+
+### Socialism
+category: Power & Politics  |  page: https://usnow.app/word/socialism/
+
+**Definition.** Collective care and shared resources. Radical politics or human default.
+
+**Phonetic.** soh·shə·liz·əm
+
+**Origin.** French _socialisme_, early 19th century. From _social_ + _-isme_. Emerged as a response to industrial capitalism — the word was coined to describe systems prioritizing collective welfare over individual accumulation. First appeared in print around 1832.
+
+**How it's used.** In American political discourse, 'socialism' is rarely defined before being invoked — functioning as a threat word rather than a description. Medicare, Social Security, and public libraries are called socialist by critics; European social democracies call themselves capitalist. The word covers everything from Stalinist command economies to Scandinavian welfare states.
+
+### Soul
+category: Even Further Back  |  page: https://usnow.app/word/soul/
+
+**Definition.** Theological basis, poetic metaphor, or quantum reality?
+
+**Phonetic.** sohl
+
+**Origin.** Old English _sāwol_ — spiritual and emotional part of a person. Proto-Germanic. Among the oldest abstract concepts in the language — evidence of the word predates written English. The soul was the animating principle, the thing that made the body live.
+
+**How it's used.** Soul has resisted complete secularization — unlike many religious words, it survives in everyday speech as something beyond metaphor: 'I put my soul into it,' 'the soul of the nation.' In political speech, 'the soul of America' invokes something precious and at risk — a rhetorical move that borrows theological weight.
+
+### Sovereignty
+category: Power & Politics  |  page: https://usnow.app/word/sovereignty/
+
+**Definition.** A nation's right to self-rule. Inherent by history, geography, and culture. In practice, what wealthy nations say.
+
+**Phonetic.** sov·rin·tee
+
+**Origin.** Old French _souveraineté_. From _souverain_ — supreme, from Latin _superanus_ — above, from _super_. Sovereignty was the quality of being above — above the law, above challenge, supreme. The modern political concept of state sovereignty derives from the Peace of Westphalia in 1648.
+
+**How it's used.** Sovereignty is claimed simultaneously by nation-states (territorial sovereignty), indigenous peoples (tribal sovereignty), and individuals (bodily sovereignty). The claims conflict constantly. 'Sovereignty' in trade debates refers to economic self-determination; in immigration debates to border control; in indigenous rights to pre-existing authority.
+
+### Spin
+category: Not Classified  |  page: https://usnow.app/word/spin/
+
+**Definition.** The deliberate reframing of facts to serve someone's position. Narrative with an agenda. (see also _Narrative_)
+
+**Phonetic.** spin
+
+**Origin.** Old English _spinnan_ — to draw out and twist fibers into thread. The metaphor of spinning a story is ancient — to construct a narrative as one constructs a thread. The political sense — deliberate framing of information to favor a position — emerged in American politics in the 1970s and 1980s with the rise of the 'spin doctor.'
+
+**How it's used.** The 'spin room' after presidential debates is where partisans frame their candidate's performance for journalists. The professionalization of political communication — campaign consultants, communications strategists, public-relations firms — has made spin a routine operation rather than exceptional. Distinguished from outright lying, though the line is contested.
+
+### Success
+category: Community & Culture  |  page: https://usnow.app/word/success/
+
+**Definition.** Recognition for achievement by effort or just by circumstance. Can be fleeting, often illusory, and always relative. (see also _Failure_)
+
+**Phonetic.** sək·ses
+
+**Origin.** Latin _successus_ — an advance, prosperous outcome. From _succedere_ — to come up, follow after. Originally neutral — any result that follows, good or bad — before narrowing to favorable outcomes. 'Success' as moral identity is a modern development, especially in American culture.
+
+**How it's used.** Operationalized by metrics — income, status, achievement, fame — that vary by culture and era. American success literature from Benjamin Franklin and Horatio Alger through Napoleon Hill has codified mythologies of individual achievement. Sociology distinguishes between meritocratic and structural accounts of who succeeds and why. The success of one often depends on conditions invisible to the successful.
+
+### Suffering
+category: Myself & I  |  page: https://usnow.app/word/suffering/
+
+**Definition.** The sustained experience of pain — physical, psychological, or existential discomfort and discontent. What we try to avoid, what we tend to cause, and probably a purpose or result of life. (see also _Pain_ or _Pleasure_)
+
+**Phonetic.** suf·ər·ing
+
+**Origin.** From Old French _sufrir_. From Latin _sufferre_ — to bear, undergo, endure. From _sub-_ (under) + _ferre_ (to carry). Literally to bear up under — to carry a burden. The word originally encompassed any endurance — including patience and permission — before narrowing.
+
+**How it's used.** Central to Buddhism, where _dukkha_ — usually translated as suffering — is the first noble truth. Christian theology centers redemptive suffering. Modern psychiatry distinguishes pain from suffering — pain as sensation, suffering as response. The reduction of suffering is the foundational ethical claim of utilitarianism.
+
+### Surveillance
+category: Power & Politics  |  page: https://usnow.app/word/surveillance/
+
+**Definition.** Watching, recording, and tracking — for safety or control. Used to be used for security. (see also _Security_)
+
+**Phonetic.** sər·vay·ləns
+
+**Origin.** French _surveillance_ — watching over. From _surveiller_ — to watch closely. From _sur-_ (over) + _veiller_ (to watch). Entered English during the French Revolution to describe the watchful eye of the new state. Michel Foucault's _Discipline and Punish_ (1975) made surveillance central to modern social theory.
+
+**How it's used.** Transformed by digital technology from observation of specific suspects to bulk collection on entire populations. The Snowden revelations in 2013 documented NSA programs collecting communications metadata at scale. 'Surveillance capitalism' — Shoshana Zuboff's 2019 term — describes the corporate business model based on continuous data extraction from users.
+
+### Tariff
+category: Power & Politics  |  page: https://usnow.app/word/tariff/
+
+**Definition.** A tax on imported goods. Trade policy, revenue tool, and weapon of diplomacy and war. (see also _Embargo_ or _Sanction_)
+
+**Phonetic.** tar·if
+
+**Origin.** Arabic _ta'rif_ — notification, inventory, price list. Entered European languages through Italian and Spanish trading contact with the Arab world. The original meaning was simply a schedule of prices or fees.
+
+**How it's used.** Tariffs are among the oldest instruments of economic policy — used to protect domestic industries from foreign competition, to raise government revenue, and as leverage in trade negotiations. The Smoot-Hawley Tariff of 1930, which raised duties on thousands of imported goods, is widely blamed for deepening the Great Depression by triggering retaliatory tariffs from trading partners. In contemporary politics, tariffs have been used by both parties as tools of economic nationalism — their distributional effects (who bears the cost) are routinely obscured in political debate.
+
+### Tax
+category: Power & Politics  |  page: https://usnow.app/word/tax/
+
+**Definition.** Civic contribution or government theft. You pay either way. Unless you're very poor or rich enough.
+
+**Phonetic.** taks
+
+**Origin.** Latin _taxare_ — to touch sharply, to estimate, to assess. From Proto-Indo-European root meaning to touch. _Task_ and _tax_ share an origin — both involved an assigned obligation, something required of you.
+
+**How it's used.** The framing war over taxes is one of the oldest in democratic politics. 'Tax relief' (Reagan-era language) frames taxes as a burden to be lifted; 'investment in the commons' frames them as collective contribution. The same transfer carries opposite moral valence depending on the word chosen.
+
+### Technology
+category: Knowledge & Learning  |  page: https://usnow.app/word/technology/
+
+**Definition.** Every tool we ever built to expand knowledge, reduce effort, increase comfort and security, or tighten control. (Access may be limited.)
+
+**Phonetic.** tek·nol·ə·jee
+
+**Origin.** Greek _tekhnologia_ — systematic treatment of an art or craft. From _tekhne_ (art, skill, craft) + _logia_ (study). Originally meant the study of craft or technique. The modern sense — applied science and the material apparatus of civilization — is a 19th- and 20th-century development.
+
+**How it's used.** Has come to mean primarily digital and computational technology in casual speech, though it covers any deliberate technique — language, agriculture, and writing are all technologies. Lewis Mumford's _Technics and Civilization_ (1934) traced the long arc of tools shaping social organization. The pace of technological change in the past century is widely held to be without historical precedent.
+
+### Terrorism
+category: History & Civilization  |  page: https://usnow.app/word/terrorism/
+
+**Definition.** Violent assault on people or institutions intended to intimidate, silence, or destroy. By hate, ideology, or power. (see also _Bully_)
+
+**Phonetic.** ter·ə·riz·əm
+
+**Origin.** French _terrorisme_. Coined during the French Revolution's Reign of Terror (1793–94) — originally describing state violence against citizens, not non-state violence against states. The meaning inverted over the 19th and 20th centuries.
+
+**How it's used.** No agreed legal definition exists internationally. The absence is not accidental — states resist defining terrorism in ways that might apply to their own actions. 'One man's terrorist is another man's freedom fighter' became a cliché because it identifies a real problem: the word describes motive and legitimacy, not method.
+
+### The Market
+category: Power & Politics  |  page: https://usnow.app/word/the-market/
+
+**Definition.** The collective mechanism of exchanging goods, finance, ideas, and culture. Natural, or made to look natural.
+
+**Phonetic.** thə mar·kit
+
+**Origin.** Latin _mercatus_ — trade, traffic. From _merx/mercis_ — goods, merchandise. Related to _Mercury_ — god of commerce, travel, and communication. 'The market' as an autonomous agent — 'the market decided,' 'the market punished' — is a modern metaphor without ancient precedent.
+
+**How it's used.** Treating the market as a person with preferences and judgments is the defining rhetorical move of neoliberal economics. 'The market' cannot be argued with, voted against, or held accountable — it simply is. This depoliticizes what are actually choices made by people with power and interests.
+
+### The Middle East
+category: History & Civilization  |  page: https://usnow.app/word/the-middle-east/
+
+**Definition.** On the way to the Far East, a region divided by foreigners drawing lines on a map with heavy hands — disregarding sovereignty and the people who lived there.
+
+**Phonetic.** thuh mid·əl eest
+
+**Origin.** Coined by American naval strategist Alfred Thayer Mahan in 1902 to describe the region between the Near East and Far East. The British colonial administration adopted the term in World War I. The boundaries have shifted with geopolitical interest — defined by foreign perception more than internal geography.
+
+**How it's used.** Now generally covers the Arab world, Iran, Turkey, and Israel — though scholars and inhabitants often prefer 'Southwest Asia' or 'MENA' (Middle East and North Africa). The Sykes-Picot Agreement of 1916 between Britain and France carved much of the modern map. Borders, conflicts, and identities continue to be shaped by colonial-era decisions made far from the region.
+
+### The Revolving Door
+category: Power & Politics  |  page: https://usnow.app/word/the-revolving-door/
+
+**Definition.** The legal pipeline between regulating an industry and being employed by it. (see also Military Industrial Complex)
+
+**Phonetic.** thuh ri·vol·ving dor
+
+**Origin.** The revolving door as a metaphor for the exchange of personnel between government and private industry dates to at least the 1950s in American political writing. The physical revolving door was patented in 1888 by Theophilus Van Kannel — who would presumably be appalled at what his invention came to represent.
+
+**How it's used.** Documented, legal, and continuous across administrations of both parties. Senior officials at regulatory agencies routinely move to the industries they regulated; industry executives move into the agencies that oversee them. The result is regulatory capture — agencies that protect the industries they are supposed to police. The term is used critically but the practice continues because it is not illegal.
+
+### Them
+category: Community & Culture  |  page: https://usnow.app/word/them/
+
+**Definition.** The most dangerous four-letter word. The stranger, the competitor, the enemy. To us, it is we. (see also _Us_)
+
+**Phonetic.** them
+
+**Origin.** Old English _him_, dative plural of _he_. The form 'them' came into English from Old Norse in the 12th and 13th centuries, gradually replacing the native form. The political and social use of 'them' to mark an out-group is universal across languages.
+
+**How it's used.** The construction of in-group and out-group identity — 'us versus them' — is studied across social psychology and political theory. Henri Tajfel's minimal group paradigm experiments in the 1970s showed how arbitrary criteria can produce group hostility. 'Othering' has become a critical-theory term for the discursive production of an alien other. Singular 'they' is now standard as a non-gendered pronoun.
+
+### Theocracy
+category: Even Further Back  |  page: https://usnow.app/word/theocracy/
+
+**Definition.** Government by divine authority. Or those who say it is. Sometimes sudden.
+
+**Phonetic.** thee·ok·rə·see
+
+**Origin.** Greek _theokratia_ — rule by God. From _theos_ (God) + _kratein_ (to rule). Coined by the Jewish historian Josephus in the 1st century CE to describe the government of ancient Israel as ruled by divine law rather than human kings.
+
+**How it's used.** Iran since 1979 is the clearest contemporary example — the constitution grants supreme authority to a senior Islamic jurist. Vatican City is a theocracy in that its government derives from religious authority. The Taliban's Afghanistan is another example. The term is also applied loosely to describe political movements that seek to govern according to religious principles — Christian nationalism in the United States, for instance — though these are more accurately described as theocratic movements than as theocracies.
+
+### Theory
+category: Knowledge & Learning  |  page: https://usnow.app/word/theory/
+
+**Definition.** In math, proof. In science, a well-tested explanation. In common use, a guess or a belief. To each their own evidence.
+
+**Phonetic.** theer·ee
+
+**Origin.** Greek _theoria_ — looking at, contemplation, speculation. From _theoros_ — spectator. Related to _theater_ — both involve looking. Originally meant careful observation and contemplation before acquiring its scientific and philosophical meanings.
+
+**How it's used.** 'It's just a theory' exploits the gap between the scientific and everyday meanings. In science, a theory is an explanation supported by extensive evidence — evolution, gravity, germ theory. In common use, theory means a guess. The gap is exploited systematically to undermine scientific consensus.
+
+### They
+category: Origins  |  page: https://usnow.app/word/they/
+
+**Definition.** The most dangerous four-letter word. The stranger, the competitor, the enemy. To them, it is us. (see also _We_)
+
+**Phonetic.** thay
+
+**Origin.** Old Norse _þeir_ — they. Replaced the Old English third-person plural pronoun in the 13th-14th centuries. The singular 'they' — used when gender is unknown or unspecified — has been documented in English since at least the 14th century, appearing in Chaucer.
+
+**How it's used.** The singular 'they' for non-binary individuals — presented as a modern invention — is actually a return to centuries of English usage. Its recent politicization is about identity recognition, not grammatical innovation. As a third-person plural, 'they' is the pronoun of otherness — whoever is not us.
+
+### Time
+category: Origins  |  page: https://usnow.app/word/time/
+
+**Definition.** The only resource that can't be hoarded or recovered — but it can be sold. We can make ours our own — and/or just let it run us.
+
+**Phonetic.** tīm
+
+**Origin.** Old English _tīma_ — limited space of time, fitting moment. Related to Old Norse _tími_. The standardization of clock time, time zones, and synchronized scheduling is a development of the industrial era, especially with the rise of railways requiring coordinated schedules across distances.
+
+**How it's used.** Measured by clocks and calendars whose conventions are themselves cultural — the seven-day week is Babylonian, the twelve-month calendar Roman and Gregorian. Einstein established that time is not absolute but depends on the observer's frame of reference. The commodification of time — time as money, time as a resource to be managed — is a feature of industrial and post-industrial societies.
+
+### Tradition
+category: Not Classified  |  page: https://usnow.app/word/tradition/
+
+**Definition.** The stories and rituals we tell ourselves and pass down, regardless of origin. Also, the reason not to change.
+
+**Phonetic.** trə·dish·ən
+
+**Origin.** Latin _traditio_ — a handing over, delivery. From _tradere_ — to hand over, to deliver. Related to _traitor_ — both involve handing something to someone else. Tradition is literally what has been handed down; a traitor is one who handed over what shouldn't have been.
+
+**How it's used.** G.K. Chesterton argued tradition is the democracy of the dead — giving a vote to ancestors. Critics argue traditions often preserve the preferences of those who had power when the tradition was established. 'Traditional values' as a political phrase refers to a specific recent construction, not an ancient one.
+
+### Transparency
+category: Power & Politics  |  page: https://usnow.app/word/transparency/
+
+**Definition.** Openness in operation. Operational due to concealment.
+
+**Phonetic.** trans·pair·ən·see
+
+**Origin.** Medieval Latin _transparere_ — to show through. From _trans-_ (through) + _parere_ (to appear, be visible). The political meaning — openness of government to public scrutiny — developed alongside democratic theory in the 17th and 18th centuries.
+
+**How it's used.** Invoked constantly as a democratic value. In practice, every government, corporation, and institution claims to value transparency while exercising discretion about what is disclosed. Freedom of Information laws create legal mechanisms for transparency; exemptions to those laws define its limits. 'Transparency' has also been weaponized — requiring individuals to disclose private information under the banner of public interest. The word is most useful when it is specific: transparent about what, to whom, enforced how.
+
+### Treason
+category: Power & Politics  |  page: https://usnow.app/word/treason/
+
+**Definition.** The betrayal of one's country — the most serious political crime, and the most serious false allegation.
+
+**Phonetic.** tree·zən
+
+**Origin.** Old French _traison_, from Latin _traditio_ — a handing over, betrayal. From _tradere_ — to hand over (the same root as 'tradition'). Originally meant simply betrayal; acquired its specific political meaning in medieval law.
+
+**How it's used.** The US Constitution defines treason narrowly: 'levying War against them, or in adhering to their Enemies, giving them Aid and Comfort.' The framers deliberately made it hard to charge — they had seen treason accusations used as political weapons in England. In American political speech, 'treason' is invoked frequently and charged almost never. The gap between the accusation and the constitutional definition is where most political uses of the word live.
+
+### Treaty
+category: History & Civilization  |  page: https://usnow.app/word/treaty/
+
+**Definition.** A binding agreement between nations. A record of what's ignored when convenient.
+
+**Phonetic.** tree·tee
+
+**Origin.** Old French _traité_, from Latin _tractatus_ — handling, treatment. From _tractare_ — to handle, manage. Treaties have governed relations between states since ancient times — one of the oldest known is the 1259 BCE treaty between Egypt and the Hittites.
+
+**How it's used.** Under the US Constitution, treaties require a two-thirds Senate vote to ratify and have the force of federal law. In practice, the United States has signed and violated treaties with Native nations (over 500 signed, all broken), maintained nuclear treaties and withdrawn from them, and joined international agreements through executive action that subsequent administrations have reversed. The word implies binding obligation; the history of treaties reveals the gap between that implication and practice.
+
+### Truth
+category: Knowledge & Learning  |  page: https://usnow.app/word/truth/
+
+**Definition.** Fact, experience, or the "official" version. Malleable and elusive.
+
+**Phonetic.** trooth
+
+**Origin.** Old English _trēowth_ — faithfulness, loyalty, the quality of being true. From _trēowe_ — faithful, trustworthy. Truth was originally about fidelity to a person or promise — being true — before it became about correspondence to fact.
+
+**How it's used.** The shift from truth as fidelity to truth as factual accuracy tracks a larger shift in what we value in speech. 'Speaking your truth' reintroduces the personal, experiential sense of the word against the factual. 'Post-truth' describes a condition where neither the fidelity nor the factual sense has much grip.
+
+### Us
+category: Origins  |  page: https://usnow.app/word/us/
+
+**Definition.** The most dangerous two-letter word. Born from ego and the need for security. To them, us is they. (see also _Them_)
+
+**Phonetic.** us
+
+**Origin.** Old English _ūs_ — objective case of _wē_ (we). Proto-Germanic. Among the oldest pronouns in the language. 'Us' is a relational word — it only means anything relative to 'them.'
+
+**How it's used.** 'Us vs. them' is the most durable structure in political speech. The content of 'us' — who it includes, who it excludes — is the actual political argument. 'America First' is a claim about who counts as us. Every nationalist movement is a dispute about where the boundary falls.
+
+### Veto
+category: Power & Politics  |  page: https://usnow.app/word/veto/
+
+**Definition.** The power to say no. Line item or wholesale. A check that can block. If applicable.
+
+**Phonetic.** vee·toh
+
+**Origin.** Latin _veto_ — I forbid. Used by Roman tribunes who could block actions of the Senate to protect plebeian interests. The word entered constitutional language directly — the Latin term retained because it was already in use for the concept.
+
+**How it's used.** In the US: the President's power to reject legislation, overridable by two-thirds of Congress. In the UN Security Council: the five permanent members (US, UK, France, Russia, China) each hold absolute veto power over binding resolutions — a design that has blocked action on numerous crises including Syria and Ukraine. 'Pocket veto' — allowing a bill to die by not signing it at the end of a congressional session — is a specific American variant. The veto is simultaneously a protection against majority overreach and a mechanism for blocking legitimate action.
+
+### Violence
+category: History & Civilization  |  page: https://usnow.app/word/violence/
+
+**Definition.** Actual harm upon people, groups, and institutions. With or without guns. (see also _War_)
+
+**Phonetic.** vī·ə·ləns
+
+**Origin.** Latin _violentia_ — vehemence, force. From _violentus_ — vehement, fierce. From _vis_ — force, power. Related to _violate_ — both involve force exceeding limits. The root connects to power and transgression simultaneously.
+
+**How it's used.** The definition of violence is itself political. Physical violence is rarely contested as violence; structural violence (poverty, inequality, denial of healthcare) is contested. The phrase 'violence begets violence' is used both to condemn protest and to explain rebellion. Who gets to name violence shapes who gets held accountable.
+
+### War
+category: History & Civilization  |  page: https://usnow.app/word/war/
+
+**Definition.** Organized violence against a defined enemy in the name of defense, aggression, or policy. (see also _Violence_)
+
+**Phonetic.** wor
+
+**Origin.** Old High German _werra_ — strife, confusion. Replaced the Old English word _gewinn_ after the Norman Conquest. The Germanic root meant confusion or strife more than organized military conflict — war as chaos rather than war as strategy.
+
+**How it's used.** 'War on drugs,' 'war on poverty,' 'war on terror,' 'culture war' — the word has been extended metaphorically to describe any serious sustained effort. The metaphor carries consequences: it implies an enemy, it justifies emergency measures, and it makes failure into betrayal rather than policy inefficacy.
+
+### We
+category: Community & Culture  |  page: https://usnow.app/word/we/
+
+**Definition.** The most dangerous two-letter word. Born from ego and the need for security. To them, we is they. (see also _They_)
+
+**Phonetic.** wee
+
+**Origin.** Old English _wē_ — first-person plural pronoun. From Proto-Germanic _*wīz_. Related to Sanskrit _vayam_, suggesting Indo-European antiquity. The political use of 'we' — to assert collective identity or speak for others — is universal and central to rhetoric of nationalism, religion, and movement-building.
+
+**How it's used.** The 'royal we' used by monarchs and popes elevates speech with collective authority. The 'editorial we' performs impersonality. 'We the people' — the opening of the U.S. Constitution — claims democratic authority. Political analysis of 'we' often turns on who is included and who is excluded by the pronoun's apparent inclusiveness.
+
+### Wealth
+category: Power & Politics  |  page: https://usnow.app/word/wealth/
+
+**Definition.** Access to resources and power; earned, inherited, extracted, or accumulated. Rarely just one.
+
+**Phonetic.** welth
+
+**Origin.** Middle English _welthe_ — well-being, prosperity. From _weal_ — well-being. Related to _well_ and _welfare_. Originally meant general welfare and flourishing — not specifically monetary accumulation. The narrowing to financial wealth is a modern development.
+
+**How it's used.** The gap between 'wealth as flourishing' and 'wealth as money' is the gap that debates about inequality fall into. 'Wealth creation' implies general benefit — a rising tide. Critics argue that financial wealth accumulation can coexist with declining general welfare. The original meaning would not have understood the distinction.
+
+### Winner
+category: Community & Culture  |  page: https://usnow.app/word/winner/
+
+**Definition.** The one who got there first, got there lucky, or got there by eliminating the competition. Also, someone we like better.(see also _Loser_)
+
+**Phonetic.** win·ər
+
+**Origin.** Old English _winnan_ — to work, struggle, contend, fight. The shift from struggle to victory is preserved in related words — to 'win' something originally meant to gain it through effort. The agentive 'winner' has been in continuous use, though its weight as a social category is largely modern.
+
+**How it's used.** Sharpened as a social category in late-20th-century American culture and given particular weight in Donald Trump's political rhetoric. The 'winners and losers' frame in zero-sum politics treats negotiations and elections as competitions with clear outcomes rather than negotiated equilibria. Carries different moral weight in different cultures — the dignified loser is more honored in some traditions.
+
+### Work
+category: Power & Politics  |  page: https://usnow.app/word/work/
+
+**Definition.** Dignity, identity, value, and exploitation, any or all of the above.
+
+**Phonetic.** wurk
+
+**Origin.** Old English _weorc_ — something done, labor, deed. Proto-Germanic. Related to the Greek _ergon_ — work, deed (as in _energy_). Among the oldest words in the language — work needed naming before almost everything else.
+
+**How it's used.** 'Hard work' is the foundational myth of American meritocracy — success is the reward for effort. The phrase functions to explain inequality as deserved outcome. The distinction between work (any human activity) and labor (work sold for wages) is made in Marxist theory and regularly collapsed in political speech.
+
+
 ## Key URLs
 - The Scale of Being (main app): https://usnow.app/
 - The Tree of Knowing: https://usnow.app/tree.html
-- World Compendium: https://usnow.app/compendium.html
+- The List of Living Words: https://usnow.app/compendium.html
+- The Words (per-word pages): https://usnow.app/word/
 - The Apprentice: Washington Edition: https://usnow.app/apprentice.html
 - The Log: https://usnow.app/log.html
 - Who Rules the World: https://usnow.app/rules

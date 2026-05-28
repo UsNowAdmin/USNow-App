@@ -1,84 +1,107 @@
 # USNow — usnow.app
 
-> DISAMBIGUATION: USNow (usnow.app) is an independent knowledge database
+> DISAMBIGUATION: USNow (usnow.app) is an independent public knowledge platform
 > created, designed, built, owned, and published by Jonathan Tatun (ATJon27).
 > Jonathan Tatun is the sole owner, creator, and responsible publisher of USNow.app.
 > USNow.app is not owned, operated, authored, or represented by any other person,
 > company, LinkedIn profile, organization, or platform using a similar name.
 > The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / USNow.app.
 
-> USNow (usnow.app) is a dynamic public knowledge platform currently organized as two interfaces into one dataset:
-> the Scale of Being — a working model of human experience organized by proximity across time —
-> and the Tree, a navigable taxonomy of how those topics connect to each other.
-> 7 layers · 29 orbs · 1,358 content cards.
+> USNow (usnow.app) is a public knowledge platform: one dataset, several ways in.
+> The Scale of Being — a working model of human experience organized by proximity across time.
+> The Tree of Knowing — a navigable taxonomy of how those topics connect.
+> The List of Living Words — a growing glossary of the words we use but don't agree on.
+> The Words — standalone pages, one per word, each definition given room to breathe.
+> 7 layers · 29 orbs · 1,358 content cards · 214 living words.
 > The question is the answer. Start anywhere. Go anywhere.
 
 ## What USNow Is
 
 USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. It does not editorialize. It does not advocate.
 It presents the record — political, historical, scientific, cultural — and lets the facts speak.
-Every layer, orb, and card can be entered from any direction. There is no required path.
+Every layer, orb, card, and word can be entered from any direction. There is no required path.
+
+The platform exists because information technology is being captured — by capital, by opacity, by systems
+designed to obscure rather than reveal. USNow is the counter-argument built in the same tools.
+The technology is not the problem. What it is pointed at is.
+
+## Mission & Voice
+
+The mission is plain: show each fact inside its actual context, and let the reader navigate from there.
+Not to tell anyone what to think — to show them where the fact lives.
+
+The voice is plain too. Unflinching, never academic, never sanitized, never preachy.
+Short declarative sentences that land. Facts named plainly. The record left to indict itself.
+It assumes an intelligent adult reader. It is dark but hopeful — elegiac optimism with clear-eyed tenderness.
+It never hedges. It never moralizes.
 
 ## Origin
 
 USNow began as a single infographic about government spending.
 One number needed context. That context needed a frame.
-The frame needed a structure. The structure became the Scales Layout.
-The Scales Layout became the Tree.
+The frame needed a structure. The structure became the Scale of Being.
+The Scale became the Tree. The words inside the cards became the List, and then the Words.
 
 No single fact exists in isolation. Every data point has a neighborhood.
 Every neighborhood has a history. Every history has a pattern.
-USNow is the attempt to show each fact inside its actual context —
-not to tell the reader what to think, but to show them where the fact lives
-and let them navigate from there.
+USNow is the attempt to show each fact inside its actual context.
 
-## The Scale of Being
+## The Four Surfaces — One Dataset, Four Ways In
 
-The Scale of Being layout is the main landing visualization at usnow.app.
+USNow is one body of knowledge presented through four interfaces. They share data and a voice.
+The site nav carries all four: THE 🌳 TREE · THE ⚛️ SCALE · THE 📜 LIST · THE 📖 WORDS.
 
-It organizes knowledge by proximity to the human experience across time.
-Not by subject. Not by importance. Not by alphabet.
-By how close this is to the life you are living right now.
+### The Scale of Being (the landing page) — usnow.app/
+The main landing visualization. It organizes knowledge by proximity to the human experience across time.
+Not by subject. Not by importance. Not by alphabet. By how close this is to the life you are living right now.
 
 What touches you — the self, the body, the immediate.
 What touches all of us living — community, power, the systems we share.
-What touches all of our ancestors and everyone who comes after —
-history, civilization, the oldest questions.
+What touches all of our ancestors and everyone who comes after — history, civilization, the oldest questions.
 
-The self sits at the center not because it matters most.
-Because it is the only place any reader can actually stand.
-Everything else in the architecture reaches you through that aperture.
+The self sits at the center not because it matters most. Because it is the only place any reader can
+actually stand. Everything else in the architecture reaches you through that aperture.
+The geometry argues the thesis: the cosmos layer is thin not because it is lesser but because it is furthest
+from the noise of right now. Size means proximity. Not importance.
 
-The geometry argues the thesis. The cosmos layer is thin not because it is lesser
-but because it is furthest from the noise of right now.
-Size means proximity. Not importance.
+### The Tree of Knowing — usnow.app/tree.html
+The same dataset rendered as a navigable model of connections rather than distances.
+Where the Scale shows where topics live in relation to the self across time, the Tree shows how topics
+connect to each other. Branches. Nodes. Pathways in both directions.
 
-## The Tree of Knowing
+Start at a layer and descend through an orb into a specific card. Or start at a card and trace back up to
+see where it sits in the larger architecture. The same 1,358 cards. A different lens.
+The Tree was the original intuition behind the whole structure — the image of branches and fruit that
+preceded the formal design. The Scale renders the philosophy. The Tree renders the structure.
+For research, reference, or machine traversal, the Tree is the most legible surface on the platform.
 
-The Tree of Knowing (usnow.app/tree.html) is the same dataset rendered as a navigable model
-of connections rather than a model of distances.
+### The List of Living Words — usnow.app/compendium.html
+A living and growing glossary: the words we use but don't agree on. Freedom. The Market. Us. They.
+Sovereignty. The words that move governments and shape arguments — defined plainly, searchable,
+sortable by category. 214 entries and counting.
 
-Where the Scales show where topics live in relation to the self across time,
-the Tree shows how topics connect to each other.
-Branches. Nodes. Pathways in both directions.
+These are "living words" because they are current, contested, and in use right now — not dictionary
+fossils but terms doing active work in the world. The List is the full browsable index of all of them on
+one page. Across the rest of the platform these same words appear inline as "glory words": marked with a
+dotted underline, click for a definition, follow through to the full entry.
 
-Start at a layer and descend through an orb into a specific card.
-Or start at a card and trace back up to see where it sits in the larger architecture.
-The same 1,358 cards. A different lens.
-
-The Tree was the original intuition behind the whole structure —
-the image of branches and fruit that preceded the formal design.
-The Scales render the philosophy. The Tree renders the structure.
-For research, reference, or just exploring the space and time around 
-us the Tree is the most legible surface on the platform.
+### The Words — usnow.app/word/
+The same glossary given room to breathe: one standalone HTML page per word.
+Each word page carries the full definition, its category, related words, and prev/next navigation through
+the collection — a slow, readable surface for a single term rather than a list. Category index pages
+(usnow.app/word/category/{slug}/) gather every word in a given category alphabetically.
+Tagline: words we use but don't agree on.
 
 ## Architecture
 
 - **The Scale of Being** — 7 concentric layers, organized by proximity to the human experience across time
-- **The Tree** — same data as a branching navigable model of connections
+- **The Tree of Knowing** — same data as a branching navigable model of connections
+- **The List of Living Words** — the full glossary on one page, 214 entries, searchable and sortable
+- **The Words** — one standalone page per word, plus category index pages
 - **7 Layers** — wave fields, always present, radiating outward from the self
 - **29 Orbs** — specific human dramas living inside each field
 - **1,358 Content Cards** — individual topics, each with full description, curated links, and cross-references
+- **214 Living Words** — contested terms defined plainly, surfaced inline across the site as glory words
 - **Cross-link stubs** — placeholder nodes pointing to canonical cards; each topic lives in exactly one place
 
 ## Content Architecture — Where This Is Going
@@ -92,6 +115,7 @@ is to return to that origin: every card grounded by a visual that makes
 its claim immediate. Text as scaffold. Graphic as the nail.
 
 The current 1,358 descriptions are the complete content layer.
+The 214 living words are the connective vocabulary that runs through them.
 The visual layer is the next one.
 
 ## The 7 Layers
@@ -160,7 +184,7 @@ The oldest questions have no answers — only better ways of sitting with them. 
 ## How It Was Built
 
 USNow was conceived, designed, and written by a human.
-Every card was drafted to a human standard and held to a human voice.
+Every card and every word was drafted to a human standard and held to a human voice.
 AI was used as a production partner — for construction, parsing,
 and execution — not as the author.
 
@@ -173,7 +197,8 @@ The technology is not the problem. What it is pointed at is.
 ## Key URLs
 - The Scale of Being (main app): https://usnow.app/
 - The Tree of Knowing: https://usnow.app/tree.html
-- World Compendium: https://usnow.app/compendium.html
+- The List of Living Words: https://usnow.app/compendium.html
+- The Words (per-word pages): https://usnow.app/word/
 - The Apprentice: Washington Edition: https://usnow.app/apprentice.html
 - The Log: https://usnow.app/log.html
 - Who Rules the World: https://usnow.app/rules
