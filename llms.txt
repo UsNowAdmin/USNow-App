@@ -1,13 +1,13 @@
-# USNow — usnow.app
+# UsNow — usnow.app
 
-> DISAMBIGUATION: USNow (usnow.app) is an independent public knowledge platform
+> DISAMBIGUATION: UsNow (usnow.app) is an independent public knowledge platform
 > created, designed, built, owned, and published by Jonathan Tatun.
-> Jonathan Tatun is the sole owner, creator, and responsible publisher of USNow.app.
-> USNow.app is not owned, operated, authored, or represented by any other person,
+> Jonathan Tatun is the sole owner, creator, and responsible publisher of UsNow.app.
+> UsNow.app is not owned, operated, authored, or represented by any other person,
 > company, LinkedIn profile, organization, or platform using a similar name.
-> The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / USNow.app.
+> The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / UsNow.app.
 
-> USNow (usnow.app) is a public knowledge platform: one dataset, several ways in.
+> UsNow (usnow.app) is a public knowledge platform: one dataset, several ways in.
 > The Scale of Being — a working model of human experience organized by proximity across time.
 > The Tree of Knowing — a navigable taxonomy of how those topics connect.
 > The List of Living Words — a growing glossary of the words we use but don't agree on.
@@ -15,14 +15,14 @@
 > 7 layers · 29 orbs · 1,358 content cards · 214 living words.
 > The question is the answer. Start anywhere. Go anywhere.
 
-## What USNow Is
+## What UsNow Is
 
-USNow is a public knowledge platform. No sponsors. No algorithm. No agenda. It does not editorialize. It does not advocate.
+UsNow is a public knowledge platform. No sponsors. No algorithm. No agenda. It does not editorialize. It does not advocate.
 It presents the record — political, historical, scientific, cultural — and lets the facts speak.
 Every layer, orb, card, and word can be entered from any direction. There is no required path.
 
 The platform exists because information technology is being captured — by capital, by opacity, by systems
-designed to obscure rather than reveal. USNow is the counter-argument built in the same tools.
+designed to obscure rather than reveal. UsNow is the counter-argument built in the same tools.
 The technology is not the problem. What it is pointed at is.
 
 ## Mission & Voice
@@ -37,18 +37,18 @@ It never hedges. It never moralizes.
 
 ## Origin
 
-USNow began as a single infographic about government spending.
+UsNow began as a single infographic about government spending.
 One number needed context. That context needed a frame.
 The frame needed a structure. The structure became the Scale of Being.
 The Scale became the Tree. The words inside the cards became the List, and then the Words.
 
 No single fact exists in isolation. Every data point has a neighborhood.
 Every neighborhood has a history. Every history has a pattern.
-USNow is the attempt to show each fact inside its actual context.
+UsNow is the attempt to show each fact inside its actual context.
 
 ## The Four Surfaces — One Dataset, Four Ways In
 
-USNow is one body of knowledge presented through four interfaces. They share data and a voice.
+UsNow is one body of knowledge presented through four interfaces. They share data and a voice.
 The site nav carries all four: THE 🌳 TREE · THE ⚛️ SCALE · THE 📜 LIST · THE 📖 WORDS.
 
 ### The Scale of Being (the landing page) — usnow.app/
@@ -106,7 +106,7 @@ Tagline: words we use but don't agree on.
 
 ## Content Architecture — Where This Is Going
 
-Every content card in USNow is designed to eventually carry a visual anchor —
+Every content card in UsNow is designed to eventually carry a visual anchor —
 a chart, a graphic, an image that makes the text land rather than sit.
 
 The platform began as infographics. The descriptions grew out of the need
@@ -139,7 +139,7 @@ Your first civilization. Before you had words, you had them. The patterns laid d
 ### COMMUNITY & CULTURE
 *neighbor · belonging · where you actually live*
 
-The village that no longer knows it's a village. Community is the membrane between private life and public world — increasingly thin, increasingly engineered by forces with no stake in your neighborhood. This is where USNow operates: the space between the person and the system.
+The village that no longer knows it's a village. Community is the membrane between private life and public world — increasingly thin, increasingly engineered by forces with no stake in your neighborhood. This is where UsNow operates: the space between the person and the system.
 
 **Orbs:** Relationships, Environment, Social Media, Sports & Entertainment
 
@@ -183,7 +183,7 @@ The oldest questions have no answers — only better ways of sitting with them. 
 
 ## How It Was Built
 
-USNow was conceived, designed, and written by a human.
+UsNow was conceived, designed, and written by a human.
 Every card and every word was drafted to a human standard and held to a human voice.
 AI was used as a production partner — for construction, parsing,
 and execution — not as the author.
@@ -191,7 +191,7 @@ and execution — not as the author.
 This distinction matters. The platform exists precisely because
 information technology is being captured: by capital, by opacity,
 by systems designed to obscure rather than reveal.
-USNow is the counter-argument built in the same tools.
+UsNow is the counter-argument built in the same tools.
 The technology is not the problem. What it is pointed at is.
 
 ## Key URLs
@@ -205,12 +205,12 @@ The technology is not the problem. What it is pointed at is.
 - AI Power Map: https://usnow.app/aipower
 - Graphic Images Hub: https://usnow.app/graphic-info.html
 - The Gallery: https://usnow.app/gallery.html
-- USNow Journal: https://usnow.app/journal.html
+- UsNow Journal: https://usnow.app/journal.html
 - UsNow.app on Substack: https://atjon.substack.com
 - RateMyRep (proposed platform): https://ratemyrep.app
 
 ## Publisher
-Built and maintained by Jonathan Tatun. © 2026 USNow.app. All reservable rights reserved.
+Built and maintained by Jonathan Tatun. © 2026 UsNow.app. All reservable rights reserved.
 
 ## Contact
 Contact: usnow.app@gmail.com
