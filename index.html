@@ -321,7 +321,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   <div style="font-size:11px;letter-spacing:0.18em;color:#4a9a70;font-family:'Courier New',monospace;margin-bottom:5px;">✓ RECEIVED</div>
   <div style="font-size:11px;color:#8ab8a0;font-family:'Georgia',serif;line-height:1.6;">Thanks for your input.<br>If you left an email, you'll hear back.</div>
 </div>
-<section id="scale" style="margin-top:52px;">
+<section id="scale" style="margin-top:calc(48px + env(safe-area-inset-top, 0px));">
   <div id="stars"></div>
   <svg id="scale-svg" viewBox="0 0 1000 700" preserveAspectRatio="none"></svg>
   <div id="layer-bands"></div>
@@ -3926,18 +3926,5 @@ var _slugToId = {
 })();
 </script>
 
-<script>
-/* Keep the Scale section clear of the fixed nav at any width (desktop / Safari / mobile two-line wrap). */
-(function(){
-  function syncNavOffset(){
-    var nav=document.querySelector('nav'),scale=document.getElementById('scale');
-    if(nav&&scale){scale.style.marginTop=Math.ceil(nav.getBoundingClientRect().height)+'px';}
-  }
-  window.addEventListener('load',syncNavOffset);
-  window.addEventListener('resize',syncNavOffset);
-  window.addEventListener('orientationchange',function(){setTimeout(syncNavOffset,150);});
-  document.addEventListener('DOMContentLoaded',syncNavOffset);
-})();
-</script>
 </body>
 </html>
