@@ -465,13 +465,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 #topbar-right .nav-pill:hover{ color:#c9a84c; border-color:rgba(201,168,76,0.35); }
 #topbar-right .nav-pill.active{ color:#04080f; background:#c9a84c; border-color:#c9a84c; font-weight:700; }
 #topbar-right .nav-pill.active:hover{ background:#e0b860; border-color:#e0b860; }
-#topbar-right .nav-pill .pi{ display:none; font-size:13px; }
 @media(max-width:560px){
+  #topbar{ height:auto; overflow:visible; }
+  #topbar-tagline{ display:none; }
   #topbar-title{ display:none; }
-  #topbar-right .nav-links{ gap:3px; }
-  #topbar-right .nav-pill{ padding:5px 8px; }
-  #topbar-right .nav-pill .pt{ display:none; }
-  #topbar-right .nav-pill .pi{ display:inline; }
+  #topbar-right{ flex-wrap:wrap; align-items:center; }
+  #topbar-right #search-bar{ flex:1; }
+  #topbar-right .nav-links{ flex-basis:100%; justify-content:flex-end; gap:4px; margin-top:4px; flex-wrap:wrap; }
+  #topbar-right .nav-pill{ font-size:9px; padding:4px 9px; letter-spacing:0.08em; }
+  #scene{ top:106px!important; }
+  #search-results-screen{ top:106px!important; }
 }
 
 /* Tighten everything at narrow widths */
@@ -900,10 +903,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
       <button id="search-clear">✕</button>
     </div>
     <div class="nav-links">
-      <a class="nav-pill active" href="tree.html"><span class="pt">THE 🌳 TREE</span><span class="pi">🌳</span></a>
-      <a class="nav-pill" href="index.html"><span class="pt">THE ⚛️ SCALE</span><span class="pi">⚛️</span></a>
-      <a class="nav-pill" href="compendium.html"><span class="pt">THE 📜 LIST</span><span class="pi">📜</span></a>
-      <a class="nav-pill" href="word/"><span class="pt">THE 📖 WORDS</span><span class="pi">📖</span></a>
+      <a class="nav-pill active" href="tree.html">THE 🌳 TREE</a>
+      <a class="nav-pill" href="index.html">THE ⚛️ SCALE</a>
+      <a class="nav-pill" href="compendium.html">THE 📜 LIST</a>
+      <a class="nav-pill" href="word/">THE 📖 WORDS</a>
     </div>
   </div>
   </div>
