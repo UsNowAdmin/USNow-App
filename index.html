@@ -52,7 +52,7 @@ body{background:#04080f;color:#f0ece4;font-family:'Georgia','Times New Roman',se
 #ticker{position:fixed;top:0;left:0;right:0;z-index:600;background:#030609;border-bottom:1px solid rgba(122,96,48,0.44);overflow:hidden;height:30px;display:flex;align-items:center;}
 #ticker-inner{display:flex;gap:56px;animation:ticker 72s linear infinite;white-space:nowrap;}#ticker-inner span{text-transform:uppercase;}
 #ticker-inner span{font-size:9px;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;opacity:0.75;}
-nav{position:fixed;top:0;left:0;right:0;z-index:500;background:#070d17;border-bottom:1px solid rgba(122,96,48,0.33);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 18px;min-height:44px;flex-wrap:wrap;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;background:#070d17;border-bottom:1px solid rgba(122,96,48,0.33);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 18px;height:auto;min-height:44px;flex-wrap:wrap;}
 .nav-logo{display:flex;align-items:center;gap:8px;}
 .nav-logo .us{font-size:19px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
 .nav-logo .now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.85;}
@@ -64,11 +64,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:#070d17;border-bo
 .nav-cta{font-size:9px;letter-spacing:0.15em;color:#04080f!important;background:#c9a84c;padding:5px 12px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;opacity:1!important;}
 .nav-cta:hover{background:#e0b860!important;}
 @media(max-width:720px){
-  nav{padding:6px 12px;gap:6px;}
-  .nav-links{gap:4px;flex-shrink:0;}
-  .nav-links .nav-pill{padding:4px 7px;font-size:8.5px;letter-spacing:0.04em;}
+  nav{flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:7px 12px 8px;min-height:0;flex-wrap:nowrap;}
+  .nav-links{order:1;gap:5px;flex-shrink:0;justify-content:center;}
+  .nav-links .nav-pill{padding:4px 8px;font-size:9px;letter-spacing:0.05em;}
+  .nav-logo{order:2;flex-direction:row!important;align-items:center!important;gap:6px!important;}
+  .nav-logo>span{display:none;}
+  #scale{margin-top:74px!important;}
 }
-#scale{position:relative;width:100%;height:100dvh;min-height:580px;overflow:hidden;background:#04080f;cursor:default;}
+#scale{position:relative;width:100%;height:100dvh;min-height:580px;overflow:hidden;background:#04080f;cursor:default;margin-top:58px;}
 #scale-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;}
 .star{position:absolute;border-radius:50%;background:white;}
 .layer-band{position:absolute;left:0;right:0;cursor:pointer;}
@@ -306,7 +309,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   <div style="font-size:11px;letter-spacing:0.18em;color:#4a9a70;font-family:'Courier New',monospace;margin-bottom:5px;">✓ RECEIVED</div>
   <div style="font-size:11px;color:#8ab8a0;font-family:'Georgia',serif;line-height:1.6;">Thanks for your input.<br>If you left an email, you'll hear back.</div>
 </div>
-<section id="scale" style="margin-top:44px;">
+<section id="scale">
   <div id="stars"></div>
   <svg id="scale-svg" viewBox="0 0 1000 700" preserveAspectRatio="none"></svg>
   <div id="layer-bands"></div>
