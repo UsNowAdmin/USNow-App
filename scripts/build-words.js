@@ -226,15 +226,15 @@ function renderHeader(active) {
 
   return `
 <nav role="navigation" aria-label="USNow">
+  <div class="nav-links">
+    ${pill('🌳 TREE',   '/tree.html',       active === 'tree')}
+    ${pill('⚛️ SCALE',  '/index.html',      active === 'scale')}
+    ${pill('📜 LIST',   '/compendium.html', active === 'list')}
+    ${pill('📖 WORDS',  '/word/',           active === 'words')}
+  </div>
   <a class="nav-logo" href="/" aria-label="USNow home">
     <span class="us">US</span><span class="now">NOW</span><span class="app">.app</span>
   </a>
-  <div class="nav-links">
-    ${pill('THE 🌳 TREE',   '/tree.html',       active === 'tree')}
-    ${pill('THE ⚛️ SCALE',  '/index.html',      active === 'scale')}
-    ${pill('THE 📜 LIST',   '/compendium.html', active === 'list')}
-    ${pill('THE 📖 WORDS',  '/word/',           active === 'words')}
-  </div>
 </nav>
 `.trim();
 }
@@ -269,14 +269,6 @@ function renderWordPage(entry, gloryMap, glories) {
     ? linkifySeeAlso(entry.howUsed, gloryMap, slug)
     : '';
   if (howHTML) howHTML = autoLinkGlories(howHTML, gloryMap, slug, selfLower);
-
-  // Prev / next alphabetical neighbors.
-  const sorted = [...glories].sort((a, b) =>
-    a.word.toLowerCase().localeCompare(b.word.toLowerCase())
-  );
-  const idx = sorted.findIndex(g => g.word === entry.word);
-  const prev = idx > 0 ? sorted[idx - 1] : null;
-  const next = idx < sorted.length - 1 ? sorted[idx + 1] : null;
 
   // Related: RANDOMIZED 5–6 from same category, excluding self.
   const catPool = glories.filter(g => g.category === entry.category && g.word !== entry.word);
@@ -413,26 +405,6 @@ ${renderHeader('words')}
     </section>
 
   </article>
-
-  <nav class="word-pagination" aria-label="Word navigation">
-    ${prev ? `
-    <a class="page-prev" href="/word/${slugify(prev.word)}/">
-      <span class="page-arrow">←</span>
-      <div class="page-stack">
-        <span class="page-direction">Previous</span>
-        <span class="page-word">${escapeHtml(prev.word)}</span>
-      </div>
-    </a>` : '<span class="page-spacer"></span>'}
-    <a class="page-index" href="/word/">All Words</a>
-    ${next ? `
-    <a class="page-next" href="/word/${slugify(next.word)}/">
-      <div class="page-stack">
-        <span class="page-direction">Next</span>
-        <span class="page-word">${escapeHtml(next.word)}</span>
-      </div>
-      <span class="page-arrow">→</span>
-    </a>` : '<span class="page-spacer"></span>'}
-  </nav>
 
   ${sameCat.length > 0 ? `
   <section class="related-section">
