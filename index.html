@@ -60,9 +60,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:#070d17;border-bo
 .pill-rest{display:none;}
 .pill-the{display:inline;}
 @media(min-width:860px){.pill-rest{display:inline;}}
-.nav-title{display:inline-flex;align-items:baseline;gap:7px;text-decoration:none;line-height:1;}
-.nav-title .nt-us{font-size:18px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
-.nav-title .nt-now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.85;}
+.nav-row2{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.nav-title{display:inline-flex;align-items:baseline;gap:0;text-decoration:none;line-height:1;font-family:'Courier New',monospace;}
+.nav-title .nt-us{font-size:19px;font-weight:700;letter-spacing:0;color:#c9a84c;}
+.nav-title .nt-now{font-size:19px;font-weight:700;letter-spacing:0;color:#8aa0b8;}
+.nav-title .nt-app{font-size:11px;font-weight:400;letter-spacing:0;color:rgba(201,168,76,0.45);margin-left:1px;}
 .nav-cta{font-size:9px;letter-spacing:0.15em;color:#04080f!important;background:#c9a84c;padding:5px 12px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;opacity:1!important;}
 .nav-cta:hover{background:#e0b860!important;}
 @media(max-width:560px){
@@ -292,11 +294,9 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <a class="nav-pill" href="compendium.html"><span class="pill-the">THE </span>📜 LIST<span class="pill-rest"> OF LIVING WORDS</span></a>
   </div>
 
-  <!-- Row 2: wordmark (also the entry point to The Log) -->
-  <a class="nav-title" href="log.html" title="The Log"><span class="nt-us">US</span> <span class="nt-now">NOW</span></a>
-
-  <!-- Row 3: flashing sign — scrolls to the contact/thoughts section -->
-  <div style="display:flex;justify-content:center;">
+  <!-- Row 2: wordmark + flashing sign, side by side -->
+  <div class="nav-row2">
+    <a class="nav-title" href="log.html" title="The Log"><span class="nt-us">Us</span><span class="nt-now">Now</span><span class="nt-app">.app</span></a>
     <span id="nav-sign" onclick="var t=document.getElementById('thoughts');if(t)t.scrollIntoView({behavior:'smooth'});" style="cursor:pointer;display:inline-flex;align-items:center;justify-content:center;min-width:138px;padding:0 8px;height:18px;border:1px solid rgba(201,168,76,0.38);border-radius:3px;background:rgba(201,168,76,0.04);overflow:hidden;position:relative;animation:navSignPulse 4s ease-in-out infinite;white-space:nowrap;">
       <span style="visibility:hidden;font-size:9px;letter-spacing:0.14em;font-family:'Courier New',monospace;white-space:nowrap;pointer-events:none;">START ANYWHERE</span>
       <span style="position:absolute;text-align:center;font-size:9px;letter-spacing:0.14em;color:#c9a84c;font-family:'Courier New',monospace;white-space:nowrap;animation:navFrame1 6s ease-in-out infinite;">START ANYWHERE</span>
