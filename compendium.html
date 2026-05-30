@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>The 📜 List of Living Words · UsNow.app</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -13,16 +13,31 @@
 
 <!-- ── SITE NAV (matches /word/ pages — no ticker) ── -->
 <nav role="navigation" aria-label="USNow">
+  <div class="nav-links">
+    <a class="nav-pill" href="/tree.html">🌳 TREE</a>
+    <a class="nav-pill" href="/index.html">⚛️ SCALE</a>
+    <a class="nav-pill active" href="/compendium.html">📜 LIST</a>
+    <a class="nav-pill" href="/word/">📖 WORDS</a>
+  </div>
   <a class="nav-logo" href="/" aria-label="USNow home">
     <span class="us">US</span><span class="now">NOW</span><span class="app">.app</span>
   </a>
-  <div class="nav-links">
-    <a class="nav-pill" href="/tree.html">THE 🌳 TREE</a>
-    <a class="nav-pill" href="/index.html">THE ⚛️ SCALE</a>
-    <a class="nav-pill active" href="/compendium.html">THE 📜 LIST</a>
-    <a class="nav-pill" href="/word/">THE 📖 WORDS</a>
-  </div>
 </nav>
+
+<!-- Measure real nav height into --nav-h so content never clips or gaps across devices -->
+<script>
+(function(){
+  function setNavH(){
+    var n=document.querySelector('nav');
+    if(n) document.documentElement.style.setProperty('--nav-h', n.offsetHeight + 'px');
+  }
+  setNavH();
+  window.addEventListener('resize', setNavH);
+  window.addEventListener('orientationchange', function(){ setTimeout(setNavH,150); });
+  window.addEventListener('load', setNavH);
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(setNavH); }
+})();
+</script>
 
 <div class="wrap">
 
