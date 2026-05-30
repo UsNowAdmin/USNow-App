@@ -119,6 +119,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 #topbar .nav-pill:hover{color:#c9a84c;border-color:rgba(201,168,76,0.35);}
 #topbar .nav-pill.active{color:#04080f;background:#c9a84c;border-color:#c9a84c;font-weight:700;}
 #topbar .nav-pill.active:hover{background:#e0b860;border-color:#e0b860;}
+.pill-rest{display:none;}
+.pill-the{display:inline;}
+@media(min-width:860px){.pill-rest{display:inline;}}
 #topbar-row2{display:flex;align-items:center;justify-content:space-between;gap:12px;}
 #topbar-tools{display:flex;align-items:center;gap:8px;flex:1;justify-content:flex-end;min-width:0;}
 #topbar-tools #search-bar{flex:1;max-width:360px;}
@@ -898,9 +901,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 <div id="topbar">
   <!-- Row 1: uniform pills (matches the Scale) -->
   <div class="nav-links">
-    <a class="nav-pill active" href="tree.html">THE 🌳 TREE</a>
-    <a class="nav-pill" href="index.html">THE ⚛️ SCALE</a>
-    <a class="nav-pill" href="compendium.html">THE 📜 LIST</a>
+    <a class="nav-pill active" href="tree.html"><span class="pill-the">THE </span>🌳 TREE<span class="pill-rest"> OF KNOWING</span></a>
+    <a class="nav-pill" href="index.html"><span class="pill-the">THE </span>⚛️ SCALE<span class="pill-rest"> OF BEING</span></a>
+    <a class="nav-pill" href="compendium.html"><span class="pill-the">THE </span>📜 LIST<span class="pill-rest"> OF LIVING WORDS</span></a>
   </div>
 
   <!-- Row 2: wordmark (click = back to root) + back button + prominent search -->

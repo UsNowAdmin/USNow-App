@@ -57,6 +57,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:#070d17;border-bo
 .nav-links .nav-pill:hover{color:#c9a84c;border-color:rgba(201,168,76,0.35);}
 .nav-links .nav-pill.active{background:#c9a84c;color:#04080f;font-weight:700;border-color:#c9a84c;}
 .nav-links .nav-pill.active:hover{background:#e0b860;border-color:#e0b860;}
+.pill-rest{display:none;}
+.pill-the{display:inline;}
+@media(min-width:860px){.pill-rest{display:inline;}}
 .nav-title{display:inline-flex;align-items:baseline;gap:7px;text-decoration:none;line-height:1;}
 .nav-title .nt-us{font-size:18px;font-weight:700;letter-spacing:0.18em;color:#c9a84c;font-family:'Courier New',monospace;}
 .nav-title .nt-now{font-size:11px;letter-spacing:0.4em;color:#8aa0b8;font-family:'Courier New',monospace;opacity:0.85;}
@@ -284,9 +287,9 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 <nav>
   <!-- Row 1: navigation pills -->
   <div class="nav-links">
-    <a class="nav-pill" href="tree.html">THE 🌳 TREE</a>
-    <a class="nav-pill active" href="index.html">THE ⚛️ SCALE</a>
-    <a class="nav-pill" href="compendium.html">THE 📜 LIST</a>
+    <a class="nav-pill" href="tree.html"><span class="pill-the">THE </span>🌳 TREE<span class="pill-rest"> OF KNOWING</span></a>
+    <a class="nav-pill active" href="index.html"><span class="pill-the">THE </span>⚛️ SCALE<span class="pill-rest"> OF BEING</span></a>
+    <a class="nav-pill" href="compendium.html"><span class="pill-the">THE </span>📜 LIST<span class="pill-rest"> OF LIVING WORDS</span></a>
   </div>
 
   <!-- Row 2: wordmark (also the entry point to The Log) -->
