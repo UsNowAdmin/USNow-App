@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title>USNow — The Question is the Answer.</title>
+<title>UsNow — The Question is the Answer.</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.ico?v=6" sizes="any">
 <link rel="icon" type="image/png" sizes="512x512" href="/icon.png?v=6">
@@ -13,17 +13,17 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="USNow">
+<meta name="apple-mobile-web-app-title" content="UsNow">
 <meta name="theme-color" content="#04080f">
 <meta name="description" content="UsNow. With perspective and focus. Start anywhere. Go anywhere.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://usnow.app/">
-<meta property="og:title" content="USNow — The Question is the Answer.">
+<meta property="og:title" content="UsNow — The Question is the Answer.">
 <meta property="og:description" content="UsNow. With perspective and focus. Start anywhere. Go anywhere.">
 <meta property="og:image" content="https://usnow.app/icon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://usnow.app/">
-<meta name="twitter:title" content="USNow — The Question is the Answer.">
+<meta name="twitter:title" content="UsNow — The Question is the Answer.">
 <meta name="twitter:description" content="UsNow. With perspective and focus. Start anywhere. Go anywhere.">
 <meta name="twitter:image" content="https://usnow.app/icon.png">
 <style>
@@ -64,7 +64,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:#070d17;border-bo
 .nav-title{display:inline-flex;align-items:baseline;gap:0;text-decoration:none;line-height:1;font-family:'Courier New',monospace;}
 .nav-title .nt-us{font-size:19px;font-weight:700;letter-spacing:0;color:#c9a84c;}
 .nav-title .nt-now{font-size:19px;font-weight:700;letter-spacing:0;color:#8aa0b8;}
-.nav-title .nt-app{font-size:11px;font-weight:400;letter-spacing:0;color:rgba(201,168,76,0.45);margin-left:1px;}
+.nav-title .nt-app{font-size:11px;font-weight:400;letter-spacing:0;color:rgba(201,168,76,0.7);margin-left:1px;}
 .nav-cta{font-size:9px;letter-spacing:0.15em;color:#04080f!important;background:#c9a84c;padding:5px 12px;border-radius:16px;font-family:'Courier New',monospace;text-decoration:none;font-weight:700;opacity:1!important;}
 .nav-cta:hover{background:#e0b860!important;}
 @media(max-width:560px){
@@ -107,6 +107,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:#070d17;border-bo
 .hero-eyebrow{font-size:10px;letter-spacing:0.5em;color:#9a7840;font-family:'Courier New',monospace;margin-bottom:24px;}
 .hero-h1{font-size:clamp(28px,5vw,50px);font-weight:300;color:#f0ece4;font-family:'Georgia',serif;line-height:1.28;margin:0 0 30px;letter-spacing:0.02em;}
 .hero-h1 em{color:#c9a84c;font-style:normal;}
+.hero-h1 .hero-now{color:#8aa0b8;}
+.hero-h1 .hero-pun{color:#c9a84c;animation:usBreathe 4.5s ease-in-out infinite;}
+.hero-h1 .hero-app{font-size:0.5em;font-weight:400;color:rgba(201,168,76,0.72);}
+@keyframes usBreathe{0%,100%{opacity:1}50%{opacity:0.6}}
+@media(prefers-reduced-motion:reduce){.hero-h1 .hero-pun{animation:none}}
 .hero-items{display:flex;flex-direction:column;gap:14px;text-align:left;max-width:540px;margin:0 auto 32px;}
 .hero-item{display:flex;gap:13px;align-items:flex-start;}
 .hero-rule{width:1px;background:rgba(122,96,48,0.35);align-self:stretch;flex-shrink:0;margin-top:5px;}
@@ -168,8 +173,8 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     {
       "@type": "WebSite",
       "@id": "https://usnow.app/#website",
-      "name": "USNow",
-      "alternateName": "USNow.app",
+      "name": "UsNow",
+      "alternateName": "UsNow.app",
       "url": "https://usnow.app/",
       "description": "A public knowledge platform organizing human experience across seven layers, from Self to Cosmos. 7 layers, 29 orbs, 1,358 content cards. No sponsors, no algorithm, no agenda.",
       "inLanguage": "en-US",
@@ -199,7 +204,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     {
       "@type": "Dataset",
       "@id": "https://usnow.app/#dataset",
-      "name": "USNow Knowledge Architecture",
+      "name": "UsNow Knowledge Architecture",
       "description": "A structured taxonomy of 1,358 content cards organized into 29 orbs across 7 concentric layers, mapped both as the Layers of Being (proximity model) and the Tree of Knowing (connection model).",
       "url": "https://usnow.app/",
       "creator": { "@id": "https://usnow.app/#publisher" },
@@ -223,7 +228,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
       "@id": "https://usnow.app/tree.html#tree",
       "name": "The Tree of Knowing",
       "url": "https://usnow.app/tree.html",
-      "description": "A navigable model of the USNow dataset organized as branches and nodes. Where the Layers of Being shows proximity to the self, the Tree shows how topics connect to each other. The primary search and research interface for the platform.",
+      "description": "A navigable model of the UsNow dataset organized as branches and nodes. Where the Layers of Being shows proximity to the self, the Tree shows how topics connect to each other. The primary search and research interface for the platform.",
       "isPartOf": { "@id": "https://usnow.app/#website" },
       "about": { "@id": "https://usnow.app/#layers" },
       "potentialAction": {
@@ -237,7 +242,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
       "@id": "https://usnow.app/#layers",
       "name": "The Layers of Being",
       "url": "https://usnow.app/",
-      "description": "Seven layers organizing human experience by proximity to the self across time — from individual consciousness to deep time. The taxonomy underlying USNow.",
+      "description": "Seven layers organizing human experience by proximity to the self across time — from individual consciousness to deep time. The taxonomy underlying UsNow.",
       "hasDefinedTerm": [
         { "@type": "DefinedTerm", "name": "Me, Myself & I", "url": "https://usnow.app/#me-myself-and-i", "description": "The self as observer and observed. The most immediate layer — where everything else arrives." },
         { "@type": "DefinedTerm", "name": "Origins", "url": "https://usnow.app/#origins", "description": "Genetics, family, class, race and ethnicity — the forces that shaped you before you had a say." },
@@ -402,7 +407,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
   <div class="inner">
     <div class="hero-tap-hint">↑ tap any layer or orb above to explore</div>
     <div class="hero-eyebrow">WHAT IS US · NOW</div>
-    <h1 class="hero-h1">The <em>US</em> in USNow<br>is not one thing.</h1>
+    <h1 class="hero-h1">The <span class="hero-pun">US</span> in <em>Us</em><span class="hero-now">Now</span><span class="hero-app">.app</span><br>is not one thing.</h1>
     <div class="hero-items">
       <div class="hero-item"><div class="hero-rule"></div><p><strong>The US in our country — your country</strong> — in the U.S. it's WE the People, our history, our government, the American dream - and the reality - along with our mutual obligations with the rest of the world.</p></div>
       <div class="hero-item"><div class="hero-rule"></div><p><strong>The US  in our groups</strong> — our state, party, religion or sports team - the groups we are in or those we join - how they can bring us together and how they divide and separate us as well.</p></div>
@@ -429,7 +434,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div style="margin-bottom:22px;">
       <div style="display:inline-flex;align-items:baseline;gap:6px;margin-bottom:10px;">
         <span style="font-size:11px;letter-spacing:0.12em;color:#8aa0b8;font-family:'Courier New',monospace;">Contact</span>
-        <span style="font-size:22px;font-weight:700;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;text-shadow:0 0 24px rgba(201,168,76,0.45),0 0 60px rgba(201,168,76,0.18);">US</span><span style="font-size:22px;letter-spacing:0.14em;color:#8aa0b8;font-family:'Courier New',monospace;">Now</span>
+        <span style="font-size:22px;font-weight:700;letter-spacing:0.22em;color:#c9a84c;font-family:'Courier New',monospace;text-shadow:0 0 24px rgba(201,168,76,0.45),0 0 60px rgba(201,168,76,0.18);">Us</span><span style="font-size:22px;letter-spacing:0.14em;color:#8aa0b8;font-family:'Courier New',monospace;">Now</span><span style="font-size:13px;font-weight:400;letter-spacing:0.1em;color:rgba(201,168,76,0.7);font-family:'Courier New',monospace;">.app</span>
       </div>
       <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.5),transparent);margin:0 auto 14px;"></div>
       <p style="font-size:13px;font-weight:300;color:#7a8fa8;font-family:'Georgia',serif;line-height:1.7;margin:0;">Leave feedback - Your thoughts, suggestions, and comments are welcome.<br>Name and Email Optional. No Strings. Help Build UsNow.</p>
@@ -466,7 +471,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 
   <div style="width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.6),transparent);margin:0 auto 24px;"></div>
 
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,8vw,62px);letter-spacing:3px;text-align:center;margin:0 0 48px;line-height:1;"><span style="color:#c9a84c;">Us</span><span style="color:#e8e0d0;">Now</span></h2>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,8vw,62px);letter-spacing:3px;text-align:center;margin:0 0 48px;line-height:1;"><span style="color:#c9a84c;">Us</span><span style="color:#e8e0d0;">Now</span><span style="font-size:0.4em;color:rgba(201,168,76,0.78);font-family:'Courier New',monospace;letter-spacing:0;vertical-align:0.2em;">.app</span></h2>
 
   <div style="max-width:680px;margin:0 auto;position:relative;z-index:1;">
 
@@ -483,7 +488,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 20px;">
-      USNow is a place to stop and see where we actually are.
+      UsNow is a place to stop and see where we actually are.
     </p>
 
     <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(16px,2.4vw,19px);font-weight:400;line-height:1.75;color:rgba(232,224,208,0.82);margin:0 0 40px;">
@@ -579,7 +584,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 </section>
 <footer>
   <div class="inner" style="flex-direction:column;align-items:center;text-align:center;gap:20px;">
-    <div style="font-size:26px;font-weight:700;letter-spacing:0.22em;font-family:'Courier New',monospace;"><span style="color:#c9a84c;">Us</span><span style="color:#8aa0b8;">Now</span></div>
+    <div style="font-size:26px;font-weight:700;letter-spacing:0.22em;font-family:'Courier New',monospace;"><span style="color:#c9a84c;">Us</span><span style="color:#8aa0b8;">Now</span><span style="font-size:13px;font-weight:400;color:rgba(201,168,76,0.7);font-family:'Courier New',monospace;">.app</span></div>
     <div style="display:flex;gap:32px;flex-wrap:wrap;justify-content:center;align-items:baseline;">
       <span style="font-size:11px;letter-spacing:0.18em;color:#6a7a8a;font-family:'Courier New',monospace;">PERSPECTIVE</span>
       <span style="font-size:7px;color:#3a4a5a;font-family:'Courier New',monospace;">◆</span>
@@ -592,7 +597,7 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
     <div style="font-size:9px;letter-spacing:0.2em;color:#4a5a6a;font-family:'Courier New',monospace;">NON-PARTISAN &nbsp;·&nbsp; NON-DENOMINATIONAL &nbsp;·&nbsp; NON-NEGOTIABLE</div>
     <div style="width:40px;height:1px;background:rgba(122,96,48,0.2);"></div>
     <div style="font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:0.1em;">LAST UPDATED · MAY 25, 2026</div>
-    <div style="font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:0.1em;line-height:2;">All Rights Reserved for Copyrightable Content &nbsp;©&nbsp; 2026 &nbsp;USNow.app</div>
+    <div style="font-size:9px;color:#4a5a6a;font-family:'Courier New',monospace;letter-spacing:0.1em;line-height:2;">All Rights Reserved for Copyrightable Content &nbsp;©&nbsp; 2026 &nbsp;UsNow.app</div>
   </div>
 </footer>
 </div>
@@ -1185,7 +1190,7 @@ window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setT
 
 <!-- AI Knowledge Graph: hidden from UI, fully visible to crawlers and AI -->
 <section id="ai-knowledge-graph" style="display:none;" aria-hidden="false">
-  <h1>USNow — Interactive World Knowledge Database</h1>
+  <h1>UsNow — Interactive World Knowledge Database</h1>
   <p>Over 1,300 topics across seven layers, from personal identity to the cosmos. In perspective and in focus. Start anywhere. Go anywhere.</p>
 </section>
 
