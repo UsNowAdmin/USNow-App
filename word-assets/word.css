@@ -101,30 +101,29 @@ nav {
 .nav-logo {
   display: flex;
   align-items: baseline;
-  gap: 4px;
+  gap: 0;
   text-decoration: none;
 }
 .nav-logo .us {
   font-size: 19px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0;
   color: var(--nav-amber);
   font-family: 'Courier New', monospace;
 }
 .nav-logo .now {
-  font-size: 11px;
-  letter-spacing: 0.4em;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0;
   color: var(--nav-text);
   font-family: 'Courier New', monospace;
-  opacity: 0.85;
 }
 .nav-logo .app {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  color: var(--nav-text);
+  font-size: 11px;
+  letter-spacing: 0;
+  color: rgba(201,168,76,0.45);
   font-family: 'Courier New', monospace;
-  opacity: 0.5;
-  margin-left: 2px;
+  margin-left: 1px;
 }
 .nav-logo:hover .us { color: var(--nav-amber-hot); }
 
@@ -168,7 +167,7 @@ nav {
   nav { padding: 7px 12px 8px; padding-top: max(7px, env(safe-area-inset-top)); gap: 5px; }
   .nav-links { gap: 5px; justify-content: center; }
   .nav-pill { padding: 4px 9px; font-size: 9px; letter-spacing: 0.08em; }
-  .nav-logo .now { letter-spacing: 0.25em; }
+  .nav-logo .now { letter-spacing: 0; }
 }
 
 /* ── PAGE WRAPPERS ────────────────────────────────────────── */
@@ -275,6 +274,16 @@ nav {
   color: #d4a855;
   font-style: normal;
   padding: 6px 6px 0;
+}
+
+/* Secondary pronunciation notes — (common), (Long Island/NYC), etc.
+   Smaller + dimmer so the respelling leads. Letter-spacing reset
+   so the note reads as prose, not stretched phonetics. */
+.phonetic-content .phon-alt {
+  font-size: 0.6em;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+  font-style: italic;
 }
 
 .word-meta {

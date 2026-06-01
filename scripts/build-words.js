@@ -233,7 +233,7 @@ function renderHeader(active) {
     ${pill('📖 WORDS',  '/word/',           active === 'words')}
   </div>
   <a class="nav-logo" href="/" aria-label="USNow home">
-    <span class="us">US</span><span class="now">NOW</span><span class="app">.app</span>
+    <span class="us">Us</span><span class="now">Now</span><span class="app">.app</span>
   </a>
 </nav>
 `.trim();
@@ -343,12 +343,6 @@ ${renderHeader('words')}
 
 <main class="word-main">
   <article class="word-article">
-
-    <div class="word-eyebrow">
-      <a href="/word/" class="eyebrow-link">UsNow.app · ${PROJECT_NAME}</a>
-      <span class="eyebrow-sep">·</span>
-      <span class="word-cat-eyebrow">${escapeHtml(entry.category)}</span>
-    </div>
 
     <h1 class="word-title">${escapeHtml(entry.word)}</h1>
 
@@ -502,8 +496,8 @@ ${renderHeader('words')}
 
   <header class="index-header">
     <div class="index-eyebrow">UsNow.app</div>
-    <h1 class="index-title">The <em>📖</em> Words</h1>
-    <div class="index-subtitle">${glories.length} entries · alphabetical · each its own page</div>
+    <h1 class="index-title">The <em>📖</em> Living Words</h1>
+    <div class="index-subtitle">Words We Use But Don't Agree On</div>
   </header>
 
   <div class="index-controls">
