@@ -619,6 +619,16 @@
     font-style: normal;
   }
 
+  /* Secondary pronunciation notes — the (common), (Long Island/NYC) tags.
+     Sits inside .pill-phonetic; smaller + dimmer so the respelling leads.
+     Resets the wide phonetic letter-spacing so the note reads as prose. */
+  .pill-phonetic .phon-alt {
+    font-size: 0.62em;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+    font-style: italic;
+  }
+
   /* ── See-also cross-reference links ── */
   /* Two flavors, intentionally distinct so the reader can tell editorial
      intent from system-detected at a glance:
