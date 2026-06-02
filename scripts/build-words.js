@@ -242,7 +242,7 @@ function renderHeader(active) {
 const FOOTER_HTML = `
 <footer class="page-footer">
   <div class="footer-text">The 📖 Words</div>
-  <div class="footer-tagline">©2026 All rights reserved — UsNow.app</div>
+  <div class="footer-tagline">© 2026 UsNow LLC. All Rights Reserved for Copyrightable Content.</div>
 </footer>`.trim();
 
 // ── Page template (individual word) ──────────────────────────
@@ -303,8 +303,8 @@ function renderWordPage(entry, gloryMap, glories) {
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(desc)}">
 <link rel="canonical" href="${url}">
-<meta name="author" content="${SITE_NAME}">
-<meta name="publisher" content="${SITE_NAME}">
+<meta name="author" content="Jonathan Tatun">
+<meta name="publisher" content="UsNow LLC">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
@@ -462,8 +462,8 @@ function renderIndexPage(glories) {
 <title>${PROJECT_NAME} · ${SITE_NAME}</title>
 <meta name="description" content="${escapeHtml(desc)}">
 <link rel="canonical" href="${SITE_URL}/word/">
-<meta name="author" content="${SITE_NAME}">
-<meta name="publisher" content="${SITE_NAME}">
+<meta name="author" content="Jonathan Tatun">
+<meta name="publisher" content="UsNow LLC">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${SITE_NAME}">
@@ -568,8 +568,8 @@ function renderCategoryPage(category, entries, glories) {
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(desc)}">
 <link rel="canonical" href="${url}">
-<meta name="author" content="${SITE_NAME}">
-<meta name="publisher" content="${SITE_NAME}">
+<meta name="author" content="Jonathan Tatun">
+<meta name="publisher" content="UsNow LLC">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${SITE_NAME}">

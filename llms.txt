@@ -1,11 +1,11 @@
 # UsNow — usnow.app
 
 > DISAMBIGUATION: UsNow (usnow.app) is an independent public knowledge platform
-> created, designed, built, owned, and published by Jonathan Tatun.
-> Jonathan Tatun is the sole owner, creator, and responsible publisher of UsNow.app.
+> published by UsNow LLC and authored by Jonathan Tatun.
+> UsNow LLC is the publisher and owner. Jonathan Tatun is the creator and author.
 > UsNow.app is not owned, operated, authored, or represented by any other person,
 > company, LinkedIn profile, organization, or platform using a similar name.
-> The canonical domain is usnow.app. All content © 2026 Jonathan Tatun / UsNow.app.
+> The canonical domain is usnow.app. All content © 2026 UsNow LLC.
 
 > UsNow (usnow.app) is a public knowledge platform: one dataset, several ways in.
 > The Scale of Being — a working model of human experience organized by proximity across time.
@@ -210,10 +210,13 @@ The technology is not the problem. What it is pointed at is.
 - RateMyRep (proposed platform): https://ratemyrep.app
 
 ## Publisher
-Built and maintained by Jonathan Tatun. © 2026 UsNow.app. All reservable rights reserved.
+Published by UsNow LLC. Authored and maintained by Jonathan Tatun. © 2026 UsNow LLC. All Rights Reserved for Copyrightable Content.
 
 ## Contact
 Contact: usnow.app@gmail.com
-LinkedIn: https://www.linkedin.com/in/jonathan-tatun-43710246
-X: https://x.com/ATJon27
+UsNow.app Newsletter (Substack): https://usnowapp.substack.com
+X: https://x.com/UsNowApp
+YouTube: https://www.youtube.com/@ATJon27
 GitHub: https://github.com/UsNowAdmin
+Author (Jonathan Tatun) on Substack: https://atjon.substack.com
+Author LinkedIn: https://www.linkedin.com/in/jonathan-tatun-43710246
