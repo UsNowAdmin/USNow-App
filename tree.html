@@ -737,17 +737,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
   50%{box-shadow:0 0 60px rgba(212,168,85,0.7),0 0 120px rgba(212,168,85,0.3),inset 0 0 20px rgba(0,0,0,0.3);}
 }
 
-/* ── MODAL ───────────────────────────────────────── */
-#modal{
-  position:fixed;inset:0;
-  z-index:500;
-  display:flex;align-items:center;justify-content:center;
-  /* top padding keeps card below the 58px topbar on all devices */
-  padding:68px 20px 20px;
-  pointer-events:none;
-  opacity:0;
-  transition:opacity 0.25s;
-}
+/* ── MODAL: chrome now in modal.css — only Tree-specific rules remain ── */
 /* On small phones the card should start near top and scroll — not center-align */
 @media(max-width:600px){
   #modal{
@@ -757,57 +747,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
     max-height:calc(100dvh - 78px); /* full remaining viewport minus topbar + gap */
   }
 }
-#modal.open{opacity:1;pointer-events:all;}
-#modal-backdrop{
-  position:absolute;inset:0;
-  background:rgba(0,0,0,0.75);
-  backdrop-filter:blur(6px);
-  cursor:pointer;
-}
-#modal-card{
-  position:relative;
-  z-index:1;
-  width:100%;max-width:600px;
-  max-height:85vh;
-  overflow-y:auto;
-  border-radius:16px;
-  padding:28px;
-  animation:modalIn 0.25s ease;
-}
 @keyframes modalIn{
   from{opacity:0;transform:translateY(20px) scale(0.97);}
   to{opacity:1;transform:translateY(0) scale(1);}
-}
-#modal-close{
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.15);
-  color:rgba(255,255,255,0.5);
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;letter-spacing:0.08em;
-  padding:4px 10px;border-radius:5px;
-  cursor:pointer;transition:all 0.15s;
-}
-#modal-close:hover{color:#fff;background:rgba(255,255,255,0.15);}
-#modal-crumb{
-  font-family:'JetBrains Mono',monospace;
-  font-size:9px;letter-spacing:0.12em;
-  color:rgba(255,255,255,0.35);
-  text-transform:uppercase;
-  margin-bottom:8px;
-  line-height:1.6;
-}
-.modal-crumb-part{
-  color:rgba(255,255,255,0.4);
-  letter-spacing:0.1em;
-  transition:color 0.15s;
-}
-.modal-crumb-part:hover{
-  color:rgba(255,220,100,0.85);
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-.modal-crumb-sep{
-  color:rgba(255,255,255,0.18);
 }
 .search-highlight{
   background:rgba(255,220,60,0.28);
@@ -816,32 +758,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
   padding:0 1px;
   font-style:normal;
 }
-#modal-colorbar{height:2px;border-radius:1px;width:50px;margin-bottom:16px;}
-#modal-title{
-  font-family:'Cinzel',serif;
-  font-size:26px;font-weight:400;
-  color:#fff;margin-bottom:4px;
-  line-height:1.2;
-}
-#modal-sub{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;letter-spacing:0.08em;
-  color:rgba(255,255,255,0.4);
-  margin-bottom:16px;
-}
-.modal-section{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;letter-spacing:0.14em;
-  color:rgba(255,255,255,0.3);
-  text-transform:uppercase;
-  margin:20px 0 8px;
-}
-.modal-desc{
-  font-size:13.5px;line-height:1.8;
-  color:rgba(255,255,255,0.72);
-}
-.modal-desc p{margin-bottom:1em;}
-.modal-desc p:last-child{margin-bottom:0;}
 .modal-pills{display:flex;flex-wrap:wrap;gap:7px;}
 .modal-pill{
   font-family:'JetBrains Mono',monospace;
