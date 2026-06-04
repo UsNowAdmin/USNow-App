@@ -14,13 +14,13 @@
 }
 #modal #modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);cursor:pointer;}
 #modal #modal-card{position:relative;z-index:1;width:100%;max-width:600px;max-height:85vh;
-  overflow-y:auto;border-radius:16px;padding:28px;animation:modalIn .25s ease;}
+  overflow-y:auto;border-radius:16px;padding:0 28px 28px;animation:modalIn .25s ease;}
 @keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(0.97);}to{opacity:1;transform:translateY(0) scale(1);}}
 /* top row: Thoughts (left) + CLOSE/BACK (right), in normal flow so the crumb/peek
    below never collide with them no matter how many lines the canonical home wraps to */
 /* sticky header: buttons + canonical home + break stay pinned; peek and body scroll under it.
    full-bleed frosted bar (negative margins cancel the card's 28px padding, padding restores inset). */
-#modal .modal-head{position:sticky;top:0;z-index:5;margin:-28px -28px 0;padding:28px 28px 10px;
+#modal .modal-head{position:sticky;top:0;z-index:5;margin:0 -28px 0;padding:14px 28px 10px;
   background:rgba(10,14,24,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(255,255,255,0.05);border-radius:16px 16px 0 0;}
 #modal .modal-topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;}
