@@ -33,7 +33,7 @@
   font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.01em;color:#eaf0ea;
   background:rgba(255,255,255,.02);border:1px solid var(--pc,var(--c));border-radius:14px;
   padding:9px 12px 9px 10px;cursor:pointer;line-height:1.25;
-  overflow-wrap:normal;word-break:keep-all;hyphens:none;
+  overflow-wrap:break-word;word-break:break-word;hyphens:none;
   transition:transform .15s,box-shadow .2s,background .2s}
 .usn-pill.long{font-size:11px}
 .usn-pill:hover{transform:translateY(-1px);background:rgba(255,255,255,.05);box-shadow:0 5px 18px -8px var(--pc,var(--cg))}
