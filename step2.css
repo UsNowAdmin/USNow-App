@@ -27,13 +27,13 @@
   background:linear-gradient(90deg,var(--c),transparent)}
 
 /* ---- pill grammar: glowing orb dot; labels never fracture mid-word ------- */
-.usn-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-top:11px}
+.usn-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;margin-top:11px}
 @media(min-width:520px){.usn-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)}}
 .usn-pill{display:inline-flex;align-items:center;gap:9px;width:100%;min-width:0;
   font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.01em;color:#eaf0ea;
   background:rgba(255,255,255,.02);border:1px solid var(--pc,var(--c));border-radius:14px;
-  padding:9px 12px 9px 10px;cursor:pointer;line-height:1.25;
-  overflow-wrap:break-word;word-break:break-word;hyphens:none;
+  padding:9px 10px 9px 9px;cursor:pointer;line-height:1.25;
+  overflow-wrap:break-word;word-break:normal;hyphens:none;
   transition:transform .15s,box-shadow .2s,background .2s}
 .usn-pill.long{font-size:11px}
 .usn-pill:hover{transform:translateY(-1px);background:rgba(255,255,255,.05);box-shadow:0 5px 18px -8px var(--pc,var(--cg))}
