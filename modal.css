@@ -10,8 +10,7 @@
 #modal.open{opacity:1;pointer-events:all;}
 @media(max-width:600px){
   #modal{align-items:flex-start;}
-  #modal #modal-card{max-height:calc(100dvh - var(--nav-h,56px) - 24px);padding:0 18px 28px;}
-  #modal .modal-head{margin:0 -18px 0;padding:14px 18px 10px;}
+  #modal #modal-card{max-height:calc(100dvh - var(--nav-h,56px) - 24px);}
 }
 #modal #modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);cursor:pointer;}
 #modal #modal-card{position:relative;z-index:1;width:100%;max-width:600px;max-height:85vh;
