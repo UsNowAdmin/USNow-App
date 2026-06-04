@@ -23,7 +23,7 @@
 #modal-peek .peek-arrow::before{left:0;transform:rotate(45deg)}
 #modal-peek .peek-arrow::after{right:0;transform:rotate(-45deg)}
 #modal-peek .peek:hover .peek-arrow{transform:translateY(2px)}
-#modal-peek .peek-dash{height:2px;width:38px;border-radius:2px;margin:11px 0 11px;
+#modal-peek .peek-dash{height:2px;width:38px;border-radius:2px;margin:10px 0 11px;
   background:linear-gradient(90deg,var(--c),transparent)}
 
 /* ---- pill grammar: glowing orb dot; labels never fracture mid-word ------- */
