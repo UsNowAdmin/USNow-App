@@ -14,6 +14,16 @@ function applyGlories(root){
       if(p.classList&&p.classList.contains('glory-word')) return NodeFilter.FILTER_REJECT;
       if(p.classList&&p.classList.contains('modal-canonical')) return NodeFilter.FILTER_REJECT;
       if(p.closest&&p.closest('.modal-canonical')) return NodeFilter.FILTER_REJECT;
+      // Don't index titles/headings — only in-text body copy.
+      if(p.closest&&p.closest('h1,h2,h3,h4,h5,h6,.nav-logo')) return NodeFilter.FILTER_REJECT;
+      // Don't index the "Us" that is part of the UsNow / UsNow.app wordmark.
+      // It's split into adjacent inline elements (<em|span>Us</em|span><span ...>Now</span>),
+      // which may carry a class OR just inline styles — so match on the NEXT element's TEXT
+      // ("Now"), not its class. This catches the hero, nav, and feedback variants alike.
+      if(/^us$/i.test((n.textContent||'').trim())){
+        var _nx = p.nextElementSibling;
+        if(_nx && /^now\b/i.test((_nx.textContent||'').trim())) return NodeFilter.FILTER_REJECT;
+      }
       return NodeFilter.FILTER_ACCEPT;
     }
   });
@@ -27,6 +37,13 @@ function applyGlories(root){
     _re.lastIndex=0;
     while((m=_re.exec(node.textContent))!==null){
       if(m.index>last) frag.appendChild(document.createTextNode(node.textContent.slice(last,m.index)));
+      // All-caps "US" is the country/abbreviation, not the glossary word "us" — leave it plain.
+      // (Lowercase "us" and title-case "Us" still highlight.)
+      if(m[0]==='US'){
+        frag.appendChild(document.createTextNode(m[0]));
+        last=_re.lastIndex;
+        continue;
+      }
       const span=document.createElement('span');
       span.className='glory-word';
       span.textContent=m[0];
@@ -39,7 +56,7 @@ function applyGlories(root){
   });
 }
 
-// Pop-up logic — capture phase so it fires before modal-box stopPropagation
+// Pop-up logic — capture phase so it fires before modal stopPropagation
 const pop=document.getElementById('glory-pop');
 document.addEventListener('click',e=>{
   const t=e.target.closest('.glory-word');
@@ -76,13 +93,3 @@ window.addEventListener('load',()=>{
     if(el) applyGlories(el);
   });
 });
-
-// Apply to modal content after render
-const _origRender=window.renderCard;
-window.renderCard=function(data){
-  _origRender(data);
-  setTimeout(()=>{
-    const desc=document.getElementById('modal-desc');
-    if(desc) applyGlories(desc);
-  },50);
-};

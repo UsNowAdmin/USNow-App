@@ -1,0 +1,43 @@
+/* ============================================================================
+   UsNow — Shared base modal styling · modal.css
+   Extracted from the Tree's modal CSS, scoped under #modal so it renders the
+   shared engine identically on BOTH pages and overrides any stale same-id
+   rules left over from the Scale's previous modal (e.g. #modal-crumb display).
+   Load AFTER the page's own styles; step2.css loads after this.
+   ============================================================================ */
+#modal{position:fixed;inset:0;z-index:700;display:flex;align-items:center;justify-content:center;
+  padding:calc(var(--nav-h,56px) + 12px) 20px 20px;pointer-events:none;opacity:0;transition:opacity .25s;}
+#modal.open{opacity:1;pointer-events:all;}
+@media(max-width:600px){
+  #modal{align-items:flex-start;}
+  #modal #modal-card{max-height:calc(100dvh - var(--nav-h,56px) - 24px);}
+}
+#modal #modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);cursor:pointer;}
+#modal #modal-card{position:relative;z-index:1;width:100%;max-width:600px;max-height:85vh;
+  overflow-y:auto;border-radius:16px;padding:28px;animation:modalIn .25s ease;}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(0.97);}to{opacity:1;transform:translateY(0) scale(1);}}
+#modal #modal-close{position:absolute;top:14px;right:14px;margin:0;background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:0.08em;padding:4px 10px;border-radius:5px;cursor:pointer;transition:all .15s;}
+#modal #modal-close:hover{color:#fff;background:rgba(255,255,255,0.15);}
+#modal #modal-crumb{display:none;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;
+  color:rgba(255,255,255,0.35);text-transform:uppercase;margin-bottom:8px;line-height:1.6;
+  flex-wrap:wrap;gap:3px;align-items:center;}
+#modal .modal-crumb-part{color:rgba(255,255,255,0.4);letter-spacing:0.1em;transition:color .15s;}
+#modal .modal-crumb-part:hover{color:rgba(255,220,100,0.85);text-decoration:underline;text-underline-offset:3px;}
+#modal .modal-crumb-sep{color:rgba(255,255,255,0.18);}
+#modal .search-highlight{background:rgba(255,220,60,0.28);color:#ffe86a;border-radius:2px;padding:0 1px;font-style:normal;}
+#modal #modal-colorbar{height:2px;border-radius:1px;width:50px;margin-bottom:16px;}
+#modal #modal-title{font-family:'Cinzel',serif;font-size:26px;font-weight:400;color:#fff;margin-bottom:4px;line-height:1.2;}
+#modal #modal-sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;color:rgba(255,255,255,0.4);margin-bottom:16px;display:none;}
+#modal .modal-section{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;color:rgba(255,255,255,0.3);text-transform:uppercase;margin:20px 0 8px;}
+#modal .modal-desc{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,0.72);}
+#modal .modal-desc p{margin-bottom:1em;}
+#modal .modal-desc p:last-child{margin-bottom:0;}
+
+#modal .modal-crumb-ellipsis{color:rgba(255,255,255,0.3);letter-spacing:0.1em;}
+
+/* Defensive: guarantee the buttons render even if a host page's CSS tries to hide them.
+   (They still show/hide with the modal itself, since #modal is what toggles open.) */
+#modal #modal-close{display:block;}
+#modal #thought-btn{display:block;}

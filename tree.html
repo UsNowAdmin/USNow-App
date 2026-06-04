@@ -896,6 +896,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
 #glory-pop .gp-link{font-size:9px;letter-spacing:0.15em;color:rgba(201,168,76,0.6);font-family:'JetBrains Mono',monospace;text-decoration:none;transition:color 0.2s;display:block;}
 #glory-pop .gp-link:hover{color:#c9a84c;}
 </style>
+<link rel="stylesheet" href="step2.css">
 </head>
 <body>
 <div id="topbar">
@@ -972,16 +973,50 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;}
   <div id="modal-backdrop"></div>
   <div id="modal-card">
     <button id="modal-close">✕ CLOSE</button>
+    <button id="thought-btn" onclick="openThoughtPanel()">Thoughts?</button>
     <div id="modal-crumb"></div>
     <div id="modal-colorbar"></div>
+    <div id="modal-peek"></div>
     <h2 id="modal-title"></h2>
     <div id="modal-sub"></div>
     <div id="modal-body"></div>
+    <!-- Thoughts / The Log (ported from the Scale) -->
+    <div id="thought-panel">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="tp-eyebrow" id="tp-context-tag">The Log</div>
+        <button class="tp-back" onclick="closeThoughtPanel()">← BACK</button>
+      </div>
+      <div class="tp-headline" id="tp-headline">What's wrong with this information?</div>
+      <hr class="tp-divider" id="tp-divider">
+      <p class="tp-copy">Maybe nothing. Maybe everything. Maybe you know something that should be added — another fact, another perspective, a lived experience, or a connection no one else has made yet.<br><br>Leave it here. Agree, disagree, expand, debate, correct. Everything coherent goes into <strong>The Log</strong> — a permanent, searchable record. Profanity may be censored and noise flagged, but the record remains.<br><br><em>Add your voice — with your name or not. No strings, no trackers.</em></p>
+      <div class="tp-field">
+        <div class="tp-label">Your name <span style="opacity:0.4;">(optional)</span></div>
+        <input id="tp-name" class="tp-input" type="text" placeholder="Anonymous is fine">
+      </div>
+      <div class="tp-field">
+        <div class="tp-label">Your thought</div>
+        <textarea id="tp-thought" class="tp-input" rows="4" placeholder="Say anything that matters."></textarea>
+      </div>
+      <input type="hidden" id="tp-node-id">
+      <input type="hidden" id="tp-node-label">
+      <div class="tp-actions">
+        <button class="tp-back" onclick="closeThoughtPanel()">← BACK</button>
+        <button class="tp-send" onclick="submitToLog()">SEND TO THE LOG →</button>
+      </div>
+      <div class="tp-confirm" id="tp-confirm">
+        <div class="tp-confirm-mark">✦</div>
+        <div class="tp-confirm-title" id="tp-confirm-title">Received.</div>
+        <div class="tp-confirm-sub">Your thought is in The Log.<br>It will help expand the site.</div>
+        <button class="tp-confirm-back" id="tp-confirm-back-btn" onclick="closeThoughtPanel()">← BACK TO CARD</button>
+      </div>
+    </div>
   </div>
 </div>
 
 <script src="layers.js"></script>
 <script src="glories.js"></script>
+<script src="slugmap.js"></script>
+<script src="modal.js"></script>
 <script>
 /* =====================================================
    USNOW TREE OF KNOWLEDGE
@@ -1046,48 +1081,7 @@ let currentItems = []; // fruit items currently on tree
 let activeSearchQuery = ''; // search term active when a modal is open from search
 
 // Build flat card index for bottomPills resolution
-const _cardIndex = {};
-
-// Build ancestry map: cardId → path string e.g. "History › War & Revolutions › Battles"
-const _cardPath = {};
-function buildCardPath() {
-  LAYERS.forEach(layer => {
-    _cardPath[layer.id] = layer.label;
-    function walk(items, path) {
-      (items || []).forEach(item => {
-        if(!item || !item.id) return;
-        const p = path ? path + ' › ' + (item.label||'').replace(/\n/g,' ') : (item.label||'').replace(/\n/g,' ');
-        if(!_cardPath[item.id]) _cardPath[item.id] = p;
-        walk(item.topPills,  p);
-        walk(item.bottomPills, p);
-      });
-    }
-    walk(layer.topPills, layer.label);
-    walk(layer.orbs,     layer.label);
-  });
-}
-function buildCardIndex() {
-  function walk(items, layerColor) {
-    items.forEach(item => {
-      if(!item || !item.id) return;
-      // Keep whichever version has richer content — longer desc wins
-      const existing = _cardIndex[item.id];
-      const existingDesc = (existing && existing.desc) ? existing.desc.length : 0;
-      const newDesc = item.desc ? item.desc.length : 0;
-      if(!existing || newDesc > existingDesc) {
-        _cardIndex[item.id] = item;
-      }
-      if(item.topPills) walk(item.topPills, layerColor);
-      if(item.bottomPills) walk(item.bottomPills, layerColor);
-      if(item.orbs) walk(item.orbs, layerColor);
-    });
-  }
-  LAYERS.forEach(layer => {
-    _cardIndex[layer.id] = layer;
-    walk(layer.topPills || [], layer.color);
-    walk(layer.orbs || [], layer.color);
-  });
-}
+/* _cardIndex, _cardPath, buildCardIndex(), buildCardPath() now live in modal.js (shared engine). */
 
 // ── TREE GEOMETRY ─────────────────────────────────
 
@@ -2245,202 +2239,7 @@ document.getElementById('logo').addEventListener('click', () => renderRoot());
 
 // ── MODAL ─────────────────────────────────────────
 
-function openModal(item, crumbLabels) {
-  // Step 1: resolve by ID — keep richest version
-  if(item.id && _cardIndex[item.id]) {
-    const canonical = _cardIndex[item.id];
-    item = { ...canonical, color: canonical.color || item.color };
-  }
-  // Step 2: if still no desc, find any card with same label that has content
-  if(!item.desc || item.desc.length < 10) {
-    const label = (item.label || '').replace(/\n/g,' ').trim().toLowerCase();
-    const byLabel = Object.values(_cardIndex).find(c =>
-      c.desc && c.desc.length > 10 &&
-      (c.label || '').replace(/\n/g,' ').trim().toLowerCase() === label
-    );
-    if(byLabel) item = { ...byLabel, color: byLabel.color || item.color };
-  }
-  const color  = item.color || '#888';
-  const hex    = color.replace('#','');
-  const r = parseInt(hex.slice(0,2),16);
-  const g = parseInt(hex.slice(2,4),16);
-  const b = parseInt(hex.slice(4,6),16);
-
-  // Style card
-  const card = document.getElementById('modal-card');
-  card.style.background = `linear-gradient(160deg, rgba(${r},${g},${b},0.12) 0%, #0c1020 100%)`;
-  card.style.border = `1px solid rgba(${r},${g},${b},0.3)`;
-
-  // Colorbar
-  document.getElementById('modal-colorbar').style.background = color;
-
-  // Crumb — if opened from search use full taxonomy path, else use navigation trail
-  const crumbEl = document.getElementById('modal-crumb');
-  const pathFromIndex = item.id && _cardPath[item.id] ? _cardPath[item.id] : null;
-  const navCrumb = (crumbLabels || []).slice(0,-1).join(' › ').toUpperCase();
-  if(pathFromIndex) {
-    const pathParts = pathFromIndex.split(' › ');
-    const crumbParts = pathParts.slice(0, -1);
-
-    // Layer cards have no ancestors — show THE TREE as root crumb
-    if(crumbParts.length === 0) {
-      crumbEl.innerHTML = `<span class="modal-crumb-part" data-crumb-root="1" style="cursor:pointer">THE TREE</span>`;
-      crumbEl.style.marginBottom = '8px';
-      crumbEl.querySelector('[data-crumb-root]').addEventListener('click', () => {
-        closeModal();
-        document.getElementById('search-results-screen').style.display = 'none';
-        document.getElementById('search-input').value = '';
-        renderRoot();
-      });
-    } else {
-      crumbEl.innerHTML = crumbParts.map((part, i) => {
-        return `<span class="modal-crumb-part" data-crumb-path="${pathParts.slice(0,i+1).join(' › ')}" style="cursor:pointer">${part.toUpperCase()}</span>`;
-      }).join('<span class="modal-crumb-sep"> › </span>');
-      crumbEl.style.marginBottom = '8px';
-
-      // Wire clicks — close modal and navigate tree to that ancestry level
-      crumbEl.querySelectorAll('.modal-crumb-part[data-crumb-path]').forEach(span => {
-        span.addEventListener('click', () => {
-          closeModal();
-          document.getElementById('search-results-screen').style.display = 'none';
-          document.getElementById('search-input').value = '';
-          const targetLabel = span.textContent.trim();
-          const matchLayer = LAYERS.find(l => l.label.toUpperCase() === targetLabel);
-          if(matchLayer) {
-            history.length = 0;
-            const layerFruitItems = (matchLayer.orbs || []).map(o => ({...o, _layerColor: matchLayer.color}));
-            history.push({ items: [], label: 'ROOT', breadcrumbLabel: matchLayer.label, color: matchLayer.color, node: matchLayer, isRoot: true });
-            currentItems = layerFruitItems;
-            renderTree(layerFruitItems, matchLayer);
-            updateNav(matchLayer);
-            return;
-          }
-          const matchCard = Object.values(_cardIndex).find(c =>
-            (c.label||'').replace(/\n/g,' ').toUpperCase() === targetLabel
-          );
-          if(matchCard) {
-            history.length = 0;
-            const children = matchCard.topPills || matchCard.orbs || [];
-            if(children.length) {
-              history.push({ items: [], label: 'ROOT', breadcrumbLabel: matchCard.label, color: matchCard.color || '#888', node: matchCard, isRoot: false });
-              currentItems = children;
-              renderTree(children, matchCard);
-              updateNav(matchCard);
-            }
-          }
-        });
-      });
-    }
-  } else {
-    crumbEl.textContent = navCrumb;
-  }
-
-  // Title
-  document.getElementById('modal-title').textContent = item.label || '';
-
-  // Sub
-  const subEl = document.getElementById('modal-sub');
-  subEl.textContent = item.sub || item.time || '';
-  subEl.style.display = (item.sub || item.time) ? 'block' : 'none';
-
-  let body = '';
-
-  // Top pills — GO FURTHER / WHAT'S INSIDE
-  const pills = item.topPills || [];
-  if(pills.length) {
-    const sectionLabel = item._isLayer ? 'EXPLORE THIS LAYER' : (item.cardType === 'orb' ? 'INSIDE THIS ORB' : 'GO FURTHER');
-    body += `<div class="modal-section">${sectionLabel}</div><div class="modal-pills">`;
-    pills.slice(0,8).forEach(p => {
-      const pc = color;
-      const lcl = `rgba(${Math.min(255,parseInt(pc.replace('#','').slice(0,2),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(2,4),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(4,6),16)+50)},0.9)`;
-      body += `<span class="modal-pill" style="color:${lcl};border-color:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16),0.4});background:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16)},0.12);" data-pill-id="${p.id}">${p.label}</span>`;
-    });
-    body += `</div>`;
-  }
-
-  // Description
-  if(item.desc) {
-    body += `<div class="modal-section">WHAT IT IS</div><div class="modal-desc">${item.desc.split(/\n\n+/).map(p=>'<p>'+p.trim()+'</p>').join('')}</div>`;
-  }
-
-  // Bottom pills — RELATED CONNECTIONS (cross-links to other cards)
-  const bpills = item.bottomPills || [];
-  if(bpills.length) {
-    body += `<div class="modal-section">RELATED CONNECTIONS</div><div class="modal-pills">`;
-    bpills.forEach(p => {
-      const resolved = _cardIndex[p.id] || p;
-      const pc = resolved.color || p.color || color;
-      const lcl = `rgba(${Math.min(255,parseInt(pc.replace('#','').slice(0,2),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(2,4),16)+60)},${Math.min(255,parseInt(pc.replace('#','').slice(4,6),16)+50)},0.9)`;
-      body += `<span class="modal-pill" style="color:${lcl};border-color:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16)},0.4);background:rgba(${parseInt(pc.replace('#','').slice(0,2),16)},${parseInt(pc.replace('#','').slice(2,4),16)},${parseInt(pc.replace('#','').slice(4,6),16)},0.12);" data-pill-id="${p.id}" data-is-bottom="1">${resolved.label || p.label}</span>`;
-    });
-    body += `</div>`;
-  }
-
-  // Links
-  if(item.links && item.links.length) {
-    body += `<div class="modal-section">RESOURCES</div><div class="modal-links">`;
-    item.links.forEach(link => {
-      const em = link.emoji ? `<span>${link.emoji}</span>` : '';
-      const tag = link.tag ? `<span class="modal-link-tag">${link.tag}</span>` : '';
-      body += `<a class="modal-link" href="${link.url}" target="_blank" rel="noopener">${em}<span>${link.label}</span>${tag}</a>`;
-    });
-    body += `</div>`;
-  }
-
-  // Canonical URL — shown discreetly at bottom of every modal
-  // Derived from label to match sitemap named slugs (e.g. "War & Revolutions" → #war-revolutions)
-  if(item.label) {
-    const slug = item.label.toString().toLowerCase()
-      .replace(/'/g,'')
-      .replace(/'/g,'')
-      .replace(/&/g,'and')
-      .replace(/[^a-z0-9]+/g,'-')
-      .replace(/^-|-$/g,'');
-    body += `<div class="modal-canonical">https://usnow.app/#${slug}</div>`;
-  }
-
-  document.getElementById('modal-body').innerHTML = body;
-
-  // Apply glory word highlights to description
-  const bodyEl = document.getElementById('modal-body');
-  applyGlories(bodyEl);
-
-  // Fix 3: highlight active search term in modal body
-  if(activeSearchQuery && activeSearchQuery.length >= 3) {
-    applySearchHighlight(bodyEl, activeSearchQuery);
-  }
-
-  // Pill click → open that pill's modal
-  document.querySelectorAll('.modal-pill[data-pill-id]').forEach(p => {
-    p.addEventListener('click', () => {
-      const resolved = _cardIndex[p.dataset.pillId];
-      if(resolved) openModal(resolved, [...(crumbLabels||[]), resolved.label]);
-    });
-  });
-
-  // Click canonical URL to copy
-  const canonEl = document.querySelector('.modal-canonical');
-  if(canonEl) {
-    canonEl.addEventListener('click', () => {
-      navigator.clipboard.writeText(canonEl.textContent).then(() => {
-        const orig = canonEl.textContent;
-        canonEl.textContent = 'copied ✓';
-        setTimeout(() => canonEl.textContent = orig, 1500);
-      });
-    });
-  }
-
-  document.getElementById('modal').classList.add('open');
-}
-
-document.getElementById('modal-close').addEventListener('click', closeModal);
-document.getElementById('modal-backdrop').addEventListener('click', closeModal);
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
-
-function closeModal() {
-  document.getElementById('modal').classList.remove('open');
-  activeSearchQuery = '';
-}
+/* openModal, closeModal, _cardIndex/_cardPath, and modal listeners now live in modal.js (shared engine). */
 
 // ── INIT ──────────────────────────────────────────
 

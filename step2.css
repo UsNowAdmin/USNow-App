@@ -1,0 +1,132 @@
+/* ============================================================================
+   UsNow — Step 2a layout  ·  step2.css
+   The approved modal layout: peek (above title), reading-first order,
+   glowing no-wrap grid pills, ON-SITE/OFF-SITE labels, footer (home·id·url).
+   Scoped to #modal-card. modal.js sets --c (card color) and --cg (glow) on it.
+   ============================================================================ */
+#modal-card{--c:#3a9a64;--cg:rgba(58,154,100,.5)}
+
+/* ---- PEEK: bordered Title-Case pill above the title + fading dash -------- */
+#modal-peek{margin:2px 0 0}
+#modal-peek .peek{display:inline-flex;width:auto;max-width:100%;align-items:center;gap:10px;
+  margin-top:18px;cursor:pointer;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--c) 12%,transparent),color-mix(in srgb,var(--c) 5%,transparent));
+  border:1px solid color-mix(in srgb,var(--c) 55%,transparent);
+  border-radius:13px;padding:6px 16px;transition:transform .16s,box-shadow .22s,background .22s}
+#modal-peek .peek:hover{transform:translateY(-1px);
+  background:linear-gradient(180deg,color-mix(in srgb,var(--c) 18%,transparent),color-mix(in srgb,var(--c) 8%,transparent));
+  box-shadow:0 8px 26px -10px var(--cg)}
+#modal-peek .peek-label{font-family:'Libre Baskerville',serif;font-size:12px;letter-spacing:.01em;color:#f2f6f1;white-space:nowrap}
+#modal-peek .peek-arrow{flex:none;width:13px;height:13px;position:relative;transition:transform .2s}
+#modal-peek .peek-arrow::before,#modal-peek .peek-arrow::after{content:'';position:absolute;top:3px;width:9px;height:2.5px;border-radius:2px;
+  background:var(--c);box-shadow:0 0 8px var(--cg)}
+#modal-peek .peek-arrow::before{left:0;transform:rotate(45deg)}
+#modal-peek .peek-arrow::after{right:0;transform:rotate(-45deg)}
+#modal-peek .peek:hover .peek-arrow{transform:translateY(2px)}
+#modal-peek .peek-dash{height:2px;width:38px;border-radius:2px;margin:16px 0 14px;
+  background:linear-gradient(90deg,var(--c),transparent)}
+
+/* ---- pill grammar: glowing orb dot; labels never fracture mid-word ------- */
+.usn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
+@media(min-width:520px){.usn-grid{grid-template-columns:1fr 1fr 1fr}}
+.usn-pill{display:inline-flex;align-items:center;gap:9px;width:100%;
+  font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.01em;color:#eaf0ea;
+  background:rgba(255,255,255,.02);border:1px solid var(--pc,var(--c));border-radius:14px;
+  padding:9px 12px 9px 10px;cursor:pointer;line-height:1.25;
+  overflow-wrap:normal;word-break:keep-all;hyphens:none;
+  transition:transform .15s,box-shadow .2s,background .2s}
+.usn-pill.long{font-size:11px}
+.usn-pill:hover{transform:translateY(-1px);background:rgba(255,255,255,.05);box-shadow:0 5px 18px -8px var(--pc,var(--cg))}
+.usn-dot{width:11px;height:11px;border-radius:50%;flex:none;align-self:center;
+  background:radial-gradient(circle at 34% 32%,#fff,var(--pc,var(--c)) 60%,rgba(0,0,0,.4));
+  box-shadow:0 0 7px var(--pc,var(--cg)),inset 0 0 2px rgba(255,255,255,.5)}
+
+/* ---- off-site resources: quiet external tier ----------------------------- */
+.usn-res-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.usn-res{display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.6);
+  background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:7px 11px;transition:all .18s}
+.usn-res:hover{border-color:rgba(255,255,255,.35);color:#fff}
+.usn-res .tag{font-size:8px;letter-spacing:.12em;color:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.14);border-radius:4px;padding:1px 5px}
+
+/* ---- footer: canonical home + readable id + copy-URL --------------------- */
+.usn-foot{margin-top:26px;padding-top:13px;border-top:1px solid rgba(255,255,255,.07);
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.04em;line-height:1.9;color:rgba(255,255,255,.28)}
+.usn-foot .url{cursor:pointer}.usn-foot .url:hover{color:rgba(255,255,255,.6)}
+
+/* scroll-margin so the peek jump lands cleanly below the sticky-ish top */
+#modal-body .usn-zone{scroll-margin-top:12px}
+
+/* ---- reading size: description comfortably larger than the quiet peek ---- */
+#modal-body .modal-desc{font-size:15.5px;line-height:1.72}
+
+/* closing rule under the description — frames the reading with the peek dash above */
+#modal-body .desc-dash{height:2px;width:38px;border-radius:2px;margin:14px 0 4px;
+  background:linear-gradient(90deg,var(--c),transparent)}
+
+/* ============================================================================
+   2b — Thoughts / The Log  (ported from the Scale, themed for the Tree)
+   ============================================================================ */
+/* Thoughts? button — sits just under CLOSE, top-right of the card */
+#thought-btn{position:absolute;top:78px;right:14px;z-index:11;
+  background:rgba(255,255,255,0.05);border:1px solid color-mix(in srgb,var(--c) 45%,rgba(255,255,255,.15));
+  color:var(--c);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;
+  padding:4px 10px;border-radius:5px;cursor:pointer;transition:all .15s;white-space:nowrap}
+#thought-btn:hover{color:#fff;border-color:var(--c);box-shadow:0 0 14px -4px var(--cg)}
+
+/* Panel overlays the card */
+#thought-panel{display:none;position:absolute;inset:0;z-index:10;border-radius:16px;
+  padding:60px 26px 28px;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  background:linear-gradient(160deg, color-mix(in srgb,var(--c) 10%,transparent) 0%, #0b1222 100%)}
+#thought-panel.open{display:flex;flex-direction:column;gap:18px}
+.tp-eyebrow{font-size:9px;letter-spacing:.35em;font-family:'JetBrains Mono',monospace;color:var(--c);opacity:.85;text-transform:uppercase}
+.tp-headline{font-size:clamp(20px,4.5vw,26px);font-weight:400;font-family:'Libre Baskerville',serif;line-height:1.25;margin:0;color:#f0ece4}
+.tp-divider{height:1px;border:none;background:var(--c);opacity:.5;margin:2px 0}
+.tp-copy{font-size:14px;line-height:1.8;font-family:'Libre Baskerville',serif;color:rgba(255,255,255,.78);margin:0}
+.tp-copy strong{color:#fff}
+.tp-field{display:flex;flex-direction:column;gap:7px}
+.tp-label{font-size:9px;letter-spacing:.22em;font-family:'JetBrains Mono',monospace;color:rgba(255,255,255,.5);text-transform:uppercase}
+.tp-input{background:rgba(255,255,255,0.05);border:none;border-bottom:1px solid color-mix(in srgb,var(--c) 30%,rgba(255,255,255,.18));
+  padding:10px 4px;font-size:14px;font-family:'Libre Baskerville',serif;color:#eaf0ea;outline:none;border-radius:0;width:100%;transition:border-color .2s;resize:none}
+.tp-input:focus{border-bottom-color:var(--c)}
+.tp-input::placeholder{opacity:.35}
+.tp-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:4px}
+.tp-send{font-size:9px;letter-spacing:.22em;font-family:'JetBrains Mono',monospace;font-weight:700;padding:10px 26px;border-radius:20px;cursor:pointer;transition:all .2s;
+  border:1px solid color-mix(in srgb,var(--c) 60%,transparent);color:var(--c);background:color-mix(in srgb,var(--c) 8%,transparent)}
+.tp-send:hover{background:color-mix(in srgb,var(--c) 16%,transparent);border-color:var(--c);box-shadow:0 0 14px -3px var(--cg)}
+.tp-back{font-size:9px;letter-spacing:.18em;font-family:'JetBrains Mono',monospace;padding:10px 18px;border-radius:20px;cursor:pointer;transition:all .2s;border:1px solid transparent;color:rgba(255,255,255,.35);background:transparent}
+.tp-back:hover{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.15)}
+.tp-confirm{text-align:center;padding:28px 0 16px;display:none;flex-direction:column;gap:10px;align-items:center}
+.tp-confirm.show{display:flex}
+.tp-confirm-mark{font-size:28px;color:var(--c)}
+.tp-confirm-title{font-size:16px;font-family:'Libre Baskerville',serif;letter-spacing:.03em;color:#f0ece4}
+.tp-confirm-sub{font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;color:rgba(255,255,255,.5)}
+.tp-confirm-back{margin-top:8px;font-size:9px;letter-spacing:.2em;font-family:'JetBrains Mono',monospace;padding:9px 22px;border-radius:18px;cursor:pointer;background:transparent;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 35%,transparent);transition:all .2s}
+.tp-confirm-back:hover{opacity:1;border-color:var(--c)}
+
+/* keep CLOSE clickable above the Thoughts panel */
+#modal-close{position:absolute;z-index:12}
+
+/* journey breadcrumb: current (you-are-here) segment, non-clickable */
+.modal-crumb-cur{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;
+  color:rgba(255,255,255,.7);padding:3px 8px;border-radius:8px;
+  border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);white-space:nowrap}
+
+
+/* ============================================================================
+   Layer cards: subtle card-color wash behind title + sub (a quiet "field" cue).
+   Built from --c, full-bleed to the card edges. Toggled by .layer-card (modal.js).
+   ============================================================================ */
+#modal-card.layer-card #modal-title{
+  background:color-mix(in srgb, var(--c) 14%, transparent);
+  margin:6px -28px 0 -28px;padding:16px 28px 8px 28px;}
+#modal-card.layer-card #modal-sub{
+  display:block;background:color-mix(in srgb, var(--c) 14%, transparent);
+  margin:0 -28px 16px -28px;padding:0 28px 16px 28px;}
+
+/* footer journey: the path taken this session — grows freely, each step clickable to go back */
+.usn-foot .usn-journey{margin-bottom:4px;line-height:1.9;}
+.usn-foot .journey-seg{cursor:pointer;color:rgba(255,255,255,.42);transition:color .15s}
+.usn-foot .journey-seg:hover{color:var(--c)}
+.usn-foot .journey-cur{color:rgba(255,255,255,.6)}
+.usn-foot .journey-sep{color:rgba(255,255,255,.2);padding:0 2px}
