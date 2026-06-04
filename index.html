@@ -361,8 +361,10 @@ footer .inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-b
 <div id="modal">
   <div id="modal-backdrop"></div>
   <div id="modal-card">
-    <button id="modal-close">✕ CLOSE</button>
-    <button id="thought-btn" onclick="openThoughtPanel()">Thoughts?</button>
+    <div class="modal-topbar">
+      <button id="thought-btn" onclick="openThoughtPanel()">Thoughts?</button>
+      <button id="modal-close">✕ CLOSE</button>
+    </div>
     <div id="modal-crumb"></div>
     <div id="modal-colorbar"></div>
     <div id="modal-peek"></div>

@@ -16,7 +16,10 @@
 #modal #modal-card{position:relative;z-index:1;width:100%;max-width:600px;max-height:85vh;
   overflow-y:auto;border-radius:16px;padding:28px;animation:modalIn .25s ease;}
 @keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(0.97);}to{opacity:1;transform:translateY(0) scale(1);}}
-#modal #modal-close{position:absolute;top:14px;right:14px;margin:0;background:rgba(255,255,255,0.08);
+/* top row: Thoughts (left) + CLOSE/BACK (right), in normal flow so the crumb/peek
+   below never collide with them no matter how many lines the canonical home wraps to */
+#modal .modal-topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;}
+#modal #modal-close{background:rgba(255,255,255,0.08);
   border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);font-family:'JetBrains Mono',monospace;
   font-size:11px;letter-spacing:0.08em;padding:4px 10px;border-radius:5px;cursor:pointer;transition:all .15s;}
 #modal #modal-close:hover{color:#fff;background:rgba(255,255,255,0.15);}
@@ -27,7 +30,7 @@
 #modal .modal-crumb-part:hover{color:rgba(255,220,100,0.85);text-decoration:underline;text-underline-offset:3px;}
 #modal .modal-crumb-sep{color:rgba(255,255,255,0.18);}
 #modal .search-highlight{background:rgba(255,220,60,0.28);color:#ffe86a;border-radius:2px;padding:0 1px;font-style:normal;}
-#modal #modal-colorbar{height:2px;border-radius:1px;width:50px;margin-bottom:16px;}
+#modal #modal-colorbar{height:2px;border-radius:1px;width:50px;margin-bottom:12px;}
 #modal #modal-title{font-family:'Cinzel',serif;font-size:26px;font-weight:400;color:#fff;margin-bottom:4px;line-height:1.2;}
 #modal #modal-sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;color:rgba(255,255,255,0.4);margin-bottom:16px;display:none;}
 #modal .modal-section{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;color:rgba(255,255,255,0.3);text-transform:uppercase;margin:20px 0 8px;}

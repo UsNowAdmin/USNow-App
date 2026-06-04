@@ -7,7 +7,7 @@
 #modal-card{--c:#3a9a64;--cg:rgba(58,154,100,.5)}
 
 /* ---- PEEK: bordered Title-Case pill above the title + fading dash -------- */
-#modal-peek{margin:2px 0 0}
+#modal-peek{margin:0 0 0}
 #modal-peek .peek{display:inline-flex;width:auto;max-width:100%;align-items:center;gap:10px;
   margin-top:18px;cursor:pointer;
   background:linear-gradient(180deg,color-mix(in srgb,var(--c) 12%,transparent),color-mix(in srgb,var(--c) 5%,transparent));
@@ -23,7 +23,7 @@
 #modal-peek .peek-arrow::before{left:0;transform:rotate(45deg)}
 #modal-peek .peek-arrow::after{right:0;transform:rotate(-45deg)}
 #modal-peek .peek:hover .peek-arrow{transform:translateY(2px)}
-#modal-peek .peek-dash{height:2px;width:38px;border-radius:2px;margin:16px 0 14px;
+#modal-peek .peek-dash{height:2px;width:38px;border-radius:2px;margin:11px 0 11px;
   background:linear-gradient(90deg,var(--c),transparent)}
 
 /* ---- pill grammar: glowing orb dot; labels never fracture mid-word ------- */
@@ -68,7 +68,7 @@
    2b — Thoughts / The Log  (ported from the Scale, themed for the Tree)
    ============================================================================ */
 /* Thoughts? button — sits just under CLOSE, top-right of the card */
-#thought-btn{position:absolute;top:78px;right:14px;z-index:11;
+#thought-btn{
   background:rgba(255,255,255,0.05);border:1px solid color-mix(in srgb,var(--c) 45%,rgba(255,255,255,.15));
   color:var(--c);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;
   padding:4px 10px;border-radius:5px;cursor:pointer;transition:all .15s;white-space:nowrap}
@@ -104,8 +104,6 @@
 .tp-confirm-back{margin-top:8px;font-size:9px;letter-spacing:.2em;font-family:'JetBrains Mono',monospace;padding:9px 22px;border-radius:18px;cursor:pointer;background:transparent;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 35%,transparent);transition:all .2s}
 .tp-confirm-back:hover{opacity:1;border-color:var(--c)}
 
-/* keep CLOSE clickable above the Thoughts panel */
-#modal-close{position:absolute;z-index:12}
 
 /* journey breadcrumb: current (you-are-here) segment, non-clickable */
 .modal-crumb-cur{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;
