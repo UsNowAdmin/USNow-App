@@ -27,9 +27,9 @@
   background:linear-gradient(90deg,var(--c),transparent)}
 
 /* ---- pill grammar: glowing orb dot; labels never fracture mid-word ------- */
-.usn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
-@media(min-width:520px){.usn-grid{grid-template-columns:1fr 1fr 1fr}}
-.usn-pill{display:inline-flex;align-items:center;gap:9px;width:100%;
+.usn-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-top:11px}
+@media(min-width:520px){.usn-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)}}
+.usn-pill{display:inline-flex;align-items:center;gap:9px;width:100%;min-width:0;
   font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.01em;color:#eaf0ea;
   background:rgba(255,255,255,.02);border:1px solid var(--pc,var(--c));border-radius:14px;
   padding:9px 12px 9px 10px;cursor:pointer;line-height:1.25;
