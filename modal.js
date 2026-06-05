@@ -261,6 +261,7 @@ function openModal(item, crumbLabels, nav) {
 
   const bodyEl = document.getElementById('modal-body');
   bodyEl.innerHTML = body;
+  card.scrollTop = 0;
 
   // glossary highlight (Tree inline helper)
   // glossary scans the DESCRIPTION ONLY — never pills, footer, or labels

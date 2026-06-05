@@ -58,7 +58,7 @@
 #modal-body .usn-zone{scroll-margin-top:12px}
 
 /* ---- reading size: description comfortably larger than the quiet peek ---- */
-#modal-body .modal-desc{font-size:15.5px;line-height:1.72}
+#modal-body .modal-desc{font-size:17px;line-height:1.68}
 
 /* closing rule under the description — frames the reading with the peek dash above */
 #modal-body .desc-dash{height:2px;width:38px;border-radius:2px;margin:14px 0 4px;
