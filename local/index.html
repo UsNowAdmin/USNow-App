@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>UsNow Local — Neighbors, mapped</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#131A20;
+    --ink-soft:#1E2830;
+    --bone:#EFEAE0;
+    --bone-dim:#B9B2A4;
+    --amber:#E8A33D;
+    --amber-deep:#C9821B;
+    --teal:#3E8E8C;
+    --line:#3A4750;
+    --danger:#C0392B;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden}
+  body{
+    font-family:'Barlow',system-ui,sans-serif;
+    background:var(--ink);
+    color:var(--bone);
+  }
+  #map{position:absolute;inset:0}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:absolute;top:0;left:0;right:0;z-index:20;
+    display:flex;align-items:stretch;gap:0;
+    background:var(--ink);
+    border-bottom:2px solid var(--amber);
+  }
+  .wordmark{
+    display:flex;flex-direction:column;justify-content:center;
+    padding:8px 14px;border-right:1px solid var(--line);
+    white-space:nowrap;
+  }
+  .wordmark b{
+    font-family:'Barlow Condensed';font-weight:700;font-size:18px;
+    letter-spacing:.06em;line-height:1;
+  }
+  .wordmark b span{color:var(--amber)}
+  .wordmark small{
+    font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--bone-dim);margin-top:3px;
+  }
+  .searchwrap{flex:1;display:flex;position:relative}
+  .searchwrap input{
+    flex:1;background:var(--ink-soft);border:none;outline:none;
+    color:var(--bone);font-family:'Barlow';font-size:15px;
+    padding:0 14px;min-width:0;
+  }
+  .searchwrap input::placeholder{color:var(--bone-dim)}
+  .searchwrap button{
+    background:var(--ink-soft);border:none;border-left:1px solid var(--line);
+    color:var(--amber);font-family:'Barlow Condensed';font-weight:600;
+    font-size:14px;letter-spacing:.08em;padding:0 16px;cursor:pointer;
+    text-transform:uppercase;
+  }
+  .searchwrap button:hover{background:var(--line)}
+  .results{
+    position:absolute;top:100%;left:0;right:0;background:var(--ink);
+    border:1px solid var(--line);border-top:none;display:none;
+    max-height:40vh;overflow-y:auto;
+  }
+  .results div{
+    padding:10px 14px;font-size:13px;cursor:pointer;
+    border-bottom:1px solid var(--ink-soft);color:var(--bone);
+  }
+  .results div:hover{background:var(--ink-soft);color:var(--amber)}
+
+  /* ---------- Coordinate readout (signature: field-instrument HUD) ---------- */
+  .hud{
+    position:absolute;top:52px;left:0;z-index:15;
+    background:rgba(19,26,32,.85);border:1px solid var(--line);border-left:none;
+    padding:5px 12px;font-size:11px;letter-spacing:.08em;
+    color:var(--bone-dim);font-variant-numeric:tabular-nums;
+    display:flex;gap:14px;
+  }
+  .hud b{color:var(--amber);font-weight:600}
+
+  /* ---------- Map action buttons ---------- */
+  .mapbtns{
+    position:absolute;right:12px;top:64px;z-index:15;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .sqbtn{
+    width:44px;height:44px;background:var(--ink);border:1px solid var(--line);
+    color:var(--bone);font-size:18px;cursor:pointer;display:flex;
+    align-items:center;justify-content:center;
+  }
+  .sqbtn:hover{border-color:var(--amber);color:var(--amber)}
+
+  /* ---------- Draw control ---------- */
+  .drawbar{
+    position:absolute;left:50%;transform:translateX(-50%);
+    bottom:calc(180px + env(safe-area-inset-bottom));z-index:25;
+    display:none;align-items:center;gap:1px;
+    border:2px solid var(--amber);background:var(--ink);
+  }
+  .drawbar.active{display:flex}
+  .drawbar .stat{
+    padding:10px 14px;font-family:'Barlow Condensed';font-weight:600;
+    font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--amber);font-variant-numeric:tabular-nums;white-space:nowrap;
+  }
+  .drawbar button{
+    border:none;background:var(--ink-soft);color:var(--bone);
+    font-family:'Barlow Condensed';font-weight:600;font-size:14px;
+    letter-spacing:.1em;text-transform:uppercase;padding:10px 16px;cursor:pointer;
+  }
+  .drawbar button.finish{background:var(--amber);color:var(--ink)}
+  .drawbar button.finish:disabled{background:var(--line);color:var(--bone-dim);cursor:not-allowed}
+  .drawbar button:hover:not(:disabled){filter:brightness(1.15)}
+
+  .fab{
+    position:absolute;left:50%;transform:translateX(-50%);
+    bottom:calc(180px + env(safe-area-inset-bottom));z-index:24;
+    background:var(--amber);color:var(--ink);border:none;
+    font-family:'Barlow Condensed';font-weight:700;font-size:15px;
+    letter-spacing:.12em;text-transform:uppercase;
+    padding:13px 26px;cursor:pointer;
+    box-shadow:0 4px 18px rgba(0,0,0,.5);
+  }
+  .fab:hover{background:var(--amber-deep)}
+  .fab.hidden{display:none}
+
+  /* ---------- Bottom sheet: node registry ---------- */
+  .sheet{
+    position:absolute;left:0;right:0;bottom:0;z-index:30;
+    background:var(--ink);border-top:2px solid var(--line);
+    transition:transform .25s ease;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .sheet.collapsed{transform:translateY(calc(100% - 44px))}
+  .sheet-handle{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 14px;height:44px;cursor:pointer;user-select:none;
+  }
+  .sheet-handle h2{
+    font-family:'Barlow Condensed';font-weight:600;font-size:15px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--bone);
+  }
+  .sheet-handle h2 i{color:var(--amber);font-style:normal}
+  .sheet-handle .chev{color:var(--bone-dim);font-size:13px}
+  .sheet-body{max-height:38vh;overflow-y:auto}
+  .node-row{
+    display:flex;align-items:center;gap:12px;
+    padding:11px 14px;border-top:1px solid var(--ink-soft);cursor:pointer;
+  }
+  .node-row:hover{background:var(--ink-soft)}
+  .node-swatch{
+    width:14px;height:14px;border:2px solid var(--amber);
+    background:rgba(232,163,61,.25);flex:none;
+  }
+  .node-meta{flex:1;min-width:0}
+  .node-meta .nm{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .node-meta .dt{font-size:11px;color:var(--bone-dim);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+  .node-del{
+    background:none;border:1px solid var(--line);color:var(--bone-dim);
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    padding:5px 10px;cursor:pointer;font-family:'Barlow Condensed';font-weight:600;
+  }
+  .node-del:hover{border-color:var(--danger);color:var(--danger)}
+  .empty{
+    padding:22px 14px;font-size:13px;color:var(--bone-dim);line-height:1.5;
+  }
+  .empty b{color:var(--amber)}
+  .sheet-tools{
+    display:flex;border-top:1px solid var(--line);
+  }
+  .coming{border-top:1px solid var(--line)}
+  .coming-row{
+    display:flex;align-items:baseline;gap:8px;
+    padding:8px 14px;opacity:.55;
+  }
+  .coming-row + .coming-row{border-top:1px solid var(--ink-soft)}
+  .coming-nm{
+    font-family:'Barlow Condensed';font-weight:600;font-size:13px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--bone);
+    white-space:nowrap;
+  }
+  .coming-ds{flex:1;font-size:11.5px;color:var(--bone-dim);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .coming-tag{
+    font-family:'Barlow Condensed';font-weight:600;font-size:10px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--amber);
+    border:1px solid var(--amber);padding:1px 6px;flex:none;
+  }
+  .sheet-tools button{
+    flex:1;background:var(--ink-soft);border:none;color:var(--bone-dim);
+    border-right:1px solid var(--line);
+    font-family:'Barlow Condensed';font-weight:600;font-size:12px;
+    letter-spacing:.14em;text-transform:uppercase;padding:11px 0;cursor:pointer;
+  }
+  .sheet-tools button:last-child{border-right:none}
+  .sheet-tools button:hover{color:var(--amber)}
+
+  /* ---------- Name dialog ---------- */
+  .veil{
+    position:absolute;inset:0;z-index:50;background:rgba(10,14,18,.7);
+    display:none;align-items:center;justify-content:center;padding:20px;
+  }
+  .veil.open{display:flex}
+  .dialog{
+    background:var(--ink);border:2px solid var(--amber);width:100%;max-width:380px;
+    padding:20px;
+  }
+  .dialog h3{
+    font-family:'Barlow Condensed';font-weight:700;font-size:18px;
+    letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;
+  }
+  .dialog p{font-size:12px;color:var(--bone-dim);margin-bottom:14px;letter-spacing:.04em}
+  .dialog input,.dialog textarea{
+    width:100%;background:var(--ink-soft);border:1px solid var(--line);
+    color:var(--bone);font-family:'Barlow';font-size:15px;padding:10px 12px;
+    outline:none;margin-bottom:12px;resize:vertical;
+  }
+  .dialog input:focus,.dialog textarea:focus{border-color:var(--amber)}
+  .dialog .row{display:flex;gap:10px;justify-content:flex-end}
+  .dialog .row button{
+    font-family:'Barlow Condensed';font-weight:600;font-size:14px;
+    letter-spacing:.1em;text-transform:uppercase;padding:9px 18px;cursor:pointer;
+    border:1px solid var(--line);background:none;color:var(--bone-dim);
+  }
+  .dialog .row button.primary{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+
+  /* ---------- Toast ---------- */
+  .toast{
+    position:absolute;top:62px;left:50%;transform:translateX(-50%);
+    z-index:60;background:var(--ink);border:1px solid var(--amber);
+    color:var(--bone);font-size:13px;padding:9px 16px;display:none;
+    letter-spacing:.04em;max-width:90vw;text-align:center;
+  }
+  .toast.show{display:block}
+
+  .maplibregl-popup-content{
+    background:var(--ink);color:var(--bone);font-family:'Barlow';
+    border:1px solid var(--amber);border-radius:0;padding:12px 14px;
+  }
+  .maplibregl-popup-tip{border-top-color:var(--amber) !important}
+  .pop-name{font-family:'Barlow Condensed';font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
+  .pop-area{font-size:12px;color:var(--bone-dim);margin-top:3px;font-variant-numeric:tabular-nums}
+  .pop-notes{font-size:12px;margin-top:6px;line-height:1.45}
+
+  @media (min-width:768px){
+    .sheet{left:auto;right:12px;bottom:12px;width:340px;border:1px solid var(--line);border-top:2px solid var(--line)}
+    .sheet.collapsed{transform:translateY(calc(100% - 44px - 12px))}
+    .fab,.drawbar{bottom:40px}
+    .hud{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .sheet{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<header class="topbar">
+  <div class="wordmark">
+    <b>UsNow <span>/ Local</span></b>
+    <small>Neighbors, mapped</small>
+  </div>
+  <div class="searchwrap">
+    <input id="search" type="text" placeholder="Search address, place, or ZIP…" autocomplete="off">
+    <button id="searchBtn">Find</button>
+    <div class="results" id="results"></div>
+  </div>
+</header>
+
+<div class="hud">
+  <span>LAT <b id="hudLat">—</b></span>
+  <span>LNG <b id="hudLng">—</b></span>
+  <span>Z <b id="hudZoom">—</b></span>
+</div>
+
+<div class="mapbtns">
+  <button class="sqbtn" id="locateBtn" title="My location" aria-label="Go to my location">◎</button>
+</div>
+
+<button class="fab" id="drawFab">＋ Map an area</button>
+
+<div class="drawbar" id="drawbar">
+  <span class="stat"><span id="vtxCount">0</span> pts</span>
+  <button id="undoVtx">Undo</button>
+  <button id="cancelDraw">Cancel</button>
+  <button class="finish" id="finishDraw" disabled>Finish</button>
+</div>
+
+<aside class="sheet collapsed" id="sheet">
+  <div class="sheet-handle" id="sheetHandle">
+    <h2>Your areas <i id="nodeCount">(0)</i></h2>
+    <span class="chev" id="chev">▲</span>
+  </div>
+  <div class="sheet-body" id="sheetBody">
+    <div class="empty" id="emptyMsg">
+      Nothing mapped yet. Tap <b>Map an area</b>, then tap the map corner by
+      corner around a place that matters — your building, your block, your
+      whole street. Tap <b>Finish</b> and give it a name.
+    </div>
+  </div>
+  <div class="coming">
+    <div class="coming-row"><span class="coming-nm">Neighbors</span><span class="coming-ds">Sign in and join your block</span><span class="coming-tag">Coming</span></div>
+    <div class="coming-row"><span class="coming-nm">Have &amp; Need</span><span class="coming-ds">What your block has, what it needs</span><span class="coming-tag">Coming</span></div>
+    <div class="coming-row"><span class="coming-nm">Emergency mode</span><span class="coming-ds">One screen. Only what matters.</span><span class="coming-tag">Coming</span></div>
+    <div class="coming-row"><span class="coming-nm">The paper sheet</span><span class="coming-ds">Print it. Tape it to the fridge.</span><span class="coming-tag">Coming</span></div>
+  </div>
+  <div class="sheet-tools">
+    <button id="exportBtn">Export JSON</button>
+    <button id="importBtn">Import</button>
+    <button id="clearBtn">Clear all</button>
+  </div>
+</aside>
+
+<div class="veil" id="veil">
+  <div class="dialog">
+    <h3 id="dlgTitle">Name this area</h3>
+    <p id="dlgSub">e.g. “Mom’s Block”</p>
+    <input id="nodeName" type="text" maxlength="80" placeholder="Area name">
+    <textarea id="nodeNotes" rows="2" maxlength="280" placeholder="Notes (optional)"></textarea>
+    <div class="row">
+      <button id="dlgCancel">Discard</button>
+      <button class="primary" id="dlgSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="veil" id="importVeil">
+  <div class="dialog">
+    <h3>Import nodes</h3>
+    <p>Paste a previously exported JSON block.</p>
+    <textarea id="importText" rows="6" placeholder='{"nodes":[…]}'></textarea>
+    <div class="row">
+      <button id="importCancel">Cancel</button>
+      <button class="primary" id="importGo">Import</button>
+    </div>
+  </div>
+</div>
+
+<div class="veil" id="welcomeVeil">
+  <div class="dialog">
+    <h3>UsNow Local</h3>
+    <p style="font-size:14px;color:var(--bone);line-height:1.55;margin-bottom:16px">
+      This is a map of the places that matter to you.
+      Draw your block, name it, keep it.
+      Know your neighbors before you need them.
+    </p>
+    <div class="row">
+      <button class="primary" id="welcomeGo">Start with your own block</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+/* =========================================================
+   UsNow Local — Step 1: Node Mapper
+   Draw, name, and keep spatial nodes. No backend, no account.
+   Storage: localStorage when available, memory otherwise.
+   ========================================================= */
+
+/* ---------- Storage (safe wrapper) ---------- */
+const STORE_KEY = 'usnow-local-nodes-v1';
+let memStore = null;
+function loadNodes(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    return raw ? JSON.parse(raw).nodes || [] : [];
+  }catch(e){ return memStore ? memStore.slice() : []; }
+}
+function saveNodes(nodes){
+  memStore = nodes.slice();
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify({version:1, nodes})); }
+  catch(e){ /* preview environments: memory only */ }
+}
+
+/* ---------- Map ---------- */
+const map = new maplibregl.Map({
+  container:'map',
+  style:{
+    version:8,
+    sources:{
+      osm:{
+        type:'raster',
+        tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+        tileSize:256,
+        attribution:'© OpenStreetMap contributors'
+      }
+    },
+    layers:[{id:'osm', type:'raster', source:'osm'}]
+  },
+  center:[-73.18, 40.745],   /* Islip Terrace area default */
+  zoom:13,
+  attributionControl:{compact:true}
+});
+map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'bottom-right');
+
+/* ---------- HUD ---------- */
+const hudLat=document.getElementById('hudLat'),
+      hudLng=document.getElementById('hudLng'),
+      hudZoom=document.getElementById('hudZoom');
+function hud(){
+  const c=map.getCenter();
+  hudLat.textContent=c.lat.toFixed(5);
+  hudLng.textContent=c.lng.toFixed(5);
+  hudZoom.textContent=map.getZoom().toFixed(1);
+}
+map.on('move', hud); map.on('load', hud);
+
+/* ---------- Geometry helpers ---------- */
+function areaAcres(coords){
+  // Equirectangular projection around centroid + shoelace
+  if(coords.length<3) return 0;
+  const R=6371000;
+  let clat=0; coords.forEach(p=>clat+=p[1]); clat/=coords.length;
+  const k=Math.cos(clat*Math.PI/180);
+  const pts=coords.map(p=>[p[0]*Math.PI/180*R*k, p[1]*Math.PI/180*R]);
+  let a=0;
+  for(let i=0;i<pts.length;i++){
+    const [x1,y1]=pts[i], [x2,y2]=pts[(i+1)%pts.length];
+    a += x1*y2 - x2*y1;
+  }
+  return Math.abs(a/2)/4046.86;
+}
+function fmtArea(ac){
+  if(ac>=640) return (ac/640).toFixed(2)+' sq mi';
+  if(ac>=1) return ac.toFixed(1)+' acres';
+  return Math.round(ac*43560).toLocaleString()+' sq ft';
+}
+function centroid(coords){
+  let x=0,y=0; coords.forEach(p=>{x+=p[0];y+=p[1]});
+  return [x/coords.length, y/coords.length];
+}
+function boundsOf(coords){
+  const b=new maplibregl.LngLatBounds();
+  coords.forEach(p=>b.extend(p));
+  return b;
+}
+
+/* ---------- Node layers ---------- */
+let nodes = loadNodes();
+
+function nodesGeoJSON(){
+  return {
+    type:'FeatureCollection',
+    features:nodes.map(n=>({
+      type:'Feature',
+      properties:{id:n.id, name:n.name, notes:n.notes||'', area:fmtArea(n.acres)},
+      geometry:{type:'Polygon', coordinates:[[...n.coords, n.coords[0]]]}
+    }))
+  };
+}
+function labelsGeoJSON(){
+  return {
+    type:'FeatureCollection',
+    features:nodes.map(n=>({
+      type:'Feature',
+      properties:{name:n.name},
+      geometry:{type:'Point', coordinates:centroid(n.coords)}
+    }))
+  };
+}
+
+map.on('load', ()=>{
+  map.addSource('nodes',{type:'geojson', data:nodesGeoJSON()});
+  map.addSource('node-labels',{type:'geojson', data:labelsGeoJSON()});
+  map.addSource('draft',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
+
+  map.addLayer({id:'nodes-fill', type:'fill', source:'nodes',
+    paint:{'fill-color':'#E8A33D','fill-opacity':0.18}});
+  map.addLayer({id:'nodes-line', type:'line', source:'nodes',
+    paint:{'line-color':'#E8A33D','line-width':2.5}});
+  map.addLayer({id:'nodes-label', type:'symbol', source:'node-labels',
+    layout:{'text-field':['get','name'],'text-size':13,
+            'text-font':['Noto Sans Regular'],'text-allow-overlap':false},
+    paint:{'text-color':'#7A4E0E','text-halo-color':'#FFFFFF','text-halo-width':1.6}});
+
+  map.addLayer({id:'draft-line', type:'line', source:'draft',
+    paint:{'line-color':'#E8A33D','line-width':2,'line-dasharray':[2,1.5]}});
+  map.addLayer({id:'draft-pts', type:'circle', source:'draft',
+    filter:['==','$type','Point'],
+    paint:{'circle-radius':5,'circle-color':'#131A20','circle-stroke-color':'#E8A33D','circle-stroke-width':2}});
+
+  refreshNodes();
+});
+
+function refreshNodes(){
+  const s1=map.getSource('nodes'), s2=map.getSource('node-labels');
+  if(s1) s1.setData(nodesGeoJSON());
+  if(s2) s2.setData(labelsGeoJSON());
+  renderRegistry();
+}
+
+/* ---------- Node popups ---------- */
+map.on('click','nodes-fill',(e)=>{
+  if(drawing) return;
+  const p=e.features[0].properties;
+  new maplibregl.Popup({closeButton:true, maxWidth:'260px'})
+    .setLngLat(e.lngLat)
+    .setHTML(`<div class="pop-name">${esc(p.name)}</div>
+              <div class="pop-area">${p.area}</div>
+              ${p.notes?`<div class="pop-notes">${esc(p.notes)}</div>`:''}`)
+    .addTo(map);
+});
+map.on('mouseenter','nodes-fill',()=>{ if(!drawing) map.getCanvas().style.cursor='pointer'; });
+map.on('mouseleave','nodes-fill',()=>{ map.getCanvas().style.cursor=drawing?'crosshair':''; });
+
+function esc(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ---------- Drawing ---------- */
+let drawing=false, draft=[];
+const fab=document.getElementById('drawFab'),
+      drawbar=document.getElementById('drawbar'),
+      vtxCount=document.getElementById('vtxCount'),
+      finishBtn=document.getElementById('finishDraw');
+
+fab.addEventListener('click', startDraw);
+document.getElementById('cancelDraw').addEventListener('click', endDraw);
+document.getElementById('undoVtx').addEventListener('click', ()=>{
+  draft.pop(); updateDraft();
+});
+finishBtn.addEventListener('click', ()=>{
+  if(draft.length<3) return;
+  openNameDialog();
+});
+
+function startDraw(){
+  drawing=true; draft=[];
+  fab.classList.add('hidden');
+  drawbar.classList.add('active');
+  map.getCanvas().style.cursor='crosshair';
+  toast('Tap the map corner by corner around your area');
+  updateDraft();
+}
+function endDraw(){
+  drawing=false; draft=[];
+  fab.classList.remove('hidden');
+  drawbar.classList.remove('active');
+  map.getCanvas().style.cursor='';
+  updateDraft();
+}
+map.on('click',(e)=>{
+  if(!drawing) return;
+  draft.push([e.lngLat.lng, e.lngLat.lat]);
+  updateDraft();
+});
+function updateDraft(){
+  vtxCount.textContent=draft.length;
+  finishBtn.disabled = draft.length<3;
+  const src=map.getSource('draft'); if(!src) return;
+  const feats=draft.map(p=>({type:'Feature',properties:{},geometry:{type:'Point',coordinates:p}}));
+  if(draft.length>1){
+    const ring = draft.length>2 ? [...draft, draft[0]] : draft;
+    feats.push({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:ring}});
+  }
+  src.setData({type:'FeatureCollection',features:feats});
+}
+
+/* ---------- Name dialog ---------- */
+const veil=document.getElementById('veil'),
+      nameInput=document.getElementById('nodeName'),
+      notesInput=document.getElementById('nodeNotes');
+
+function openNameDialog(){
+  nameInput.value=''; notesInput.value='';
+  document.getElementById('dlgSub').textContent =
+    fmtArea(areaAcres(draft)) + ' · ' + draft.length + ' points';
+  veil.classList.add('open');
+  setTimeout(()=>nameInput.focus(),50);
+}
+document.getElementById('dlgCancel').addEventListener('click', ()=>{
+  veil.classList.remove('open'); endDraw();
+});
+document.getElementById('dlgSave').addEventListener('click', ()=>{
+  const name=nameInput.value.trim() || 'Unnamed area';
+  nodes.push({
+    id:'n'+Date.now().toString(36),
+    name, notes:notesInput.value.trim(),
+    coords:draft.slice(),
+    acres:areaAcres(draft),
+    created:new Date().toISOString()
+  });
+  saveNodes(nodes);
+  veil.classList.remove('open');
+  endDraw();
+  refreshNodes();
+  toast('Saved: '+name);
+  setSheet(false);
+});
+
+/* ---------- Registry sheet ---------- */
+const sheet=document.getElementById('sheet'),
+      sheetBody=document.getElementById('sheetBody'),
+      chev=document.getElementById('chev'),
+      nodeCountEl=document.getElementById('nodeCount');
+
+document.getElementById('sheetHandle').addEventListener('click', ()=>{
+  setSheet(!sheet.classList.contains('collapsed') ? true : false);
+});
+function setSheet(collapse){
+  sheet.classList.toggle('collapsed', collapse);
+  chev.textContent = collapse ? '▲' : '▼';
+}
+
+function renderRegistry(){
+  nodeCountEl.textContent='('+nodes.length+')';
+  sheetBody.innerHTML='';
+  if(!nodes.length){
+    sheetBody.innerHTML=`<div class="empty">No nodes yet. Tap <b>Draw a node</b>, then tap the map corner by corner around your area — a building, a block, a four-block radius. Tap <b>Finish</b> to name and save it.</div>`;
+    return;
+  }
+  nodes.forEach(n=>{
+    const row=document.createElement('div');
+    row.className='node-row';
+    row.innerHTML=`<span class="node-swatch"></span>
+      <span class="node-meta">
+        <div class="nm">${esc(n.name)}</div>
+        <div class="dt">${fmtArea(n.acres)} · ${n.coords.length} pts</div>
+      </span>
+      <button class="node-del">Del</button>`;
+    row.addEventListener('click',(ev)=>{
+      if(ev.target.classList.contains('node-del')) return;
+      map.fitBounds(boundsOf(n.coords), {padding:60, maxZoom:17});
+      setSheet(true);
+    });
+    row.querySelector('.node-del').addEventListener('click', ()=>{
+      if(!confirm('Remove "'+n.name+'"?')) return;
+      nodes=nodes.filter(x=>x.id!==n.id);
+      saveNodes(nodes); refreshNodes();
+      toast('Removed');
+    });
+    sheetBody.appendChild(row);
+  });
+}
+
+/* ---------- Export / Import / Clear ---------- */
+document.getElementById('exportBtn').addEventListener('click', ()=>{
+  const blob=new Blob([JSON.stringify({version:1, exported:new Date().toISOString(), nodes}, null, 2)],
+                      {type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='usnow-local-nodes.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast('Exported '+nodes.length+' node(s)');
+});
+
+const importVeil=document.getElementById('importVeil');
+document.getElementById('importBtn').addEventListener('click', ()=>{
+  document.getElementById('importText').value='';
+  importVeil.classList.add('open');
+});
+document.getElementById('importCancel').addEventListener('click', ()=>importVeil.classList.remove('open'));
+document.getElementById('importGo').addEventListener('click', ()=>{
+  try{
+    const data=JSON.parse(document.getElementById('importText').value);
+    const incoming=(data.nodes||[]).filter(n=>Array.isArray(n.coords)&&n.coords.length>=3);
+    if(!incoming.length) throw new Error('no nodes');
+    const ids=new Set(nodes.map(n=>n.id));
+    incoming.forEach(n=>{ if(!ids.has(n.id)) nodes.push(n); });
+    saveNodes(nodes); refreshNodes();
+    importVeil.classList.remove('open');
+    toast('Imported '+incoming.length+' area(s)');
+  }catch(e){
+    toast('Import failed — check the JSON and try again');
+  }
+});
+
+document.getElementById('clearBtn').addEventListener('click', ()=>{
+  if(!nodes.length) return;
+  if(!confirm('Delete ALL '+nodes.length+' node(s)? Export first if you want a backup.')) return;
+  nodes=[]; saveNodes(nodes); refreshNodes();
+  toast('Registry cleared');
+});
+
+/* ---------- Search (Nominatim) ---------- */
+const searchInput=document.getElementById('search'),
+      resultsEl=document.getElementById('results');
+
+document.getElementById('searchBtn').addEventListener('click', doSearch);
+searchInput.addEventListener('keydown', e=>{ if(e.key==='Enter') doSearch(); });
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.searchwrap')) resultsEl.style.display='none';
+});
+
+async function doSearch(){
+  const q=searchInput.value.trim();
+  if(!q) return;
+  resultsEl.innerHTML='<div>Searching…</div>';
+  resultsEl.style.display='block';
+  try{
+    const r=await fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q='+encodeURIComponent(q));
+    const data=await r.json();
+    if(!data.length){ resultsEl.innerHTML='<div>No results — try adding town or state</div>'; return; }
+    resultsEl.innerHTML='';
+    data.forEach(hit=>{
+      const d=document.createElement('div');
+      d.textContent=hit.display_name;
+      d.addEventListener('click', ()=>{
+        resultsEl.style.display='none';
+        if(hit.boundingbox){
+          const bb=hit.boundingbox.map(Number); // [s,n,w,e]
+          map.fitBounds([[bb[2],bb[0]],[bb[3],bb[1]]], {padding:40, maxZoom:16});
+        }else{
+          map.flyTo({center:[+hit.lon, +hit.lat], zoom:15});
+        }
+      });
+      resultsEl.appendChild(d);
+    });
+  }catch(e){
+    resultsEl.innerHTML='<div>Search unavailable — check connection</div>';
+  }
+}
+
+/* ---------- Geolocate ---------- */
+document.getElementById('locateBtn').addEventListener('click', ()=>{
+  if(!navigator.geolocation){ toast('Location not supported on this device'); return; }
+  toast('Finding your location…');
+  navigator.geolocation.getCurrentPosition(
+    pos=>{
+      map.flyTo({center:[pos.coords.longitude, pos.coords.latitude], zoom:16});
+      toast('Centered on your location');
+    },
+    ()=>toast('Location permission denied — search instead')
+  );
+});
+
+/* ---------- Toast ---------- */
+let toastTimer;
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove('show'), 2600);
+}
+
+/* ---------- First-visit welcome ---------- */
+const WELCOME_KEY='usnow-local-welcomed';
+let welcomed=false;
+try{ welcomed=!!localStorage.getItem(WELCOME_KEY); }catch(e){}
+if(!welcomed && !nodes.length){
+  document.getElementById('welcomeVeil').classList.add('open');
+}
+document.getElementById('welcomeGo').addEventListener('click', ()=>{
+  document.getElementById('welcomeVeil').classList.remove('open');
+  try{ localStorage.setItem(WELCOME_KEY,'1'); }catch(e){}
+});
+</script>
+</body>
+</html>

@@ -612,10 +612,30 @@ footer {
 </head>
 <body>
 
-<!-- VOL SERIES BAR -->
-<div style="background:#0e0c0a;color:#b0a890;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;text-align:center;padding:0.45rem 1rem;">
-  <a href="corruption_tracker_vol2.html" style="color:#b0a890;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#f5f0e8'" onmouseout="this.style.color='#b0a890'">Volume II — May 2026 ▶</a>
-</div>
+<!-- ══ CORRUPTION TRACKER · SERIES NAV (identical component on Vol I / II / III) ══ -->
+<style>
+#vol-series{background:#0e0c0a;border-bottom:1px solid #2a2620;}
+#vol-series .vs-rule{display:flex;align-items:center;justify-content:center;padding:0.4rem 1rem 0;font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.28em;text-transform:uppercase;color:#6b6456;}
+#vol-series .vs-tabs{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;padding:0.25rem 0.5rem 0.5rem;}
+#vol-series .vs-tab{text-align:center;text-decoration:none;color:#b0a890;padding:0.45rem 1.2rem;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;line-height:1.5;}
+#vol-series .vs-tab em{display:block;font-family:'Playfair Display',Georgia,serif;font-style:italic;letter-spacing:0;text-transform:none;font-size:12px;color:#d8cfb8;margin-top:1px;}
+#vol-series .vs-tab:hover{color:#f5f0e8;}
+#vol-series .vs-tab:hover em{color:#f5f0e8;}
+#vol-series .vs-tab.is-current{color:#f5f0e8;border-bottom-color:#c0392b;}
+#vol-series .vs-tab.is-current em{color:#e8b04a;}
+#vol-series .vs-sep{align-self:center;color:#3a352c;font-family:'IBM Plex Mono',monospace;}
+@media(max-width:520px){#vol-series .vs-tab{padding:0.4rem 0.7rem;font-size:9px;}#vol-series .vs-tab em{font-size:11px;}}
+</style>
+<nav id="vol-series">
+  <div class="vs-rule"><span>◆ The Corruption Tracker · A Continuing Record · Three Issues, One Throughline ◆</span></div>
+  <div class="vs-tabs">
+    <a class="vs-tab is-current" href="corruption_tracker.html">Vol. I<em>The Record</em></a>
+    <span class="vs-sep">/</span>
+    <a class="vs-tab" href="corruption_tracker_vol2.html">Vol. II<em>There's More</em></a>
+    <span class="vs-sep">/</span>
+    <a class="vs-tab" href="corruption_tracker_vol3.html">Vol. III<em>The Deal</em></a>
+  </div>
+</nav>
 
 <div id="masthead">
   <div class="dateline">Special Investigation · Updated April 2026 · Federal Government / Trump Administration</div>

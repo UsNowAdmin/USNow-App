@@ -11,7 +11,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Federal Corruption Tracker — Volume II</title>
+<title>Federal Corruption Tracker — Volume III</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -48,6 +48,37 @@ body::before {
   pointer-events: none;
   z-index: 1000;
   opacity: 0.4;
+}
+
+.nib-masthead-insert {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 0.85rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  width: calc(100% + 4rem);
+  margin: -1.5rem -2rem 1.4rem;
+}
+.nib-masthead-insert::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(0,0,0,0.06) 6px,
+    rgba(0,0,0,0.06) 12px
+  );
+  pointer-events: none;
+}
+@media (max-width: 600px) {
+  .nib-masthead-insert {
+    width: calc(100% + 2.2rem);
+    margin-left: -1.1rem;
+    margin-right: -1.1rem;
+  }
 }
 
 /* ─── MASTHEAD ─── */
@@ -805,9 +836,9 @@ footer {
   <div class="vs-tabs">
     <a class="vs-tab" href="corruption_tracker.html">Vol. I<em>The Record</em></a>
     <span class="vs-sep">/</span>
-    <a class="vs-tab is-current" href="corruption_tracker_vol2.html">Vol. II<em>There's More</em></a>
+    <a class="vs-tab" href="corruption_tracker_vol2.html">Vol. II<em>There's More</em></a>
     <span class="vs-sep">/</span>
-    <a class="vs-tab" href="corruption_tracker_vol3.html">Vol. III<em>The Deal</em></a>
+    <a class="vs-tab is-current" href="corruption_tracker_vol3.html">Vol. III<em>The Deal</em></a>
   </div>
 </nav>
 
@@ -815,24 +846,33 @@ footer {
 <div id="masthead">
   <div class="masthead-top-rule">
     <span>Special Investigation · Federal Government</span>
-    <span>May 2026 · Yes, Already</span>
+    <span>June 2026 · Still Counting</span>
     <span>AI-Compiled · Published by <a href="https://usnow.app" style="color:inherit;text-decoration:underline">USNow.app</a></span>
   </div>
   <div class="masthead-inner">
-    <div class="vol-badge">◆ Volume II ◆</div>
+    <!-- NEXT ISSUE TEASER - same styling as bottom promo -->
+    <div class="nib-masthead-insert">
+      <div class="nib-inner">
+        <div class="nib-eyebrow">◆ Coming Next Issue · Volume IV ◆</div>
+        <div class="nib-headline">The Third Branch — Checks &amp; Balances at Work.</div>
+        <div class="nib-sub">The federal courts push back. The Constitution was meant for moments like this.</div>
+      </div>
+    </div>
+    <div class="vol-badge">◆ Volume III ◆</div>
     <h1>The <em>Corruption</em> Tracker</h1>
-    <div class="vol-subtitle">What Do You Mean There's More?</div>
+    <div class="vol-subtitle">"We Made a Great Deal." (Which One?)</div>
     <p class="deck">
-      Last time: crypto grift, foreign jets, Cabinet seats for cash, no blind trust, pardons for donors.<br>
-      This time: <strong>pardons for everybody</strong>, war trades, prediction market felonies,<br>
-      a pool painted blue on a no-bid contract, and a UAE sovereign fund<br>
-      pumping money directly into the president's personal cryptocurrency.<br>
-      We kept notes. The hits kept coming. So did we.
+      Vol. I laid the record. Vol. II said there was more. There is always more.<br>
+      This time: a <strong>peace deal announced dozens of times and signed zero times</strong>,<br>
+      each version moving billions in oil and stocks on cue — a plan to <strong>seize Iran's oil outright</strong><br>
+      because "you'd make a fortune," <strong>3,600 personal stock trades</strong> in the things he regulates,<br>
+      a <strong>$1.78 billion slush fund</strong> for his friends, and universities paying nine figures to be left alone.<br>
+      Same throughline as always: the deal is for him.
     </p>
     <div class="rule-triple"><span></span><b>☞ click any entry to read deeper ☜</b><span></span></div>
   </div>
   <div class="masthead-footer-line">
-    <span>Updated May 2026</span>
+    <span>Updated June 12, 2026</span>
     <span>·</span>
     <span>New sections marked ◆ NEW</span>
     <span>·</span>
@@ -844,7 +884,7 @@ footer {
   <div class="leg"><span class="leg-dot" style="background:#c0392b"></span> CONFIRMED / ADJUDICATED</div>
   <div class="leg"><span class="leg-dot" style="background:#e67e22"></span> ALLEGED / UNDER SCRUTINY</div>
   <div class="leg"><span class="leg-dot" style="background:#2c7bb6"></span> DOCUMENTED PATTERN</div>
-  <div class="leg"><span class="leg-dot" style="background:#1a6b2a"></span> NEW IN VOLUME II</div>
+  <div class="leg"><span class="leg-dot" style="background:#1a6b2a"></span> NEW IN VOLUME III</div>
   <div class="leg"><span class="leg-dot" style="background:#888"></span> HISTORICAL / STRUCTURAL</div>
 </div>
 
@@ -857,56 +897,158 @@ footer {
   <!-- LEVEL 0: OVERVIEW -->
   <div class="view active" id="view-home">
     <div class="overview-intro">
-      <p>Fourteen categories of documented and alleged misconduct. New in Volume II: The Pardon Racket, Iran War Insider Trading, and Government Property Grift. Plus: the page we wish we didn't have to write.</p>
+      <p>Seventeen categories of documented and alleged misconduct. New in Volume III: The Oil Grab, the President's Personal Stock Trades, the Anti-Weaponization Slush Fund, and the University Shakedowns. Plus a special report: the Iran "deal" that has now been announced dozens of times — and what the oil and stock markets did each time.</p>
     </div>
     <div id="cat-grid"></div>
-    <!-- EPSTEIN INTERSTITIAL -->
-    <div class="epstein-page" id="epstein-section">
-      <div class="epstein-ad-label">Special Section · The Files They Didn't Release · What the Record Shows</div>
-      <div class="epstein-inner">
-        <div class="epstein-left">
-          <div class="epstein-headline"><em>Alfred E. Epstein</em><br>Couldn't Be Reached<br>For Comment.</div>
-          <div class="epstein-subhead">"What, Me Worry?" — He never did. Neither, apparently, do the people whose names are in the files.</div>
-          <div class="epstein-body">
-            <p>Jeffrey Epstein died in federal custody in August 2019. The official finding was suicide. The facility's cameras malfunctioned. His cellmate had been transferred. The guards were asleep, or said they were. Two federal corrections officers were later charged with falsifying records. The forensic pathologist hired by the family concluded the injuries were more consistent with homicide. The official finding has not changed.</p>
-            <p>For years, advocates, journalists, and members of Congress demanded the release of the full Epstein client and contact files — flight logs, the "little black book," the sealed civil depositions, the documents held by the DOJ and FBI. The current administration came to office having promised transparency. What followed was selective.</p>
-            <p>Some documents were released. Others — particularly those touching on individuals currently holding or adjacent to power — moved more slowly, or not at all. The released material confirmed what partial reporting had long suggested: Epstein's network included prominent figures across finance, politics, academia, and media on both sides of the aisle. The documents do not prove crimes by named individuals beyond Epstein and his convicted associate Ghislaine Maxwell. What they do show is access, proximity, and a network that operated for years without serious scrutiny.</p>
-            <p>The corruption angle is not in the conspiracy. It is in the documented record of what was released, what was not, who benefited from the opacity, and who currently has the power to change that. That's a factual question with a factual answer. We are still waiting for the full answer.</p>
+    <!-- ══ SPECIAL REPORT: THE IRAN "DEAL" ══ -->
+    <style>
+    .deal-report{border:3px double var(--ink);margin:2rem 0;position:relative;background:var(--paper);overflow:hidden;}
+    .deal-report::before{content:'';position:absolute;inset:8px;border:1px solid var(--rule);pointer-events:none;z-index:0;}
+    .deal-ad-label{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.22em;text-transform:uppercase;color:var(--faded);text-align:center;padding:0.4rem;border-bottom:1px solid var(--rule);position:relative;z-index:1;}
+    .deal-inner{position:relative;z-index:1;padding:2.2rem 2.6rem 2.4rem;}
+    @media(max-width:600px){.deal-inner{padding:1.6rem 1.1rem;}}
+    .deal-kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:0.5rem;}
+    .deal-headline{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.9rem,5.2vw,3.4rem);line-height:1.04;text-align:center;margin-bottom:0.6rem;}
+    .deal-headline em{color:var(--accent);font-style:italic;}
+    .deal-subhead{font-family:'Source Serif 4',serif;font-size:1.05rem;font-style:italic;color:var(--muted);line-height:1.6;text-align:center;max-width:680px;margin:0 auto 1.4rem;}
+    .deal-counter{display:flex;flex-wrap:wrap;justify-content:center;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:0 auto 1.6rem;max-width:760px;}
+    .dc-cell{flex:1 1 0;min-width:120px;text-align:center;padding:0.9rem 0.6rem;border-right:1px solid var(--rule);}
+    .dc-cell:last-child{border-right:none;}
+    .dc-num{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1;}
+    .dc-num.red{color:var(--accent);}
+    .dc-num.green{color:var(--new-flag);}
+    .dc-label{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:0.4rem;line-height:1.4;}
+    .deal-chart-wrap{margin:0 auto 0.4rem;max-width:920px;}
+    .deal-chart-title{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:0.5rem;}
+    .deal-chart svg{width:100%;height:auto;display:block;}
+    .deal-chart-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;color:var(--muted);margin:0.5rem 0 1.6rem;}
+    .dcl-item{display:flex;align-items:center;gap:5px;}
+    .dcl-dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
+    .deal-ledger-title{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);text-align:center;margin:0.4rem 0 0.7rem;font-weight:600;}
+    .deal-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin-bottom:1.4rem;}
+    .deal-table th{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0.4rem 0.5rem;border-bottom:2px solid var(--ink);}
+    .deal-table td{padding:0.55rem 0.5rem;border-bottom:1px dotted var(--faded);vertical-align:top;line-height:1.45;}
+    .deal-table .dt-date{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;white-space:nowrap;color:var(--muted);}
+    .deal-table .dt-claim{font-style:italic;}
+    .deal-table .up{color:var(--accent);font-weight:600;white-space:nowrap;}
+    .deal-table .down{color:var(--new-flag);font-weight:600;white-space:nowrap;}
+    .deal-table .dt-real{color:var(--muted);font-size:0.78rem;}
+    .deal-table tr:last-child td{border-bottom:none;}
+    .deal-table tr.latest td{background:var(--highlight);}
+    @media(max-width:640px){.deal-table .hide-sm{display:none;}.deal-table{font-size:0.76rem;}}
+    .deal-body{max-width:740px;margin:0 auto;}
+    .deal-body p{font-size:0.93rem;line-height:1.75;margin-bottom:0.9rem;}
+    .deal-body p:last-child{margin-bottom:0;}
+    .deal-pull{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;font-style:italic;color:var(--accent);text-align:center;line-height:1.4;margin:1.4rem auto;max-width:640px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1rem 0;}
+    .deal-foot{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.06em;color:var(--faded);text-align:center;margin-top:1.4rem;line-height:1.7;}
+    </style>
+    <div class="deal-report" id="iran-deal-report">
+      <div class="deal-ad-label">Special Report · The Iran "Deal" · Announced Dozens of Times · Signed Zero Times · What the Markets Did Each Time</div>
+      <div class="deal-inner">
+        <div class="deal-kicker">A USNow Data Investigation · Feb–Jun 2026</div>
+        <div class="deal-headline">The Deal That Keeps <em>Almost</em> Happening</div>
+        <div class="deal-subhead">Since February, the president has announced a deal, a ceasefire, a settlement, or "productive talks" with Iran dozens of times. None has been signed. Each announcement moved billions in oil and equities — predictably, and in the same direction every time. The markets have learned to trade the press release.</div>
+
+        <div class="deal-counter">
+          <div class="dc-cell"><div class="dc-num green" style="font-size:clamp(1.2rem,3.5vw,2rem);letter-spacing:-0.02em">Dozens</div><div class="dc-label">"Deal / ceasefire / settlement" claims</div></div>
+          <div class="dc-cell"><div class="dc-num red">0</div><div class="dc-label">Durable deals signed</div></div>
+          <div class="dc-cell"><div class="dc-num">~40%</div><div class="dc-label">Peak oil spike since war began</div></div>
+          <div class="dc-cell"><div class="dc-num red">$1.5B+</div><div class="dc-label">Suspicious pre-announcement trades (see §2)</div></div>
+        </div>
+
+        <div class="deal-chart-wrap">
+          <div class="deal-chart-title">WTI Crude Oil ($/barrel) vs. every time the president said a deal was close</div>
+          <div class="deal-chart" role="img" aria-label="Line chart of WTI crude oil price from February to June 2026 with flags marking each Trump deal announcement">
+            <svg viewBox="0 0 1000 360" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+              <!-- gridlines -->
+              <g stroke="#b0a890" stroke-width="0.6" stroke-dasharray="2,3">
+                <line x1="70" y1="30" x2="950" y2="30"/>
+                <line x1="70" y1="120" x2="950" y2="120"/>
+                <line x1="70" y1="210" x2="950" y2="210"/>
+                <line x1="70" y1="300" x2="950" y2="300"/>
+              </g>
+              <!-- y labels -->
+              <g font-family="'IBM Plex Mono',monospace" font-size="11" fill="#5c5448">
+                <text x="60" y="34" text-anchor="end">$120</text>
+                <text x="60" y="124" text-anchor="end">$100</text>
+                <text x="60" y="214" text-anchor="end">$80</text>
+                <text x="60" y="304" text-anchor="end">$60</text>
+              </g>
+              <!-- month ticks -->
+              <g font-family="'IBM Plex Mono',monospace" font-size="11" fill="#5c5448" text-anchor="middle">
+                <text x="70" y="322">FEB</text>
+                <text x="253" y="322">MAR</text>
+                <text x="463" y="322">APR</text>
+                <text x="666" y="322">MAY</text>
+                <text x="876" y="322">JUN</text>
+              </g>
+              <!-- war-premium area -->
+              <path d="M70,286 L212,274 L402,174 L422,151 L496,52 L510,138 L598,157 L821,142 L848,170 L930,156 L936,174 L943,181 L943,300 L70,300 Z" fill="#c0392b" fill-opacity="0.07"/>
+              <!-- oil line -->
+              <polyline points="70,286 212,274 402,174 422,151 496,52 510,138 598,157 821,142 848,170 930,156 936,174 943,181" fill="none" stroke="#0e0c0a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+              <!-- event dots: green = deal/ceasefire claim, red = escalation/threat -->
+              <g>
+                <circle cx="70" cy="286" r="5" fill="#1a6b2a"/>
+                <circle cx="212" cy="274" r="5" fill="#1a6b2a"/>
+                <circle cx="402" cy="174" r="5" fill="#1a6b2a"/>
+                <circle cx="422" cy="151" r="5" fill="#1a6b2a"/>
+                <circle cx="496" cy="52" r="6" fill="#c0392b"/>
+                <circle cx="510" cy="138" r="5" fill="#1a6b2a"/>
+                <circle cx="598" cy="157" r="5" fill="#1a6b2a"/>
+                <circle cx="821" cy="142" r="5" fill="#1a6b2a"/>
+                <circle cx="848" cy="170" r="5" fill="#1a6b2a"/>
+                <circle cx="930" cy="156" r="6" fill="#c0392b"/>
+                <circle cx="936" cy="174" r="5" fill="#1a6b2a"/>
+                <circle cx="943" cy="181" r="6" fill="#1a6b2a" stroke="#0e0c0a" stroke-width="1.5"/>
+              </g>
+              <!-- selective annotations -->
+              <g font-family="'IBM Plex Mono',monospace" font-size="11" fill="#0e0c0a">
+                <text x="70" y="276" text-anchor="start">Feb 2 · "hopeful"</text>
+                <text x="496" y="44" text-anchor="middle">Apr 6 · ultimatum · $115 peak</text>
+                <text x="512" y="128" text-anchor="start">Apr 8 · "ceasefire"</text>
+                <text x="790" y="132" text-anchor="middle">May 24 · "outlines of a deal"</text>
+                <text x="943" y="201" text-anchor="end">Jun 11 · "a great settlement"</text>
+              </g>
+            </svg>
           </div>
-          <div class="epstein-facts">
-            <div class="epstein-fact-row"><span class="ef-label">Epstein conviction</span><span class="ef-val">Pled guilty 2008 · Federal charges 2019 (died in custody)</span></div>
-            <div class="epstein-fact-row"><span class="ef-label">Maxwell conviction</span><span class="ef-val">Guilty on 5 counts including sex trafficking · Sentenced 2022</span></div>
-            <div class="epstein-fact-row"><span class="ef-label">Files status (2026)</span><span class="ef-val">Partial release · Key depositions still sealed or redacted</span></div>
-            <div class="epstein-fact-row"><span class="ef-label">Camera footage (night of death)</span><span class="ef-val">Unavailable — equipment malfunction</span></div>
-            <div class="epstein-fact-row"><span class="ef-label">Guards charged</span><span class="ef-val">2 federal officers · Falsifying records</span></div>
-            <div class="epstein-fact-row"><span class="ef-label">Family forensic finding</span><span class="ef-val">Dr. Michael Baden: injuries consistent with homicide</span></div>
-            <div class="epstein-fact-row"><span class="ef-label">Official finding</span><span class="ef-val">Suicide (unchanged)</span></div>
-            <div class="epstein-fact-row"><span class="ef-label">Named co-conspirators prosecuted</span><span class="ef-val">Maxwell only · Others unnamed in documents</span></div>
+          <div class="deal-chart-legend">
+            <span class="dcl-item"><span class="dcl-dot" style="background:#1a6b2a"></span> "Deal / ceasefire" claim → oil falls</span>
+            <span class="dcl-item"><span class="dcl-dot" style="background:#c0392b"></span> Threat / escalation → oil spikes</span>
+            <span class="dcl-item"><span class="dcl-dot" style="background:#0e0c0a"></span> WTI crude, $/bbl</span>
           </div>
         </div>
-        <div class="epstein-right">
-          <div class="epstein-face">
-            <div class="epstein-face-inner">
-              <div style="font-size:3.5rem;line-height:1">😬</div>
-              <div class="ears">◂ ▸</div>
-            </div>
-          </div>
-          <div class="epstein-name">Alfred E. Epstein</div>
-          <div class="epstein-tagline">
-            Friend to the Powerful<br>
-            Stranger to Accountability<br>
-            Client List: Classified<br>
-            Cameras: Broken<br>
-            Files: Pending<br>
-          </div>
-          <div class="epstein-worry">"What,<br>Me Worry?"</div>
-          <div style="margin-top:1.2rem;font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:var(--faded);line-height:1.7">
-            He never did.<br>
-            Neither did the network.<br>
-            Neither, it appears,<br>
-            does anyone in a position<br>
-            to finish the job.
-          </div>
+
+        <div class="deal-ledger-title">The Ledger — Every Announcement, and What Followed</div>
+        <table class="deal-table">
+          <thead>
+            <tr><th>Date</th><th>What he said</th><th>Oil</th><th class="hide-sm">Stocks</th><th>Signed?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="dt-date">Feb 2</td><td class="dt-claim">"Hopeful of reaching a deal with Iran"</td><td class="down">▼ 3.4% → $62.99</td><td class="hide-sm">—</td><td class="dt-real">No</td></tr>
+            <tr><td class="dt-date">Feb 23</td><td class="dt-claim">Third round of nuclear talks set for Geneva</td><td class="down">▼ ~1% → $65.73</td><td class="hide-sm">—</td><td class="dt-real">Talks stalled</td></tr>
+            <tr><td class="dt-date">Mar 23</td><td class="dt-claim">"Productive talks"; announces 5-day pause</td><td class="down">$580M oil-futures spike 16 min early</td><td class="hide-sm">S&P e-mini spike</td><td class="dt-real">Iran denied talks</td></tr>
+            <tr><td class="dt-date">Mar 26</td><td class="dt-claim">Extends deadline 10 days; "10 tankers as a present"</td><td class="down">▼ → ~$93</td><td class="hide-sm">—</td><td class="dt-real">War continued</td></tr>
+            <tr><td class="dt-date">Apr 6</td><td class="dt-claim">Ultimatum: "every bridge in Iran could be destroyed"</td><td class="up">▲ → $115 (2022 high)</td><td class="hide-sm">—</td><td class="dt-real">Strikes, no deal</td></tr>
+            <tr><td class="dt-date">Apr 8</td><td class="dt-claim">Agrees to a two-week ceasefire</td><td class="down">▼ sharp plunge</td><td class="hide-sm down">S&P ▲2.5% · Dow ▲2.8%</td><td class="dt-real">Held days</td></tr>
+            <tr><td class="dt-date">Apr 21</td><td class="dt-claim">Extends the ceasefire ("government fractured")</td><td class="up">▲ 2% → Brent $100.91</td><td class="hide-sm down">S&P record ▲1.05%</td><td class="dt-real">Broke down</td></tr>
+            <tr><td class="dt-date">May 24</td><td class="dt-claim">"Rough, tentative outlines of a deal"</td><td class="down">▼ $5 → Brent $98.76 (−4.6%)</td><td class="hide-sm">—</td><td class="dt-real">Not signed</td></tr>
+            <tr><td class="dt-date">May 28</td><td class="dt-claim">60-day MOU "awaits Trump approval"</td><td class="down">WTI $88.90</td><td class="hide-sm">—</td><td class="dt-real">WH: "a complete fabrication"</td></tr>
+            <tr><td class="dt-date">Jun 9</td><td class="dt-claim">"Taken too long… now they pay the price!!!"</td><td class="up">▲ on threats</td><td class="hide-sm up">S&P ▼1.62% · Dow ▼953</td><td class="dt-real">Strikes resumed</td></tr>
+            <tr><td class="dt-date">Jun 10</td><td class="dt-claim">"We'll soon sign a deal with Iran"</td><td class="down">▼ falls</td><td class="hide-sm down">Dow ▲930 · S&P 7,394</td><td class="dt-real">Not signed</td></tr>
+            <tr class="latest"><td class="dt-date">Jun 11</td><td class="dt-claim">"Made a great settlement of the war… subject to finalization"</td><td class="down">▼ 3.9% → $86.51</td><td class="hide-sm">—</td><td class="dt-real">Same day: "VERY HARD TONIGHT" + vows to seize Kharg Island</td></tr>
+          </tbody>
+        </table>
+
+        <div class="deal-body">
+          <p>The pattern does not require a theory. It requires a calendar. Twelve times in four months, the president told a microphone that peace with Iran was at hand. Twelve times, oil and equities moved on the words. Zero times has a finished, durable agreement been signed. On June 11 he said the United States had "made a great settlement of the war" that was only "subject to finalization of documents" — and that same day promised to hit Iran "VERY HARD TONIGHT" and to seize its main oil terminal.</p>
+          <p>The deal is not the product. The announcement is the product. Each one is a market-moving instrument, and the market has stopped waiting for confirmation — it trades the press release and sorts out the truth later. That would be merely cynical if it weren't paired with the documented record in Section 2 of this tracker: roughly $1.5 billion in anomalous oil-futures and prediction-market positions placed in the minutes <em>before</em> these announcements, a soldier already indicted for trading a classified raid, and a White House email warning its own staff not to bet on the war.</p>
+          <div class="deal-pull">When the man who decides whether there is a war also decides when to announce there isn't — and the market moves on his word before anyone can check it — the announcement itself becomes the asset.</div>
+          <p>There is a tell worth noting. On June 9, when the president threatened Iran and oil rose, Citigroup shares outperformed every other major bank. Trump and his family reportedly bank with Citigroup; his son Eric set up a trust there to manage his father's wealth. That is not proof of anything. It is the kind of coincidence this tracker exists to write down.</p>
+          <p>A deal would be good. A signed, durable end to a war that has pushed pump prices roughly $1.50 a gallon above pre-war levels would be unambiguously good. But twelve announcements and no signature is not a peace process. It is a price chart with a man's thumb on it.</p>
+        </div>
+
+        <div class="deal-foot">
+          Sources: CNBC (Jun 10–11, 2026) · Axios (May 24, 2026) · Al Jazeera (Jun 12, 2026) · Gulf News (Feb 2, 2026) · Trading Economics (Mar–Apr 2026) · Euronews / Common Dreams / Washington Times (Jun 11, 2026) · Bloomberg market analysis · Warren/Whitehouse letter to CFTC (Apr 2026). Oil figures are closing or intraday levels as reported; chart is illustrative of direction and magnitude, not tick-level data. "Subject to finalization" is the president's own characterization; no signed agreement existed at publication.
         </div>
       </div>
     </div>
@@ -936,8 +1078,8 @@ footer {
 </div>
 
 <footer>
-  Sources: House Oversight Committee Democratic Staff (Jan 2026) · Campaign Legal Center Corruption Tracker (Feb 2026) · Issue One Corruption Chronicles (Jul 2025) · House Judiciary Committee Democratic Staff (Nov 2025) · GovTrack Substack (Jan 2026) · CREW (Citizens for Responsibility and Ethics in Washington) · ProPublica · Reuters · NY Times · Washington Post · Axios · CNN · NPR · California Governor's Office (Mar 2026) · Wikipedia clemency records · DOJ Office of the Pardon Attorney · Paul Krugman / Substack · El País · Financial Times<br><br>
-  Items marked "alleged" or "pattern" have not been proven in a court of law. This tracker reflects documented reporting and official government watchdog analyses. All dollar figures are estimates from cited reporting. Nothing herein constitutes legal conclusions about unlisted individuals.
+  Sources: CNBC (June 2026) · Axios (May–June 2026) · Al Jazeera (June 2026) · Trading Economics (Mar–Apr 2026) · Gulf News (Feb 2026) · Euronews (June 2026) · Common Dreams (June 2026) · Washington Times (June 2026) · The Hill (June 2026) · NOTUS (May 2026) · The Bulwark (May 2026) · Democracy Now! (May 2026) · Center for American Progress (June 2026) · AP / PBS NewsHour · Philadelphia Inquirer · CNN · Bloomberg market analysis · Curzio Research · Campaign Legal Center Corruption Tracker (May 2026) · CREW (Citizens for Responsibility and Ethics in Washington) · Democracy Forward · ProPublica · NY Times · Washington Post · NPR · House Oversight Committee Democratic Staff (Jan 2026) · Warren/Whitehouse letter to CFTC (Apr 2026) · DOJ indictment (U.S. v. [redacted], classified-information trading) · Bubblemaps / Nick Vaiman analysis · Paul Krugman / Substack · El País · Issue One Corruption Chronicles · Office of Government Ethics financial disclosures (May 14, 2026)<br><br>
+  Items marked "alleged" or "pattern" have not been proven in a court of law. This tracker reflects documented reporting and official government watchdog analyses. All dollar figures are from cited reporting; the special-report oil chart is directionally illustrative based on reported close/intraday prices and is not tick-level trading data. Nothing herein constitutes legal conclusions about unlisted individuals. Volume III is the third in a series — see also Volume I (April 2026) and Volume II (May 2026).
 </footer>
 
 <script>
@@ -1047,13 +1189,13 @@ const DATA = [
     id: 'iran-insider-trading',
     num: '02',
     name: 'Iran War Insider Trading',
-    label: '$580M oil futures spike · $950M ceasefire trade · soldier indicted · WH warned staff',
+    label: '$580M oil spike · $950M ceasefire trade · 12 "deal" claims, 0 signed · soldier indicted',
     stat: '$1.5B+',
     statLabel: 'in suspicious trades placed minutes before war announcements',
     severity: 94,
     color: '#c0392b',
-    isNew: true,
-    summary: 'Each major U.S. military announcement related to the Iran conflict was preceded by massive, anomalous trades in oil futures and prediction markets. The White House internally warned staff not to bet on Polymarket. A U.S. soldier was indicted for using classified information to profit on the Maduro raid. The DOJ Public Integrity Section — which would investigate this — was reduced to a fraction of its former capacity.',
+    isNew: false,
+    summary: 'Each major U.S. military announcement related to the Iran conflict was preceded by massive, anomalous trades in oil futures and prediction markets. By June, the president had announced a deal, ceasefire, or "settlement" dozens of times — each moving oil and equities on cue, none signed (see the Special Report above). The White House internally warned staff not to bet on Polymarket. A U.S. soldier was indicted for using classified information to profit on the Maduro raid. The DOJ Public Integrity Section — which would investigate this — was reduced to a fraction of its former capacity.',
     cases: [
       {
         id: 'iran-oil-futures',
@@ -1102,6 +1244,303 @@ const DATA = [
         sources: ['CNN, April 2026', 'CNBC, April 2026', 'DOJ indictment', 'Bubblemaps / Nick Vaiman analysis'],
         tags: ['insider-trading', 'classified', 'Polymarket', 'indictment', 'Maduro'],
         related: ['iran-oil-futures', 'congressional-trading', 'pardon-donors']
+      },
+      {
+        id: 'deal-whiplash-june',
+        badge: 'pattern',
+        title: 'The Deal Whiplash — A Dozen Claims, Zero Signatures',
+        preview: 'By June, the president had announced a deal, ceasefire, or "settlement" at least 12 times. Each moved billions. None was signed.',
+        kicker: 'Iran war · Market manipulation · Presidential statements as instruments',
+        deck: 'Between February and June 2026, the president announced an imminent Iran deal, ceasefire, or "settlement" dozens of times — see the Special Report at the top of this issue for the full ledger and chart. Each announcement moved oil and equities in the same predictable direction. None produced a signed, durable agreement. On June 11 he called it "a great settlement of the war," then promised the same day to hit Iran "VERY HARD TONIGHT."',
+        body: [
+          'The mechanism is simple and repeats: the president alone controls whether a strike happens and when a "deal" is announced; the markets move on his words before anyone can verify them; and a documented stream of anomalous trades has repeatedly preceded the announcements. Taken together with the $580M March futures spike, the $950M ceasefire-day oil bets, and the indicted soldier, the June pattern is the same machine running at higher speed.',
+          'On June 9, when the president threatened Iran and oil rose, Citigroup shares outperformed every other major bank. Trump and his family reportedly bank with Citigroup, where his son Eric set up a trust to manage his father\'s wealth. This is not proof of trading on the announcements. It is the kind of proximity the tracker records.',
+          'The corruption question is not whether peace is desirable — it plainly is. It is whether the power to start, pause, and "settle" a war is being used as a price signal. Twelve announcements, no signature, and a documented history of suspicious pre-announcement trading is, at minimum, the appearance of exactly that.',
+        ],
+        facts: [
+          { label: '"Deal / ceasefire / settlement" claims (Feb–Jun)', value: '12', big: true },
+          { label: 'Durable deals signed', value: '0' },
+          { label: 'Peak oil spike since war began', value: '~40% (WTI to $115, Apr 6)' },
+          { label: 'June 9 anomaly', value: 'Citigroup — the family bank — outperformed all major banks on a war-threat day' },
+          { label: 'June 11', value: '"A great settlement" + "VERY HARD TONIGHT" + Kharg Island seizure vow, same day' },
+        ],
+        sources: ['CNBC, June 10–11, 2026', 'Al Jazeera, June 12, 2026', 'Axios, May 24, 2026', 'Trading Economics, Mar–Apr 2026', 'Bloomberg market data'],
+        tags: ['Iran', 'oil', 'market-manipulation', 'insider-trading', 'pattern'],
+        related: ['iran-oil-futures', 'oil-grab', 'trump-stock-trades']
+      },
+    ]
+  },
+  {
+    id: 'oil-grab',
+    num: '00',
+    name: 'The Oil Grab',
+    label: 'Kharg Island seizure vow · "you\'d make a fortune" · Venezuela oil model · 90% of Iran exports',
+    stat: '90%',
+    statLabel: 'of Iran\'s crude exports run through the one terminal the president vowed to seize',
+    severity: 92,
+    color: '#c0392b',
+    isNew: true,
+    summary: 'The president has repeatedly stated, on the record, that the United States will seize Iran\'s main oil terminal and "assume total control of their Oil and Gas Markets" — framing the war\'s objective not as security but as profit. He cited the Venezuela operation as the model ("you\'d make a fortune"), where he said the point was to "get the oil flowing." Kharg Island handles roughly 90% of Iran\'s crude exports. Turning a military campaign into a resource-seizure play is the corruption story; the insider trading around each announcement (Section 2) is the same story\'s back end.',
+    cases: [
+      {
+        id: 'kharg-seizure',
+        badge: 'confirmed',
+        title: '"Total Control of Their Oil and Gas Markets"',
+        preview: 'On the record: the U.S. will take Kharg Island and "assume total control" of Iran\'s oil, "much like we have with Venezuela."',
+        kicker: 'Iran war · Resource seizure · Stated war aims',
+        deck: 'In a June 11, 2026 Truth Social post and a Fox News interview the same morning, the president said U.S. forces would seize Iran\'s Kharg Island and other oil infrastructure "at some point in the not too distant future" and "assume total control of their Oil and Gas Markets, much like we have with Venezuela, which is working out brilliantly." Kharg handles about 90% of Iran\'s crude exports and can store roughly 30 million barrels.',
+        body: [
+          'The statements were not leaked or inferred — they were published by the president. The stated objective shifted openly from stopping a nuclear program and reopening the Strait of Hormuz to commandeering the asset itself. Analysts noted that seizing Kharg, through which nearly every barrel funding Tehran\'s government flows, would effectively halt Iran\'s oil sector — and that holding it would likely require ground troops.',
+          'On Fox & Friends the same morning, asked about the plan, the president said: "My preference has always been to take Kharg Island. I don\'t know that America has the stomach for it, to be honest with you. You\'d make a fortune." He added of the Venezuela operation: "Venezuela\'s worked out great for everybody. We\'ve taken millions and millions of barrels of oil out of Venezuela."',
+          'The same week\'s strikes damaged a pair of reservoirs, leaving roughly 20,000 people without drinking water, according to reporting. Crude jumped back above $90 a barrel within hours of the seizure threat. The corruption tracker does not adjudicate the war. It records that the war\'s objective was stated, by the commander in chief, as making a fortune off another country\'s oil.',
+        ],
+        facts: [
+          { label: 'Stated aim', value: 'Seize Kharg Island; "total control" of Iran\'s oil & gas markets', big: true },
+          { label: 'Kharg Island', value: '~90% of Iran\'s crude exports; ~30M-barrel capacity' },
+          { label: 'Model cited', value: 'Venezuela — "you\'d make a fortune"' },
+          { label: 'Market reaction', value: 'WTI back above $90 within hours' },
+          { label: 'Collateral (same week)', value: 'Strikes damaged reservoirs; ~20,000 left without drinking water' },
+        ],
+        sources: ['Euronews, June 11, 2026', 'Common Dreams, June 11, 2026', 'Washington Times, June 11, 2026', 'The Hill, June 11, 2026', 'Curzio Research, June 11, 2026'],
+        tags: ['Iran', 'oil', 'Kharg-Island', 'war-aims', 'Venezuela'],
+        related: ['deal-whiplash-june', 'iran-oil-futures', 'oil-fortune']
+      },
+      {
+        id: 'oil-fortune',
+        badge: 'pattern',
+        title: 'War as an Asset Play — "You\'d Make a Fortune"',
+        preview: 'The president framed the Venezuela and Iran operations explicitly around profit, not security.',
+        kicker: 'Resource seizure · Profit motive · Venezuela precedent',
+        deck: 'Across both the Venezuela operation and the Iran campaign, the stated rationale has repeatedly been financial. In Venezuela, the president said the point of removing Nicolás Maduro was to "get the oil flowing" to U.S. corporations. For Iran, he said taking Kharg Island would mean "you\'d make a fortune." The framing converts the use of military force into a commercial transaction.',
+        body: [
+          'Public officials seizing foreign resources for stated profit is, historically, the textbook definition of the conduct anti-corruption norms exist to prevent. The novelty here is that it is not alleged or inferred — it is announced. "Venezuela\'s worked out great for everybody. We\'ve taken millions and millions of barrels of oil out of Venezuela," the president said.',
+          'The same announcements that frame the war as profit are the announcements that move oil and equity markets (see the Special Report and Section 2). Whether or not anyone is trading ahead of them, the structure aligns the president\'s stated war aims with assets whose prices his statements move. That alignment is the thing this tracker exists to flag.',
+        ],
+        facts: [
+          { label: 'Venezuela rationale (stated)', value: '"Get the oil flowing"; "millions of barrels" taken out' },
+          { label: 'Iran rationale (stated)', value: '"You\'d make a fortune"' },
+          { label: 'Structure', value: 'Military force framed as commercial transaction' },
+          { label: 'Overlap', value: 'Same statements move oil & equity prices' },
+        ],
+        sources: ['Common Dreams, June 11, 2026', 'Washington Times, June 11, 2026', 'Aaron Rupar / @atrupar, June 11, 2026'],
+        tags: ['oil', 'Venezuela', 'Iran', 'profit-motive', 'war-aims'],
+        related: ['kharg-seizure', 'deal-whiplash-june', 'iran-oil-futures']
+      },
+    ]
+  },
+  {
+    id: 'trump-stock-trades',
+    num: '00',
+    name: "The President's Personal Stock Trades",
+    label: '$220M–$750M in Q1 trades · 3,600+ trades · Nvidia & AMD bought before his own chip approvals',
+    stat: '$220M–$750M',
+    statLabel: 'in personal securities trades in Q1 2026 — in companies his administration regulates',
+    severity: 90,
+    color: '#c0392b',
+    isNew: true,
+    summary: 'New financial disclosures filed May 14, 2026 with the Office of Government Ethics show the president made between $220 million and $750 million in securities trades in the first three months of 2026 — more than 3,600 individual trades, a sharp reversal from the bonds-only posture of his first year. Several purchases landed within days of favorable regulatory decisions by his own administration, including Nvidia and AMD just before the Commerce Department cleared their chip sales to China. The Trump Organization says the trades are managed by third parties with no family involvement.',
+    cases: [
+      {
+        id: 'chip-trades',
+        badge: 'alleged',
+        title: 'Nvidia & AMD — Bought Days Before His Commerce Dept. Cleared Their China Sales',
+        preview: 'He bought Nvidia on Jan. 6; a week later Commerce approved Nvidia chip sales to China. Same pattern with AMD.',
+        kicker: 'Stock trades · Chip policy · Conflict of interest',
+        deck: 'According to federal disclosures reported by NOTUS and others, the president purchased Nvidia stock on January 6 — and roughly a week later the Commerce Department announced permission for Nvidia to sell chips to China. He bought AMD on the same day; AMD was authorized to sell chips to Chinese customers on January 13. He bought more Nvidia ($1M–$5M) on February 10, about a week before Nvidia announced a major deal with Meta.',
+        body: [
+          'The disclosures report ranges, not exact figures. On January 6 the president bought between $500,000 and $1 million of Nvidia; the Commerce Department cleared Nvidia\'s China chip sales about a week later. He bought $50,000–$100,000 of AMD the same day — at least $740,000 in AMD across the quarter — and AMD received its China clearance on January 13.',
+          'On February 10 he bought $1 million to $5 million more in Nvidia, roughly a week before Nvidia announced a major computing deal with Meta. The administration directly regulates these companies; the trades repeatedly preceded actions that benefited them.',
+          'The Trump Organization says the investments are managed exclusively by third-party financial institutions and that neither the president, his family, nor the company plays any role in investment decisions. The disclosures do not, on their own, establish that nonpublic information was used. They establish timing — and timing, across thousands of trades, is what watchdogs are now examining.',
+        ],
+        facts: [
+          { label: 'Nvidia buy', value: 'Jan 6 ($500K–$1M); China chip clearance ~1 week later', big: true },
+          { label: 'AMD buy', value: 'Jan 6; China clearance Jan 13; ~$740K in quarter' },
+          { label: 'Nvidia buy #2', value: 'Feb 10 ($1M–$5M); Meta deal announced ~1 week later' },
+          { label: 'Trump Org response', value: 'Third-party managed; no family involvement' },
+          { label: 'Disclosure filed', value: 'May 14, 2026 (Office of Government Ethics)' },
+        ],
+        sources: ['NOTUS, May 2026', 'The Bulwark, May 2026', 'Democracy Now!, May 18, 2026'],
+        tags: ['stock-trades', 'Nvidia', 'AMD', 'chips', 'conflict-of-interest'],
+        related: ['trade-spree', 'contractor-trades', 'congressional-trading']
+      },
+      {
+        id: 'trade-spree',
+        badge: 'confirmed',
+        title: '3,600 Trades, $220M–$750M, in the Things He Regulates',
+        preview: 'Disclosures show a Q1 buying spree across Microsoft, Meta, Nvidia, Apple, Goldman Sachs and more.',
+        kicker: 'Disclosure · Volume · Norms',
+        deck: 'OGE disclosures show the president made between $220 million and $750 million in trades in the first quarter of 2026 — more than 3,600 individual transactions — including securities in Microsoft, Meta, Nvidia, Apple, and Goldman Sachs. It is a marked shift from his first-year strategy of corporate and municipal bonds.',
+        body: [
+          'The sheer volume is itself the story. A president personally trading thousands of times in a single quarter, across the largest companies his administration regulates and contracts with, abandons a norm that previously required officials to disclose and often divest. As one former Reagan-era appointee noted, everyone in that administration had to reveal every cent earned from any investment; divestment or blind trusts were the expectation.',
+          'There is no federal law forcing a sitting president to divest. That gap is the point watchdogs keep returning to: the conduct is disclosed, voluminous, and — under current rules — largely permitted. The disclosure confirms the scale; it does not resolve who directed the trades.',
+        ],
+        facts: [
+          { label: 'Q1 2026 trade value', value: '$220M–$750M (range)', big: true },
+          { label: 'Number of trades', value: '3,600+' },
+          { label: 'Names traded', value: 'Microsoft, Meta, Nvidia, Apple, Goldman Sachs, others' },
+          { label: 'Prior-year strategy', value: 'Mostly corporate & municipal bonds' },
+          { label: 'Divestment / blind trust', value: 'None' },
+        ],
+        sources: ['Democracy Now!, May 18, 2026', 'NOTUS, May 2026', 'The Bulwark, May 2026'],
+        tags: ['stock-trades', 'disclosure', 'divestment', 'norms'],
+        related: ['chip-trades', 'contractor-trades', 'no-blind-trust']
+      },
+      {
+        id: 'contractor-trades',
+        badge: 'pattern',
+        title: 'Buying the Contractors His Own Policies Pay',
+        preview: 'As billions flowed to immigration enforcement, he invested in companies contracting with those agencies.',
+        kicker: 'Government contracts · Self-dealing · Pattern',
+        deck: 'Reporting on the disclosures noted that while the administration spent billions on immigration enforcement and mass deportation, the president also held positions in companies that contract with immigration-enforcement agencies. The pattern mirrors the chip trades: personal positions in firms his policy choices enrich.',
+        body: [
+          'The mechanism is the same across the disclosure: a policy decision the president controls increases a company\'s revenue or clears a regulatory hurdle, and the president holds a personal position in that company. Whether the holding precedes or follows the policy, the alignment of public power and private portfolio is the conflict.',
+          'No single trade here is, by itself, proven misconduct. The pattern across thousands of trades — chips, contractors, regulated giants — is what the House and Senate letters and ethics watchdogs are pressing on. The tracker records the pattern and lets the disclosure speak.',
+        ],
+        facts: [
+          { label: 'Sector', value: 'Immigration-enforcement contractors' },
+          { label: 'Concurrent spending', value: 'Billions on enforcement & deportation' },
+          { label: 'Pattern', value: 'Personal positions in firms his policies enrich' },
+          { label: 'Status', value: 'Under watchdog and congressional scrutiny' },
+        ],
+        sources: ['NOTUS, May 2026 ("Palantir, Axon, Nvidia")', 'The Bulwark, May 2026'],
+        tags: ['stock-trades', 'contracts', 'immigration', 'self-dealing'],
+        related: ['chip-trades', 'trade-spree', 'dropped-enforcement']
+      },
+    ]
+  },
+  {
+    id: 'anti-weaponization-fund',
+    num: '00',
+    name: 'The Anti-Weaponization Slush Fund',
+    label: '$1.776B fund for allies · IRS audit amnesty for the Trump family · blocked by two federal judges',
+    stat: '$1.78B',
+    statLabel: 'taxpayer fund created to pay the president\'s allies — now blocked in court',
+    severity: 91,
+    color: '#c0392b',
+    isNew: true,
+    summary: 'On May 18, 2026, the president settled his own $10 billion lawsuit against the IRS — over the 2019–2020 leak of his tax returns — in a deal critics have called collusive. The settlement created a $1.776 billion "Anti-Weaponization Fund" to compensate people who claim they were wrongly targeted by past administrations, and it barred the IRS from auditing returns filed before May 19, 2026 by the president, his family, and their companies. Within days, two federal judges intervened: one temporarily blocked the fund; another ordered the president\'s attorneys to answer allegations that the court had been the victim of a fraud.',
+    cases: [
+      {
+        id: 'slush-fund',
+        badge: 'alleged',
+        title: 'A $1.78 Billion Fund for the President\'s Friends',
+        preview: 'A nearly $1.8B fund, drawn from a settlement of his own lawsuit, to pay allies who claim "weaponization."',
+        kicker: 'Self-settlement · Public funds · Retribution',
+        deck: 'The "Anti-Weaponization Fund," established via a DOJ order tied to the president\'s IRS settlement, would pay people the administration deems victims of past "weaponized" government. Critics — including the legal group Democracy Forward — argue it is an unconstitutional use of taxpayer money for political compensation, with much of the program shielded from disclosure.',
+        body: [
+          'The fund grew out of the president settling a lawsuit he personally brought against the IRS. The Center for American Progress called the arrangement "a breathtaking abuse of the tax and legal system" and "a slush fund," noting that the structure lets the administration direct payouts to allies while shielding key terms from view.',
+          'As of the court\'s intervention, the DOJ had not yet formed the five-member commission meant to set payout criteria, so no money had been disbursed. Plaintiffs sought to stop it before any funds were "irreversibly disbursed."',
+        ],
+        facts: [
+          { label: 'Fund size', value: '$1.776 billion', big: true },
+          { label: 'Source', value: 'Settlement of the president\'s own $10B suit vs. IRS' },
+          { label: 'Beneficiaries', value: 'Those the administration deems "weaponization" victims' },
+          { label: 'Transparency', value: 'Much of the program shielded from disclosure' },
+          { label: 'Established by', value: 'DOJ order (Todd Blanche)' },
+        ],
+        sources: ['CNN, May 29, 2026', 'AP / WNDU, May 29, 2026', 'Center for American Progress, June 2026'],
+        tags: ['slush-fund', 'IRS', 'retribution', 'self-dealing'],
+        related: ['audit-amnesty', 'fund-court-block', 'pardon-donors']
+      },
+      {
+        id: 'audit-amnesty',
+        badge: 'confirmed',
+        title: 'The Get-Out-of-Audits-Free Card',
+        preview: 'The same settlement bars the IRS from auditing returns the Trump family filed before May 19, 2026.',
+        kicker: 'Tax · Self-dealing · Oversight',
+        deck: 'Beyond the fund, the May 18 settlement bans the IRS from auditing tax returns filed before May 19, 2026 by the president, his family, and their affiliated companies — a self-dealt protection from audit, granted as part of a case the president brought and then settled with his own Justice Department.',
+        body: [
+          'The Center for American Progress described the audit ban as a "get-out-of-audits-free card," significant given long-standing public reporting about tax issues surrounding the president\'s businesses. The arrangement resolves a lawsuit between the president and an agency he controls, on terms that protect the president.',
+          'A federal judge in Florida overseeing the underlying IRS case ordered the president\'s attorneys to respond to "grievous allegations" that he abandoned his claims to avoid the court scrutinizing an illegal deal — and to address whether the case should be reopened because the court was "the victim of a fraud."',
+        ],
+        facts: [
+          { label: 'Protection granted', value: 'IRS barred from auditing pre-May 19, 2026 returns', big: true },
+          { label: 'Covered', value: 'President, family, affiliated companies' },
+          { label: 'Mechanism', value: 'Settlement of his own suit vs. his own IRS' },
+          { label: 'Court concern', value: 'Possible "fraud" on the court (Judge Williams, Fla.)' },
+        ],
+        sources: ['Center for American Progress, June 2026', 'AP / WNDU, May 29, 2026'],
+        tags: ['tax', 'IRS', 'audit', 'self-dealing'],
+        related: ['slush-fund', 'fund-court-block', 'emoluments']
+      },
+      {
+        id: 'fund-court-block',
+        badge: 'confirmed',
+        title: 'The Courts Step In',
+        preview: 'Two federal judges moved to halt the fund and probe the settlement within two weeks of its creation.',
+        kicker: 'Judicial check · Rule of law',
+        deck: 'On May 29, 2026, U.S. District Judge Leonie Brinkema (E.D. Va.) temporarily blocked the administration from forming the fund, considering claims, or disbursing money, scheduling a June 12 hearing. Separately, Judge Kathleen Williams (S.D. Fla.) gave the president\'s attorneys until June 12 to answer fraud-on-the-court allegations in the underlying IRS case.',
+        body: [
+          'Judge Brinkema said it was important to maintain the status quo and ensure no funds were "irreversibly disbursed." Her order barred the administration from transferring money to the fund, considering claims, or paying anything out, pending litigation brought by Democracy Forward.',
+          'The DOJ said it was "extremely confident" the fund is legally supported "by ample precedent." The court fights — part of a broader wave of federal rulings blocking or reversing executive actions in 2026 — are where this entry stands at publication: created, challenged, and frozen.',
+        ],
+        facts: [
+          { label: 'Fund blocked', value: 'Judge Brinkema (E.D. Va.), May 29, 2026', big: true },
+          { label: 'Fraud-on-court inquiry', value: 'Judge Williams (S.D. Fla.); response due June 12' },
+          { label: 'Plaintiffs', value: 'Democracy Forward' },
+          { label: 'Funds disbursed to date', value: '$0 (commission never formed)' },
+          { label: 'DOJ position', value: '"Extremely confident… ample precedent"' },
+        ],
+        sources: ['CNN, May 29, 2026', 'Philadelphia Inquirer, May 29, 2026', 'AP / WNDU, May 29, 2026'],
+        tags: ['courts', 'injunction', 'rule-of-law', 'IRS'],
+        related: ['slush-fund', 'audit-amnesty', 'dismantling-oversight']
+      },
+    ]
+  },
+  {
+    id: 'university-shakedowns',
+    num: '00',
+    name: 'The University Shakedowns',
+    label: 'Harvard $500M · Columbia $220M · Northwestern $75M · pay to unfreeze federal funds',
+    stat: '$800M+',
+    statLabel: 'extracted from universities to restore the federal funding the administration froze',
+    severity: 84,
+    color: '#c0392b',
+    isNew: true,
+    summary: 'The administration froze billions in federal research funding to elite universities, then settled for large payments to restore it. Harvard moved toward a $500 million payment — the largest yet — to regain access to funding and end investigations; Columbia agreed to more than $220 million; Northwestern agreed to $75 million; Brown, Cornell, and the University of Virginia reached their own deals. Framed as antidiscrimination enforcement, the freeze-demand-restore structure functions as a coerced transfer, with several schools paying the federal government directly.',
+    cases: [
+      {
+        id: 'university-payments',
+        badge: 'confirmed',
+        title: 'The Price of Getting Your Funding Back',
+        preview: 'Harvard ~$500M, Columbia $220M+, Northwestern $75M — payments to restore frozen federal funds.',
+        kicker: 'Higher education · Coercion · Federal funding',
+        deck: 'After slashing more than $2.6 billion in research funding from Harvard alone and freezing funds at peer institutions, the administration reached settlements requiring large payments to restore access. Harvard\'s ~$500 million framework would be the largest sum yet; Columbia agreed to more than $220 million; Northwestern agreed to $75 million, payable through 2028.',
+        body: [
+          'The settlements share a shape: a federal investigation (often framed around campus antisemitism or "race-based" practices) escalates into frozen funding and ended contracts; the university, facing existential research losses, agrees to pay and to overhaul policies to get the money turned back on. Northwestern is among the few paying the federal government directly; Brown\'s payment was routed to Rhode Island workforce groups; Columbia accepted external monitoring.',
+          'Harvard responded to the pressure with lawsuits alleging illegal retaliation after it rejected demands it viewed as a threat to academic freedom — then moved toward a $500 million settlement anyway. The amounts and the structure invite the question watchdogs are asking: when the government freezes lawful funding and restores it only upon payment, is that enforcement, or is it a toll?',
+        ],
+        facts: [
+          { label: 'Harvard', value: '~$500M framework (largest yet)', big: true },
+          { label: 'Columbia', value: '$220M+' },
+          { label: 'Northwestern', value: '$75M (through 2028)' },
+          { label: 'Also settling', value: 'Brown, Cornell, UVA' },
+          { label: 'Harvard funding cut', value: '$2.6B+ before settlement talks' },
+        ],
+        sources: ['AP / PBS NewsHour, 2026', 'NY Times (framework reporting)', 'Yahoo News / DOJ (Northwestern), 2026'],
+        tags: ['universities', 'federal-funding', 'coercion', 'settlements'],
+        related: ['shakedown-structure', 'slush-fund', 'dropped-enforcement']
+      },
+      {
+        id: 'shakedown-structure',
+        badge: 'pattern',
+        title: 'Freeze, Demand, Restore',
+        preview: 'The repeatable structure: cut the funding, name the price, turn it back on once they pay.',
+        kicker: 'Pattern · Leverage · Institutions',
+        deck: 'Across universities, law firms, and other institutions, the administration has used control of federal funding, contracts, and access as leverage to extract payments, policy changes, and pledges. The university settlements are the clearest dollar-denominated example.',
+        body: [
+          'The mechanism does not require a quid pro quo in the criminal sense. It requires only that the government control something an institution needs — research funding, security clearances, the ability to host international students — and condition its return on payment or compliance. Repeated across targets, it becomes a system.',
+          'Critics call it weaponization of government power against disfavored institutions; the administration calls it enforcement of civil-rights law. The tracker records the structure and the figures, and notes the irony that the same administration simultaneously stood up a $1.78 billion fund (Section 4) to compensate its allies for what it called "weaponization."',
+        ],
+        facts: [
+          { label: 'Structure', value: 'Freeze funds → name a price → restore on payment' },
+          { label: 'Targets', value: 'Universities, law firms, other institutions' },
+          { label: 'Framing (admin)', value: 'Civil-rights / antidiscrimination enforcement' },
+          { label: 'Framing (critics)', value: 'Coerced transfer; weaponization' },
+        ],
+        sources: ['AP / PBS NewsHour, 2026', 'Issue One Corruption Chronicles, 2025–26'],
+        tags: ['pattern', 'universities', 'leverage', 'coercion'],
+        related: ['university-payments', 'slush-fund', 'dismantling-oversight']
       },
     ]
   },
@@ -1734,6 +2173,13 @@ const DATA = [
   },
 ];
 
+// ── Vol III normalization: sequential numbering by array order + new-flags ──
+const NEW_IN_V3 = new Set(['oil-grab','trump-stock-trades','anti-weaponization-fund','university-shakedowns']);
+DATA.forEach((c, i) => {
+  c.num = String(i + 1).padStart(2, '0');
+  c.isNew = NEW_IN_V3.has(c.id);
+});
+
 // ═══════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════
@@ -1752,14 +2198,14 @@ function buildOverview() {
   const newBanner = document.createElement('div');
   newBanner.className = 'new-banner';
   newBanner.style.gridColumn = '1 / -1';
-  newBanner.textContent = '◆ NEW IN VOLUME II — The Pardon Racket · Iran War Insider Trading · Government Property Grift · Updated: Crypto, Foreign Grift, Market Manipulation, Oversight ◆';
+  newBanner.textContent = '◆ NEW IN VOLUME III — The Oil Grab · The President\'s Personal Stock Trades · The Anti-Weaponization Slush Fund · The University Shakedowns · Updated: Iran War Insider Trading, Dismantling Oversight, Crypto ◆';
   grid.appendChild(newBanner);
 
   DATA.forEach(cat => {
     const el = document.createElement('div');
     el.className = 'cat-card' + (cat.isNew ? ' is-new' : '');
     el.innerHTML = `
-      ${cat.isNew ? '<div class="cat-new-flag">◆ New in Vol. II</div>' : ''}
+      ${cat.isNew ? '<div class="cat-new-flag">◆ New in Vol. III</div>' : ''}
       <div class="cat-num">Category ${cat.num}</div>
       <div class="cat-name" style="color:${cat.color}">${cat.name}</div>
       <div class="cat-label">${cat.label}</div>
@@ -1890,7 +2336,7 @@ function openCase(c) {
       </div>
       <div class="case-detail-title">${c.title}</div>
       <div class="case-detail-deck">${c.deck}</div>
-      <div class="case-byline">Federal Corruption Tracker Vol. II · ${(c.tags||[]).join(' · ')}</div>
+      <div class="case-byline">Federal Corruption Tracker Vol. III · ${(c.tags||[]).join(' · ')}</div>
     </div>
     <div class="case-body">
       <div class="case-narrative">
@@ -1986,5 +2432,65 @@ function updateBreadcrumb(trail) {
 // ═══════════════════════════════════════
 buildOverview();
 </script>
+<!-- ══ NEXT ISSUE PROMO BANNER ══ -->
+<style>
+#next-issue-banner {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 0.85rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+#next-issue-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(0,0,0,0.06) 6px,
+    rgba(0,0,0,0.06) 12px
+  );
+  pointer-events: none;
+}
+.nib-inner {
+  position: relative;
+  z-index: 1;
+}
+.nib-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.3rem;
+}
+.nib-headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(1.15rem, 3.5vw, 1.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.nib-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(9px, 2vw, 11px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.88;
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+</style>
+<div id="next-issue-banner">
+  <div class="nib-inner">
+    <div class="nib-eyebrow">◆ Coming Next Issue · Volume IV ◆</div>
+    <div class="nib-headline">The Third Branch — Checks &amp; Balances at Work.</div>
+    <div class="nib-sub">The federal courts push back. The Constitution was meant for moments like this.</div>
+  </div>
+</div>
+
 </body>
 </html>
