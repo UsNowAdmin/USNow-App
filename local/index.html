@@ -361,6 +361,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* =========================================================
    UsNow Local — Step 1: Node Mapper
@@ -368,19 +369,26 @@
    Storage: localStorage when available, memory otherwise.
    ========================================================= */
 
-/* ---------- Storage (safe wrapper) ---------- */
-const STORE_KEY = 'usnow-local-nodes-v1';
-let memStore = null;
-function loadNodes(){
-  try{
-    const raw = localStorage.getItem(STORE_KEY);
-    return raw ? JSON.parse(raw).nodes || [] : [];
-  }catch(e){ return memStore ? memStore.slice() : []; }
+/* ---------- Cloud storage (Supabase) ---------- */
+const SUPABASE_URL = 'https://cefzogkbkgyldbekaldm.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_7KvAheGeU3SP4zkS3CAQcA_uSj00KjQ';
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+async function loadCommunities(){
+  const {data, error} = await db.rpc('list_communities');
+  if(error){ console.error(error); toast('Could not reach the database'); return []; }
+  return (data||[]).map(r=>{
+    const g = JSON.parse(r.geojson);
+    let ring = g.coordinates[0];
+    if(ring.length>1){
+      const a=ring[0], b=ring[ring.length-1];
+      if(a[0]===b[0] && a[1]===b[1]) ring=ring.slice(0,-1);
+    }
+    return {id:r.id, name:r.name, notes:r.notes||'', coords:ring, acres:areaAcres(ring)};
+  });
 }
-function saveNodes(nodes){
-  memStore = nodes.slice();
-  try{ localStorage.setItem(STORE_KEY, JSON.stringify({version:1, nodes})); }
-  catch(e){ /* preview environments: memory only */ }
+function ringGeoJSON(coords){
+  return JSON.stringify({type:'Polygon', coordinates:[[...coords, coords[0]]]});
 }
 
 /* ---------- Map ---------- */
@@ -447,7 +455,7 @@ function boundsOf(coords){
 }
 
 /* ---------- Node layers ---------- */
-let nodes = loadNodes();
+let nodes = [];
 
 function nodesGeoJSON(){
   return {
@@ -491,6 +499,11 @@ map.on('load', ()=>{
     paint:{'circle-radius':5,'circle-color':'#131A20','circle-stroke-color':'#E8A33D','circle-stroke-width':2}});
 
   refreshNodes();
+  loadCommunities().then(list=>{
+    nodes=list;
+    refreshNodes();
+    if(nodes.length) toast('Loaded '+nodes.length+' area(s) from the database');
+  });
 });
 
 function refreshNodes(){
@@ -580,18 +593,15 @@ function openNameDialog(){
 document.getElementById('dlgCancel').addEventListener('click', ()=>{
   veil.classList.remove('open'); endDraw();
 });
-document.getElementById('dlgSave').addEventListener('click', ()=>{
+document.getElementById('dlgSave').addEventListener('click', async ()=>{
   const name=nameInput.value.trim() || 'Unnamed area';
-  nodes.push({
-    id:'n'+Date.now().toString(36),
-    name, notes:notesInput.value.trim(),
-    coords:draft.slice(),
-    acres:areaAcres(draft),
-    created:new Date().toISOString()
-  });
-  saveNodes(nodes);
+  const geo=ringGeoJSON(draft);
   veil.classList.remove('open');
   endDraw();
+  toast('Saving…');
+  const {error}=await db.rpc('add_community',{p_name:name, p_notes:notesInput.value.trim(), p_geojson:geo});
+  if(error){ console.error(error); toast('Save failed — try again'); return; }
+  nodes=await loadCommunities();
   refreshNodes();
   toast('Saved: '+name);
   setSheet(false);
@@ -632,10 +642,12 @@ function renderRegistry(){
       map.fitBounds(boundsOf(n.coords), {padding:60, maxZoom:17});
       setSheet(true);
     });
-    row.querySelector('.node-del').addEventListener('click', ()=>{
+    row.querySelector('.node-del').addEventListener('click', async ()=>{
       if(!confirm('Remove "'+n.name+'"?')) return;
+      const {error}=await db.rpc('remove_community',{p_id:n.id});
+      if(error){ console.error(error); toast('Remove failed'); return; }
       nodes=nodes.filter(x=>x.id!==n.id);
-      saveNodes(nodes); refreshNodes();
+      refreshNodes();
       toast('Removed');
     });
     sheetBody.appendChild(row);
@@ -660,25 +672,31 @@ document.getElementById('importBtn').addEventListener('click', ()=>{
   importVeil.classList.add('open');
 });
 document.getElementById('importCancel').addEventListener('click', ()=>importVeil.classList.remove('open'));
-document.getElementById('importGo').addEventListener('click', ()=>{
+document.getElementById('importGo').addEventListener('click', async ()=>{
   try{
     const data=JSON.parse(document.getElementById('importText').value);
     const incoming=(data.nodes||[]).filter(n=>Array.isArray(n.coords)&&n.coords.length>=3);
     if(!incoming.length) throw new Error('no nodes');
-    const ids=new Set(nodes.map(n=>n.id));
-    incoming.forEach(n=>{ if(!ids.has(n.id)) nodes.push(n); });
-    saveNodes(nodes); refreshNodes();
     importVeil.classList.remove('open');
+    toast('Importing…');
+    for(const n of incoming){
+      await db.rpc('add_community',{p_name:n.name||'Unnamed area', p_notes:n.notes||'', p_geojson:ringGeoJSON(n.coords)});
+    }
+    nodes=await loadCommunities();
+    refreshNodes();
     toast('Imported '+incoming.length+' area(s)');
   }catch(e){
     toast('Import failed — check the JSON and try again');
   }
 });
 
-document.getElementById('clearBtn').addEventListener('click', ()=>{
+document.getElementById('clearBtn').addEventListener('click', async ()=>{
   if(!nodes.length) return;
-  if(!confirm('Delete ALL '+nodes.length+' node(s)? Export first if you want a backup.')) return;
-  nodes=[]; saveNodes(nodes); refreshNodes();
+  if(!confirm('Remove ALL '+nodes.length+' area(s)? Export first if you want a backup.')) return;
+  toast('Removing…');
+  for(const n of nodes){ await db.rpc('remove_community',{p_id:n.id}); }
+  nodes=await loadCommunities();
+  refreshNodes();
   toast('Registry cleared');
 });
 
