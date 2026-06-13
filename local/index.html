@@ -63,6 +63,13 @@
     text-transform:uppercase;
   }
   .searchwrap button:hover{background:var(--line)}
+  .acct{
+    background:var(--ink);border:none;border-left:1px solid var(--line);
+    color:var(--bone);font-family:'Barlow Condensed';font-weight:600;font-size:13px;
+    letter-spacing:.08em;text-transform:uppercase;padding:0 14px;cursor:pointer;
+    white-space:nowrap;
+  }
+  .acct:hover{color:var(--amber)}
   .results{
     position:absolute;top:100%;left:0;right:0;background:var(--ink);
     border:1px solid var(--line);border-top:none;display:none;
@@ -282,6 +289,7 @@
     <button id="searchBtn">Find</button>
     <div class="results" id="results"></div>
   </div>
+  <button class="acct" id="acctBtn">Sign in</button>
 </header>
 
 <div class="hud">
@@ -349,6 +357,20 @@
     <div class="row">
       <button id="importCancel">Cancel</button>
       <button class="primary" id="importGo">Import</button>
+    </div>
+  </div>
+</div>
+
+<div class="veil" id="authVeil">
+  <div class="dialog">
+    <h3>Your account</h3>
+    <p>Free. It makes your areas yours — creator on record, steward by default.</p>
+    <input id="authEmail" type="email" placeholder="Email" autocomplete="email">
+    <input id="authPass" type="password" placeholder="Password (6+ characters)" autocomplete="current-password">
+    <div class="row">
+      <button id="authCancel">Cancel</button>
+      <button id="authUp">Create account</button>
+      <button class="primary" id="authIn">Sign in</button>
     </div>
   </div>
 </div>
@@ -575,6 +597,11 @@ finishBtn.addEventListener('click', ()=>{
 });
 
 function startDraw(){
+  if(!session){
+    document.getElementById('authVeil').classList.add('open');
+    toast('Sign in to draw — free, takes a moment');
+    return;
+  }
   drawing=true; draft=[];
   fab.classList.add('hidden');
   drawbar.classList.add('active');
@@ -789,6 +816,48 @@ function toast(msg){
   clearTimeout(toastTimer);
   toastTimer=setTimeout(()=>t.classList.remove('show'), 2600);
 }
+
+/* ---------- Accounts ---------- */
+let session=null;
+const acctBtn=document.getElementById('acctBtn');
+const authVeil=document.getElementById('authVeil');
+function refreshAcct(){
+  acctBtn.textContent = session ? session.user.email.split('@')[0] : 'Sign in';
+}
+db.auth.getSession().then(({data})=>{ session=data.session; refreshAcct(); });
+db.auth.onAuthStateChange((_e, s)=>{ session=s; refreshAcct(); });
+
+acctBtn.addEventListener('click', async ()=>{
+  if(session){
+    if(confirm('Sign out of '+session.user.email+'?')){
+      await db.auth.signOut();
+      toast('Signed out');
+    }
+  }else{
+    authVeil.classList.add('open');
+  }
+});
+document.getElementById('authCancel').addEventListener('click', ()=>authVeil.classList.remove('open'));
+
+async function doAuth(mode){
+  const email=document.getElementById('authEmail').value.trim();
+  const pass=document.getElementById('authPass').value;
+  if(!email || pass.length<6){ toast('Enter your email and a password of 6+ characters'); return; }
+  const {error} = mode==='up'
+    ? await db.auth.signUp({email, password:pass})
+    : await db.auth.signInWithPassword({email, password:pass});
+  if(error){ toast(error.message); return; }
+  authVeil.classList.remove('open');
+  toast(mode==='up' ? 'Account created — signed in' : 'Signed in');
+  // Solo-phase: adopt any areas drawn before accounts existed
+  const {data:adopted} = await db.rpc('adopt_orphans');
+  if(adopted>0){
+    toast('Adopted '+adopted+' earlier area(s) as yours');
+    nodes=await loadCommunities(); refreshNodes();
+  }
+}
+document.getElementById('authIn').addEventListener('click', ()=>doAuth('in'));
+document.getElementById('authUp').addEventListener('click', ()=>doAuth('up'));
 
 /* ---------- First-visit welcome ---------- */
 const WELCOME_KEY='usnow-local-welcomed';
