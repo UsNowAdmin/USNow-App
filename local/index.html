@@ -70,6 +70,46 @@
     white-space:nowrap;
   }
   .acct:hover{color:var(--amber)}
+
+  /* ---------- Account panel ---------- */
+  .acct-panel{
+    position:absolute;top:52px;right:0;z-index:40;
+    background:var(--ink);border:1px solid var(--line);border-top:none;
+    width:280px;display:none;
+  }
+  .acct-panel.open{display:block}
+  .acct-section{padding:12px 14px;border-bottom:1px solid var(--line)}
+  .acct-section:last-child{border-bottom:none}
+  .acct-label{
+    font-family:'Barlow Condensed';font-weight:600;font-size:11px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--bone-dim);
+    margin-bottom:6px;
+  }
+  .acct-name{font-size:16px;font-weight:600;color:var(--bone)}
+  .acct-email{font-size:12px;color:var(--bone-dim);margin-top:2px}
+  .acct-community-row{
+    display:flex;align-items:center;gap:10px;
+    padding:7px 0;border-bottom:1px solid var(--ink-soft);cursor:pointer;
+  }
+  .acct-community-row:last-child{border-bottom:none}
+  .acct-community-row:hover .acct-cname{color:var(--amber)}
+  .acct-cname{flex:1;font-size:13px;font-weight:600;color:var(--bone)}
+  .role-badge{
+    font-family:'Barlow Condensed';font-weight:700;font-size:10px;
+    letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;
+    border:1px solid var(--amber);color:var(--amber);white-space:nowrap;
+  }
+  .role-badge.r60{border-color:var(--amber);color:var(--amber)}
+  .role-badge.r40,.role-badge.r50{border-color:var(--teal);color:var(--teal)}
+  .role-badge.r30{border-color:var(--bone-dim);color:var(--bone-dim)}
+  .role-badge.r20{border-color:var(--line);color:var(--bone-dim)}
+  .acct-signout{
+    width:100%;background:none;border:none;color:var(--bone-dim);
+    font-family:'Barlow Condensed';font-weight:600;font-size:13px;
+    letter-spacing:.12em;text-transform:uppercase;padding:11px 14px;
+    cursor:pointer;text-align:left;
+  }
+  .acct-signout:hover{color:var(--danger)}
   .results{
     position:absolute;top:100%;left:0;right:0;background:var(--ink);
     border:1px solid var(--line);border-top:none;display:none;
@@ -291,6 +331,19 @@
   </div>
   <button class="acct" id="acctBtn">Sign in</button>
 </header>
+
+<div class="acct-panel" id="acctPanel">
+  <div class="acct-section">
+    <div class="acct-label">Signed in as</div>
+    <div class="acct-name" id="panelName">—</div>
+    <div class="acct-email" id="panelEmail">—</div>
+  </div>
+  <div class="acct-section" id="panelCommunities">
+    <div class="acct-label">Your communities</div>
+    <div id="panelCommList"><div style="font-size:12px;color:var(--bone-dim)">Loading…</div></div>
+  </div>
+  <button class="acct-signout" id="panelSignOut">Sign out</button>
+</div>
 
 <div class="hud">
   <span>LAT <b id="hudLat">—</b></span>
@@ -817,6 +870,63 @@ function toast(msg){
   toastTimer=setTimeout(()=>t.classList.remove('show'), 2600);
 }
 
+/* ---------- Role helpers ---------- */
+const ROLE_LABELS={10:'Member',20:'Resident',30:'Neighbor',40:'Trusted',50:'Professional',60:'Steward'};
+function roleBadge(level){
+  return `<span class="role-badge r${level}">${ROLE_LABELS[level]||level}</span>`;
+}
+
+async function loadMyMemberships(){
+  if(!session) return [];
+  const {data,error}=await db
+    .from('memberships')
+    .select('community_id, role_level, status, communities(name)')
+    .eq('profile_id', session.user.id)
+    .eq('status','active');
+  if(error){ console.error(error); return []; }
+  return data||[];
+}
+
+/* ---------- Account panel ---------- */
+const acctPanel=document.getElementById('acctPanel');
+const panelName=document.getElementById('panelName');
+const panelEmail=document.getElementById('panelEmail');
+const panelCommList=document.getElementById('panelCommList');
+
+async function openAcctPanel(){
+  acctPanel.classList.add('open');
+  if(!session) return;
+  panelName.textContent=session.user.email.split('@')[0];
+  panelEmail.textContent=session.user.email;
+  const memberships=await loadMyMemberships();
+  if(!memberships.length){
+    panelCommList.innerHTML='<div style="font-size:12px;color:var(--bone-dim)">No communities yet — draw one.</div>';
+    return;
+  }
+  panelCommList.innerHTML='';
+  memberships.forEach(m=>{
+    const row=document.createElement('div');
+    row.className='acct-community-row';
+    row.innerHTML=`<span class="acct-cname">${esc(m.communities?.name||'Unnamed')}</span>${roleBadge(m.role_level)}`;
+    row.addEventListener('click',()=>{
+      acctPanel.classList.remove('open');
+      const n=nodes.find(x=>x.id===m.community_id);
+      if(n) map.fitBounds(boundsOf(n.coords),{padding:60,maxZoom:17});
+    });
+    panelCommList.appendChild(row);
+  });
+}
+
+document.addEventListener('click',e=>{
+  if(!e.target.closest('#acctPanel')&&!e.target.closest('#acctBtn'))
+    acctPanel.classList.remove('open');
+});
+document.getElementById('panelSignOut').addEventListener('click',async()=>{
+  await db.auth.signOut();
+  acctPanel.classList.remove('open');
+  toast('Signed out');
+});
+
 /* ---------- Accounts ---------- */
 let session=null;
 const acctBtn=document.getElementById('acctBtn');
@@ -827,14 +937,12 @@ function refreshAcct(){
 db.auth.getSession().then(({data})=>{ session=data.session; refreshAcct(); });
 db.auth.onAuthStateChange((_e, s)=>{ session=s; refreshAcct(); });
 
-acctBtn.addEventListener('click', async ()=>{
-  if(session){
-    if(confirm('Sign out of '+session.user.email+'?')){
-      await db.auth.signOut();
-      toast('Signed out');
-    }
-  }else{
-    authVeil.classList.add('open');
+acctBtn.addEventListener('click', ()=>{
+  if(!session){ authVeil.classList.add('open'); return; }
+  if(acctPanel.classList.contains('open')){
+    acctPanel.classList.remove('open');
+  } else {
+    openAcctPanel();
   }
 });
 document.getElementById('authCancel').addEventListener('click', ()=>authVeil.classList.remove('open'));
@@ -854,6 +962,7 @@ async function doAuth(mode){
   if(adopted>0){
     toast('Adopted '+adopted+' earlier area(s) as yours');
     nodes=await loadCommunities(); refreshNodes();
+    openAcctPanel();
   }
 }
 document.getElementById('authIn').addEventListener('click', ()=>doAuth('in'));
