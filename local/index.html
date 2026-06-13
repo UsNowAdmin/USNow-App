@@ -247,6 +247,15 @@
   .pop-name{font-family:'Barlow Condensed';font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
   .pop-area{font-size:12px;color:var(--bone-dim);margin-top:3px;font-variant-numeric:tabular-nums}
   .pop-notes{font-size:12px;margin-top:6px;line-height:1.45}
+  .pop-pick{display:flex;flex-direction:column;gap:6px;min-width:180px}
+  .pop-pick button{
+    background:var(--ink-soft);border:1px solid var(--line);color:var(--bone);
+    font-family:'Barlow Condensed';font-weight:600;font-size:14px;
+    letter-spacing:.06em;text-transform:uppercase;text-align:left;
+    padding:8px 10px;cursor:pointer;
+  }
+  .pop-pick button small{color:var(--bone-dim);font-size:11px;text-transform:none;letter-spacing:0;float:right}
+  .pop-pick button:hover{border-color:var(--amber);color:var(--amber)}
 
   @media (min-width:768px){
     .sheet{left:auto;right:12px;bottom:12px;width:340px;border:1px solid var(--line);border-top:2px solid var(--line)}
@@ -462,7 +471,7 @@ function nodesGeoJSON(){
     type:'FeatureCollection',
     features:nodes.map(n=>({
       type:'Feature',
-      properties:{id:n.id, name:n.name, notes:n.notes||'', area:fmtArea(n.acres)},
+      properties:{id:n.id, name:n.name, notes:n.notes||'', area:fmtArea(n.acres), acresNum:n.acres},
       geometry:{type:'Polygon', coordinates:[[...n.coords, n.coords[0]]]}
     }))
   };
@@ -513,16 +522,35 @@ function refreshNodes(){
   renderRegistry();
 }
 
-/* ---------- Node popups ---------- */
-map.on('click','nodes-fill',(e)=>{
-  if(drawing) return;
-  const p=e.features[0].properties;
+/* ---------- Node popups (nested-aware: smallest first) ---------- */
+function showAreaPopup(p, lngLat){
   new maplibregl.Popup({closeButton:true, maxWidth:'260px'})
-    .setLngLat(e.lngLat)
+    .setLngLat(lngLat)
     .setHTML(`<div class="pop-name">${esc(p.name)}</div>
               <div class="pop-area">${p.area}</div>
               ${p.notes?`<div class="pop-notes">${esc(p.notes)}</div>`:''}`)
     .addTo(map);
+}
+map.on('click','nodes-fill',(e)=>{
+  if(drawing) return;
+  const seen=new Map();
+  e.features.forEach(f=>{ if(!seen.has(f.properties.id)) seen.set(f.properties.id, f.properties); });
+  const hits=[...seen.values()].sort((a,b)=>a.acresNum-b.acresNum);
+  if(hits.length===1){ showAreaPopup(hits[0], e.lngLat); return; }
+  const box=document.createElement('div');
+  box.className='pop-pick';
+  const hdr=document.createElement('div');
+  hdr.className='pop-area';
+  hdr.textContent='You\'re inside '+hits.length+' areas:';
+  box.appendChild(hdr);
+  const picker=new maplibregl.Popup({closeButton:true, maxWidth:'260px'});
+  hits.forEach(p=>{
+    const b=document.createElement('button');
+    b.innerHTML=esc(p.name)+' <small>'+p.area+'</small>';
+    b.addEventListener('click', ()=>{ picker.remove(); showAreaPopup(p, e.lngLat); });
+    box.appendChild(b);
+  });
+  picker.setLngLat(e.lngLat).setDOMContent(box).addTo(map);
 });
 map.on('mouseenter','nodes-fill',()=>{ if(!drawing) map.getCanvas().style.cursor='pointer'; });
 map.on('mouseleave','nodes-fill',()=>{ map.getCanvas().style.cursor=drawing?'crosshair':''; });
