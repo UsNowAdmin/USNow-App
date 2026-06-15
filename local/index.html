@@ -303,6 +303,38 @@
   }
   .pop-pick button small{color:var(--bone-dim);font-size:11px;text-transform:none;letter-spacing:0;float:right}
   .pop-pick button:hover{border-color:var(--amber);color:var(--amber)}
+  .pop-join{
+    margin-top:8px;width:100%;background:var(--amber);color:var(--ink);border:none;
+    font-family:'Barlow Condensed';font-weight:700;font-size:13px;
+    letter-spacing:.1em;text-transform:uppercase;padding:9px;cursor:pointer;
+  }
+  .pop-join:hover{background:var(--amber-deep)}
+  .pop-join.pending{background:var(--line);color:var(--bone-dim);cursor:default}
+  .pop-join.member{background:none;border:1px solid var(--teal);color:var(--teal);cursor:default}
+  /* pending requests in the account panel */
+  .req-row{
+    display:flex;align-items:center;gap:8px;padding:8px 0;
+    border-bottom:1px solid var(--ink-soft);
+  }
+  .req-row:last-child{border-bottom:none}
+  .req-name{flex:1;font-size:13px;color:var(--bone)}
+  .req-btn{
+    border:1px solid var(--line);background:none;cursor:pointer;
+    font-family:'Barlow Condensed';font-weight:600;font-size:11px;
+    letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;color:var(--bone-dim);
+  }
+  .req-btn.ok{border-color:var(--amber);color:var(--amber)}
+  .req-btn.no:hover{border-color:var(--danger);color:var(--danger)}
+  .req-community-label{
+    font-family:'Barlow Condensed';font-weight:600;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--bone-dim);
+    margin:10px 0 4px;
+  }
+  .acct-badge-dot{
+    display:inline-block;min-width:16px;height:16px;line-height:16px;text-align:center;
+    background:var(--amber);color:var(--ink);font-size:10px;font-weight:700;
+    border-radius:8px;padding:0 4px;margin-left:6px;
+  }
 
   @media (min-width:768px){
     .sheet{left:auto;right:12px;bottom:12px;width:340px;border:1px solid var(--line);border-top:2px solid var(--line)}
@@ -342,6 +374,7 @@
     <div class="acct-label">Your communities</div>
     <div id="panelCommList"><div style="font-size:12px;color:var(--bone-dim)">Loading…</div></div>
   </div>
+  <div class="acct-section" id="panelRequests" style="display:none"></div>
   <button class="acct-signout" id="panelSignOut">Sign out</button>
 </div>
 
@@ -586,6 +619,7 @@ map.on('load', ()=>{
   loadCommunities().then(list=>{
     nodes=list;
     refreshNodes();
+    refreshMyRoles();
     if(nodes.length) toast('Loaded '+nodes.length+' area(s) from the database');
   });
 });
@@ -599,12 +633,33 @@ function refreshNodes(){
 
 /* ---------- Node popups (nested-aware: smallest first) ---------- */
 function showAreaPopup(p, lngLat){
-  new maplibregl.Popup({closeButton:true, maxWidth:'260px'})
-    .setLngLat(lngLat)
-    .setHTML(`<div class="pop-name">${esc(p.name)}</div>
+  const pop=new maplibregl.Popup({closeButton:true, maxWidth:'260px'});
+  const box=document.createElement('div');
+  box.innerHTML=`<div class="pop-name">${esc(p.name)}</div>
               <div class="pop-area">${p.area}</div>
-              ${p.notes?`<div class="pop-notes">${esc(p.notes)}</div>`:''}`)
-    .addTo(map);
+              ${p.notes?`<div class="pop-notes">${esc(p.notes)}</div>`:''}`;
+  if(session){
+    const mine=myRoles[p.id];
+    const btn=document.createElement('button');
+    btn.className='pop-join';
+    if(mine===undefined){
+      btn.textContent='Request to join';
+      btn.addEventListener('click', async ()=>{
+        btn.disabled=true; btn.textContent='Sending…';
+        const {error}=await db.rpc('request_join',{p_community:p.id});
+        if(error){ toast(error.message); btn.disabled=false; btn.textContent='Request to join'; return; }
+        btn.className='pop-join pending'; btn.textContent='Request sent';
+        toast('Request sent to the steward');
+        await refreshMyRoles();
+      });
+    } else if(mine==='pending'){
+      btn.className='pop-join pending'; btn.textContent='Request pending';
+    } else {
+      btn.className='pop-join member'; btn.textContent=ROLE_LABELS[mine]||'Member';
+    }
+    box.appendChild(btn);
+  }
+  pop.setLngLat(lngLat).setDOMContent(box).addTo(map);
 }
 map.on('click','nodes-fill',(e)=>{
   if(drawing) return;
@@ -871,9 +926,25 @@ function toast(msg){
 }
 
 /* ---------- Role helpers ---------- */
-const ROLE_LABELS={10:'Member',20:'Resident',30:'Neighbor',40:'Trusted',50:'Professional',60:'Steward'};
+const ROLE_LABELS={10:'Member',20:'Resident',30:'Neighbor',40:'Active neighbor',50:'Professional',60:'Steward'};
 function roleBadge(level){
   return `<span class="role-badge r${level}">${ROLE_LABELS[level]||level}</span>`;
+}
+
+// myRoles[communityId] = role_level (number) if active, 'pending' if pending, undefined if none
+let myRoles={};
+async function refreshMyRoles(){
+  myRoles={};
+  if(!session) return;
+  const {data,error}=await db
+    .from('memberships')
+    .select('community_id, role_level, status')
+    .eq('profile_id', session.user.id);
+  if(error){ console.error(error); return; }
+  (data||[]).forEach(m=>{
+    if(m.status==='active') myRoles[m.community_id]=m.role_level;
+    else if(m.status==='pending') myRoles[m.community_id]='pending';
+  });
 }
 
 async function loadMyMemberships(){
@@ -902,20 +973,67 @@ async function openAcctPanel(){
   const memberships=await loadMyMemberships();
   if(!memberships.length){
     panelCommList.innerHTML='<div style="font-size:12px;color:var(--bone-dim)">No communities yet — draw one.</div>';
-    return;
-  }
-  panelCommList.innerHTML='';
-  memberships.forEach(m=>{
-    const row=document.createElement('div');
-    row.className='acct-community-row';
-    row.innerHTML=`<span class="acct-cname">${esc(m.communities?.name||'Unnamed')}</span>${roleBadge(m.role_level)}`;
-    row.addEventListener('click',()=>{
-      acctPanel.classList.remove('open');
-      const n=nodes.find(x=>x.id===m.community_id);
-      if(n) map.fitBounds(boundsOf(n.coords),{padding:60,maxZoom:17});
+  } else {
+    panelCommList.innerHTML='';
+    memberships.forEach(m=>{
+      const row=document.createElement('div');
+      row.className='acct-community-row';
+      row.innerHTML=`<span class="acct-cname">${esc(m.communities?.name||'Unnamed')}</span>${roleBadge(m.role_level)}`;
+      row.addEventListener('click',()=>{
+        acctPanel.classList.remove('open');
+        const n=nodes.find(x=>x.id===m.community_id);
+        if(n) map.fitBounds(boundsOf(n.coords),{padding:60,maxZoom:17});
+      });
+      panelCommList.appendChild(row);
     });
-    panelCommList.appendChild(row);
-  });
+  }
+  // Pending join requests for communities I steward
+  await renderPendingRequests(memberships);
+}
+
+async function renderPendingRequests(memberships){
+  const host=document.getElementById('panelRequests');
+  if(!host) return;
+  host.innerHTML='';
+  const stewarded=(memberships||[]).filter(m=>m.role_level>=60);
+  if(!stewarded.length){ host.style.display='none'; return; }
+  let any=false;
+  for(const m of stewarded){
+    const {data,error}=await db.rpc('pending_requests',{p_community:m.community_id});
+    if(error||!data||!data.length) continue;
+    any=true;
+    const lbl=document.createElement('div');
+    lbl.className='req-community-label';
+    lbl.textContent='Requests · '+(m.communities?.name||'Community');
+    host.appendChild(lbl);
+    data.forEach(r=>{
+      const row=document.createElement('div');
+      row.className='req-row';
+      row.innerHTML=`<span class="req-name">${esc(r.display_name||'Someone')}</span>`;
+      const mkBtn=(label,cls,role)=>{
+        const b=document.createElement('button');
+        b.className='req-btn '+cls; b.textContent=label;
+        b.addEventListener('click', async ()=>{
+          if(role===null){
+            await db.rpc('decline_request',{p_membership:r.membership_id});
+            toast('Declined');
+          } else {
+            await db.rpc('approve_request',{p_membership:r.membership_id, p_role:role});
+            toast('Approved as '+ROLE_LABELS[role]);
+          }
+          await refreshMyRoles();
+          openAcctPanel();
+        });
+        return b;
+      };
+      // quick approve as Neighbor (30) or Resident (20), plus decline
+      row.appendChild(mkBtn('Resident','ok',20));
+      row.appendChild(mkBtn('Neighbor','ok',30));
+      row.appendChild(mkBtn('✕','no',null));
+      host.appendChild(row);
+    });
+  }
+  host.style.display=any?'block':'none';
 }
 
 document.addEventListener('click',e=>{
@@ -936,7 +1054,7 @@ function refreshAcct(){
   acctBtn.textContent = session ? session.user.email.split('@')[0] : 'Sign in';
 }
 db.auth.getSession().then(({data})=>{ session=data.session; refreshAcct(); });
-db.auth.onAuthStateChange((_e, s)=>{ session=s; refreshAcct(); });
+db.auth.onAuthStateChange((_e, s)=>{ session=s; refreshAcct(); refreshMyRoles(); });
 
 acctBtn.addEventListener('click', ()=>{
   if(!session){ authVeil.classList.add('open'); return; }
