@@ -325,6 +325,10 @@
   }
   .req-btn.ok{border-color:var(--amber);color:var(--amber)}
   .req-btn.no:hover{border-color:var(--danger);color:var(--danger)}
+  .req-select{
+    background:var(--ink-soft);border:1px solid var(--line);color:var(--bone);
+    font-family:'Barlow';font-size:12px;padding:3px 4px;margin-right:4px;
+  }
   .req-community-label{
     font-family:'Barlow Condensed';font-weight:600;font-size:11px;
     letter-spacing:.1em;text-transform:uppercase;color:var(--bone-dim);
@@ -1009,27 +1013,32 @@ async function renderPendingRequests(memberships){
     data.forEach(r=>{
       const row=document.createElement('div');
       row.className='req-row';
-      row.innerHTML=`<span class="req-name">${esc(r.display_name||'Someone')}</span>`;
-      const mkBtn=(label,cls,role)=>{
-        const b=document.createElement('button');
-        b.className='req-btn '+cls; b.textContent=label;
-        b.addEventListener('click', async ()=>{
-          if(role===null){
-            await db.rpc('decline_request',{p_membership:r.membership_id});
-            toast('Declined');
-          } else {
-            await db.rpc('approve_request',{p_membership:r.membership_id, p_role:role});
-            toast('Approved as '+ROLE_LABELS[role]);
-          }
-          await refreshMyRoles();
-          openAcctPanel();
-        });
-        return b;
-      };
-      // quick approve as Neighbor (30) or Resident (20), plus decline
-      row.appendChild(mkBtn('Resident','ok',20));
-      row.appendChild(mkBtn('Neighbor','ok',30));
-      row.appendChild(mkBtn('✕','no',null));
+      const nameEl=document.createElement('span');
+      nameEl.className='req-name';
+      nameEl.textContent=r.display_name||'Someone';
+      const sel=document.createElement('select');
+      sel.className='req-select';
+      [[20,'Resident'],[30,'Neighbor'],[40,'Active'],[50,'Professional'],[60,'Steward']]
+        .forEach(([v,l])=>{ const o=document.createElement('option'); o.value=v; o.textContent=l; sel.appendChild(o); });
+      sel.value=30; // default Neighbor
+      const ok=document.createElement('button');
+      ok.className='req-btn ok'; ok.textContent='Approve';
+      ok.addEventListener('click', async ()=>{
+        const role=parseInt(sel.value,10);
+        if(role===60 && !confirm('Make '+(r.display_name||'this person')+' a STEWARD of '+(m.communities?.name||'this community')+'? They will have full moderation power, including admitting and removing others.')) return;
+        const {error}=await db.rpc('approve_request',{p_membership:r.membership_id, p_role:role});
+        if(error){ toast(error.message); return; }
+        toast('Approved as '+ROLE_LABELS[role]);
+        await refreshMyRoles(); openAcctPanel();
+      });
+      const no=document.createElement('button');
+      no.className='req-btn no'; no.textContent='✕';
+      no.addEventListener('click', async ()=>{
+        await db.rpc('decline_request',{p_membership:r.membership_id});
+        toast('Declined');
+        await refreshMyRoles(); openAcctPanel();
+      });
+      row.appendChild(nameEl); row.appendChild(sel); row.appendChild(ok); row.appendChild(no);
       host.appendChild(row);
     });
   }
