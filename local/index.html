@@ -878,13 +878,14 @@ function roleBadge(level){
 
 async function loadMyMemberships(){
   if(!session) return [];
-  const {data,error}=await db
-    .from('memberships')
-    .select('community_id, role_level, status, communities(name)')
-    .eq('profile_id', session.user.id)
-    .eq('status','active');
+  const {data,error}=await db.rpc('my_communities');
   if(error){ console.error(error); return []; }
-  return data||[];
+  return (data||[]).map(r=>({
+    community_id:r.community_id,
+    role_level:r.role_level,
+    status:r.status,
+    communities:{name:r.name}
+  }));
 }
 
 /* ---------- Account panel ---------- */
