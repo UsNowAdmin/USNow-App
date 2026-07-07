@@ -110,6 +110,42 @@
     cursor:pointer;text-align:left;
   }
   .acct-signout:hover{color:var(--danger)}
+
+  /* ---------- Directory (white pages) ---------- */
+  .dir-dialog{max-width:420px;max-height:80vh;display:flex;flex-direction:column}
+  .dir-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px}
+  .dir-head h3{font-family:'Barlow Condensed';font-weight:700;font-size:18px;
+    letter-spacing:.1em;text-transform:uppercase}
+  .dir-close{background:none;border:none;color:var(--bone-dim);font-size:18px;cursor:pointer}
+  .dir-close:hover{color:var(--amber)}
+  .dir-census{font-size:11px;color:var(--bone-dim);letter-spacing:.06em;margin-bottom:10px;
+    font-variant-numeric:tabular-nums}
+  .dir-list{overflow-y:auto;flex:1;border-top:1px solid var(--line)}
+  .dir-row{display:flex;align-items:center;gap:10px;padding:9px 2px;
+    border-bottom:1px solid var(--ink-soft)}
+  .dir-dot{width:10px;height:10px;border-radius:50%;flex:none;border:1.5px solid var(--line)}
+  .dir-dot.connected{background:var(--teal);border-color:var(--teal)}
+  .dir-dot.present{background:#5A9E5D;border-color:#5A9E5D}
+  .dir-dot.vacant{background:var(--line);border-color:var(--line)}
+  .dir-dot.unknown{background:none;border-color:var(--bone-dim)}
+  .dir-label{flex:1;min-width:0}
+  .dir-label .lb{font-size:14px;font-weight:600;color:var(--bone);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dir-label .sub{font-size:11px;color:var(--bone-dim);letter-spacing:.04em}
+  .dir-claim{border:1px solid var(--amber);background:none;color:var(--amber);
+    font-family:'Barlow Condensed';font-weight:600;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;cursor:pointer;flex:none}
+  .dir-claim:hover{background:var(--amber);color:var(--ink)}
+  .dir-claimant{font-size:11px;color:var(--teal);letter-spacing:.04em;flex:none}
+  .dir-add{display:flex;gap:6px;margin-top:10px}
+  .dir-add input{flex:1;min-width:0;background:var(--ink-soft);border:1px solid var(--line);
+    color:var(--bone);font-family:'Barlow';font-size:13px;padding:7px 9px;outline:none}
+  .dir-add input:focus{border-color:var(--amber)}
+  .dir-add input.sm{flex:0 0 64px}
+  .dir-add button{background:var(--amber);border:none;color:var(--ink);
+    font-family:'Barlow Condensed';font-weight:700;font-size:12px;
+    letter-spacing:.1em;text-transform:uppercase;padding:0 14px;cursor:pointer}
+  .dir-empty{padding:18px 2px;font-size:13px;color:var(--bone-dim);line-height:1.5}
   .results{
     position:absolute;top:100%;left:0;right:0;background:var(--ink);
     border:1px solid var(--line);border-top:none;display:none;
@@ -473,6 +509,23 @@
   </div>
 </div>
 
+<div class="veil" id="dirVeil">
+  <div class="dialog dir-dialog">
+    <div class="dir-head">
+      <h3 id="dirTitle">Directory</h3>
+      <button class="dir-close" id="dirClose">✕</button>
+    </div>
+    <div class="dir-census" id="dirCensus"></div>
+    <div class="dir-list" id="dirList"></div>
+    <div class="dir-add" id="dirAdd" style="display:none">
+      <input id="dirAddLabel" type="text" maxlength="60" placeholder="Address / label (e.g. 12 Maple)">
+      <input id="dirAddUnit" class="sm" type="text" maxlength="12" placeholder="Unit">
+      <input id="dirAddFloor" class="sm" type="text" maxlength="8" placeholder="Floor">
+      <button id="dirAddGo">Add</button>
+    </div>
+  </div>
+</div>
+
 <div class="veil" id="welcomeVeil">
   <div class="dialog">
     <h3>UsNow Local</h3>
@@ -696,6 +749,14 @@ function showAreaPopup(p, lngLat){
       btn.className='pop-join pending'; btn.textContent='Request pending';
     } else {
       btn.className='pop-join member'; btn.textContent=ROLE_LABELS[mine]||'Member';
+      const dirBtn=document.createElement('button');
+      dirBtn.className='pop-join';
+      dirBtn.textContent='Directory';
+      dirBtn.addEventListener('click', ()=>{
+        pop.remove();
+        openDirectory(p.id, p.name);
+      });
+      box.appendChild(dirBtn);
     }
     box.appendChild(btn);
   }
@@ -1105,6 +1166,85 @@ document.getElementById('panelSignOut').addEventListener('click',async()=>{
   await db.auth.signOut();
   acctPanel.classList.remove('open');
   toast('Signed out');
+});
+
+/* ---------- Directory (white pages) ---------- */
+const dirVeil=document.getElementById('dirVeil');
+let dirCommunity=null;
+document.getElementById('dirClose').addEventListener('click',()=>dirVeil.classList.remove('open'));
+
+async function openDirectory(communityId, communityName){
+  dirCommunity=communityId;
+  document.getElementById('dirTitle').textContent=communityName;
+  document.getElementById('dirAdd').style.display = (myRoles[communityId]>=60)?'flex':'none';
+  dirVeil.classList.add('open');
+  await renderDirectory();
+}
+
+async function renderDirectory(){
+  const list=document.getElementById('dirList');
+  const census=document.getElementById('dirCensus');
+  list.innerHTML='<div class="dir-empty">Loading…</div>';
+  const {data,error}=await db.rpc('list_directory',{p_community:dirCommunity});
+  if(error){ list.innerHTML='<div class="dir-empty">'+esc(error.message)+'</div>'; census.textContent=''; return; }
+  const slots=data||[];
+  if(!slots.length){
+    census.textContent='No slots yet.';
+    list.innerHTML='<div class="dir-empty">'+((myRoles[dirCommunity]>=60)
+      ?'Seed the directory below — one slot per address or unit. Unclaimed slots are the map of who\'s not yet connected.'
+      :'The steward hasn\'t seeded the directory yet.')+'</div>';
+    return;
+  }
+  const counts={connected:0,present:0,vacant:0,unknown:0};
+  slots.forEach(s=>{ if(counts[s.presence]!==undefined) counts[s.presence]++; });
+  census.textContent=slots.length+' slots — '+counts.connected+' connected · '
+    +counts.present+' present · '+counts.vacant+' vacant · '+counts.unknown+' unknown';
+  list.innerHTML='';
+  const iAmMember = myRoles[dirCommunity]!==undefined && myRoles[dirCommunity]!=='pending';
+  slots.forEach(s=>{
+    const row=document.createElement('div');
+    row.className='dir-row';
+    const sub=[s.unit?('Unit '+s.unit):null, s.floor?('Fl '+s.floor):null].filter(Boolean).join(' · ');
+    row.innerHTML=`<span class="dir-dot ${esc(s.presence)}"></span>
+      <span class="dir-label"><div class="lb">${esc(s.label)}</div>
+      ${sub?`<div class="sub">${esc(sub)}</div>`:''}</span>`;
+    if(s.claimed){
+      const who=document.createElement('span');
+      who.className='dir-claimant';
+      who.textContent=s.claimant||'claimed';
+      row.appendChild(who);
+    } else if(iAmMember){
+      const b=document.createElement('button');
+      b.className='dir-claim'; b.textContent='This is us';
+      b.addEventListener('click', async ()=>{
+        if(!confirm('Claim "'+s.label+(s.unit?' · '+s.unit:'')+'" as your household?')) return;
+        const {error}=await db.rpc('claim_household',{p_household:s.id});
+        if(error){ toast(error.message); return; }
+        toast('Claimed — you\'re a resident here');
+        await refreshMyRoles();
+        renderDirectory();
+      });
+      row.appendChild(b);
+    }
+    list.appendChild(row);
+  });
+}
+
+document.getElementById('dirAddGo').addEventListener('click', async ()=>{
+  const label=document.getElementById('dirAddLabel').value.trim();
+  if(!label){ toast('Give the slot a label'); return; }
+  const {error}=await db.rpc('seed_household',{
+    p_community:dirCommunity,
+    p_label:label,
+    p_unit:document.getElementById('dirAddUnit').value.trim(),
+    p_floor:document.getElementById('dirAddFloor').value.trim()
+  });
+  if(error){ toast(error.message); return; }
+  document.getElementById('dirAddLabel').value='';
+  document.getElementById('dirAddUnit').value='';
+  document.getElementById('dirAddFloor').value='';
+  document.getElementById('dirAddLabel').focus();
+  renderDirectory();
 });
 
 /* ---------- Accounts ---------- */
