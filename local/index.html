@@ -340,6 +340,14 @@
     border-radius:8px;padding:0 4px;margin-left:6px;
   }
 
+  @media (max-width:600px){
+    .topbar{flex-wrap:wrap}
+    .wordmark{order:1;flex:1}
+    .acct{order:2}
+    .searchwrap{order:3;flex-basis:100%;border-top:1px solid var(--line)}
+    .hud{top:auto;bottom:calc(50px + env(safe-area-inset-bottom));left:0;font-size:10px;padding:3px 8px;gap:8px}
+    .acct-panel{width:100%;left:0;right:0}
+  }
   @media (min-width:768px){
     .sheet{left:auto;right:12px;bottom:12px;width:340px;border:1px solid var(--line);border-top:2px solid var(--line)}
     .sheet.collapsed{transform:translateY(calc(100% - 44px - 12px))}
@@ -469,12 +477,12 @@
   <div class="dialog">
     <h3>UsNow Local</h3>
     <p style="font-size:14px;color:var(--bone);line-height:1.55;margin-bottom:16px">
-      This is a map of the places that matter to you.
-      Draw your block, name it, keep it.
-      Know your neighbors before you need them.
+      A map of the places that matter to you. Look around your area, or draw and
+      name a block of your own. Know your neighbors before you need them.
     </p>
     <div class="row">
-      <button class="primary" id="welcomeGo">Start with your own block</button>
+      <button id="welcomeBrowse">Browse the map</button>
+      <button class="primary" id="welcomeGo">Map an area</button>
     </div>
   </div>
 </div>
@@ -770,6 +778,7 @@ document.getElementById('dlgSave').addEventListener('click', async ()=>{
   if(error){ console.error(error); toast('Save failed — try again'); return; }
   nodes=await loadCommunities();
   refreshNodes();
+  await refreshMyRoles();
   toast('Saved: '+name);
   setSheet(false);
 });
@@ -1104,6 +1113,12 @@ if(!welcomed && !nodes.length){
   document.getElementById('welcomeVeil').classList.add('open');
 }
 document.getElementById('welcomeGo').addEventListener('click', ()=>{
+  document.getElementById('welcomeVeil').classList.remove('open');
+  try{ localStorage.setItem(WELCOME_KEY,'1'); }catch(e){}
+  startDraw();
+});
+const welcomeBrowse=document.getElementById('welcomeBrowse');
+if(welcomeBrowse) welcomeBrowse.addEventListener('click', ()=>{
   document.getElementById('welcomeVeil').classList.remove('open');
   try{ localStorage.setItem(WELCOME_KEY,'1'); }catch(e){}
 });
