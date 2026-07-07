@@ -1096,6 +1096,15 @@ async function openAcctPanel(){
       const row=document.createElement('div');
       row.className='acct-community-row';
       row.innerHTML=`<span class="acct-cname">${esc(m.communities?.name||'Unnamed')}</span>${roleBadge(m.role_level)}`;
+      const dirB=document.createElement('button');
+      dirB.className='req-btn ok';
+      dirB.textContent='Dir';
+      dirB.addEventListener('click',(ev)=>{
+        ev.stopPropagation();
+        acctPanel.classList.remove('open');
+        openDirectory(m.community_id, m.communities?.name||'Directory');
+      });
+      row.appendChild(dirB);
       row.addEventListener('click',()=>{
         acctPanel.classList.remove('open');
         const n=nodes.find(x=>x.id===m.community_id);
