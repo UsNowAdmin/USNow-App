@@ -949,10 +949,7 @@ let myRoles={};
 async function refreshMyRoles(){
   myRoles={};
   if(!session) return;
-  const {data,error}=await db
-    .from('memberships')
-    .select('community_id, role_level, status')
-    .eq('profile_id', session.user.id);
+  const {data,error}=await db.rpc('my_membership_states');
   if(error){ console.error(error); return; }
   (data||[]).forEach(m=>{
     if(m.status==='active') myRoles[m.community_id]=m.role_level;
