@@ -508,12 +508,23 @@ async function loadCommunities(){
   if(error){ console.error(error); toast('Could not reach the database'); return []; }
   return (data||[]).map(r=>{
     const g = JSON.parse(r.geojson);
-    let ring = g.coordinates[0];
-    if(ring.length>1){
-      const a=ring[0], b=ring[ring.length-1];
-      if(a[0]===b[0] && a[1]===b[1]) ring=ring.slice(0,-1);
-    }
-    return {id:r.id, name:r.name, notes:r.notes||'', coords:ring, acres:areaAcres(ring)};
+    const polys = g.type==='MultiPolygon' ? g.coordinates : [g.coordinates];
+    // open outer rings (strip closing duplicate) for area math
+    const outers = polys.map(p=>{
+      let ring = p[0];
+      if(ring.length>1){
+        const a=ring[0], b=ring[ring.length-1];
+        if(a[0]===b[0] && a[1]===b[1]) ring=ring.slice(0,-1);
+      }
+      return ring;
+    });
+    const acres = outers.reduce((s,rg)=>s+areaAcres(rg),0);
+    return {
+      id:r.id, name:r.name, notes:r.notes||'',
+      kind:r.kind||'chosen', btype:r.boundary_type||'',
+      attrs:r.attributes||{},
+      coords:outers[0], rings:polys, acres
+    };
   });
 }
 function ringGeoJSON(coords){
@@ -591,10 +602,18 @@ function nodesGeoJSON(){
     type:'FeatureCollection',
     features:nodes.map(n=>({
       type:'Feature',
-      properties:{id:n.id, name:n.name, notes:n.notes||'', area:fmtArea(n.acres), acresNum:n.acres},
-      geometry:{type:'Polygon', coordinates:[[...n.coords, n.coords[0]]]}
+      properties:{id:n.id, name:n.name, notes:n.notes||'', area:fmtArea(n.acres),
+                  acresNum:n.acres, kind:n.kind, btype:n.btype,
+                  link:(n.attrs&&n.attrs.link)||''},
+      geometry:{type:'MultiPolygon',
+                coordinates:n.rings || [[[...n.coords, n.coords[0]]]]}
     }))
   };
+}
+function nodeBounds(n){
+  const b=new maplibregl.LngLatBounds();
+  (n.rings||[[n.coords]]).forEach(poly=>poly[0].forEach(p=>b.extend(p)));
+  return b;
 }
 function labelsGeoJSON(){
   return {
@@ -612,9 +631,18 @@ map.on('load', ()=>{
   map.addSource('node-labels',{type:'geojson', data:labelsGeoJSON()});
   map.addSource('draft',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
 
+  map.addLayer({id:'official-fill', type:'fill', source:'nodes',
+    filter:['==',['get','kind'],'official'],
+    paint:{'fill-color':'#7B8A94','fill-opacity':0.03}});
+  map.addLayer({id:'official-line', type:'line', source:'nodes',
+    filter:['==',['get','kind'],'official'],
+    paint:{'line-color':'#7B8A94','line-width':1.2,'line-dasharray':[3,2]}});
+
   map.addLayer({id:'nodes-fill', type:'fill', source:'nodes',
+    filter:['==',['get','kind'],'chosen'],
     paint:{'fill-color':'#E8A33D','fill-opacity':0.18}});
   map.addLayer({id:'nodes-line', type:'line', source:'nodes',
+    filter:['==',['get','kind'],'chosen'],
     paint:{'line-color':'#E8A33D','line-width':2.5}});
   map.addLayer({id:'nodes-label', type:'symbol', source:'node-labels',
     layout:{'text-field':['get','name'],'text-size':13,
@@ -673,6 +701,22 @@ function showAreaPopup(p, lngLat){
   }
   pop.setLngLat(lngLat).setDOMContent(box).addTo(map);
 }
+map.on('click','official-fill',(e)=>{
+  if(drawing) return;
+  // If a chosen community is also under the tap, let its handler run instead.
+  const chosenHit=map.queryRenderedFeatures(e.point,{layers:['nodes-fill']});
+  if(chosenHit.length) return;
+  const p=e.features[0].properties;
+  const typeLabel=({county:'County',zip:'ZIP code',school_district:'School district',
+                    fire:'Fire district',police:'Police precinct',tract:'Census tract'})[p.btype]||p.btype||'Official boundary';
+  new maplibregl.Popup({closeButton:true,maxWidth:'260px'})
+    .setLngLat(e.lngLat)
+    .setHTML(`<div class="pop-name">${esc(p.name)}</div>
+              <div class="pop-area">${esc(typeLabel)}</div>
+              ${p.link?`<div class="pop-notes"><a href="${esc(p.link)}" target="_blank" rel="noopener" style="color:var(--amber)">Official site →</a></div>`:''}`)
+    .addTo(map);
+});
+
 map.on('click','nodes-fill',(e)=>{
   if(drawing) return;
   const seen=new Map();
@@ -807,18 +851,20 @@ function renderRegistry(){
   nodes.forEach(n=>{
     const row=document.createElement('div');
     row.className='node-row';
-    row.innerHTML=`<span class="node-swatch"></span>
+    const official = n.kind==='official';
+    row.innerHTML=`<span class="node-swatch"${official?' style="border-color:#7B8A94;background:none"':''}></span>
       <span class="node-meta">
         <div class="nm">${esc(n.name)}</div>
-        <div class="dt">${fmtArea(n.acres)} · ${n.coords.length} pts</div>
+        <div class="dt">${official?esc(n.btype||'official'):fmtArea(n.acres)+' · '+n.coords.length+' pts'}</div>
       </span>
-      <button class="node-del">Del</button>`;
+      ${official?'':'<button class="node-del">Del</button>'}`;
     row.addEventListener('click',(ev)=>{
       if(ev.target.classList.contains('node-del')) return;
-      map.fitBounds(boundsOf(n.coords), {padding:60, maxZoom:17});
+      map.fitBounds(nodeBounds(n), {padding:60, maxZoom:17});
       setSheet(true);
     });
-    row.querySelector('.node-del').addEventListener('click', async ()=>{
+    const delBtn=row.querySelector('.node-del');
+    if(delBtn) delBtn.addEventListener('click', async ()=>{
       if(!confirm('Remove "'+n.name+'"?')) return;
       const {error}=await db.rpc('remove_community',{p_id:n.id});
       if(error){ console.error(error); toast('Remove failed'); return; }
@@ -992,7 +1038,7 @@ async function openAcctPanel(){
       row.addEventListener('click',()=>{
         acctPanel.classList.remove('open');
         const n=nodes.find(x=>x.id===m.community_id);
-        if(n) map.fitBounds(boundsOf(n.coords),{padding:60,maxZoom:17});
+        if(n) map.fitBounds(nodeBounds(n),{padding:60,maxZoom:17});
       });
       panelCommList.appendChild(row);
     });
