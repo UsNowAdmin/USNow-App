@@ -978,13 +978,14 @@ function setSheet(collapse){
 }
 
 function renderRegistry(){
-  nodeCountEl.textContent='('+nodes.length+')';
+  const chosen=nodes.filter(n=>n.kind!=='official');
+  nodeCountEl.textContent='('+chosen.length+')';
   sheetBody.innerHTML='';
-  if(!nodes.length){
-    sheetBody.innerHTML=`<div class="empty">No nodes yet. Tap <b>Draw a node</b>, then tap the map corner by corner around your area — a building, a block, a four-block radius. Tap <b>Finish</b> to name and save it.</div>`;
+  if(!chosen.length){
+    sheetBody.innerHTML=`<div class="empty">Nothing mapped yet. Tap <b>Map an area</b>, then tap the map corner by corner around a place that matters. Tap <b>Finish</b> to name and save it.</div>`;
     return;
   }
-  nodes.forEach(n=>{
+  chosen.forEach(n=>{
     const row=document.createElement('div');
     row.className='node-row';
     const official = n.kind==='official';
@@ -1290,12 +1291,16 @@ function applyTypeFilter(){
 }
 function renderLayerToggles(){
   const host=document.getElementById('layerToggles');
-  const types=[...new Set(nodes.filter(n=>n.kind==='official').map(n=>n.btype||'other'))];
+  const offs=nodes.filter(n=>n.kind==='official');
+  const types=[...new Set(offs.map(n=>n.btype||'other'))];
   if(!types.length){ host.textContent='No official layers yet — import below.'; return; }
   host.innerHTML='';
   types.forEach(t=>{
+    const count=offs.filter(n=>(n.btype||'other')===t).length;
+    const wrap=document.createElement('div');
+    wrap.style.cssText='display:flex;align-items:center;gap:6px;margin-bottom:4px';
     const lab=document.createElement('label');
-    lab.style.cssText='display:inline-flex;align-items:center;gap:5px;margin-right:12px;cursor:pointer';
+    lab.style.cssText='display:inline-flex;align-items:center;gap:5px;cursor:pointer;flex:1';
     const cb=document.createElement('input');
     cb.type='checkbox'; cb.checked=!hiddenTypes.has(t);
     cb.addEventListener('change',()=>{
@@ -1303,8 +1308,23 @@ function renderLayerToggles(){
       applyTypeFilter();
     });
     lab.appendChild(cb);
-    lab.appendChild(document.createTextNode(t.replace(/_/g,' ')));
-    host.appendChild(lab);
+    lab.appendChild(document.createTextNode(t.replace(/_/g,' ')+' ('+count+')'));
+    wrap.appendChild(lab);
+    const rm=document.createElement('button');
+    rm.className='req-btn no'; rm.textContent='remove';
+    rm.addEventListener('click', async ()=>{
+      if(!confirm('Remove all '+count+' "'+t+'" boundaries? (Only ones you imported will delete.)')) return;
+      let done=0;
+      for(const n of offs.filter(x=>(x.btype||'other')===t)){
+        const {error}=await db.rpc('remove_community',{p_id:n.id});
+        if(!error) done++;
+      }
+      toast(done+' removed');
+      nodes=await loadCommunities();
+      refreshNodes(); renderLayerToggles(); applyTypeFilter();
+    });
+    wrap.appendChild(rm);
+    host.appendChild(wrap);
   });
 }
 
