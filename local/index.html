@@ -776,22 +776,27 @@ function refreshNodes(){
   renderRegistry();
 }
 
-/* ---------- Node popups (nested-aware: smallest first) ---------- */
-function showAreaPopup(p, lngLat){
-  const pop=new maplibregl.Popup({closeButton:true, maxWidth:'260px'});
+/* ---------- The here-card: tap anywhere → "where am I?" ---------- */
+const TYPE_LABELS={county:'County',zip:'ZIP code',school_district:'School district',
+  fire:'Fire district',police:'Police precinct',tract:'Census tract',
+  watershed:'Watershed',floodplain:'Floodplain',other:'Official boundary'};
+function typeLabel(t){ return TYPE_LABELS[t]||t||'Official boundary'; }
+
+function chosenDetail(row, pop, back){
+  const n=nodes.find(x=>x.id===row.id)||row;
   const box=document.createElement('div');
-  box.innerHTML=`<div class="pop-name">${esc(p.name)}</div>
-              <div class="pop-area">${p.area}</div>
-              ${p.notes?`<div class="pop-notes">${esc(p.notes)}</div>`:''}`;
+  box.innerHTML=`<div class="pop-name">${esc(n.name)}</div>
+    <div class="pop-area">${fmtArea(n.acres!==undefined?n.acres:(row.area_sqm||0)/4046.86)}</div>
+    ${n.notes?`<div class="pop-notes">${esc(n.notes)}</div>`:''}`;
   if(session){
-    const mine=myRoles[p.id];
+    const mine=myRoles[n.id];
     const btn=document.createElement('button');
     btn.className='pop-join';
     if(mine===undefined){
       btn.textContent='Request to join';
       btn.addEventListener('click', async ()=>{
         btn.disabled=true; btn.textContent='Sending…';
-        const {error}=await db.rpc('request_join',{p_community:p.id});
+        const {error}=await db.rpc('request_join',{p_community:n.id});
         if(error){ toast(error.message); btn.disabled=false; btn.textContent='Request to join'; return; }
         btn.className='pop-join pending'; btn.textContent='Request sent';
         toast('Request sent to the steward');
@@ -804,16 +809,79 @@ function showAreaPopup(p, lngLat){
       const dirBtn=document.createElement('button');
       dirBtn.className='pop-join';
       dirBtn.textContent='Directory';
-      dirBtn.addEventListener('click', ()=>{
-        pop.remove();
-        openDirectory(p.id, p.name);
-      });
+      dirBtn.addEventListener('click', ()=>{ pop.remove(); openDirectory(n.id, n.name); });
       box.appendChild(dirBtn);
     }
     box.appendChild(btn);
   }
-  pop.setLngLat(lngLat).setDOMContent(box).addTo(map);
+  if(back) box.appendChild(back());
+  return box;
 }
+function officialDetail(row, pop, back){
+  const attrs=row.attributes||row.attrs||{};
+  const box=document.createElement('div');
+  box.innerHTML=`<div class="pop-name">${esc(row.name)}</div>
+    <div class="pop-area">${esc(typeLabel(row.btype))}</div>
+    ${attrs.link?`<div class="pop-notes"><a href="${esc(attrs.link)}" target="_blank" rel="noopener" style="color:var(--amber)">Official site →</a></div>`:''}`;
+  if(back) box.appendChild(back());
+  return box;
+}
+
+async function openHereCard(lngLat){
+  const {data,error}=await db.rpc('at_point',{p_lng:lngLat.lng, p_lat:lngLat.lat});
+  if(error){ console.error(error); return; }
+  let rows=data||[];
+  rows=rows.filter(r=>r.kind!=='official' || !hiddenTypes.has(r.btype||'other'));
+  if(!rows.length) return;
+  const pop=new maplibregl.Popup({closeButton:true, maxWidth:'280px'});
+
+  function stackView(){
+    const box=document.createElement('div');
+    box.className='pop-pick';
+    const chosen=rows.filter(r=>r.kind!=='official');
+    const officials=rows.filter(r=>r.kind==='official');
+    const hdr=document.createElement('div');
+    hdr.className='pop-area';
+    hdr.textContent='You are here:';
+    box.appendChild(hdr);
+    const backBtn=()=>{ const b=document.createElement('button');
+      b.className='pop-join'; b.textContent='← All layers here';
+      b.addEventListener('click',()=>pop.setDOMContent(stackView()));
+      return b; };
+    const addRow=(r, official)=>{
+      const b=document.createElement('button');
+      const sub=official ? typeLabel(r.btype)
+                         : fmtArea((r.area_sqm||0)/4046.86)
+                           + (myRoles[r.id]!==undefined && myRoles[r.id]!=='pending'
+                              ? ' · '+(ROLE_LABELS[myRoles[r.id]]||'') : '');
+      b.innerHTML=esc(r.name)+' <small>'+esc(sub)+'</small>';
+      if(official) b.style.opacity='.65';
+      b.addEventListener('click', ()=>{
+        pop.setDOMContent(official ? officialDetail(r,pop,backBtn)
+                                   : chosenDetail(r,pop,backBtn));
+      });
+      box.appendChild(b);
+    };
+    chosen.forEach(r=>addRow(r,false));
+    officials.forEach(r=>addRow(r,true));
+    return box;
+  }
+  // single hit: straight to detail, no stack ceremony
+  if(rows.length===1){
+    const r=rows[0];
+    pop.setDOMContent(r.kind==='official'?officialDetail(r,pop,null):chosenDetail(r,pop,null));
+  } else {
+    pop.setDOMContent(stackView());
+  }
+  pop.setLngLat(lngLat).addTo(map);
+}
+
+map.on('click',(e)=>{
+  if(drawing||placing) return;
+  if(map.queryRenderedFeatures(e.point,{layers:['dots-circle']}).length) return;
+  openHereCard(e.lngLat);
+});
+
 map.on('click','dots-circle',(e)=>{
   if(drawing||placing) return;
   const p=e.features[0].properties;
@@ -826,44 +894,6 @@ map.on('click','dots-circle',(e)=>{
 });
 map.on('mouseenter','dots-circle',()=>{ if(!drawing&&!placing) map.getCanvas().style.cursor='pointer'; });
 map.on('mouseleave','dots-circle',()=>{ map.getCanvas().style.cursor=(drawing||placing)?'crosshair':''; });
-
-map.on('click','official-fill',(e)=>{
-  if(drawing||placing) return;
-  // If a chosen community is also under the tap, let its handler run instead.
-  const chosenHit=map.queryRenderedFeatures(e.point,{layers:['nodes-fill']});
-  if(chosenHit.length) return;
-  const p=e.features[0].properties;
-  const typeLabel=({county:'County',zip:'ZIP code',school_district:'School district',
-                    fire:'Fire district',police:'Police precinct',tract:'Census tract'})[p.btype]||p.btype||'Official boundary';
-  new maplibregl.Popup({closeButton:true,maxWidth:'260px'})
-    .setLngLat(e.lngLat)
-    .setHTML(`<div class="pop-name">${esc(p.name)}</div>
-              <div class="pop-area">${esc(typeLabel)}</div>
-              ${p.link?`<div class="pop-notes"><a href="${esc(p.link)}" target="_blank" rel="noopener" style="color:var(--amber)">Official site →</a></div>`:''}`)
-    .addTo(map);
-});
-
-map.on('click','nodes-fill',(e)=>{
-  if(drawing||placing) return;
-  const seen=new Map();
-  e.features.forEach(f=>{ if(!seen.has(f.properties.id)) seen.set(f.properties.id, f.properties); });
-  const hits=[...seen.values()].sort((a,b)=>a.acresNum-b.acresNum);
-  if(hits.length===1){ showAreaPopup(hits[0], e.lngLat); return; }
-  const box=document.createElement('div');
-  box.className='pop-pick';
-  const hdr=document.createElement('div');
-  hdr.className='pop-area';
-  hdr.textContent='You\'re inside '+hits.length+' areas:';
-  box.appendChild(hdr);
-  const picker=new maplibregl.Popup({closeButton:true, maxWidth:'260px'});
-  hits.forEach(p=>{
-    const b=document.createElement('button');
-    b.innerHTML=esc(p.name)+' <small>'+p.area+'</small>';
-    b.addEventListener('click', ()=>{ picker.remove(); showAreaPopup(p, e.lngLat); });
-    box.appendChild(b);
-  });
-  picker.setLngLat(e.lngLat).setDOMContent(box).addTo(map);
-});
 map.on('mouseenter','nodes-fill',()=>{ if(!drawing) map.getCanvas().style.cursor='pointer'; });
 map.on('mouseleave','nodes-fill',()=>{ map.getCanvas().style.cursor=drawing?'crosshair':''; });
 
