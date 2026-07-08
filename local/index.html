@@ -993,7 +993,7 @@ function renderRegistry(){
         <div class="nm">${esc(n.name)}</div>
         <div class="dt">${official?esc(n.btype||'official'):fmtArea(n.acres)+' · '+n.coords.length+' pts'}</div>
       </span>
-      ${official?'':'<button class="node-del">Del</button>'}`;
+      <button class="node-del">Del</button>`;
     row.addEventListener('click',(ev)=>{
       if(ev.target.classList.contains('node-del')) return;
       map.fitBounds(nodeBounds(n), {padding:60, maxZoom:17});
