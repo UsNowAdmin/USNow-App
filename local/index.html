@@ -464,6 +464,7 @@
     <div class="coming-row"><span class="coming-nm">The paper sheet</span><span class="coming-ds">Print it. Tape it to the fridge.</span><span class="coming-tag">Coming</span></div>
   </div>
   <div class="sheet-tools">
+    <button id="layersBtn">Layers</button>
     <button id="exportBtn">Export JSON</button>
     <button id="importBtn">Import</button>
     <button id="clearBtn">Clear all</button>
@@ -522,6 +523,46 @@
       <input id="dirAddUnit" class="sm" type="text" maxlength="12" placeholder="Unit">
       <input id="dirAddFloor" class="sm" type="text" maxlength="8" placeholder="Floor">
       <button id="dirAddGo">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="veil" id="layersVeil">
+  <div class="dialog dir-dialog">
+    <div class="dir-head">
+      <h3>Official layers</h3>
+      <button class="dir-close" id="layersClose">✕</button>
+    </div>
+    <div id="layerToggles" class="dir-census" style="margin-bottom:8px">No official layers yet.</div>
+    <div style="border-top:1px solid var(--line);padding-top:10px">
+      <div class="acct-label" style="margin-bottom:6px">Import boundaries (GeoJSON)</div>
+      <div class="dir-add" style="margin-top:0">
+        <input id="offUrl" type="text" placeholder="Paste a GeoJSON URL…">
+      </div>
+      <div class="dir-add">
+        <input id="offFile" type="file" accept=".json,.geojson,application/geo+json,application/json" style="font-size:12px;padding:6px">
+      </div>
+      <div class="dir-add">
+        <select id="offType" class="req-select" style="flex:1;margin:0">
+          <option value="county">County</option>
+          <option value="zip">ZIP code</option>
+          <option value="school_district" selected>School district</option>
+          <option value="fire">Fire district</option>
+          <option value="police">Police precinct</option>
+          <option value="tract">Census tract</option>
+          <option value="watershed">Watershed</option>
+          <option value="floodplain">Floodplain</option>
+          <option value="other">Other</option>
+        </select>
+        <label style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--bone-dim);white-space:nowrap">
+          <input type="checkbox" id="offInView" checked> only in view
+        </label>
+      </div>
+      <div class="dir-add">
+        <input id="offFilter" type="text" placeholder="Name filter (optional, e.g. 'Islip')">
+        <button id="offGo">Import</button>
+      </div>
+      <div class="dir-census" id="offStatus" style="margin-top:6px"></div>
     </div>
   </div>
 </div>
@@ -1229,6 +1270,115 @@ document.getElementById('panelSignOut').addEventListener('click',async()=>{
   await db.auth.signOut();
   acctPanel.classList.remove('open');
   toast('Signed out');
+});
+
+/* ---------- Official layers: import + visibility ---------- */
+const layersVeil=document.getElementById('layersVeil');
+document.getElementById('layersBtn').addEventListener('click', ()=>{
+  renderLayerToggles();
+  layersVeil.classList.add('open');
+});
+document.getElementById('layersClose').addEventListener('click', ()=>layersVeil.classList.remove('open'));
+
+let hiddenTypes=new Set();
+function applyTypeFilter(){
+  const base=['==',['get','kind'],'official'];
+  const filt=hiddenTypes.size
+    ? ['all', base, ['!',['in',['get','btype'],['literal',[...hiddenTypes]]]]]
+    : base;
+  ['official-fill','official-line'].forEach(l=>{ if(map.getLayer(l)) map.setFilter(l,filt); });
+}
+function renderLayerToggles(){
+  const host=document.getElementById('layerToggles');
+  const types=[...new Set(nodes.filter(n=>n.kind==='official').map(n=>n.btype||'other'))];
+  if(!types.length){ host.textContent='No official layers yet — import below.'; return; }
+  host.innerHTML='';
+  types.forEach(t=>{
+    const lab=document.createElement('label');
+    lab.style.cssText='display:inline-flex;align-items:center;gap:5px;margin-right:12px;cursor:pointer';
+    const cb=document.createElement('input');
+    cb.type='checkbox'; cb.checked=!hiddenTypes.has(t);
+    cb.addEventListener('change',()=>{
+      if(cb.checked) hiddenTypes.delete(t); else hiddenTypes.add(t);
+      applyTypeFilter();
+    });
+    lab.appendChild(cb);
+    lab.appendChild(document.createTextNode(t.replace(/_/g,' ')));
+    host.appendChild(lab);
+  });
+}
+
+const NAME_PROPS=['NAME','name','Name','NAMELSAD','NAMELSAD20','ZCTA5CE20','ZCTA5CE10',
+  'GEOID','SCHOOL_DIS','DISTRICT','district','LABEL','label','huc_name','HUC_NAME','SD_NAME'];
+function featureName(props){
+  for(const k of NAME_PROPS) if(props && props[k]) return String(props[k]);
+  const first=props && Object.values(props).find(v=>typeof v==='string' && v.length<80);
+  return first || 'Unnamed';
+}
+function geomBounds(g){
+  const b=new maplibregl.LngLatBounds();
+  const walk=(c)=>{ if(typeof c[0]==='number') b.extend(c); else c.forEach(walk); };
+  walk(g.coordinates);
+  return b;
+}
+function boundsOverlap(a,b){
+  return !(a.getEast()<b.getWest()||a.getWest()>b.getEast()
+         ||a.getNorth()<b.getSouth()||a.getSouth()>b.getNorth());
+}
+
+document.getElementById('offGo').addEventListener('click', async ()=>{
+  const status=document.getElementById('offStatus');
+  const url=document.getElementById('offUrl').value.trim();
+  const fileEl=document.getElementById('offFile');
+  const btype=document.getElementById('offType').value;
+  const nameFilter=document.getElementById('offFilter').value.trim().toLowerCase();
+  const inView=document.getElementById('offInView').checked;
+  let raw;
+  try{
+    if(fileEl.files && fileEl.files[0]){
+      status.textContent='Reading file…';
+      raw=await fileEl.files[0].text();
+    } else if(url){
+      status.textContent='Fetching…';
+      const r=await fetch(url);
+      if(!r.ok) throw new Error('fetch failed: '+r.status);
+      raw=await r.text();
+    } else { status.textContent='Give me a URL or a file.'; return; }
+  }catch(err){ status.textContent='Could not load source: '+err.message+' (a downloaded file avoids CORS issues)'; return; }
+
+  let gj;
+  try{ gj=JSON.parse(raw); }catch(e){ status.textContent='Not valid JSON.'; return; }
+  let feats = gj.type==='FeatureCollection' ? gj.features
+            : gj.type==='Feature' ? [gj] : null;
+  if(!feats){ status.textContent='Not GeoJSON (need Feature/FeatureCollection).'; return; }
+
+  feats=feats.filter(f=>f.geometry&&(f.geometry.type==='Polygon'||f.geometry.type==='MultiPolygon'));
+  if(nameFilter) feats=feats.filter(f=>featureName(f.properties).toLowerCase().includes(nameFilter));
+  if(inView){
+    const view=map.getBounds();
+    feats=feats.filter(f=>boundsOverlap(geomBounds(f.geometry), view));
+  }
+  if(!feats.length){ status.textContent='0 features match the filters.'; return; }
+  if(feats.length>400 && !confirm(feats.length+' features — import all? (This may take a while.)')) return;
+
+  let ok=0, fail=0;
+  for(let i=0;i<feats.length;i++){
+    status.textContent='Importing '+(i+1)+' / '+feats.length+'…';
+    const f=feats[i];
+    const {error}=await db.rpc('add_official',{
+      p_name: featureName(f.properties),
+      p_type: btype,
+      p_geojson: JSON.stringify(f.geometry),
+      p_attrs: {}
+    });
+    if(error){ fail++; console.error(error); } else ok++;
+  }
+  status.textContent='Done: '+ok+' imported'+(fail?(', '+fail+' failed'):'')+'.';
+  nodes=await loadCommunities();
+  refreshNodes();
+  renderLayerToggles();
+  applyTypeFilter();
+  toast(ok+' official boundar'+(ok===1?'y':'ies')+' added');
 });
 
 /* ---------- Directory (white pages) ---------- */
