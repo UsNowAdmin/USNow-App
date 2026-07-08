@@ -708,6 +708,17 @@ map.on('load', ()=>{
     filter:['==','$type','Point'],
     paint:{'circle-radius':5,'circle-color':'#131A20','circle-stroke-color':'#E8A33D','circle-stroke-width':2}});
 
+  map.addSource('dots',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
+  map.addLayer({id:'dots-circle', type:'circle', source:'dots',
+    paint:{
+      'circle-radius':6,
+      'circle-color':['match',['get','presence'],
+        'connected','#3E8E8C','present','#5A9E5D','vacant','#3A4750','#131A20'],
+      'circle-stroke-width':2,
+      'circle-stroke-color':['match',['get','presence'],
+        'connected','#3E8E8C','present','#5A9E5D','vacant','#3A4750','#B9B2A4']
+    }});
+
   refreshNodes();
   loadCommunities().then(list=>{
     nodes=list;
@@ -762,8 +773,21 @@ function showAreaPopup(p, lngLat){
   }
   pop.setLngLat(lngLat).setDOMContent(box).addTo(map);
 }
+map.on('click','dots-circle',(e)=>{
+  if(drawing||placing) return;
+  const p=e.features[0].properties;
+  const state={connected:'Connected',present:'Present',vacant:'Vacant',unknown:'Unknown'}[p.presence]||p.presence;
+  new maplibregl.Popup({closeButton:true,maxWidth:'240px'})
+    .setLngLat(e.lngLat)
+    .setHTML(`<div class="pop-name">${esc(p.label)}</div>
+              <div class="pop-area">${esc(state)}${p.steward==='true'||p.steward===true?' · Steward household':''}</div>`)
+    .addTo(map);
+});
+map.on('mouseenter','dots-circle',()=>{ if(!drawing&&!placing) map.getCanvas().style.cursor='pointer'; });
+map.on('mouseleave','dots-circle',()=>{ map.getCanvas().style.cursor=(drawing||placing)?'crosshair':''; });
+
 map.on('click','official-fill',(e)=>{
-  if(drawing) return;
+  if(drawing||placing) return;
   // If a chosen community is also under the tap, let its handler run instead.
   const chosenHit=map.queryRenderedFeatures(e.point,{layers:['nodes-fill']});
   if(chosenHit.length) return;
@@ -779,7 +803,7 @@ map.on('click','official-fill',(e)=>{
 });
 
 map.on('click','nodes-fill',(e)=>{
-  if(drawing) return;
+  if(drawing||placing) return;
   const seen=new Map();
   e.features.forEach(f=>{ if(!seen.has(f.properties.id)) seen.set(f.properties.id, f.properties); });
   const hits=[...seen.values()].sort((a,b)=>a.acresNum-b.acresNum);
@@ -805,7 +829,17 @@ map.on('mouseleave','nodes-fill',()=>{ map.getCanvas().style.cursor=drawing?'cro
 function esc(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
 /* ---------- Drawing ---------- */
-let drawing=false, draft=[];
+let drawing=false, draft=[], placing=null;
+map.on('click', async (e)=>{
+  if(!placing) return;
+  const slot=placing; placing=null;
+  map.getCanvas().style.cursor='';
+  const {error}=await db.rpc('anchor_household',
+    {p_household:slot.id, p_lng:e.lngLat.lng, p_lat:e.lngLat.lat});
+  if(error){ toast(error.message); return; }
+  toast('Anchored: '+slot.label);
+  loadDots();
+});
 const fab=document.getElementById('drawFab'),
       drawbar=document.getElementById('drawbar'),
       vtxCount=document.getElementById('vtxCount'),
@@ -1055,13 +1089,33 @@ function roleBadge(level){
 let myRoles={};
 async function refreshMyRoles(){
   myRoles={};
-  if(!session) return;
+  if(!session){ loadDots(); return; }
   const {data,error}=await db.rpc('my_membership_states');
   if(error){ console.error(error); return; }
   (data||[]).forEach(m=>{
     if(m.status==='active') myRoles[m.community_id]=m.role_level;
     else if(m.status==='pending') myRoles[m.community_id]='pending';
   });
+  loadDots();
+}
+
+/* ---------- Household dots (status, not identity) ---------- */
+async function loadDots(){
+  const src=map.getSource('dots');
+  if(!src) return;
+  const feats=[];
+  const memberOf=Object.keys(myRoles).filter(id=>typeof myRoles[id]==='number');
+  for(const cid of memberOf){
+    const {data,error}=await db.rpc('community_dots',{p_community:cid});
+    if(error||!data) continue;
+    data.forEach(d=>{
+      if(d.lng==null) return;
+      feats.push({type:'Feature',
+        properties:{id:d.id,label:d.label,presence:d.presence,steward:!!d.is_steward},
+        geometry:{type:'Point',coordinates:[d.lng,d.lat]}});
+    });
+  }
+  src.setData({type:'FeatureCollection',features:feats});
 }
 
 async function loadMyMemberships(){
@@ -1234,6 +1288,18 @@ async function renderDirectory(){
         renderDirectory();
       });
       row.appendChild(b);
+    }
+    if(myRoles[dirCommunity]>=60){
+      const pin=document.createElement('button');
+      pin.className='dir-claim'; pin.textContent='📍';
+      pin.title='Place on the map';
+      pin.addEventListener('click', ()=>{
+        placing={id:s.id, label:s.label};
+        dirVeil.classList.remove('open');
+        map.getCanvas().style.cursor='crosshair';
+        toast('Tap the map on '+s.label);
+      });
+      row.appendChild(pin);
     }
     list.appendChild(row);
   });
