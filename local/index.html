@@ -544,7 +544,12 @@
       </div>
       <div class="dir-add">
         <select id="offType" class="req-select" style="flex:1;margin:0">
+          <option value="country">Country</option>
+          <option value="state">State</option>
           <option value="county">County</option>
+          <option value="congressional">Congressional district</option>
+          <option value="state_senate">State senate district</option>
+          <option value="state_assembly">State assembly district</option>
           <option value="zip">ZIP code</option>
           <option value="school_district" selected>School district</option>
           <option value="fire">Fire district</option>
@@ -777,7 +782,10 @@ function refreshNodes(){
 }
 
 /* ---------- The here-card: tap anywhere → "where am I?" ---------- */
-const TYPE_LABELS={county:'County',zip:'ZIP code',school_district:'School district',
+const TYPE_LABELS={country:'Country',state:'State',county:'County',
+  congressional:'Congressional district',state_senate:'State senate district',
+  state_assembly:'State assembly district',zip:'ZIP code',
+  school_district:'School district',
   fire:'Fire district',police:'Police precinct',tract:'Census tract',
   watershed:'Watershed',floodplain:'Floodplain',other:'Official boundary'};
 function typeLabel(t){ return TYPE_LABELS[t]||t||'Official boundary'; }
