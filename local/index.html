@@ -757,19 +757,32 @@ map.on('load', ()=>{
   map.addSource('node-labels',{type:'geojson', data:labelsGeoJSON()});
   map.addSource('draft',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
 
-  ['solid','dash','dot'].forEach(cls=>{
-    map.addLayer({id:'official-'+cls, type:'line', source:'nodes',
-      filter:['all',['==',['get','kind'],'official'],
-                    ['in',['get','btype'],['literal',typesByCls(cls)]]],
-      paint:{'line-color':colorMatch,'line-width':widthMatch,
-             'line-dasharray':DASH[cls],'line-opacity':0.85}});
-  });
-  map.addLayer({id:'official-label', type:'symbol', source:'nodes',
-    filter:['==',['get','kind'],'official'],
-    layout:{'symbol-placement':'line','text-field':['get','name'],
-            'text-size':['interpolate',['linear'],['zoom'],7,9,13,12],
-            'text-font':['Noto Sans Regular'],'text-letter-spacing':0.05},
-    paint:{'text-color':colorMatch,'text-halo-color':'#FFFFFF','text-halo-width':1.6}});
+  try{
+    ['solid','dash','dot'].forEach(cls=>{
+      const paint={'line-color':colorMatch,'line-width':widthMatch,'line-opacity':0.95};
+      if(cls==='dash') paint['line-dasharray']=[3,2];
+      if(cls==='dot')  paint['line-dasharray']=[1,1.6];
+      map.addLayer({id:'official-'+cls, type:'line', source:'nodes',
+        filter:['all',['==',['get','kind'],'official'],
+                      ['in',['get','btype'],['literal',typesByCls(cls)]]],
+        paint});
+    });
+  }catch(err){ console.error('official layers:',err); }
+  try{
+    map.addLayer({id:'official-label', type:'symbol', source:'nodes',
+      filter:['==',['get','kind'],'official'],
+      layout:{'symbol-placement':'line','text-field':['get','name'],
+              'text-size':['interpolate',['linear'],['zoom'],7,9,13,12],
+              'text-font':['Noto Sans Regular'],'text-letter-spacing':0.05},
+      paint:{'text-color':colorMatch,'text-halo-color':'#FFFFFF','text-halo-width':1.6}});
+  }catch(err){ console.error('official labels:',err); }
+
+  // selection highlight: bright, thick, on top of everything
+  map.addSource('hl',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
+  map.addLayer({id:'hl-fill', type:'fill', source:'hl',
+    paint:{'fill-color':'#FFDE59','fill-opacity':0.10}});
+  map.addLayer({id:'hl-line', type:'line', source:'hl',
+    paint:{'line-color':'#FFDE59','line-width':4.5,'line-opacity':0.95}});
 
   map.addLayer({id:'nodes-fill', type:'fill', source:'nodes',
     filter:['==',['get','kind'],'chosen'],
@@ -816,6 +829,20 @@ function refreshNodes(){
 }
 
 /* ---------- The here-card: tap anywhere → "where am I?" ---------- */
+function highlightCommunity(id){
+  const src=map.getSource('hl'); if(!src) return;
+  const n=nodes.find(x=>x.id===id);
+  if(!n){ src.setData({type:'FeatureCollection',features:[]}); return; }
+  src.setData({type:'FeatureCollection',features:[{
+    type:'Feature',properties:{},
+    geometry:{type:'MultiPolygon',coordinates:n.rings||[[[...n.coords,n.coords[0]]]]}
+  }]});
+}
+function clearHighlight(){
+  const src=map.getSource('hl');
+  if(src) src.setData({type:'FeatureCollection',features:[]});
+}
+
 const TYPE_LABELS={country:'Country',state:'State',county:'County',town:'Town',
   congressional:'Congressional district',state_senate:'State senate district',
   state_assembly:'State assembly district',zip:'ZIP code',
@@ -875,7 +902,9 @@ async function openHereCard(lngLat){
   let rows=data||[];
   rows=rows.filter(r=>r.kind!=='official' || !hiddenTypes.has(r.btype||'other'));
   if(!rows.length) return;
+  clearHighlight();
   const pop=new maplibregl.Popup({closeButton:true, maxWidth:'280px'});
+  pop.on('close', clearHighlight);
 
   function stackView(){
     const box=document.createElement('div');
@@ -899,6 +928,7 @@ async function openHereCard(lngLat){
       b.innerHTML=esc(r.name)+' <small>'+esc(sub)+'</small>';
       if(official) b.style.opacity='.65';
       b.addEventListener('click', ()=>{
+        highlightCommunity(r.id);
         pop.setDOMContent(official ? officialDetail(r,pop,backBtn)
                                    : chosenDetail(r,pop,backBtn));
       });
