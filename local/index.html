@@ -547,6 +547,7 @@
           <option value="country">Country</option>
           <option value="state">State</option>
           <option value="county">County</option>
+          <option value="town">Town / city</option>
           <option value="congressional">Congressional district</option>
           <option value="state_senate">State senate district</option>
           <option value="state_assembly">State assembly district</option>
@@ -725,17 +726,50 @@ function labelsGeoJSON(){
   };
 }
 
+/* ---------- Official layer styling: identity by line (hue+dash+weight) ---------- */
+const TYPE_STYLE={
+  country:        {color:'#8896A0', width:3,   cls:'solid'},
+  state:          {color:'#5B7A99', width:2.5, cls:'solid'},
+  county:         {color:'#607D8B', width:2,   cls:'solid'},
+  town:           {color:'#2E8B8B', width:1.6, cls:'dash'},
+  school_district:{color:'#8E5BA6', width:1.6, cls:'dash'},
+  congressional:  {color:'#C0392B', width:2,   cls:'dash'},
+  state_senate:   {color:'#2C6FBB', width:1.6, cls:'dot'},
+  state_assembly: {color:'#3E8E5D', width:1.6, cls:'dot'},
+  zip:            {color:'#9AA0A6', width:1.2, cls:'dot'},
+  tract:          {color:'#A08C5B', width:1.2, cls:'dot'},
+  fire:           {color:'#B25B3A', width:1.4, cls:'dash'},
+  police:         {color:'#5B5BB2', width:1.4, cls:'dash'},
+  watershed:      {color:'#3D9BD1', width:1.8, cls:'solid'},
+  floodplain:     {color:'#39BFC9', width:1.4, cls:'dot'},
+  other:          {color:'#7B8A94', width:1.4, cls:'dash'}
+};
+function styleOf(t){ return TYPE_STYLE[t]||TYPE_STYLE.other; }
+const typesByCls=(cls)=>Object.keys(TYPE_STYLE).filter(t=>TYPE_STYLE[t].cls===cls);
+const colorMatch=['match',['get','btype'],
+  ...Object.entries(TYPE_STYLE).flatMap(([t,s])=>[t,s.color]),'#7B8A94'];
+const widthMatch=['match',['get','btype'],
+  ...Object.entries(TYPE_STYLE).flatMap(([t,s])=>[t,s.width]),1.4];
+const DASH={solid:[1,0], dash:[3,2], dot:[1,1.6]};
+
 map.on('load', ()=>{
   map.addSource('nodes',{type:'geojson', data:nodesGeoJSON()});
   map.addSource('node-labels',{type:'geojson', data:labelsGeoJSON()});
   map.addSource('draft',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
 
-  map.addLayer({id:'official-fill', type:'fill', source:'nodes',
+  ['solid','dash','dot'].forEach(cls=>{
+    map.addLayer({id:'official-'+cls, type:'line', source:'nodes',
+      filter:['all',['==',['get','kind'],'official'],
+                    ['in',['get','btype'],['literal',typesByCls(cls)]]],
+      paint:{'line-color':colorMatch,'line-width':widthMatch,
+             'line-dasharray':DASH[cls],'line-opacity':0.85}});
+  });
+  map.addLayer({id:'official-label', type:'symbol', source:'nodes',
     filter:['==',['get','kind'],'official'],
-    paint:{'fill-color':'#7B8A94','fill-opacity':0.03}});
-  map.addLayer({id:'official-line', type:'line', source:'nodes',
-    filter:['==',['get','kind'],'official'],
-    paint:{'line-color':'#7B8A94','line-width':1.2,'line-dasharray':[3,2]}});
+    layout:{'symbol-placement':'line','text-field':['get','name'],
+            'text-size':['interpolate',['linear'],['zoom'],7,9,13,12],
+            'text-font':['Noto Sans Regular'],'text-letter-spacing':0.05},
+    paint:{'text-color':colorMatch,'text-halo-color':'#FFFFFF','text-halo-width':1.6}});
 
   map.addLayer({id:'nodes-fill', type:'fill', source:'nodes',
     filter:['==',['get','kind'],'chosen'],
@@ -782,7 +816,7 @@ function refreshNodes(){
 }
 
 /* ---------- The here-card: tap anywhere → "where am I?" ---------- */
-const TYPE_LABELS={country:'Country',state:'State',county:'County',
+const TYPE_LABELS={country:'Country',state:'State',county:'County',town:'Town',
   congressional:'Congressional district',state_senate:'State senate district',
   state_assembly:'State assembly district',zip:'ZIP code',
   school_district:'School district',
@@ -1321,11 +1355,19 @@ document.getElementById('layersClose').addEventListener('click', ()=>layersVeil.
 
 let hiddenTypes=new Set();
 function applyTypeFilter(){
-  const base=['==',['get','kind'],'official'];
-  const filt=hiddenTypes.size
-    ? ['all', base, ['!',['in',['get','btype'],['literal',[...hiddenTypes]]]]]
-    : base;
-  ['official-fill','official-line'].forEach(l=>{ if(map.getLayer(l)) map.setFilter(l,filt); });
+  const hide=[...hiddenTypes];
+  const visible=(extra)=>{
+    const conds=[['==',['get','kind'],'official']];
+    if(extra) conds.push(extra);
+    if(hide.length) conds.push(['!',['in',['get','btype'],['literal',hide]]]);
+    return ['all',...conds];
+  };
+  ['solid','dash','dot'].forEach(cls=>{
+    const l='official-'+cls;
+    if(map.getLayer(l))
+      map.setFilter(l, visible(['in',['get','btype'],['literal',typesByCls(cls)]]));
+  });
+  if(map.getLayer('official-label')) map.setFilter('official-label', visible(null));
 }
 function renderLayerToggles(){
   const host=document.getElementById('layerToggles');
@@ -1346,6 +1388,13 @@ function renderLayerToggles(){
       applyTypeFilter();
     });
     lab.appendChild(cb);
+    const sw=document.createElement('span');
+    const st=styleOf(t);
+    sw.style.cssText='display:inline-block;width:22px;height:0;border-top:'
+      +Math.max(2,st.width)+'px '
+      +(st.cls==='solid'?'solid':st.cls==='dash'?'dashed':'dotted')
+      +' '+st.color+';flex:none';
+    lab.appendChild(sw);
     lab.appendChild(document.createTextNode(t.replace(/_/g,' ')+' ('+count+')'));
     wrap.appendChild(lab);
     const rm=document.createElement('button');
