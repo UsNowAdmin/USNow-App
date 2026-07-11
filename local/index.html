@@ -493,6 +493,7 @@
     <div class="coming-row"><span class="coming-nm">The paper sheet</span><span class="coming-ds">Print it. Tape it to the fridge.</span><span class="coming-tag">Coming</span></div>
   </div>
   <div class="sheet-tools">
+    <button id="baseBtn">Streets</button>
     <button id="layersBtn">Layers</button>
     <button id="exportBtn">Export JSON</button>
     <button id="importBtn">Import</button>
@@ -689,9 +690,25 @@ const map = new maplibregl.Map({
         tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
         tileSize:256,
         attribution:'© OpenStreetMap contributors'
+      },
+      'carto-light':{
+        type:'raster',
+        tiles:['https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png'],
+        tileSize:256,
+        attribution:'© OpenStreetMap contributors © CARTO'
+      },
+      'carto-dark':{
+        type:'raster',
+        tiles:['https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'],
+        tileSize:256,
+        attribution:'© OpenStreetMap contributors © CARTO'
       }
     },
-    layers:[{id:'osm', type:'raster', source:'osm'}]
+    layers:[
+      {id:'osm', type:'raster', source:'osm'},
+      {id:'base-light', type:'raster', source:'carto-light', layout:{visibility:'none'}},
+      {id:'base-dark', type:'raster', source:'carto-dark', layout:{visibility:'none'}}
+    ]
   },
   center:[-73.18, 40.745],   /* Islip Terrace area default */
   zoom:13,
@@ -827,6 +844,7 @@ map.on('load', ()=>{
   }catch(err){ console.error('official labels:',err); }
 
   // selection highlight: bright, thick, on top of everything
+  applyBase();
   map.addSource('hl',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
   map.addLayer({id:'hl-fill', type:'fill', source:'hl',
     paint:{'fill-color':['coalesce',['get','color'],'#FFDE59'],'fill-opacity':0.10}});
@@ -1471,6 +1489,24 @@ document.getElementById('panelSignOut').addEventListener('click',async()=>{
   await db.auth.signOut();
   acctPanel.classList.remove('open');
   toast('Signed out');
+});
+
+/* ---------- Basemap switcher: Streets / Canvas / Dark ---------- */
+const BASEMAPS=[['osm','Streets'],['base-light','Canvas'],['base-dark','Dark']];
+let baseIdx=0;
+try{ baseIdx=parseInt(localStorage.getItem('usnow-base')||'0',10)||0; }catch(e){}
+function applyBase(){
+  BASEMAPS.forEach(([id],i)=>{
+    if(map.getLayer(id))
+      map.setLayoutProperty(id,'visibility', i===baseIdx?'visible':'none');
+  });
+  const b=document.getElementById('baseBtn');
+  if(b) b.textContent=BASEMAPS[baseIdx][1];
+}
+document.getElementById('baseBtn').addEventListener('click', ()=>{
+  baseIdx=(baseIdx+1)%BASEMAPS.length;
+  try{ localStorage.setItem('usnow-base', String(baseIdx)); }catch(e){}
+  applyBase();
 });
 
 /* ---------- Official layers: import + visibility ---------- */
