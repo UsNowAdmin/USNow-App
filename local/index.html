@@ -377,6 +377,21 @@
   }
 
   /* popups: bigger close target, card never swallows the map */
+  .detail-dock{
+    position:absolute;top:64px;left:12px;z-index:26;width:280px;max-width:82vw;
+    background:var(--ink);border:1px solid var(--amber);
+    padding:14px 16px;display:none;
+  }
+  .detail-dock.open{display:block}
+  .detail-dock .dock-close{
+    position:absolute;top:4px;right:6px;background:none;border:none;
+    color:var(--bone-dim);font-size:20px;cursor:pointer;line-height:1;
+  }
+  .detail-dock .dock-close:hover{color:var(--amber)}
+  @media (max-width:600px){
+    .detail-dock{top:auto;bottom:calc(56px + env(safe-area-inset-bottom));
+      left:8px;right:8px;width:auto;max-width:none}
+  }
   .maplibregl-popup{z-index:30}
   .maplibregl-popup-close-button{
     font-size:22px;width:34px;height:34px;line-height:34px;
@@ -522,6 +537,11 @@
       <button class="primary" id="authIn">Sign in</button>
     </div>
   </div>
+</div>
+
+<div class="detail-dock" id="detailDock">
+  <button class="dock-close" id="dockClose">✕</button>
+  <div id="dockBody"></div>
 </div>
 
 <div class="veil" id="dirVeil">
@@ -878,6 +898,16 @@ function clearHighlight(){
   transientHL=null;
   refreshHL();
 }
+const detailDock=document.getElementById('detailDock');
+function openDock(el){
+  document.getElementById('dockBody').replaceChildren(el);
+  detailDock.classList.add('open');
+}
+function closeDock(){
+  detailDock.classList.remove('open');
+  clearHighlight();
+}
+document.getElementById('dockClose').addEventListener('click', closeDock);
 
 const TYPE_LABELS={country:'Country',state:'State',county:'County',town:'Town',village:'Village',hamlet:'Hamlet',
   congressional:'Congressional district',state_senate:'State senate district',
@@ -987,9 +1017,10 @@ async function openHereCard(lngLat){
       if(official) b.style.opacity='.75';
       b.style.borderLeft='3px solid '+pinColor;
       b.addEventListener('click', ()=>{
+        pop.remove();
         highlightCommunity(r.id);
-        pop.setDOMContent(official ? officialDetail(r,pop,backBtn)
-                                   : chosenDetail(r,pop,backBtn));
+        openDock(official ? officialDetail(r,pop,null)
+                          : chosenDetail(r,pop,null));
       });
       wrap.appendChild(cb); wrap.appendChild(b);
       box.appendChild(wrap);
@@ -998,10 +1029,12 @@ async function openHereCard(lngLat){
     officials.forEach(r=>addRow(r,true));
     return box;
   }
-  // single hit: straight to detail, no stack ceremony
+  // single hit: straight to docked detail, no stack ceremony
   if(rows.length===1){
     const r=rows[0];
-    pop.setDOMContent(r.kind==='official'?officialDetail(r,pop,null):chosenDetail(r,pop,null));
+    highlightCommunity(r.id);
+    openDock(r.kind==='official'?officialDetail(r,pop,null):chosenDetail(r,pop,null));
+    return;
   } else {
     pop.setDOMContent(stackView());
   }
