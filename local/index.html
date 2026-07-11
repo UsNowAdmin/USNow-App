@@ -562,6 +562,8 @@
           <option value="state">State</option>
           <option value="county">County</option>
           <option value="town">Town / city</option>
+          <option value="village">Village</option>
+          <option value="hamlet">Hamlet</option>
           <option value="congressional">Congressional district</option>
           <option value="state_senate">State senate district</option>
           <option value="state_assembly">State assembly district</option>
@@ -753,6 +755,8 @@ const TYPE_STYLE={
   state:          {color:'#5B7A99', width:2.5, cls:'solid'},
   county:         {color:'#607D8B', width:2,   cls:'solid'},
   town:           {color:'#2E8B8B', width:1.6, cls:'dash'},
+  village:        {color:'#B05A7A', width:1.5, cls:'solid'},
+  hamlet:         {color:'#A67C52', width:1.4, cls:'dash'},
   school_district:{color:'#8E5BA6', width:1.6, cls:'dash'},
   congressional:  {color:'#C0392B', width:2,   cls:'dash'},
   state_senate:   {color:'#2C6FBB', width:1.6, cls:'dot'},
@@ -875,7 +879,7 @@ function clearHighlight(){
   refreshHL();
 }
 
-const TYPE_LABELS={country:'Country',state:'State',county:'County',town:'Town',
+const TYPE_LABELS={country:'Country',state:'State',county:'County',town:'Town',village:'Village',hamlet:'Hamlet',
   congressional:'Congressional district',state_senate:'State senate district',
   state_assembly:'State assembly district',zip:'ZIP code',
   school_district:'School district',
