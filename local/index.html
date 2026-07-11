@@ -970,7 +970,8 @@ async function openHereCard(lngLat){
   const {data,error}=await db.rpc('at_point',{p_lng:lngLat.lng, p_lat:lngLat.lat});
   if(error){ console.error(error); return; }
   let rows=data||[];
-  rows=rows.filter(r=>r.kind!=='official' || !hiddenTypes.has(r.btype||'other'));
+  // The card always answers with the full stack — layer toggles govern
+  // what's painted on the map, never what's known about a point.
   if(!rows.length) return;
   clearHighlight();
   const pop=new maplibregl.Popup({closeButton:true, maxWidth:'280px'});
