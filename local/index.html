@@ -567,6 +567,10 @@
       <h3>Official layers</h3>
       <button class="dir-close" id="layersClose">✕</button>
     </div>
+    <div class="dir-add" style="margin-top:0;margin-bottom:8px">
+      <button id="pinsClear" class="req-btn no" style="flex:none">clear pins (0)</button>
+      <span style="font-size:11px;color:var(--bone-dim);align-self:center">pinned boundaries stay lit until cleared</span>
+    </div>
     <div id="layerToggles" class="dir-census" style="margin-bottom:8px">No official layers yet.</div>
     <div style="border-top:1px solid var(--line);padding-top:10px">
       <div class="acct-label" style="margin-bottom:6px">Import boundaries (GeoJSON)</div>
@@ -1472,11 +1476,24 @@ document.getElementById('panelSignOut').addEventListener('click',async()=>{
 const layersVeil=document.getElementById('layersVeil');
 document.getElementById('layersBtn').addEventListener('click', ()=>{
   renderLayerToggles();
+  updatePinsBtn();
   layersVeil.classList.add('open');
+});
+const pinsClearBtn=document.getElementById('pinsClear');
+function updatePinsBtn(){
+  pinsClearBtn.textContent='clear pins ('+compareHL.size+')';
+  pinsClearBtn.disabled=!compareHL.size;
+}
+pinsClearBtn.addEventListener('click', ()=>{
+  compareHL.clear();
+  refreshHL();
+  updatePinsBtn();
+  toast('Pins cleared');
 });
 document.getElementById('layersClose').addEventListener('click', ()=>layersVeil.classList.remove('open'));
 
-let hiddenTypes=new Set();
+const CALM_DEFAULT=['town','village','hamlet','school_district','congressional','state_senate','state_assembly','zip','tract','fire','police','floodplain','other'];
+let hiddenTypes=new Set(CALM_DEFAULT);
 function applyTypeFilter(){
   const hide=[...hiddenTypes];
   const visible=(extra)=>{
