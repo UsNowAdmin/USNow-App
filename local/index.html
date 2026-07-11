@@ -604,9 +604,16 @@ const SUPABASE_KEY = 'sb_publishable_7KvAheGeU3SP4zkS3CAQcA_uSj00KjQ';
 const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 async function loadCommunities(){
-  const {data, error} = await db.rpc('list_communities');
-  if(error){ console.error(error); toast('Could not reach the database'); return []; }
-  return (data||[]).map(r=>{
+  const page=1000;
+  let from=0, raw=[];
+  while(true){
+    const {data, error} = await db.rpc('list_communities').range(from, from+page-1);
+    if(error){ console.error(error); toast('Could not reach the database'); break; }
+    raw=raw.concat(data||[]);
+    if(!data || data.length<page) break;
+    from+=page;
+  }
+  return raw.map(r=>{
     const g = JSON.parse(r.geojson);
     const polys = g.type==='MultiPolygon' ? g.coordinates : [g.coordinates];
     // open outer rings (strip closing duplicate) for area math
@@ -780,9 +787,10 @@ map.on('load', ()=>{
   // selection highlight: bright, thick, on top of everything
   map.addSource('hl',{type:'geojson', data:{type:'FeatureCollection',features:[]}});
   map.addLayer({id:'hl-fill', type:'fill', source:'hl',
-    paint:{'fill-color':'#FFDE59','fill-opacity':0.10}});
+    paint:{'fill-color':['coalesce',['get','color'],'#FFDE59'],'fill-opacity':0.10}});
   map.addLayer({id:'hl-line', type:'line', source:'hl',
-    paint:{'line-color':'#FFDE59','line-width':4.5,'line-opacity':0.95}});
+    paint:{'line-color':['coalesce',['get','color'],'#FFDE59'],
+           'line-width':4.5,'line-opacity':0.95}});
 
   map.addLayer({id:'nodes-fill', type:'fill', source:'nodes',
     filter:['==',['get','kind'],'chosen'],
@@ -829,18 +837,28 @@ function refreshNodes(){
 }
 
 /* ---------- The here-card: tap anywhere → "where am I?" ---------- */
-function highlightCommunity(id){
-  const src=map.getSource('hl'); if(!src) return;
+const compareHL=new Map();   // id -> color, persistent pins
+let transientHL=null;        // {id,color}, the current detail flare
+function featureFor(id,color){
   const n=nodes.find(x=>x.id===id);
-  if(!n){ src.setData({type:'FeatureCollection',features:[]}); return; }
-  src.setData({type:'FeatureCollection',features:[{
-    type:'Feature',properties:{},
-    geometry:{type:'MultiPolygon',coordinates:n.rings||[[[...n.coords,n.coords[0]]]]}
-  }]});
+  if(!n) return null;
+  return {type:'Feature',properties:{color},
+    geometry:{type:'MultiPolygon',coordinates:n.rings||[[[...n.coords,n.coords[0]]]]}};
+}
+function refreshHL(){
+  const src=map.getSource('hl'); if(!src) return;
+  const feats=[];
+  compareHL.forEach((color,id)=>{ const f=featureFor(id,color); if(f) feats.push(f); });
+  if(transientHL){ const f=featureFor(transientHL.id, transientHL.color); if(f) feats.push(f); }
+  src.setData({type:'FeatureCollection',features:feats});
+}
+function highlightCommunity(id){
+  transientHL={id, color:'#FFDE59'};
+  refreshHL();
 }
 function clearHighlight(){
-  const src=map.getSource('hl');
-  if(src) src.setData({type:'FeatureCollection',features:[]});
+  transientHL=null;
+  refreshHL();
 }
 
 const TYPE_LABELS={country:'Country',state:'State',county:'County',town:'Town',
@@ -913,26 +931,50 @@ async function openHereCard(lngLat){
     const officials=rows.filter(r=>r.kind==='official');
     const hdr=document.createElement('div');
     hdr.className='pop-area';
-    hdr.textContent='You are here:';
+    hdr.style.cssText='display:flex;justify-content:space-between;align-items:baseline';
+    hdr.appendChild(document.createTextNode('You are here:'));
+    if(compareHL.size){
+      const clr=document.createElement('button');
+      clr.className='req-btn no';
+      clr.textContent='clear pins ('+compareHL.size+')';
+      clr.addEventListener('click',()=>{ compareHL.clear(); refreshHL(); pop.setDOMContent(stackView()); });
+      hdr.appendChild(clr);
+    }
     box.appendChild(hdr);
     const backBtn=()=>{ const b=document.createElement('button');
       b.className='pop-join'; b.textContent='← All layers here';
-      b.addEventListener('click',()=>pop.setDOMContent(stackView()));
+      b.addEventListener('click',()=>{ clearHighlight(); pop.setDOMContent(stackView()); });
       return b; };
     const addRow=(r, official)=>{
+      const wrap=document.createElement('div');
+      wrap.style.cssText='display:flex;align-items:stretch;gap:5px';
+      const pinColor=official ? styleOf(r.btype||'other').color : '#E8A33D';
+      const cb=document.createElement('input');
+      cb.type='checkbox';
+      cb.title='Pin this boundary on the map';
+      cb.checked=compareHL.has(r.id);
+      cb.style.accentColor=pinColor;
+      cb.addEventListener('change',()=>{
+        if(cb.checked) compareHL.set(r.id, pinColor); else compareHL.delete(r.id);
+        refreshHL();
+        pop.setDOMContent(stackView());
+      });
       const b=document.createElement('button');
+      b.style.flex='1';
       const sub=official ? typeLabel(r.btype)
                          : fmtArea((r.area_sqm||0)/4046.86)
                            + (myRoles[r.id]!==undefined && myRoles[r.id]!=='pending'
                               ? ' · '+(ROLE_LABELS[myRoles[r.id]]||'') : '');
       b.innerHTML=esc(r.name)+' <small>'+esc(sub)+'</small>';
-      if(official) b.style.opacity='.65';
+      if(official) b.style.opacity='.75';
+      b.style.borderLeft='3px solid '+pinColor;
       b.addEventListener('click', ()=>{
         highlightCommunity(r.id);
         pop.setDOMContent(official ? officialDetail(r,pop,backBtn)
                                    : chosenDetail(r,pop,backBtn));
       });
-      box.appendChild(b);
+      wrap.appendChild(cb); wrap.appendChild(b);
+      box.appendChild(wrap);
     };
     chosen.forEach(r=>addRow(r,false));
     officials.forEach(r=>addRow(r,true));
